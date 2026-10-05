@@ -1,0 +1,6 @@
+height DP vs prompt table (k<=10, m<=6): PASS
+multichain vs height DP (k<=8, m<=5): PASS
+a_direct vs U(ceil)U(floor) (k<=6, n<=12): PASS
+a_brute vs a_direct (n*k<=20): PASS
+a_3(1..6) = [6, 36, 102, 289, 612, 1296] PASS
+elapsed 1.6s

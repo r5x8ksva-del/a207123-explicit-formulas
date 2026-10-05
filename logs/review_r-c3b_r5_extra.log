@@ -1,0 +1,14 @@
+tables built 8.4s
+=== R5 extra boxes ===
+PASS U (A,B)=(3,12) totdeg<=2 quadrant [3..40]x[12..40]: 312 unknowns/1102 eqs; ker_p=[36, 36]; left multiples=36 (rank_p [36, 36], exact=True); formula=36
+PASS U (A,B)=(4,2) totdeg<=6 quadrant [4..40]x[2..40]: 420 unknowns/1443 eqs; ker_p=[84, 84]; left multiples=84 (rank_p [84, 84], exact=True); formula=84
+PASS U (A,B)=(20,0) totdeg<=3 quadrant [20..40]x[0..40]: 210 unknowns/861 eqs; ker_p=[0, 0]; left multiples=0 (rank_p [0, 0], exact=True); formula=0
+PASS U (A,B)=(14,1) totdeg<=1 quadrant [14..40]x[1..40]: 90 unknowns/1080 eqs; ker_p=[12, 12]; left multiples=12 (rank_p [12, 12], exact=True); formula=12
+PASS U k-only (A,B,deg)=(0,30,8) quadrant [0..40]x[30..40]: 279 unknowns/451 eqs, ranks mod (1000000007, 998244353) = [279, 279] -> no relation
+PASS U k-only (A,B,deg)=(1,1,38) quadrant [1..40]x[1..40]: 156 unknowns/1600 eqs, ranks mod (1000000007, 998244353) = [156, 156] -> no relation
+PASS N (A,B)=(3,12) totdeg<=2 quadrant [3..40]x[12..40]: 312 unknowns/1102 eqs; ker_p=[33, 33]; left multiples=33 (rank_p [33, 33], exact=True); formula=33
+PASS N (A,B)=(4,3) totdeg<=5 quadrant [4..40]x[3..40]: 420 unknowns/1406 eqs; ker_p=[60, 60]; left multiples=60 (rank_p [60, 60], exact=True); formula=60
+PASS N (A,B)=(14,2) totdeg<=1 quadrant [14..40]x[2..40]: 135 unknowns/1053 eqs; ker_p=[12, 12]; left multiples=12 (rank_p [12, 12], exact=True); formula=12
+PASS N k-only (A,B,deg)=(0,30,8) quadrant [0..40]x[30..40]: 279 unknowns/451 eqs, ranks mod (1000000007, 998244353) = [279, 279] -> no relation
+elapsed 57.1s
+SUMMARY r5 pass=10 fail=0

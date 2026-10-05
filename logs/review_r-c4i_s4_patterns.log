@@ -1,0 +1,20 @@
+OK  C4-2 定理 1.4：m<=4、L<=8 的全部合法词可按规则分块且结构合法；全部块词合法且个数 == 合法词个数（双向）
+   brute d=0: 2 patterns, 0.0s, sigma>2d+2 found: []
+   brute d=1: 7 patterns, 0.0s, sigma>2d+2 found: []
+   brute d=2: 51 patterns, 0.1s, sigma>2d+2 found: []
+   brute d=3: 459 patterns, 5.6s, sigma>2d+2 found: []
+   brute d=4: 4990 patterns, 319.0s, sigma>2d+2 found: []
+OK  C4-12-brute 按定义暴力枚举的 M(d;σ,β)（σ 枚举到 2d+3）== c4.md 表 4，d<=4；σ=2d+3 处无模式
+   gen d=0: total 2 (claimed 2), per-word recheck bad=0, 0.0s, match table4=True
+   gen d=1: total 7 (claimed 7), per-word recheck bad=0, 0.0s, match table4=True
+   gen d=2: total 51 (claimed 51), per-word recheck bad=0, 0.0s, match table4=True
+   gen d=3: total 459 (claimed 459), per-word recheck bad=0, 0.1s, match table4=True
+   gen d=4: total 4990 (claimed 4990), per-word recheck bad=0, 1.6s, match table4=True
+   gen d=5: total 63537 (claimed 63537), per-word recheck bad=0, 44.2s, match table4=True
+OK  C4-12-gen 显式生成的 Pat(d)（逐词按定义复验）与表 4 / 暴力 / 总数一致，d<=5
+OK  C4-12-dp 自写计数 DP == 显式生成（d<=5），且总数 == 2,7,51,459,4990,63537,928393（d<=6）；d=7,8 总数 [15323342, 282126075]
+OK  C4-12-exp D(k,d)=Σ M C+(k-d-β,σ-β) 对 d<=8、d<=k<=150 全成立（独立 N 表）
+OK  C4-13 σ<=2d+2、β∈{0}∪[2,d+2]、σ-β<=2d；σ-β=2d 共 2(2d-1)!!（两族各 (2d-1)!!）；β=d+2 只在 σ=2d+2、共 (d+1)!；d<=8
+OK  C4-14 四个族 M(d;2d-1,0)=M(d;2d+1,2)=(2d-1)!!, M(d;2d+2,d+1)=d(d+1)!/2, M(d;2d-2,0)=4(d-1)(2d-3)!!：1<=d<=8 成立
+OK  C4-12-bij Φ/Ψ 逐词检验 d<=3、q<=7：平凡值 > E 层、Φ(w)∈Pat(d)、s_i=i(i<=β)、Ψ∘Φ=id、Φ 单射、计数 = Σ M C+ = D []
+SUMMARY s4 ok=8 bad=0 runtime=372.6s

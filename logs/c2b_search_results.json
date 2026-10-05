@@ -1,0 +1,45 @@
+{
+ "A_complete": {
+  "n_survive": 271,
+  "informative_survivors": [
+   [
+    1,
+    0,
+    2,
+    1,
+    1,
+    0,
+    240
+   ],
+   [
+    1,
+    2,
+    2,
+    1,
+    1,
+    -1,
+    228
+   ]
+  ]
+ },
+ "E_ascent": {
+  "n_survive": 397,
+  "informative_survivors": []
+ },
+ "U_all": {
+  "n_survive": 269,
+  "informative_survivors": []
+ },
+ "N_surj": {
+  "n_survive": 459,
+  "informative_survivors": []
+ },
+ "Nc_surj_complete": {
+  "n_survive": 459,
+  "informative_survivors": []
+ },
+ "NE_surj_ascent": {
+  "n_survive": 572,
+  "informative_survivors": []
+ }
+}

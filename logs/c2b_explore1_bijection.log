@@ -1,0 +1,12 @@
+m=0 k=10  #legal=     1 #blockwords=     1  bw=True len=True legal=True inj=True sur=True parse=True stats=True
+m=1 k=10  #legal=   100 #blockwords=   100  bw=True len=True legal=True inj=True sur=True parse=True stats=True
+m=2 k=10  #legal=  1222 #blockwords=  1222  bw=True len=True legal=True inj=True sur=True parse=True stats=True
+m=3 k=10  #legal=  7629 #blockwords=  7629  bw=True len=True legal=True inj=True sur=True parse=True stats=True
+m=4 k=10  #legal= 32971 #blockwords= 32971  bw=True len=True legal=True inj=True sur=True parse=True stats=True
+bijection block-words <-> legal sequences, k<=10 m<=4: PASS (0.9s)
+  m=0: checked 10 sequences (1<=k<=10), fails=0
+  m=1: checked 2046 sequences (1<=k<=10), fails=0
+  m=2: checked 88572 sequences (1<=k<=10), fails=0
+  m=3: checked 1398100 sequences (1<=k<=10), fails=0
+  m=4: checked 12207030 sequences (1<=k<=10), fails=0
+all sequences: #parses == [legal], k<=10 m<=4 (13695758 seqs): PASS (7.6s)

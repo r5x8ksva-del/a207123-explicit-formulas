@@ -1,0 +1,227 @@
+# freshread final audit, 2026-10-04 17:54:22
+
+========================================================================
+>>> ids_check.py ：报告引用的核对 id 是否都在 logs/verify_all_final.log 中以 PASS 出现；未被引用的 PASS id
+final PASS ids: 290
+cited occurrences 256 unique 232
+missing: []
+uncited PASS ids in final log (59):
+   B1-fast-vs-height |  core.U_fast_table == core.U_height_table（第1节参考实现）k<=60,m<=20；另抽查 m=30,40 整列 k<=60（m=21..62 每一整列见 code/c1/extended_checks.py 的 E1） [0.5s]
+   B5-prompt-table |  第2节 U_k(m) 表（k=1..10, m=0..6）== 参考实现 DP [0.0s]
+   B6-Rk |  R_k=U_k(1)：R_1..R_10=2,4,..,100；sum_k R_k x^k=(1+x^2-x^3)/((1-x)(1-x-x^3))；R_k=[x^{k+1}](1-x+x^2)/((1-x)(1-x-x^3))；R_k=1+R_{k-1}+R_{k-3}（k<=60） [list=True gf1=
+   B7-a3 |  a_3(1..6) = 6,36,102,289,612,1296（a_direct 与乘积公式） [a3=[6, 36, 102, 289, 612, 1296]; 0.0s]
+   C2-order |  (C2) 以 P_m 为特征多项式的 3m+1 阶递推对 DP 数据 U_k(m) 成立，3m+1<=k<=132，0<=m<=20 [0.0s]
+   C3-zero |  (C3) 容斥 N(k,q)=sum_i (-1)^{q-i}C(q,i)U_k(i-1)（由 DP 列 m<=62）：N(k,q)=0 对 k<q<=63，N(k,0)=0（k>=1），N(0,0)=1；0<=k<=60 [0.0s]
+   C3B-A1 |  fast DP == reference U_list (k<=12,m<=8) == multichain (k<=7,m<=4) == brute heights (k<=6,m<=4); a_direct(n,k) == U(ceil)U(floor) (k<=4,n<=8)
+   C3B-G |  G_m = W_m/P_m with W_m = 1 + x^2 sum_{j=1}^m j P_{j-1}, P_m = prod_{i<=m}(1-x-i x^3): series == DP, k<=60, m<=30
+   C3B-GCD2 |  exceptional m=n^2(n-1) (b_m reducible): quadratic factor 1+(n-1)x+n(n-1)x^2 does not divide W_m, n=2..8 (m=4,18,48,100,180,294,448)
+   C3B-GCD3 |  gcd(W_m, P_m) = 1 by direct Euclid, 0<=m<=10 (=> G_m has exactly 3m+1 simple poles)
+   C3B-NUM |  [numeric, Decimal, tol 1e-3] U_{300}(m)/U_{299}(m) -> rho_m (dominant simple pole x_m), 1<=m<=5
+   C3B-PHI |  Phi(x,y)=sum N(k,q)x^k y^q = 1/(1+y) + y F(x, y/(1+y))/(1+y)^2, coefficients k<=20, q<=20
+   C3B-TODE |  t-ODE (1-x-t)F - x^3 t dF/dt = 1 + x^2 t/(1-t)^2 coefficientwise, k,m<=40
+   C3B-YODE |  Phi y-ODE (1-x-xy+x^3(1-y^2))Phi - x^3(1+y)^2 theta_y Phi = 1-x+x^3+x^2y^2 (k,q<=40); triangle recurrence L_N holds for all q>=1 except (k,q)=(2,2) (k,q<=40)
+   c0-H-broder |  H(m,s,j) = (1/(m-j)!) sum_i (-1)^(m-j-i) C(m-j,i) (j+i)^(s+m-j)（m<=15, s<=19）
+   c0-H-rec |  H(m,s,j) = H(m,s,j+1) + j*H(m,s-1,j)，H(m,s,m+1)=[s=0]（m<=15, s<=19）
+   c0-U3-poly |  U_3(m) = (m+1)(m^2+5m+3)/3（m<=20）
+   c0-base-data |  第 2 节 U 表（k<=10,m<=6）、R_1..R_10、a_3(1..6) 与原始定义程序一致
+   c0-base-defs |  U_multichain==DP（k<=7,m<=5）；a_direct(n,k)==U(ceil)U(floor)（k<=5,n<=11）
+   c0-base-ref |  fast DP == 参考实现 U_list（k<=60, m<=20）
+   c0-mono |  U_3(m) = #单调三元组 = 2C(m+3,3)-(m+1)，且显式映射是双射（m<=15）
+   c2b.T1.Eend |  截断块只能在末尾：a<v 时 good3(a,v,c) <=> c==v（于是 [a,v] 后若再有项必构成T块），m<=12
+   c2b.T7.Es_eventual |  对 k>=3s-1，E(k,m,s) 是 k 的 m+s-2 次多项式；它等于 A*C(k+c,deg)（根为相邻整数）当且仅当 s=1 或 m=1 (m<=8,s<=6)：E(k,m,1)=C(k+m-1,k)(k>=2)、E(k,1,s)=C(k-2s,s-1)；m>=2 且 s>=2 时连「大 k 成立」的单项
+   c2b.T7.Es_single |  E(k,2,2)=(k-4)(3k-1)/2 (k>=4, 否则0)，根 4 与 1/3 不是相邻整数，故不存在 A*C(k+c,d) 单项表示；数值上 c∈[-40,40],d∈[0,40] 全无解 (k<=30)
+   c2b.T8.Reul |  R(p,s)=sum_k <<s,k>> C(2s-2-k,2s-p)（<<s,k>> 为二阶 Euler 数）(1<=s<=11, 0<=p<=2s+2)
+   c2b.T9.misc |  望远镜关系 x*sum_{j=1}^m Q_j + x^3*sum_j j*Q_j = Q_1 - 1（Q_j=prod_{v=j}^m b_v^{-1}）；部分分式 sum_{i=0}^m Q_i = sum_{v=1}^m (-1)^{m-v}/((m-v)! b_v) * sum_{r=0}^{v} v^{m-
+   c2b.anchor |  自写细化DP(三元组条件)总数==core.U_fast_table (k<=31,m<=12)；细化DP按(s,结尾)==DFS枚举 (k<=9,m<=3)；core.U_fast_table==core.U_multichain多重链定义 (k<=7,m<=4)
+   c3a-anchor |  height DP == prompt table (k<=10,m<=6) == multichain (k<=7,m<=4); refined DP (not-ascent / ascent-to-j) totals == height DP (k<=40,m<=20) and == DFS enumeratio
+   c3a-pde-F |  (1-x-t)F - x^3 t F_t = 1 + x^2 t/(1-t)^2 holds coefficientwise for the DP table, k<=60, m<=41
+   c4-N-dfs |  N(k,q) == 按定义 DFS 枚举合法满射词（core.N_brute），k<=8
+   c4-N-rec-dp |  N 三角递推(k>=3)+初值 == 高度DP+容斥 的 N(k,q)，全部 0<=q<=k<=60
+   c4-U-anchor |  U_fast_table == U_list(参考实现, k<=20,m<=10) == U_multichain(多重链, k<=6,m<=5) == 提示词校验表(k<=10,m<=6)
+   c5a-Ntri |  N triangle recurrence (first occurrence of the maximum) vs N from DP, 3<=k<=60
+   c5a-WP |  G_m = W_m/P_m, W_m = 1 + x^2 sum_{j=1}^m j P_{j-1}, deg W_m = 3m < deg P_m = 3m+1 (m<=20, k<=60 vs DP); P_m squarefree (exact gcd, m<=8)
+   c5a-anchor |  fast height DP == reference U_list (m<=8,k<=30) == multichain (k<=8,m<=5); a_direct(n,k)==U_k(ceil n/2)U_k(floor n/2) (k<=5,n<=10); N incl-excl == DFS N_brute 
+   c5a-asym-m1 |  [numeric, decimal 90 digits] m=1 rho=1.465571231877 c_m=2.2096081318 theta=rho_{m-1}/rho_m=0.682327804 kappa=0.452569: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_20=
+   c5a-asym-m18 |  [numeric] m=18: theta=rho_17/3=0.9838299735, e_60=-9.768e-01, e_500=-2.153e-03, e_1999=-5.255e-14, rate=0.9838299735 (tol 1e-8), two-term ratio=1.0000000000 (t
+   c5a-asym-m2 |  [numeric, decimal 90 digits] m=2 rho=1.695620769560 c_m=7.8411192294 theta=rho_{m-1}/rho_m=0.864327247 kappa=0.887070: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_20=
+   c5a-asym-m3 |  [numeric, decimal 90 digits] m=3 rho=1.863706527819 c_m=28.9768573170 theta=rho_{m-1}/rho_m=0.909811037 kappa=1.319207: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_20
+   c5a-asym-m4 |  [numeric, decimal 90 digits] m=4 rho=2.000000000000 c_m=107.5000000000 theta=rho_{m-1}/rho_m=0.931853264 kappa=1.744920: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_2
+   c5a-asym-m5 |  [numeric, decimal 90 digits] m=5 rho=2.116343298624 c_m=397.0123713234 theta=rho_{m-1}/rho_m=0.945026264 kappa=2.166179: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_2
+   c5a-asym-m6 |  [numeric, decimal 90 digits] m=6 rho=2.218776585302 c_m=1456.3168290656 theta=rho_{m-1}/rho_m=0.953833438 kappa=2.584083: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_
+   c5a-asym-m7 |  [numeric, decimal 90 digits] m=7 rho=2.310852163459 c_m=5303.6300035654 theta=rho_{m-1}/rho_m=0.960155141 kappa=2.999324: e_k=U_k/(c rho^k)-1 <0 for k<=400; e_
+   c5a-asym-m8 |  [numeric, decimal 90 digits] m=8 rho=2.394858673866 c_m=19179.3074772178 theta=rho_{m-1}/rho_m=0.964922143 kappa=3.412375: e_k=U_k/(c rho^k)-1 <0 for k<=400; e
+   c5a-lemma1-Gm |  U_k(m)=sum_q N(k,q)C(m+1,q) (k,m<=60); Lemma1 holds as polynomial identity for m in [-25,60], k<=60; U_k(-1)=0; (1-x-m x^3)G_m = G_{m-1}+m x^2 for all integers
+   c5b.A077949-comment |  A077949 的注释「compositions of n into parts 1 and two sorts of parts 2」与数据不符（n=2 时为 3，数据为 1）；改成「two sorts of parts 3」则 n<=14 全符（只记录，不提交）
+   c5b.binom-basis |  工具定理 U_k(m) = sum_q N(k,q) C(m+1,q)：N 用 N_brute（按定义 DFS），对 1<=k<=8、0<=m<=15 与高度 DP 一致；高度 DP 与多重链定义 k<=6、m<=4 一致
+   c5b.col12 |  A207123 第 1 列 a_1(n) = A002620(n+2)（n=1..55）、第 2 列 a_2(n) = A030179(n+2)（n=1..35，条目公式 floor(n^2/4)^2）与条目数据段一致
+   c5b.offsets |  21 个条目的 %O offset 与预期一致（A2071xx/A207069/A207070/A038718 为 1；A084990/A326247/A002620/A030179/A077949/A077974/A084386 为 0）
+   c5b.polys |  U_3=(m+1)(m^2+5m+3)/3，U_4=(m+1)(m+2)(m^2+11m+6)/12，U_5=(m+1)(m+2)(m^3+32m^2+77m+30)/60，U_6=(m+1)(m+2)(m^4+66m^3+410m^2+603m+180)/360，U_7=(m+1)(m+2)(m+3)(m^4+11
+   c5b.root-products |  （与 (C2) 的一致性检验）第 2..7 行最小递推的阶 10/22/28/49/55/85 与末项系数，恰等于「U_k(m1)、U_k(m2) 的特征根两两之积」的个数与乘积：A207069:10阶,|常数项|=1; A207070:22阶,|常数项|=16; A207124:28阶,|常数项|=256; A20
+   c5b.rows23-def |  A207069/A207070 名称里的竖直规则是「禁 001 与 101」；按该定义直接数 2xk、3xk 数组（k<=8）= 各自 b 文件 = 本题 a_direct(2,k)、a_direct(3,k)；故 A207123 的「Row 2 is A207069 / Row 3 is A207070」数值上成立
+   c5b.snapshots |  68 个快照、68 个不同 URL（每个只取一次）、全部 HTTP 200、全部来自 https://oeis.org/、文件大小与日志一致、INDEX.md 逐条列出
+   dp_anchor |  baseline: core.U_fast_table == reference U_list (k<=30,m<=12) == multichain definition (k<=7,m<=4); a_direct(n,k)=U(ceil)U(floor) (k<=4,n<=8)
+   gamma_triangle |  Gamma_m(n;j)=[x^n]prod_{v=j}^m 1/b_v: triangle recurrence == r-Stirling single sum; U = Gamma_m(k;0)+sum_j j Gamma_m(k-2;j) == DP, k<=60, m<=20
+   rstirling_cross |  Broder cross identity h_s(j..m) = sum_t C(m-j+s,m-j+t) S(m-j+t,m-j) j^(s-t) (positive Stirling form of the r-Stirling atoms), 0<=j<=m<=20, s<=20
+   rv-Ntri-vs-def |  N 三角递推 == 高度 DP 容斥（k<=40）== DFS 定义（k<=8）；下面大 k 的 N 用该递推（T1.4 已证明）
+   rv-sum-identity |  Σ_{j=1}^m j·h_{s−1}(j..m) = S(m+s,m) − [s=0]（1<=m<=15, 0<=s<=19；c2a 原文漏了 s=0）
+   theta_rational_identity |  polynomial identity sum_r (-1)^r C(t,r) prod_{v in [m-t,m], v!=m-r} b_v = t! x^{3t}, i.e. sum_r (-1)^r C(t,r)/b_{m-r} = t! x^{3t}/prod_{v=m-t}^m b_v, 0<=t<=m<=
+[rc=0]
+
+========================================================================
+>>> paths_check.py ：报告引用的 logs/、code/、notes/、data/ 路径是否存在
+BARE 06_C5.md review_r-c5a_s7_rr.log exists_in_logs=True
+done
+[rc=0]
+
+========================================================================
+>>> xref_check.py ：定理编号与子条目交叉引用是否存在
+defined theorems: ['T1.0', 'T1.1', 'T1.2', 'T1.3', 'T1.4', 'T1.5', 'T1.6', 'T1.7', 'T1.8', 'T1.9', 'T2.1', 'T2.2', 'T2.3', 'T2.4', 'T2.5', 'T2.6', 'T2.7', 'T2.8', 'T2.9', 'T3.1', 'T3.2', 'T3.3', 'T3.4', 'T3.5', 'T3.6', 'T3.7', 'T3.8', 'T4.1', 'T4.2', 'T4.3', 'T5.1', 'T5.2', 'T5.3', 'T5.4']
+T1.0 subitems []
+T1.1 subitems []
+T1.2 subitems []
+T1.3 subitems ['1', '2', '3', '4']
+T1.4 subitems ['1', '2', '3', '4']
+T1.5 subitems ['1', '2', '3', '4']
+T1.6 subitems []
+T1.7 subitems []
+T1.8 subitems []
+T1.9 subitems []
+T2.1 subitems []
+T2.2 subitems []
+T2.3 subitems ['1', '2', '3']
+T2.4 subitems []
+T2.5 subitems ['1', '2', '3']
+T2.6 subitems ['1', '2', '3', '4']
+T2.7 subitems []
+T2.8 subitems ['1', '2', '3']
+T2.9 subitems []
+T3.1 subitems []
+T3.2 subitems []
+T3.3 subitems ['1', '2', '3']
+T3.4 subitems ['1', '2', '3', '4', '5']
+T3.5 subitems ['1', '2', '3']
+T3.6 subitems []
+T3.7 subitems ['1', '2', '3']
+T3.8 subitems []
+T4.1 subitems []
+T4.2 subitems ['1', '2', '3']
+T4.3 subitems ['1', '2', '3', '4', '5', '6', '7', '8']
+T5.1 subitems ['1', '2', '3', '4', '5']
+T5.2 subitems []
+T5.3 subitems ['1', '2', '3', '4', '5', '6', '7']
+T5.4 subitems ['1', '2', '3', '4', '5', '6']
+bad refs:
+SECREF 00_head.md ④C
+SECREF 01_summary.md ①
+SECREF 01_summary.md ⑤
+SECREF 02_C1.md ②
+SECREF 05_C4.md ④A.5
+SECREF 06_C5.md ②
+SECREF 07_formula.md ③
+SECREF 08_failed.md ④
+SECREF 08_failed.md ③
+SECREF 09_code.md ⑤
+SECREF 10_uncertain.md ⑥
+[rc=0]
+
+========================================================================
+>>> confirmed_check.py ：phase4 已确认的 58 条问题：原引文是否还在、修订文字是否落地
+confirmed: 58
+<class 'dict'> ['lens', 'file', 'quote', 'problem', 'evidence', 'severity', 'suggested_fix', 'verdict']
+#00 00_head.md quote_still=False fix_frac=0.4 :: 只依赖 Python 标准库；装有 numpy 时 c3b 与 rv2 会用它加速模素数运算。
+#01 03_C2.md quote_still=False fix_frac=1.0 :: 其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1) 不能由纤维法排除，而它正是定理 S 的形状；不在 veri
+#02 06_C5.md quote_still=False fix_frac=0.33 :: (6)【已验证】k≥5 没有类似对应：U_5、U_6、U_7 从 m=0,1,2 起的 8 项窗口全部无结果
+#03 06_C5.md quote_still=False fix_frac=0.25 :: (5) 提示词「m=2、3 在 k=40 时相差 <0.4%」只在「相邻比 U_41/U_40 与 ρ_m 比较」的解释下成立
+#04 10_uncertain.md quote_still=False fix_frac=0.0 :: 数据上 22 个盒子（verify_all）加上复核者新增的盒子全部吻合
+#05 10_uncertain.md quote_still=False fix_frac=0.23 :: 核对扩到 k≤60、m≤20（多处更远）
+#06 00_head.md quote_still=False fix_frac=0.42 :: 少数扩展范围只由第二轮复核脚本跑过，已在相应条目注明「不在 verify_all 中」并给出日志路径。
+#07 03_C2.md quote_still=False fix_frac=0.64 :: 要用 k≤60 才全部被反驳（复核者 r-c2b，logs/review_r-c2b_r4b_full.log，不在 verify_all 
+#08 09_code.md quote_still=False fix_frac=0.25 :: **11 个核对模块**（每个都从 `code/core.py` 的原始定义程序取「真值」）
+#09 05_C4.md quote_still=False fix_frac=0.67 :: (5)【已证明，一切 j】低次系数 [x^{q+j}]Num_q 在 q≥j+2 时是 q 的 2j 次多项式
+#10 06_C5.md quote_still=False fix_frac=0.6 :: (5)【已证明】h_k 在 [0,1] 上无根；每个固定位置的系数 h_{k,i} 最终为正（~c_iρ_i^k）；对固定 t∈(0,1)，
+#11 04_C3.md quote_still=False fix_frac=0.67 :: c3b.C3B-RES（留数非零）
+#12 06_C5.md quote_still=False fix_frac=1.0 :: 核对：c5b.col-data、c5b.col-direct、c5b.table、c5b.examples
+#13 06_C5.md quote_still=False fix_frac=1.0 :: Q_3 与 P_3 不同构但链数同为 (1,4,2)
+#14 06_C5.md quote_still=False fix_frac=0.14 :: 命中的只有 c_2=A077949、c_3=A084386
+#15 02_C1.md quote_still=False fix_frac=1.0 :: {C(x+1,q)} 是 Q[x] 的基
+#16 03_C2.md quote_still=False fix_frac=0.62 :: 其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1) 不能由纤维法排除，而它正是定理 S 的形状；不在 veri
+#17 03_C2.md quote_still=False fix_frac=0.88 :: 主 Agent 与审计者共 6 次运行的范围：F4 最快，H、F3 最慢；见 logs/c2a_e5_bench_K200_M30.log 
+#18 03_C2.md quote_still=False fix_frac=0.73 :: 要用 k≤60 才全部被反驳（复核者 r-c2b，logs/review_r-c2b_r4b_full.log，不在 verify_all 
+#19 03_C2.md quote_still=False fix_frac=1.0 :: x⁵−v_0(1−x)³）在实轴上都严格单调
+#20 02_C1.md quote_still=False fix_frac=0.0 :: ρ_m 为 y³=y²+m 的实根，x_m=1/ρ_m
+#21 04_C3.md quote_still=False fix_frac=0.5 :: D-finite（等价于 Lipshitz 意义的 P-recursive）要求**每个方向**都有这样的递推
+#22 04_C3.md quote_still=False fix_frac=0.86 :: c3b 探索脚本用第二个素数 2147483629 跑的是另一批 k-only 参数（不是同一批参数的复跑）
+#23 04_C3.md quote_still=False fix_frac=0.8 :: 严格尾项界 |尾项|≤3.5·10^{−118}
+#24 04_C3.md quote_still=False fix_frac=1.0 :: 非负幂等于按 s 细化 DP 的完整序列数
+#25 04_C3.md quote_still=False fix_frac=1.0 :: 并且 1<K/Γ(−λ)<2、x→0+ 时趋于 2，整体差值夹在常数项差值的 1 倍与 2 倍之间。
+#26 04_C3.md quote_still=False fix_frac=1.0 :: 𝒮(x,t):=Σ_m t^m G_m(x)（G_m 取有理函数值；用 𝒮 以免与 Stirling 数 S 混淆）
+#27 04_C3.md quote_still=False fix_frac=0.75 :: 参数 β∈Q(x)（如 β=j+1−λ）时各 (β)_n≠0
+#28 04_C3.md quote_still=False fix_frac=0.0 :: T2.2 的第二个独立证明
+#29 05_C4.md quote_still=False fix_frac=1.0 :: 一般的 M(d;σ,β) 没有闭式（见 ④A.5）
+#30 05_C4.md quote_still=True fix_frac=0.75 :: S(k,k−d)=Σ_j S_2(d+j,j)C(k,d+j) 的对应物
+#31 05_C4.md quote_still=True fix_frac=1.0 :: 不存在二阶 Euler 型非负展开
+#32 05_C4.md quote_still=False fix_frac=0.4 :: 门槛以下例外值（d+1≤k≤2d+1）全部列在 notes/c4.md 表 2
+#33 06_C5.md quote_still=False fix_frac=1.0 :: 等价地 U_k(m)=(2/k!)(m+μ_k)^k(1+O(m^{−2}))，μ_k=(k²−2k−1)/2；在 C(m+1,·) 基下 
+#34 06_C5.md quote_still=False fix_frac=1.0 :: 旧极点（σ 来自 j<m）的留数满足 α_m(σ)=α_{m−1}(σ)·(−σ³)/(m−j)
+#35 06_C5.md quote_still=False fix_frac=1.0 :: 可写成 c_j 的形式
+#36 06_C5.md quote_still=True fix_frac=0.67 :: ẽ_j(n)=e_j(−1,0,…,n−2)/n^{\underline j}
+#37 06_C5.md quote_still=False fix_frac=0.0 :: Q_3 与 P_3 不同构
+#38 00_head.md quote_still=False fix_frac=0.5 :: 只依赖 Python 标准库；装有 numpy 时 c3b 与 rv2 会用它加速模素数运算
+#39 01_summary.md quote_still=False fix_frac=0.0 :: c4 的两条正性外推（d=47、d=69 起失效）
+#40 03_C2.md quote_still=False fix_frac=0.43 :: 其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1) 不能由纤维法排除，而它正是定理 S 的形状；不在 veri
+#41 05_C4.md quote_still=False fix_frac=0.0 :: 一般的 M(d;σ,β) 没有闭式（见 ④A.5）
+#42 06_C5.md quote_still=False fix_frac=1.0 :: 等价地 U_k(m)=(2/k!)(m+μ_k)^k(1+O(m^{−2}))，μ_k=(k²−2k−1)/2；在 C(m+1,·) 基下 
+#43 06_C5.md quote_still=False fix_frac=0.0 :: (6)【已验证】k≥5 没有类似对应
+#44 10_uncertain.md quote_still=False fix_frac=0.64 :: 两位复核者都逐步重推过，其中一位发现维数公式证明里有一句话按字面不成立（已补正，公式不变）。数据上 22 个盒子（verify_all）加上
+#45 09_code.md quote_still=False fix_frac=1.0 :: **11 个核对模块**（每个都从 `code/core.py` 的原始定义程序取「真值」）
+#46 00_head.md quote_still=False fix_frac=0.37 :: 少数扩展范围只由第二轮复核脚本跑过，已在相应条目注明「不在 verify_all 中」并给出日志路径
+#47 01_summary.md quote_still=False fix_frac=1.0 :: 只发现 7 处表述不严谨（见 T1.3–T1.8、T5.1(5)）
+#48 02_C1.md quote_still=False fix_frac=0.67 :: ρ_m 为 y³=y²+m 的实根
+#49 03_C2.md quote_still=False fix_frac=0.75 :: 例：R_k=c_1(k+3)+c_1(k−2)−1
+#50 03_C2.md quote_still=False fix_frac=1.0 :: E 的两项 u 型和对一切 m≥3、|3m+3−N_i|≤1500 不存在
+#51 03_C2.md quote_still=False fix_frac=1.0 :: （复核者 r-c2b，logs/review_r-c2b_r4b_full.log，不在 verify_all 中；verify_all 只
+#52 05_C4.md quote_still=False fix_frac=0.5 :: 所以 2d·c_d=c_{d−1}，c_d=2/(2^d d!)
+#53 05_C4.md quote_still=False fix_frac=0.29 :: （h_1 作为平移量的多项式首项为负，Fujiwara 根界外恒负，界内逐个精确计算）
+#54 06_C5.md quote_still=False fix_frac=1.0 :: （ẽ_j(n)=e_j(−1,0,…,n−2)/n^{\underline j}）
+#55 06_C5.md quote_still=False fix_frac=0.0 :: Q_3 与 P_3 不同构但链数同为 (1,4,2)
+#56 06_C5.md quote_still=False fix_frac=1.0 :: (5) 提示词「m=2、3 在 k=40 时相差 <0.4%」只在「相邻比 U_41/U_40 与 ρ_m 比较」的解释下成立
+#57 09_code.md quote_still=False fix_frac=None :: 解析版本的反例与数值、𝒩 与 H
+[rc=0]
+
+========================================================================
+>>> quotes_check.py ：本方向各条发现的原文引用是否为当前文件的唯一精确子串；重跑后 verify_all_final.log 的总表与 bench 行
+08_failed.md   count=1  （对 m=5,6 需要 k≤60）
+01_summary.md  count=1  （例外：N(k,q) 的组合意义按定义直接计数只核到 k≤9，复核者用独立 DP 到 k≤28）
+09_code.md     count=1  TOTAL pass=290 fail=0 modules=11 failed_modules=-  (217.7s)
+03_C2.md       count=1  各显式公式约 0.2–2.4 s
+00_head.md     count=1  另做了三轮多 Agent 工作流
+08_failed.md   count=1  **B. 两轮工作中出过的错（都已更正，记在这里便于复核）**
+09_code.md     count=1  两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_
+06_C5.md       count=1  核对：c5a.c5a-roots、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c
+06_C5.md       count=1  (1)【已证明】基本事实：h_k(0)=1，h_k(1)=2（k≥2）
+04_C3.md       count=1  维数公式的计数：U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:q_{
+03_C2.md       count=1  在 k≤30 上 m=5,6 各有 59/1024 个「零检验」形状对
+01_summary.md  count=1  全部多项式系数象限递推恰为引理 1 算子生成的左理想。
+08_failed.md   count=1  另有子 Agent 为查 Lipshitz 1989 读了几次文献元数据（Crossref、Semantic Schol
+00_head.md     count=1  另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询（见 ④C）
+02_C1.md       count=1  扩展脚本另核对 a_direct 到 k=11
+05_C4.md       count=1  c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）
+00_head.md     count=1  少数扩展范围只由第二轮复核脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。
+03_C2.md       count=1  形状 Σ_s A(m,s)C(k+αm+β−γs, δm+εs+ζ)（γ+ε≥2 的 8232 族）
+06_C5.md       count=1  列方向 (E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向由 (m_1+1)²(m_2+1
+03_C2.md       count=1  (i)【已证明】命题 S′：形状 C(k+c−αs, βs+d)
+ALL UNIQUE: True
+verify_all_final.log TOTAL secs = 271.0
+bench line:  seconds (this run, noisy): DP 0.536, Lemma1 0.003, linrec 0.353, Ntri 0.049, rStirling_table 0.004, c_table 0.360, H 2.999, F3 3.015, Theta 0.442, ThetaH 0.527, F4 0.426
+  table c0 ('13', '0', '0', 'yes', '4.7', 'PASS')
+  table c1 ('45', '0', '0', 'yes', '66.4', 'PASS')
+  table c2a ('23', '0', '0', 'yes', '16.4', 'PASS')
+  table c2b ('33', '0', '0', 'yes', '47.1', 'PASS')
+  table c3a ('34', '0', '0', 'yes', '31.9', 'PASS')
+  table c3b ('22', '0', '0', 'yes', '24.6', 'PASS')
+  table c4 ('41', '0', '0', 'yes', '29.0', 'PASS')
+  table c5a ('37', '0', '0', 'yes', '18.8', 'PASS')
+  table c5b ('33', '0', '0', 'yes', '4.5', 'PASS')
+  table rv ('7', '0', '0', 'yes', '20.1', 'PASS')
+  table rv2 ('2', '0', '0', 'yes', '7.5', 'PASS')
+[rc=0]

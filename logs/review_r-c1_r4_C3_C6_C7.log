@@ -1,0 +1,12 @@
+INFO DP tables [2.7s]
+PASS C3a-basis (C3) N 的组合意义与二项式基：DFS 定义（k<=9）== 序型 DP（k<=28，独立算法 0.1s）== 容斥；用序型 DP 的 N 重建 U_k(m)=sum_q N(k,q)C(m+1,q)，k<=28,m<=62；容斥 N 的零值 N(k,q)=0（q>k 或 q=0<k）与基展开 k<=60,m<=62 [1.8s] []
+PASS C3b-tri (C3) 三角递推 N(k,r+1)=N(k-1,r)+N(k-1,r+1)+r[N(k-3,r-1)+2N(k-3,r)+N(k-3,r+1)]：容斥 N 3<=k<=60；序型 DP 的 N 3<=k<=28；0<=r<=k [0.0s] []
+PASS C3c-init (C3 初值) k=2,r=1 用零边界得 1≠N(2,2)=2；约定 N(-1,0)=1,N(-1,q>=1)=0,N(-2,.)=0 时递推对 1<=k<=60 成立：True
+PASS C3d-diag (C3) N(k,k)=2（2<=k<=60）；N(k,k-1)=k^2-k-4（4<=k<=60）；N(3,2)=4；序型 DP 同样成立（k<=28）；合法排列 == {w_1>...>w_{k-1}, w_k∈{1,2}}（3<=k<=8 全枚举） [True True True True]
+PASS C6a-h (C6) h_k 三种算法一致：递推（h_0=1,h_1=1,h_2=1+t）；N 表达式（1<=k<=60）；(1-t)^{k+1}sum_{m<=62}U_k(m)t^m（截断到 t^62，其余系数为 0，deg h_k<=k-1），0<=k<=60 [0.0s] []
+PASS C6b-explicit (C6) h_3..h_6 显式值；h_k(1)=2（2<=k<=60），h_1(1)=1 [True True]
+PASS C7a-num (C7) Num_q=P_{q-1} sum_k N(k,q)x^k（N 取容斥，k<=100）：x^{3q-1}..x^100 系数全为 0，次数恰 3q-2，首项 (q-1)!，最低项 2x^q（q>=2）/ x（q=1），1<=q<=22；q=1..4 的给定分子 [0.0s] []
+PASS C7b-ie-rec (C7) 容斥式 Num_q=sum_i(-1)^{q-i}C(q,i)W_{i-1}prod_{v=i}^{q-1}b_v（1<=q<=22）与三项递推（3<=q<=22）精确成立；（q=2 若硬套递推并取 Num_0=1 得 [0, 0, 1, 1, 1] ≠ Num_2=[0, 0, 2, 0, 1]） [0.1s] []
+TIME r4 total 4.9s
+SUMMARY r-c1-C3-C6-C7 pass=8 fail=0
+EXIT=0

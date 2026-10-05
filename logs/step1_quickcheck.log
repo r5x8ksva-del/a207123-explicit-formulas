@@ -1,0 +1,5 @@
+(1) G_m = W_m/P_m  k<=40 m<=12: PASS
+(2) explicit double sum  k<=40 m<=12: PASS
+(3) N triangle: brute(k<=8), incl-excl(k<=10) vs prompt: PASS
+(4) (C7) numerators poly (q<=12) + 3-term recurrence (3<=q<=12): PASS
+    Num_5 = [0, 0, 0, 0, 0, 2, 16, 29, 99, 81, 104, 146, 0, 24]

@@ -1,0 +1,4 @@
+PASS T1.4.3-perm :: 合法排列恰为 w_1>…>w_{k-1} 且 w_k∈{1,2}（k<=8，暴力）
+INFO 相邻 h_k,h_{k+1} 根是否交错（numpy 数值）: []
+PASS T5.3.6-nointerlace-num :: 数值上 k=2..35 相邻 h_k 根均不交错（numpy，非严格）
+SUMMARY audit_misc pass=2 fail=0

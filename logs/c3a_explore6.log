@@ -1,0 +1,24 @@
+f_k(t0) Taylor recursion vs DP h_k (k<=20): True
+(i) x=21/100 t=-1/20 prec 170 (9.1s)
+   I-S  = 3.814017765530373708055498445061E-62
+   pred = 3.814017765530373708055498445061E-62
+   rel residual = 1.674E-43
+   Gamma(-lam): reflect 3.532084579462180165762298574105E-129 ; regularized 3.532084579462180165762298574105E-129
+   K(x) = 5.422072398993107642807937863904E-129
+   quad err est 2.7E-169 level 6
+(ii) x=21/100 t=-1/2 lambda=85.304 (0.2s): I=0.765445660826194911528285056813915641113106119961446437448262
+     S = -9.729490E+44   (sum_m t^m G_m(x), 379 terms)
+     k=0 |term|=6.67E-01 |I-partial|=9.88E-02
+     k=15 |term|=1.59E-10 |I-partial|=9.02E-11
+     k=30 |term|=2.43E-19 |I-partial|=4.62E-18
+     k=45 |term|=3.53E-24 |I-partial|=8.27E-25
+     k=60 |term|=1.15E-29 |I-partial|=2.57E-30
+     k=75 |term|=7.03E-35 |I-partial|=4.13E-35
+     k=90 |term|=6.83E-40 |I-partial|=8.51E-40
+     k=105 |term|=2.66E-45 |I-partial|=2.65E-44
+     k=120 |term|=1.05E-48 |I-partial|=1.07E-48
+     k=135 |term|=2.08E-52 |I-partial|=1.73E-53
+     k=150 |term|=4.32E-56 |I-partial|=1.68E-56
+     best truncation k=150: |I-partial|=1.675E-56 (term size 4.316E-56)
+skip integer lambda
+skip integer lambda

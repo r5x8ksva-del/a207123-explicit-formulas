@@ -1,0 +1,10 @@
+PASS D0-good (b) good(a,b,c) <=> 高度列逐行字面无 001/010 <=> DP 转移规则，全部 (a,b,c) in {0..40}^3 [0.7s] []
+INFO own DP tables built: k<=60,m<=66 and k<=132,m<=30 [5.3s]
+PASS D1-full-enum (a)+(b) 原题矩阵全枚举（行取满足行规则的串，R_k^n<=1e6 的全部 99 对 (n,k)，各 k 的最大 n={1: 19, 2: 9, 3: 7, 4: 6, 5: 5, 6: 4, 7: 4, 8: 3, 9: 3, 10: 3, 11: 2, 12: 2, 13: 2, 14: 2, 15: 2, 16: 2, 17: 1, 18: 1, 19: 1, 20: 1}）== U_k(ceil(n/2))U_k(floor(n/2))；位运算列检查 == 逐列元组检查（k<=5 全部三元组）:True [16.6s] []
+PASS D2-row-transfer (a) 原题按行转移计数（列三元组字面检查）== 乘积公式：1<=k<=8 时 n<=22，k=9,10 时 n<=16 [1.1s] []
+PASS D3-multichain (c) 允许行偏序集（逐分量序）的 m 元多重链 r_1>=...>=r_m 个数 == 高度 DP，0<=k<=12, 0<=m<=20 [0.2s] []
+PASS D4-height-enum (b) 高度向量 {0..m}^k 直接枚举（每个三元组逐行字面检查）== 高度 DP，k<=6,m<=6 与 k=7,m<=5 [2.8s] []
+PASS D5-vs-core 自写 DP == core.U_height_table（参考实现）k<=60,m<=20；== core.U_fast_table k<=132,m<=20 与 k<=60,m<=62 [True True True; 4.5s]
+PASS D6-prompt-data 第 2 节 U 表（k=1..10,m=0..6）、R_1..R_10、a_3(1..6)=6,36,102,289,612,1296（按行转移直接计数） [True True True]
+TIME r1_defs total 31.2s
+SUMMARY r-c1-defs pass=7 fail=0

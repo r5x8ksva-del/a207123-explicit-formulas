@@ -1,0 +1,178 @@
+# final_audit verify-requirements log (adversarial re-check of 16 requirement-audit findings), 2026-10-04
+# scripts: code/review/final-audit/verify-requirements/v_quotes.py, v0_nonumpy.py (+ nonumpy_shadow/), v3_prompt_k40.py, v_misc.py ; run with PYTHONUTF8=1 py -3.14
+# read-only: no report/notes/code/checks file modified; v0 runs the rv2 sub-scripts directly (not via check_rv2) so logs/rv2_x1_*.log are untouched
+
+########## v_quotes.py
+== quote check: exact substring in notes/report_parts/<file>
+#0  00_head.md       count=1 OK
+#1  03_C2.md         count=1 OK
+#2  06_C5.md         count=1 OK
+#3  06_C5.md         count=1 OK
+#4  10_uncertain.md  count=1 OK
+#5  10_uncertain.md  count=1 OK
+#6  00_head.md       count=1 OK
+#7  03_C2.md         count=1 OK
+#8  09_code.md       count=1 OK
+#9  05_C4.md         count=1 OK
+#10 06_C5.md         count=1 OK
+#11 04_C3.md         count=1 OK
+#12 06_C5.md         count=1 OK
+#13 06_C5.md         count=1 OK
+#14 06_C5.md         count=1 OK
+#15 02_C1.md         count=1 OK
+all quotes found: True
+token c5b.diag                           occurrences in report_parts: 0
+token c5b.rows                           occurrences in report_parts: 0
+token C3B-INT                            occurrences in report_parts: 0
+token P_3                                occurrences in report_parts: 1
+token Λ_3                                occurrences in report_parts: 0
+token Λ_k                                occurrences in report_parts: 3
+token C(x+1                              occurrences in report_parts: 1
+token C(y+1                              occurrences in report_parts: 2
+token review_r-c2b_r4b_k60               occurrences in report_parts: 0
+token review_r-c2b_r4b_full_small        occurrences in report_parts: 0
+token review_r-c1_r3_C2_final            occurrences in report_parts: 0
+token review_r-c1_r4_C3_C6_C7_final      occurrences in report_parts: 0
+token review_r-c3b_r2_rank               occurrences in report_parts: 0
+token review_x2-dfinite_kernel           occurrences in report_parts: 0
+token review_r-c5b_negzeros_exact        occurrences in report_parts: 0
+token notes/c4.md §4.7                   occurrences in report_parts: 0
+token notes/c4.md §4.9                   occurrences in report_parts: 0
+token notes/c5a.md §4                    occurrences in report_parts: 0
+
+########## v0_nonumpy.py (finding #0)
+== finding #0: no-numpy runs (shadow=C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\code\review\final-audit\verify-requirements\nonumpy_shadow)
+---- sanity: import numpy under shadow  rc=1  (0.1s)  PASS=0 FAIL=0
+    |   File "C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\code\review\final-audit\verify-requirements\nonumpy_shadow\numpy\__init__.py", line 2, in <module>
+    |     raise ModuleNotFoundError("No module named 'numpy' (blocked by final-audit verify-requirements shadow)", name='numpy')
+    | ModuleNotFoundError: No module named 'numpy' (blocked by final-audit verify-requirements shadow)
+sanity ok (import must fail): True
+---- rv2 sub-script r1_numfield_residues.py  rc=0  (6.2s)  PASS=9 FAIL=0
+    | PASS r1.c2b_cert_values independently recomputed norms N(nu_i) (nu_i = -i*theta) equal the c2b certificate table entries for m<=6 (11 entries)
+    | PASS r1.float_residues floating point (tol 1e-9): at the three complex roots xi_j of b_1, rho_j u'(xi_j) xi_j^{3m+2}/(1+xi_j) == (-1)^m/(m-1)! for m in {1,2,5,9}; |xi_1|=0.68233, |xi_2|=|xi_1|^{-1/2}
+    | # elapsed 6.1s
+    | SUMMARY r1 fail=0
+---- rv2 sub-script r2_two_family.py 6000 1500  rc=1  (0.1s)  PASS=0 FAIL=0
+    | Traceback (most recent call last):
+    |   File "C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\code\review\x1-single-sum\r2_two_family.py", line 20, in <module>
+    |     import numpy as np
+    |   File "C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\code\review\final-audit\verify-requirements\nonumpy_shadow\numpy\__init__.py", line 2, in <module>
+    |     raise ModuleNotFoundError("No module named 'numpy' (blocked by final-audit verify-requirements shadow)", name='numpy')
+    | ModuleNotFoundError: No module named 'numpy' (blocked by final-audit verify-requirements shadow)
+---- verify_all.py c0 c1 c2a c2b c3a c3b c4 c5a c5b rv  rc=0  (590.6s)  PASS=288 FAIL=0
+    | PASS rv-sum-identity Σ_{j=1}^m j·h_{s−1}(j..m) = S(m+s,m) − [s=0]（1<=m<=15, 0<=s<=19；c2a 原文漏了 s=0）
+    | 
+    | SUMMARY rv pass=7 fail=0 (22.6s)
+    | ========================================================================
+    | area     pass   fail    rc  summary     secs  status
+    | c0         13      0     0      yes      7.0  PASS
+    | c1         45      0     0      yes     74.4  PASS
+    | c2a        23      0     0      yes     17.2  PASS
+    | c2b        33      0     0      yes     40.7  PASS
+    | c3a        34      0     0      yes     30.6  PASS
+    | c3b        22      0     0      yes    323.0  PASS
+    | c4         41      0     0      yes     36.1  PASS
+    | c5a        37      0     0      yes     32.7  PASS
+    | c5b        33      0     0      yes      6.1  PASS
+    | rv          7      0     0      yes     22.7  PASS
+    | ------------------------------------------------------------------------
+    | TOTAL pass=288 fail=0 modules=10 failed_modules=-  (590.5s)
+    | OVERALL: PASS
+c3b numpy flag line: ['# elapsed 323.0s (numpy=False)']
+RESULT #0: r1 rc=0, r2 rc=1 (nonzero => rv2 would FAIL without numpy); other 10 modules rc=0
+
+########## v3_prompt_k40.py (finding #3)
+== finding #3: T5.1(5) numbers recomputed independently (decimal prec 90)
+m=1 rho=1.4655712319 c_m=2.2096081318 | U41/U40 rel.err=3.2891e-08 (0.0000%), theory kappa(1-theta)theta^40=3.2914e-08, agreement 0.07% | U40^(1/40) rel.err=2.0018e-02 (2.00%) | U40/(c rho^40)-1=-1.0360e-07 (-0.00%)
+m=2 rho=1.6956207696 c_m=7.8411192294 | U41/U40 rel.err=3.5376e-04 (0.0354%), theory kappa(1-theta)theta^40=3.5284e-04, agreement 0.26% | U40^(1/40) rel.err=5.2764e-02 (5.28%) | U40/(c rho^40)-1=-2.6007e-03 (-0.26%)
+m=3 rho=1.8637065278 c_m=28.9768573170 | U41/U40 rel.err=2.7920e-03 (0.2792%), theory kappa(1-theta)theta^40=2.7134e-03, agreement 2.89% | U40^(1/40) rel.err=8.6976e-02 (8.70%) | U40/(c rho^40)-1=-3.0061e-02 (-3.01%)
+c_1 check vs (10+15rho+17rho^2)/31: -1E-89
+
+########## v_misc.py (findings #1 #2 #4-#15)
+== #1 odd shapes: evidence type
+  r-c2a log: PASS odd_shapes_fiber fiber-point test (float, tol 1e-7) excludes every shape (alpha>=1, 2<=alpha+beta<=12) except [(2, 1)]
+  in verify_all_final.log? odd_shapes / fiber-point: False
+  r-c2a-review §5 says 只能算证据: True
+  00_head grade def contains 【已验证】= 只有精确程序核对: True
+== #2 OEIS U_k-in-m windows actually queried
+  U_k(m) (as sequence in m) searched for k = [3, 4, 5, 6, 7]
+  verify_all c5b.k567-nohit: PASS c5b.k567-nohit k=5,6,7 无类似对应：U_5(0..7)、U_5(1..8)、U_5(2..9)、U_6(0..7)、U_6(1..8)、U_6(2.
+  01_summary.md: ...只在 k=3），U_4=A326247 倾向巧合，k≥5 没有对应。 10. **被否定或更正的**：c4...
+  02_C1.md: ...k−1,k−1)+(k−2)N(k−3,k−3)，k≥5 时增量 2k−2，基点 N(4,3)=8；k=3...
+  06_C5.md: ...链」的结构在 k=4 的自然编码下没有出现，而且 k≥5 在 OEIS 中没有任何对应。 (6)【已验证】...
+  06_C5.md: ... 在 OEIS 中没有任何对应。 (6)【已验证】k≥5 没有类似对应：U_5、U_6、U_7 从 m=0...
+  08_failed.md: .../2 条边」等推广都在 k=4 或 k=2 失效。k≥5 在 OEIS 中没有对应。  **B. 两轮工作...
+  10_uncertain.md: ...U_3（有结构，仅 k=3）、U_4（倾向巧合）、k≥5（无对应），并发现提示词 R_k g.f. 写法的...
+== #4 c3b relation-space boxes in verify_all (U vs N)
+  C3B-E2   boxes=8  (U)
+  C3B-E2S  boxes=3  (U)
+  C3B-E3B  boxes=8  (N)
+  C3B-E3S  boxes=3  (N)
+  x2 U boxes: 24  x2 N boxes: 20
+== #5 checks of N(k,q) against its combinatorial definition (max k)
+  C3-brute       PASS C3-brute (C3) 组合意义：core.N_brute（DFS 按定义数「值域恰为 q 个值的合法词」）== 容斥 N(k,q)，0<=k<=9（k=10,11 见 extended_checks.py 的 E3） [0.8s]
+  c3a-N-def      PASS c3a-N-def N(k,q) by DFS over surjective legal words (k<=9) == binomial inversion of the DP table; N(k,q)=0 for q>k (k<=30)
+  c4-N-dfs       PASS c4-N-dfs N(k,q) == 按定义 DFS 枚举合法满射词（core.N_brute），k<=8
+  N_inversion    PASS N_inversion N(k,q) = sum_{i=1}^q (-1)^{q-i} C(q,i) U_H(k,i-1) == DFS definition N_brute (k<=8) and core inclusion-exclusion N_from_U (k<=40, q<=2
+  C3B-PSI        PASS C3B-PSI N: DFS definition == inclusion-exclusion (k<=8); Psi_q=sum_k N(k,q)x^k = sum_i (-1)^{q-i}C(q,i)G_{i-1} (q<=12,k<=40); Res_{x_v}Psi_q = (-
+  rv-Ntri-vs-def PASS rv-Ntri-vs-def N 三角递推 == 高度 DP 容斥（k<=40）== DFS 定义（k<=8）；下面大 k 的 N 用该递推（T1.4 已证明）
+  c5a-anchor     PASS c5a-anchor fast height DP == reference U_list (m<=8,k<=30) == multichain (k<=8,m<=5); a_direct(n,k)==U_k(ceil n/2)U_k(floor n/2) (k<=5,n<=10); N 
+  r-c1 order-type DP: ['PASS C3a-basis (C3) N 的组合意义与二项式基：DFS 定义（k<=9）== 序型 DP（k<=28，独立算法 0.2s）== 容斥；用序型 DP 的 N 重建 U_k(m)=sum_q N(k,q)C(m+1,q)，k<']
+  completion row / summary contain unqualified claim: True True
+== #6 reviewer-only ranges cited without 「不在 verify_all 中」/log path
+  02_C1.md found=True  logs/ in sentence=False  不在 verify_all in sentence=False  | 第二轮复核者 r-c1 另以精确 gcd（i≤150）、模 p 证书（i≤1000）、有理根试除（i≤3000）与模 p 的 BM（m≤30）独立确认。
+  02_C1.md found=True  logs/ in sentence=False  不在 verify_all in sentence=False  | 复核者 r-c1 用与 U 无关的序型 DP 扩到 k≤28）、c1.C3-tri（k≤60）、c1.C3-cases（6 类逐类计数，k≤8）、c1.C3-init、c1.C3-diag（k≤60）、c1.C3-pro
+  04_C3.md found=True  logs/ in sentence=False  不在 verify_all in sentence=False  | 复核者 x2 用自写 DP 另算了 44 个新盒子（U 24、N 20），核维数全部等于公式。
+  06_C5.md found=True  logs/ in sentence=False  不在 verify_all in sentence=False  | 复核者 r-c5b 用同法确认到 k≤70；一般 k 为【猜想】（第一轮原文写成「⇔」，按字面超出了证明内容，已由复核更正）。
+  exists logs/review_r-c1_r3_C2_final.log: True; cited in report: False
+  exists logs/review_r-c1_r4_C3_C6_C7_final.log: True; cited in report: False
+  exists logs/review_r-c3b_r2_rank.log: True; cited in report: False
+  exists logs/review_x2-dfinite_kernel.log: True; cited in report: False
+  exists logs/review_r-c5b_negzeros_exact.log: True; cited in report: False
+== #7 r-c2b r4b logs
+  review_r-c2b_r4b_full.log: k<=60 mentioned=False; lines: E m=5 k0=0: tested 124390, consistent 59, checks histogram { | E m=6 k0=0: tested 188630, consistent 1024, checks histogram | U m=4 k0=0: tested 78146, consistent 0, checks histogram {}, | U m=5 k0=0: tested 124390, consistent 59, checks histogram { | U m=6 k0=0: tested 188630, consistent 1024, checks histogram
+  review_r-c2b_r4b_full_small.log: k<=60 mentioned=False; lines: E m=3 k0=0: tested 46178, consistent 0, checks histogram {}, | E m=4 k0=0: tested 78146, consistent 0, checks histogram {}, | U m=2 k0=0: tested 25191, consistent 0, checks histogram {}, | U m=3 k0=0: tested 46178, consistent 0, checks histogram {}, | [time] 29.0s
+  review_r-c2b_r4b_k60.log: k<=60 mentioned=True; lines: E m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] | E m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] | U m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] | U m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] | [time] 399.7s
+== #8 rv2 scripts import core?
+  r1_numfield_residues.py: "import core"/"from core" present: False
+  r2_two_family.py: "import core"/"from core" present: False
+  09_code rv2 row says 不导入 core: True
+== #9/#10 proofs / pointers
+  c4.md has §4.7 低次系数 【已证明，一切 j】: True  §4.9 定理 4.9: True
+  c5a.md has 4.6 / 4.8 / 4.9 sections: True True True
+  05_C4.md (5)【已证明，一切 j】 : contains notes/ or §: False
+  05_C4.md (7)【已证明】 : contains notes/ or §: False
+  06_C5.md (5)【已证明】h_k : contains notes/ or §: False
+== #11 what C3B-RES / C3B-PX / C3B-INT check; C3B-INT cited?
+  C3B-PX   C3B-PX b_v-b_m=(m-v)x^3; P_{j-1} == (m)_j x^{3j} and W_m == 1+sum_j j(m)_j x^{3j+2} (positive coeffs) mod b_m, so W_m(x_m)>=1; 1<=j<=m<=30
+  C3B-INT  C3B-INT rational interval arithmetic: W_m(x_m)>0 and G_{m-1}(x_m)+m x_m^2>0 at x_m=1/rho_m, 1<=m<=30
+  C3B-RES  C3B-RES Res_z G_m = Res_z G_v * (-1)^{m-v}/((m-v)! z^{3(m-v)}) at every root z of b_v (exact, mod b_v), 0<=v<m<=12
+  C3B-INT cited in report: False
+== #12 c5b.diag / c5b.rows
+  c5b.diag  cited=False  c5b.diag A207117（A207123 对角线）b 文件 n=1..19 = a_n(n)（高度 DP），n<=7 与 a_direct 一致
+  c5b.rows  cited=False  c5b.rows A207069/A207070/A207124/A207125/A207126/A207127（A207123 第 2..7 行）b 文件 k=1..210 = a_k(n)（n=2..7，高度 DP 乘积），k
+== #13 P_3 / Λ notation
+  02_C1 notation defines P_m=∏b_i: True ; T1.0(c) uses Λ_k: True
+  06_C5 defines P_3 anywhere ("P_3 为"/"P_3:="/"记 P_3"): False
+== #14 c_2 / c_3 double use in 06_C5
+  constant c_2≈7.84 present: True ; sequence use "c_2=A077949": True ; c_j 的形式: True
+== #15 polynomial-variable convention
+  notation block uses 基 C(y+1,q): True ; T1.2 y-remark: True ; T1.4(1) uses C(x+1,q)/Q[x]: True
+
+########## verdict summary
+#0 real  (r2_two_family.py imports numpy unconditionally; without numpy r2 rc=1 => rv2 FAIL, OVERALL FAIL; other 10 modules PASS, c3b falls back with numpy=False)
+#1 real  (float fiber test tol 1e-7, not in verify_all; head defines 【已验证】 as exact checks; reviewer: 只能算证据)
+#2 real  (only U_5,U_6,U_7 queried; c5b.k567-nohit itself says k=5,6,7; 'k≥5' also in 01_summary, T5.4(5), 08_failed 7, completion row)
+#3 real  (T5.1(5) inherits 【已证明】, numbers are decimal-90 numerics [c5a-prompt-k40 numeric; c5a §2.7 【已验证，数值】]; numbers themselves re-verified correct)
+#4 real  (verify_all: U boxes 8+3, N boxes 8+3; item is about Rel(N))
+#5 real  (N combinatorial definition: DFS k<=9 in verify_all, ext. script k<=11, r-c1 order-type DP k<=28; summary/completion row unqualified)
+#6 real  (T1.3(2), T1.4, T5.3(2): no 不在 verify_all / no log path; T3.8: 只在日志中 but no log paths)
+#7 real  (cited r4b_full.log is the k<=30 run for E m=5,6 / U m=4,5,6; k<=60 refutation is in r4b_k60.log)
+#8 real  (r1/r2 do not import core; table header says every module takes truth from core)
+#9 real  (T4.3(5),(7) no proof/pointer; proofs in notes/c4.md §4.7, §4.9)
+#10 real (T5.3(5) no proof/pointer; proofs in notes/c5a.md §4.9, §4.6, §4.8)
+#11 real (C3B-RES = residue transfer law; nonzero residue = C3B-PX + C3B-INT; C3B-INT never cited)
+#12 real (c5b.diag, c5b.rows cover A207117 / A207124-127 but are never cited)
+#13 real (P_3 = allowed-row poset, conflicts with P_m=∏b_i; elsewhere Λ_k)
+#14 real, low impact (c_2,c_3 constants in T5.1 vs sequences c_2(n),c_3(n) in T5.4(6); T5.1(1) 'c_j 的形式')
+#15 real, low impact (T1.4(1) uses x/Q[x] for the m-polynomial variable against the report's own y-convention)

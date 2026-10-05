@@ -1,0 +1,38 @@
+PASS base.asc-total :: 上升数细化 DP 求和 == 定义 DP, k<=30, m<=10
+PASS T2.1.bijection :: 块分解方式数 == [合法]，全部 (m+1)^k 序列，1<=k<=8, m<=3（共 97738 个）
+PASS T2.1.count :: sum_{k=1..10,m=0..4}(m+1)^k = 13695758（报告 13,695,758）
+PASS T2.1.stats :: 上升数=#T+#E；以上升结尾 ⇔ 末块为 E（k<=8, m<=3 全部合法序列）
+PASS T2.2.gf-xy :: G_m(x,y)=(G_{m-1}+m y x^2)/(1-x-m y x^3) 与按上升数细化 DP 一致, k<=30, m<=10
+PASS T2.2.WP-xy :: G_m(x,y)=W_m/P_m=1/P_m+y x^2 sum_j j/prod_{v=j}^m b_v（b_v=1-x-v y x^3），k<=24, m<=8
+PASS T2.2.lemma1-s :: s-细化引理 1 U_k(m,s)=U_k(m-1,s)+U_{k-1}(m,s)+m U_{k-3}(m,s-1)+m[k=2][s=1]：取 U_{-1}(·,s)=0 时成立=True；若沿用 T1.1 的 U_{-1}≡1（即 [s=0]）则成立=False
+PASS T2.2.pde-xty :: (1-x-t)F-y x^3 t F_t=1+y x^2 t/(1-t)^2 逐系数, k<=30, m<=10, 全部 s
+PASS T2.3.1-coef :: [x^n y^s]prod_{v=j}^m(1-x-v y x^3)^{-1}=H(m,s,j)C(n+m-j-2s,n-3s), n<=24, 0<=j<=m<=7
+PASS T2.3.2-rstirling :: H(m,s,j)=r-Stirling {m+s ⧵ m}_j（暴力集合划分，m+s<=9，含 j=0,1 时 =S(m+s,m)）
+PASS T2.3.2-H01 :: H(m,s,0)=H(m,s,1)=S(m+s,m), m,s<15
+PASS T2.3.3-nabla :: (1/t!)∇^t i^p|_{i=m}=h_{p-t}(m-t..m)，t<=m<=12, p<=30
+PASS T2.3.3-series :: sum_r(-1)^rC(t,r)/(1-(m-r)z)=t! z^t/prod_{r=0}^t(1-(m-r)z) 到 z^29, t<=m<=8
+PASS ③.H-rec :: H 递推 H(m,s,j)=H(m,s,j+1)+jH(m,s-1,j)，H(m,0,j)=1，H(m,s,m+1)=[s=0]，m<=15,s<20
+PASS ③.H-explicit :: H(m,s,j)=(1/(m-j)!)sum_i(-1)^{m-j-i}C(m-j,i)(j+i)^{s+m-j}（0^0=1），0<=j<=m<=15, s<20
+PASS T2.4.U :: 推荐公式（③ 的显式求和上界 floor(k/3)、floor((k-2)/3)）== 定义 DP, 0<=k<=60, 0<=m<=20
+PASS T2.4.split :: 第一项=不以上升结尾的序列数；第二项第 j 项=以上升结尾且末值 j 的序列数, k<=30, m<=10
+PASS T2.4.U-s :: U_k(m,s)=S(m+s,m)C(k+m-2s,k-3s)+sum_j j H(m,s-1,j)C(k+m-j-2s,k+1-3s) 与细化 DP 一致, k<=30, m<=10, 全部 s
+PASS T2.5.1-F3 :: F3 型 U_k(m)=sum_s S(m+s,m)C(k+1+m-2s,m+s)-sum_j sum_s H(m,s,j)C(k+m-j-2s,m-j+s), k<=60, m<=20
+PASS T2.5.1-telescope :: j x^3 Q_j=(1-x)Q_j-Q_{j+1}（Q_j=prod_{v=j}^m b_v^{-1}），级数到 x^39, m<=8
+PASS T2.5.2-theta-H :: Θ_t(n+3t)=sum_s H(m,s,m-t)C(n+t-2s,n-3s), m<=12, n<=30
+PASS T2.5.2-cex :: m=1,k=3：Θ 两项 (8, -2)，H 两项 (5, Fraction(1, 1))，和 6
+PASS T2.5.3-F4 :: m!U_k(m)=sum_i(-1)^{m-i}C(m,i)[c_i(k+3m)+sum_{j<=i} j i^(j下降) c_i(k+3m-3j-2)]（c_i(n<0)=0），k<=60, m<=20
+PASS T2.5.3-Wmod :: W_m ≡ 1+sum_{j<=i} j i^(j下降) x^{3j+2} (mod b_i)，0<=i<=m<=12
+PASS T2.5.3-Rk :: R_k=c_1(k+3)+c_1(k-2)-1, 0<=k<=60
+PASS T2.6.facts :: Q(ξ)：W_m(ξ)=ξ(1+ξ)=1+ξ^5 (m<=12)、b_w(ξ)=(1-w)ξ^3、N(ξ)=1、N(1+ξ)=3
+PASS T2.6.residue :: ρ_i u'(ξ_i)=(-1)^m(1+ξ)ξ^{-3m-2}/(m-1)!（留数 W_m/P_m'，Q(ξ) 精确，1<=m<=12）
+PASS T2.7.G :: G_m=(1/P_m-1)/x-(sum_{j<m}P_j)/P_m（到 x^39, m<=12）
+PASS T2.8.1-inv :: N(k,q)=sum_{i=1}^q(-1)^{q-i}C(q,i)U_k(i-1) 对 k>=1 成立 (k<=20)；但 k=0 时该式给 [0, 1, -1, 1, -1]（真值 1,0,0,0,0）
+PASS T2.8.2-Nc :: N^c(k,q)=sum_s sum_p C(q,p)R(p,s)C(k-2s+p-1,s+q-1) 与 DFS 一致 (1<=q<=k<=9)，需 R(0,0)=1 即 S(-1,-1)=1；若按 S(n,k)=0 (k<0) 则成立=False
+PASS T2.8.2-Nc00 :: (k,q)=(0,0) 时公式给 0（真值 1），与报告注一致
+PASS T2.8.2-R2s :: R(2s,s)=(2s-1)!!, 1<=s<=11
+PASS T2.9.digits-U :: U_100(100) 位数=99（报告 99）
+PASS T2.9.digits-theta :: Θ 型 k=m=100 最大中间单项 C(t,r)c_{m-r}(n) 位数=289，(t,r)=(100, 18)（报告 289）
+INFO counts k=m=100: H 项数=3334 (≈(m+1)k/3=3367); Θ c 值个数=5151 (≈m^2/2=5000); c 总项数=518534 (≈m^2k/6=166667)
+INFO counts k=1500,m=30: c 总项数=258416 (≈m^2k/6=225000)
+SUMMARY audit_c2 pass=34 fail=0
+elapsed 2.5s

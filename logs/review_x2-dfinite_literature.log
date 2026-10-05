@@ -1,0 +1,10 @@
+# x2-dfinite read-only literature lookup (2026-10-04)
+# GET https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/0021-8693(89)90222-6?fields=title,year,abstract,venue
+# GET https://api.crossref.org/works/10.1016/0021-8693(89)90222-6
+# Result (summary, not a copy): title "D-finite power series", L. Lipshitz, J. Algebra 122 (1989) 353-373.
+# The indexed "abstract" is the paper's introduction: one-variable D-finite <=> P-recursive (citing Stanley);
+# Definition 2.1 = several-variable D-finite; Section 2 results on several-variable D-finite series;
+# Section 3 = a higher-dimensional P-recursive notion without the defect of an earlier definition (Remark 3.5);
+# Section 4 = Hartogs-type theorem; Section 5 = matrices preserving P-recursiveness.
+# The introduction does NOT state an equivalence "D-finite <=> holonomic"; reference list includes Bjork,
+# "Rings of Differential Operators" (1979). Full text not read (no file download).

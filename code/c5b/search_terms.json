@@ -1,0 +1,706 @@
+{
+ "search_U3_m0.txt": {
+  "desc": "U_3(m), m=0..8",
+  "terms": [
+   1,
+   6,
+   17,
+   36,
+   65,
+   106,
+   161,
+   232,
+   321
+  ],
+  "url": "https://oeis.org/search?q=1,6,17,36,65,106,161,232,321&fmt=text"
+ },
+ "search_U3_m2.txt": {
+  "desc": "U_3(m), m=2..10",
+  "terms": [
+   17,
+   36,
+   65,
+   106,
+   161,
+   232,
+   321,
+   430,
+   561
+  ],
+  "url": "https://oeis.org/search?q=17,36,65,106,161,232,321,430,561&fmt=text"
+ },
+ "search_U4_m0.txt": {
+  "desc": "U_4(m), m=0..8",
+  "terms": [
+   1,
+   9,
+   32,
+   80,
+   165,
+   301,
+   504,
+   792,
+   1185
+  ],
+  "url": "https://oeis.org/search?q=1,9,32,80,165,301,504,792,1185&fmt=text"
+ },
+ "search_U4_m2.txt": {
+  "desc": "U_4(m), m=2..10",
+  "terms": [
+   32,
+   80,
+   165,
+   301,
+   504,
+   792,
+   1185,
+   1705,
+   2376
+  ],
+  "url": "https://oeis.org/search?q=32,80,165,301,504,792,1185,1705,2376&fmt=text"
+ },
+ "search_U5_m0.txt": {
+  "desc": "U_5(m), m=0..7",
+  "terms": [
+   1,
+   14,
+   64,
+   192,
+   457,
+   938,
+   1736,
+   2976
+  ],
+  "url": "https://oeis.org/search?q=1,14,64,192,457,938,1736,2976&fmt=text"
+ },
+ "search_U5_m1.txt": {
+  "desc": "U_5(m), m=1..8",
+  "terms": [
+   14,
+   64,
+   192,
+   457,
+   938,
+   1736,
+   2976,
+   4809
+  ],
+  "url": "https://oeis.org/search?q=14,64,192,457,938,1736,2976,4809&fmt=text"
+ },
+ "search_U5_m2.txt": {
+  "desc": "U_5(m), m=2..9",
+  "terms": [
+   64,
+   192,
+   457,
+   938,
+   1736,
+   2976,
+   4809,
+   7414
+  ],
+  "url": "https://oeis.org/search?q=64,192,457,938,1736,2976,4809,7414&fmt=text"
+ },
+ "search_U6_m0.txt": {
+  "desc": "U_6(m), m=0..7",
+  "terms": [
+   1,
+   21,
+   119,
+   419,
+   1136,
+   2604,
+   5306,
+   9906
+  ],
+  "url": "https://oeis.org/search?q=1,21,119,419,1136,2604,5306,9906&fmt=text"
+ },
+ "search_U6_m1.txt": {
+  "desc": "U_6(m), m=1..8",
+  "terms": [
+   21,
+   119,
+   419,
+   1136,
+   2604,
+   5306,
+   9906,
+   17283
+  ],
+  "url": "https://oeis.org/search?q=21,119,419,1136,2604,5306,9906,17283&fmt=text"
+ },
+ "search_U6_m2.txt": {
+  "desc": "U_6(m), m=2..9",
+  "terms": [
+   119,
+   419,
+   1136,
+   2604,
+   5306,
+   9906,
+   17283,
+   28567
+  ],
+  "url": "https://oeis.org/search?q=119,419,1136,2604,5306,9906,17283,28567&fmt=text"
+ },
+ "search_U7_m0.txt": {
+  "desc": "U_7(m), m=0..7",
+  "terms": [
+   1,
+   31,
+   214,
+   873,
+   2669,
+   6778,
+   15108,
+   30558
+  ],
+  "url": "https://oeis.org/search?q=1,31,214,873,2669,6778,15108,30558&fmt=text"
+ },
+ "search_U7_m1.txt": {
+  "desc": "U_7(m), m=1..8",
+  "terms": [
+   31,
+   214,
+   873,
+   2669,
+   6778,
+   15108,
+   30558,
+   57321
+  ],
+  "url": "https://oeis.org/search?q=31,214,873,2669,6778,15108,30558,57321&fmt=text"
+ },
+ "search_U7_m2.txt": {
+  "desc": "U_7(m), m=2..9",
+  "terms": [
+   214,
+   873,
+   2669,
+   6778,
+   15108,
+   30558,
+   57321,
+   101233
+  ],
+  "url": "https://oeis.org/search?q=214,873,2669,6778,15108,30558,57321,101233&fmt=text"
+ },
+ "search_R.txt": {
+  "desc": "R_k=U_k(1), k=1..12",
+  "terms": [
+   2,
+   4,
+   6,
+   9,
+   14,
+   21,
+   31,
+   46,
+   68,
+   100,
+   147,
+   216
+  ],
+  "url": "https://oeis.org/search?q=2,4,6,9,14,21,31,46,68,100,147,216&fmt=text"
+ },
+ "search_Uk2.txt": {
+  "desc": "U_k(2), k=2..11",
+  "terms": [
+   9,
+   17,
+   32,
+   64,
+   119,
+   214,
+   388,
+   694,
+   1222,
+   2145
+  ],
+  "url": "https://oeis.org/search?q=9,17,32,64,119,214,388,694,1222,2145&fmt=text"
+ },
+ "search_Uk3.txt": {
+  "desc": "U_k(3), k=2..11",
+  "terms": [
+   16,
+   36,
+   80,
+   192,
+   419,
+   873,
+   1837,
+   3788,
+   7629,
+   15285
+  ],
+  "url": "https://oeis.org/search?q=16,36,80,192,419,873,1837,3788,7629,15285&fmt=text"
+ },
+ "search_Uk4.txt": {
+  "desc": "U_k(4), k=2..11",
+  "terms": [
+   25,
+   65,
+   165,
+   457,
+   1136,
+   2669,
+   6334,
+   14666,
+   32971,
+   73592
+  ],
+  "url": "https://oeis.org/search?q=25,65,165,457,1136,2669,6334,14666,32971,73592&fmt=text"
+ },
+ "search_Udiag.txt": {
+  "desc": "U_k(k), k=0..9",
+  "terms": [
+   1,
+   2,
+   9,
+   36,
+   165,
+   938,
+   5306,
+   30558,
+   190509,
+   1229052
+  ],
+  "url": "https://oeis.org/search?q=1,2,9,36,165,938,5306,30558,190509,1229052&fmt=text"
+ },
+ "search_Nflat.txt": {
+  "desc": "N(k,q) rows q=1..k, k=1..6",
+  "terms": [
+   1,
+   1,
+   2,
+   1,
+   4,
+   2,
+   1,
+   7,
+   8,
+   2,
+   1,
+   12,
+   25,
+   16,
+   2,
+   1,
+   19,
+   59,
+   65,
+   26,
+   2
+  ],
+  "url": "https://oeis.org/search?q=1,1,2,1,4,2,1,7,8,2,1,12,25,16,2,1,19,59,65,26,2&fmt=text"
+ },
+ "search_Nflat_rev.txt": {
+  "desc": "N(k,q) rows q=k..1, k=1..6",
+  "terms": [
+   1,
+   2,
+   1,
+   2,
+   4,
+   1,
+   2,
+   8,
+   7,
+   1,
+   2,
+   16,
+   25,
+   12,
+   1,
+   2,
+   26,
+   65,
+   59,
+   19,
+   1
+  ],
+  "url": "https://oeis.org/search?q=1,2,1,2,4,1,2,8,7,1,2,16,25,12,1,2,26,65,59,19,1&fmt=text"
+ },
+ "search_Nflat_q0.txt": {
+  "desc": "N(k,q) rows q=0..k, k=0..5",
+  "terms": [
+   1,
+   0,
+   1,
+   0,
+   1,
+   2,
+   0,
+   1,
+   4,
+   2,
+   0,
+   1,
+   7,
+   8,
+   2,
+   0,
+   1,
+   12,
+   25,
+   16,
+   2
+  ],
+  "url": "https://oeis.org/search?q=1,0,1,0,1,2,0,1,4,2,0,1,7,8,2,0,1,12,25,16,2&fmt=text"
+ },
+ "search_Nrowsum.txt": {
+  "desc": "sum_q N(k,q), k=1..10",
+  "terms": [
+   1,
+   3,
+   7,
+   18,
+   56,
+   172,
+   532,
+   1760,
+   5992,
+   20640
+  ],
+  "url": "https://oeis.org/search?q=1,3,7,18,56,172,532,1760,5992,20640&fmt=text"
+ },
+ "search_Nkk1.txt": {
+  "desc": "N(k,k-1), k=4..13",
+  "terms": [
+   8,
+   16,
+   26,
+   38,
+   52,
+   68,
+   86,
+   106,
+   128,
+   152
+  ],
+  "url": "https://oeis.org/search?q=8,16,26,38,52,68,86,106,128,152&fmt=text"
+ },
+ "search_Nkk2.txt": {
+  "desc": "N(k,k-2), k=4..12",
+  "terms": [
+   7,
+   25,
+   65,
+   139,
+   277,
+   509,
+   871,
+   1405,
+   2159
+  ],
+  "url": "https://oeis.org/search?q=7,25,65,139,277,509,871,1405,2159&fmt=text"
+ },
+ "search_Nkk3.txt": {
+  "desc": "N(k,k-3), k=5..12",
+  "terms": [
+   12,
+   59,
+   199,
+   574,
+   1446,
+   3257,
+   6809,
+   13390
+  ],
+  "url": "https://oeis.org/search?q=12,59,199,574,1446,3257,6809,13390&fmt=text"
+ },
+ "search_Nk2.txt": {
+  "desc": "N(k,2), k=2..12",
+  "terms": [
+   2,
+   4,
+   7,
+   12,
+   19,
+   29,
+   44,
+   66,
+   98,
+   145,
+   214
+  ],
+  "url": "https://oeis.org/search?q=2,4,7,12,19,29,44,66,98,145,214&fmt=text"
+ },
+ "search_Nk3.txt": {
+  "desc": "N(k,3), k=3..12",
+  "terms": [
+   2,
+   8,
+   25,
+   59,
+   124,
+   253,
+   493,
+   925,
+   1707,
+   3104
+  ],
+  "url": "https://oeis.org/search?q=2,8,25,59,124,253,493,925,1707,3104&fmt=text"
+ },
+ "search_hflat.txt": {
+  "desc": "h_k coefficients, k=3..7",
+  "terms": [
+   1,
+   2,
+   -1,
+   1,
+   4,
+   -3,
+   1,
+   8,
+   -5,
+   -2,
+   1,
+   14,
+   -7,
+   -8,
+   2,
+   1,
+   23,
+   -6,
+   -27,
+   11
+  ],
+  "url": "https://oeis.org/search?q=1,2,-1,1,4,-3,1,8,-5,-2,1,14,-7,-8,2,1,23,-6,-27,11&fmt=text"
+ },
+ "search_C7num.txt": {
+  "desc": "(C7) numerator coeffs x^q..x^(3q-2), q=3..5",
+  "terms": [
+   2,
+   2,
+   7,
+   0,
+   2,
+   2,
+   8,
+   13,
+   15,
+   29,
+   0,
+   6,
+   2,
+   16,
+   29,
+   99,
+   81,
+   104,
+   146,
+   0,
+   24
+  ],
+  "url": "https://oeis.org/search?q=2,2,7,0,2,2,8,13,15,29,0,6,2,16,29,99,81,104,146,0,24&fmt=text"
+ },
+ "search_c2.txt": {
+  "desc": "c_2(n), n=0..13",
+  "terms": [
+   1,
+   1,
+   1,
+   3,
+   5,
+   7,
+   13,
+   23,
+   37,
+   63,
+   109,
+   183,
+   309,
+   527
+  ],
+  "url": "https://oeis.org/search?q=1,1,1,3,5,7,13,23,37,63,109,183,309,527&fmt=text"
+ },
+ "search_c3.txt": {
+  "desc": "c_3(n), n=0..13",
+  "terms": [
+   1,
+   1,
+   1,
+   4,
+   7,
+   10,
+   22,
+   43,
+   73,
+   139,
+   268,
+   487,
+   904,
+   1708
+  ],
+  "url": "https://oeis.org/search?q=1,1,1,4,7,10,22,43,73,139,268,487,904,1708&fmt=text"
+ },
+ "search_ref_A207123.txt": {
+  "desc": "entries referencing A207123",
+  "terms": null,
+  "url": "https://oeis.org/search?q=A207123&fmt=text"
+ },
+ "A207069.txt": {
+  "desc": "entry A207069 (row 2 of A207123)",
+  "terms": null,
+  "url": "https://oeis.org/search?q=id:A207069&fmt=text"
+ },
+ "A207070.txt": {
+  "desc": "entry A207070 (row 3 of A207123)",
+  "terms": null,
+  "url": "https://oeis.org/search?q=id:A207070&fmt=text"
+ },
+ "A002620.txt": {
+  "desc": "entry A002620 (column 1 of A207123 is A002620(n+2))",
+  "terms": null,
+  "url": "https://oeis.org/search?q=id:A002620&fmt=text"
+ },
+ "A030179.txt": {
+  "desc": "entry A030179 (column 2 of A207123 is A030179(n+2))",
+  "terms": null,
+  "url": "https://oeis.org/search?q=id:A030179&fmt=text"
+ },
+ "search_Utab_k1m1_kinc.txt": {
+  "desc": "U table k>=1,m>=1 antidiagonals s=k+m=4..7, k increasing",
+  "terms": [
+   4,
+   9,
+   6,
+   5,
+   16,
+   17,
+   9,
+   6,
+   25,
+   36,
+   32,
+   14,
+   7,
+   36,
+   65,
+   80,
+   64,
+   21
+  ],
+  "url": "https://oeis.org/search?q=4,9,6,5,16,17,9,6,25,36,32,14,7,36,65,80,64,21&fmt=text"
+ },
+ "search_Utab_k1m1_kdec.txt": {
+  "desc": "U table k>=1,m>=1 antidiagonals s=4..7, k decreasing",
+  "terms": [
+   6,
+   9,
+   4,
+   9,
+   17,
+   16,
+   5,
+   14,
+   32,
+   36,
+   25,
+   6,
+   21,
+   64,
+   80,
+   65,
+   36,
+   7
+  ],
+  "url": "https://oeis.org/search?q=6,9,4,9,17,16,5,14,32,36,25,6,21,64,80,65,36,7&fmt=text"
+ },
+ "search_Utab_k1m0_kinc.txt": {
+  "desc": "U table k>=1,m>=0 antidiagonals s=4..6, k increasing",
+  "terms": [
+   4,
+   9,
+   6,
+   1,
+   5,
+   16,
+   17,
+   9,
+   1,
+   6,
+   25,
+   36,
+   32,
+   14,
+   1
+  ],
+  "url": "https://oeis.org/search?q=4,9,6,1,5,16,17,9,1,6,25,36,32,14,1&fmt=text"
+ },
+ "search_Utab_k1m0_kdec.txt": {
+  "desc": "U table k>=1,m>=0 antidiagonals s=4..6, k decreasing",
+  "terms": [
+   1,
+   6,
+   9,
+   4,
+   1,
+   9,
+   17,
+   16,
+   5,
+   1,
+   14,
+   32,
+   36,
+   25,
+   6
+  ],
+  "url": "https://oeis.org/search?q=1,6,9,4,1,9,17,16,5,1,14,32,36,25,6&fmt=text"
+ },
+ "search_Utab_k0m0_kinc.txt": {
+  "desc": "U table k>=0,m>=0 antidiagonals s=4..6, k increasing",
+  "terms": [
+   1,
+   4,
+   9,
+   6,
+   1,
+   1,
+   5,
+   16,
+   17,
+   9,
+   1,
+   1,
+   6,
+   25,
+   36,
+   32,
+   14,
+   1
+  ],
+  "url": "https://oeis.org/search?q=1,4,9,6,1,1,5,16,17,9,1,1,6,25,36,32,14,1&fmt=text"
+ },
+ "search_Utab_k0m0_kdec.txt": {
+  "desc": "U table k>=0,m>=0 antidiagonals s=4..6, k decreasing",
+  "terms": [
+   1,
+   6,
+   9,
+   4,
+   1,
+   1,
+   9,
+   17,
+   16,
+   5,
+   1,
+   1,
+   14,
+   32,
+   36,
+   25,
+   6,
+   1
+  ],
+  "url": "https://oeis.org/search?q=1,6,9,4,1,1,9,17,16,5,1,1,14,32,36,25,6,1&fmt=text"
+ },
+ "search_ref_A207123_p2.txt": {
+  "desc": "entries referencing A207123, page 2",
+  "terms": null,
+  "url": "https://oeis.org/search?q=A207123&start=10&fmt=text"
+ }
+}

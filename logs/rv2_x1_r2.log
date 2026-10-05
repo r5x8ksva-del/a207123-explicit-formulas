@@ -1,0 +1,15 @@
+U fiber1 solutions |a|,|b|<=6000: 14 (mod-p candidates 14), time 1.4s
+    [(-4, 10), (-3, -2), (-3, 0), (-3, 5), (-2, 0), (-2, 5), (-1, 3), (0, 5), (1, 2), (1, 4), (1, 9), (2, 4), (2, 9), (4, 9)]
+PASS r2.U_fiber1_150 fiber-1 condition det(W~_1, x^a, x^b)=0 has exactly 14 solutions with |a|,|b|<=150 (reproduces c2a two_family_residue)
+PASS r2.U_fiber1_ext no further fiber-1 solutions up to |a|,|b|<=6000 (evidence for the c2a fiber-1 "exactly 14" conjecture)
+PASS r2.U_no_common none of the fiber-1 solutions satisfies the fiber-2 condition => for every m>=2 no two-family x^{g1}A1(u)+x^{g2}A2(u)+L with |g_i+3m+3|<=6000
+PASS r2.U_control_F3 control: the genuine m=1 two-family representation F3 (g1=-7,g2=-3 -> (a,b)=(-1,3)) passes fiber 1
+U fiber2 solutions |a|,|b|<=400: 2, time 0.0s: [(3, 8), (5, 15)]
+PASS r2.U_fiber2_disjoint independently: fiber-2 solution set (|a|,|b|<=400) is disjoint from the fiber-1 solution set
+E fiber1 solutions |a|,|b|<=1500: 3015 (includes the trivial lines a=5 or b=5), time 3.0s
+    sporadic (a,b not containing 5): [(-28, -17), (-6, 27), (-3, -2), (-3, 0), (-2, 0), (2, 3), (2, 10), (3, 10), (4, 7), (4, 12), (6, 8), (6, 13), (7, 12), (8, 13), (16, 38)]
+E fibers 1&2 common: [(5, 6), (5, 8), (6, 8)]
+PASS r2.E_control_m2 control: E(k,2) is genuinely two-term (j=1: N=4, j=2: N=1 -> (a,b)=(5,8)); it passes fibers 1 and 2
+PASS r2.E_no_common_123 E two-term: no (a,b), |a|,|b|<=1500, satisfies fibers 1,2,3 => E(k,m) has no two-term u-representation for ANY m>=3 with |3m+3-N_i|<=1500 (covers the c2b box c in [-6,3m+6], d in [-3,2m+4] for every m)
+# elapsed 10.7s
+SUMMARY r2 fail=0

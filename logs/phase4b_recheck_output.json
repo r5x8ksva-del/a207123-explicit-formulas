@@ -1,0 +1,684 @@
+{
+ "out": [
+  {
+   "lens": "fixcheck",
+   "checked": "只读复查，没有改报告、笔记或代码。脚本放在 code/review/final-audit/fixcheck/（入口 run_all.py；包含 f1_applied、f2_numeric_labels、f3_newton_2d1、f3b_newton_detail、f4_tailbound、f5_math、dump_confirmed），输出在 logs/final_audit_fixcheck.log。补丁脚本只用 ast 解析，没有执行。\n\n一、落地与拼接\npatch_final_audit.py 共 60 对修改，全部落到当前 report_parts 和 README：新文各出现 1 次，原文 0 次（两处新文以原文为前缀，属正常）。报告.md 与 report_parts 用 '\\n' 拼接后逐字相等。\n\n二、逐对核实新文字\n1. 00_head\n - numpy：r2_two_family.py 第 20 行无条件 import numpy；check_rv2 按子进程返回码判定，verify_all 任一模块失败即退出码 1；其余 10 个模块只导入标准库和 core/polylib/gcd_minimal_order；c3b 有 HAVE_NP 回退；无 numpy 时耗时约 320 s（审计实测）。这条成立。\n - rv2 例外：r1 自写三元组 DP 属实。但「留数–范数条件」不准确，见发现。\n2. 01_summary\n - 7 处位置逐一核对属实。\n - k=5,6,7 一句正确。\n - d=47 一句正确；d=69 一句措辞不准，见发现。\n - 「只核到 k≤9」见发现。\n3. 02_C1\n - ρ_0 约定正确。\n - C(y+1,q) 一处正确。\n - review_r-c1_r3_C2_final.log 的 G4a–G4d 分别是 i≤150、i≤1000、i≤3000、m≤30，与正文一致。\n - c1_extended.log 的 E3 覆盖 k=10、11；r-c1 r4 日志的序型 DP 到 k≤28。两者都与正文一致。\n - c1.C2-growth 为 decimal 60 位，c0-cm 为数值检查，标注属实。\n4. 03_C2\n - R_k 公式在 0≤k≤60 程序核对通过。R_k 的定义与提示词第 2 节一致。\n - ξ^{−4}=4.61347；ξ^{−3}=3.1479，落在 (3.04,3.18) 内。\n - 奇数形状一条与 r4_negative 日志（float，tol 1e-7，只有 (2,1) 未排除）相符，与 r-c2a §4.3 相符。\n - N_i=−g_i 与 r2 的 a:=3m+3−N1 一致，m≥3 与 1500 的上限也一致。\n - r-c2b 三个日志的内容逐一相符。\n - T2.9：作者与运行者的归属和 5 份现存日志相符（0.227–2.405 s，比值 114–1203；高负载为 3.0–4.9 倍）。17:22 重跑后的数字不符，见发现。\n5. 04_C3\n - (c−λ)_n 恒等式正确。\n - 1f1-const 对照的是 dp_stats 按结尾类型细化的结果，正文描述相符。\n - Laplace 恒等式在 j,n≤4、N≤22 程序核对通过。\n - λ∈Z ⇔ x=x_i 正确。\n - R2 的上下界和极限逐步重推正确；8 个点的数值与 r-c3a 的 1.195007…1.835941 一致。\n - 尾项界复算为 3.529152e−118。\n - 引理 D1（§4）、引理 D2（§9）都存在。\n - C3B-INT、C3B-PX、C3B-RES 的日志描述与正文相符。\n - explore_relations2 日志：k-only 7+7 组均满秩，盒子 5+5 组均有 kernel=predicted。\n - r-c3b 用的素数为 1e9+7 和 998244353；x2 的盒子数为 U 24、N 20。\n6. 05_C4\n - lc(p_d)、r_d 及其递推在 d≤12 核对通过。\n - 表 2 只到 d≤5，c4_explore1.log 覆盖 d=0..12。\n - S_2 恒等式在 d≤8、k<45 成立；按普通 Stirling 数读则不成立。\n - h*_1 公式与首项为负在 d≤6、|c|≤20 核对通过。\n - c4.md §3.5、§4.7、§4.9 的内容相符；ν_j 公式经程序核对正确（未定义问题见发现）。\n7. 06_C5\n - c_j 的定义与 c5a 定理 2.2 一致。\n - α_m 的推导正确。\n - τ_1=0.826031。\n - prompt-k40 在 prec=90 下计算，数字吻合。\n - μ_k（k≥4）与 C 基（k≥6）的门槛程序核对通过，k=3、4、5 处的反例成立。\n - e_j 公式在 0≤d≤k≤14 核对通过。\n - r-c5b 日志第 72 行写明 1≤k≤70。\n - h_k(1)=N(k,k) 在 0≤k≤14 成立；c5a §4.6、§4.8、§4.9 与 c5b §3 的 T6、T7 都在。\n - Λ_3 一处正确。\n - OEIS 快照：A077949、A084386 的 %O 都是 0，开头数据 1,1,1,3,5,7… 与 1,1,1,4,7,10…，与 c_2(n)、c_3(n) 一致；快照日期 2026-10-04。\n - c5b.diag、c5b.rows 在日志中都是 PASS。\n8. 08_failed：列出的更正项与实际修改一致；与「三轮」的矛盾见发现。\n9. 09_code、10_uncertain：盒子数（N 11 个，其中 3 个维数为 0；r-c3b 新增 N 盒 12 个，另有 1 个攻击窗口；x2 20 个）核实；两位复核者独立指出同一处问题属实；README 正确。\n\n三、58 条确认问题的落实情况\n[0][38] 已改。\n[1][16][40] 已改。\n[2][43] 已改；全文 grep 已无残留。\n[3][56] 已改，但 T5.1 核对行的 c1.C2-cm 漏标，见发现。\n[4][44] 已改。\n[5] 10_uncertain 已改；01_summary 写成「只核到 k≤9」，见发现。\n[6][46] T1.3(2)、T1.4、T3.8、T5.3(2) 已补路径，但全称句仍不完全成立，见发现。\n[7][18][51] 已改，08_failed 有残留，见发现。\n[8][45] 已改，r2 的描述不准，见发现。\n[9]–[15]、[17]、[19]–[37]、[41]、[42]、[47]–[50]、[52]–[55]、[57] 全部已落实，内容核对无误。\n[39] 已改，但 Newton 一句措辞不准，见发现。",
+   "findings": [
+    {
+     "file": "01_summary.md",
+     "quote": "基点 2d+1 的 Newton 正性在 d=69 首次失效，奇数 69≤d≤101 为负",
+     "problem": "新句去掉了 [39] 定稿中的「第 0 个 Newton 系数」。「奇数 69≤d≤101 为负」缺主语。它与前半句「47≤d≤57 逐个失效」并列，读者会理解为失效的 d 恰好是这些奇数，但偶数 d≥74 时基点 2d+1 的第 1 个 Newton 系数也为负。「首次失效」对全部系数也没有被引核对支撑：rv.rv-c4-newton-cex 只查第 0 个系数（T4.2(3) 正文与 09_code 的 rv 行也只讲第 0 个），c4-newton-pos-2d1 只查到 d≤12。",
+     "evidence": "code/review/final-audit/fixcheck/f3_newton_2d1.py、f3b_newton_detail.py 的做法：三角递推得到的 N 先与 core.N_from_U 对照到 k≤40；由基点 2d+2 的 Newton 系数反推基点 2d+1 的全部系数，并用 N_0=D(2d+1,d)−(−1)^{d+1}(d+1)! 交叉核对，逐一通过。结果：d≤68 全部系数为正，所以「d=69 首次失效」碰巧成立；d=69 的第 0 个系数为 −1.742e99，与 T4.2(3) 的 −1.74·10^{99} 一致；偶数 d=74、76、78、80、82 的第 1 个系数为负（d=74 时为 −8.86e108）；d=77、79、81 的第 2 个系数也为负。输出在 logs/final_audit_fixcheck.log。",
+     "severity": "imprecise",
+     "suggested_fix": "基点 2d+1 的第 0 个 Newton 系数 p_d(2d+1) 在 d=69 首次为负，奇数 69≤d≤101 都为负（偶数 d 时该系数已证明为正）",
+     "verdict": {
+      "index": 0,
+      "real": true,
+      "reason": "引文在 01_summary 中唯一存在。我换了一条路线独立重算（code/review/final-audit/verify-fixcheck/v0_newton_2d1.py，输出在 logs/final_audit_verify-fixcheck.log）：按 T2.2 在 y=1 时的递推建 U 表，并与 core.U_fast_table 对照；用容斥得到 N，与 N_brute 对照到 k≤8；p_d(2d+1) 不用缺陷公式，而用 k≥2d+2 的 2d+1 个值外推，结果与 D(2d+1,d)−(−1)^{d+1}(d+1)! 逐个相符；另外核对了 k=2d+2..4d+3 上 Δ^{2d+1}=0。结果：d≤68 时基点 2d+1 的全部 Newton 系数为正，所以「d=69 首次失效」碰巧成立。但报告引用的核对撑不起这一点：rv-c4-newton-cex 只查奇数 d 的第 0 个系数，c4-newton-pos-2d1 只查到 d≤12。d=69 的第 0 个系数为 −1.742e99。偶数 d=74,76,…,100 的第 1 个系数为负（d=74 时为 −8.863e108），d=77、79、81 的第 2 个系数也为负。新句丢了确认问题 [39] 定稿里的主语「第 0 个 Newton 系数」，又与「47≤d≤57 逐个失效」并列，读者会以为失效的 d 恰好是这些奇数，这不对；T4.2(3) 正文讲的也只是第 0 个系数。改的时候恢复主语即可，不要把偶数 d 的全部系数写成为正（偶数 d≥74 实际失效，但这个结果不在 verify_all 中）。",
+      "final_fix": "基点 2d+1 的第 0 个 Newton 系数 p_d(2d+1) 在 d=69 首次为负，奇数 69≤d≤101 都为负（偶数 d 时第 0 个系数已证明为正）"
+     }
+    },
+    {
+     "file": "03_C2.md",
+     "quote": "各显式公式约 0.2–2.4 s",
+     "problem": "本轮补出处时，把 logs/verify_all_final.log 列为 6 次「正常负载运行」之一。该日志已在 17:22 被重跑覆盖，新日志的 c2a.bench_k200_m30 行为 H 2.999 s、F3 3.015 s（F4 0.426 s，引理 1 0.003 s），超出「约 0.2–2.4 s」。按现在被引的 6 份日志，范围是 0.227–3.015 s。同一次重跑总耗时 271.0 s，因此 09_code「最终一次运行」表（217.7 s 及各模块秒数）以及 00_head、README 的「约 3–4 分钟」也与被引日志不符。「约 100–1000 倍」仍成立：各次运行内的比值为 114–1203。",
+     "evidence": "逐份 grep bench 行，各日志的显式公式耗时范围：c2a_e5 0.737–1.517；c2a_check_run 0.242–1.643；x2 0.227–1.746；verify_all_run1 0.275–1.975；a3 0.342–2.405；新 verify_all_final 0.426–3.015。新 final 汇总表 TOTAL 271.0s，其中 c1 66.4s（旧表 46.6s），比其余正常运行慢约 1.3–1.7 倍，可能受并行审计的负载影响。",
+     "severity": "imprecise",
+     "suggested_fix": "先在空闲机器上重跑 verify_all，再同步数字。若沿用当前日志，则改为「各显式公式约 0.2–3.0 s」，并按新日志更新 09_code 的「最终一次运行」表（TOTAL 271.0s 及各模块秒数），00_head、README 的耗时改为约 3–5 分钟。",
+     "verdict": {
+      "index": 1,
+      "real": true,
+      "reason": "引文唯一存在。logs/verify_all_final.log 在 03_C2.md 修订后 321 s 被重跑覆盖。重跑已经完成（TOTAL pass=290、OVERALL PASS），其 bench_k200_m30 行为 H 2.999 s、F3 3.015 s。被引的 6 份日志里，显式公式耗时实测为 0.227–3.015 s，超出了「约 0.2–2.4 s」（逐份解析见 v_misc.py 的输出）。「约 100–1000 倍」仍成立：各次运行内与引理 1 的比值为 114–1202。同一日志的总表是 TOTAL 271.0 s、c1 66.4 s，与 09_code「最终一次运行」表的 217.7 s、c1 46.6 s 不符。271 s 约为 4.5 分钟，也超出了 00_head 与 README 写的「约 3–4 分钟」。这次重跑整体偏慢，约为旧的正常运行的 1.3–1.9 倍，可能受到并行审计负载的影响。如果以它为基准，复核者 r-c2a、x1 的同项耗时只有它的 1.8–2.7 倍，「约为正常运行的 3–5 倍」也就对不上了。",
+      "final_fix": "各显式公式约 0.2–3.0 s（前提是沿用当前的 logs/verify_all_final.log；更好的做法是在空闲机器上重跑 verify_all，再按新日志统一同步）。同时：把 09_code「最终一次运行」表换成该日志的总表（TOTAL pass=290，271.0s，各模块秒数随之更新）；00_head 与 README 的「约 3–4 分钟」改为「约 3–5 分钟」；同一括号内的「同项耗时约为正常运行的 3–5 倍」改为「同项耗时约为 c2a_check_run 等未受干扰运行的 3–5 倍」。"
+     }
+    },
+    {
+     "file": "00_head.md",
+     "quote": "r2 只对由已证明的 G_m=W_m/P_m 推出的留数–范数条件做精确穷举",
+     "problem": "r2 检查的不是范数条件。按 r2_two_family.py 的 docstring，它穷举的是两族表示的留数线性相关条件：θ_i、x^{−N1}、x^{−N2} 在 K_i 中 Q-线性相关，化为 det(R_i,x^a,x^b)=0。脚本里没有任何范数计算，范数证书在 r1。09_code 同一处写的是「纤维条件的精确代数穷举」，两处说法也不一致。",
+     "evidence": "code/review/x1-single-sum/r2_two_family.py 第 2–16 行 docstring；在 r2 中 grep norm/范数 为 0 处；r1_numfield_residues.py 的 docstring (1)(4) 才是范数计算。",
+     "severity": "minor",
+     "suggested_fix": "r2 只对由已证明的 G_m=W_m/P_m 推出的纤维留数线性相关条件（K_i 中 det(R_i,x^a,x^b)=0）做精确穷举",
+     "verdict": {
+      "index": 2,
+      "real": true,
+      "reason": "引文唯一存在。code/review/x1-single-sum/r2_two_family.py 的 docstring 和代码只穷举 det(R_i,x^a,x^b)=0：det3 出现 3 次，做法是先模两个素数筛选，再对候选做精确有理核对。它检验的是留数元与 x^a、x^b 在 K_i 中 Q-线性相关，norm/范数 的出现次数为 0；范数证书在 r1（出现 12 次）。确认问题 [8] 的定稿写的是「r2 只穷举留数行列式条件」，09_code 同一处写的是「纤维条件的精确代数穷举」。所以 00_head 把 r2 说成「留数–范数条件」，既与脚本内容不符，也与 09_code 不一致。",
+      "final_fix": "r2 只对由已证明的 G_m=W_m/P_m 推出的纤维留数条件（留数元与 x^a、x^b 在 K_i 中 Q-线性相关，即 det(R_i,x^a,x^b)=0）做精确穷举（范数计算在 r1）"
+     }
+    },
+    {
+     "file": "00_head.md",
+     "quote": "另做了三轮多 Agent 工作流",
+     "problem": "本轮在 08_failed 第 13 条新增「最终一轮对抗审计又更正了：……」。这指第三轮之后的第四轮审计（logs/phase4_final_audit_output.json：5 个审计方向，外加逐条复核），但 00_head 仍写「三轮」，全文也没有任何地方介绍这一轮，新句与上下文矛盾。同类的过时表述还有：08_failed 小标题「B. 两轮工作中出过的错」；09_code「两轮工作流的原始返回值」只列了 phase1、phase2；README 的过程概览只写到第三轮。",
+     "evidence": "grep「三轮/两轮/第四轮/最终一轮」的结果；phase4_final_audit_output.json 的 out 有 5 个 lens：requirements、math-c1c2、math-c3、math-c4c5、consistency。",
+     "severity": "minor",
+     "suggested_fix": "改为「另做了四轮多 Agent 工作流」，并在该句「交付要求是否齐全」后补：「；第四轮（最终对抗审计）5 个审计者分方向复查全文，每条发现再经独立复核，确认属实的已改正（logs/phase4_final_audit_output.json，见 ④B.13）」。同时把 08_failed 小标题改为「B. 各轮工作中出过的错」，09_code 的原始返回值清单补上 phase3_audit_output.json 和 phase4_final_audit_output.json。",
+     "verdict": {
+      "index": 3,
+      "real": true,
+      "reason": "引文唯一存在。本轮在 08_failed 第 13 条新增了「最终一轮对抗审计又更正了」，其中的「又」说明这一轮排在第三轮之后。它就是 patch_final_audit.py 的 docstring 所称的「第四轮」：phase4_final_audit_output.json 有 5 个审计方向（requirements、math-c1c2、math-c3、math-c4c5、consistency）外加逐条复核，确认 58 条。00_head 仍写「另做了三轮」，也只列了三轮；在全部 report_parts 中搜「四轮」或「phase4」都是 0 处，全文没有任何地方介绍这一轮，所以新句与 00_head 的流程描述矛盾。同类的过时表述还有：08_failed 的小标题「B. 两轮工作中出过的错」；09_code「两轮工作流的原始返回值」只列了 phase1、phase2；README 的过程概览和 logs 行只写到第三轮。",
+      "final_fix": "另做了四轮多 Agent 工作流（同时在本句「交付要求是否齐全」之后补：「；第四轮（最终对抗审计）5 个审计者分方向（交付要求、C-1/C-2、C-3、C-4/C-5、全文一致性）复查全文，每条发现再经独立复核，确认属实的已改正（logs/phase4_final_audit_output.json，见 ④B.13）」；并把 08_failed 小标题改为「B. 各轮工作中出过的错」，09_code 的原始返回值清单补上 logs/phase3_audit_output.json、logs/phase4_final_audit_output.json，README 的过程概览补上第四轮）"
+     }
+    },
+    {
+     "file": "01_summary.md",
+     "quote": "N(k,q) 的组合意义按定义直接计数只核到 k≤9",
+     "problem": "按定义的直接计数实际做到了 k≤11：c1 扩展脚本用 core.N_brute（DFS）核对了 k=10、11（不在 verify_all 中）。T1.4 写「扩展脚本到 11，logs/c1_extended.log」，完成度表写「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」。摘要省掉了「在 verify_all 中」，于是与这两处矛盾。",
+     "evidence": "logs/c1_extended.log 中的「PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」。",
+     "severity": "minor",
+     "suggested_fix": "N(k,q) 的组合意义按定义直接计数在 verify_all 中只核到 k≤9（扩展脚本到 k≤11）",
+     "verdict": {
+      "index": 4,
+      "real": true,
+      "reason": "引文唯一存在。logs/c1_extended.log 中有「PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」，verify_all 的 C3-brute 行自己也写「0<=k<=9（k=10,11 见 extended_checks.py 的 E3）」。可见按定义的直接计数实际做到了 k≤11，只是 k=10、11 不在 verify_all 中。摘要省掉了「在 verify_all 中」，于是成了事实错误，并与 T1.4（「扩展脚本到 11」）和完成度表（「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」）矛盾。",
+      "final_fix": "N(k,q) 的组合意义按定义直接计数在 verify_all 中只核到 k≤9、扩展脚本（logs/c1_extended.log）到 k≤11"
+     }
+    },
+    {
+     "file": "06_C5.md",
+     "quote": "c0.c0-cm（数值）、c1.C2-cm。",
+     "problem": "本轮按 00_head「decimal 检查一律注明数值」，给同一核对行的 c5a-asym、c5a-prompt-k40 补了标注，T1.3(4) 里的 c1.C2-cm 也标成「decimal 数值」。T5.1 核对行末尾的 c1.C2-cm 却仍未标注，而它是 decimal 150 位的数值检查，属于确认问题 [3]/[56] 的同类遗漏。同一行的 c5a.c5a-roots、c5a.c5a-cm-repr 也含 [numeric] 部分，同样没有标。",
+     "evidence": "code/review/final-audit/fixcheck/f2_numeric_labels.py 逐个比对日志中带 decimal/numeric 字样的检查 id 与报告中的引用：c1.C2-cm 在 T1.3(4) 已标，在 T5.1 未标。日志原文为「PASS C2-cm (C2 推论，数值检查) …（decimal 150 位，容差 1e-8）」。",
+     "severity": "minor",
+     "suggested_fix": "c0.c0-cm（数值）、c1.C2-cm（数值）。（可同时把 c5a.c5a-roots、c5a.c5a-cm-repr 注明「含数值部分」）",
+     "verdict": {
+      "index": 5,
+      "real": true,
+      "reason": "引文唯一存在。verify_all_final.log 的 C2-cm 行为「(C2 推论，数值检查) …（decimal 150 位，容差 1e-8）」，确实是 decimal 数值检查。T1.3(4) 已经把它标成「decimal 数值」，T5.1 核对行末尾的 c1.C2-cm 却没有标。同一行本轮刚给 c5a-asym、c5a-prompt-k40 补了「数值」，c0.c0-cm 也已标注，唯独这一处违反 00_head「凡是用 decimal 做的高精度数值检查，一律注明「数值」」。另外，同一行的 c5a-roots、c5a-cm-repr 在日志中带 [numeric] 部分（check_c5a.py 用 Decimal、prec=90），可以一并注明。",
+      "final_fix": "c0.c0-cm（数值）、c1.C2-cm（数值）。（同一行的 c5a.c5a-roots、c5a.c5a-cm-repr 可同时注明「含数值部分」）"
+     }
+    },
+    {
+     "file": "08_failed.md",
+     "quote": "（对 m=5,6 需要 k≤60）",
+     "problem": "确认问题 [18] 指出：把「k≤60 足以反驳」写成「必须用到 k≤60」，没有证据，示例对在 k≤35 就已矛盾。本轮已把 T2.6(iv) 改为「改用 k≤60 的数据后全部被反驳」，但 08_failed 第 11 条仍写「需要 k≤60」，同一个过度表述没有改到。",
+     "evidence": "logs/review_r-c2b_r4c_example.log 中 K=35 已是 INCONSISTENT；notes/review/r-c2b-review.md 第 170 行写「k≤35 已足够反驳示例对」；没有任何运行检验过「k<60 不够」。",
+     "severity": "minor",
+     "suggested_fix": "（对 m=5,6，k≤30 的数据不足以反驳，改用 k≤60 的数据后全部被反驳）",
+     "verdict": {
+      "index": 6,
+      "real": true,
+      "reason": "引文唯一存在。logs/review_r-c2b_r4c_example.log 中，示例对在 K=35 时 4 行全部为 INCONSISTENT；notes/review/r-c2b-review.md 第 170 行写的是「k≤35 已足够反驳示例对」。r4b_k60 只说明在 k≤60 上全部被反驳，没有任何一次运行检验过「k<60 不够」。所以「需要 k≤60」断言了一个没有证据的必要性，与确认问题 [18] 是同一处过度表述。03_C2 T2.6(iv) 已改为「改用 k≤60 的数据后全部被反驳」，08_failed 第 11 条没有跟着改。",
+      "final_fix": "（对 m=5,6，k≤30 的数据不足以反驳其中 59/1024 个零检验形状对，改用 k≤60 的数据后全部被反驳）"
+     }
+    },
+    {
+     "file": "04_C3.md",
+     "quote": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}）",
+     "problem": "这是本轮新加的复核者结果，只出现在复核日志中，却既没写「不在 verify_all 中」，也没给日志路径。00_head 本轮改成了全称句「都不在 verify_all 中；已在相应条目注明并给出日志路径」，这一处与之不符。同类遗漏还有 T1.0 的「扩展脚本另核对 a_direct 到 k=11」（来自 logs/c1_extended.log 的 E2），同样没有路径和说明。",
+     "evidence": "logs/review_r-c3a_r1_exact.log 第 18 行「S(3/5,-1/2) = -1057.810872564 (+-6.6e-121, my own tail bound)」；notes/review/r-c3a-review.md 第 133 行。数值本身已核对：f4_tailbound.py 按 c3a 尾项界引理复算得 3.529152e−118，部分和为 −1057.8108725635620585…，与新文字一致。",
+     "severity": "minor",
+     "suggested_fix": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}，见 logs/review_r-c3a_r1_exact.log，不在 verify_all 中）。另把 02_C1 T1.0 改为「扩展脚本另核对 a_direct 到 k=11（logs/c1_extended.log 的 E2，不在 verify_all 中）」。",
+     "verdict": {
+      "index": 7,
+      "real": true,
+      "reason": "引文唯一存在。6.6·10^{−121} 只出现在 logs/review_r-c3a_r1_exact.log 的 r1-counterex 行（「+-6.6e-121, my own tail bound」）和 notes/review/r-c3a-review.md 第 133 行，报告既没给这个日志路径，也没写「不在 verify_all 中」。00_head 本轮改成了「少数扩展范围只由第二轮复核脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径」，报告里其他只由复核者算出的数值（K 闭式 7 点核对、Sturm 到 k≤150 等）都给了路径，本轮新加的这一处是例外。严格地说，更紧的界不算「扩展范围」，这句话也不承担结论（结论用的是 verify_all 中的 3.529e−118），所以只是轻微的可追溯性缺口，但补起来很容易，值得补。T1.0 的「扩展脚本另核对 a_direct 到 k=11」来自 c1_extended.log 的 E2，同样没有路径。它出自第一轮扩展脚本，按字面不在 00_head 那句话的范围内，但与 T1.4 对同一个脚本的写法不一致。",
+      "final_fix": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}，见 logs/review_r-c3a_r1_exact.log 的 r1-counterex，不在 verify_all 中）（另把 02_C1 T1.0 核对行的「扩展脚本另核对 a_direct 到 k=11」改为「扩展脚本另核对 a_direct 到 k=11（logs/c1_extended.log 的 E2，不在 verify_all 中）」）"
+     }
+    },
+    {
+     "file": "05_C4.md",
+     "quote": "ν_j(q)=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i=[x^i]P_{q−1}）",
+     "problem": "本轮新引入的 ν_j(q) 在报告中没有定义，全文只出现这一次，读者只能从后文的「低次系数 [x^{q+j}]Num_q」去猜。另外，这里的 π_i 与紧接着 (6) 中的 π_{j,i}（高次系数里的 Q[q] 系数）是两个不同对象，字母相同，容易混淆。",
+     "evidence": "在 report_parts 中 grep「ν」只命中 05_C4 一次；notes/c4.md §4.7 的定义是 ν_j(q):=[x^{q+j}]Num_q。等式本身已由 f5_math.py 的 nu_j 检验核对（q≤17、j≤5，并在 q≥j+2 时核对多项式形式）。",
+     "severity": "minor",
+     "suggested_fix": "ν_j(q):=[x^{q+j}]Num_q=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i(q):=[x^i]P_{q−1}，与 (6) 的 π_{j,i} 无关）",
+     "verdict": {
+      "index": 8,
+      "real": true,
+      "reason": "引文唯一存在。ν 在全部 report_parts 中只出现这一次，报告没有定义它。notes/c4.md §4.7 定义 ν_j(q):=[x^{q+j}]Num_q，报告漏写了，读者只能从后文「低次系数 [x^{q+j}]Num_q」去猜。另外，这里的 π_i（单下标，即 [x^i]P_{q−1}）与同一定理 (6) 中的 π_{j,i}(q)∈Q[q]（高次系数里 c(q,i) 的系数）是两个不同对象，却用了同一个字母。等式本身是对的：由 Num_q=P_{q−1}F_q 取 x^{q+j} 系数，再用 k<q 时 N(k,q)=0 即得。我用 core 的 U 表在 1≤q≤14、j≤5 范围内逐个核对了 [x^{q+j}]Num_q=Σ_{i≤j}[x^i]P_{q−1}·D(q+j−i,j−i)，全部成立。",
+      "final_fix": "ν_j(q):=[x^{q+j}]Num_q=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i(q):=[x^i]P_{q−1}，与 (6) 的 π_{j,i} 无关）"
+     }
+    },
+    {
+     "file": "06_C5.md",
+     "quote": "(5)（数值结果，不属于 T5.1 已证明的部分：decimal 90 位计算，核对 c5a.c5a-prompt-k40（数值））",
+     "problem": "这一小条从【已证明】中摘了出来，但没有换上任何等级标签。原始任务说明第 1 条要求每条结论都标等级，00_head 的等级表里也没有「数值结果」这一档，T5.1(5) 因此成了全文唯一不带等级的结论。按 00_head 的定义，【已验证】只指精确核对，【猜想】只指数据，两者都不贴切，等级体系在这里缺了一档。",
+     "evidence": "notes/原始任务说明.md 第 6 行「每条结论标等级：【已证明】／【已验证】／【猜想】」；00_head 第 7 行的等级定义。所引数字已核对：check_c5a.chk_prompt_k40 在 getcontext().prec=90 下计算，日志中 3.538e-04/3.528e-04、2.792e-03/2.713e-03 与正文的 0.035%、0.28% 及 0.3%、3% 吻合。",
+     "severity": "minor",
+     "suggested_fix": "(5)【已验证（数值）：decimal 90 位，核对 c5a.c5a-prompt-k40；不属于 T5.1 已证明的部分】，并在 00_head 的等级说明末尾补一句「decimal 高精度数值计算得到的具体数值记为【已验证（数值）】」。若不想改动等级体系，至少在 00_head 中说明「数值结果」是单列的标注。",
+     "verdict": {
+      "index": 9,
+      "real": true,
+      "reason": "引文唯一存在。T5.1 的标题是【已证明】，(5) 明确说自己不属于已证明部分，却没有换上任何等级，只写了「数值结果」。原始任务说明第 0 节第 1 条要求「每条结论标等级：【已证明】／【已验证】／【猜想】」，00_head 的等级表（已证明、已验证、猜想、已否定、未完成）里也没有「数值结果」这一档。(5) 是关于提示词断言在哪种解释下成立的结论，依据是 decimal 90 位计算：日志中 c5a-prompt-k40 标为 [numeric]，3.538e-04/3.528e-04、2.792e-03/2.713e-03 与正文的 0.035%、0.28% 等吻合。所以这是缺少等级，不是措辞问题。确认问题 [3] 的定稿给的正是【已验证（数值…）】。",
+      "final_fix": "(5)【已验证（数值）：decimal 90 位计算，核对 c5a.c5a-prompt-k40（数值）；这一小条不属于 T5.1 已证明的部分】（同时在 00_head 等级说明末尾补一句：「decimal 高精度计算得到的具体数值结论记为【已验证（数值）】，并写明精度与范围」）"
+     }
+    }
+   ]
+  },
+  {
+   "lens": "freshread",
+   "checked": "通读了 00–10 全部 report_parts，重点看 report_patches 下 7 个补丁脚本的新文字，并确认 报告.md 与各节文件拼接一致。\n\n程序核对（脚本在 code/review/final-audit/freshread/，汇总输出在 logs/final_audit_freshread.log）：\n- 核对 id：报告引用 232 个不同 id，全部在 17:22 重跑后的 logs/verify_all_final.log 中以 PASS 出现。\n- 路径：报告引用的 logs/、code/、notes/、data/ 路径全部存在。\n- 交叉引用：定理编号与子条目引用全部有效；notes 与复核报告中被引用的小节都已逐一查到，包括 c4 命题 3.6、表 2/5、c5a 定理 2.2 第 3–4 步、c5b T6/T7/T14、r-c3a §4 推论 R2、r-c4i §5、x1 §2.4、c3b 引理 D1/D2。\n- phase4：确认的 58 条逐条比对，修订均已落地；被驳回的 5 条没有重复报告。\n- 引文：每条发现的原文引用都确认是当前文件里的唯一精确子串。\n\n数学复核（手推或复算）：\n- T1.2：lc 推导与 f_2、f_3。\n- T1.3：deg W_m 与首项、b_i 的可约性及判别式、W_1−b_1、c_m 公式与留数 −c_m x_m、ρ_0 约定。\n- T1.4：三角递推的分类计数、N(k,k−1) 的增量。\n- T1.5：注中两个反例；T1.7 的 h_3 反例；T1.9 中 q 的首项。\n- T2.1：13,695,758。\n- T2.2：s 细化的边界约定。\n- T2.3：r-Stirling 识别。\n- T2.5：(8,−2)/(5,1) 反例；R_k=c_1(k+3)+c_1(k−2)−1（k=0..4）。\n- T2.6：Eisenstein 论证、留数式、N(ξ)=1、N(1+ξ)=3、N(4−2x)=68、N(x)=1/2、v_0=ξ^{−3} 与 ξ^{−4}、两条纤维多项式的严格单调性。\n- T2.7：Gosper 方程。\n- T3.1–T3.2：Pochhammer 恒等式、下不完全 Gamma 的符号、Laplace 表示的导数恒等式与分部积分、ℒ_s 关键恒等式。\n- T3.4：I_0、J 的 Tricomi 表示、1<K/Γ(−λ)<2 的两种情形、G_m 在小圆周上关于 m 一致有界、W(1/e) 门槛。\n- T3.5–T3.6：代换关系与 PDE。\n- T3.8：维数公式（22 个盒子逐个对照日志）。\n- T4.1：(†) 式、首项递推、次首项递推（2d−1)r_d=2d·r_{d−1}−12d²+11d、两个缺陷值。\n- T4.2：d=1 的 7 个模式与展开式、h*_1 公式、Newton 系数正性的归纳。\n- T4.3：Num_2..Num_4、L_q、A000262 递推、[x^{q+1}] 与 [x^{q+2}] 公式、高次系数 j=2,3、(7) 在 y=1 时的检验、同余式与 Laguerre 恒等式。\n- T5.1：两种 γ_j 形式的等价、c_1 的值、α 递推、τ_m 与关键不等式。\n- T5.2：B_d 公式与适用范围。\n- T5.3：h 的各基本事实、Möbius 值、n_k 在 −1 处的重数。\n- T5.4：R_k 母函数、U_3 与 U_4 公式。\n\n数据与日志对照：\n- T5.1(5) 的百分比、T2.9 的公平计时、r-c2b 两项盒子的三份日志、explore_relations2 日志、N 窗口零行比例、r-c5a 到 k≤150、r-c5b 到 k≤70、a1 的 d≤60 负系数位置、6.6·10^{−121} 的出处、Bousquet-Mélou 等文献的读取记录。\n- 发现 verify_all_final.log 重跑后的耗时与 ⑤ 表格及 T2.9 计时范围不一致。\n\n未修改报告、笔记或代码。",
+   "findings": [
+    {
+     "file": "01_summary.md",
+     "quote": "（例外：N(k,q) 的组合意义按定义直接计数只核到 k≤9，复核者用独立 DP 到 k≤28）",
+     "problem": "「按定义直接计数只核到 k≤9」与事实不符，也和正文对不上。c1 的扩展脚本另外按 DFS 定义核了 k=10,11，T1.4 核对行和 ⑥ 完成度表 C-1 行都写了「扩展脚本到 k≤11」；只有 verify_all 内部是 k≤9。phase4 requirements #5 的 FINAL_FIX 原文是「在 verify_all 中只核对到 k≤9，扩展脚本到 k≤11」，写进摘要时丢了这个限定。",
+     "evidence": "logs/c1_extended.log 的 E3：「N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」。verify_all_final.log 的 C3-brute：「0<=k<=9（k=10,11 见 extended_checks.py 的 E3）」。02_C1 T1.4 写「DFS 定义 k≤9；扩展脚本到 11，logs/c1_extended.log」，10_uncertain C-1 行写「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」。",
+     "severity": "imprecise",
+     "suggested_fix": "（例外：N(k,q) 的组合意义按定义直接计数，在 verify_all 中只核到 k≤9，扩展脚本到 k≤11，复核者用独立 DP 到 k≤28）",
+     "verdict": {
+      "index": 0,
+      "real": true,
+      "reason": "成立（imprecise）。logs/c1_extended.log 的 E3 已按 DFS 定义核对 N_brute == 容斥 N(k,q)，k=10,11；复核者 r-c1 重跑同脚本也通过（review_r-c1_rerun_c1_extended.log）。verify_all 的 C3-brute 自己也注明「k=10,11 见 extended_checks.py 的 E3」。所以摘要写的「按定义直接计数只核到 k≤9」不对：只有限定为「在 verify_all 中」时才成立。它和 T1.4（「扩展脚本到 11」）、⑥ C-1 行（「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」）都不一致。phase4 requirements #5 的 FINAL_FIX 原本带这个限定，打补丁时丢了。这里是把核对范围说少了，不影响结论。",
+      "final_fix": "（例外：N(k,q) 的组合意义按定义直接计数，在 verify_all 中只核到 k≤9，扩展脚本到 k≤11，复核者用独立 DP 到 k≤28）"
+     }
+    },
+    {
+     "file": "08_failed.md",
+     "quote": "（对 m=5,6 需要 k≤60）",
+     "problem": "「需要 k≤60」等于说 k≤60 是必需的。phase4 已确认这个说法证据不足（math-c1c2 #2：「要用 k≤60 才」的必要性没有证据），并在 T2.6(iv) 改成了「改用 k≤60 的数据后全部被反驳」。④B.11 这一处没有跟着改，现在和 T2.6(iv) 的现文不一致。已有证据只说明 k≤30 不够、k≤60 足够。",
+     "evidence": "logs/review_r-c2b_r4b_full.log：k≤30 时 E、U 在 m=5 各有 59 个、在 m=6 各有 1024 个零检验相容对。logs/review_r-c2b_r4b_k60.log：这些对在 k≤60 上全部不再相容。logs/review_r-c2b_r4c_example.log：示例对 (15,0,21,8)、(9,0,24,5) 在 K=35 时已经 INCONSISTENT。03_C2 T2.6(iv) 现文：「改用 k≤60 的数据后全部被反驳」。",
+     "severity": "minor",
+     "suggested_fix": "（对 m=5,6，k≤30 时仍有「零检验」形状对，改用 k≤60 的数据后全部被反驳）",
+     "verdict": {
+      "index": 1,
+      "real": true,
+      "reason": "成立（minor）。各日志的结果：review_r-c2b_r4b_full.log 显示 k≤30 时，E、U 在 m=5 各有 59 对相容、m=6 各有 1024 对，检验数全为 0；r4b_k60.log 显示这些对在 k≤60 上仍相容的为 0；r4c_example.log 中示例对 (15,0,21,8)、(9,0,24,5) 在 K=35 时已经 INCONSISTENT。所以证据只说明 k≤30 不够、k≤60 足够，「需要 k≤60」这个必要性没有根据。phase4 math-c1c2 #2 已确认「要用 k≤60 才」属于同一个过度断言，并且只改了 T2.6(iv)（现文是「改用 k≤60 的数据后全部被反驳」），④B.11 没有跟着改。",
+      "final_fix": "（对 m=5,6，k≤30 时仍有「零检验」形状对，改用 k≤60 的数据后全部被反驳）"
+     }
+    },
+    {
+     "file": "09_code.md",
+     "quote": "TOTAL pass=290 fail=0 modules=11 failed_modules=-  (217.7s)",
+     "problem": "⑤ 说这张表是「最终一次运行（完整输出 logs/verify_all_final.log）」。但这份日志在 17:22 已被重跑结果覆盖（报告各节文件的时间是 17:17）。现在日志里的 PASS/FAIL 数和表上一样，各模块耗时和总耗时却都不同，表格和它所指的日志对不上。00_head 和 ⑤ 写的「约 3–4 分钟」也比这次的约 4.5 分钟略短。",
+     "evidence": "当前 logs/verify_all_final.log 末尾的总表：c0 13/4.7s、c1 45/66.4s、c2a 23/16.4s、c2b 33/47.1s、c3a 34/31.9s、c3b 22/24.6s、c4 41/29.0s、c5a 37/18.8s、c5b 33/4.5s、rv 7/20.1s、rv2 2/7.5s，TOTAL pass=290 fail=0 (271.0s)。报告表依次是 4.2/46.6/14.1/36.3/23.7/22.1/23.9/15.9/5.7/16.2/8.9 秒，合计 217.7s。",
+     "severity": "minor",
+     "suggested_fix": "按最终日志更新整张表：各行 secs 依次改为 4.7、66.4、16.4、47.1、31.9、24.6、29.0、18.8、4.5、20.1、7.5，末行改为「TOTAL pass=290 fail=0 modules=11 failed_modules=-  (271.0s)」。也可以在正常负载下重跑一次，改用那次的日志和数字。若保留 271.0 s 这次，00_head 与 ⑤ 的「约 3–4 分钟」改为「约 4–5 分钟（视机器负载）」。",
+     "verdict": {
+      "index": 2,
+      "real": true,
+      "reason": "成立（minor）。当前 logs/verify_all_final.log 写于 17:22:43，内容完整（OVERALL: PASS），系统里也没有正在运行的 verify_all 进程，所以这份就是打补丁后的重跑结果。逐行解析它末尾的总表：各模块 pass/fail 与 ⑤ 的表完全相同，但每个模块的 secs 都不同，TOTAL 是 271.0s，不是 217.7s。217.7s 那次的日志已被覆盖，logs/ 里找不到原始出处。所以 ⑤ 声称的「最终一次运行（完整输出 logs/verify_all_final.log）」与所指日志对不上。发现中有一处要更正：⑤ 本身没写「约 3–4 分钟」，写这句的是 00_head 和 README。另外，正常负载下的全量运行是 216.4、217.7、232.1 s，这次是 271.0 s。",
+      "final_fix": "把 ⑤ 的代码块整体换成当前 logs/verify_all_final.log 末尾的总表。pass/fail 不变，各行 secs 依次改为：c0 4.7、c1 66.4、c2a 16.4、c2b 47.1、c3a 31.9、c3b 24.6、c4 29.0、c5a 18.8、c5b 4.5、rv 20.1、rv2 7.5。原文引用的末行改为「TOTAL pass=290 fail=0 modules=11 failed_modules=-  (271.0s)」。00_head（以及 README）的「约 3–4 分钟」改为「约 3.5–4.5 分钟（视机器负载）」。如果改为在空闲时重跑 verify_all，就用新日志末尾的总表整体替换，并同步复核 T2.9 的计时范围。"
+     }
+    },
+    {
+     "file": "03_C2.md",
+     "quote": "各显式公式约 0.2–2.4 s",
+     "problem": "括号里把 logs/verify_all_final.log 算作「6 次正常负载运行」之一。这份日志重跑后，bench_k200_m30 行的 H 是 2.999 s、F3 是 3.015 s，已经超出「约 0.2–2.4 s」。这次重跑总耗时 271.0 s，比报告表里上一次的 217.7 s 慢约 24%（c1 由 46.6 s 变成 66.4 s），也不宜再算作正常负载。",
+     "evidence": "当前 verify_all_final.log 第 90 行：Lemma1 0.003, H 2.999, F3 3.015, Theta 0.442, ThetaH 0.527, F4 0.426。另外 5 份日志的最大值是 audit_a3 的 F3 2.405 s，最小值是 x2 的 F4 0.227 s。与引理 1 的比值仍在约 110–1000 倍之间，所以「快约 100–1000 倍」不受影响。",
+     "severity": "minor",
+     "suggested_fix": "若保留当前日志：改为「各显式公式约 0.2–3.0 s」，并在括号里注明 logs/verify_all_final.log 那次运行时机器负载较高（H、F3 约 3.0 s），不算正常负载运行。否则在正常负载下重跑 verify_all 后再填数字。",
+     "verdict": {
+      "index": 3,
+      "real": true,
+      "reason": "成立（minor）。我逐个解析了所引 6 份日志的 bench 结果，显式公式（H/F3/Theta/ThetaH/F4）的耗时为：c2a_check_run 0.242–1.643；x2 0.227–1.746；verify_all_run1 0.275–1.975；audit_a3 0.342–2.405；e5 0.737–1.517；当前 verify_all_final 0.426–3.015（H 2.999、F3 3.015）。6 次合起来是 0.227–3.015 s，超出了「约 0.2–2.4 s」。这次运行比其余几次正常运行慢约 1.5 倍，远低于文中排除的 r-c2a、x1 那两次的 3–5 倍，所以继续把它算作正常负载是说得通的，但范围必须更新。F4 最快、H/F3 最慢仍然成立；与引理 1 的比值为 114–1202，「快约 100–1000 倍」不受影响。",
+      "final_fix": "各显式公式约 0.2–3.0 s（若之后再重跑 verify_all、替换了 logs/verify_all_final.log，就按 6 份日志重新取范围）"
+     }
+    },
+    {
+     "file": "00_head.md",
+     "quote": "另做了三轮多 Agent 工作流",
+     "problem": "报告实际还做了第四轮多 Agent 工作流，即最终对抗审计，确认了 58 条问题。④B.13 也写了「最终一轮对抗审计又更正了」。但 00_head 只交代了三轮，④B 的标题仍是「两轮工作中出过的错」，⑤ 的「两轮工作流的原始返回值」也只列了 phase1、phase2。读者在报告里找不到 B.13 说的是哪一轮，也找不到它的记录。",
+     "evidence": "logs/phase4_final_audit_output.json：out 下有 requirements、math-c1c2、math-c3、math-c4c5、consistency 五个审计视角，每条发现带 verdict，confirmed 共 58 条。code/main_extra/report_patches/patch_final_audit.py 文件头写「最终对抗审计（第四轮）」。报告全文检索不到 phase3_audit_output.json 和 phase4_final_audit_output.json。",
+     "severity": "minor",
+     "suggested_fix": "把「另做了三轮多 Agent 工作流」改为「另做了四轮多 Agent 工作流」，并在第三轮那一分句后接上：「；第四轮（最终对抗审计）由 5 个审计者分别从交付要求、C-1/C-2 数学、C-3 数学、C-4/C-5 数学、全文一致性复查，每条发现再经独立复核，确认的问题已据此修订（原始输出 logs/phase4_final_audit_output.json）」。同时把 ④B 标题改为「**B. 各轮工作中出过的错（都已更正，记在这里便于复核）**」，把 ⑤ 的「两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`」改为「四轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`」。",
+     "verdict": {
+      "index": 4,
+      "real": true,
+      "reason": "成立（minor）。logs/phase4_final_audit_output.json 有 5 个审计视角（requirements、math-c1c2、math-c3、math-c4c5、consistency），共 63 条发现，每条都有独立复核的 verdict（对应 logs/final_audit_verify_*.log），其中 58 条确认。patch_final_audit.py 文件头写的是「最终对抗审计（第四轮）」，④B.13 也写了「最终一轮对抗审计又更正了」。但 00_head 只交代了三轮，④B 标题仍是「两轮工作中出过的错」，⑤ 只列了 phase1、phase2 的原始输出。全文检索 报告.md，phase3_audit_output.json 和 phase4_final_audit_output.json 都没被引用，读者无法定位 B.13 说的是哪一轮。如果本轮复查也要算作一轮，轮数需要相应调整。",
+      "final_fix": "00_head 中「另做了三轮多 Agent 工作流」改为「另做了四轮多 Agent 工作流」。同句末尾「交付要求是否齐全。」改为「交付要求是否齐全；第四轮（最终对抗审计）5 个审计者分别从交付要求、C-1/C-2 数学、C-3 数学、C-4/C-5 数学、全文一致性复查，每条发现再由独立复核者核实，确认属实的问题已据此修订（原始输出 logs/phase4_final_audit_output.json）。」另外：08_failed 的「**B. 两轮工作中出过的错（都已更正，记在这里便于复核）**」改为「**B. 各轮工作中出过的错（都已更正，记在这里便于复核）**」；09_code 的「两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`」改为「各轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`」；README 的过程概览与原始返回值列表同步补上第四轮。"
+     }
+    },
+    {
+     "file": "00_head.md",
+     "quote": "少数扩展范围只由第二轮复核脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。",
+     "problem": "这句的范围描述和承诺都不完全成立。不在 verify_all 中的扩展范围，除第二轮复核脚本外，还来自第一轮的扩展/探索脚本和第三轮审计者，例如 T1.0 的 a_direct 到 k=11、T1.4 的 DFS 到 k=11、T4.2 的模式暴力 d=4、T4.1 审计者 a1 的 d≤60。其中 T1.0「扩展脚本另核对 a_direct 到 k=11」和 T4.2「探索中 d=4」两处，既没写「不在 verify_all 中」，也没给日志路径。同一个扩展脚本在 T1.4 已经按这条规则补了路径。",
+     "evidence": "verify_all_final.log 的 B3-direct-vs-product：「1<=k<=9（k=10,11 与 k<=7,n<=20 见 extended_checks.py 的 E2）」。logs/c1_extended.log 的 E2：「k=10,11 (0<=n<=13)；1<=k<=7 (14<=n<=20)」。logs/c4_explore9b_d4.log：「d=4 brute==DP: True 4990」。c4.c4-pattern-brute 的日志只到 d<=3。",
+     "severity": "minor",
+     "suggested_fix": "改为「少数扩展范围只由第一轮的扩展/探索脚本、第二轮复核脚本或第三轮审计脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。」并补两处：T1.0 的「扩展脚本另核对 a_direct 到 k=11」改为「扩展脚本另核对 a_direct 到 k=11（k=10,11 时 n≤13，另 k≤7 时 n≤20；logs/c1_extended.log 的 E2，不在 verify_all 中）」；T4.2 核对行的「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）」改为「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索脚本另做 d=4，logs/c4_explore9b_d4.log，不在 verify_all 中）」。",
+     "verdict": {
+      "index": 5,
+      "real": true,
+      "reason": "成立（minor）。不在 verify_all 中的扩展范围不只来自第二轮复核脚本。来自第一轮脚本的有：T1.0 的 a_direct（c1_extended.log 的 E2：k=10,11 时 n≤13，另 k≤7 时 n≤20；verify_all 的 B3 只到 k≤9）、T1.4 的 DFS k=10,11、T3.8 的 explore_relations2、T4.2 的模式暴力 d=4（c4_explore9b_d4.log：「d=4 brute==DP: True 4990」；verify_all 的 c4-pattern-brute 只到 d≤3）。来自第三轮审计者的有 T4.1 中 a1 的 d≤60。其中 T1.0 与 T4.2 两处既没给日志路径，也没写「不在 verify_all 中」。我另外查到：T3.4(5) 的 Gevrey 数据（k=75、150 时为 1.669、2.036）来自复核者 r-c3a 的 logs/review_r-c3a_r3_growth.log，不在 verify_all 中，同样没给路径。所以 00_head 对来源的描述不完整，「已注明并给出日志路径」这一承诺也有遗漏。",
+      "final_fix": "00_head 改为「少数扩展范围只由第一轮的扩展/探索脚本、第二轮复核脚本或第三轮审计脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。」同时补三处：02_C1 T1.0 的「扩展脚本另核对 a_direct 到 k=11。」改为「扩展脚本另核对 a_direct 到 k=11（k=10,11 时 n≤13，另 k≤7 时 n≤20；logs/c1_extended.log 的 E2，不在 verify_all 中）。」；05_C4 T4.2 核对行的「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）」改为「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索脚本另做 d=4，logs/c4_explore9b_d4.log，不在 verify_all 中）」；04_C3 T3.4(5) 的「在 k=75、150 为 1.669、2.036（比值 1.22）」后补「（复核者 r-c3a 的数据，logs/review_r-c3a_r3_growth.log，不在 verify_all 中）」。可选：T3.4(3)「复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}」后补「（logs/review_r-c3a_r1_exact.log）」。"
+     }
+    },
+    {
+     "file": "06_C5.md",
+     "quote": "核对：c5a.c5a-roots、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr、",
+     "problem": "c5a.c5a-roots 和 c5a.c5a-cm-repr 都有 decimal（90 位）计算的数值部分，日志里各自标了 [numeric]，核对行却没注「数值」。这违反 00_head「凡是用 decimal 做的高精度数值检查，一律注明数值」。同类问题（c1.C2-growth、c0.c0-cm、c5a-asym、c5a-prompt-k40）上一轮已补注，这两项漏了。两处被核对的结论正文另有证明，所以只是标注问题。",
+     "evidence": "verify_all_final.log：「PASS c5a-roots ... (Sturm exact, j<=30); [numeric] rho_j increasing and |complex root|^2 = j/rho_j < rho_{j-1}^2 < rho_j^2 (j<=30)」；「PASS c5a-cm-repr ... exact r_m(y) = gt_m(y)/f_m'(y) mod f_m ...; [numeric] r_m(rho_m) == closed form to 1e-70 (m<=8)」。check_c5a.py 第 23 行 getcontext().prec = 90，第 360–363 行和第 534 行用 Decimal 比较。",
+     "severity": "minor",
+     "suggested_fix": "核对：c5a.c5a-roots（实根唯一用 Sturm 精确核对；ρ_j 单调与复根模长不等式为 decimal 数值核对，j≤30，一般证明见上）、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr（Q(ρ_m) 表示为精确计算；与闭式的比较为 decimal 数值，m≤8）、",
+     "verdict": {
+      "index": 6,
+      "real": true,
+      "reason": "成立（minor）。verify_all_final.log 原文：c5a-roots 为「(Sturm exact, j<=30); [numeric] rho_j increasing and |complex root|^2 = j/rho_j < rho_{j-1}^2 < rho_j^2 (j<=30)」，c5a-cm-repr 为「[numeric] r_m(rho_m) == closed form to 1e-70 (m<=8)」。check_c5a.py 中 chk_roots、chk_cm_repr 用的是 prec=90 的 Decimal（RHO 由 Newton 迭代求得，CM 为 decimal 值）。06_C5 的 T5.1 核对行对这两项没注「数值」，而同一行的 asym、prompt-k40、c0-cm 都注了，违反 00_head「decimal 检查一律注明数值」。被核对的结论另有一般证明（T1.3(4)、T5.1(2)(3)），所以只是标注问题。T3.7 引的 C3B-CUB 用有理区间，是精确核对，不存在同样的遗漏。",
+      "final_fix": "核对：c5a.c5a-roots（实根唯一用 Sturm 精确核对；ρ_j 单调与复根模长不等式为 decimal 数值核对，j≤30，一般证明见 T1.3(4) 与上文 (2) 的关键不等式）、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr（Q(ρ_m) 中的表示为精确计算；与闭式的比较为 decimal 数值，m≤8）、"
+     }
+    },
+    {
+     "file": "06_C5.md",
+     "quote": "(1)【已证明】基本事实：h_k(0)=1，h_k(1)=2（k≥2）",
+     "problem": "T5.3(1) 标【已证明】，列了 h_k(0)、h_k(1)、[t¹]h_k 及其母函数、h_{k,i} 的反演式、h_k^{(d)}(1) 的一般式和 n_k(z)，但这一段既没有证明，也没有笔记指针（同节的 (2)(3)(5) 都有指针）。另外 n_k(z) 只用 h_k 定义，没写出它就是 Σ_qN(k,q)z^{q−1}，而 (4)(6) 正是按这个含义使用的。这些证明都在 notes/c5a.md §4.1、§4.6、§4.7。",
+     "evidence": "notes/c5a.md §4.1 第 1–4 条：h_k 的 N 展开、h_{k,i} 公式、h_k(0)=1、h_k(1)=N(k,k)，以及 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))。§4.6：Σ_kh_{k,1}x^k 的母函数，以及 h_{k,1}=R_k−k−1>0。§4.7：由 h_k(1−s) 的展开得到 h_k^{(d)}(1)。我按 T1.7 的展开手推了 [t¹]h_k=N(k,2)−(k−1)=R_k−k−1 和 h_k'(1)=2(k−1)−(k²−k−4)=−(k²−3k−2)，都与报告一致。",
+     "severity": "minor",
+     "suggested_fix": "(1)【已证明；证明见 notes/c5a.md §4.1、§4.6、§4.7，都由 T1.7 的两个表示 Σ_mU_k(m)t^m=h_k/(1−t)^{k+1} 与 h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q} 直接得到】基本事实：h_k(0)=1，h_k(1)=2（k≥2）（同句末的「N 行多项式 n_k(z)=(1+z)^{k−1}h_k(z/(1+z))」改为「N 行多项式 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))」）",
+     "verdict": {
+      "index": 7,
+      "real": true,
+      "reason": "成立（minor）。T5.3(1) 标【已证明】，段内既没有证明也没有笔记指针，违反原始任务第 1 条「【已证明】须附完整证明」以及 00_head 的指针约定。证明确实在 notes/c5a.md §4.1（第 1–4 条，含 n_k:=Σ_qN(k,q)z^{q−1}）、§4.6、§4.7。我用 core.U_fast_table（已与 U_list 交叉核对）独立重算了全部断言，都成立：h_k(0)=1；h_k(1)=2（2≤k≤30）；[t¹]h_k=R_k−k−1，2≤k≤30 时为正，k=0,1 时为 0；该系数的母函数；h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q}；h_k^{(d)}(1) 的一般式（d≤3）；h_k'(1)=−(k²−3k−2)（k≥4；k=3 时实际为 0，公式给 2，与「k≥4」相符）；以及 n_k 的恒等式。要更正发现的一处：[t¹]h_k 的母函数与正性要用 G_1=W_1/P_1（c5a §4.6），不是「都由 T1.7 直接得到」。",
+      "final_fix": "(1)【已证明；证明见 notes/c5a.md §4.1、§4.6、§4.7：h_k(0)、h_k(1)、h_{k,i} 的反演式、h_k^{(d)}(1) 与 n_k(z) 都由 T1.7 的两个表示 Σ_mU_k(m)t^m=h_k/(1−t)^{k+1} 与 h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q} 直接得到；[t¹]h_k 的母函数与正性另用 T1.3(1) 的 G_1=W_1/P_1】基本事实：h_k(0)=1，h_k(1)=2（k≥2）（同句末「N 行多项式 n_k(z)=(1+z)^{k−1}h_k(z/(1+z))」改为「N 行多项式 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))」）"
+     }
+    },
+    {
+     "file": "04_C3.md",
+     "quote": "维数公式的计数：U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:q_{α*b}≠0}",
+     "problem": "α′、β*、α*、β′、q_{ab} 在报告里都没有定义，只在 notes/c3b.md §6 里有，所以这句话单看读不懂。而且同一条里 q 还是 N 的第二个下标（Y: q↦q−1，L_N 里的 (q−1)），q_{α*b} 与它同名异义。α、β 在 T2.6、T4.2 中也另有含义。",
+     "evidence": "notes/c3b.md §6 维数公式的证明：「QL1=Σq_ab[...]……取 β*=Q 中最大的 b、q_{α′β*}≠0……取 α*=最大的 a、q_{α*β′}≠0」。report_parts 中 α′、β* 只出现在这一句。",
+     "severity": "minor",
+     "suggested_fix": "维数公式的计数：写 Q=Σ_{a,b}q_{ab}X^aE^{−b}（N 的情形把 E^{−b} 换成 Y^b；q_{ab} 是 Q 的系数，与 N 的下标 q 无关），β* 为使某个 q_{ab}≠0 的最大 b，α′ 为满足 q_{α′β*}≠0 的一个 a；α* 为使某个 q_{ab}≠0 的最大 a，β′ 为满足 q_{α*β′}≠0 的一个 b。U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:q_{α*b}≠0}",
+     "verdict": {
+      "index": 8,
+      "real": true,
+      "reason": "成立（minor）。在 report_parts 中，α′、β*、q_{α*b} 各只出现 1 次，α*、β′ 各出现 3 次，都没有定义；定义只在 notes/c3b.md §6：「取 β*=Q 中最大的 b、q_{α′β*}≠0……取 α*=最大的 a、q_{α*β′}≠0」。同一定理里 q 又是 N 的第二个下标（Y: q↦q−1，以及 (q−1)X³(1+Y)²），N 情形中 Q 的系数本身就是 (k,q) 的多项式，所以写成 q_{ab} 会同名混淆。我按 c3b 的定义复核了角点论证：U 的情形，(α′,β*+1) 与 (α*+3,β′) 对任意这样选的 α′、β′ 都只收到一项；N 的情形，角点 (α*+3,β′+2) 还会收到来自 Q_{α*,β′+1}、Q_{α*,β′+2} 的项，所以 β′ 必须取最大值，与原句一致。为避免撞名，替换文字把系数改记为 Q_{ab}。",
+      "final_fix": "维数公式的计数：把 Q 写成 Σ_{a,b}Q_{ab}X^aE^{−b}（N 的情形把 E^{−b} 换成 Y^b；Q_{ab} 为 Q 的多项式系数），令 β* 为出现的最大 b、α′ 为满足 Q_{α′β*}≠0 的某个 a，α* 为出现的最大 a、β′ 为满足 Q_{α*β′}≠0 的某个 b；U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:Q_{α*b}≠0}"
+     }
+    },
+    {
+     "file": "01_summary.md",
+     "quote": "全部多项式系数象限递推恰为引理 1 算子生成的左理想。",
+     "problem": "这半句没有主语，又紧跟在「F 与 N 的母函数都不是 D-finite」后面，容易读成对 U 和 N 都成立。按 T3.8，U 的关系左理想由引理 1 的算子 L1 生成；N 的则由三角递推算子 L_N 生成，不是「引理 1 算子」。",
+     "evidence": "04_C3 T3.8：Rel(U)=O_U·L1，L1=1−E^{−1}−X−mX³；Rel(N)=O_N·L_N，L_N=1−X−XY−(q−1)X³(1+Y)²。",
+     "severity": "minor",
+     "suggested_fix": "U 的全部多项式系数象限递推恰为引理 1 算子生成的左理想（N 的则恰为三角递推算子 L_N 生成的左理想）。",
+     "verdict": {
+      "index": 9,
+      "real": true,
+      "reason": "成立（minor）。T3.8 原文是 Rel(U)=O_U·L1（L1=1−E^{−1}−X−mX³，即引理 1 算子）和 Rel(N)=O_N·L_N（L_N=1−X−XY−(q−1)X³(1+Y)²，即三角递推）。L1 作用在 (k,m) 上，零化不了 N。摘要这半句没有主语，又紧跟在「F 与 N 的母函数都不是 D-finite」之后，可以读成 N 的递推也由引理 1 算子生成，这是错的。与 phase4 consistency #1（摘要里的「起失效」容易被误读）同类。",
+      "final_fix": "U 的全部多项式系数象限递推恰为引理 1 算子生成的左理想（N 的则恰为三角递推算子 L_N 生成的左理想，见 T3.8）。"
+     }
+    },
+    {
+     "file": "03_C2.md",
+     "quote": "在 k≤30 上 m=5,6 各有 59/1024 个「零检验」形状对",
+     "problem": "「各有 59/1024 个」有歧义，容易读成「1024 对中有 59 对」。日志的实际情况是：E 与 U 都是 m=5 时有 59 对、m=6 时有 1024 对；其余 m（E 的 m=3,4，U 的 m=2,3,4）都是 0 对。",
+     "evidence": "logs/review_r-c2b_r4b_full.log：E m=5 tested 124390 consistent 59；E m=6 tested 188630 consistent 1024；U m=4 consistent 0；U m=5 consistent 59；U m=6 consistent 1024。logs/review_r-c2b_r4b_full_small.log：E m=3,4、U m=2,3 都是 consistent 0。",
+     "severity": "minor",
+     "suggested_fix": "在 k≤30 上，E 与 U 都是 m=5 时有 59 个、m=6 时有 1024 个「零检验」形状对（其余 m 为 0 个）",
+     "verdict": {
+      "index": 10,
+      "real": false,
+      "reason": "不成立。零检验形状对的未知数个数等于方程个数，任何数列都能拟合，原文括号里也写明了这一点，所以这类形状对与目标数列（E 或 U）无关。日志可以确认：E 与 U 在同一个 m 上的盒子完全相同（m=5 时 tested 都是 124390，m=6 时都是 188630），review_r-c2b_r4_twoterm_big.log 中 E 与 U 的零检验示例对也逐个相同。因此「m=5,6 各有 59/1024 个「零检验」形状对」就是按 m 计数，m=5 有 59 个、m=6 有 1024 个，对 E、U 都对；「各有 … /…」是常见的「分别」写法。原文没有会导致错误结论的读法，改写只是措辞问题。",
+      "final_fix": ""
+     }
+    },
+    {
+     "file": "03_C2.md",
+     "quote": "形状 Σ_s A(m,s)C(k+αm+β−γs, δm+εs+ζ)（γ+ε≥2 的 8232 族）",
+     "problem": "同一定理 T2.6 里，补充 (i) 和「术语」行用 α、β 表示形状 C(k+c−αs, βs+d) 中 s 的两个系数（④A.1 也沿用这个记号）。到了 (iv)，α 变成 m 的系数，β 变成上指标的常数项，(i) 里的 α、β 在这里改叫 γ、ε，属于同名异义。「γ+ε≥2」对应的正是 (i) 记号下的 α+β≥2。",
+     "evidence": "03_C2 T2.6 的术语行「取 v=x^{α+β}/(1−x)^β」与 (i)「形状 C(k+c−αs, βs+d)」。c2b.T7.box 日志：「alpha∈[-1,2],beta∈[-3,3],gamma∈[0,3],delta∈[0,2],eps∈[-1,3],zeta∈[-3,3]（11760族，其中 gamma+eps>=2 有真检验的 8232 族）」。",
+     "severity": "minor",
+     "suggested_fix": "形状 Σ_s A(m,s)C(k+αm+β−γs, δm+εs+ζ)（这里的 α、β 是盒搜索自己的参数，与 (i) 无关；γ、ε 对应 (i) 中的 α、β；γ+ε≥2 的 8232 族）",
+     "verdict": {
+      "index": 11,
+      "real": false,
+      "reason": "不成立。(iv) 把形状 Σ_s A(m,s)C(k+αm+β−γs, δm+εs+ζ) 完整写了出来，条件 γ+ε≥2 也是用同一套记号写的，与 c2b.T7.box 的日志一致。每个字母都在使用处就地确定了含义，(iv) 也没有引用 (i) 的 α、β，读者不会误读成 (i) 的记号。这属于记号风格，与 phase4 对 κ_j/κ_m 判为不成立的理由相同。加一句对应说明也无害，但不是必须修改的问题。",
+      "final_fix": ""
+     }
+    },
+    {
+     "file": "06_C5.md",
+     "quote": "列方向 (E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向由 (m_1+1)²(m_2+1)² 阶转移矩阵给出先验阶界",
+     "problem": "E 和 m_1、m_2 在报告里都没有定义。E 在 T3.8 中是 m 方向的移位（E^{−1}: m↦m−1），这里却是 n 方向的移位。m_1=⌈n/2⌉、m_2=⌊n/2⌋ 也要读者自己猜。",
+     "evidence": "报告全文中 m_1、m_2 只出现在这一句。c5b.emp-row 日志：「d=(m1+1)^2(m2+1)^2 为转移矩阵 Kronecker 积给出的先验阶界」「A207069(行2):10阶,界16」「A207070(行3):22阶,界36」。n=2 时 (1+1)²(1+1)²=16，n=3 时 (2+1)²(1+1)²=36，与 m_1=⌈n/2⌉、m_2=⌊n/2⌋ 一致。",
+     "severity": "minor",
+     "suggested_fix": "列方向（固定 k）记 E 为 n 方向的移位算子（Ea(n)=a(n+1)），(E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向（固定 n）由 (m_1+1)²(m_2+1)² 阶转移矩阵（m_1=⌈n/2⌉、m_2=⌊n/2⌋，即两个高度转移矩阵的 Kronecker 积）给出先验阶界",
+     "verdict": {
+      "index": 12,
+      "real": true,
+      "reason": "成立（minor）。m_1、m_2 在报告中只出现这一次（其余「m_1」检索结果是 Num_1），没有定义。定义在 notes/c5b.md 的 T4：m1=⌈n/2⌉、m2=⌊n/2⌋，阶界来自 A_{m1}⊗A_{m2}。c5b.emp-row 给出第 2..7 行的界 16、36、81、144、256、400，与 (⌈n/2⌉+1)²(⌊n/2⌋+1)² 逐个相等。E 在 T5.4 中也没有定义：报告里唯一的定义是 T3.8 的 E^{−1}: m↦m−1（m 方向移位），这里却是 n 方向移位（c5b T3）。",
+      "final_fix": "列方向（固定 k）记 E 为 n 方向的移位算子（Ea(n)=a(n+1)），(E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向（固定 n）由 (m_1+1)²(m_2+1)² 阶转移矩阵（m_1=⌈n/2⌉、m_2=⌊n/2⌋，即两个 (m+1)² 阶高度转移矩阵的 Kronecker 积）给出先验阶界"
+     }
+    },
+    {
+     "file": "08_failed.md",
+     "quote": "另有子 Agent 为查 Lipshitz 1989 读了几次文献元数据（Crossref、Semantic Scholar API、ar5iv、Wikipedia；ScienceDirect 返回 403）",
+     "problem": "这句话与 c3b 笔记的记录不符。从 Crossref、Semantic Scholar 读的是 Lipshitz 1989 的元数据和引言；但从 ar5iv、Wikipedia 读的是其他文献的正文和页面，不是「Lipshitz 1989 的文献元数据」。④C.14 正是靠这些二手文献核对 D-finite 定义的。00_head 第 9 行「另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询」同样不准确。这只是只读访问记录写得不准，不涉及违反只读规则。",
+     "evidence": "notes/c3b.md §9「文献核实（只读）」：Lipshitz 的 Crossref 元数据已核实、引言经 Semantic Scholar 核实；Bousquet-Mélou & Petkovšek（arXiv:math/0211432）与 Bousquet-Mélou & Mishna（arXiv:0810.4387）「ar5iv 文本已核对」；Melczer 学位论文（arXiv:1709.05051）「ar5iv 文本已核对」；Wikipedia「Holonomic function」「已读取页面核对」。logs/review_x2-dfinite_literature.log 只记录了 Semantic Scholar 和 Crossref 两次 GET。",
+     "severity": "minor",
+     "suggested_fix": "另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna、Melczer 三篇的正文和 Wikipedia「Holonomic function」页面（00_head 第 9 行同步改为「另有子 Agent 为核实 D-finite 定义做了几次只读文献查询（见 ④C）」）",
+     "verdict": {
+      "index": 13,
+      "real": true,
+      "reason": "成立（minor）。notes/c3b.md §9「文献核实（只读）」的记录是：Lipshitz 1989 的 Crossref 元数据，以及经 Semantic Scholar 读到的引言；Bousquet-Mélou–Petkovšek（arXiv:math/0211432）、Bousquet-Mélou–Mishna（arXiv:0810.4387）和 Melczer 学位论文（arXiv:1709.05051）都是「ar5iv 文本已核对」；Wikipedia「Holonomic function」是「已读取页面核对」。logs/review_x2-dfinite_literature.log 只有对 Semantic Scholar（字段含 abstract，实为引言）和 Crossref 的两次 GET；review_r-c3b_crossref.log 只查了 Crossref。所以 ar5iv、Wikipedia 读的是其他文献的文本和页面，Semantic Scholar 读到的也不只是元数据。④C.15 与 00_head 第 9 行把这些都说成「Lipshitz 1989 的文献元数据」，记录不准确。所有访问都是只读，不违反规则。",
+      "final_fix": "另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna 两篇论文与 Melczer 学位论文的相关文本、Wikipedia「Holonomic function」页面（00_head 第 9 行「另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询（见 ④C）」同步改为「另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询（见 ④C）」）"
+     }
+    }
+   ]
+  }
+ ],
+ "confirmed": [
+  {
+   "lens": "fixcheck",
+   "file": "01_summary.md",
+   "quote": "基点 2d+1 的 Newton 正性在 d=69 首次失效，奇数 69≤d≤101 为负",
+   "problem": "新句去掉了 [39] 定稿中的「第 0 个 Newton 系数」。「奇数 69≤d≤101 为负」缺主语。它与前半句「47≤d≤57 逐个失效」并列，读者会理解为失效的 d 恰好是这些奇数，但偶数 d≥74 时基点 2d+1 的第 1 个 Newton 系数也为负。「首次失效」对全部系数也没有被引核对支撑：rv.rv-c4-newton-cex 只查第 0 个系数（T4.2(3) 正文与 09_code 的 rv 行也只讲第 0 个），c4-newton-pos-2d1 只查到 d≤12。",
+   "evidence": "code/review/final-audit/fixcheck/f3_newton_2d1.py、f3b_newton_detail.py 的做法：三角递推得到的 N 先与 core.N_from_U 对照到 k≤40；由基点 2d+2 的 Newton 系数反推基点 2d+1 的全部系数，并用 N_0=D(2d+1,d)−(−1)^{d+1}(d+1)! 交叉核对，逐一通过。结果：d≤68 全部系数为正，所以「d=69 首次失效」碰巧成立；d=69 的第 0 个系数为 −1.742e99，与 T4.2(3) 的 −1.74·10^{99} 一致；偶数 d=74、76、78、80、82 的第 1 个系数为负（d=74 时为 −8.86e108）；d=77、79、81 的第 2 个系数也为负。输出在 logs/final_audit_fixcheck.log。",
+   "severity": "imprecise",
+   "suggested_fix": "基点 2d+1 的第 0 个 Newton 系数 p_d(2d+1) 在 d=69 首次为负，奇数 69≤d≤101 都为负（偶数 d 时该系数已证明为正）",
+   "verdict": {
+    "index": 0,
+    "real": true,
+    "reason": "引文在 01_summary 中唯一存在。我换了一条路线独立重算（code/review/final-audit/verify-fixcheck/v0_newton_2d1.py，输出在 logs/final_audit_verify-fixcheck.log）：按 T2.2 在 y=1 时的递推建 U 表，并与 core.U_fast_table 对照；用容斥得到 N，与 N_brute 对照到 k≤8；p_d(2d+1) 不用缺陷公式，而用 k≥2d+2 的 2d+1 个值外推，结果与 D(2d+1,d)−(−1)^{d+1}(d+1)! 逐个相符；另外核对了 k=2d+2..4d+3 上 Δ^{2d+1}=0。结果：d≤68 时基点 2d+1 的全部 Newton 系数为正，所以「d=69 首次失效」碰巧成立。但报告引用的核对撑不起这一点：rv-c4-newton-cex 只查奇数 d 的第 0 个系数，c4-newton-pos-2d1 只查到 d≤12。d=69 的第 0 个系数为 −1.742e99。偶数 d=74,76,…,100 的第 1 个系数为负（d=74 时为 −8.863e108），d=77、79、81 的第 2 个系数也为负。新句丢了确认问题 [39] 定稿里的主语「第 0 个 Newton 系数」，又与「47≤d≤57 逐个失效」并列，读者会以为失效的 d 恰好是这些奇数，这不对；T4.2(3) 正文讲的也只是第 0 个系数。改的时候恢复主语即可，不要把偶数 d 的全部系数写成为正（偶数 d≥74 实际失效，但这个结果不在 verify_all 中）。",
+    "final_fix": "基点 2d+1 的第 0 个 Newton 系数 p_d(2d+1) 在 d=69 首次为负，奇数 69≤d≤101 都为负（偶数 d 时第 0 个系数已证明为正）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "03_C2.md",
+   "quote": "各显式公式约 0.2–2.4 s",
+   "problem": "本轮补出处时，把 logs/verify_all_final.log 列为 6 次「正常负载运行」之一。该日志已在 17:22 被重跑覆盖，新日志的 c2a.bench_k200_m30 行为 H 2.999 s、F3 3.015 s（F4 0.426 s，引理 1 0.003 s），超出「约 0.2–2.4 s」。按现在被引的 6 份日志，范围是 0.227–3.015 s。同一次重跑总耗时 271.0 s，因此 09_code「最终一次运行」表（217.7 s 及各模块秒数）以及 00_head、README 的「约 3–4 分钟」也与被引日志不符。「约 100–1000 倍」仍成立：各次运行内的比值为 114–1203。",
+   "evidence": "逐份 grep bench 行，各日志的显式公式耗时范围：c2a_e5 0.737–1.517；c2a_check_run 0.242–1.643；x2 0.227–1.746；verify_all_run1 0.275–1.975；a3 0.342–2.405；新 verify_all_final 0.426–3.015。新 final 汇总表 TOTAL 271.0s，其中 c1 66.4s（旧表 46.6s），比其余正常运行慢约 1.3–1.7 倍，可能受并行审计的负载影响。",
+   "severity": "imprecise",
+   "suggested_fix": "先在空闲机器上重跑 verify_all，再同步数字。若沿用当前日志，则改为「各显式公式约 0.2–3.0 s」，并按新日志更新 09_code 的「最终一次运行」表（TOTAL 271.0s 及各模块秒数），00_head、README 的耗时改为约 3–5 分钟。",
+   "verdict": {
+    "index": 1,
+    "real": true,
+    "reason": "引文唯一存在。logs/verify_all_final.log 在 03_C2.md 修订后 321 s 被重跑覆盖。重跑已经完成（TOTAL pass=290、OVERALL PASS），其 bench_k200_m30 行为 H 2.999 s、F3 3.015 s。被引的 6 份日志里，显式公式耗时实测为 0.227–3.015 s，超出了「约 0.2–2.4 s」（逐份解析见 v_misc.py 的输出）。「约 100–1000 倍」仍成立：各次运行内与引理 1 的比值为 114–1202。同一日志的总表是 TOTAL 271.0 s、c1 66.4 s，与 09_code「最终一次运行」表的 217.7 s、c1 46.6 s 不符。271 s 约为 4.5 分钟，也超出了 00_head 与 README 写的「约 3–4 分钟」。这次重跑整体偏慢，约为旧的正常运行的 1.3–1.9 倍，可能受到并行审计负载的影响。如果以它为基准，复核者 r-c2a、x1 的同项耗时只有它的 1.8–2.7 倍，「约为正常运行的 3–5 倍」也就对不上了。",
+    "final_fix": "各显式公式约 0.2–3.0 s（前提是沿用当前的 logs/verify_all_final.log；更好的做法是在空闲机器上重跑 verify_all，再按新日志统一同步）。同时：把 09_code「最终一次运行」表换成该日志的总表（TOTAL pass=290，271.0s，各模块秒数随之更新）；00_head 与 README 的「约 3–4 分钟」改为「约 3–5 分钟」；同一括号内的「同项耗时约为正常运行的 3–5 倍」改为「同项耗时约为 c2a_check_run 等未受干扰运行的 3–5 倍」。"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "00_head.md",
+   "quote": "r2 只对由已证明的 G_m=W_m/P_m 推出的留数–范数条件做精确穷举",
+   "problem": "r2 检查的不是范数条件。按 r2_two_family.py 的 docstring，它穷举的是两族表示的留数线性相关条件：θ_i、x^{−N1}、x^{−N2} 在 K_i 中 Q-线性相关，化为 det(R_i,x^a,x^b)=0。脚本里没有任何范数计算，范数证书在 r1。09_code 同一处写的是「纤维条件的精确代数穷举」，两处说法也不一致。",
+   "evidence": "code/review/x1-single-sum/r2_two_family.py 第 2–16 行 docstring；在 r2 中 grep norm/范数 为 0 处；r1_numfield_residues.py 的 docstring (1)(4) 才是范数计算。",
+   "severity": "minor",
+   "suggested_fix": "r2 只对由已证明的 G_m=W_m/P_m 推出的纤维留数线性相关条件（K_i 中 det(R_i,x^a,x^b)=0）做精确穷举",
+   "verdict": {
+    "index": 2,
+    "real": true,
+    "reason": "引文唯一存在。code/review/x1-single-sum/r2_two_family.py 的 docstring 和代码只穷举 det(R_i,x^a,x^b)=0：det3 出现 3 次，做法是先模两个素数筛选，再对候选做精确有理核对。它检验的是留数元与 x^a、x^b 在 K_i 中 Q-线性相关，norm/范数 的出现次数为 0；范数证书在 r1（出现 12 次）。确认问题 [8] 的定稿写的是「r2 只穷举留数行列式条件」，09_code 同一处写的是「纤维条件的精确代数穷举」。所以 00_head 把 r2 说成「留数–范数条件」，既与脚本内容不符，也与 09_code 不一致。",
+    "final_fix": "r2 只对由已证明的 G_m=W_m/P_m 推出的纤维留数条件（留数元与 x^a、x^b 在 K_i 中 Q-线性相关，即 det(R_i,x^a,x^b)=0）做精确穷举（范数计算在 r1）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "00_head.md",
+   "quote": "另做了三轮多 Agent 工作流",
+   "problem": "本轮在 08_failed 第 13 条新增「最终一轮对抗审计又更正了：……」。这指第三轮之后的第四轮审计（logs/phase4_final_audit_output.json：5 个审计方向，外加逐条复核），但 00_head 仍写「三轮」，全文也没有任何地方介绍这一轮，新句与上下文矛盾。同类的过时表述还有：08_failed 小标题「B. 两轮工作中出过的错」；09_code「两轮工作流的原始返回值」只列了 phase1、phase2；README 的过程概览只写到第三轮。",
+   "evidence": "grep「三轮/两轮/第四轮/最终一轮」的结果；phase4_final_audit_output.json 的 out 有 5 个 lens：requirements、math-c1c2、math-c3、math-c4c5、consistency。",
+   "severity": "minor",
+   "suggested_fix": "改为「另做了四轮多 Agent 工作流」，并在该句「交付要求是否齐全」后补：「；第四轮（最终对抗审计）5 个审计者分方向复查全文，每条发现再经独立复核，确认属实的已改正（logs/phase4_final_audit_output.json，见 ④B.13）」。同时把 08_failed 小标题改为「B. 各轮工作中出过的错」，09_code 的原始返回值清单补上 phase3_audit_output.json 和 phase4_final_audit_output.json。",
+   "verdict": {
+    "index": 3,
+    "real": true,
+    "reason": "引文唯一存在。本轮在 08_failed 第 13 条新增了「最终一轮对抗审计又更正了」，其中的「又」说明这一轮排在第三轮之后。它就是 patch_final_audit.py 的 docstring 所称的「第四轮」：phase4_final_audit_output.json 有 5 个审计方向（requirements、math-c1c2、math-c3、math-c4c5、consistency）外加逐条复核，确认 58 条。00_head 仍写「另做了三轮」，也只列了三轮；在全部 report_parts 中搜「四轮」或「phase4」都是 0 处，全文没有任何地方介绍这一轮，所以新句与 00_head 的流程描述矛盾。同类的过时表述还有：08_failed 的小标题「B. 两轮工作中出过的错」；09_code「两轮工作流的原始返回值」只列了 phase1、phase2；README 的过程概览和 logs 行只写到第三轮。",
+    "final_fix": "另做了四轮多 Agent 工作流（同时在本句「交付要求是否齐全」之后补：「；第四轮（最终对抗审计）5 个审计者分方向（交付要求、C-1/C-2、C-3、C-4/C-5、全文一致性）复查全文，每条发现再经独立复核，确认属实的已改正（logs/phase4_final_audit_output.json，见 ④B.13）」；并把 08_failed 小标题改为「B. 各轮工作中出过的错」，09_code 的原始返回值清单补上 logs/phase3_audit_output.json、logs/phase4_final_audit_output.json，README 的过程概览补上第四轮）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "01_summary.md",
+   "quote": "N(k,q) 的组合意义按定义直接计数只核到 k≤9",
+   "problem": "按定义的直接计数实际做到了 k≤11：c1 扩展脚本用 core.N_brute（DFS）核对了 k=10、11（不在 verify_all 中）。T1.4 写「扩展脚本到 11，logs/c1_extended.log」，完成度表写「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」。摘要省掉了「在 verify_all 中」，于是与这两处矛盾。",
+   "evidence": "logs/c1_extended.log 中的「PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」。",
+   "severity": "minor",
+   "suggested_fix": "N(k,q) 的组合意义按定义直接计数在 verify_all 中只核到 k≤9（扩展脚本到 k≤11）",
+   "verdict": {
+    "index": 4,
+    "real": true,
+    "reason": "引文唯一存在。logs/c1_extended.log 中有「PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」，verify_all 的 C3-brute 行自己也写「0<=k<=9（k=10,11 见 extended_checks.py 的 E3）」。可见按定义的直接计数实际做到了 k≤11，只是 k=10、11 不在 verify_all 中。摘要省掉了「在 verify_all 中」，于是成了事实错误，并与 T1.4（「扩展脚本到 11」）和完成度表（「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」）矛盾。",
+    "final_fix": "N(k,q) 的组合意义按定义直接计数在 verify_all 中只核到 k≤9、扩展脚本（logs/c1_extended.log）到 k≤11"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "06_C5.md",
+   "quote": "c0.c0-cm（数值）、c1.C2-cm。",
+   "problem": "本轮按 00_head「decimal 检查一律注明数值」，给同一核对行的 c5a-asym、c5a-prompt-k40 补了标注，T1.3(4) 里的 c1.C2-cm 也标成「decimal 数值」。T5.1 核对行末尾的 c1.C2-cm 却仍未标注，而它是 decimal 150 位的数值检查，属于确认问题 [3]/[56] 的同类遗漏。同一行的 c5a.c5a-roots、c5a.c5a-cm-repr 也含 [numeric] 部分，同样没有标。",
+   "evidence": "code/review/final-audit/fixcheck/f2_numeric_labels.py 逐个比对日志中带 decimal/numeric 字样的检查 id 与报告中的引用：c1.C2-cm 在 T1.3(4) 已标，在 T5.1 未标。日志原文为「PASS C2-cm (C2 推论，数值检查) …（decimal 150 位，容差 1e-8）」。",
+   "severity": "minor",
+   "suggested_fix": "c0.c0-cm（数值）、c1.C2-cm（数值）。（可同时把 c5a.c5a-roots、c5a.c5a-cm-repr 注明「含数值部分」）",
+   "verdict": {
+    "index": 5,
+    "real": true,
+    "reason": "引文唯一存在。verify_all_final.log 的 C2-cm 行为「(C2 推论，数值检查) …（decimal 150 位，容差 1e-8）」，确实是 decimal 数值检查。T1.3(4) 已经把它标成「decimal 数值」，T5.1 核对行末尾的 c1.C2-cm 却没有标。同一行本轮刚给 c5a-asym、c5a-prompt-k40 补了「数值」，c0.c0-cm 也已标注，唯独这一处违反 00_head「凡是用 decimal 做的高精度数值检查，一律注明「数值」」。另外，同一行的 c5a-roots、c5a-cm-repr 在日志中带 [numeric] 部分（check_c5a.py 用 Decimal、prec=90），可以一并注明。",
+    "final_fix": "c0.c0-cm（数值）、c1.C2-cm（数值）。（同一行的 c5a.c5a-roots、c5a.c5a-cm-repr 可同时注明「含数值部分」）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "08_failed.md",
+   "quote": "（对 m=5,6 需要 k≤60）",
+   "problem": "确认问题 [18] 指出：把「k≤60 足以反驳」写成「必须用到 k≤60」，没有证据，示例对在 k≤35 就已矛盾。本轮已把 T2.6(iv) 改为「改用 k≤60 的数据后全部被反驳」，但 08_failed 第 11 条仍写「需要 k≤60」，同一个过度表述没有改到。",
+   "evidence": "logs/review_r-c2b_r4c_example.log 中 K=35 已是 INCONSISTENT；notes/review/r-c2b-review.md 第 170 行写「k≤35 已足够反驳示例对」；没有任何运行检验过「k<60 不够」。",
+   "severity": "minor",
+   "suggested_fix": "（对 m=5,6，k≤30 的数据不足以反驳，改用 k≤60 的数据后全部被反驳）",
+   "verdict": {
+    "index": 6,
+    "real": true,
+    "reason": "引文唯一存在。logs/review_r-c2b_r4c_example.log 中，示例对在 K=35 时 4 行全部为 INCONSISTENT；notes/review/r-c2b-review.md 第 170 行写的是「k≤35 已足够反驳示例对」。r4b_k60 只说明在 k≤60 上全部被反驳，没有任何一次运行检验过「k<60 不够」。所以「需要 k≤60」断言了一个没有证据的必要性，与确认问题 [18] 是同一处过度表述。03_C2 T2.6(iv) 已改为「改用 k≤60 的数据后全部被反驳」，08_failed 第 11 条没有跟着改。",
+    "final_fix": "（对 m=5,6，k≤30 的数据不足以反驳其中 59/1024 个零检验形状对，改用 k≤60 的数据后全部被反驳）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "04_C3.md",
+   "quote": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}）",
+   "problem": "这是本轮新加的复核者结果，只出现在复核日志中，却既没写「不在 verify_all 中」，也没给日志路径。00_head 本轮改成了全称句「都不在 verify_all 中；已在相应条目注明并给出日志路径」，这一处与之不符。同类遗漏还有 T1.0 的「扩展脚本另核对 a_direct 到 k=11」（来自 logs/c1_extended.log 的 E2），同样没有路径和说明。",
+   "evidence": "logs/review_r-c3a_r1_exact.log 第 18 行「S(3/5,-1/2) = -1057.810872564 (+-6.6e-121, my own tail bound)」；notes/review/r-c3a-review.md 第 133 行。数值本身已核对：f4_tailbound.py 按 c3a 尾项界引理复算得 3.529152e−118，部分和为 −1057.8108725635620585…，与新文字一致。",
+   "severity": "minor",
+   "suggested_fix": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}，见 logs/review_r-c3a_r1_exact.log，不在 verify_all 中）。另把 02_C1 T1.0 改为「扩展脚本另核对 a_direct 到 k=11（logs/c1_extended.log 的 E2，不在 verify_all 中）」。",
+   "verdict": {
+    "index": 7,
+    "real": true,
+    "reason": "引文唯一存在。6.6·10^{−121} 只出现在 logs/review_r-c3a_r1_exact.log 的 r1-counterex 行（「+-6.6e-121, my own tail bound」）和 notes/review/r-c3a-review.md 第 133 行，报告既没给这个日志路径，也没写「不在 verify_all 中」。00_head 本轮改成了「少数扩展范围只由第二轮复核脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径」，报告里其他只由复核者算出的数值（K 闭式 7 点核对、Sturm 到 k≤150 等）都给了路径，本轮新加的这一处是例外。严格地说，更紧的界不算「扩展范围」，这句话也不承担结论（结论用的是 verify_all 中的 3.529e−118），所以只是轻微的可追溯性缺口，但补起来很容易，值得补。T1.0 的「扩展脚本另核对 a_direct 到 k=11」来自 c1_extended.log 的 E2，同样没有路径。它出自第一轮扩展脚本，按字面不在 00_head 那句话的范围内，但与 T1.4 对同一个脚本的写法不一致。",
+    "final_fix": "复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}，见 logs/review_r-c3a_r1_exact.log 的 r1-counterex，不在 verify_all 中）（另把 02_C1 T1.0 核对行的「扩展脚本另核对 a_direct 到 k=11」改为「扩展脚本另核对 a_direct 到 k=11（logs/c1_extended.log 的 E2，不在 verify_all 中）」）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "05_C4.md",
+   "quote": "ν_j(q)=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i=[x^i]P_{q−1}）",
+   "problem": "本轮新引入的 ν_j(q) 在报告中没有定义，全文只出现这一次，读者只能从后文的「低次系数 [x^{q+j}]Num_q」去猜。另外，这里的 π_i 与紧接着 (6) 中的 π_{j,i}（高次系数里的 Q[q] 系数）是两个不同对象，字母相同，容易混淆。",
+   "evidence": "在 report_parts 中 grep「ν」只命中 05_C4 一次；notes/c4.md §4.7 的定义是 ν_j(q):=[x^{q+j}]Num_q。等式本身已由 f5_math.py 的 nu_j 检验核对（q≤17、j≤5，并在 q≥j+2 时核对多项式形式）。",
+   "severity": "minor",
+   "suggested_fix": "ν_j(q):=[x^{q+j}]Num_q=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i(q):=[x^i]P_{q−1}，与 (6) 的 π_{j,i} 无关）",
+   "verdict": {
+    "index": 8,
+    "real": true,
+    "reason": "引文唯一存在。ν 在全部 report_parts 中只出现这一次，报告没有定义它。notes/c4.md §4.7 定义 ν_j(q):=[x^{q+j}]Num_q，报告漏写了，读者只能从后文「低次系数 [x^{q+j}]Num_q」去猜。另外，这里的 π_i（单下标，即 [x^i]P_{q−1}）与同一定理 (6) 中的 π_{j,i}(q)∈Q[q]（高次系数里 c(q,i) 的系数）是两个不同对象，却用了同一个字母。等式本身是对的：由 Num_q=P_{q−1}F_q 取 x^{q+j} 系数，再用 k<q 时 N(k,q)=0 即得。我用 core 的 U 表在 1≤q≤14、j≤5 范围内逐个核对了 [x^{q+j}]Num_q=Σ_{i≤j}[x^i]P_{q−1}·D(q+j−i,j−i)，全部成立。",
+    "final_fix": "ν_j(q):=[x^{q+j}]Num_q=Σ_{i≤j}π_i(q)·D(q+j−i,j−i)（π_i(q):=[x^i]P_{q−1}，与 (6) 的 π_{j,i} 无关）"
+   }
+  },
+  {
+   "lens": "fixcheck",
+   "file": "06_C5.md",
+   "quote": "(5)（数值结果，不属于 T5.1 已证明的部分：decimal 90 位计算，核对 c5a.c5a-prompt-k40（数值））",
+   "problem": "这一小条从【已证明】中摘了出来，但没有换上任何等级标签。原始任务说明第 1 条要求每条结论都标等级，00_head 的等级表里也没有「数值结果」这一档，T5.1(5) 因此成了全文唯一不带等级的结论。按 00_head 的定义，【已验证】只指精确核对，【猜想】只指数据，两者都不贴切，等级体系在这里缺了一档。",
+   "evidence": "notes/原始任务说明.md 第 6 行「每条结论标等级：【已证明】／【已验证】／【猜想】」；00_head 第 7 行的等级定义。所引数字已核对：check_c5a.chk_prompt_k40 在 getcontext().prec=90 下计算，日志中 3.538e-04/3.528e-04、2.792e-03/2.713e-03 与正文的 0.035%、0.28% 及 0.3%、3% 吻合。",
+   "severity": "minor",
+   "suggested_fix": "(5)【已验证（数值）：decimal 90 位，核对 c5a.c5a-prompt-k40；不属于 T5.1 已证明的部分】，并在 00_head 的等级说明末尾补一句「decimal 高精度数值计算得到的具体数值记为【已验证（数值）】」。若不想改动等级体系，至少在 00_head 中说明「数值结果」是单列的标注。",
+   "verdict": {
+    "index": 9,
+    "real": true,
+    "reason": "引文唯一存在。T5.1 的标题是【已证明】，(5) 明确说自己不属于已证明部分，却没有换上任何等级，只写了「数值结果」。原始任务说明第 0 节第 1 条要求「每条结论标等级：【已证明】／【已验证】／【猜想】」，00_head 的等级表（已证明、已验证、猜想、已否定、未完成）里也没有「数值结果」这一档。(5) 是关于提示词断言在哪种解释下成立的结论，依据是 decimal 90 位计算：日志中 c5a-prompt-k40 标为 [numeric]，3.538e-04/3.528e-04、2.792e-03/2.713e-03 与正文的 0.035%、0.28% 等吻合。所以这是缺少等级，不是措辞问题。确认问题 [3] 的定稿给的正是【已验证（数值…）】。",
+    "final_fix": "(5)【已验证（数值）：decimal 90 位计算，核对 c5a.c5a-prompt-k40（数值）；这一小条不属于 T5.1 已证明的部分】（同时在 00_head 等级说明末尾补一句：「decimal 高精度计算得到的具体数值结论记为【已验证（数值）】，并写明精度与范围」）"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "01_summary.md",
+   "quote": "（例外：N(k,q) 的组合意义按定义直接计数只核到 k≤9，复核者用独立 DP 到 k≤28）",
+   "problem": "「按定义直接计数只核到 k≤9」与事实不符，也和正文对不上。c1 的扩展脚本另外按 DFS 定义核了 k=10,11，T1.4 核对行和 ⑥ 完成度表 C-1 行都写了「扩展脚本到 k≤11」；只有 verify_all 内部是 k≤9。phase4 requirements #5 的 FINAL_FIX 原文是「在 verify_all 中只核对到 k≤9，扩展脚本到 k≤11」，写进摘要时丢了这个限定。",
+   "evidence": "logs/c1_extended.log 的 E3：「N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11」。verify_all_final.log 的 C3-brute：「0<=k<=9（k=10,11 见 extended_checks.py 的 E3）」。02_C1 T1.4 写「DFS 定义 k≤9；扩展脚本到 11，logs/c1_extended.log」，10_uncertain C-1 行写「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」。",
+   "severity": "imprecise",
+   "suggested_fix": "（例外：N(k,q) 的组合意义按定义直接计数，在 verify_all 中只核到 k≤9，扩展脚本到 k≤11，复核者用独立 DP 到 k≤28）",
+   "verdict": {
+    "index": 0,
+    "real": true,
+    "reason": "成立（imprecise）。logs/c1_extended.log 的 E3 已按 DFS 定义核对 N_brute == 容斥 N(k,q)，k=10,11；复核者 r-c1 重跑同脚本也通过（review_r-c1_rerun_c1_extended.log）。verify_all 的 C3-brute 自己也注明「k=10,11 见 extended_checks.py 的 E3」。所以摘要写的「按定义直接计数只核到 k≤9」不对：只有限定为「在 verify_all 中」时才成立。它和 T1.4（「扩展脚本到 11」）、⑥ C-1 行（「在 verify_all 中只核到 k≤9，扩展脚本到 k≤11」）都不一致。phase4 requirements #5 的 FINAL_FIX 原本带这个限定，打补丁时丢了。这里是把核对范围说少了，不影响结论。",
+    "final_fix": "（例外：N(k,q) 的组合意义按定义直接计数，在 verify_all 中只核到 k≤9，扩展脚本到 k≤11，复核者用独立 DP 到 k≤28）"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "08_failed.md",
+   "quote": "（对 m=5,6 需要 k≤60）",
+   "problem": "「需要 k≤60」等于说 k≤60 是必需的。phase4 已确认这个说法证据不足（math-c1c2 #2：「要用 k≤60 才」的必要性没有证据），并在 T2.6(iv) 改成了「改用 k≤60 的数据后全部被反驳」。④B.11 这一处没有跟着改，现在和 T2.6(iv) 的现文不一致。已有证据只说明 k≤30 不够、k≤60 足够。",
+   "evidence": "logs/review_r-c2b_r4b_full.log：k≤30 时 E、U 在 m=5 各有 59 个、在 m=6 各有 1024 个零检验相容对。logs/review_r-c2b_r4b_k60.log：这些对在 k≤60 上全部不再相容。logs/review_r-c2b_r4c_example.log：示例对 (15,0,21,8)、(9,0,24,5) 在 K=35 时已经 INCONSISTENT。03_C2 T2.6(iv) 现文：「改用 k≤60 的数据后全部被反驳」。",
+   "severity": "minor",
+   "suggested_fix": "（对 m=5,6，k≤30 时仍有「零检验」形状对，改用 k≤60 的数据后全部被反驳）",
+   "verdict": {
+    "index": 1,
+    "real": true,
+    "reason": "成立（minor）。各日志的结果：review_r-c2b_r4b_full.log 显示 k≤30 时，E、U 在 m=5 各有 59 对相容、m=6 各有 1024 对，检验数全为 0；r4b_k60.log 显示这些对在 k≤60 上仍相容的为 0；r4c_example.log 中示例对 (15,0,21,8)、(9,0,24,5) 在 K=35 时已经 INCONSISTENT。所以证据只说明 k≤30 不够、k≤60 足够，「需要 k≤60」这个必要性没有根据。phase4 math-c1c2 #2 已确认「要用 k≤60 才」属于同一个过度断言，并且只改了 T2.6(iv)（现文是「改用 k≤60 的数据后全部被反驳」），④B.11 没有跟着改。",
+    "final_fix": "（对 m=5,6，k≤30 时仍有「零检验」形状对，改用 k≤60 的数据后全部被反驳）"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "09_code.md",
+   "quote": "TOTAL pass=290 fail=0 modules=11 failed_modules=-  (217.7s)",
+   "problem": "⑤ 说这张表是「最终一次运行（完整输出 logs/verify_all_final.log）」。但这份日志在 17:22 已被重跑结果覆盖（报告各节文件的时间是 17:17）。现在日志里的 PASS/FAIL 数和表上一样，各模块耗时和总耗时却都不同，表格和它所指的日志对不上。00_head 和 ⑤ 写的「约 3–4 分钟」也比这次的约 4.5 分钟略短。",
+   "evidence": "当前 logs/verify_all_final.log 末尾的总表：c0 13/4.7s、c1 45/66.4s、c2a 23/16.4s、c2b 33/47.1s、c3a 34/31.9s、c3b 22/24.6s、c4 41/29.0s、c5a 37/18.8s、c5b 33/4.5s、rv 7/20.1s、rv2 2/7.5s，TOTAL pass=290 fail=0 (271.0s)。报告表依次是 4.2/46.6/14.1/36.3/23.7/22.1/23.9/15.9/5.7/16.2/8.9 秒，合计 217.7s。",
+   "severity": "minor",
+   "suggested_fix": "按最终日志更新整张表：各行 secs 依次改为 4.7、66.4、16.4、47.1、31.9、24.6、29.0、18.8、4.5、20.1、7.5，末行改为「TOTAL pass=290 fail=0 modules=11 failed_modules=-  (271.0s)」。也可以在正常负载下重跑一次，改用那次的日志和数字。若保留 271.0 s 这次，00_head 与 ⑤ 的「约 3–4 分钟」改为「约 4–5 分钟（视机器负载）」。",
+   "verdict": {
+    "index": 2,
+    "real": true,
+    "reason": "成立（minor）。当前 logs/verify_all_final.log 写于 17:22:43，内容完整（OVERALL: PASS），系统里也没有正在运行的 verify_all 进程，所以这份就是打补丁后的重跑结果。逐行解析它末尾的总表：各模块 pass/fail 与 ⑤ 的表完全相同，但每个模块的 secs 都不同，TOTAL 是 271.0s，不是 217.7s。217.7s 那次的日志已被覆盖，logs/ 里找不到原始出处。所以 ⑤ 声称的「最终一次运行（完整输出 logs/verify_all_final.log）」与所指日志对不上。发现中有一处要更正：⑤ 本身没写「约 3–4 分钟」，写这句的是 00_head 和 README。另外，正常负载下的全量运行是 216.4、217.7、232.1 s，这次是 271.0 s。",
+    "final_fix": "把 ⑤ 的代码块整体换成当前 logs/verify_all_final.log 末尾的总表。pass/fail 不变，各行 secs 依次改为：c0 4.7、c1 66.4、c2a 16.4、c2b 47.1、c3a 31.9、c3b 24.6、c4 29.0、c5a 18.8、c5b 4.5、rv 20.1、rv2 7.5。原文引用的末行改为「TOTAL pass=290 fail=0 modules=11 failed_modules=-  (271.0s)」。00_head（以及 README）的「约 3–4 分钟」改为「约 3.5–4.5 分钟（视机器负载）」。如果改为在空闲时重跑 verify_all，就用新日志末尾的总表整体替换，并同步复核 T2.9 的计时范围。"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "03_C2.md",
+   "quote": "各显式公式约 0.2–2.4 s",
+   "problem": "括号里把 logs/verify_all_final.log 算作「6 次正常负载运行」之一。这份日志重跑后，bench_k200_m30 行的 H 是 2.999 s、F3 是 3.015 s，已经超出「约 0.2–2.4 s」。这次重跑总耗时 271.0 s，比报告表里上一次的 217.7 s 慢约 24%（c1 由 46.6 s 变成 66.4 s），也不宜再算作正常负载。",
+   "evidence": "当前 verify_all_final.log 第 90 行：Lemma1 0.003, H 2.999, F3 3.015, Theta 0.442, ThetaH 0.527, F4 0.426。另外 5 份日志的最大值是 audit_a3 的 F3 2.405 s，最小值是 x2 的 F4 0.227 s。与引理 1 的比值仍在约 110–1000 倍之间，所以「快约 100–1000 倍」不受影响。",
+   "severity": "minor",
+   "suggested_fix": "若保留当前日志：改为「各显式公式约 0.2–3.0 s」，并在括号里注明 logs/verify_all_final.log 那次运行时机器负载较高（H、F3 约 3.0 s），不算正常负载运行。否则在正常负载下重跑 verify_all 后再填数字。",
+   "verdict": {
+    "index": 3,
+    "real": true,
+    "reason": "成立（minor）。我逐个解析了所引 6 份日志的 bench 结果，显式公式（H/F3/Theta/ThetaH/F4）的耗时为：c2a_check_run 0.242–1.643；x2 0.227–1.746；verify_all_run1 0.275–1.975；audit_a3 0.342–2.405；e5 0.737–1.517；当前 verify_all_final 0.426–3.015（H 2.999、F3 3.015）。6 次合起来是 0.227–3.015 s，超出了「约 0.2–2.4 s」。这次运行比其余几次正常运行慢约 1.5 倍，远低于文中排除的 r-c2a、x1 那两次的 3–5 倍，所以继续把它算作正常负载是说得通的，但范围必须更新。F4 最快、H/F3 最慢仍然成立；与引理 1 的比值为 114–1202，「快约 100–1000 倍」不受影响。",
+    "final_fix": "各显式公式约 0.2–3.0 s（若之后再重跑 verify_all、替换了 logs/verify_all_final.log，就按 6 份日志重新取范围）"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "00_head.md",
+   "quote": "另做了三轮多 Agent 工作流",
+   "problem": "报告实际还做了第四轮多 Agent 工作流，即最终对抗审计，确认了 58 条问题。④B.13 也写了「最终一轮对抗审计又更正了」。但 00_head 只交代了三轮，④B 的标题仍是「两轮工作中出过的错」，⑤ 的「两轮工作流的原始返回值」也只列了 phase1、phase2。读者在报告里找不到 B.13 说的是哪一轮，也找不到它的记录。",
+   "evidence": "logs/phase4_final_audit_output.json：out 下有 requirements、math-c1c2、math-c3、math-c4c5、consistency 五个审计视角，每条发现带 verdict，confirmed 共 58 条。code/main_extra/report_patches/patch_final_audit.py 文件头写「最终对抗审计（第四轮）」。报告全文检索不到 phase3_audit_output.json 和 phase4_final_audit_output.json。",
+   "severity": "minor",
+   "suggested_fix": "把「另做了三轮多 Agent 工作流」改为「另做了四轮多 Agent 工作流」，并在第三轮那一分句后接上：「；第四轮（最终对抗审计）由 5 个审计者分别从交付要求、C-1/C-2 数学、C-3 数学、C-4/C-5 数学、全文一致性复查，每条发现再经独立复核，确认的问题已据此修订（原始输出 logs/phase4_final_audit_output.json）」。同时把 ④B 标题改为「**B. 各轮工作中出过的错（都已更正，记在这里便于复核）**」，把 ⑤ 的「两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`」改为「四轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`」。",
+   "verdict": {
+    "index": 4,
+    "real": true,
+    "reason": "成立（minor）。logs/phase4_final_audit_output.json 有 5 个审计视角（requirements、math-c1c2、math-c3、math-c4c5、consistency），共 63 条发现，每条都有独立复核的 verdict（对应 logs/final_audit_verify_*.log），其中 58 条确认。patch_final_audit.py 文件头写的是「最终对抗审计（第四轮）」，④B.13 也写了「最终一轮对抗审计又更正了」。但 00_head 只交代了三轮，④B 标题仍是「两轮工作中出过的错」，⑤ 只列了 phase1、phase2 的原始输出。全文检索 报告.md，phase3_audit_output.json 和 phase4_final_audit_output.json 都没被引用，读者无法定位 B.13 说的是哪一轮。如果本轮复查也要算作一轮，轮数需要相应调整。",
+    "final_fix": "00_head 中「另做了三轮多 Agent 工作流」改为「另做了四轮多 Agent 工作流」。同句末尾「交付要求是否齐全。」改为「交付要求是否齐全；第四轮（最终对抗审计）5 个审计者分别从交付要求、C-1/C-2 数学、C-3 数学、C-4/C-5 数学、全文一致性复查，每条发现再由独立复核者核实，确认属实的问题已据此修订（原始输出 logs/phase4_final_audit_output.json）。」另外：08_failed 的「**B. 两轮工作中出过的错（都已更正，记在这里便于复核）**」改为「**B. 各轮工作中出过的错（都已更正，记在这里便于复核）**」；09_code 的「两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`」改为「各轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`」；README 的过程概览与原始返回值列表同步补上第四轮。"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "00_head.md",
+   "quote": "少数扩展范围只由第二轮复核脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。",
+   "problem": "这句的范围描述和承诺都不完全成立。不在 verify_all 中的扩展范围，除第二轮复核脚本外，还来自第一轮的扩展/探索脚本和第三轮审计者，例如 T1.0 的 a_direct 到 k=11、T1.4 的 DFS 到 k=11、T4.2 的模式暴力 d=4、T4.1 审计者 a1 的 d≤60。其中 T1.0「扩展脚本另核对 a_direct 到 k=11」和 T4.2「探索中 d=4」两处，既没写「不在 verify_all 中」，也没给日志路径。同一个扩展脚本在 T1.4 已经按这条规则补了路径。",
+   "evidence": "verify_all_final.log 的 B3-direct-vs-product：「1<=k<=9（k=10,11 与 k<=7,n<=20 见 extended_checks.py 的 E2）」。logs/c1_extended.log 的 E2：「k=10,11 (0<=n<=13)；1<=k<=7 (14<=n<=20)」。logs/c4_explore9b_d4.log：「d=4 brute==DP: True 4990」。c4.c4-pattern-brute 的日志只到 d<=3。",
+   "severity": "minor",
+   "suggested_fix": "改为「少数扩展范围只由第一轮的扩展/探索脚本、第二轮复核脚本或第三轮审计脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。」并补两处：T1.0 的「扩展脚本另核对 a_direct 到 k=11」改为「扩展脚本另核对 a_direct 到 k=11（k=10,11 时 n≤13，另 k≤7 时 n≤20；logs/c1_extended.log 的 E2，不在 verify_all 中）」；T4.2 核对行的「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）」改为「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索脚本另做 d=4，logs/c4_explore9b_d4.log，不在 verify_all 中）」。",
+   "verdict": {
+    "index": 5,
+    "real": true,
+    "reason": "成立（minor）。不在 verify_all 中的扩展范围不只来自第二轮复核脚本。来自第一轮脚本的有：T1.0 的 a_direct（c1_extended.log 的 E2：k=10,11 时 n≤13，另 k≤7 时 n≤20；verify_all 的 B3 只到 k≤9）、T1.4 的 DFS k=10,11、T3.8 的 explore_relations2、T4.2 的模式暴力 d=4（c4_explore9b_d4.log：「d=4 brute==DP: True 4990」；verify_all 的 c4-pattern-brute 只到 d≤3）。来自第三轮审计者的有 T4.1 中 a1 的 d≤60。其中 T1.0 与 T4.2 两处既没给日志路径，也没写「不在 verify_all 中」。我另外查到：T3.4(5) 的 Gevrey 数据（k=75、150 时为 1.669、2.036）来自复核者 r-c3a 的 logs/review_r-c3a_r3_growth.log，不在 verify_all 中，同样没给路径。所以 00_head 对来源的描述不完整，「已注明并给出日志路径」这一承诺也有遗漏。",
+    "final_fix": "00_head 改为「少数扩展范围只由第一轮的扩展/探索脚本、第二轮复核脚本或第三轮审计脚本跑过，都不在 verify_all 中；已在相应条目注明并给出日志路径。」同时补三处：02_C1 T1.0 的「扩展脚本另核对 a_direct 到 k=11。」改为「扩展脚本另核对 a_direct 到 k=11（k=10,11 时 n≤13，另 k≤7 时 n≤20；logs/c1_extended.log 的 E2，不在 verify_all 中）。」；05_C4 T4.2 核对行的「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）」改为「c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索脚本另做 d=4，logs/c4_explore9b_d4.log，不在 verify_all 中）」；04_C3 T3.4(5) 的「在 k=75、150 为 1.669、2.036（比值 1.22）」后补「（复核者 r-c3a 的数据，logs/review_r-c3a_r3_growth.log，不在 verify_all 中）」。可选：T3.4(3)「复核者 r-c3a 的更紧的界给出 ≤6.6·10^{−121}」后补「（logs/review_r-c3a_r1_exact.log）」。"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "06_C5.md",
+   "quote": "核对：c5a.c5a-roots、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr、",
+   "problem": "c5a.c5a-roots 和 c5a.c5a-cm-repr 都有 decimal（90 位）计算的数值部分，日志里各自标了 [numeric]，核对行却没注「数值」。这违反 00_head「凡是用 decimal 做的高精度数值检查，一律注明数值」。同类问题（c1.C2-growth、c0.c0-cm、c5a-asym、c5a-prompt-k40）上一轮已补注，这两项漏了。两处被核对的结论正文另有证明，所以只是标注问题。",
+   "evidence": "verify_all_final.log：「PASS c5a-roots ... (Sturm exact, j<=30); [numeric] rho_j increasing and |complex root|^2 = j/rho_j < rho_{j-1}^2 < rho_j^2 (j<=30)」；「PASS c5a-cm-repr ... exact r_m(y) = gt_m(y)/f_m'(y) mod f_m ...; [numeric] r_m(rho_m) == closed form to 1e-70 (m<=8)」。check_c5a.py 第 23 行 getcontext().prec = 90，第 360–363 行和第 534 行用 Decimal 比较。",
+   "severity": "minor",
+   "suggested_fix": "核对：c5a.c5a-roots（实根唯一用 Sturm 精确核对；ρ_j 单调与复根模长不等式为 decimal 数值核对，j≤30，一般证明见上）、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr（Q(ρ_m) 表示为精确计算；与闭式的比较为 decimal 数值，m≤8）、",
+   "verdict": {
+    "index": 6,
+    "real": true,
+    "reason": "成立（minor）。verify_all_final.log 原文：c5a-roots 为「(Sturm exact, j<=30); [numeric] rho_j increasing and |complex root|^2 = j/rho_j < rho_{j-1}^2 < rho_j^2 (j<=30)」，c5a-cm-repr 为「[numeric] r_m(rho_m) == closed form to 1e-70 (m<=8)」。check_c5a.py 中 chk_roots、chk_cm_repr 用的是 prec=90 的 Decimal（RHO 由 Newton 迭代求得，CM 为 decimal 值）。06_C5 的 T5.1 核对行对这两项没注「数值」，而同一行的 asym、prompt-k40、c0-cm 都注了，违反 00_head「decimal 检查一律注明数值」。被核对的结论另有一般证明（T1.3(4)、T5.1(2)(3)），所以只是标注问题。T3.7 引的 C3B-CUB 用有理区间，是精确核对，不存在同样的遗漏。",
+    "final_fix": "核对：c5a.c5a-roots（实根唯一用 Sturm 精确核对；ρ_j 单调与复根模长不等式为 decimal 数值核对，j≤30，一般证明见 T1.3(4) 与上文 (2) 的关键不等式）、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5a.c5a-filter（单独抽出 b_m 的极点分量，1≤m≤20）、c5a.c5a-cm-form、c5a.c5a-cm-repr（Q(ρ_m) 中的表示为精确计算；与闭式的比较为 decimal 数值，m≤8）、"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "06_C5.md",
+   "quote": "(1)【已证明】基本事实：h_k(0)=1，h_k(1)=2（k≥2）",
+   "problem": "T5.3(1) 标【已证明】，列了 h_k(0)、h_k(1)、[t¹]h_k 及其母函数、h_{k,i} 的反演式、h_k^{(d)}(1) 的一般式和 n_k(z)，但这一段既没有证明，也没有笔记指针（同节的 (2)(3)(5) 都有指针）。另外 n_k(z) 只用 h_k 定义，没写出它就是 Σ_qN(k,q)z^{q−1}，而 (4)(6) 正是按这个含义使用的。这些证明都在 notes/c5a.md §4.1、§4.6、§4.7。",
+   "evidence": "notes/c5a.md §4.1 第 1–4 条：h_k 的 N 展开、h_{k,i} 公式、h_k(0)=1、h_k(1)=N(k,k)，以及 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))。§4.6：Σ_kh_{k,1}x^k 的母函数，以及 h_{k,1}=R_k−k−1>0。§4.7：由 h_k(1−s) 的展开得到 h_k^{(d)}(1)。我按 T1.7 的展开手推了 [t¹]h_k=N(k,2)−(k−1)=R_k−k−1 和 h_k'(1)=2(k−1)−(k²−k−4)=−(k²−3k−2)，都与报告一致。",
+   "severity": "minor",
+   "suggested_fix": "(1)【已证明；证明见 notes/c5a.md §4.1、§4.6、§4.7，都由 T1.7 的两个表示 Σ_mU_k(m)t^m=h_k/(1−t)^{k+1} 与 h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q} 直接得到】基本事实：h_k(0)=1，h_k(1)=2（k≥2）（同句末的「N 行多项式 n_k(z)=(1+z)^{k−1}h_k(z/(1+z))」改为「N 行多项式 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))」）",
+   "verdict": {
+    "index": 7,
+    "real": true,
+    "reason": "成立（minor）。T5.3(1) 标【已证明】，段内既没有证明也没有笔记指针，违反原始任务第 1 条「【已证明】须附完整证明」以及 00_head 的指针约定。证明确实在 notes/c5a.md §4.1（第 1–4 条，含 n_k:=Σ_qN(k,q)z^{q−1}）、§4.6、§4.7。我用 core.U_fast_table（已与 U_list 交叉核对）独立重算了全部断言，都成立：h_k(0)=1；h_k(1)=2（2≤k≤30）；[t¹]h_k=R_k−k−1，2≤k≤30 时为正，k=0,1 时为 0；该系数的母函数；h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q}；h_k^{(d)}(1) 的一般式（d≤3）；h_k'(1)=−(k²−3k−2)（k≥4；k=3 时实际为 0，公式给 2，与「k≥4」相符）；以及 n_k 的恒等式。要更正发现的一处：[t¹]h_k 的母函数与正性要用 G_1=W_1/P_1（c5a §4.6），不是「都由 T1.7 直接得到」。",
+    "final_fix": "(1)【已证明；证明见 notes/c5a.md §4.1、§4.6、§4.7：h_k(0)、h_k(1)、h_{k,i} 的反演式、h_k^{(d)}(1) 与 n_k(z) 都由 T1.7 的两个表示 Σ_mU_k(m)t^m=h_k/(1−t)^{k+1} 与 h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q} 直接得到；[t¹]h_k 的母函数与正性另用 T1.3(1) 的 G_1=W_1/P_1】基本事实：h_k(0)=1，h_k(1)=2（k≥2）（同句末「N 行多项式 n_k(z)=(1+z)^{k−1}h_k(z/(1+z))」改为「N 行多项式 n_k(z):=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))」）"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "04_C3.md",
+   "quote": "维数公式的计数：U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:q_{α*b}≠0}",
+   "problem": "α′、β*、α*、β′、q_{ab} 在报告里都没有定义，只在 notes/c3b.md §6 里有，所以这句话单看读不懂。而且同一条里 q 还是 N 的第二个下标（Y: q↦q−1，L_N 里的 (q−1)），q_{α*b} 与它同名异义。α、β 在 T2.6、T4.2 中也另有含义。",
+   "evidence": "notes/c3b.md §6 维数公式的证明：「QL1=Σq_ab[...]……取 β*=Q 中最大的 b、q_{α′β*}≠0……取 α*=最大的 a、q_{α*β′}≠0」。report_parts 中 α′、β* 只出现在这一句。",
+   "severity": "minor",
+   "suggested_fix": "维数公式的计数：写 Q=Σ_{a,b}q_{ab}X^aE^{−b}（N 的情形把 E^{−b} 换成 Y^b；q_{ab} 是 Q 的系数，与 N 的下标 q 无关），β* 为使某个 q_{ab}≠0 的最大 b，α′ 为满足 q_{α′β*}≠0 的一个 a；α* 为使某个 q_{ab}≠0 的最大 a，β′ 为满足 q_{α*β′}≠0 的一个 b。U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:q_{α*b}≠0}",
+   "verdict": {
+    "index": 8,
+    "real": true,
+    "reason": "成立（minor）。在 report_parts 中，α′、β*、q_{α*b} 各只出现 1 次，α*、β′ 各出现 3 次，都没有定义；定义只在 notes/c3b.md §6：「取 β*=Q 中最大的 b、q_{α′β*}≠0……取 α*=最大的 a、q_{α*β′}≠0」。同一定理里 q 又是 N 的第二个下标（Y: q↦q−1，以及 (q−1)X³(1+Y)²），N 情形中 Q 的系数本身就是 (k,q) 的多项式，所以写成 q_{ab} 会同名混淆。我按 c3b 的定义复核了角点论证：U 的情形，(α′,β*+1) 与 (α*+3,β′) 对任意这样选的 α′、β′ 都只收到一项；N 的情形，角点 (α*+3,β′+2) 还会收到来自 Q_{α*,β′+1}、Q_{α*,β′+2} 的项，所以 β′ 必须取最大值，与原句一致。为避免撞名，替换文字把系数改记为 Q_{ab}。",
+    "final_fix": "维数公式的计数：把 Q 写成 Σ_{a,b}Q_{ab}X^aE^{−b}（N 的情形把 E^{−b} 换成 Y^b；Q_{ab} 为 Q 的多项式系数），令 β* 为出现的最大 b、α′ 为满足 Q_{α′β*}≠0 的某个 a，α* 为出现的最大 a、β′ 为满足 Q_{α*β′}≠0 的某个 b；U 的情形看角点 (α′,β*+1) 与 (α*+3,β′)；N 的情形必须取 β′=max{b:Q_{α*b}≠0}"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "01_summary.md",
+   "quote": "全部多项式系数象限递推恰为引理 1 算子生成的左理想。",
+   "problem": "这半句没有主语，又紧跟在「F 与 N 的母函数都不是 D-finite」后面，容易读成对 U 和 N 都成立。按 T3.8，U 的关系左理想由引理 1 的算子 L1 生成；N 的则由三角递推算子 L_N 生成，不是「引理 1 算子」。",
+   "evidence": "04_C3 T3.8：Rel(U)=O_U·L1，L1=1−E^{−1}−X−mX³；Rel(N)=O_N·L_N，L_N=1−X−XY−(q−1)X³(1+Y)²。",
+   "severity": "minor",
+   "suggested_fix": "U 的全部多项式系数象限递推恰为引理 1 算子生成的左理想（N 的则恰为三角递推算子 L_N 生成的左理想）。",
+   "verdict": {
+    "index": 9,
+    "real": true,
+    "reason": "成立（minor）。T3.8 原文是 Rel(U)=O_U·L1（L1=1−E^{−1}−X−mX³，即引理 1 算子）和 Rel(N)=O_N·L_N（L_N=1−X−XY−(q−1)X³(1+Y)²，即三角递推）。L1 作用在 (k,m) 上，零化不了 N。摘要这半句没有主语，又紧跟在「F 与 N 的母函数都不是 D-finite」之后，可以读成 N 的递推也由引理 1 算子生成，这是错的。与 phase4 consistency #1（摘要里的「起失效」容易被误读）同类。",
+    "final_fix": "U 的全部多项式系数象限递推恰为引理 1 算子生成的左理想（N 的则恰为三角递推算子 L_N 生成的左理想，见 T3.8）。"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "06_C5.md",
+   "quote": "列方向 (E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向由 (m_1+1)²(m_2+1)² 阶转移矩阵给出先验阶界",
+   "problem": "E 和 m_1、m_2 在报告里都没有定义。E 在 T3.8 中是 m 方向的移位（E^{−1}: m↦m−1），这里却是 n 方向的移位。m_1=⌈n/2⌉、m_2=⌊n/2⌋ 也要读者自己猜。",
+   "evidence": "报告全文中 m_1、m_2 只出现在这一句。c5b.emp-row 日志：「d=(m1+1)^2(m2+1)^2 为转移矩阵 Kronecker 积给出的先验阶界」「A207069(行2):10阶,界16」「A207070(行3):22阶,界36」。n=2 时 (1+1)²(1+1)²=16，n=3 时 (2+1)²(1+1)²=36，与 m_1=⌈n/2⌉、m_2=⌊n/2⌋ 一致。",
+   "severity": "minor",
+   "suggested_fix": "列方向（固定 k）记 E 为 n 方向的移位算子（Ea(n)=a(n+1)），(E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向（固定 n）由 (m_1+1)²(m_2+1)² 阶转移矩阵（m_1=⌈n/2⌉、m_2=⌊n/2⌋，即两个高度转移矩阵的 Kronecker 积）给出先验阶界",
+   "verdict": {
+    "index": 12,
+    "real": true,
+    "reason": "成立（minor）。m_1、m_2 在报告中只出现这一次（其余「m_1」检索结果是 Num_1），没有定义。定义在 notes/c5b.md 的 T4：m1=⌈n/2⌉、m2=⌊n/2⌋，阶界来自 A_{m1}⊗A_{m2}。c5b.emp-row 给出第 2..7 行的界 16、36、81、144、256、400，与 (⌈n/2⌉+1)²(⌊n/2⌋+1)² 逐个相等。E 在 T5.4 中也没有定义：报告里唯一的定义是 T3.8 的 E^{−1}: m↦m−1（m 方向移位），这里却是 n 方向移位（c5b T3）。",
+    "final_fix": "列方向（固定 k）记 E 为 n 方向的移位算子（Ea(n)=a(n+1)），(E²−1)^{2k+1} 零化 a_k(n)，所以有限个初值核对即足够；行方向（固定 n）由 (m_1+1)²(m_2+1)² 阶转移矩阵（m_1=⌈n/2⌉、m_2=⌊n/2⌋，即两个 (m+1)² 阶高度转移矩阵的 Kronecker 积）给出先验阶界"
+   }
+  },
+  {
+   "lens": "freshread",
+   "file": "08_failed.md",
+   "quote": "另有子 Agent 为查 Lipshitz 1989 读了几次文献元数据（Crossref、Semantic Scholar API、ar5iv、Wikipedia；ScienceDirect 返回 403）",
+   "problem": "这句话与 c3b 笔记的记录不符。从 Crossref、Semantic Scholar 读的是 Lipshitz 1989 的元数据和引言；但从 ar5iv、Wikipedia 读的是其他文献的正文和页面，不是「Lipshitz 1989 的文献元数据」。④C.14 正是靠这些二手文献核对 D-finite 定义的。00_head 第 9 行「另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询」同样不准确。这只是只读访问记录写得不准，不涉及违反只读规则。",
+   "evidence": "notes/c3b.md §9「文献核实（只读）」：Lipshitz 的 Crossref 元数据已核实、引言经 Semantic Scholar 核实；Bousquet-Mélou & Petkovšek（arXiv:math/0211432）与 Bousquet-Mélou & Mishna（arXiv:0810.4387）「ar5iv 文本已核对」；Melczer 学位论文（arXiv:1709.05051）「ar5iv 文本已核对」；Wikipedia「Holonomic function」「已读取页面核对」。logs/review_x2-dfinite_literature.log 只记录了 Semantic Scholar 和 Crossref 两次 GET。",
+   "severity": "minor",
+   "suggested_fix": "另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna、Melczer 三篇的正文和 Wikipedia「Holonomic function」页面（00_head 第 9 行同步改为「另有子 Agent 为核实 D-finite 定义做了几次只读文献查询（见 ④C）」）",
+   "verdict": {
+    "index": 13,
+    "real": true,
+    "reason": "成立（minor）。notes/c3b.md §9「文献核实（只读）」的记录是：Lipshitz 1989 的 Crossref 元数据，以及经 Semantic Scholar 读到的引言；Bousquet-Mélou–Petkovšek（arXiv:math/0211432）、Bousquet-Mélou–Mishna（arXiv:0810.4387）和 Melczer 学位论文（arXiv:1709.05051）都是「ar5iv 文本已核对」；Wikipedia「Holonomic function」是「已读取页面核对」。logs/review_x2-dfinite_literature.log 只有对 Semantic Scholar（字段含 abstract，实为引言）和 Crossref 的两次 GET；review_r-c3b_crossref.log 只查了 Crossref。所以 ar5iv、Wikipedia 读的是其他文献的文本和页面，Semantic Scholar 读到的也不只是元数据。④C.15 与 00_head 第 9 行把这些都说成「Lipshitz 1989 的文献元数据」，记录不准确。所有访问都是只读，不违反规则。",
+    "final_fix": "另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna 两篇论文与 Melczer 学位论文的相关文本、Wikipedia「Holonomic function」页面（00_head 第 9 行「另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询（见 ④C）」同步改为「另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询（见 ④C）」）"
+   }
+  }
+ ]
+}

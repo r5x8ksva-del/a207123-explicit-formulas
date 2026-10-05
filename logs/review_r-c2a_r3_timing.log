@@ -1,0 +1,5 @@
+k=300 m=300 digits=336 all_equal=True :: lemma1 0.068s | H_rec 0.255s | H_expl 17.489s | Th_rec 0.289s | F4_rec 0.311s
+k=1500 m=30 digits=829 all_equal=True :: lemma1 0.031s | H_rec 0.294s | H_expl 0.692s | Th_rec 0.020s | F4_rec 0.020s | Th_expl 4.657s
+k=3000 m=3 digits=813 all_equal=True :: lemma1 0.007s | H_rec 0.156s | H_expl 0.167s | Th_rec 0.003s | F4_rec 0.003s | Th_expl 0.415s
+k=150 m=150 digits=155 all_equal=True :: lemma1 0.008s | H_rec 0.013s | H_expl 0.643s | Th_rec 0.030s | F4_rec 0.028s | Th_expl 3.455s
+k=100 m=100 digits=99 all_equal=True :: lemma1 0.004s | H_rec 0.004s | H_expl 0.131s | Th_rec 0.012s | F4_rec 0.012s | Th_expl 0.672s

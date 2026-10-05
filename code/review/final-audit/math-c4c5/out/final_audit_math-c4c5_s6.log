@@ -1,0 +1,6 @@
+PASS T4.2.2-hstar :: 1<=d<=5、整数 c∈[-400,400]：p_d 在基 C(K+c-j,2d)（j=0..2d）下的系数总有负的（并核对展开式本身）; bad=[]
+PASS T5.2-Bd :: B_d(k)=(k-d)![m^{k-d}]U_k = Σ_e(-1)^{d-e}N(k,k-e)ẽ_{d-e}(k-e)（d<=5, d<=k<=30）; bad=[]
+INFO k, N(k,k-1), k^2-k-4, N(k,k-2), p_2(k): [(2, 1, -2, 0, Fraction(19, 1)), (3, 4, 2, 1, Fraction(17, 1)), (4, 8, 8, 7, Fraction(19, 1)), (5, 16, 16, 25, Fraction(31, 1)), (6, 26, 26, 65, Fraction(65, 1)), (7, 38, 38, 139, Fraction(139, 1)), (8, 52, 52, 277, Fraction(277, 1))]
+PASS T5.2-basis-range :: 「U_k=2C(m+1,k)+(k^2-k-4)C(m+1,k-1)+p_2(k)C(m+1,k-2)+…」只在 k>=6 成立（k>=4 时前两项成立）；k<=5 处不成立的点：[2, 3, 4, 5]
+PASS T5.2-mu-range :: μ_k=(k^2-2k-1)/2 使 (2/k!)(m+μ_k)^k 与 U_k 前两项一致：k>=4 成立，k=3 不成立
+elapsed 6.1s

@@ -1,0 +1,6 @@
+(a) IE formula q<=24: True
+(b) common factors of Num_q and P_{q-1}, q<=40: none
+Num_q(1) == A000262(q) for q<=40: True
+A000262 = sum Lah, n<=20: True
+(c) EGF closed form matches R_q(y) for q<=16: True
+    A[0] = []

@@ -1,0 +1,7 @@
+PASS r5-ode1 一阶 ODE (1-z)^2A' = (y^2+(y^3-y^2)z)A + 1 + (y^2-1)z 对 A=sum R_q z^q/q! 逐项成立到 z^199（R_q 来自 DP 锚定的递推）
+PASS r5-ode2 c4.md 的二阶 ODE 逐项成立到 z^198
+PASS r5-closed 闭式 (y+1)(Phi-1)/y^2 - y Phi I 在 72 个不同 y 值上逐项等于 sum R_q(y) z^q/q!（q<=24）；[z^q] 两边 y-次数 <=3q-1<72 ⇒ 作为 Q[y][[z]] 恒等到 z^24
+PASS r5-closed-ode1 闭式（代 y=2,3,-5/3,7/2）直接满足一阶 ODE，逐项到 z^21
+PASS r5-y1 y=1：闭式系数 * q! == A000262(q)，q<=24
+# runtime 2.5s
+SUMMARY pass=5 fail=0

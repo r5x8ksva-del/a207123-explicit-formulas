@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:1,2,1,2,4,1,2,8,7,1,2,16,25,12,1,2,26,65,59,19,1
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

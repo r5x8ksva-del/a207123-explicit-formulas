@@ -1,0 +1,44 @@
+PASS c4-U-anchor U_fast_table == U_list(参考实现, k<=20,m<=10) == U_multichain(多重链, k<=6,m<=5) == 提示词校验表(k<=10,m<=6)
+PASS c4-N-rec-dp N 三角递推(k>=3)+初值 == 高度DP+容斥 的 N(k,q)，全部 0<=q<=k<=60
+PASS c4-N-dfs N(k,q) == 按定义 DFS 枚举合法满射词（core.N_brute），k<=8
+PASS c4-D-rec D(k,d)=D(k-1,d)+D(k-1,d-1)+(k-d-1)[D(k-3,d-1)+2D(k-3,d-2)+D(k-3,d-3)]，3<=k<=60, 0<=d<=k-1（对 DP 表）
+PASS c4-D0 D(k,0)=N(k,k)=2 (2<=k<=60)；例外 D(1,0)=1, D(0,0)=1（对 DP 表）
+PASS c4-D1 D(k,1)=N(k,k-1)=k^2-k-4 (4<=k<=60)；例外 D(2,1)=1(多项式值-2), D(3,1)=4(多项式值2)
+PASS c4-pd-identity d<=12：p_d(k)-p_d(k-1) == p_{d-1}(k-1)+(k-d-1)[p_{d-1}(k-3)+2p_{d-2}(k-3)+p_{d-3}(k-3)] 作为多项式恒等（Fraction 精确）
+PASS c4-pd-degree-lead d<=12：deg p_d = 2d，首项系数 = 2/(2^d d!)
+PASS c4-pd-table c4.md 表1 的 p_d (d<=5，分母 2^{d-1}d!) == 构造性归纳得到的多项式
+PASS c4-pd-threshold d<=12：D(k,d)=p_d(k) 对全部 2d+2<=k<=60 成立（对 DP 表）
+PASS c4-pd-exceptions d<=12：门槛以下 d+1<=k<=2d+1 的每个 k 都是例外（D(k,d)!=p_d(k)），故门槛恰为 2d+2
+PASS c4-defect-closed d<=12：D(2d+1,d)-p_d(2d+1)=(-1)^{d+1}(d+1)!，D(2d,d)-p_d(2d)=(-1)^{d+1}(d+2)!/2
+PASS c4-pd-second 1<=d<=12：p_d(k) = (2/(2^d d!)) (k^{2d} - (4d^2-3d) k^{2d-1} + ...)（次首项系数）
+PASS c4-pd-shiftpos d<=12：p_d(2d+1+m) 关于 m 的单项式系数全为正，且 [m^{2d-1}] = 5d * [m^{2d}]（数值观察）
+PASS c4-newton-pos d<=12：p_d(k)=sum_i T_i C(k-2d-2,i) 的 Newton 系数 T_i 均为正整数，T_{2d}=2(2d-1)!!
+PASS c4-newton-pos-2d1 d<=12：基点 2d+1 的 Newton 系数也全为正整数（数值观察）
+PASS c4-hstar-neg 1<=d<=8：任意整数 c，p_d 在基 {C(k+c-j,2d)}_{j=0..2d} 下都有负系数（Fujiwara 根界内穷举，界外 h_1<0）；(1-x)^{2d+1}sum_k D(k,d)x^k 为 <=4d+2 次多项式且有负系数
+PASS c4-stirling-analog S(k,k-d)=sum_j <<d,j>> C(k+d-1-j,2d) 对 0<=d<=8, d<=k<=60 成立（无例外；对照 D 的门槛 2d+2）
+PASS c4-pattern-expansion d<=6：D(k,d) = sum_{sigma,beta} M(d;sigma,beta) C+(k-d-beta, sigma-beta) 对全部 d<=k<=60 成立（对 DP 表；C+ 为组合意义二项式）
+PASS c4-pattern-poly d<=6：sum M(d;sigma,beta) C(k-d-beta,sigma-beta)（多项式二项式）== p_d(k)
+PASS c4-pattern-brute d<=3：按定义暴力枚举「全特殊值」合法满射词（块分解+平凡值判定）得到的 M(d;sigma,beta) == 模式 DP
+PASS c4-pattern-props d<=6：sigma<=2d+2，beta in {0}∪[2,d+2]；M(d;2d,0)=M(d;2d+2,2)=(2d-1)!!；beta=d+2 只有 (sigma=2d+2) 共 (d+1)! 个；sigma-beta=2d 的模式共 2(2d-1)!! 个
+PASS c4-pattern-families 1<=d<=6（数据观察）：M(d;2d-1,0)=M(d;2d+1,2)=(2d-1)!!，M(d;2d+2,d+1)=d(d+1)!/2，M(d;2d-2,0)=4(d-1)(2d-3)!! (d>=2)
+PASS c4-F-rec b_{q-1}F_q = (x+2(q-1)x^3)F_{q-1} + (q-1)x^3 F_{q-2} + [q=2]x^2（F_0=1,F_{-1}=0），1<=q<=30，模 x^61（F 取自 DP）
+PASS c4-Num-rec P_{q-1}F_q（F 取自 DP，截断 x^60）是多项式，且 == 三项递推 Num_q=(x+2(q-1)x^3)Num_{q-1}+(q-1)x^3 b_{q-2} Num_{q-2}（Num_1=x,Num_2=2x^2+x^4），q<=19
+PASS c4-Num-deg-lead-low q<=70：deg Num_q = 3q-2，首项 (q-1)! x^{3q-2}，最低项 2x^q (q>=2；q=1 时为 x)
+PASS c4-Wm P_m * sum_k U_k(m) x^k == W_m := 1 + x^2 sum_{j=1}^m j P_{j-1}（U 取自 DP），m<=15，模 x^61
+PASS c4-Num-IE 容斥式 Num_q = sum_{i=0}^q (-1)^{q-i} C(q,i) W_{i-1} prod_{v=i}^{q-1} b_v (W_{-1}=1) == DP 得到的分子，q<=19
+PASS c4-Num-gcd16 gcd(Num_q, P_{q-1}) = 1（有理系数 Euclid 全量计算），q<=16：Num_q/P_{q-1} 为既约分式
+PASS c4-Num-gcd40 q<=40：Num_q 与每个 b_i (0<=i<=q-1) 互素（余式非零；b_4=(1-2x)(1+x+2x^2), b_18=(1-3x)(1+2x+6x^2) 的因子分别检验）
+PASS c4-Num-at-1 Num_q(1) = sum_j (q!/j!)C(q-1,j-1)（无符号 Lah 数之和 = OEIS A000262），q<=40
+PASS c4-Num-support 2<=q<=70：Num_q 系数全非负，非零项恰为 x^q..x^{3q-4} 与 x^{3q-2}（[x^{3q-3}]=0）
+PASS c4-Num-posrec 3<=q<=40：正项全历史递推 Num_q = x Num_{q-1} + sum_{m=2}^{q-2} (q-1)!/m! x^{3(q-1-m)}(q-1-m+x) Num_m + (q-1)!((q-2)x^{3q-5}+q x^{3q-4}+x^{3q-2})
+PASS c4-pi-poly c(q,q-b)=sum_k <<b,k>>C(q+k,2b) (b<=8, q<=60)，且 [x^i]P_{q-1} == sum_{a+3b=i}(-1)^{a+b}c(q,q-b)C(q-b,a) 作为 q 的多项式 (i<=12, 0<=q<=60)
+PASS c4-Num-low-id j<=8, q<=19：[x^{q+j}]Num_q = sum_{i=0}^j pi_i(q) D(q+j-i, j-i)（DP 数据）
+PASS c4-Num-low-poly j<=8：nu_j(q)=sum_i pi_i(q) p_{j-i}(q+j-i) 是 2j 次多项式(首项 2/(2^j j!))，对 j+2<=q<=70 等于 [x^{q+j}]Num_q，q=j+1 处差 (-1)^{j+1}(j+1)!（门槛恰为 j+2）
+PASS c4-Num-low-table c4.md 表 5 的 nu_j (j<=6) == 构造多项式
+PASS c4-Num-high-values j<=8, 1<=q<=70：[x^{3q-2-j}]Num_q == 表 6 的公式 sum_i pi_{j,i}(q) c(q,i)（c 为第一类无符号 Stirling 数）
+PASS c4-Num-high-proof j<=8：表 6 公式代入 a_{q,j}=2(q-1)a_{q-1,j}+a_{q-1,j-2}+(q-1)[a_{q-2,j-3}-a_{q-2,j-2}-(q-2)a_{q-2,j}] 后在 c(q-2,i) 基下系数多项式恒为 0（q>=3），且 q=1,2 初值吻合 ⇒ 对全部 q>=1 成立
+PASS c4-Num-egf q<=14：sum_q R_q(y) z^q/q! == (y+1)(e^{y^2 Lam}-1)/y^2 - y e^{y^2 Lam} int_0^{z/(1-z)} (1+w)^{y^3-y^2} e^{-y^3 w} dw，Lam=(y-1)ln(1-z)+yz/(1-z)（Q[y][[z]] 中逐项精确展开）
+PASS c4-Num-ode 由三项递推得到的 A(z)=sum R_q z^q/q! 满足 (1-z)^2A''=(y^2-1)+(2(1-z)+y^2(1-z)+y^3 z)A'+(y^3-y^2)A，逐项到 z^12
+# runtime 83.4s
+SUMMARY c4 pass=41 fail=0
+exit=0

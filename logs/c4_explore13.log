@@ -1,0 +1,40 @@
+d=0 shift=1  den=1  allpos=True  num(desc)=[2]
+d=0 shift=2  den=1  allpos=True  num(desc)=[2]
+d=0 shift=1  den=1  allpos=True  num(desc)=[2]
+d=0 shift=0  den=1  allpos=True  num(desc)=[2]
+d=1 shift=3  den=1  allpos=True  num(desc)=[1, 5, 2]
+d=1 shift=4  den=1  allpos=True  num(desc)=[1, 7, 8]
+d=1 shift=2  den=1  allpos=False  num(desc)=[1, 3, -2]
+d=1 shift=2  den=1  allpos=False  num(desc)=[1, 3, -2]
+d=2 shift=5  den=4  allpos=True  num(desc)=[1, 10, 43, 82, 124]
+d=2 shift=6  den=4  allpos=True  num(desc)=[1, 14, 79, 202, 260]
+d=2 shift=3  den=4  allpos=False  num(desc)=[1, 2, 7, -2, 68]
+d=2 shift=4  den=4  allpos=True  num(desc)=[1, 6, 19, 22, 76]
+d=3 shift=7  den=24  allpos=True  num(desc)=[1, 15, 121, 673, 2554, 6212, 4200]
+d=3 shift=8  den=24  allpos=True  num(desc)=[1, 21, 211, 1327, 5464, 13904, 13776]
+d=3 shift=4  den=24  allpos=False  num(desc)=[1, -3, 31, 31, 196, 608, -2736]
+d=3 shift=6  den=24  allpos=False  num(desc)=[1, 9, 61, 319, 1126, 2708, -24]
+d=4 shift=9  den=192  allpos=True  num(desc)=[1, 20, 234, 2160, 15137, 75452, 244500, 411488, 405312]
+d=4 shift=5 not all positive
+d=5 shift=11  den=1920  allpos=True  num(desc)=[1, 25, 380, 4890, 50653, 398817, 2340990, 9829580, 28039016, 54223968, 40805760]
+d=5 shift=6 not all positive
+d=6 shift=13  den=23040  allpos=True  num(desc)=...
+d=6 shift=7 not all positive
+d=7 shift=15  den=322560  allpos=True  num(desc)=...
+d=7 shift=8 not all positive
+d=8 shift=17  den=5160960  allpos=True  num(desc)=...
+d=8 shift=9 not all positive
+d=9 shift=19  den=92897280  allpos=True  num(desc)=...
+d=9 shift=10 not all positive
+d=10 shift=21  den=1857945600  allpos=True  num(desc)=...
+d=10 shift=11 not all positive
+d=11 shift=23  den=40874803200  allpos=True  num(desc)=...
+d=11 shift=12 not all positive
+d=12 shift=25  den=980995276800  allpos=True  num(desc)=...
+d=12 shift=13 not all positive
+1 1 1 1 1 1 None None
+2 3 3 3 6 6 4 4
+3 15 15 15 36 36 24 24
+4 105 105 105 240 240 180 180
+5 945 945 945 1800 1800 1680 1680
+6 10395 10395 10395 15120 15120 18900 18900

@@ -1,0 +1,4 @@
+d=0 brute==DP: True  (#=2, 0.0s)
+d=1 brute==DP: True  (#=7, 0.0s)
+d=2 brute==DP: True  (#=51, 0.0s)
+d=3 brute==DP: True  (#=459, 0.6s)

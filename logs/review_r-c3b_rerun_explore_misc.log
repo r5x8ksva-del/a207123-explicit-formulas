@@ -1,0 +1,9 @@
+operator identity y*psi(l1)*((1+y)^2/y) == (1+y)*l_N on x^a y^b (a<=3, 1<=b<=5): True
+Phi(x,y) = 1/(1+y) + y F(x,y/(1+y))/(1+y)^2, coefficients k<=20 q<=20: True
+Phi y-ODE with RHS 1-x+x^3+x^2y^2 (k,q<=40): True []
+(C3) triangle recurrence failures with q>=1 (k,q<=40): [(2, 2)]
+Psi_q = sum_i (-1)^{q-i}C(q,i)G_{i-1} vs N table (q<=12,k<=40) and residue formula mod b_v: True
+N_brute(8) vs incl-excl: True
+F t-ODE (1-x-t)F - x^3 t F_t = 1 + x^2 t/(1-t)^2, coefficients k,m<=40: True
+rem_(1+Y)(L_N) = {0: [1]} (should be {0: [1]})
+elapsed 0.7s

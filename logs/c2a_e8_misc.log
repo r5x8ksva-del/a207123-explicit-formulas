@@ -1,0 +1,9 @@
+cross identity h_s(j..m) = sum_t C(m-j+s,m-j+t) S(m-j+t,m-j) j^(s-t)  (m<=20, s<=24): True
+k=30 m=12: digits(U)=18, max term digits Theta=29, F4=29 (before dividing by t!/m!)
+    number of terms: H form 131 (r-Stirling x binomial products); Theta form 91 c-values (each c_i(n) is a sum of ~n/3 terms)
+k=60 m=20: digits(U)=39, max term digits Theta=60, F4=60 (before dividing by t!/m!)
+    number of terms: H form 421 (r-Stirling x binomial products); Theta form 231 c-values (each c_i(n) is a sum of ~n/3 terms)
+k=100 m=100: digits(U)=99, max term digits Theta=289, F4=289 (before dividing by t!/m!)
+    number of terms: H form 3334 (r-Stirling x binomial products); Theta form 5151 c-values (each c_i(n) is a sum of ~n/3 terms)
+k=200 m=30: digits(U)=124, max term digits Theta=158, F4=157 (before dividing by t!/m!)
+    number of terms: H form 2077 (r-Stirling x binomial products); Theta form 496 c-values (each c_i(n) is a sum of ~n/3 terms)

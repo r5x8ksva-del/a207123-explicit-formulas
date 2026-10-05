@@ -1,0 +1,17 @@
+K=30 M=12  DP time 0.01s
+  Lemma1 rec table == DP: True
+  H       mismatches=0  (0.02s) []
+  F3      mismatches=0  (0.01s) []
+  Theta   mismatches=0  (0.00s) []
+  ThetaH  mismatches=0  (0.01s) []
+  F4      mismatches=0  (0.00s) []
+  N-triangle sum mismatches: 0 []
+K=60 M=20  DP time 0.05s
+  Lemma1 rec table == DP: True
+  H       mismatches=0  (0.10s) []
+  F3      mismatches=0  (0.11s) []
+  Theta   mismatches=0  (0.04s) []
+  ThetaH  mismatches=0  (0.05s) []
+  F4      mismatches=0  (0.04s) []
+  N-triangle sum mismatches: 0 []
+reference U_list table == fast DP (k<=30,m<=12): True

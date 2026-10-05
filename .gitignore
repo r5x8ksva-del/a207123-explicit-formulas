@@ -1,0 +1,14 @@
+# Lean / Mathlib 依赖与编译产物（约 5–7 GB）：用 lake 重新获取，见 README「如何复现」
+lean/.lake/
+lean/.lean_lock/
+
+# Python 缓存与中间产物（pickle 可由脚本重新生成，且不要把二进制 pickle 放进公开仓库）
+__pycache__/
+*.pyc
+*.pkl
+
+# 编辑器与系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp

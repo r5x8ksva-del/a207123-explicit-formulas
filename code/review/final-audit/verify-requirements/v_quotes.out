@@ -1,0 +1,36 @@
+== quote check: exact substring in notes/report_parts/<file>
+#0  00_head.md       count=1 OK
+#1  03_C2.md         count=1 OK
+#2  06_C5.md         count=1 OK
+#3  06_C5.md         count=1 OK
+#4  10_uncertain.md  count=1 OK
+#5  10_uncertain.md  count=1 OK
+#6  00_head.md       count=1 OK
+#7  03_C2.md         count=1 OK
+#8  09_code.md       count=1 OK
+#9  05_C4.md         count=1 OK
+#10 06_C5.md         count=1 OK
+#11 04_C3.md         count=1 OK
+#12 06_C5.md         count=1 OK
+#13 06_C5.md         count=1 OK
+#14 06_C5.md         count=1 OK
+#15 02_C1.md         count=1 OK
+all quotes found: True
+token c5b.diag                           occurrences in report_parts: 0
+token c5b.rows                           occurrences in report_parts: 0
+token C3B-INT                            occurrences in report_parts: 0
+token P_3                                occurrences in report_parts: 1
+token Λ_3                                occurrences in report_parts: 0
+token Λ_k                                occurrences in report_parts: 3
+token C(x+1                              occurrences in report_parts: 1
+token C(y+1                              occurrences in report_parts: 2
+token review_r-c2b_r4b_k60               occurrences in report_parts: 0
+token review_r-c2b_r4b_full_small        occurrences in report_parts: 0
+token review_r-c1_r3_C2_final            occurrences in report_parts: 0
+token review_r-c1_r4_C3_C6_C7_final      occurrences in report_parts: 0
+token review_r-c3b_r2_rank               occurrences in report_parts: 0
+token review_x2-dfinite_kernel           occurrences in report_parts: 0
+token review_r-c5b_negzeros_exact        occurrences in report_parts: 0
+token notes/c4.md §4.7                   occurrences in report_parts: 0
+token notes/c4.md §4.9                   occurrences in report_parts: 0
+token notes/c5a.md §4                    occurrences in report_parts: 0

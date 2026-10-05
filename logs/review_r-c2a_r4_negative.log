@@ -1,0 +1,11 @@
+PASS S_norms N(xi)=1, N(1+xi)=3 for b_1 roots (numeric product, tol 1e-12; and -f(0), -f(-1))
+PASS S_residue_numeric rho_i u'(xi_i) == (-1)^m (1+xi_i) xi_i^(-3m-2)/(m-1)! for all 3 roots, m=1..5 (complex float, max rel err 6.2e-13 < 1e-8; float error grows with m, exact check below)
+PASS S_theta_conj_distinct theta=(1+xi)xi^(-M) has non-equal conjugates for |M|<=60 (numeric demo only)
+PASS two_family_exact fiber-1 solutions with |a|,|b|<=500: 14 (all within |.|<=11: [(-4, 10), (-3, -2), (-3, 0), (-3, 5), (-2, 0), (-2, 5), (-1, 3), (0, 5), (1, 2), (1, 4), (1, 9), (2, 4), (2, 9), (4, 9)]); common with fiber 2: []; (-1,3) (= F3 for m=1) present; 0.5s
+PASS S_residue_exact exact in Q(xi) (own field code): W_m(xi) u'(xi) / P_m'(xi) == (-1)^m (1+xi) xi^(-3m-2)/(m-1)!, m=1..15
+  shape fiber test details: (1,2): excluded ((1.232786+1.758895j), (-0.0235+0.1775j)); (2,1): NOT excluded ; (1,4): excluded ((9.132351+0j), (-0.0107+0j)); (2,3): excluded ((-1.132489+2.552243j), (0.1297-0.0807j)); (3,2): excluded ((-1.017328+1.112006j), (0.2712-0.6158j)); (4,1): excluded ((-0.744446-0.62315j), (0.3563+1.9928j)); (6,3): excluded ((-1.19244+0.547877j), (-0.5-0.866j))
+PASS odd_shapes_fiber fiber-point test (float, tol 1e-7) excludes every shape (alpha>=1, 2<=alpha+beta<=12) except [(2, 1)]
+PASS linsys_shape_1_2 U_k(m) = sum_s A(s) C(k+c-1 s, 2 s+d), k0<=k<=45, m=1..3, k0 in {0,6}, c in [-4,4], d in [-4,6]: no solvable system (594 tried); control m=0 solvable (9.1s)
+PASS linsys_shape_2_3 U_k(m) = sum_s A(s) C(k+c-2 s, 3 s+d), k0<=k<=45, m=1..3, k0 in {0,6}, c in [-4,4], d in [-4,6]: no solvable system (594 tried); control m=0 solvable (12.1s)
+# elapsed 12.7s
+SUMMARY r4 pass=8 fail=0

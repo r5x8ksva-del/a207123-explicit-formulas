@@ -1,0 +1,12 @@
+[dp] built 0.5s
+OK   surjDP_vs_core_N_brute  满射 DP 总数 == core.N_brute（DFS 按定义）(1<=k<=8)
+OK   R_bruteforce  R(p,s) 骨架暴力 == 二项式反演式 (p<=8, s<=4)
+OK   R_props  R(2s,s)=(2s-1)!!、p>2s 时 0、s>=1 时 R(0,s)=R(1,s)=0 (s<=11)
+OK   R_euler  R(p,s)=sum_k <<s,k>> C(2s-2-k,2s-p) (1<=s<=15) —— 比作者的 s<=11 更远
+OK   T7_Nc_vs_directDP  N^c 公式 == 直接满射 DP（不经容斥）(k<=30, 1<=q<=9)
+OK   T7_edge_q0  边界：(k,q)=(0,0) 时公式给 0，真值 N^c(0,0)=1（空词）——定理需注明 q>=1 或 k>=1
+OK   Rprime_bruteforce  R'(p,s,h0) 容斥式 == 骨架暴力（按最小头分类）(p<=8, s<=4)
+OK   P7.2_NE_vs_directDP  N^E 三重和 == 直接满射 DP (k<=30, 1<=q<=9)
+OK   P7.3_two_IE_forms  标准容斥与「a 值覆盖」容斥（中间式 sum_z (-1)^z C(q-1,z)[A_{q-1-z}-A_{q-2-z}]）都 == 直接 DP (k<=30, q<=9)
+[time] 1.1s
+SUMMARY r2 ok=9 bad=0

@@ -1,0 +1,16 @@
+PASS T2.5.forms F3, Theta (incl. k=0), F4 (m! U) == DP for 0<=k<=45, 0<=m<=12; Theta_t(n+3t)=sum_s H(m,s,m-t)C(n+t-2s,n-3s) (n<12); bad={}
+PASS T2.5.cex m=1,k=3: Theta-type terms (Fraction(8, 1), Fraction(-2, 1)), H-type terms (5, 1), both sum to U_3(1)=6
+PASS T2.5.Rk R_k = c_1(k+3)+c_1(k-2)-1, 0<=k<=45 (c_1(n)=0 for n<0)
+PASS T2.5.F4cong P_{j-1} == i^(j) x^{3j} (mod b_i), 1<=i<=11, 1<=j<=13 (so W_m == W~_i mod b_i for m>=i)
+# k=m=100: digits(U)=99, digits max Theta single term (C(t,r) c_{m-r}(n), before /t!)=289, digits max F4 single term=289
+PASS 07.digits U_100(100) has 99 digits (H-type == DP); largest Theta single term before dividing by t! has 289 digits (F4: 289)
+# (k,m)=(60,20): H terms=421 vs (m+1)k/3=420 | Theta c-values=231 vs m^2/2=200 | Theta expanded=7931 vs m^2k/6+m^3/3=6667
+# (k,m)=(100,100): H terms=3334 vs (m+1)k/3=3367 | Theta c-values=5151 vs m^2/2=5000 | Theta expanded=518534 vs m^2k/6+m^3/3=500000
+# (k,m)=(30,12): H terms=131 vs (m+1)k/3=130 | Theta c-values=91 vs m^2/2=72 | Theta expanded=1729 vs m^2k/6+m^3/3=1296
+# (k,m)=(300,30): H terms=3101 vs (m+1)k/3=3100 | Theta c-values=496 vs m^2/2=450 | Theta expanded=60016 vs m^2k/6+m^3/3=54000
+# (k,m)=(30,300): H terms=3011 vs (m+1)k/3=3010 | Theta c-values=45451 vs m^2/2=45000 | Theta expanded=9590161 vs m^2k/6+m^3/3=9450000
+PASS 07.counts H terms 421 (60,20), 3334 (100,100); Theta c-values 231, 5151 (as in notes/c2a.md 7.1)
+# own timing K=200,M=30: lemma-1 0.0027s, H-type (recurrence atoms) 1.548s, ratio 566
+PASS T2.9.own_timing own run: lemma-1 table == H-type table (K=200,M=30); ratio H/lemma-1 = 566 (order-of-magnitude corroboration only)
+# elapsed 23.7s
+SUMMARY a5 pass=7 fail=0

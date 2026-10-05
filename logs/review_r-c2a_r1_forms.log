@@ -1,0 +1,16 @@
+PASS anchor_matrix own direct matrix count a_k(n) == U_naive(ceil)U_naive(floor), k<=6, n<=12; own 2^(nk) brute == transfer (nk<=16)
+PASS anchor_dp own naive O(k m^3) DP (literal row rule) == own suffix-sum DP, k<=40, m<=10
+PASS c_atoms c_i(n) explicit sum (C(a,b)=0 unless 0<=b<=a) == recurrence c(n)=c(n-1)+i c(n-3), i<=25, n<=165
+PASS form_F1_Theta == own DP for all 0<=k<=80, 0<=m<=25 (0.1s) first_bad=[]
+PASS form_F2_H == own DP for all 0<=k<=80, 0<=m<=25 (0.2s) first_bad=[]
+PASS form_F3 == own DP for all 0<=k<=80, 0<=m<=25 (0.2s) first_bad=[]
+PASS form_F4 == own DP for all 0<=k<=80, 0<=m<=25 (0.1s) first_bad=[]
+PASS form_F5_ThetaH == own DP for all 0<=k<=80, 0<=m<=25 (0.2s) first_bad=[]
+PASS form_F6_GammaTri == own DP for all 0<=k<=80, 0<=m<=25 (0.0s) first_bad=[]
+PASS form_F7_allpos all-positive triple sum == own DP, k<=40, m<=12; first_bad=[]
+PASS gamma_inner Gamma_m(n;j): series division of prod_{v=j}^m b_v == r-Stirling single sum == triangle recurrence, n<=80, 0<=j<=m<=25
+PASS gf_WP G_m = W_m/P_m coefficientwise == own DP, k<=80, m<=25
+PASS N_inversion_dfs N(k,q) = sum_i (-1)^(q-i) C(q,i) U_H(k,i-1) == own DFS of surjective legal words, k<=9 (1.0s)
+PASS spot_large F1..F5 == own DP at (k,m) in [(150, 30), (200, 35), (120, 40), (199, 37), (90, 45)] (0.9s)
+# elapsed 4.7s
+SUMMARY r1 pass=14 fail=0

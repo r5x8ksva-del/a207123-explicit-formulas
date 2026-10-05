@@ -1,0 +1,27 @@
+(a) c3b N-experiment windows: unknowns vs non-zero equation rows
+   N konly (A,B,D)=(6,6,6): unknowns=343, rows=1225, NON-ZERO rows=819 (zero rows 406)
+   N konly (A,B,D)=(10,3,6): unknowns=308, rows=1178, NON-ZERO rows=800 (zero rows 378)
+   N konly (A,B,D)=(3,10,6): unknowns=308, rows=1178, NON-ZERO rows=800 (zero rows 378)
+   N konly (A,B,D)=(4,4,12): unknowns=325, rows=1369, NON-ZERO rows=841 (zero rows 528)
+   N konly (A,B,D)=(15,1,8): unknowns=288, rows=1040, NON-ZERO rows=740 (zero rows 300)
+   N konly (A,B,D)=(1,15,8): unknowns=288, rows=1040, NON-ZERO rows=740 (zero rows 300)
+   N tot   (A,B,D)=(3,2,1): unknowns=36, rows=1482, NON-ZERO rows=852 (zero rows 630)
+   N tot   (A,B,D)=(3,2,3): unknowns=120, rows=1482, NON-ZERO rows=852 (zero rows 630)
+   N tot   (A,B,D)=(5,3,2): unknowns=144, rows=1368, NON-ZERO rows=840 (zero rows 528)
+   N tot   (A,B,D)=(6,3,3): unknowns=280, rows=1330, NON-ZERO rows=834 (zero rows 496)
+   N tot   (A,B,D)=(4,4,4): unknowns=375, rows=1369, NON-ZERO rows=841 (zero rows 528)
+   N tot   (A,B,D)=(6,4,2): unknowns=210, rows=1295, NON-ZERO rows=830 (zero rows 465)
+   N tot   (A,B,D)=(3,1,3): unknowns=80, rows=1520, NON-ZERO rows=854 (zero rows 666)
+   N tot   (A,B,D)=(2,4,3): unknowns=150, rows=1443, NON-ZERO rows=848 (zero rows 595)
+   N sep   (A,B,Dk,Dq)=(4,3,3,2): unknowns=240, rows=1406, NON-ZERO rows=845
+   N sep   (A,B,Dk,Dq)=(5,4,1,3): unknowns=240, rows=1332, NON-ZERO rows=836
+   N sep   (A,B,Dk,Dq)=(3,3,5,0): unknowns=96, rows=1444, NON-ZERO rows=849
+(b) W_m mod q_n is NON-ZERO mod p (=> q_n does not divide W_m over Q), n=2..60 (m up to 212400), primes [1000000007, 998244353]: PASS []
+(b') c1 Gauss-lemma ingredients: W_m in Z[x] with W_m(1)=1 (0<=m<=300): PASS; b_{n^2(n-1)}=(1-nx)q_n and q_n(1)=n^2 (n<200/1000): PASS
+(c) exact Fraction: q_n does not divide W_m, n=2..8 (m=4..448): PASS
+(d) exact: G_3(1/2)=214, G_3(1/2)+1=215, c_4=215/2, W_4(1/2)/((1+12x^2)4!x^13)=215/2  -> PASS
+    [numeric] k=100: U_k(4)/2^k - 215/2 = -1.614e-01
+    [numeric] k=200: U_k(4)/2^k - 215/2 = -1.389e-04
+    [numeric] k=300: U_k(4)/2^k - 215/2 = -1.195e-07
+    [numeric] k=400: U_k(4)/2^k - 215/2 = -1.028e-10
+elapsed 14.5s

@@ -1,0 +1,23 @@
+PASS T1.3(2).gcd gcd(W_m,P_m)=1 (Fraction Euclid), deg W_m=3m with lc (-1)^m m!, deg P_m=3m+1, P_m(0)=1, 0<=m<=14; bad=[] []
+PASS T1.3(2).BM Berlekamp-Massey on DP data U_0..U_{6m+8}(m): linear complexity 3m+1, connection polynomial == P_m; recurrence holds for all 3m+1<=k<=6m+8; 0<=m<=14; bad=[] []
+PASS T1.3(2).reversal y^{3m+1} P_m(1/y) == (y-1) prod_{i=1}^m (y^3-y^2-i) exactly, 0<=m<=14
+PASS T1.3(2).facts W_4(1/2)=645/512 (claimed 645/512); W_1-b_1 = x+x^2
+PASS T1.3(2)(3).algebra b_{y^2(y-1)}=(1-yx)(1+(y-1)x+y(y-1)x^2), quadratic disc -(y-1)(3y+1)<0 (y<=7); z^3-z^2-i has an integer root iff i=y^2(y-1) (i<=400); disc(z^3-z^2-i)=-i(4+27i) (i<=60)
+PASS T1.3(1).closed x W_m = 1 - P_m - x sum_{j<m} P_j as polynomials, m<=15; bad=[]
+#   m=1 rho=1.46557123187676 c_m=2.20960813177848 |U_3000/(c rho^k)-1|=1.03e-216 |res+c x|=2.0e-219 |alt-c|=2.0e-219
+#   m=2 rho=1.69562076955986 c_m=7.84111922937324 |U_3000/(c rho^k)-1|=9.61e-191 |res+c x|=1.3e-218 |alt-c|=1.3e-218
+#   m=3 rho=1.86370652781918 c_m=28.9768573169912 |U_3000/(c rho^k)-1|=9.42e-124 |res+c x|=5.1e-217 |alt-c|=5.5e-217
+#   m=4 rho=2 c_m=107.5 |U_1200/(c rho^k)-1|=2.88e-37 |res+c x|=0.0e+00 |alt-c|=0.0e+00
+#   m=5 rho=2.11634329862421 c_m=397.012371323434 |U_1200/(c rho^k)-1|=7.38e-30 |res+c x|=1.6e-215 |alt-c|=1.3e-214
+#   m=6 rho=2.21877658530166 c_m=1456.31682906564 |U_1200/(c rho^k)-1|=6.02e-25 |res+c x|=6.9e-213 |alt-c|=6.2e-214
+#   m=7 rho=2.31085216345886 c_m=5303.63000356539 |U_1200/(c rho^k)-1|=1.94e-21 |res+c x|=4.7e-212 |alt-c|=1.4e-212
+#   m=8 rho=2.39485867386606 c_m=19179.3074772177 |U_1200/(c rho^k)-1|=8.39e-19 |res+c x|=5.7e-210 |alt-c|=1.8e-210
+PASS T1.3(4).cm_residue c_m=(G_{m-1}(x_m)+m x_m^2)/(x_m(1+3m x_m^2)) satisfies U_k(m)/(c_m rho_m^k) -> 1 (m=1..3 at k=3000: err<1e-100; m<=8 at k=1200: <1e-10); Res_{x_m} W_m/P_m = W_m(x_m)/P_m'(x_m) == -c_m x_m (to 1e-150); c_1..c_3 match 06 decimals; c_1=(10+15rho+17rho^2)/31 [decimal, 220 digits]
+PASS T1.3(4).dominance rho_i>1, rho_i^3>i, |w|^2=i/rho_i<rho_i^2, f_{i+1}(rho_i)=-1, rho strictly increasing (i<30) [decimal]
+PASS T1.4.numbers N(k,k)=2 (2<=k<=40), N(k,k-1)=k^2-k-4 (4<=k<=40), N(3,2)=4, N(2,1)=1, N(4,3)=8; triangle recurrence from N(0,0)=1 + zero boundary gives N(2,2)=1 (wrong); with N(-1,0)=1,N(-1,q>0)=0,N(-2,.)=0 it reproduces N for all 1<=k<=30
+PASS T1.5.note generalized binomials: m=1,n=0,s=1 term S(2,1)C(-1,2)=1; c_5(1) summed to j<=1 gives 1-5=-4, true c_5(1)=1
+PASS T1.7.h h_3..h_6 from h_0=1,h_1=1,h_2=1+t match the prompt; h_2=1 would give h_3=1+t-t^2; recurrence == sum_q N(k,q)t^{q-1}(1-t)^{k-q} (k<=7)
+PASS T1.8.Num Num_q=P_{q-1} sum_k N(k,q)x^k: polynomial of degree 3q-2, lc (q-1)!, lowest term 2x^q for q>=2, Num_1=x (q<=8)
+PASS T1.2/T1.9.lc u_k: deg k, lc 2/k! (k>=2), u_k(-1)=0; a_k(n)=p(n)+(-1)^n q(n) with deg p=2k, lc c^2/4^k, deg q=2k-2, lc c^2 k/(2*4^k) (k<=8)
+# elapsed 4.7s
+SUMMARY a4 pass=13 fail=0

@@ -1,0 +1,258 @@
+# final audit (requirements) — 2026-10-04T16:42:55Z — read-only; scripts in code/review/final-audit/requirements/
+
+======================================================================
+>>> r1_ids_paths.py
+[0] 报告.md == concat(report_parts): True 53307 53307
+[1] PASS ids in log: 290
+[1] cited ids: 229  missing: 0
+    shorthand in 04_C3.md -> check C3B-GCD2, C3B-GCD3: True True
+[1] log PASS ids never cited in report (62):
+     B1-fast-vs-height
+     B5-prompt-table
+     B6-Rk
+     B7-a3
+     C2-order
+     C3-zero
+     C3B-A1
+     C3B-G
+     C3B-GCD2
+     C3B-GCD3
+     C3B-INT
+     C3B-NUM
+     C3B-PHI
+     C3B-TODE
+     C3B-YODE
+     c0-H-broder
+     c0-H-rec
+     c0-U3-poly
+     c0-base-data
+     c0-base-defs
+     c0-base-ref
+     c0-mono
+     c2b.T1.Eend
+     c2b.T7.Es_eventual
+     c2b.T7.Es_single
+     c2b.T8.Reul
+     c2b.T9.misc
+     c2b.anchor
+     c3a-anchor
+     c3a-pde-F
+     c4-N-dfs
+     c4-N-rec-dp
+     c4-U-anchor
+     c5a-Ntri
+     c5a-WP
+     c5a-anchor
+     c5a-asym-m1
+     c5a-asym-m18
+     c5a-asym-m2
+     c5a-asym-m3
+     c5a-asym-m4
+     c5a-asym-m5
+     c5a-asym-m6
+     c5a-asym-m7
+     c5a-asym-m8
+     c5a-lemma1-Gm
+     c5b.A077949-comment
+     c5b.binom-basis
+     c5b.col12
+     c5b.diag
+     c5b.offsets
+     c5b.polys
+     c5b.root-products
+     c5b.rows
+     c5b.rows23-def
+     c5b.snapshots
+     dp_anchor
+     gamma_triangle
+     rstirling_cross
+     rv-Ntri-vs-def
+     rv-sum-identity
+     theta_rational_identity
+[2] referenced paths: 37
+    (template) code/<area>/ ['09_code.md']
+    code/checks/check_                                           MISSING ['09_code.md']
+    code/core.py                                                 OK ['00_head.md', '09_code.md']
+    code/main_extra/assemble_report.py                           OK ['09_code.md']
+    code/main_extra/gcd_minimal_order.py                         OK ['09_code.md']
+    (template) code/review/<reviewer>/ ['09_code.md']
+    code/step0_baseline.py                                       OK ['09_code.md']
+    data/oeis/                                                   OK ['00_head.md', '06_C5.md']
+    data/oeis/INDEX.md                                           OK ['06_C5.md']
+    logs/audit_a1-formulas_all.log                               OK ['05_C4.md']
+    logs/c2a_e5_bench_K200_M30.log                               OK ['03_C2.md']
+    logs/phase1_workflow_output.json                             OK ['09_code.md']
+    logs/phase2_review_output.json                               OK ['09_code.md']
+    logs/review_r-c2a_r3_timing.log                              OK ['03_C2.md']
+    logs/review_r-c2b_r4b_full.log                               OK ['03_C2.md']
+    logs/review_r-c3a_r2_numeric.log                             OK ['04_C3.md']
+    logs/review_r-c3b_r3_window.log                              OK ['04_C3.md']
+    logs/review_r-c4ii_r6_structure.log                          OK ['05_C4.md']
+    logs/review_r-c5a_s6_h.log                                   OK ['06_C5.md']
+    logs/review_r-c5a_s7_interlace.log                           OK ['06_C5.md']
+    logs/step0_baseline.log                                      OK ['09_code.md']
+    logs/verify_all_final.log                                    OK ['09_code.md']
+    logs/verify_all_run1.log                                     OK ['09_code.md']
+    notes/00-主线推导与分工.md                                          OK ['08_failed.md']
+    (template) notes/<area>.md ['00_head.md']
+    notes/c2b.md                                                 OK ['03_C2.md']
+    notes/c3a.md                                                 OK ['04_C3.md']
+    notes/c3b.md                                                 OK ['04_C3.md']
+    notes/c4.md                                                  OK ['05_C4.md']
+    notes/c5a.md                                                 OK ['06_C5.md']
+    notes/c5b.md                                                 OK ['06_C5.md']
+    notes/review/                                                OK ['00_head.md']
+    (template) notes/review/<reviewer>-review.md ['09_code.md']
+    (template) notes/review/claims_<area>.md ['09_code.md']
+    notes/review/r-c2a-review.md                                 OK ['03_C2.md']
+    notes/review/r-c3a-review.md                                 OK ['04_C3.md']
+    notes/review/r-c4i-review.md                                 OK ['05_C4.md']
+    bare log review_r-c5a_s7_rr.log                             OK 06_C5.md
+[3] 01_summary.md non-empty lines: 11 (incl. heading); items: 10
+[4] grade label counts: {'已验证': 11, '已证明': 62, '猜想': 5, '已否定': 5, '未完成': 5}
+    [00_head.md] 报告 `报告.md`，以及一键核对脚本 `verify_all.py`。脚本逐条打印 PASS / FAIL，覆盖报告中【已验证】结论的主体范围和【已证明】结论的程序核对部分。少数扩展范围只由第二轮复核脚本跑过
+    [00_head.md] 证明、核对范围与等级；证明较长的，给出逻辑链并指向笔记的具体小节。 - 等级：【已证明】= 附完整证明（另有程序核对）；【已验证】= 只有精确程序核对，写明范围；【猜想】= 只有数据；【已否定】= 附反例或证明
+    [03_C2.md] d §4.3；复核者 x1 另给了代数证明，见 x1-single-sum-review.md §2.4）。其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1) 不能由纤维法排除，而它正是定理 S 的形状；不在 verify_all 中，见 notes/review/r-c2a-review.md §4.3）】，一般情形【未完成】。α+β=1 时平凡存在。 (ii)【已证明】截断块部分 E
+    [03_C2.md] +x^{g_2}A_2(u)+Laurent 多项式）：**对每个 m≥2**，|g_i+3m+3|≤6000 时不存在【已验证：verify_all 的 c2a.two_family_residue 到 150，rv2.rv2-x1-r2 到 6000】；对所有指数【猜想】（缺一个指数丢番图方程的有限性证明）。m=1 时 F3 型本
+    [03_C2.md]  F3 型本身就是两族表示，所以必须 m≥2。E 的两项 u 型和对一切 m≥3、|3m+3−N_i|≤1500 不存在【已验证：rv2.rv2-x1-r2】。 (iv) 参数盒搜索：形状 Σ_s A(m,s)C(k+αm+β−γs, δ
+    [03_C2.md] s A(m,s)C(k+αm+β−γs, δm+εs+ζ)（γ+ε≥2 的 8232 族）对 U、E、N 全部被精确反驳【已验证（盒内，k≤30）：c2b.T7.box】。两项 u 型盒（E：3≤m≤6，U：2≤m≤6）在 k≤30 上 m=5,6 
+    [03_C2.md] 8.Nsplit（k≤30,q≤12）。 (3)【未完成】N(k,q) 整体的单和或短双和。  **T2.9（计算比较）【已验证（计时只看量级）】** 在 0≤k≤200、0≤m≤30 内，引理 1 递推、固定 m 的线性递推
+    [04_C3.md] 一轮原文「与 §6 同法」按字面不成立，例 Q=1+Y；复核已补正，公式不变，新增 14 个盒子的数据一致）。 数据实验【已验证】（c3b §8）：用 0≤k,m≤40 的精确整数表，在素数 p=2^31−1 
+    [06_C5.md] U_k(−s_k−1)≠0**，U_k 被 (m+1)(m+2)⋯(m+s_k) 整除，U_{3j}(−j−1)=j!。【已验证】「U_k 没有其他负整数零点」：1≤k≤40 由有理根定理（整数根整除 k!）加
+    [06_C5.md] 8 次 curl，全部只读，快照与 URL 记录在 data/oeis/、data/oeis/INDEX.md） (1)【已验证】A207118–A207123、A207117、A207124–A207127 
+    [06_C5.md] 「另一边也是行偏序集多重链」的结构在 k=4 的自然编码下没有出现，而且 k≥5 在 OEIS 中没有任何对应。 (6)【已验证】k≥5 没有类似对应：U_5、U_6、U_7 从 m=0,1,2 起的 8 项窗
+[exit 0]
+
+======================================================================
+>>> r2_nonumpy.py
+[a] r2_two_family.py has unconditional "import numpy as np": True ; has try/except around it: False
+[a] return code without numpy: 1
+[a] last lines:
+        File "<string>", line 1, in <module>
+          import sys; sys.modules['numpy']=None; sys.argv=['C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\review\\x1-single-sum\\r2_two_family.py','20','20']; __file__='C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\review\\x1-single-sum\\r2_two_family.py'; exec(compile(open('C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\review\\x1-single-sum\\r2_two_family.py',encoding='utf-8').read(), 'C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\review\\x1-single-sum\\r2_two_family.py', 'exec'))
+                                                                                                                                                                                                                                                                                                                                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\code\review\x1-single-sum\r2_two_family.py", line 20, in <module>
+          import numpy as np
+      ModuleNotFoundError: import of numpy halted; None in sys.modules
+[b] check_c3b.py wraps numpy import in try/except (fallback HAVE_NP): True
+[c] code/checks/check_c3b.py imports numpy
+[exit 0]
+
+======================================================================
+>>> r3_formulas.py
+[anchor] U_fast_table == U_list (m<=12,k<=60); N 容斥 == N_brute (k<=8)
+PASS T4.1 p_0：D(k,0)=p_0(k) 对 2<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=-1（应为 -1）
+PASS T4.1 p_1：D(k,1)=p_1(k) 对 4<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=2（应为 2）
+PASS T4.1 p_2：D(k,2)=p_2(k) 对 6<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=-6（应为 -6）
+PASS T4.1 p_3：D(k,3)=p_3(k) 对 8<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=24（应为 24）
+PASS T4.1 p_4：D(k,4)=p_4(k) 对 10<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=-120（应为 -120）
+PASS T4.1 p_5：D(k,5)=p_5(k) 对 12<=k<=60；门槛下 d+1..2d+1 处相等的 k=[]；e_d(2d+1)=720（应为 720）
+PASS T4.1 p_2 的平移形式（m=k-2d-1）
+PASS ④A.5 锚点 D(2d+2,d)=2,8,65,574,6012,70674 [2, 8, 65, 574, 6012, 70674]
+PASS T4.2(3) d=2 Newton 系数 65,74,64,30,6 [Fraction(65, 1), Fraction(74, 1), Fraction(64, 1), Fraction(30, 1), Fraction(6, 1)]
+PASS T4.3(5) [x^{q+1}]Num_q=q^2-q-4 (3<=q<=17)
+PASS T4.3(5) [x^{q+2}]Num_q=(q^4-6q^3+7q^2-2q+76)/4 (4<=q<=17)
+PASS T4.3(4) Num_q(1)=A000262(q) (q<=17) [1, 3, 13, 73, 501, 4051]
+PASS T5.2 [m^k]U_k=2/k!（2<=k<=30，单项式插值）
+PASS T5.2 [m^{k-1}]U_k=(k^2-2k-1)/(k-1)! (k>=4; k=3 为 2)（2<=k<=30，单项式插值）
+PASS T5.2 [m^{k-2}] 公式 (k>=6)（2<=k<=30，单项式插值）
+PASS T5.2 [m^{k-3}] 公式 (k>=8)（2<=k<=30，单项式插值）
+PASS T5.3(1) h_k'(1)=-(k^2-3k-2) (4<=k<=45)
+PASS T5.3(3) deg h_k=floor(2k/3) 与首项系数 (1<=k<=45)
+PASS T5.3(2) U_{3j}(-j-1)=j! (j<=10)；U_k(-j)=0 (1<=j<=s_k)、U_k(-s_k-1)!=0 (k<=30)
+PASS T5.4(4)(5) U_3、U_4 闭式 (m<=62)
+PASS T5.1(4) c_4=215/2
+PASS T5.1(4) c_18=37105325714711350249401/6830759936000 37105325714711350249401/6830759936000
+     note U_60(18)/3^60 = 126063425.84058157  c_18 ~ 5432093363.31028 （m=18 时 k=60 远未收敛，只作量级参考）
+PASS T2.6(ii) N(W~_2-1)=17/8 17/8
+PASS T2.6(ii) N(W~_2)=103/16 103/16
+PASS T2.6 N(W~_1)=3（纤维 u=1） 3
+SUMMARY r3 fails=0 []
+[exit 0]
+
+======================================================================
+>>> r4_text_checks.py
+(a) T5.4(6) 搜索覆盖
+   INDEX.md 中按 m 搜索过的 U_k：k = [3, 4, 5, 6, 7] ；k>=8 的 U_k(m) 窗口搜索： 无
+   [06_C5.md] 含「(6)【已验证】k≥5 没有类似对应」: True
+   [01_summary.md] 含「k≥5 没有对应」: True
+   [06_C5.md] 含「而且 k≥5 在 OEIS 中没有任何对应」: True
+   [08_failed.md] 含「k≥5 在 OEIS 中没有对应」: True
+   [10_uncertain.md] 含「k≥5（无对应）」: True
+(b) 22 个盒子
+   verify_all 中 U 的 (k,m) 多项式系数盒子 = 11 ；N 的 = 11 ；合计 = 22
+   [10_uncertain.md] 含「数据上 22 个盒子（verify_all）加上复核者新增的盒子全部吻合」: True
+(c) T2.6(i) 等级
+   [00_head.md] 含「【已验证】= 只有精确程序核对，写明范围」: True
+   [03_C2.md] 含「其余奇数形状【已验证（数值，浮点纤维检验」: True
+   r-c2a-review 自述： True
+   verify_all 日志里是否有奇数形状纤维检验： False
+(d) 复核者扩展范围但未给日志路径/未注明不在 verify_all
+   [02_C1.md] 「第二轮复核者 r-c1 另以精确 gcd（i≤150）」 found=True；后 160 字内含 logs/：False；含「不在 verify_all」：False
+   [02_C1.md] 「复核者 r-c1 用与 U 无关的序型 DP 扩到 k≤28」 found=True；后 160 字内含 logs/：False；含「不在 verify_all」：False
+   [06_C5.md] 「复核者 r-c5b 用同法确认到 k≤70」 found=True；后 160 字内含 logs/：False；含「不在 verify_all」：False
+   [04_C3.md] 「复核者 x2 用自写 DP 另算了 44 个新盒子」 found=True；后 160 字内含 logs/：False；含「不在 verify_all」：False
+   日志存在 logs/review_r-c1_r3_C2_final.log: True
+   日志存在 logs/review_r-c1_r4_C3_C6_C7_final.log: True
+   日志存在 logs/review_r-c5b_negzeros_exact.log: True
+   日志存在 logs/review_x2-dfinite_kernel.log: True
+   日志存在 logs/review_r-c3b_r2_rank.log: True
+(e) 记号
+   [02_C1.md] 含「> 记号（全文统一）：good(a,b,c)」: True
+   [02_C1.md] 含「P_m=∏_{i=0}^{m} b_i」: True
+   [06_C5.md] 含「Q_3 与 P_3 不同构」: True
+   06_C5 中是否另有 P_3 的定义： False
+   [06_C5.md] 含「c_2≈7.8411192294」: True
+   [06_C5.md] 含「命中的只有 c_2=A077949、c_3=A084386」: True
+   [06_C5.md] 含「可写成 c_j 的形式」: True
+   [02_C1.md] 含「{C(x+1,q)} 是 Q[x] 的基」: True
+   [02_C1.md] 含「如基 C(y+1,q)」: True
+(f) 【已证明】缺证明/指针
+   [05_C4.md] (5)【已证明，一切 j】：本段含「证明」=True，含 notes/ 或 § 指针=False
+   [05_C4.md] (7)【已证明】反转分子：本段含「证明」=True，含 notes/ 或 § 指针=False
+   [06_C5.md] (5)【已证明】h_k 在 [0,1] 上无根：本段含「证明」=True，含 notes/ 或 § 指针=False
+   notes/c4.md §4.7 存在： True ；§4.9 定理 4.9 存在： True
+   notes/c5a.md §4.6/§4.8/§4.9 存在： True True True
+(g) C3B-RES
+   日志： PASS C3B-RES Res_z G_m = Res_z G_v * (-1)^{m-v}/((m-v)! z^{3(m-v)}) at every root z of b_v (exact, mod b_v), 0<=v<m<=12
+   [04_C3.md] 含「c3b.C3B-RES（留数非零）」: True
+   日志： PASS C3B-PX b_v-b_m=(m-v)x^3; P_{j-1} == (m)_j x^{3j} and W_m == 1+sum_j j(m)_j x^{3j+2} (positive coeffs) mod b_m, so W_m(x_m)>=1; 1<=j<=m<=30
+   日志： PASS C3B-INT rational interval arithmetic: W_m(x_m)>0 and G_{m-1}(x_m)+m x_m^2>0 at x_m=1/rho_m, 1<=m<=30
+(h) T5.4 核对行
+   引用 c5b.diag： False ；引用 c5b.rows： False
+   日志有 c5b.diag / c5b.rows： True True
+(i) 09_code 表头 vs rv2
+   [09_code.md] 含「**11 个核对模块**（每个都从 `code/core.py` 的原始定义程序取「真值」）」: True
+   [09_code.md] 含「复核者 x1 的两个独立脚本（不导入 core）」: True
+   r1_numfield_residues.py import core：False
+   r2_two_family.py import core：False
+[exit 0]
+
+======================================================================
+>>> r5_quotes.py
+00_head.md       count=1  只依赖 Python 标准库；装有 numpy 时 c3b 与 rv2 会用它加速模素数运算。
+03_C2.md         count=1  其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1) 不能由纤维法排除，而它正是定理 S 的
+06_C5.md         count=1  (6)【已验证】k≥5 没有类似对应：U_5、U_6、U_7 从 m=0,1,2 起的 8 项窗口全部无结果
+06_C5.md         count=1  (5) 提示词「m=2、3 在 k=40 时相差 <0.4%」只在「相邻比 U_41/U_40 与 ρ_m 比较」的解释
+10_uncertain.md  count=1  数据上 22 个盒子（verify_all）加上复核者新增的盒子全部吻合
+00_head.md       count=1  少数扩展范围只由第二轮复核脚本跑过，已在相应条目注明「不在 verify_all 中」并给出日志路径。
+09_code.md       count=1  **11 个核对模块**（每个都从 `code/core.py` 的原始定义程序取「真值」）
+05_C4.md         count=1  (5)【已证明，一切 j】低次系数 [x^{q+j}]Num_q 在 q≥j+2 时是 q 的 2j 次多项式
+05_C4.md         count=1  (7)【已证明】反转分子 R_q(y)=y^{3q−2}Num_q(1/y) 的指数母函数有闭式
+06_C5.md         count=1  (5)【已证明】h_k 在 [0,1] 上无根；每个固定位置的系数 h_{k,i} 最终为正（~c_iρ_i^k）；对固
+04_C3.md         count=1  c3b.C3B-RES（留数非零）
+06_C5.md         count=1  核对：c5b.col-data、c5b.col-direct、c5b.table、c5b.examples
+06_C5.md         count=1  Q_3 与 P_3 不同构但链数同为 (1,4,2)
+06_C5.md         count=1  命中的只有 c_2=A077949、c_3=A084386
+06_C5.md         count=1  可写成 c_j 的形式
+02_C1.md         count=1  {C(x+1,q)} 是 Q[x] 的基
+03_C2.md         count=1  要用 k≤60 才全部被反驳（复核者 r-c2b，logs/review_r-c2b_r4b_full.log，不在 v
+10_uncertain.md  count=1  核对扩到 k≤60、m≤20（多处更远）
+01_summary.md    count=1  核对扩到 k≤60、m≤20。
+01_summary.md    count=1  k≥5 没有对应
+06_C5.md         count=1  而且 k≥5 在 OEIS 中没有任何对应
+08_failed.md     count=1  k≥5 在 OEIS 中没有对应
+10_uncertain.md  count=1  k≥5（无对应）
+06_C5.md         count=1  c5a.c5a-prompt-k40、c0.c0-c4
+missing quotes: 0
+[exit 0]

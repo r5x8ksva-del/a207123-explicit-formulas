@@ -1,0 +1,5 @@
+anchors: True 0.0s
+PDE residual on DP (k<=40,m<=20): none
+Laplace vs DP K=24 M=12: True 0.0s
+Laplace vs DP K=30 M=16: True 0.1s
+Laplace vs DP K=36 M=20: True 0.3s

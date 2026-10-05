@@ -1,0 +1,25 @@
+PASS dp_anchor baseline: core.U_fast_table == reference U_list (k<=30,m<=12) == multichain definition (k<=7,m<=4); a_direct(n,k)=U(ceil)U(floor) (k<=4,n<=8)
+PASS rstirling_def Broder r-Stirling S_r(n,k) (set partitions of [n] into k blocks, 1..r in distinct blocks; brute force) == h_{n-k}(r..k) (core.h_complete), 0<=r<=k<=n<=9; zero for k<r
+PASS rstirling_rec_gf r-Stirling recurrence == h_{n-k}(r..k) (n<=30); GF sum_n S_r(n,k) z^n = z^k/prod_{i=r}^k(1-iz) (r<=k<=10, 21 coeffs); h_s(0..m)=h_s(1..m)=S(m+s,m) (m,s<=20)
+PASS rstirling_cross Broder cross identity h_s(j..m) = sum_t C(m-j+s,m-j+t) S(m-j+t,m-j) j^(s-t) (positive Stirling form of the r-Stirling atoms), 0<=j<=m<=20, s<=20
+PASS nabla_rstirling (1/t!) nabla^t i^p at i=m equals h_{p-t}(m-t..m) = S_{m-t}(p+m-t,m) (0 if p<t), 0<=t<=m<=20, p<=40
+PASS theta_rational_identity polynomial identity sum_r (-1)^r C(t,r) prod_{v in [m-t,m], v!=m-r} b_v = t! x^{3t}, i.e. sum_r (-1)^r C(t,r)/b_{m-r} = t! x^{3t}/prod_{v=m-t}^m b_v, 0<=t<=m<=20
+PASS theta_inner Theta_t(n) = [x^{n-3t}] prod_{v=m-t}^m 1/b_v (series division) = sum_s h_s(m-t..m) C(n-2t-2s,t+s) = termwise c_i-expansion (p=s+t), m<=12, t<=m, 0<=n<3t+45
+PASS gf_blocks G_m = 1/P_m + x^2 sum_{j=1}^m j/prod_{v=j}^m b_v = W_m/P_m, coefficientwise vs DP, k<=60, m<=20
+PASS form_H H form (all-positive double sum) == DP for k<=30,m<=12 and k<=60,m<=20
+PASS form_F3 F3 form [x^{k+1}]1/P_m - sum_{j>=1} [x^k] prod_{v=j}^m 1/b_v (r-Stirling inner) == DP for k<=30,m<=12 and k<=60,m<=20
+PASS form_Theta prompt (C4) Theta form (incl. k=0) == DP for k<=30,m<=12 and k<=60,m<=20
+PASS form_ThetaH H outer + c_i inner (Theta_m(k+3m) + sum_j j Theta_{m-j}(k-2+3(m-j))) == DP for k<=30,m<=12 and k<=60,m<=20
+PASS form_F4 new c_i partial-fraction form (1/m!) sum_i (-1)^{m-i}C(m,i)[c_i(k+3m)+sum_{j<=i} j i^(j) c_i(k+3m-3j-2)] == DP for k<=30,m<=12 and k<=60,m<=20
+PASS gamma_triangle Gamma_m(n;j)=[x^n]prod_{v=j}^m 1/b_v: triangle recurrence == r-Stirling single sum; U = Gamma_m(k;0)+sum_j j Gamma_m(k-2;j) == DP, k<=60, m<=20
+PASS theta_vs_H_outer telescoping identity x^3 sum_j j P_{j-1} = P_0 - P_m - x sum_{j=1}^m P_{j-1} (m<=20) => F3-outer == H-outer coefficientwise (k<=60,m<=20); NOT termwise equal: m=1,k=3 terms (8,-2) vs (5,1), both sum to 6
+PASS block_factorization unique block factorization: h in {0..m}^k legal <=> parses into S=[v], T=[a,v,v] blocks with weakly decreasing levels plus optional final E=[a,j]; all (m+1)^k sequences, m<=3, k<=7
+PASS bijection_phi phi(h)=h.0 (no final ascent) or h.j (ends with E_j) is a bijection onto length-(k+1) legal sequences whose last block is T or [0]; no-final-ascent count = sum_s S(m+s,m)C(k+m-2s,m+s); E_j-ending count = j*Gamma_m(k-2;j); brute force m<=3, k<=8
+PASS F4_reduction P_{j-1} == i^(j) x^{3j} and W_m == 1+sum_{j<=i} j i^(j) x^{3j+2} mod b_i, quotient degree <= 3m-1 (0<=i<=m<=15); sum_i (-1)^{m-i}C(m,i) prod_{v!=i} b_v = m! x^{3m} (m<=20)
+PASS single_family_facts facts for Theorem S: b_1 has no rational root; N(xi)=1, N(1+xi)=3; mod b_1: x(1+3x^2)==3-2x, (1-x)^2==x^6, W_m==x+x^2, P_m/b_1==(-1)^{m-1}(m-1)! x^{3m}; residue identity W_m(xi)*du/dx(xi)/(dP_m/dx)(xi) = (-1)^m (1+xi) xi^{-3m-2}/(m-1)! exactly in Q(xi), m=1..20
+PASS single_family_linsys evidence: linear systems U_k(m) = sum_s A(s) C(k+c-2s,s+e) (k0<=k<=45) inconsistent for m=1..3, k0 in {0,6}, c in [-4,4], e in [-4,6] (594 systems); controls U_k(0)=1 and [x^k]1/P_m (m<=3) solvable
+PASS two_family_residue two-family necessary residue conditions: theta_v ~ W_v(xi) xi^{-3m-3} (v=1,2; m<=8); fiber-1 condition has exactly 14 solutions with |a|,|b|<=150 and none satisfies fiber 2 => for every m>=2 no representation x^{g1}A1(u)+x^{g2}A2(u)+Laurent poly with |g_i+3m+3|<=150
+PASS N_inversion N(k,q) = sum_{i=1}^q (-1)^{q-i} C(q,i) U_H(k,i-1) == DFS definition N_brute (k<=8) and core inclusion-exclusion N_from_U (k<=40, q<=20)
+PASS bench_k200_m30 all U_k(m), 0<=k<=200, 0<=m<=30: Lemma-1 recurrence, fixed-m linear recurrence, N triangle, H, F3, Theta, H-outer+c_i, F4 all == DP; seconds (this run, noisy): DP 0.287, Lemma1 0.002, linrec 0.197, Ntri 0.026, rStirling_table 0.003, c_table 0.181, H 1.570, F3 1.643, Theta 0.287, ThetaH 0.300, F4 0.242
+# elapsed 10.2s
+SUMMARY c2a pass=23 fail=0

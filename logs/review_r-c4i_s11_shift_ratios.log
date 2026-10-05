@@ -1,0 +1,13 @@
+j=1: r_j(d) = poly of degree 1 (fit on d=1..3, held-out d<=50 agree: True)
+     coefficients (ascending in d): ['0', '5']
+     leading coefficient sign: + ; first d>=1 with r_j(d)<=0: []
+j=2: r_j(d) = poly of degree 3 (fit on d=2..6, held-out d<=50 agree: True)
+     coefficients (ascending in d): ['0', '-109/6', '41/2', '-1/3']
+     leading coefficient sign: - ; first d>=2 with r_j(d)<=0: [61, 62, 63]
+j=3: r_j(d) = poly of degree 4 (fit on d=3..9, held-out d<=50 agree: True)
+     coefficients (ascending in d): ['0', '334/3', '-1145/6', '487/6', '-5/3']
+     leading coefficient sign: - ; first d>=3 with r_j(d)<=0: [47, 48, 49]
+j=4: r_j(d) = poly of degree 6 (fit on d=4..12, held-out d<=50 agree: True)
+     coefficients (ascending in d): ['0', '-54239/60', '135913/72', '-15343/12', '21727/72', '-104/15', '1/18']
+     leading coefficient sign: + ; first d>=4 with r_j(d)<=0: []
+runtime 12.0s

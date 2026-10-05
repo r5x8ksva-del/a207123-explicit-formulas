@@ -1,0 +1,23 @@
+OK   dp_vs_brute  自写细化 DP == 全序列暴力枚举 (m<=3, k<=7/6)
+OK   dp_vs_multichain  U_k(m)(自写DP) == core.U_multichain 多重链定义 (k<=8, m<=5)
+OK   dp_vs_matrix  a_k(n)=U_k(ceil(n/2))U_k(floor(n/2)) 用自写DP == core.a_direct 原题矩阵计数 (k<=5, n<=8)
+OK   dp_vs_coreDP  自写DP == core.U_fast_table (k<=40, m<=14)
+OK   block_bijection  块词->拼接是到合法序列的双射；谷规则解析对每个合法序列给出块词且复原；非法序列不能解析成块词 (m<=4,k<=8, 合法序列共15305个)
+OK   block_stats  上升数=#T+#E、末尾上升<=>末块E、值集=层次∪谷值、max=首块层次 (m<=4, 1<=k<=8)
+OK   T4a_complete_s  完整序列、恰 s 个上升 == S(m+s,m)C(k+m-2s,k-3s) (k<=40, m<=14, 全部 s)
+OK   T4b_ascend_s  以上升结尾、恰 s 个上升 == sum_j j H(m,s-1,j) C(k+m-j-2s,k+1-3s) (k<=40, m<=14, 全部 s)
+OK   T4c_U  定理4 U_k(m) 公式 == 自写DP (k<=40, m<=14)
+OK   C4.1_small_s  U_k(m,0)=C(k+m,k)；k>=2 时 E(k,m,1)=C(k+m-1,k)、U_k(m,1)=C(m+1,2)C(k+m-2,k-3)+C(k+m-1,k) (k<=40,m<=14)；k<=1 且 m>=1 时确实不成立：[(0, 1), (1, 1), (0, 2), (1, 2), (0, 3), (1, 3)]
+OK   T2c_srefined_recursion  U_k(m,s)=U_k(m-1,s)+U_{k-1}(m,s)+m U_{k-3}(m,s-1)+m[k=2][s=1] (k<=40,m<=14,全部 s)
+OK   T2c_pde  三变量 PDE 逐系数成立 (k<=24, m<=14, s<=9)；注意 t*F 项在 m=0 时为 0
+OK   T2b_WP_with_y  带 y 的 P_m(x,y)G_m(x,y)=W_m(x,y)（G 取自 DP，截断 x^30）与 xW_m=1-P_m-x sum_{j<m}P_j（带 y 的精确多项式恒等式）m<=10
+OK   L3.1_bars  竖线模型：sum prod(j+右侧竖线数) == h_s(j..j+L) (L<=6, s<=6, j<=4 暴力)
+OK   T3_coef  [x^n y^s] prod_{v=j}^m b_v^{-1} == H(m,s,j)C(n+m-j-2s,n-3s) (n<=36, s<=13, 0<=j<=m<=14)
+OK   L3.2_rstirling  h_s(j..m) == r-Stirling（直接枚举集合划分，n<=9）；h_s(0..m)=h_s(1..m)=S(m+s,m) (m,s<20)
+OK   C4.2_setpartition_bijection  完整、s 上升序列 <-> (S 位置子集) x (RGS, max=m)：正向单射、像集==目标集，逆映射对每个目标给出合法完整 s 上升序列 (m<=3, k<=9)
+OK   P5.1_maps  补0: 完整长k <-> 长k+1末项0；补末项: 上升结尾长k <-> 长k+1末三项 a<v=v；且末块分别为 S_0 / T (m<=3, k<=7 暴力)
+OK   P5.2_Aminus  U_k(m)=A_m(k+1)-sum_j A^{(j)}_m(k) (k<=39, m<=14)
+OK   P5.3_theta_termwise  Theta_t(n+3t) == A^{(m-t)}_m(n) 逐项 (n<=35, m<=12)
+OK   draft_termwise_note  对照：Theta 公式的外层项 A^{(j)}_m(k) 与定理4第二项的 j*sum_s H C(k-2..) 不是同一组数（只在内层 Theta_t=A^{(m-t)} 对应）
+[time] 7.5s
+SUMMARY r1 ok=21 bad=0

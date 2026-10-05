@@ -1,0 +1,9 @@
+i= 1  |complex root of b_i| = 1.2106   1/rho_{i-1} = 1.0000   outside: True
+i= 2  |complex root of b_i| = 0.9208   1/rho_{i-1} = 0.6823   outside: True
+i= 3  |complex root of b_i| = 0.7882   1/rho_{i-1} = 0.5898   outside: True
+i= 4  |complex root of b_i| = 0.7071   1/rho_{i-1} = 0.5366   outside: True
+i=10  |complex root of b_i| = 0.5044   1/rho_{i-1} = 0.4045   outside: True
+i=20  |complex root of b_i| = 0.3932   1/rho_{i-1} = 0.3282   outside: True
+i=40  |complex root of b_i| = 0.3077   1/rho_{i-1} = 0.2660   outside: True
+i=60  |complex root of b_i| = 0.2670   1/rho_{i-1} = 0.2349   outside: True
+all 1<=i<=60 outside the disc of convergence of G_{i-1}: True

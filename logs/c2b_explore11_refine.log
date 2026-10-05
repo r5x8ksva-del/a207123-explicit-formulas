@@ -1,0 +1,10 @@
+(a) eventual single-term test for E(k,m,s), polynomial in k for k>=3s-1:
+   (m,s) whose eventual polynomial is A*C(k+c,deg): [(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1)]
+   examples of integer roots: {(2, 2): [4], (2, 3): [6, 7], (3, 2): [0, 4], (1, 3): [6, 7], (4, 1): [-3, -2, -1]}
+   all interpolations confirmed on 40 extra k: True
+(b) two-term u-shape: refuted / consistent<5 checks / consistent>=5 checks
+   E m=3: refuted 46178, consistent with <5 checks 0 [], consistent with >=5 checks 0
+   U m=2: refuted 25191, consistent with <5 checks 0 [], consistent with >=5 checks 0
+   E m=4: refuted 78146, consistent with <5 checks 0 [], consistent with >=5 checks 0
+   U m=3: refuted 46178, consistent with <5 checks 0 [], consistent with >=5 checks 0
+elapsed 67.7s

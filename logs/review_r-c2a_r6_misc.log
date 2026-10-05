@@ -1,0 +1,3 @@
+(1-x)^{-1} == 1 + u + x + x^2 : True
+m=4 three-family coefficients reproduce G_4 up to x^60 : True
+Q_j = sum_t (-1)^t S(m-j+t,m-j) x^{3t} b_m^{-(m-j+1+t)} (m<=8, up to x^60) : True

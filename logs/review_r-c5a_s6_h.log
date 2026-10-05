@@ -1,0 +1,21 @@
+deg h_k <= k-1 (coefficients i=k,k+1 vanish), 1<=k<=130: True
+T13 h_k = sum_q N(k,q) t^(q-1)(1-t)^(k-q), k<=80: True
+T13 (C6) recurrence with h_0=1,h_1=1,h_2=1+t, 3<=k<=130: True ; with wrong h_2=1, h_3 would be [1, 1, -1]
+T13 h_k(0)=1 (k<=130), h_k(1)=2 (2<=k<=130): True
+T15 deg h_k = floor(2k/3) (1<=k<=130): True ; lead: True ; second (2<=k<=130): True
+T15 zeros of U_k at -1..-400: first segment = 1..floor((k+2)/3) for all k<=130: True ; k with additional zeros beyond the first segment: none
+T14 G_{-j} recurrence == polynomial values U_k(-j) (j<=46,k<=130): True ; deg 3j-3 & top six coeffs (2<=j<=46): True
+Lemma 4.2 reciprocity, k<=130, j<=50: True
+T16 Moebius mu(0^,1^) by top-down recursion == U_k(-2), k<=13: True [-1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+T16 #strict chains 0^<...<1^ of length q == N(k,q), k<=10: True
+T17 [t^1]h_k = R_k-k-1 = [x^k] x^2(1-x+x^2)/((1-x)^2(1-x-x^3)) > 0, k<=130: True
+T19 general derivative formula (d<=4,k<=130): True ; explicit d=1,2,3: True ; exact thresholds: [4, 6, 8]
+T20 PDE coefficients z^k, k<=130: True
+V5/C1 own integer Sturm: h_k real-rooted with simple roots for 2<=k<=100: True  ; no roots in [0,1]: True ; #sign changes == #roots>1: True (28.7s)
+V5 N(k,.) log-concave, k<=130: True
+T16 multiplicity of z=-1 in n_k equals ceil(k/3)-1, k<=130: True
+V4 thresholds: first k0 such that [t^i]h_k > 0 for all k0<=k<=130 (i=1..14):
+   [(1, 2), (2, 8), (3, 16), (4, 24), (5, 33), (6, 41), (7, 50), (8, 59), (9, 68), (10, 77), (11, 86), (12, 95), (13, 105), (14, 114)]
+   claimed thresholds (i=1..8) still valid up to k=130: True
+U1 h_k(-1), k<=20 matches notes: True
+elapsed 56.9s

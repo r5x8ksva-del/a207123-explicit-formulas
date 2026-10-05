@@ -1,0 +1,4 @@
+OK  C4-16: S(k,k-d)=Σ<<d,j>>C(k+d-1-j,2d)，0<=d<=14, 0<=k<=150（含 k<d 的平凡 0）
+OK  §3.5: S(k,k-d)=Σ_j S2(d+j,j)C(k,d+j)，0<=d<=14, 0<=k<=150
+OK  §3.5: (1-x)^{2d+1}Σ_k S(k,k-d)x^k = x^{d+1}Σ_j<<d,j>>x^j（系数非负），1<=d<=14
+SUMMARY s5 ok=3 bad=0 runtime=0.0s

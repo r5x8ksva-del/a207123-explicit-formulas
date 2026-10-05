@@ -1,0 +1,5 @@
+1 {'nodes': 2046, 'parse1': 301, 'legal': 301, 'mismatch': 0} sumU= 301 0.00s
+2 {'nodes': 88572, 'parse1': 2762, 'legal': 2762, 'mismatch': 0} sumU= 2762 0.09s
+3 {'nodes': 1398100, 'parse1': 14874, 'legal': 14874, 'mismatch': 0} sumU= 14874 1.53s
+4 {'nodes': 12207030, 'parse1': 58493, 'legal': 58493, 'mismatch': 0} sumU= 58493 14.44s
+with injected bug m=2: {'nodes': 9840, 'parse1': 846, 'legal': 1057, 'mismatch': 211}

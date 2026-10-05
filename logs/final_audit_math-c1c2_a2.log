@@ -1,0 +1,15 @@
+# K_2: W~_2 = [1, 0, 0, 0, 0, 2, 0, 0, 4]  N(W~_2-1)= 17/8  N(W~_2)= 103/16  N(x)= 1/2  N(4-2x)= 68
+PASS T2.6ii.K2 K_2 is a field; W~_2-1 = 2x^5+4x^8 = x^5(4-2x) in K_2; N(W~_2-1)=17/8, N(W~_2)=103/16, N(x)=1/2, N(4-2x)=68 (all exact)
+PASS T2.6.K1 in K_1: W~_1 = 1+x^5 = x(1+x); N(x)=1, N(1+x)=3, N(W~_1)=3
+PASS T2.6.Wtilde W_m == W~_i (mod b_i) for 1<=i<=m<=14 (exact remainders); bad=[]
+PASS T2.6.residue_closed_form directly computed Res_x*u' at the roots of b_i equals -W~_i x^{-3m-3}/(i^2 i! (-1)^{m-i}(m-i)!) for G_m, and the same with W~_i-1 for the E part (91 cases, field i<=12, i<=m<=14); bad=[]
+PASS T2.6.(3) r_i u'(xi_i) = (-1)^m (1+xi) xi^{-3m-2}/(m-1)! and W_m(xi)=xi(1+xi), exact in K_1 from W_m/P_m', m=1..15; bad=[]
+PASS T2.6ii.v17 E part, fiber u=1/2: v_17(N(residue element)) = [-2, 1] (== 1 mod 3) for m=2..20; so x^N * nu in Q is impossible; bad=[]
+PASS T2.6ii.c2b_table with c2b normalisation nu_i=-i*theta_i: N=17 (E, m=2), 103/2 (U, m=2); got 17, 103/2
+# xi=0.682327803828  v0(1,2)=3.1478990357  v0(2,3)=4.6134702676  disc f'=-35.9125
+# fiber (1,2) roots: [1.23278562+1.75889451j 1.23278562-1.75889451j 0.6823278 +0.j        ]
+# fiber (2,3) roots: [-1.13248943+2.55224345j -1.13248943-2.55224345j  0.79132552+0.49095582j
+  0.79132552-0.49095582j  0.6823278 +0.j        ]
+PASS T2.6i.numeric xi in (0.68,0.69); (1,2): v0=xi^3/(1-xi)^2=xi^{-3}=3.147899 in (3.04,3.18), disc(f')<0, one real fiber point (=xi); (2,3): v0=xi^{-4}, one real fiber point (=xi); non-real fiber points are not roots of any b_w (w<=200) [float, corroboration]
+# elapsed 0.4s
+SUMMARY a2 pass=8 fail=0

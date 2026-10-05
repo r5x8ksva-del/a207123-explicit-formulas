@@ -1,0 +1,10 @@
+  05_C4.md count=1 (报告.md count=1): 一般的 M(d;σ,β) 没有闭式（见 ④A.5）
+  05_C4.md count=1 (报告.md count=1): S(k,k−d)=Σ_j S_2(d+j,j)C(k,d+j) 的对应物
+  05_C4.md count=1 (报告.md count=1): 不存在二阶 Euler 型非负展开
+  05_C4.md count=1 (报告.md count=1): 门槛以下例外值（d+1≤k≤2d+1）全部列在 notes/c4.md 表 2
+  06_C5.md count=1 (报告.md count=1): 旧极点（σ 来自 j<m）的留数满足 α_m(σ)=α_{m−1}(σ)·(−σ³)/(m−j)
+  06_C5.md count=1 (报告.md count=1): 可写成 c_j 的形式
+  06_C5.md count=1 (报告.md count=1): 等价地 U_k(m)=(2/k!)(m+μ_k)^k(1+O(m^{−2}))，μ_k=(k²−2k−1)/2；在 C(m+1,·) 基下 U_k=2C(m+1,k)+(k²−k−4)C(m+1,k−1)+p_2(k)C(m+1,k−2)+…
+  06_C5.md count=1 (报告.md count=1): ẽ_j(n)=e_j(−1,0,…,n−2)/n^{\underline j}
+  06_C5.md count=1 (报告.md count=1): Q_3 与 P_3 不同构
+PASS quotes :: 9 条引用在各自文件中恰出现 1 次；S_2 全文只出现 1 次且无定义；「初等对称」出现 0 次；④A.5 写「都没找到」、⑥ 写「未完成」；Λ_k 与 P_m 的全局记号存在

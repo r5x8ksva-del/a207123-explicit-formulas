@@ -1,0 +1,9 @@
+PASS m=1: BM mod p on U_0..U_28(m): linear complexity 4 (3m+1=4), connection poly == P_m mod p: True  (0.1s)
+PASS m=2: BM mod p on U_0..U_34(m): linear complexity 7 (3m+1=7), connection poly == P_m mod p: True  (0.1s)
+PASS m=3: BM mod p on U_0..U_40(m): linear complexity 10 (3m+1=10), connection poly == P_m mod p: True  (0.1s)
+PASS m=4: BM mod p on U_0..U_46(m): linear complexity 13 (3m+1=13), connection poly == P_m mod p: True  (0.1s)
+PASS m=5: BM mod p on U_0..U_52(m): linear complexity 16 (3m+1=16), connection poly == P_m mod p: True  (0.1s)
+PASS m=18: BM mod p on U_0..U_130(m): linear complexity 55 (3m+1=55), connection poly == P_m mod p: True  (0.1s)
+PASS m=48: BM mod p on U_0..U_310(m): linear complexity 145 (3m+1=145), connection poly == P_m mod p: True  (0.6s)
+PASS m=100: BM mod p on U_0..U_622(m): linear complexity 301 (3m+1=301), connection poly == P_m mod p: True  (5.0s)
+OVERALL PASS

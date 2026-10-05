@@ -1,0 +1,9 @@
+negative coefficients in Num_q (q<=70): [] 0
+zero coefficients strictly between x^q and x^{3q-2}: [(2, 3), (3, 6), (4, 9), (5, 12), (6, 15), (7, 18), (8, 21), (9, 24), (10, 27), (11, 30), (12, 33), (13, 36), (14, 39), (15, 42), (16, 45), (17, 48), (18, 51), (19, 54), (20, 57), (21, 60)] 69
+d=0 pattern polynomial == interpolated p_d: True
+d=1 pattern polynomial == interpolated p_d: True
+d=2 pattern polynomial == interpolated p_d: True
+d=3 pattern polynomial == interpolated p_d: True
+d=4 pattern polynomial == interpolated p_d: True
+d=5 pattern polynomial == interpolated p_d: True
+d=6 pattern polynomial == interpolated p_d: True

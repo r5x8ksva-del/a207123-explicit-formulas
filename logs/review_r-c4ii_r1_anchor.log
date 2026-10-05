@@ -1,0 +1,12 @@
+PASS r1-dp-cross 自写高度DP == 朴素逐a检查DP == core.U_fast_column == core.U_list (m<=7,k<=14)，且 == core.U_multichain (k<=5,m<=3)
+PASS r1-N-brute 容斥 N(k,q) == 自写按定义暴力枚举 {1..k}^k 的合法满射词 == core.N_brute，k<=7
+# U 表完成 (k<=150, m<=46)  5.1s
+PASS r1-C4-17 F_q 一阶递推（含 [q=2]x^2）对原始定义 DP 成立：1<=q<=47，模 x^151
+PASS r1-C4-18 P_{q-1}F_q（F 来自原始定义 DP，模 x^151）在 x^{3q-1}..x^150 全为 0，且 == 自写三项递推的 Num_q，1<=q<=47
+PASS r1-C4-19 DP 锚定的 Num_q：deg=3q-2、首项 (q-1)!、最低项 2x^q (q>=2; q=1 为 x)，q<=47
+PASS r1-table7 c4.md 表 7 (q<=7) == DP 锚定的 Num_q
+PASS r1-Wm P_m * sum_k U_k(m) x^k == W_m = 1 + x^2 sum_{j<=m} j P_{j-1}，m<=46，模 x^151（DP）
+PASS r1-C4-20 容斥式 Num_q = sum_i (-1)^{q-i}C(q,i)W_{i-1} prod_{v=i}^{q-1} b_v == DP 锚定的 Num_q，q<=40
+# 已保存 numdp.json（q<=47）
+# runtime 6.8s
+SUMMARY pass=8 fail=0

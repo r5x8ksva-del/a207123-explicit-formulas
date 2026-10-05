@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:2,2,7,0,2,2,8,13,15,29,0,6,2,16,29,99,81,104,146,0,24
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

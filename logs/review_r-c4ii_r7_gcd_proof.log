@@ -1,0 +1,6 @@
+PASS r7-laguerre-id S_{q,i}(x) == n! x^{3n} L_n^{(i+1)}(-1/x^3) 作为多项式恒等，0<=i<q<=40
+PASS r7-laguerre-zeros Sturm 精确判定：alpha in {1,2,5,19,101}, n<=15 时 L_n^{(alpha)} 在 (0,∞) 恰有 n 个不同实根、在 (-∞,0] 无根（经典事实的旁证）
+PASS r7-W-at-1 W_i(1)=1（i<60）；对 2<=s<60 的每个素因子 p|s，1+(s-1)x+s(s-1)x^2 ≡ 1-x (mod p)
+PASS r7-numeric-roots 双精度旁证：1<=i<40 的三个根处 |S_{q,i}(ξ)|/Σ|项| > 1e-12（i<q<min(i+25,60)）；|W_i(ξ)|/Σ|项| 最小值 4.49e-01
+# runtime 2.6s
+SUMMARY pass=4 fail=0

@@ -1,0 +1,2 @@
+(I) e^a/(1-x)[1F1(-lam;1-lam;-a) + x^2(Phi1(-lam,2;..)-Phi1(-lam,1;..))] == DP (k<=40,m<=16): True  4.2s
+(II) 1/(1-x)[1F1(1;1-lam;a) + x^2((1-t)^-2 Phi1(1,2;1-lam;-t/(1-t),a) - (1-t)^-1 Phi1(1,1;..))] == DP: True ; each Phi1 term already free of negative x-powers: True  1.7s

@@ -1,0 +1,1 @@
+PASS T4.2.1-S2-meaning :: S(k,k-d)=Σ_j S_2(d+j,j)C(k,d+j) 对相伴 Stirling 数（块大小>=2）成立（d<=8,k<60）；若把 S_2 读成第二类 Stirling 数 S 则不成立，例如 k=4,d=1：S(4,3)=6，而 Σ_j S(1+j,j)C(4,1+j)=24

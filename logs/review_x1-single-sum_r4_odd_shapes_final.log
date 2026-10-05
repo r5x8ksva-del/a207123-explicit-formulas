@@ -1,0 +1,12 @@
+(1,2): coefficients of (w-1+xi)^3 - w(1-xi) in basis 1,xi,xi^2 as polynomials in w (ascending): [[0, 2, -3, 1], [2, -5, 3], [-3, 3]]
+PASS r4.shape12_algebra (1,2): a root eta of b_w in the fiber of v(xi) forces (w-1+xi)^3 = w(1-xi); the xi^2-coefficient is 3(w-1) => w=1, eta=xi; so the other two fiber points are never poles of G_m (any m)
+  shape (1,2): fiber points 1.23279+1.75889i, 1.23279-1.75889i, 0.68233+0.00000i; non-pole points other than xi: 2
+  shape (2,3): fiber points -1.13249+2.55224i, -1.13249-2.55224i, 0.79133+0.49096i, 0.79133-0.49096i, 0.68233+0.00000i; non-pole points other than xi: 4
+  shape (1,4): fiber points 9.13235+0.00000i, 3.14790+0.00000i, 0.78008+0.36311i, 0.78008-0.36311i, 0.68233+0.00000i; non-pole points other than xi: 4
+  shape (3,2): fiber points -1.01733+1.11201i, -1.01733-1.11201i, 0.67616+0.69884i, 0.67616-0.69884i, 0.68233+0.00000i; non-pole points other than xi: 4
+  shape (0,2): fiber points 0.68233+0.00000i, 1.87116+0.00000i; non-pole points other than xi: 1
+  shape (0,3): fiber points 0.68233+0.00000i, 1.02134+0.53675i, 1.02134-0.53675i; non-pole points other than xi: 2
+PASS r4.fiber_numeric float (tol 1e-7): for shapes (1,2),(2,3),(1,4),(3,2),(0,2),(0,3) the fiber of v(xi) contains a point that is not a root of any b_w (0<=w<=60), so (given A in C(v)) none of these shapes represents U_k(m) for 1<=m<=60
+PASS r4.linsys_odd exact: U_k(m) = sum_s A(s) C(k+c-gs, es+d) inconsistent on k0<=k<=45 for m=1,2, (g,e) in {(1,2),(2,3)}, c in [-8,8], d in [-4,8], k0 in {0,8} (1768 systems, s from -20); control A_m(k) with (2,1) solvable
+# elapsed 22.5s
+SUMMARY r4 fail=0

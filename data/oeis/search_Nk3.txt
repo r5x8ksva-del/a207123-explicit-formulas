@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:2,8,25,59,124,253,493,925,1707,3104
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

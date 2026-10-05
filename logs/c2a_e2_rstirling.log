@@ -1,0 +1,6 @@
+r-Stirling brute (n<=10, 0<=r<=k<=n) == h_{n-k}(r..k): True 0.8s
+r-Stirling recurrence (n<=40) == h_complete: True ; == brute incl. k<r zeros (n<=10): True
+GF z^k/prod(1-iz) (r<=k<=11, n<k+30): True
+nabla identity (m<=20, t<=m, p<=40): True
+r-Stirling explicit formula ok: True ; h_s(0..m)=h_s(1..m)=S(m+s,m): True
+total 1.4s

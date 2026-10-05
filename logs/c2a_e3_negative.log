@@ -1,0 +1,10 @@
+b_1 mod f == 0: True
+Norm(xi)= 1  Norm(1+xi)= 3
+x(1+3x^2) == 3-2x mod b_1: True ;  (1-x)^2 == x^6: True
+m=1..20: W_m==x+x^2, P_m/b_1==(-1)^{m-1}(m-1)!x^{3m}, residue identity: True
+single-family linear systems tested=2184 (m=1..4, k0 in {0,6,12}, c in [-6,6], e=m+d in [-6,7], k<=54); solvable: [] 46.7s
+control m=0 (c=0,e=0) solvable: True
+control [x^k]1/P_1 (c=1,e=1) solvable: True
+control [x^k]1/P_2 (c=2,e=2) solvable: True
+control [x^k]1/P_3 (c=3,e=3) solvable: True
+control [x^k]1/P_4 (c=4,e=4) solvable: True

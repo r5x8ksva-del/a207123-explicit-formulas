@@ -1,0 +1,24 @@
+[lean_one 启动前：AVAIL=4599 COMMIT=15227 LIMIT=32429 HEADROOM=17202 TOTAL=16045；看门狗上限 CAP=9500MB，MINHEAD=3000MB]
+C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_e.lean:9:63: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.reduceAdd, Nat.reduceSub, zero_mul, add_zero] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_e.lean:14:43: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.reduceAdd, Nat.reduceSub, add_zero, one_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_e.lean:14:53: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.reduceAdd, Nat.reduceSub, zero_mul, one_mul] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+[lean_one 内存：PEAK=8022 MINHEAD=8299 KILLED=0 REASON=；用时 27s]
+[lean_one exit code 0]

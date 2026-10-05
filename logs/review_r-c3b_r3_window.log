@@ -1,0 +1,11 @@
+tables k<=100, q<=40 built 11.9s
+N k-only (6,6,6): window [16..40]x[16..40]: 343 unknowns, 625 rows (454 non-zero rows), kernel dim mod p = 31
+   extended window [16..100]x[16..40]: 2125 rows, kernel dim mod p = 0
+   window-kernel basis vectors still relations on rows k in [41..100]: 0 of 31
+N (k,q)-coef (4,4,3): window [18..40]x[18..40]: 250 unknowns, 529 rows (358 non-zero rows), kernel dim mod p = 41
+   extended window [18..100]x[18..40]: 1909 rows, kernel dim mod p = 36
+   window-kernel basis vectors still relations on rows k in [41..100]: 30 of 41
+N k-only (6,6,6) control: window [6..40]x[6..40]: 343 unknowns, 1225 rows (819 non-zero rows), kernel dim mod p = 0
+   extended window [6..100]x[6..40]: 3325 rows, kernel dim mod p = 0
+   window-kernel basis vectors still relations on rows k in [41..100]: 0 of 0
+elapsed 33.5s

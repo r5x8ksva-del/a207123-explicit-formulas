@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:2,4,7,12,19,29,44,66,98,145,214
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

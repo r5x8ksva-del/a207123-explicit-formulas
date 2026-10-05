@@ -1,0 +1,10 @@
+reference U_list table 0<=k,m<=40 built (2.5s); U_40(40)=55568722619069829091942440314506445 (35 digits)
+PASS multichain == U_list, 1<=k<=8, 0<=m<=5
+PASS height brute == U_list, 0<=k<=7, 0<=m<=4
+PASS original-definition a_k(n) == U(ceil(n/2))U(floor(n/2)), 1<=k<=6, 0<=n<=12
+PASS a_3(n), n=1..6 == 6,36,102,289,612,1296 (task statement)
+PASS core.U_fast_table(40,40) (table used by c3b experiments) == reference U_list, ALL 0<=k,m<=40
+PASS N table (inclusion-exclusion of U) == DFS definition, 0<=k<=9, all q<=40
+PASS N table sanity on 40x40: N(k,q)=0 for q>k, N(k,k)=2 for 2<=k<=40
+elapsed 3.4s
+OVERALL PASS

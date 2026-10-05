@@ -1,0 +1,1 @@
+PASS X2-CORE c3b tables core.U_fast_table(40,40) and core.N_from_U == reviewer tables (0<=k,q<=40)

@@ -1,0 +1,13 @@
+PASS rS_brute Broder r-Stirling (set partitions of [n], 1..r in distinct blocks, own generator) == h_{n-k}(r..k) (0 if k<r), 0<=r,k<=n<=10 (2.9s)
+PASS nabla_h (1/t!) sum_r (-1)^r C(t,r) (m-r)^p == h_{p-t}(m-t..m) (0 if p<t), as rationals, 0<=t<=m<=30, p<=60 (0^0=1)
+PASS nabla_rS_brute (1/t!) nabla^t i^p |_{i=m} == brute-force r-Stirling {p+m-t \ m}_{m-t} for p+m-t<=10
+PASS weighted_collapse sum_{j=1}^m j h_{s-1}(j..m) == S(m+s,m) for 1<=s<=40, 0<=m<=30; at s=0 LHS=0 while S(m,m)=1 (identity needs s>=1, i.e. RHS is S(m+s,m)-[s=0])
+PASS cross_identity h_s(j..m) == sum_t C(m-j+s,m-j+t) S(m-j+t,m-j) j^(s-t), 0<=j<=m<=25, s<=30
+PASS thm3i_poly sum_r (-1)^r C(t,r) prod_{v in [m-t,m], v != m-r} b_v == t! x^{3t}, 0<=t<=m<=25
+PASS telescoping_poly x^3 sum_{j=1}^m j P_{j-1} == P_0 - P_m - x sum_{j=1}^m P_{j-1}, m<=25
+PASS F4_congruences W_m == 1+sum_{j<=i} j i^(j) x^{3j+2} and P_{j-1} == i^(j) x^{3j} (mod b_i), deg quotient <= 3m-1, 0<=i<=m<=15
+PASS block_factorization enumerated block strings (S/T weakly decreasing + optional final E) are pairwise distinct and their set == legal sequences; recursive max-first parser agrees; m<=4, k<=8 (1.2s)
+PASS phi_bijection phi injective, image == {len k+1 legal, last block T or [0]}; no-ascent count == Gamma(k;0); E_j-ending == j Gamma(k-2;j); #ST(k+1) - #(last block S_v, v>=1) == U_k; m<=4, k<=8 (4.4s)
+PASS counterexample_m1k3 m=1,k=3: Theta-form terms (8,-2), H-form terms (5,1), both sum to 6 = U_3(1)
+# elapsed 12.1s
+SUMMARY r2 pass=11 fail=0

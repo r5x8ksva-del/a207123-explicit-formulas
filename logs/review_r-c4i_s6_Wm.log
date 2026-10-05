@@ -1,0 +1,3 @@
+OK  C4-2 推论：P_m * Σ_k U_k(m) x^k == W_m（模 x^91），0<=m<=24（U 取自自写 DP）
+OK  C4-2 推论：(1-x-m x^3) G_m == G_{m-1} + m x^2（模 x^91），0<=m<=24
+SUMMARY s6 ok=2 bad=0 runtime=0.3s

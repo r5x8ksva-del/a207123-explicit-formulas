@@ -1,0 +1,6 @@
+INFO tables built [7.7s]
+PASS L1a 引理1（含边界约定 U_{-1}≡1,U_{-2}≡0,U_k(-1)=0）对自写 DP：k<=132,m<=30；k<=60,m<=66；m=100,150 时 k<=25 [1.3s] []
+PASS C1a (C1) U_k(m)=sum_{j<=m}[U_{k-1}(j)+j U_{k-3}(j)]：k<=132,m<=30；k<=60,m<=66 [0.2s] []
+PASS C1b (C1) 精确插值：u_k 过 m=0..k，k<=60：在全部 m<=66 与 DP 一致（>=6 个额外点）、deg=k、首项 2/k!（k>=2；k=0,1 为 1）、u_k(-1)=0（k>=1）、多项式恒等式 u_k(x)-u_k(x-1)=u_{k-1}(x)+x u_{k-3}(x)（1<=k<=60） [3.5s] []
+TIME r2 total 12.7s
+SUMMARY r-c1-lemma-C1 pass=3 fail=0

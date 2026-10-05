@@ -1,0 +1,12 @@
+N: DFS(k<=9) == DP-inversion: True 0.7s
+N(k,q)=0 for q>k, N(k,0)=[k=0]: True
+(1) N triangle recurrence k<=30: True
+(2) Ncal PDE coefficientwise k,q<=30: True
+(3) 1+tF = Ncal(x,t/(1-t))/(1-t), k<=30, n<=40: True
+(4) native Laplace for Ntilde vs 1+tF(DP): True ; Ncal from it vs N (k,q<=30): True  0.4s
+(5) 1F1(1;-lambda;-t/x^3) = 1 + t sum t^m/P_m (k<=30, n<=15): True
+(6) h_k polynomial of degree <= k-1 (k>=1), checked coefficients up to t^40, k<=30: True
+(7) h_k = sum_q N(k,q) t^{q-1}(1-t)^{k-q}, k<=30: True
+(8) H PDE coefficientwise in z (k<=30), exact in t: True
+(9) H = 1 + (Ncal(z(1-t),t/(1-t)) - 1)/t, k<=30: True
+total 1.2s

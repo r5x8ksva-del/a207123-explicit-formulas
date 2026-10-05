@@ -1,0 +1,17 @@
+INFO DP k<=200 m<=30 [0.7s]
+PASS G1-rec (C2) (1-x-m x^3)G_m=G_{m-1}+m x^2（G_{-1}=1），逐项到 x^200，0<=m<=30 [0.0s] []
+PASS G2-closed (C2) P_m G_m == W_m（逐项到 x^200，m<=30）；x W_m = 1-P_m-x sum_{j<m}P_j（精确，m<=60）；deg P_m=3m+1, deg W_m=3m, lc P_m=(-1)^{m+1}m!, lc W_m=(-1)^m m!（m<=60） [0.1s] []
+PASS G3-order (C2) sum_i [x^i]P_m * U_{k-i}(m) = 0 对 3m+1<=k<=200（DP 数据），0<=m<=30 [0.0s] []
+PASS G4a-gcd-exact (C2 最简性) 精确：gcd(W_i mod b_i, b_i)=1 对 0<=i<=150；W_m≡W_i (mod b_i) 对 0<=i<=m<=24 （两者合起来给出 gcd(W_m,P_m)=1 对 m<=150） [2.4s] []
+PASS G4b-gcd-modp (C2 最简性，模 p 证书) 0<=i<=1000：F_p 上 gcd(W_i mod b_i, b_i)=1（p=1e9+7，失败才换 998244353；p ∤ i），从而 Q 上 W_i 与 b_i 互素，gcd(W_m,P_m)=1 对 m<=1000 [certified=1001; 未在第一个素数上通过的: []; 9.9s]
+PASS G4c-reducible (C2) 有理根逐个试除 b_i(±1/s)（s|i）：1<=i<=3000 中 b_i 可约的恰为 i=y^2(y-1)：[4, 18, 48, 100, 180, 294, 448, 648, 900, 1210, 1584, 2028, 2548] [0.7s] []
+PASS G4d-BM (C2 最简性，独立于闭式) 模 1e9+7 与 998244353 的 Berlekamp–Massey 作用于 DP 数据 U_0..U_{6m+11}(m)：线性复杂度恰为 3m+1、连接多项式 ≡ P_m，0<=m<=30（模 p 复杂度 <= Q 上复杂度 <= 3m+1，故 Q 上恰为 3m+1） [0.1s] []
+PASS G5-sqfree (C2) 无重因子：精确 gcd(b_i,b_i')=1（0<=i<=200）；F_p 上 gcd(P_m,P_m')=1（m<=60，p=1e9+7>m，lc P_m=±m! 非零） [0.2s] []
+PASS G6-growth-num (C2 增长率，数值 decimal 220 位) 1<=m<=20：二分求 rho_m；留数公式 (A) 与 c1 化简式 (B) 相对差<1e-150（实测 2.4e-205）；U_1500(m)/rho^1500 与 (A) 相对差<1e-6（实测 2.1e-09）；c_m>0；|w_m|^2=rho(rho-1)<rho^2 且二次因子判别式<0；P_{m-1}(x_m)=m! x_m^{3m}；rho_m 严格增 [2.2s] []
+INFO exact c_4 = 215/2
+INFO exact c_18 = 37105325714711350249401/6830759936000
+PASS G6-exact (C2) 有理情形精确核对：m=4（rho=2）c_4=645/6，m=18（rho=3）；V_k=U_k(m)-c_m rho^k 被 P_m/(1-rho x) 精确零化（k<=200），留数公式 == c1 化简式；P_{m-1}(x_m)=m! x_m^{3m} [0.0s] []
+PASS G7-Rk-gf R_k=U_k(1)：sum R_k x^k=(1+x^2-x^3)/((1-x)(1-x-x^3))（既约）；R_k=[x^{k+1}](1-x+x^2)/((1-x)(1-x-x^3))；R_k=1+R_{k-1}+R_{k-3}（R_{-1}=1,R_{-2}=0），k<=200 [True True True True; 0.0s]
+TIME r3 total 16.3s
+SUMMARY r-c1-C2 pass=11 fail=0
+EXIT=0

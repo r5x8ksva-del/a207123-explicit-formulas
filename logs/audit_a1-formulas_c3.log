@@ -1,0 +1,20 @@
+PASS C3.poch :: (j+1-λ)_n=(-1)^n x^{-3n} prod_{i=j+1}^{j+n} b_i（5 个有理 x，-1<=j<=5，n<=7）
+PASS T3.1.1F1 :: sum_m t^m/P_m=1F1(1;1-λ;-t/x^3)/(1-x)，t^0..t^10 逐系数（5 个有理 x）
+PASS T3.1.kummer :: Kummer 形式 e^a 1F1(-λ;1-λ;-a)/(1-x) 同上
+PASS T3.1.gamma :: 不完全 Gamma 形式 -x^{-3}e^a sum_n(-a)^n/(n!(n-λ)) 同上
+PASS T3.3.1-sum :: F=sum_j c_j(t^j/b_j)1F1(1;j+1-λ;-t/x^3)，c_0=1,c_j=j x^2：t^m 系数 = W_m/P_m（m<=10，5 个 x）
+PASS T3.3.1-kummer :: F=x^{-3}e^a sum_n φ_n a^n/(λ-n)，φ=e^{-τ}(1-x^5τ/(1+x^3τ)^2)：t^m 系数 = W_m/P_m
+PASS T3.3.2-humbert :: Humbert Φ_1 有限闭式：t^m 系数 = W_m/P_m（m<=10，5 个 x）
+PASS T3.3.2-Ybeta :: Y_β 满足 (A-t)Y-x^3tY_t=(1-t)^{-β}（A=1-x，β=1,2,3，到 t^10）
+PASS T3.2.laplace-F :: F=(1/(1-x))L_s[exp((t/x^3)(e^{us}-1))(1+x^2te^{us}/(1-te^{us})^2)] 在 Q[[x,t]][[s]] 中展开，k<=15, m<=6 与定义 DP 一致
+PASS T3.2.valuation :: [s^N t^m]Ψ 的 x-赋值 >= 3N-3m（N<=12, m<=6, x^15 截断内）
+PASS T3.5.3-laplace :: 1+tF=A^{-1}L_s[exp((t/x^3)(e^{vs}-1))(A+x^2t^2e^{2vs}/(1-te^{vs})^2)]，A=1-x+x^3：k<=15, m<=6 展开一致
+PASS T3.5.1-subst :: 1+tF(x,t)=𝒩(x,t/(1-t))/(1-t) 逐系数, k<=30, m<=15
+PASS T3.5.1-subst2 :: 𝒩(x,y)=1/(1+y)+y F(x,y/(1+y))/(1+y)^2 逐系数, k,q<=30
+PASS T3.5.2-pde :: 𝒩 的 PDE 逐系数, k,q<=30（右端 4 个单项 = 4 个边界修正）
+PASS T3.5.3-yq :: [y^q]𝒩=sum_i(-1)^{q-i}C(q,i)G_{i-1}, q<=11, k<=30
+PASS T3.5.3-humbert :: 𝒩 的 Humbert 闭式：y^q 系数 = sum_i(-1)^{q-i}C(q,i)G_{i-1}(x)（q<=10，5 个有理 x）
+PASS T3.6.subst :: H(z,t)=Σh_k z^k=(1-t)F(z(1-t),t)=1+(𝒩(z(1-t),t/(1-t))-1)/t（逐 z^k，k<=30）
+PASS T3.6.pde :: H 的 PDE 逐 z^k 系数成立, k<=30
+SUMMARY audit_c3 pass=18 fail=0
+elapsed 0.4s

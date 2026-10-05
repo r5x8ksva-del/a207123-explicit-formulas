@@ -1,0 +1,3 @@
+# 仓库里统一用 LF 换行：shell 脚本在 CRLF 下会出错，补丁脚本按精确字符串匹配
+* text=auto eol=lf
+*.sh text eol=lf

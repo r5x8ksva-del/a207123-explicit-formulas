@@ -1,0 +1,2617 @@
+{
+  "summary": "任务C 第一轮：8 个方向并行（C-1 复核、C-2 代数/组合两路、C-3 母函数/D-finite 两路、C-4、C-5 渐近/OEIS 两路）",
+  "agentCount": 8,
+  "logs": [],
+  "result": [
+    {
+      "area": "c1",
+      "stage_conclusion": "C-1 复核完成。第 1 节归约 (a)(b)(c)、引理 1（含全部边界约定）、(C1)–(C7) 的每一条都已独立给出完整证明，写在 notes/c1.md；没有发现实质性错误，所以没有触发「立即停下」。check_c1.py 共 45 条检查，最终运行 pass=45 fail=0，退出码 0，耗时 78.5 s（当时有并行负载）。除两条标明容差的 decimal 数值检查外，全部用精确整数 / Fraction，范围达到或超过要求：k≤60、m≤20，多数扩到 m≤62 或 k≤132；N_brute 到 k≤9；a_direct 到 k≤9、n≤13；a_brute 覆盖全部 n·k≤20。一次性扩展脚本另外核对了 a_direct 的 k=10,11、N_brute 的 k=10,11，以及快速 DP 在 m=21..62 每一整列与参考实现一致。\n\n比提示词更强、已证明的结果：\n(1) 对一切 m≥0 有 gcd(W_m,P_m)=1，所以 U_k(m) 关于 k 的最小线性递推阶恰为 3m+1，最小分母恰为 P_m。b_4=(1−2x)(1+x+2x²)、b_18 等可约（一般地 i=y²(y−1) 时）不引起约分。证明要点：Gauss 引理，加上 W_i(1)=1；b_i 的本原不可约因子中只有 b_1 与 1−2x 满足 d(1)=±1，这两个直接验证。\n(2) 增长率：ρ_m 是 y³=y²+m 的唯一实根；U_k(m)=c_mρ_m^k+O(r_m^k)，c_m=(G_{m−1}(x_m)+m x_m²)/(x_m(1+3m x_m²))>0。\n(3) N(k,k)=2（k≥2），N(k,k−1)=k²−k−4（k≥4）。\n(4) (C4) 的 Θ 公式对 k=0 也成立。\n\n发现的不严谨之处（不影响结论）：(C3) 三角递推的初值不完整；(C6) 的 N 表达式在 k=0 不成立，递推需要 3 个初值；(C4) 的求和范围必须约定；(c) 中 zeta 多项式差一个指标；R_k 与 A038718 的偏移未核对。(C8) 只写了推导链，并轻量核对了 deg p=2k、deg q=2k−2。",
+      "claims": [
+        {
+          "id": "R-abc",
+          "statement": "第1节归约：(a) 列规则 ⇔ b_i≥b_{i+2}，所以 a_k(n)=U_k(⌈n/2⌉)·U_k(⌊n/2⌋)；(b) 列不增矩阵 ↔ 高度向量，且「各行都不是 001/010」⇔ good(a,b,c)（⇔ c≤max(a,b) 且 b≤max(a,c)）；(c) U_k(m) = 允许行偏序集 Λ_k 的 m 元多重链数（按 Stanley 约定为 Z(Λ_k,m+1)）",
+          "level": "已证明",
+          "proof_summary": "(a) 被禁三元组恰为首位 0、末位 1；列规则只耦合同奇偶的行，奇数号行与偶数号行各成不增链，互不约束。(b) 存在某行为 001 ⇔ c>max(a,b)，存在某行为 010 ⇔ b>max(a,c)，再按 b<c、b>c 分情况即得 good。(c) 是定义的改写。见 notes/c1.md 第 1 节",
+          "verified_range": "R1：8 个三元组及长度≤12 的全部 0/1 列；R2：M≤12 的全部高度三元组，以及 mk≤16 的全部 m×k 矩阵（2^(mk) 枚举）；B2：k≤12,m≤15 与 k≤6,m≤40；B3：k≤9,n≤13；B4：全部 n·k≤20（86 对）；扩展脚本 E2：k=10,11（n≤13）与 k≤7（n≤20）",
+          "check_id": "R1-col-rule,R2-heights,B2-dp-vs-multichain,B3-direct-vs-product,B4-brute"
+        },
+        {
+          "id": "BASE",
+          "statement": "基准一致性：core.U_fast_table == 第1节参考实现 U_height_table；第2节 U 表、R_1..R_10、a_3(1..6)=6,36,102,289,612,1296 与原始定义程序一致",
+          "level": "已验证",
+          "proof_summary": "纯程序对照，均为精确整数",
+          "verified_range": "B1：k≤60,m≤20 全表，另抽查 m=30,40 整列；扩展脚本 E1：m=21..62 每一整列（k≤60）；B5：k≤10,m≤6；B6：k≤60；B7：n≤6",
+          "check_id": "B1-fast-vs-height,B5-prompt-table,B6-Rk,B7-a3"
+        },
+        {
+          "id": "L1",
+          "statement": "引理1：对 k≥1、m≥0，U_k(m)=U_k(m−1)+U_{k−1}(m)+m·U_{k−3}(m)，边界约定 U_0≡1、U_{−1}≡1、U_{−2}≡0、U_k(−1)=0（k≥1）",
+          "level": "已证明",
+          "proof_summary": "按最大值 m 首次出现的位置分类：不出现 → U_k(m−1)；位置 1 → U_{k−1}(m)；位置 2 → h_3 被迫为 m，得 m·U_{k−3}(m)（k=2,1 的情形由 U_{−1}、U_{−2} 的约定吸收）；位置≥3 不可能。见第 2 节",
+          "verified_range": "参考实现表 1≤k≤60,0≤m≤20；快速 DP 1≤k≤60,0≤m≤62；分类逐类计数（DFS）1≤k≤8,0≤m≤6",
+          "check_id": "L1-ref,L1-fast,L1-cases"
+        },
+        {
+          "id": "C1-sum",
+          "statement": "(C1) 对 k≥1：U_k(m)=Σ_{j=0}^{m}[U_{k−1}(j)+j·U_{k−3}(j)]",
+          "level": "已证明",
+          "proof_summary": "引理1 对 j=0..m 望远镜求和，并用 U_k(−1)=0",
+          "verified_range": "1≤k≤60, 0≤m≤62",
+          "check_id": "C1-sum"
+        },
+        {
+          "id": "C1-poly",
+          "statement": "(C1) 存在唯一 u_k∈Q[x] 使 u_k(m)=U_k(m)（m≥0）；deg u_k=k；首项系数 2/k!（k≥2；k=0,1 为 1）；u_k(−1)=0（k≥1）；并有多项式恒等式 u_k(x)−u_k(x−1)=u_{k−1}(x)+x·u_{k−3}(x)",
+          "level": "已证明",
+          "proof_summary": "求和引理：f 的次数为 d、首项为 c 时，存在唯一 S 满足 S(x)−S(x−1)=f 且 S(−1)=0，deg S=d+1，lc S=c/(d+1)（用 Newton 基 C(x+1,j+1) 构造）。对 k 归纳：f_k=u_{k−1}+x u_{k−3} 的次数为 k−1，首项 = lc u_{k−1}（k≥4），k=1,2,3 直接计算",
+          "verified_range": "每个 0≤k≤60：用 m=0..62（≥k+3 个点）做 Newton 前向差分，检查 Δ^{k+1}≡0、Δ^kU_k(0)=2、u(−1)=0；单项式基插值交叉核对 k≤20",
+          "check_id": "C1-poly,C1-poly-monomial"
+        },
+        {
+          "id": "C2-rec-closed",
+          "statement": "(C2) (1−x−m x³)G_m=G_{m−1}+m x²（G_{−1}=1）；G_m=W_m/P_m，W_m=1+x²Σ_{j=1}^{m} j·P_{j−1}，且 x·W_m=1−P_m−xΣ_{j<m}P_j（即 x·P_m·G_m=1−P_m−xΣ_{j<m}P_j）",
+          "level": "已证明",
+          "proof_summary": "引理1 乘 x^k 对 k≥1 求和即得递推；对 m 归纳，用 m x³=1−x−b_m 与 b_mP_{m−1}=P_m。见 4.1、4.2 节",
+          "verified_range": "0≤m≤20，级数逐项到 x^132；多项式恒等式精确成立",
+          "check_id": "C2-rec,C2-closed"
+        },
+        {
+          "id": "C2-order",
+          "statement": "(C2) deg P_m=3m+1，lc P_m=(−1)^{m+1}m!，deg W_m=3m，lc W_m=(−1)^m m!，所以 U_k(m) 对 k≥3m+1 满足以 P_m 为特征多项式的 3m+1 阶递推",
+          "level": "已证明",
+          "proof_summary": "W_m 的最高次项只来自 j=m 一项；结合 P_m(0)=1 即得递推",
+          "verified_range": "0≤m≤20，3m+1≤k≤132（直接作用于 DP 数据）",
+          "check_id": "C2-order,C2-closed"
+        },
+        {
+          "id": "C2-minimal",
+          "statement": "(C2 最简性) 对一切 m≥0，gcd(W_m,P_m)=1；所以最小线性递推阶恰为 3m+1，最小特征多项式恰为 P_m。b_i 在 Q 上可约当且仅当 i=y²(y−1)（i=4,18,48,…，b_i=(1−yx)(1+(y−1)x+y(y−1)x²)），这不引起任何约分",
+          "level": "已证明",
+          "proof_summary": "W_m≡W_i (mod b_i)；W_i(1)=1；若本原不可约因子 d 整除 W_i，由 Gauss 引理得 d(1) | W_i(1)=1。b_i 的不可约因子在 1 处的值为 −i、1−y、y²，所以只有 b_1 与 1−2x 满足 d(1)=±1，这两个直接验证：W_1−b_1=x+x²，W_4(1/2)=645/512。最后用有理序列最小阶引理",
+          "verified_range": "直接 gcd：m≤20；Berlekamp–Massey 直接作用于 DP 数据（与闭式无关）：m≤20，线性复杂度恰为 3m+1；证明各成分：i≤60",
+          "check_id": "C2-gcd,C2-BM,C2-allm-ingredients"
+        },
+        {
+          "id": "C2-sqfree",
+          "statement": "P_m 无重因子：b_i 两两互素，z³−z²−i 的判别式为 −i(4+27i)<0；所以 G_m 的极点全是单极点",
+          "level": "已证明",
+          "proof_summary": "若 b_i、b_j 有公共根，则 (i−j)x³=0，与 b_i(0)=1 矛盾；判别式用三次式的标准公式计算",
+          "verified_range": "每个 b_i 与 b_i' 互素，i≤60；判别式，i≤60；两两互素，i<j≤20；直接验证 gcd(P_m,P_m')=1，m≤8",
+          "check_id": "C2-sqfree"
+        },
+        {
+          "id": "C2-growth",
+          "statement": "(C2 增长率) m≥1 时 ρ_m 是 y³=y²+m 的唯一实根；U_k(m)=c_mρ_m^k+O(r_m^k)，r_m<ρ_m，c_m=(G_{m−1}(x_m)+m x_m²)/(x_m(1+3m x_m²))>0，x_m=1/ρ_m；另有 P_{m−1}(x_m)=m!·x_m^{3m}",
+          "level": "已证明",
+          "proof_summary": "ρ_i 严格增；复根模长满足 |w_i|²=i/ρ_i<ρ_i²，所以 x_m 是 P_m 唯一的模最小根。结合既约与无重根，得单极点且留数非零；c_m>0 由 G_{m−1} 系数为正且在 x_m 处收敛得到",
+          "verified_range": "数值检查（decimal）：|U_2001/U_2000−ρ_m|<1e-9（实测 6.1e-14），|U_2000/(c_mρ_m^2000)−1|<1e-8（实测 1.3e-12），1≤m≤20",
+          "check_id": "C2-growth,C2-cm"
+        },
+        {
+          "id": "Rk-gf",
+          "statement": "Σ_k R_k x^k=G_1=(1+x²−x³)/((1−x)(1−x−x³))（既约），等价于 R_k=[x^{k+1}](1−x+x²)/((1−x)(1−x−x³))；R_k=1+R_{k−1}+R_{k−3}",
+          "level": "已证明",
+          "proof_summary": "(C2) 闭式在 m=1 的特例，既约性由 C2-minimal 给出",
+          "verified_range": "k≤60",
+          "check_id": "B6-Rk"
+        },
+        {
+          "id": "Rk-OEIS",
+          "statement": "R_k=A038718(k+2)（提示词说法）",
+          "level": "未完成",
+          "proof_summary": "取决于 A038718 的偏移：若该条目从下标 0 起用 g.f.(1−x+x²)/((1−x)(1−x−x³))，则应为 A038718(k+1)。OEIS 查询属于 c5b，本任务未查询",
+          "verified_range": "只核对了 g.f. 关系（见 Rk-gf）",
+          "check_id": "B6-Rk"
+        },
+        {
+          "id": "C3-basis",
+          "statement": "(C3) U_k(m)=Σ_{q=0}^{k} N(k,q)·C(m+1,q)，N(k,q) 为长 k、值域恰为 q 个值的合法词数（只依赖大小关系）；N(k,q)=Δ^q u_k(−1)=Σ_i(−1)^{q−i}C(q,i)U_k(i−1)；N(k,q)=0（q>k），N(k,0)=0（k≥1）",
+          "level": "已证明",
+          "proof_summary": "按值域分类，结合保序不变性；{C(x+1,q)} 是 Q[x] 的基，展开系数唯一，即以 −1 为基点的 Newton 差分",
+          "verified_range": "二项式基：k≤60,m≤62；零值：k<q≤63；DFS 定义（N_brute）：k≤9，扩展脚本 E3 到 k=10,11；提示词三角形 k≤10",
+          "check_id": "C3-basis,C3-zero,C3-brute,C3-prompt"
+        },
+        {
+          "id": "C3-tri",
+          "statement": "(C3) 对 k≥3：N(k,r+1)=N(k−1,r)+N(k−1,r+1)+r[N(k−3,r−1)+2N(k−3,r)+N(k−3,r+1)]",
+          "level": "已证明",
+          "proof_summary": "最大值 q 首次出现在位置 1 或 2。位置 1：尾巴值域为 {1..q} 或 {1..q−1}。位置 2：w_3=q 被迫，尾巴分 A 类（含全部较小值）、B 类（恰缺 a），各分含 q 与不含 q 两种，共 6 类",
+          "verified_range": "3≤k≤60, 0≤r≤k；6 类逐类计数（DFS）3≤k≤8",
+          "check_id": "C3-tri,C3-cases"
+        },
+        {
+          "id": "C3-init",
+          "statement": "三角递推需要 k=1,2 两行作初值（只给 N(0,0)=1 加零边界，在 k=2,r=1 处得 N(2,2)=1≠2）；若约定 N(−1,0)=1、N(−2,·)=0，递推对 k≥1 全部成立",
+          "level": "已证明",
+          "proof_summary": "直接代入 k=1,2 验证",
+          "verified_range": "1≤k≤60",
+          "check_id": "C3-init"
+        },
+        {
+          "id": "C3-diag",
+          "statement": "N(k,k)=2（k≥2）",
+          "level": "已证明",
+          "proof_summary": "递推中取 r=k−1，得 N(k,k)=N(k−1,k−1)；又 N(2,2)=2。组合上，合法排列必须满足 w_1>…>w_{k−1} 且 w_k∈{1,2}",
+          "verified_range": "2≤k≤60",
+          "check_id": "C3-diag"
+        },
+        {
+          "id": "C3-subdiag",
+          "statement": "N(k,k−1)=k²−k−4（k≥4；k=3 时 N=4）",
+          "level": "已证明",
+          "proof_summary": "取 r=k−2，得 N(k,k−1)=N(k−1,k−2)+N(k−1,k−1)+(k−2)N(k−3,k−3)，k≥5 时增量为 2k−2；N(4,3)=8；归纳",
+          "verified_range": "4≤k≤60",
+          "check_id": "C3-diag"
+        },
+        {
+          "id": "C4-c",
+          "statement": "c_i(n)=[x^n]1/(1−x−ix³)=Σ_{0≤j≤n/3}C(n−2j,j)i^j（0^0=1）",
+          "level": "已证明",
+          "proof_summary": "展开 Σ(x+ix³)^ℓ 后取 x^n 系数",
+          "verified_range": "0≤i≤20, 0≤n≤125",
+          "check_id": "C4-c"
+        },
+        {
+          "id": "C4-S",
+          "statement": "[x^n]1/P_m=Σ_{s=0}^{⌊n/3⌋}S(m+s,m)C(n+m−2s,m+s)",
+          "level": "已证明",
+          "proof_summary": "令 u=x³/(1−x)，则 b_i=(1−x)(1−iu)，再用 ∏(1−iu)^{−1}=Σ S(m+s,m)u^s",
+          "verified_range": "0≤m≤20, 0≤n≤60",
+          "check_id": "C4-S"
+        },
+        {
+          "id": "C4-generalized",
+          "statement": "若把 (C4) 中的 Σ_{s≥0}、Σ_j 按广义二项式系数（a<0 时 C(a,b)≠0）求和到 n/3 以外，公式仍成立",
+          "level": "已否定",
+          "proof_summary": "反例：m=1,n=0 时 s=1 项 S(2,1)C(−1,2)=1、s=2 项 S(3,1)C(−3,3)=−10；c_5(1) 会变成 1−5=−4（真值 1）。所以必须限制 3s≤n、3j≤n，或约定 a<b 时 C(a,b)=0",
+          "verified_range": "上述具体反例",
+          "check_id": "C4-convention"
+        },
+        {
+          "id": "C4-pf",
+          "statement": "m!·[x^n]1/P_m=Σ_i(−1)^{m−i}C(m,i)c_i(n+3m)；0≤N<3m 时右边的和为 0",
+          "level": "已证明",
+          "proof_summary": "对节点 0..m 做部分分式：∏(z−i)^{−1} 代入 z=(1−x)/x³，得 x^{3m}/P_m=Σ w_i/b_i",
+          "verified_range": "0≤m≤20, −3m≤n≤60",
+          "check_id": "C4-pf"
+        },
+        {
+          "id": "C4-theta",
+          "statement": "U_k(m)=Θ_m(k+1+3m)−Σ_{t<m}Θ_t(k+3t)，对 k≥0 成立（提示词只写 k≥1）；Θ_t(n+3t)=[x^n]∏_{i=m−t}^{m}b_i^{−1}=[x^n]P_{m−t−1}/P_m",
+          "level": "已证明",
+          "proof_summary": "由 G_m=1/(xP_m)−1/x−Σ_j P_j/P_m，对每段节点 m−t..m 做部分分式",
+          "verified_range": "0≤k≤60, 0≤m≤20（Fraction 精确，对照参考实现 DP），所有 Θ 值均为整数；中间恒等式 0≤t≤m≤20, k≤60",
+          "check_id": "C4-theta,C4-theta-mid"
+        },
+        {
+          "id": "C5",
+          "statement": "(1−x−t)F−x³t∂F/∂t=1+x²t/(1−t)²",
+          "level": "已证明",
+          "proof_summary": "(C2) 的递推乘 t^m 对 m≥0 求和",
+          "verified_range": "逐项 0≤k≤60, 0≤m≤20",
+          "check_id": "C5-pde"
+        },
+        {
+          "id": "C6",
+          "statement": "Σ_mU_k(m)t^m=h_k/(1−t)^{k+1}；k≥1 时 h_k=Σ_qN(k,q)t^{q−1}(1−t)^{k−q}，h_0=1 单列；k≥3 时 h_k=h_{k−1}+t(1−t)[(1−t)h'_{k−3}+(k−2)h_{k−3}]，初值 h_0=1,h_1=1,h_2=1+t",
+          "level": "已证明",
+          "proof_summary": "Σ_mC(m+1,q)t^m=t^{q−1}/(1−t)^{q+1}（q≥1）；引理1 乘 t^m 求和得 (1−t)f_k=f_{k−1}+t f'_{k−3}",
+          "verified_range": "0≤k≤60，三种算法完全一致：递推、N 表达式、(1−t)^{k+1}·DP（截断到 t^62）",
+          "check_id": "C6-h"
+        },
+        {
+          "id": "C6-explicit",
+          "statement": "h_3=1+2t−t²，h_4=1+4t−3t²，h_5=1+8t−5t²−2t³，h_6=1+14t−7t²−8t³+2t⁴；h_k(1)=N(k,k)=2（k≥2）",
+          "level": "已证明",
+          "proof_summary": "由递推逐项计算；t=1 时只剩 q=k 一项",
+          "verified_range": "显式值 k=3..6；h_k(1)=2，2≤k≤60",
+          "check_id": "C6-explicit"
+        },
+        {
+          "id": "C7",
+          "statement": "Num_q=P_{q−1}·Σ_kN(k,q)x^k 是次数恰为 3q−2 的多项式，首项系数 (q−1)!，最低次项 2x^q（q≥2；q=1 时为 x）；q=1..4 的分子与提示词一致",
+          "level": "已证明",
+          "proof_summary": "由容斥得 Num_q=Σ_i(−1)^{q−i}C(q,i)W_{i−1}∏_{v=i}^{q−1}b_v，只有 i=0 项达到次数 3q−2，首项 (−1)^q·lc P_{q−1}=(q−1)!；最低项来自 N(q,q)=2",
+          "verified_range": "1≤q≤20（N 由 DP 容斥，k≤90；x^{3q−1}..x^90 系数全为 0）；给定分子 q≤4",
+          "check_id": "C7-poly,C7-given"
+        },
+        {
+          "id": "C7-rec",
+          "statement": "q≥3 时 Num_q=(x+2(q−1)x³)Num_{q−1}+(q−1)x³b_{q−2}Num_{q−2}；容斥表达式（见 C7）作为精确多项式成立",
+          "level": "已证明",
+          "proof_summary": "q≥3 时三角递推对所有 k 成立，化为生成函数后乘 P_{q−2}",
+          "verified_range": "容斥表达式 1≤q≤20；递推 3≤q≤20",
+          "check_id": "C7-ie-rec"
+        },
+        {
+          "id": "C8",
+          "statement": "(C8) 推导链：a_k(n)=p(n)+(−1)^n q(n)，deg p=2k，lc p=c²/4^k；deg q=2k−2，lc q=c²k/(2·4^k)（c=lc u_k）；所以 g.f. 的最简分母为 (1−x)^{2k+1}(1+x)^{2k−1}，最小递推阶为 4k（A）。B 的 OEIS 经验递推由其他子任务核对",
+          "level": "已证明",
+          "proof_summary": "E=u(n/2)²，O=u((n+1)/2)u((n−1)/2)；对 h=1/2 展开 u(y+h)u(y−h)，u'²−uu'' 的首项为 c²k y^{2k−2}；分子在 x=±1 处不为零",
+          "verified_range": "轻量核对 1≤k≤15：次数、首项，以及在 n≤4k+11 逐点成立",
+          "check_id": "C8-pq"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "(C3) 三角递推的初值不完整：提示词只写「k≥3，N(0,0)=1，越界取 0」。若把递推用到 k=2 并取零边界，r=1 时右边 N(1,1)+N(1,2)+1·0=1，而真值 N(2,2)=2（词 12、21）。应给出 N(1,1)=1、N(2,1)=1、N(2,2)=2；或约定 N(−1,0)=1、N(−2,·)=0（与 U_{−1}≡1、U_{−2}≡0 对应），此时递推对 k≥1 全部成立（check C3-init）。",
+        "(C6) 边界：h_k=Σ_q N(k,q)t^{q−1}(1−t)^{k−q} 在 k=0 给出 t^{−1}≠h_0=1，只对 k≥1 成立；k≥3 的递推需要 h_0=1、h_1=1、h_2=1+t 三个初值，提示词只给了 h_0=1。",
+        "(C4) 求和范围：Σ_{s≥0} 与 c_i(n)=Σ_j 必须是 0≤s≤⌊n/3⌋、0≤j≤⌊n/3⌋ 的有限和，或约定 a<b 时 C(a,b)=0（含 a<0，与 core.binom 一致）。按广义二项式理解则公式错误：m=1、n=0 时 s=1 项 S(2,1)C(−1,2)=1、s=2 项 S(3,1)C(−3,3)=−10，均不为 0；c_5(1) 会变成 −4（真值 1）。另需 0^0=1（c_0≡1）（check C4-convention）。",
+        "归约 (c) 的「zeta 多项式的取值」差一个指标：Stanley 约定下 Z(P,n) 数 x_1≤…≤x_{n−1}，所以 U_k(m)=Z(Λ_k,m+1)。",
+        "「R_k=A038718(k+2)」依赖 OEIS 偏移，无法在 C-1 核对。能证明的是 Σ_kR_kx^k=(1+x²−x³)/((1−x)(1−x−x³))，即 R_k=[x^{k+1}](1−x+x²)/((1−x)(1−x−x³))；若 A038718 从下标 0 起用该 g.f.，应为 A038718(k+1)。",
+        "(C7)「最低次项 2x^q」只对 q≥2 成立（q=1 时为 x）。提示词列出的 q=1 分子与此一致，只是一般陈述缺少 q≥2 这一条件。",
+        "低估（不是错误）：(C2) 的最小递推阶对一切 m 恰为 3m+1，不只是 ≤3m+1；「ρ_m 未证」与「N(k,k−1) 未证」现已证明；(C4) 的 Θ 公式对 k=0 也成立。",
+        "草稿 00 中与 C-1 相关的部分我都独立重推并用程序核对过，未发现错误。这些部分包括：引理1 证明、(C1) 首项论证、(C2) 的 H_m 归纳、(C3) 位置 2 分类、N(k,k) 与 N(k,k−1) 的推导、(1−t)f_k=f_{k−1}+tf'_{k−3}、Num_q 三项递推与 L_q=(q−1)!、c_m 公式。"
+      ],
+      "failed_directions": [
+        "用正性论证证明 (C2) 最简性对复根也成立：失败。b_i 的复根模长 √(ρ_i/i) 大于 G_{i−1} 的收敛半径 1/ρ_{i−1}（数值上 1≤i≤60 全部如此，例如 i=20 为 0.3932 对 0.3282；见 code/c1/explore_complex_roots.py 与 logs/c1_explore_complex_roots.log），所以 G_{i−1}(α) 的正性用不上。改为：b_i 不可约时，由实根处 W_i≠0 推出 b_i 不整除 W_i；可约情形用 Gauss 引理加 W_i(1)=1 处理。最终得到对一切 m 的完整证明。",
+        "对 m≤20 直接用 Fraction 欧几里得算 gcd(P_m,P_m') 耗时 54 秒（系数膨胀），已换成与 4.5 节证明一一对应的逐因子检查（各 b_i 无重根、两两互素、判别式公式），只对 m≤8 保留直接计算。",
+        "把 a_direct 的 k=10,11、N_brute 的 k=10,11、快速 DP 的 m=21..62 整列都放进核对模块时，并行负载下总耗时达到 119 秒，贴近 120 秒预算。这些扩展范围已移到一次性脚本 code/c1/extended_checks.py（日志 logs/c1_extended.log，E1–E3 全部 PASS，负载下约 187 秒），核对模块仍覆盖任务要求的全部范围。",
+        "没有做（属于其他子任务）：(C5) 的显式解（1F1 / Laplace 型积分）与 D-finite 性（C-3）；c_m 的进一步化简与渐近常数（C-5）；A、B 的 OEIS 递推正式核对。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c1.py",
+      "check_run_output_tail": "PASS C6-explicit (C6) h_3=1+2t-t^2, h_4=1+4t-3t^2, h_5=1+8t-5t^2-2t^3, h_6=1+14t-7t^2-8t^3+2t^4；另 h_k(1)=N(k,k)=2（2<=k<=60） [explicit=True h_k(1)=2:True; 0.0s]\nPASS C7-poly (C7) P_{q-1}*sum_k N(k,q)x^k（N 由 DP 容斥，k<=90）是多项式：x^{3q-1}..x^90 系数全 0，次数恰 3q-2，首项 (q-1)!，最低项 2x^q（q>=2；q=1 为 x），1<=q<=20 [0.0s]\nPASS C7-given (C7) q=1..4 的分子：x；2x^2+x^4；2x^3+2x^4+7x^5+2x^7；2x^4+8x^5+13x^6+15x^7+29x^8+6x^10 [0.0s]\nPASS C7-ie-rec (C7 证明所用的两个恒等式) Num_q = sum_i (-1)^{q-i}C(q,i) W_{i-1} prod_{v=i}^{q-1} b_v（1<=q<=20）；Num_q = (x+2(q-1)x^3)Num_{q-1} + (q-1)x^3 b_{q-2} Num_{q-2}（3<=q<=20） [0.0s]\nPASS C8-pq (C8 推导链) 由 DP 数据插值：a_k(n)=U_k(ceil(n/2))U_k(floor(n/2)) = p(n)+(-1)^n q(n)，deg p=2k、deg q=2k-2，lc(p)=c^2/4^k、lc(q)=c^2 k/(2*4^k)（c=lc(u_k)），对 n<=4k+11 逐点成立，1<=k<=15 [0.2s]\nTIME c1 total 78.5s\nSUMMARY c1 pass=45 fail=0\n（45 行 PASS、0 行 FAIL、退出码 0；从 /c/Users 目录运行；完整输出见 logs/c1_check_final.log）",
+      "check_runtime_seconds": 78.5,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c1.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c1\\explore_c2_gcd.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c1\\explore_complex_roots.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c1\\extended_checks.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_check_final.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_extended.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_explore_c2_gcd.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_explore_complex_roots.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_check_run1.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c1_check_run2.log"
+      ],
+      "uncertainties": [
+        "R_k 与 A038718 的偏移（k+1 还是 k+2）没有查询 OEIS，取决于该条目的 offset，归 c5b。",
+        "C2-growth 与 C2-cm 是数值检查（decimal 60/150 位，容差 1e-9/1e-8），不是精确证明。4.6 节的证明本身完整，依赖 4.4（最简性）与 4.5（无重根），这两者都有完整证明和精确核对。",
+        "核对模块耗时受并行负载影响：最终版在负载下为 78.5 s，其中 B4 约 50 s，空闲时此前实测约 30 s。旧版曾在负载下达到 119 s，因此把超出要求的扩展范围移到了 extended_checks.py。若 verify_all 并行运行多个模块，耗时可能再上升。",
+        "模块内快速 DP 在 m>20 只与参考实现抽查 m=30,40；m=21..62 每一整列的一致性由扩展脚本 E1 核对，不在 check 模块中重跑。这些列只用于加强核对（多项式性、N 的零值、二项式基），相关陈述均已证明。",
+        "logs/c1_check_run1.log、c1_check_run2.log 是旧版模块的输出（42 条），以 c1_check_final.log（45 条）为准。我只读查阅了主 Agent 的 notes/01-主Agent补充.md 与 code/checks/check_c0.py 以对齐格式，未读写其他子 Agent 的文件，未写 Obsidian。"
+      ]
+    },
+    {
+      "area": "c2a",
+      "stage_conclusion": "C-2（代数路线）已完成，结论如下。(1)【已证明】(1/t!)∇^t i^p|_{i=m} = h_{p−t}(m−t..m)，也就是 Broder r-Stirling 数 {p+m−t ⧵ m}_{m−t}。证明只用到有理函数恒等式 Σ_r(−1)^rC(t,r)/(1−(m−r)z) = t!z^t/∏(1−(m−r)z)。核对分三路：集合分拆暴力枚举（n≤9）、递推、母函数，都与 core.h_complete 比对。(2)【已证明】提示词 (C4) 的 Θ_t(n) 等于 Γ_m(n−3t;m−t) = [x^{n−3t}]∏_{v=m−t}^m b_v^{−1}。把 c_i 展开后，它和草稿 §2 的内层和逐项相同（第 p 项对应第 s=p−t 项）。但两条公式的外层并不逐项相同。Θ 公式的外层是 [x^{k+1}]1/P_m − Σ_{j≥1}[x^k]Q_j（下称 F3 外层），H 公式的外层是 [x^k]1/P_m + Σ_j j[x^{k−2}]Q_j。二者相等靠的是望远镜恒等式 j x³Q_j=(1−x)Q_j−Q_{j+1}，也可以用双射 φ 给出组合证明。反例：m=1,k=3 时 Θ 公式两项为 (8,−2)，H 公式两项为 (5,1)，和都是 6。(3)【已证明，并已验证】以下各形式都对照定义 DP 跑过 k≤30,m≤12、k≤60,m≤20 和 k≤200,m≤30，全部相等：Θ 型、H 型、F3 型、H 外层+c_i 内层、Γ 单和型，以及新得到的 c_i 偏分式型 F4：U=(1/m!)Σ_i(−1)^{m−i}C(m,i)[c_i(k+3m)+Σ_{j≤i} j·i^{(j)}·c_i(k+3m−3j−2)]。(4)【已证明】定理 S：对每个 m≥1，不存在与 k 无关的系数 A(s) 使 U_k(m)=Σ_s A(s)C(k+c−2s,m+s+d) 对充分大的 k 成立。证明思路是：先化成母函数，再在 b_1 的三个根处比较留数，最后用 N(1+ξ)=3 不是有理数的立方得出矛盾。用同样的方法还排除了 C(k+c−αs,βs+d) 型（α≥1 且 α+β 为偶数，以及 (3,0)）。两族表示在 |g_i+3m+3|≤150 范围内被排除（已验证），对所有 g 都不存在只是猜想。另外证明了 Σ_{j<m}P_j 不是 Gosper 可和的，以及 F(x,t) 不是 D-finite。(5) 我的判断：最短的显式公式是 H 型双和（全正、无除法，每项都有组合意义），F3 型同样短。在单族形状内已不可能更短。(6) 计算建议：算整张表用引理 1 递推（k≤200,m≤30 时约 0.003 s，各显式公式约 0.3–1.6 s）。m 大时 Θ/F4 会出现严重的交错抵消，例如 k=m=300 单值时 Θ 需 138 s，H 只需 0.25 s。k 小、m 大时用 N 三角。(7) N(k,q) 可由 H 型做二项式反演得到，已证明并核对；没有找到更短的形式。",
+      "claims": [
+        {
+          "id": "c2a-dp",
+          "statement": "对照基准锚定：core.U_fast_table 等于参考实现 U_list（k≤30,m≤12），也等于多重链定义（k≤7,m≤4）；且 a_direct(n,k)=U_k(⌈n/2⌉)U_k(⌊n/2⌋)（k≤4,n≤8）",
+          "level": "已验证",
+          "proof_summary": "直接程序比对",
+          "verified_range": "k≤30,m≤12；多重链 k≤7,m≤4；直接计数 k≤4,n≤8",
+          "check_id": "dp_anchor"
+        },
+        {
+          "id": "c2a-rS-def",
+          "statement": "Broder r-Stirling 数：{n⧵k}_r（{1..n} 分成 k 块，且 1..r 两两异块的分拆数）在 r≤k≤n 时等于 h_{n−k}(r..k)，在 k<r 时为 0",
+          "level": "已证明",
+          "proof_summary": "双射：按 r+1..n 的顺序放元素，每个元素或新开一块，或加入当前 c 块之一（c 种选法）；加入时的块数弱增、取值于 {r..k}，对全部记录求和即得 h_{n−k}(r..k)",
+          "verified_range": "暴力枚举全部集合分拆，0≤r≤k≤n≤9",
+          "check_id": "rstirling_def"
+        },
+        {
+          "id": "c2a-rS-gf",
+          "statement": "Σ_n {n⧵k}_r z^n = z^k/∏_{i=r}^k(1−iz)；递推 {n⧵k}_r = k{n−1⧵k}_r + {n−1⧵k−1}_r；h_s(0..m)=h_s(1..m)=S(m+s,m)",
+          "level": "已证明",
+          "proof_summary": "由 h 的母函数直接得到；递推按元素 n 是否单独成块分类",
+          "verified_range": "递推 n≤30；母函数取 21 项，r≤k≤10；S 恒等式 m,s≤20",
+          "check_id": "rstirling_rec_gf"
+        },
+        {
+          "id": "c2a-rS-cross",
+          "statement": "Broder 跨层恒等式 h_s(j..m)=Σ_t C(m−j+s,m−j+t)·S(m−j+t,m−j)·j^{s−t}",
+          "level": "已证明",
+          "proof_summary": "利用 1−(j+i)z=(1−jz)(1−iz/(1−jz)) 对生成函数换元",
+          "verified_range": "0≤j≤m≤20, s≤20",
+          "check_id": "rstirling_cross"
+        },
+        {
+          "id": "c2a-T2",
+          "statement": "(1/t!)∇^t i^p|_{i=m} = h_{p−t}(m−t..m) = {p+m−t⧵m}_{m−t}（p<t 时三者均为 0；约定 0^0=1）",
+          "level": "已证明",
+          "proof_summary": "先对 t 归纳证明 Q[[z]] 中的恒等式 Σ_r(−1)^rC(t,r)/(1−(m−r)z)=t!z^t/∏_{r=0}^t(1−(m−r)z)（用 Pascal 公式，两相邻分母之差为 (t+1)z），再取 z^p 系数并用引理 2.1",
+          "verified_range": "0≤t≤m≤20, 0≤p≤40",
+          "check_id": "nabla_rstirling"
+        },
+        {
+          "id": "c2a-T3i",
+          "statement": "Σ_{r=0}^t(−1)^rC(t,r)/b_{m−r} = t!x^{3t}/∏_{v=m−t}^m b_v（b_v=1−x−vx³）",
+          "level": "已证明",
+          "proof_summary": "对 t 归纳，b_{m−t−1}−b_m=(t+1)x³；也可在 (★) 中代入 z=u=x³/(1−x)",
+          "verified_range": "0≤t≤m≤20，作为多项式恒等式精确核对",
+          "check_id": "theta_rational_identity"
+        },
+        {
+          "id": "c2a-T3",
+          "statement": "Θ_t(n) = [x^{n−3t}]∏_{v=m−t}^m b_v^{−1} = Σ_s h_s(m−t..m)C(n−2t−2s,t+s)，且与 c_i 展开逐项相同（p=s+t）",
+          "level": "已证明",
+          "proof_summary": "取上一条恒等式的 x^n 系数；交换有限和后用定理 2",
+          "verified_range": "m≤12, t≤m, 0≤n<3t+45，与级数除法结果对照",
+          "check_id": "theta_inner"
+        },
+        {
+          "id": "c2a-T1",
+          "statement": "唯一块分解：合法序列恰是若干 S=[v] 块与 T=[a,v,v](a<v) 块的串联（等级弱减），末尾可再接一个 E=[a,j](a<j) 块，且分解唯一",
+          "level": "已证明",
+          "proof_summary": "最大值首次出现在位置 1 或 2；串联中每个三元组或以等级元开头，或就是 (a,v,v)；对长度归纳证明存在性与唯一性",
+          "verified_range": "全部 (m+1)^k 个序列暴力核对，m≤3, k≤7",
+          "check_id": "block_factorization"
+        },
+        {
+          "id": "c2a-C11",
+          "statement": "G_m = 1/P_m + x²Σ_{j=1}^m j/∏_{v=j}^m b_v = W_m/P_m，其中 W_m=1+x²Σ_j jP_{j−1}",
+          "level": "已证明",
+          "proof_summary": "由块分解直接写出生成函数：等级为 v 的块的生成函数是 x+vx³，E 块等级 j 时有 j 种",
+          "verified_range": "逐项对照 DP，k≤60, m≤20",
+          "check_id": "gf_blocks"
+        },
+        {
+          "id": "c2a-C12",
+          "statement": "Γ_m(n;j):=[x^n]∏_{v=j}^m b_v^{−1} = Σ_s h_s(j..m)C(n+m−j−2s,m−j+s)；满足三角递推 Γ_m(n;j)=Γ_{m−1}(n;j)+Γ_m(n−1;j)+mΓ_m(n−3;j)；且 U=Γ_m(k;0)+Σ_j jΓ_m(k−2;j)",
+          "level": "已证明",
+          "proof_summary": "利用 b_v=(1−x)(1−vu)，u=x³/(1−x)，展开 ∏(1−vu)^{−1}=Σh_s u^s；递推来自 b_m·Q^{(m)}=Q^{(m−1)}",
+          "verified_range": "k≤60, m≤20",
+          "check_id": "gamma_triangle"
+        },
+        {
+          "id": "c2a-F2",
+          "statement": "H 型（草稿 §2）：U_k(m)=Σ_s S(m+s,m)C(k+m−2s,m+s)+Σ_{j=1}^m jΣ_s h_s(j..m)C(k−2+m−j−2s,m−j+s)",
+          "level": "已证明",
+          "proof_summary": "由推论 1.1 与 1.2 得到；第一项计不以上升结尾的序列，第二项计以 E_j 结尾的序列",
+          "verified_range": "对照 DP：k≤30,m≤12 与 k≤60,m≤20；另在 k≤200,m≤30 内对照",
+          "check_id": "form_H"
+        },
+        {
+          "id": "c2a-F3",
+          "statement": "F3 型：U_k(m)=Σ_s S(m+s,m)C(k+1+m−2s,m+s) − Σ_{j=1}^m Σ_s h_s(j..m)C(k+m−j−2s,m−j+s)",
+          "level": "已证明",
+          "proof_summary": "在 H 型基础上用望远镜恒等式改写外层；也可由双射 φ 用补集计数得到",
+          "verified_range": "对照 DP：k≤30,m≤12 与 k≤60,m≤20",
+          "check_id": "form_F3"
+        },
+        {
+          "id": "c2a-F1",
+          "statement": "提示词 (C4) 的 Θ 公式 U=Θ_m(k+1+3m)−Σ_{t<m}Θ_t(k+3t) 对所有 k≥0 成立（提示词只写了 k≥1）",
+          "level": "已证明",
+          "proof_summary": "取 F3 外层，再代入定理 3(ii)",
+          "verified_range": "对照 DP：k≤30,m≤12 与 k≤60,m≤20（含 k=0）",
+          "check_id": "form_Theta"
+        },
+        {
+          "id": "c2a-F5",
+          "statement": "H 外层 + c_i 内层：U=Θ_m(k+3m)+Σ_{j=1}^m j·Θ_{m−j}(k−2+3(m−j))",
+          "level": "已证明",
+          "proof_summary": "定理 3(ii) 与 H 外层合并",
+          "verified_range": "对照 DP：k≤60, m≤20",
+          "check_id": "form_ThetaH"
+        },
+        {
+          "id": "c2a-F4",
+          "statement": "新的 c_i 偏分式型：U_k(m)=(1/m!)Σ_{i=0}^m(−1)^{m−i}C(m,i)[c_i(k+3m)+Σ_{j=1}^i j·i^{(j)}·c_i(k+3m−3j−2)]，其中 i^{(j)} 为下降阶乘",
+          "level": "已证明",
+          "proof_summary": "由 Σ_i(−1)^{m−i}C(m,i)/b_i=m!x^{3m}/P_m 得 m!x^{3m}G_m=Σ_i(±)C(m,i)W_m/b_i；再用 W_m ≡ 1+Σ_j j·i^{(j)}x^{3j+2} (mod b_i)，商的次数 ≤3m−1，不影响 x^{k+3m} 系数",
+          "verified_range": "对照 DP：k≤30,m≤12 与 k≤60,m≤20",
+          "check_id": "form_F4"
+        },
+        {
+          "id": "c2a-F4red",
+          "statement": "P_{j−1} ≡ i^{(j)}x^{3j}，W_m ≡ 1+Σ_{j≤i} j·i^{(j)}x^{3j+2} (mod b_i)，商的次数 ≤3m−1；并有多项式恒等式 Σ_i(−1)^{m−i}C(m,i)∏_{v≠i}b_v=m!x^{3m}",
+          "level": "已证明",
+          "proof_summary": "由 b_v−(i−v)x³=b_i 得 b_v ≡ (i−v)x³ (mod b_i)",
+          "verified_range": "同余对 0≤i≤m≤15 核对；多项式恒等式对 m≤20 核对",
+          "check_id": "F4_reduction"
+        },
+        {
+          "id": "c2a-T4",
+          "statement": "外层关系 Γ(k+1;0)−Σ_{j≥1}Γ(k;j) = Γ(k;0)+Σ_j jΓ(k−2;j)，等价于多项式恒等式 x³Σ_j jP_{j−1}=P_0−P_m−xΣ_{j=1}^m P_{j−1}",
+          "level": "已证明",
+          "proof_summary": "在 b_jQ_j=Q_{j+1} 两边取 x^{k+1} 系数，再对 j 求和使其望远镜相消",
+          "verified_range": "多项式恒等式对 m≤20 核对；系数恒等式对 k≤60, m≤20 核对",
+          "check_id": "theta_vs_H_outer"
+        },
+        {
+          "id": "c2a-draft-termwise",
+          "statement": "草稿说「Θ 公式与 H 双和公式逐项相同」，按字面不成立：内层逐项相同，外层不同",
+          "level": "已否定",
+          "proof_summary": "反例 m=1,k=3：Θ 公式两项为 Θ_1(7)=8 与 −Θ_0(3)=−2，H 公式两项为 Γ(3;0)=5 与 Γ(1;1)=1，两边之和都是 6",
+          "verified_range": "反例由程序核对",
+          "check_id": "theta_vs_H_outer"
+        },
+        {
+          "id": "c2a-phi",
+          "statement": "φ(h)=h·0（h 不以上升结尾）或 h·j（h 以 E_j 结尾）是双射：长 k 的合法序列 → 长 k+1、末块为 T 或 [0] 的合法序列；不以上升结尾的个数 = Σ_s S(m+s,m)C(k+m−2s,m+s)，以 E_j 结尾的个数 = j·Γ(k−2;j)",
+          "level": "已证明",
+          "proof_summary": "分别检验追加元素后末三元组的合法性；利用块分解的唯一性；删去末元素即为逆映射",
+          "verified_range": "暴力核对 m≤3, k≤8",
+          "check_id": "bijection_phi"
+        },
+        {
+          "id": "c2a-S",
+          "statement": "定理 S：对每个 m≥1，不存在整数 c,d 和与 k 无关的复系数 A(s)，使 U_k(m)=Σ_s A(s)C(k+c−2s,m+s+d) 对所有充分大的 k 成立",
+          "level": "已证明",
+          "proof_summary": "第一步把和式写成 G_m=x^gÃ(u)+Laurent 多项式；由 1,x,x² 构成 Q(x) 在 Q(u) 上的基，推出 Ã∈C(u)。第二步在 b_1 的三个根处比较留数，得到 (1+ξ)ξ^{−M} 的三个共轭全相等，从而它是有理数，其立方等于范数 N(1+ξ)·N(ξ)^{−M}=3，矛盾",
+          "verified_range": "所用代数事实在 Q(ξ) 中对 m=1..20 精确核对",
+          "check_id": "single_family_facts"
+        },
+        {
+          "id": "c2a-S-lin",
+          "statement": "定理 S 的数值佐证：线性方程组 U_k(m)=Σ_sA(s)C(k+c−2s,s+e)（k0≤k≤45）全部无解，对照组可解",
+          "level": "已验证",
+          "proof_summary": "用 Fraction 做精确高斯消元",
+          "verified_range": "m=1..3, k0∈{0,6}, c∈[−4,4], e∈[−4,6]，共 594 个方程组；探索脚本中另跑了 2184 个（k≤54, m≤4）",
+          "check_id": "single_family_linsys"
+        },
+        {
+          "id": "c2a-Sprime",
+          "statement": "命题 S′：形如 U_k(m)=Σ_{s≥s0}A(s)C(k+c−αs,βs+d) 的单和也不存在，适用于 α≥1 且 α+β 为偶数的情形，以及 (α,β)=(3,0)；当 α+β=1 时这种表示总是平凡存在",
+          "level": "已证明",
+          "proof_summary": "推出 A∈C(v)，v=x^{α+β}/(1−x)^β。A 在 v(ξ) 处有极点，于是 v 的纤维中每个点都应是 P_m 的根。但 (i) 情形下纤维含负实根，而 P_m 没有负实根；(ii) 情形下 ωξ 不是任何 b_w 的根，因为 ξ=(w−1)/(w−ω) 与 ξ 是三次无理数矛盾",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2a-2fam-range",
+          "statement": "对每个 m≥2，在 |g_i+3m+3|≤150 范围内不存在两族表示 G_m=x^{g1}A_1(u)+x^{g2}A_2(u)+Laurent 多项式",
+          "level": "已验证",
+          "proof_summary": "留数必要条件已证明：A_i 是有理函数且只有单极点；纤维 v=1,2 上 θ_v、ξ^{g1}、ξ^{g2} 必须 Q-线性相关，且条件与 m 无关。在 Q(ξ) 中精确穷举：纤维 1 恰有 14 组解，其中没有一组满足纤维 2",
+          "verified_range": "|a|,|b|≤150（核对模块内）；探索中扩到 |a|,|b|≤400；另对 m=2..6 用全部纤维穷举 |g|≤45",
+          "check_id": "two_family_residue"
+        },
+        {
+          "id": "c2a-2fam-all",
+          "statement": "对每个 m≥2，任意指数 (g1,g2) 的两族表示都不存在",
+          "level": "猜想",
+          "proof_summary": "缺少的一步是证明纤维 1 的指数方程只有那 14 组解，这属于指数丢番图方程问题，本轮未完成",
+          "verified_range": "只验证了 |a|,|b|≤400",
+          "check_id": "two_family_residue"
+        },
+        {
+          "id": "c2a-G",
+          "statement": "定理 G：在基域 Q(x) 上，Σ_{j<m}P_j 不等于任何超几何项 T(m) 加常数（即不是 Gosper 可和的）",
+          "level": "已证明",
+          "proof_summary": "若成立，则 T=yP_m，且 y∈K(m) 满足 y(m+1)(1−x−(m+1)x³)−y(m)=1。分母的根会沿 +1 方向无限传递，所以 y 只能是多项式；再比较次数得矛盾",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2a-D",
+          "statement": "F(x,t)=ΣG_m t^m 关于 x 不满足任何多项式系数的线性微分方程，因而不是 D-finite。由文献定理（Lipshitz 1989；Wilf–Zeilberger 1992）进一步推出：U_k(m) 不能写成真超几何项的有限多重和",
+          "level": "已证明",
+          "proof_summary": "取 t^m 系数后比较在 b_m 实根 x_m 处的极点阶：G_m 在 x_m 有单极点，G_{m−j}（j≥1）在 x_m 解析，导致最高阶极点无法相消。推论部分依赖上述文献定理，本文未重证",
+          "verified_range": "纯证明（推论依赖文献）",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2a-N",
+          "statement": "N(k,q)=Σ_{i=1}^q(−1)^{q−i}C(q,i)·U_H(k,i−1)（k≥1），把 H 型代入后得到显式三层和",
+          "level": "已证明",
+          "proof_summary": "三元组条件只依赖大小关系，所以 U_k(i−1)=Σ_q C(i,q)N(k,q)；做二项式反演即可",
+          "verified_range": "对照 DFS 定义 k≤8；对照 core 容斥公式 k≤40, q≤20",
+          "check_id": "N_inversion"
+        },
+        {
+          "id": "c2a-N-short",
+          "statement": "比二项式反演更短的 N(k,q) 显式公式",
+          "level": "未完成",
+          "proof_summary": "试过两条路：满射块串计数（满射条件把 a 值与等级耦合，没有乘积结构）；对 Stirling 对角线做二项式变换（仍是三层和）",
+          "verified_range": "无",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2a-shapes-odd",
+          "statement": "α+β 为奇数且 (α,β)∉{(2,1),(3,0)} 的二项式形状（如 (1,2)、(2,3)）是否也不存在单和",
+          "level": "未完成",
+          "proof_summary": "这些形状的纤维点可能是非实复数，实根论证与次数论证都不能直接排除",
+          "verified_range": "无",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2a-bench",
+          "statement": "在 0≤k≤200, 0≤m≤30 内，引理 1 递推、固定 m 线性递推、N 三角、H、F3、Θ、F5、F4 算出的 U_k(m) 全部等于定义 DP。实测耗时：引理 1 约 0.002 s；各显式公式约 0.24–1.6 s（原子表单独计时）",
+          "level": "已验证",
+          "proof_summary": "程序比对与计时；单值计时与 K=400,M=40 的结果见日志",
+          "verified_range": "k≤200, m≤30；计时数字受同时运行的其他进程干扰，只看量级",
+          "check_id": "bench_k200_m30"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "草稿 §2 说 (C4) 的 Θ_t 公式「与上式逐项相同；(C4) 只是把 c_i(n) 的内层和又展开了一遍」，这不准确。内层确实逐项相同（第 p 项对应第 s=p−t 项），但外层不同：Θ 公式对应 F3 外层 [x^{k+1}]1/P_m − Σ_{j≥1}[x^k]Q_j，H 公式对应 H 外层 [x^k]1/P_m + Σ_j j[x^{k−2}]Q_j，二者靠望远镜恒等式相等。反例 m=1,k=3：Θ 式两项为 (8,−2)，H 式两项为 (5,1)，和都是 6（check theta_vs_H_outer）。",
+        "提示词 (C4) 称 Θ 公式对 k≥1 成立，实际对 k≥0 都成立（k=0 时两边都是 1）。这是范围写窄了，不是错误。",
+        "提示词定义 c_i(n):=Σ_j C(n−2j,j)·i^j 时没有写求和范围。必须约定 C(a,b)=0（a<0）或限制 0≤j≤⌊n/3⌋；若按广义二项式 C(−1,1)=−1 计算，n=1 时就会多出非零项，公式出错。",
+        "草稿 §0 把 j=0 单列，说 1≤j≤m 时 H(m,s,j) 才是 Broder r-Stirling 数。其实 Broder 定义在 r=0 时也给出 S(n,k)，所以对 0≤j≤m 全部成立。这只是表述冗余，不是错误。",
+        "草稿把 (C4) 看作 H 型的重新展开，这不对：(C4) 对应的是 F3 外层。按原子计数，Θ 型用 O(m²) 个 c 值，H 型用 O(mk) 个 r-Stirling 乘积，哪个更「短」取决于原子怎么选。",
+        "没有发现数值错误：(C4) 两式、Θ 公式、草稿的块分解、G_m=W_m/P_m、H 双和都已独立证明，并对照定义 DP 全部通过。"
+      ],
+      "failed_directions": [
+        "用 r-Stirling 跨层恒等式消掉 j 求和：带权 j 的和本身可以塌缩，Σ_j j·h_{s−1}(j..m)=S(m+s,m)。但 H 型中的二项式 C(k−2+m−j−2s,m−j+s) 也依赖 j（来自 (1−x)^{−(m−j+1)} 的幂次），塌缩被挡住。用 Vandermonde 把 j 依赖拆到 C(m−j,l) 上再做 Abel 求和，也只是把权 j 换成另一个 j 和。",
+        "以 b_m 为中心展开（b_v=b_m+(m−v)x³）：j 和变成「多项式 × 几何」的部分和，可以借二阶 Euler 数写出闭式，但会引入新分母 (1+mx²) 和 x 的负幂，必须在总和中相消，没有带来化简。",
+        "利用 Q(u) 上的基 {1,x,x²} 做三族单和表示：这种表示总是存在（[Q(x):Q(u)]=3，(1−x)^{−1}=1+u+x+x²），但系数多项式没有可辨认的结构，还带负号。例如 m=4 时 a=1+55u+64u²+102u³−6u⁴+u⁵。得到的仍是与 S(m+s,m) 的卷积双和，不比 H 型短。",
+        "想证明两族表示对所有指数都不存在：已经化到与 m 无关的纤维 1、2 条件（三阶线性递推的行列式为零），并验证了 |a|,|b|≤400 内无公共解。完整证明需要指数丢番图方程（S-单位方程）的有限性结果，本轮未完成。",
+        "命题 S′ 没有覆盖 α+β 为奇数的形状（如 (1,2)、(2,3)）：纤维中除 ξ 外的点可能是非实复数，实根论证和次数论证都不适用。",
+        "更短的 N(k,q) 显式式：φ 对满射到 {0..q−1} 的词保持值集，但满射条件把 T/E 块的 a 值与等级耦合起来，没有乘积结构；对 S(i−1+s,i−1) 关于 i 做二项式变换仍是三层和。最终只得到反演式。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c2a.py",
+      "check_run_output_tail": "PASS two_family_residue two-family necessary residue conditions: theta_v ~ W_v(xi) xi^{-3m-3} (v=1,2; m<=8); fiber-1 condition has exactly 14 solutions with |a|,|b|<=150 and none satisfies fiber 2 => for every m>=2 no representation x^{g1}A1(u)+x^{g2}A2(u)+Laurent poly with |g_i+3m+3|<=150\nPASS N_inversion N(k,q) = sum_{i=1}^q (-1)^{q-i} C(q,i) U_H(k,i-1) == DFS definition N_brute (k<=8) and core inclusion-exclusion N_from_U (k<=40, q<=20)\nPASS bench_k200_m30 all U_k(m), 0<=k<=200, 0<=m<=30: Lemma-1 recurrence, fixed-m linear recurrence, N triangle, H, F3, Theta, H-outer+c_i, F4 all == DP; seconds (this run, noisy): DP 0.287, Lemma1 0.002, linrec 0.197, Ntri 0.026, rStirling_table 0.003, c_table 0.181, H 1.570, F3 1.643, Theta 0.287, ThetaH 0.300, F4 0.242\n# elapsed 10.2s\nSUMMARY c2a pass=23 fail=0",
+      "check_runtime_seconds": 10.4,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c2a.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\c2a_lib.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e1_forms.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e2_rstirling.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e3_negative.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e4_basis.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e5_bench.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e6_single.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e7_twofamily.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e7b_twofamily_shifted.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2a\\e8_misc.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_check_run.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e1_forms.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e2_rstirling.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e3_negative.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e4_basis.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e5_bench_K200_M30.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e5_bench_K400_M40.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e6_single.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e7_twofamily.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e7b_twofamily_shifted.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e7b_twofamily_shifted_A400.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2a_e8_misc.log"
+      ],
+      "uncertainties": [
+        "两族不可能性只在有限范围内验证（|g_i+3m+3|≤150，探索中到 400），对全部指数成立只是猜想。纤维 1 在该范围内恰有 14 组解，这是数据，不是定理。",
+        "命题 D 的推论（不存在真超几何多重和）依赖 Lipshitz 1989 和 Wilf–Zeilberger 1992 的文献定理及其有限支撑条件，本文未重证。命题 D 本身的证明是完整的，但它属于 C-3 的主题，这里只作为结构性理由引用。",
+        "计时受同时运行的其他子 Agent 干扰，只能看量级：同一组 K=200,M=30 两次运行中，H 为 1.10 s 和 1.57 s，Θ（含 c 表）为 0.95 s 和约 0.47 s。另外，「最短」取决于把 r-Stirling 数还是 c_i 当作原子：我判断 H 型最短（无除法、全正、每项有组合解释）；若以 c_i 为原子，则 F4 最短。",
+        "定理 S 只排除了「单族、(2,1) 形」的单和（外加命题 S′ 中的几种形状），并不排除允许系数依赖 k、多族组合或其他原子的公式。按要求，我没有声称「不存在任何单和」。"
+      ]
+    },
+    {
+      "area": "C-2 最简显式公式：组合路线（块分解）",
+      "stage_conclusion": "块分解已严格证明：合法序列与块词（单块 S_v=[v]、三块 T_{v,a}=[a,v,v]、截断块 E_{v,a}=[a,v]，层次非增，E 只能在末尾）之间是双射。k≤10、m≤4 的全部 13,695,758 个序列上「分解方式数=[合法]」都成立。由此推出几条结论：\n(1) 按上升数细化的母函数：(1−x−m·y·x³)G_m(x,y)=G_{m−1}+m·y·x²，即 G_m=W_m/P_m，y=1 时就是 (C2)；还有引理 1 的 s-细化和三变量偏微分方程。\n(2) 显式公式：U_k(m,s)=S(m+s,m)C(k+m−2s,k−3s)+Σ_j j·H(m,s−1,j)·C(k+m−j−2s,k+1−3s)，H(m,s,j)=h_s(j..m)=r-Stirling 数。其中「不以上升结尾、恰有 s 个上升」的个数是单项 S(m+s,m)C(k+m−2s,k−3s)，并给出到「S 位置子集 × 集合划分」的显式双射。每个因子都用「m 根竖线 + T 块 + S 块」模型做了组合解释。\n(3) 补 0/补末项 两个映射给出 U_k(m)=A_m(k+1)−Σ_j A^{(j)}_m(k)，它与 (C4) 的 Θ 公式逐项相同（Θ_t(n+3t)=A^{(m−t)}_m(n)，用差商证明）。\n(4) 更短公式：u 型单和 Σ_s A_s C(k+c−2s,d+s) 对 U_k(m)（1≤m≤30）和截断块部分 E(k,m)（2≤m≤30）严格不存在，证明方法是在 u=1/i 处取留数元再取范数，每个 m 给出一个精确证书。参数盒内 8232 个有真检验的单和族对 E、U、N、N^c、N^E 全部被精确反驳。两项 u 型在 E 的 3≤m≤6、U 的 2≤m≤6 上盒内无解。E(k,m,s) 在 m≥2 且 s≥2 时连「大 k 成立」的单项表示都没有。\n(5) N(k,q)：不以上升结尾部分 N^c 有正项双和 Σ_{s,p} C(q,p)R(p,s)C(k−2s+p−1,s+q−1)；N^E 只得到三重和。「a 值覆盖」容斥与标准容斥等价。\n最终推荐定理 4 的正项双和，约 (m+1)k/3 项，比 (C4) 的交错三重和（约 m²k/6 项）短一个数量级。check 模块 33/33 PASS，用时约 29 秒。",
+      "claims": [
+        {
+          "id": "c2b-anchor",
+          "statement": "自写细化 DP（直接三元组条件）、DFS 枚举、core.U_fast_table（高度 DP）、core.U_multichain（多重链定义）互相一致",
+          "level": "已验证",
+          "proof_summary": "程序对照",
+          "verified_range": "DP 总数 k≤31,m≤12；按 (s,结尾) 对 DFS k≤9,m≤3；对多重链 k≤7,m≤4",
+          "check_id": "c2b.anchor"
+        },
+        {
+          "id": "c2b-T1a",
+          "statement": "定理1：层次≤m 的块词（S_v,T_{v,a},E_{v,a}，0≤a<v，层次非增，E 只在末尾）经拼接与 {0..m}^k 中的合法序列一一对应（任意拼接合法 + 存在 + 唯一）",
+          "level": "已证明",
+          "proof_summary": "引理1.1：非谷位置的值不小于其后所有值，所以任意拼接合法；引理1.2：最大值首次出现在位置1或2，若在2则 h_3=M，对长度归纳得存在性；首块层次=max h，首块由 h_1 与长度唯一决定，对长度归纳得唯一性",
+          "verified_range": "k≤10,m≤4：独立生成全部块词，拼接全部合法、两两不同，像集=DFS 合法集",
+          "check_id": "c2b.T1.bijection"
+        },
+        {
+          "id": "c2b-T1b",
+          "statement": "每个序列的块分解方式数恰为 [合法]",
+          "level": "已验证",
+          "proof_summary": "定理1的程序复现；非确定性解析计数不使用合法性；另做了注入错误对照",
+          "verified_range": "全部 (m+1)^k 序列，1≤k≤10,m≤4，共 13,695,758 个",
+          "check_id": "c2b.T1.allseq"
+        },
+        {
+          "id": "c2b-T1c",
+          "statement": "截断块只能在末尾：a<v 时 good(a,v,c)⟺c=v",
+          "level": "已证明",
+          "proof_summary": "a≥max(v,c) 不可能，所以只能 b=c",
+          "verified_range": "m≤12 枚举",
+          "check_id": "c2b.T1.Eend"
+        },
+        {
+          "id": "c2b-T1d",
+          "statement": "块词统计量：上升数=#T+#E；以上升结尾⟺末块为E；max=首块层次；完整序列的末项=末块层次；值集=层次∪谷值",
+          "level": "已证明",
+          "proof_summary": "上升必须从谷开始（引理1.1），每个谷后紧跟其层次",
+          "verified_range": "k≤10,m≤4 全部合法序列",
+          "check_id": "c2b.T1.stats"
+        },
+        {
+          "id": "c2b-T2a",
+          "statement": "定理2：G_m(x,y)=Σ U_k(m,s)x^k y^s 满足 (1−x−m y x³)G_m=G_{m−1}+m y x²，G_{−1}=1",
+          "level": "已证明",
+          "proof_summary": "由定理1的递归形式 L(m)=B_m^*(L(m−1)⊔E_m) 加权（S↦x，T↦y x³ 共 v 种，E↦y x² 共 v 种）",
+          "verified_range": "系数=细化 DP，k≤30,m≤12，全部 s",
+          "check_id": "c2b.T2.gf_xy"
+        },
+        {
+          "id": "c2b-T2b",
+          "statement": "G_m=W_m/P_m，W_m=1+y x²Σ_j j P_{j−1}；x W_m=1−P_m−xΣ_{j<m}P_j（y=1 即 (C2)）；G_m=1/P_m+x²Σ_j j/Π_{v=j}^m b_v",
+          "level": "已证明",
+          "proof_summary": "展开递推，并用 j y x³ P_{j−1}=(1−x)P_{j−1}−P_j 望远镜求和",
+          "verified_range": "展开=core DP k≤30,m≤12；多项式恒等式 m≤12 精确",
+          "check_id": "c2b.T2.WP"
+        },
+        {
+          "id": "c2b-T2c",
+          "statement": "引理1的 s-细化：U_k(m,s)=U_k(m−1,s)+U_{k−1}(m,s)+m U_{k−3}(m,s−1)+m[k=2][s=1]（U_k(−1,s)=[k=s=0]）；三变量 F 满足 (1−x−t)F−y x³ t ∂_tF=1+y x² t/(1−t)²",
+          "level": "已证明",
+          "proof_summary": "对定理2取系数，再乘 t^m 求和",
+          "verified_range": "逐系数 k≤30,m≤12",
+          "check_id": "c2b.T2.pde_xty"
+        },
+        {
+          "id": "c2b-L3.1",
+          "statement": "竖线模型引理：s 个 T 与 L 根竖线的全部字上 Π_T(j+右侧竖线数) 之和=h_s(j..j+L)",
+          "level": "已证明",
+          "proof_summary": "字与弱降序列 j+L≥λ_1≥…≥λ_s≥j 一一对应",
+          "verified_range": "暴力 L≤5,s≤5,j≤3",
+          "check_id": "c2b.T3.tbar"
+        },
+        {
+          "id": "c2b-T3",
+          "statement": "定理3：[x^n y^s]Π_{v=j}^m(1−x−v y x³)^{−1}=H(m,s,j)·C(n+m−j−2s,n−3s)",
+          "level": "已证明",
+          "proof_summary": "组合证明：竖线模型（T/竖线加权和=h_s，S 插缝隙=二项式）；代数证明：b_v=(1−x)(1−v y u)，u=x³/(1−x)",
+          "verified_range": "n≤30,0≤j≤m≤12 逐系数",
+          "check_id": "c2b.T3.coef"
+        },
+        {
+          "id": "c2b-L3.2",
+          "statement": "h_s(0..m)=h_s(1..m)=S(m+s,m)；1≤j≤m 时 h_s(j..m)=Broder r-Stirling 数 {m+s⧵m}_j",
+          "level": "已证明",
+          "proof_summary": "限制增长串：开块↔竖线，并入↔T，再用引理3.1",
+          "verified_range": "m+s≤12；r-Stirling 用限制增长串暴力枚举 m+s≤9",
+          "check_id": "c2b.T3.stirling"
+        },
+        {
+          "id": "c2b-T4a",
+          "statement": "不以上升结尾、恰有 s 个上升的合法序列数=S(m+s,m)·C(k+m−2s,k−3s)（单项）",
+          "level": "已证明",
+          "proof_summary": "完整序列⟺不含E的块词，再用定理3（j=0）",
+          "verified_range": "k≤30,m≤12,全部 s，对照细化 DP",
+          "check_id": "c2b.T4.complete_s"
+        },
+        {
+          "id": "c2b-T4b",
+          "statement": "以上升结尾、恰有 s 个上升的合法序列数=Σ_{j=1}^m j·H(m,s−1,j)·C(k+m−j−2s,k+1−3s)",
+          "level": "已证明",
+          "proof_summary": "末块 E_{j,a}（j 种谷），前面是层次∈[j,m]、长 k−2、含 s−1 个 T 的块词，再用定理3",
+          "verified_range": "k≤30,m≤12,全部 s",
+          "check_id": "c2b.T4.E_s"
+        },
+        {
+          "id": "c2b-T4c",
+          "statement": "U_k(m)=Σ_s S(m+s,m)C(k+m−2s,k−3s)+Σ_{j=1}^m jΣ_s H(m,s,j)C(k−2+m−j−2s,k−2−3s)",
+          "level": "已证明",
+          "proof_summary": "定理4对 s 求和",
+          "verified_range": "=core DP k≤30,m≤12；=多重链定义 k≤7,m≤4",
+          "check_id": "c2b.T4.U"
+        },
+        {
+          "id": "c2b-C4.1",
+          "statement": "U_k(m,0)=C(k+m,k)；k≥2 时恰1个上升且以上升结尾的个数=C(k+m−1,k)，U_k(m,1)=C(m+1,2)C(k+m−2,k−3)+C(k+m−1,k)（k≤1 时后两式不成立）",
+          "level": "已证明",
+          "proof_summary": "定理4的特例，再用 Vandermonde 型求和",
+          "verified_range": "k≤30（后两式 2≤k≤30），m≤12",
+          "check_id": "c2b.T4.small_s"
+        },
+        {
+          "id": "c2b-C4.2",
+          "statement": "显式双射：长 k、s 个上升的完整合法序列 ⟷ (k+m−2s 个位置中选 k−3s 个放 S)×([m+s] 分成恰 m 块的集合划分)",
+          "level": "已证明",
+          "proof_summary": "竖线=开块，谷为 a 的 T 并入第 a+1 块，给出逆映射",
+          "verified_range": "k≤9,m≤3：像都是合法限制增长串、两两不同，计数吻合",
+          "check_id": "c2b.T4.setpart"
+        },
+        {
+          "id": "c2b-P5.1",
+          "statement": "映射(a)：完整序列补0⟷长k+1末项为0（末块S_0）；以上升结尾的补末项⟷长k+1末块为T块的完整块词；所以 U_k(m)=#{长k+1、末块为S_0或T的完整块词}",
+          "level": "已证明",
+          "proof_summary": "直接检查新增三元组；末块为T由引理1.1得到",
+          "verified_range": "计数 DP k≤30,m≤12；显式映射 DFS 2≤k≤8,m≤3",
+          "check_id": "c2b.T5.append"
+        },
+        {
+          "id": "c2b-P5.2",
+          "statement": "U_k(m)=A_m(k+1)−Σ_{j=1}^m A^{(j)}_m(k)，A^{(j)}_m(n)=Σ_s H(m,s,j)C(n+m−j−2s,n−3s)",
+          "level": "已证明",
+          "proof_summary": "长k+1完整块词按末块 S_0/T/S_v(v≥1) 分类",
+          "verified_range": "k≤30,m≤12",
+          "check_id": "c2b.T5.Aminus"
+        },
+        {
+          "id": "c2b-P5.3",
+          "statement": "(C4) 的 Θ_t(n+3t)=A^{(m−t)}_m(n)=[x^n]P_{m−t−1}/P_m，所以 (C4) 的 U 公式与 P5.2 逐项相同；(C4) 第二式是 t=m 的情形",
+          "level": "已证明",
+          "proof_summary": "(1/t!)∇^t i^p 是差商，等于 h_{p−t}(m−t..m)，再用定理3",
+          "verified_range": "k,n≤30,m≤12",
+          "check_id": "c2b.T5.theta"
+        },
+        {
+          "id": "c2b-T6E",
+          "statement": "定理6：2≤m≤30 时不存在整数 c,d 与有理 A_s 使 E(k,m)=Σ_s A_s C(k+c−2s,d+s) 对全部 k≥0 成立；m=1 时 E(k,1)=Σ_s C(k−2−2s,s)",
+          "level": "已证明",
+          "proof_summary": "计算机辅助。x^N(V+L)=u^{d+1}F(u)∈Q((u))；Q((x)) 在 Q((u)) 上以 {1,x,x²} 为基（Eisenstein）；u=1/i 处的留数元 ν_i 必须满足 x^N ν_i∈Q，取范数 N(ν_i)=γ³ i^N；每个 m 找到一个域极点，使 i-无关部分不是立方",
+          "verified_range": "证书 m=2..30（例：m=2 时 N=17）",
+          "check_id": "c2b.T6.ushape_E"
+        },
+        {
+          "id": "c2b-T6U",
+          "statement": "1≤m≤30 时 U_k(m) 不能写成 Σ_s A_s C(k+c−2s,d+s)（任意整数 c,d，有理 A_s）",
+          "level": "已证明",
+          "proof_summary": "同定理6（例：m=1 时 N=3，m=2 时 N=103/2）",
+          "verified_range": "证书 m=1..30",
+          "check_id": "c2b.T6.ushape_U"
+        },
+        {
+          "id": "c2b-T6A",
+          "statement": "对照：完整部分 A_m(k) 本身是 u 型单和，判据在每个域极点都不报阻碍",
+          "level": "已验证",
+          "proof_summary": "ν_i∝x^{−3(m+1)}，范数的 i-无关部分是立方",
+          "verified_range": "m≤30",
+          "check_id": "c2b.T6.sanity_A"
+        },
+        {
+          "id": "c2b-S1",
+          "statement": "参数盒 α∈[−1,2],β∈[−3,3],γ∈[0,3],δ∈[0,2],ε∈[−1,3],ζ∈[−3,3] 中 γ+ε≥2 的 8232 个单和族，对 E、U、N、N^c、N^E 无一可解；对完整部分只找回已知公式",
+          "level": "已否定",
+          "proof_summary": "逐 m 精确有理增量消元；多余方程不成立即精确反驳（等价于留出检验）；E 由 m≤2、U 由 m=1、N/N^c 由 q≤2、N^E 由 q≤3 全部反驳",
+          "verified_range": "k≤30，m(q)=1..12",
+          "check_id": "c2b.T7.box"
+        },
+        {
+          "id": "c2b-S2",
+          "statement": "E(k,m,s) 一般不能写成单项 A·C(k+c,d)：反例 (m,s)=(2,2)，E(k,2,2)=(k−4)(3k−1)/2（k≥4）",
+          "level": "已否定",
+          "proof_summary": "根 4 与 1/3 不是相邻整数",
+          "verified_range": "另在 c∈[−40,40],d∈[0,40] 数值无解，k≤30",
+          "check_id": "c2b.T7.Es_single"
+        },
+        {
+          "id": "c2b-S3",
+          "statement": "k≥3s−1 时 E(k,m,s) 是 k 的 m+s−2 次多项式；它是单项 A·C(k+c,deg) 当且仅当 s=1（E(k,m,1)=C(k+m−1,k)，k≥2）或 m=1（E(k,1,s)=C(k−2s,s−1)）",
+          "level": "已验证",
+          "proof_summary": "精确插值后数整数根，判断是否为相邻整数；s=1 与 m=1 两式有证明",
+          "verified_range": "m≤8,s≤6",
+          "check_id": "c2b.T7.Es_eventual"
+        },
+        {
+          "id": "c2b-S4",
+          "statement": "两项 u 型 Σ_s[A_s C(k+c1−2s,d1+s)+B_s C(k+c2−2s,d2+s)]：E(k,m)（3≤m≤6）与 U_k(m)（2≤m≤6）在盒 c∈[−6,3m+6],d∈[−3,2m+4] 内无任何可解形状对；E(k,2)、U_k(1) 有（对照）",
+          "level": "已否定",
+          "proof_summary": "精确增量消元；所有形状对都直接不可解，没有「检验不足」的对",
+          "verified_range": "check 复现 E m=3（46178 对）与 U m=2（25191 对）；其余 m 见 logs/c2b_explore7_more_search.log 与 logs/c2b_explore11_refine.log",
+          "check_id": "c2b.T7.twoterm"
+        },
+        {
+          "id": "c2b-T7",
+          "statement": "N^c(k,q)=Σ_{s≥0}Σ_{p≤2s} C(q,p)R(p,s)C(k−2s+p−1,s+q−1)，R(p,s)=端点恰为{0..p−1}的 s 弧 T 骨架数",
+          "level": "已证明",
+          "proof_summary": "完整满射词=T骨架+S放缝隙；骨架未覆盖的值所在的段只有一个缝隙，必须放S；按覆盖集分组并利用保序不变性",
+          "verified_range": "k≤30,q≤12",
+          "check_id": "c2b.T8.Nc"
+        },
+        {
+          "id": "c2b-R",
+          "statement": "R(p,s)=Σ_i(−1)^{p−i}C(p,i)S(i−1+s,i−1)；p>2s 时为0；R(2s,s)=(2s−1)!!",
+          "level": "已证明",
+          "proof_summary": "二项式反演（端点⊆{0..i−1}的骨架数=S(i−1+s,i−1)）；端点全不同时构成完美匹配",
+          "verified_range": "骨架暴力 p≤7,s≤4；(2s−1)!! 与消失性 s≤8",
+          "check_id": "c2b.T8.R"
+        },
+        {
+          "id": "c2b-Reul",
+          "statement": "R(p,s)=Σ_k ⟨⟨s,k⟩⟩C(2s−2−k,2s−p)（二阶 Euler 数）",
+          "level": "已验证",
+          "proof_summary": "由 GKP(6.43) 加 Vandermonde 推导（引用教科书恒等式，只标已验证）",
+          "verified_range": "1≤s≤11",
+          "check_id": "c2b.T8.Reul"
+        },
+        {
+          "id": "c2b-P7.2",
+          "statement": "N^E(k,q)=Σ_{s,p,h0} R'(p,s,h0)C(q−1−h0,p−1−h0)C(k−1−2s+p−h0,s+q−2−h0)；R' 有容斥式 Σ_{z1,z2}(−1)^{z1+z2}C(h0,z1)C(p−1−h0,z2)[h_s(h0−z1..p−1−z1−z2)−h_s(h0−z1+1..p−1−z1−z2)]",
+          "level": "已证明",
+          "proof_summary": "补末项保持值集，N^E=末块为T的完整满射词；S 只能放在最后一个T之前，低于最小头的值必须被覆盖；R' 对未覆盖集做容斥",
+          "verified_range": "N^E k≤30,q≤12；R' 对骨架暴力 s≤4，Σ_h0 R'=R（s≤10）",
+          "check_id": "c2b.T8.NE"
+        },
+        {
+          "id": "c2b-P7.3",
+          "statement": "「a 值覆盖」容斥与标准容斥 Σ_i(−1)^{q−i}C(q,i)A_{i−1}(k) 等价，不产生新的短公式",
+          "level": "已证明",
+          "proof_summary": "删去未覆盖集并保序重标号后，只剩「顶层段非空」这一条件，再用 C(q−1,z)+C(q−1,z−1)=C(q,z) 合并",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c2b-Nsplit",
+          "statement": "N=N^c+N^E；按结尾拆分的容斥值与 DFS 暴力一致；N 的容斥=core.N_from_U",
+          "level": "已验证",
+          "proof_summary": "程序对照",
+          "verified_range": "DFS k≤8；core 对照 k≤30,q≤12",
+          "check_id": "c2b.T8.Nsplit"
+        },
+        {
+          "id": "c2b-misc",
+          "statement": "xΣ_{j=1}^m Q_j+x³Σ_j jQ_j=Q_1−1（Q_j=Π_{v=j}^m b_v^{−1}）；Σ_{i=0}^m Q_i=Σ_{v=1}^m(−1)^{m−v}/((m−v)!b_v)Σ_{r=0}^v v^{m−v+r}(1−x)^{−(m−v+r)}/r!",
+          "level": "已证明",
+          "proof_summary": "Σ_j(1−b_j)Q_j 望远镜求和；对 u 做部分分式",
+          "verified_range": "级数核对到 x^24，m≤8",
+          "check_id": "c2b.T9.misc"
+        },
+        {
+          "id": "c2b-open-N",
+          "statement": "N(k,q) 整体的单和或短双和公式",
+          "level": "未完成",
+          "proof_summary": "只有 N^c 得到正项双和；N^E 只有三重和（R' 本身又是交错双和）",
+          "verified_range": "无",
+          "check_id": "n/a"
+        },
+        {
+          "id": "c2b-canon",
+          "statement": "u 型规范三项分解 U_k(m)=Σ_sΣ_{r=0}^2 f_{r,s}(m)C(k+m−r−2s,m+s) 存在且唯一，但系数有正有负，没有乘积型闭式（如 m=2 时 f_{0,s}=−2^s）",
+          "level": "猜想",
+          "proof_summary": "存在唯一性由 {1,x,x²} 是 Q((x)) 在 Q((u)) 上的基保证；「没有闭式」只是观察",
+          "verified_range": "m≤8 的系数表见 logs/c2b_explore3_canonical.log",
+          "check_id": "n/a"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "未发现实质错误。草稿 §2 的块分解、G_m=W_m/P_m、系数提取式、显式双和，以及「(C4) 的 Θ_t 就是 H(m,·,m−t)」都已独立证明并在 k≤30、m≤12 上核对。提示词 (C4) 的两式作为命题 5.3 与推论 4.1 的特例得到证明。",
+        "措辞：草稿的「上升只出现在 T 块或 E 块的第 2 位」应理解为「上升恰好在谷与其后一项之间」。",
+        "任务 (b) 的「s 分层的 E(k,m,s) 写成 Σ_s A(m,s)C(…)」：s 固定后已经没有对 s 的求和。我按单项 A(m,s)·C(k+c,d) 理解，并给出了否定（反例 (2,2) 有证明，一般判据见 c2b.T7.Es_eventual）。",
+        "自查发现的边界问题（不是草稿的错）：E(k,m,1)=C(k+m−1,k) 和 U_k(m,1) 的闭式只在 k≥2 成立，k=0,1 时右边不为 0；笔记与 check 已注明。"
+      ],
+      "failed_directions": [
+        "消去截断块部分的 j-和：生成函数层面只有一个望远镜关系 xΣQ_j+x³ΣjQ_j=Q_1−1，单独的 ΣQ_j 做部分分式后是截断指数和，没有闭式；规范三项 u 分解的系数有正负号，写成闭式仍是双和。卡住的原因：E 部分在 u=1/i 处的留数元不是 x 的单项式，这正是定理 6 中的阻碍。",
+        "单个 u 型和：对 m≤30 逐个 m 严格证明不存在；没有找到对一般 m 的统一证明（需要统一控制 N(ν_i) 的素因子）。",
+        "参数盒单和搜索（11760 族，其中 8232 族有真检验）：E、U、N、N^c、N^E 全部被精确反驳；盒外的形状（更大参数、多个二项式乘积、非二项式型系数）没有穷举。",
+        "两项 u 型：E(k,m) 在 3≤m≤6、U_k(m) 在 2≤m≤6 的盒内全部形状对不可解；没有结构性证明。",
+        "E(k,m,s) 写成单项：m≥2 且 s≥2 时连「大 k 成立」的单项都不存在（在 m≤8、s≤6 内检验）。",
+        "N(k,q) 的单和或短双和：「a 值覆盖」容斥被证明等价于标准容斥；改为正向覆盖计数只对 N^c 成功；N^E 需要额外记录骨架的最小头，成为三重和；R(p,s) 只得到二项式反演和二阶 Euler 数卷积两种表示，没有找到乘积型闭式。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c2b.py",
+      "check_run_output_tail": "PASS c2b.T7.box 单和形状…（11760族，其中 gamma+eps>=2 有真检验的 8232 族）：对 E、U、N、N^c、N^E 无一族…可解；对完整部分 A 只存活已知形状…\nPASS c2b.T7.Es_single E(k,2,2)=(k-4)(3k-1)/2 (k>=4, 否则0)…不存在 A*C(k+c,d) 单项表示…\nPASS c2b.T7.Es_eventual …当且仅当 s=1 或 m=1 (m<=8,s<=6)…\nPASS c2b.T7.twoterm …E(k,3) 与 U_k(2) 在盒…内全部形状对都不可解（E m=3: 46178 pairs, 0 solvable; U m=2: 25191 pairs, 0 solvable；k<=30）…\nPASS c2b.T8.R …\nPASS c2b.T8.Nsplit …\nPASS c2b.T8.Nc N^c(k,q)=sum_{s>=0} sum_{p=0}^{2s} C(q,p) R(p,s) C(k-2s+p-1, s+q-1)… (k<=30,q<=12)\nPASS c2b.T8.NE N^E(k,q)=… (k<=30,q<=12)…\nPASS c2b.T8.Reul …(1<=s<=11, 0<=p<=2s+2)\nPASS c2b.T9.misc 望远镜关系…；部分分式…；级数核对到 x^24，m<=8\n[time] 28.8s\nSUMMARY c2b pass=33 fail=0\n(exit code 0；完整输出见 logs/c2b_check_run3.log)",
+      "check_runtime_seconds": 29.1,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c2b.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\blocks.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\formulas.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\search.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore0_sanity_injected.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore1_bijection.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore2_formulas.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore3_canonical.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore4_search.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore5_ushape_obstruction.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore6_surjective.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore7_more_search.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore8_refute.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore9_NE.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore10_NE_full.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c2b\\explore11_refine.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_check_run3.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore0_sanity_injected.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore1_bijection.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore2_formulas.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore3_canonical.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore4_search.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore5_ushape_obstruction.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore6_surjective.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore7_more_search.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore8_refute.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore9_NE.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore10_NE_full.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_explore11_refine.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c2b_search_results.json"
+      ],
+      "uncertainties": [
+        "定理 6 只覆盖 u 型（γ=2, ε=1），且只到 m≤30（逐个 m 的证书），没有对一般 m 的统一论证。其他形状，包括两项 u 型，只有盒内的计算否定。",
+        "定理 6 的证明依赖两步代数论证：Q((x))/Q((u)) 的基，以及留数元在 K_i 中的特化（第 (2)(3) 步）。我逐步检查过，用完整部分做了对照，也手算核对了 m=2 的情形，但这是全文技术性最强的一步，建议复核者重点看。",
+        "N^E 和 N(k,q) 是否存在真正的短公式：我只排除了「a 值覆盖」容斥这条路和盒内形状，不能据此断言不存在。",
+        "R(p,s) 的二阶 Euler 数表示依赖 GKP (6.43)，所以只标为已验证（s≤11）。"
+      ]
+    },
+    {
+      "area": "c3a：C-3 整张表的显式母函数（1F1 / 形式 Laplace / 指数积分 / Humbert Φ_1；N 的二元母函数 𝒩 与 h-多项式母函数 H）",
+      "stage_conclusion": "任务里列出的 5 项都做完了，另外有两个计划外的结果。核对模块 check_c3a.py 共 34 条 PASS/FAIL 检查，最终一次运行 pass=34、fail=0，耗时 22.4 秒，退出码 0。\n(1) Σ_m t^m/P_m = ₁F₁(1;1−λ;−t/x³)/(1−x)：已证明，并在 k≤40、m≤20 上核对。它是 Q(x)[[t]] 里的恒等式，每个 t^m 系数 1/P_m ∈ R_Z ⊂ Z[[x]]，所以恒等式实际落在 Z[[x,t]] 里。组合意义：系数等于「不以上升结尾」的合法序列数。Kummer 变换与下不完全 Gamma 形式也成立，但只在 Q(x)[[t]] 里成立，单个因子（如 e^{−t/x³}）不在 Q[[x,t]] 中。\n(2) 草稿 §3 的形式 Laplace 表示：已严格证明，用精确整数展开在 k≤60、m≤30 上与 DP 表逐项一致（任务要求 k≤24、m≤12）。证明写清了 ℒ_s 的定义、良定义所需的赋值界 ord[s^N] ≥ N、形式分部积分、算子恒等式，以及 PDE 解的唯一性。还推广成一般原理：对任意 A(0)=1 和任意右端 γ，L_A^{−1}γ = A^{−1}ℒ_s[exp((t/x³)(e^{vs}−1))γ(x,te^{vs})]。\n(3) 整张表的三种显式形式，均已证明并核对：₁F₁ 和式（第 j 项恰是以上升到 j 结尾的序列的母函数）；Kummer 单级数形式；有限闭式 F = (1/(1−x))[₁F₁(1;1−λ;a) + x²((1−t)^{−2}Φ_1(1,2;1−λ;−t/(1−t),a) − (1−t)^{−1}Φ_1(1,1;1−λ;−t/(1−t),a))]，其中 Φ_1 是 Humbert 合流 Appell 函数。\n(4) 解析版本：草稿写的「F = x^{−3}∫…」，若 F 理解为 S = Σ_m t^m G_m(x)，则不成立（已否定）。严格反例在 (x,t) = (3/5,−1/2)：积分 I > 0，而 S < −1057.8。已证明的精确关系是 I − S = x^{−3}K(x)e^a a^λ，这是 ODE 的一个齐次解；常数项部分 K = Γ(−λ) ≠ 0，因此 Σt^m/P_m = x^{−3}e^a[E_{λ+1}(a) − Γ(−λ)a^λ]。正确的解析陈述（已证明）有两条：I 是 t→−∞ 时唯一有界的解；对固定 t<0，I 有带显式误差界的渐近展开 I ~ Σ_k f_k(t)x^k。S 则在 x_i→0 处有极点聚集，留数为 Res_{x_i}G_i·t^i e^{−t/x_i³}。高精度 decimal 数值证据与这些结论一致。\n(5) 𝒩(x,y) = ΣN(k,q)x^k y^q：代换关系 1+tF = 𝒩(x,t/(1−t))/(1−t) 已证明。𝒩 的 PDE 与 (C3) 三角递推等价，所以 (C3) 递推由引理 1 推出（已证明）。显式表示有原生 Laplace 形式和 Humbert 闭式，核对范围 k≤30 或 k≤40。\n(6) H(z,t) = (1−t)F(z(1−t),t) = 1 + (𝒩(z(1−t),t/(1−t)) − 1)/t，以及 H 的 PDE（取 z^k 系数即 (C6)）：均已证明，并在 k≤30 上核对。\n未完成：带 g 部分的整体 K(x) ≠ 0 尚无一般证明；严格意义的 Borel 可和性未证明；只用一元 ₁F₁ 的有限闭式没有找到。",
+      "claims": [
+        {
+          "id": "C3A-01",
+          "statement": "引理 1 / (C5)：k≥1 时 U_k(m)=U_k(m−1)+U_{k−1}(m)+mU_{k−3}(m)[k≥3]+m[k=2]，等价于 (1−x−t)F − x³tF_t = 1 + x²t/(1−t)²",
+          "level": "已证明",
+          "proof_summary": "按最大值 m 首次出现的位置分类：m 不出现、位置 1、位置 2（且 h_3 必为 m）三种；位置 ≥3 不合法。系数比较即得 PDE（笔记 §1 引理 1.1、定理 1.3）",
+          "verified_range": "DP 表逐系数 k≤60, m≤41",
+          "check_id": "c3a-pde-F"
+        },
+        {
+          "id": "C3A-02",
+          "statement": "细分计数：Σ_k A_k(m)x^k = 1/P_m（A = 不以上升结尾），Σ_k B^{(j)}_k(m)x^k = jx²/Π_{v=j}^m b_v（以上升到 j 结尾），从而 G_m = 1/P_m + x²Σ_j j/Π_{v=j}^m b_v = W_m/P_m",
+          "level": "已证明",
+          "proof_summary": "同引理 1 的分类，跟踪结尾类型（尾巴长度 ≤1 时 h 不以上升结尾），得到两条递推，再求母函数；另有一条独立证明，来自 Laplace 表示的系数提取（推论 3.5）",
+          "verified_range": "逐 j 对照细分 DP，k≤40, m≤20；G_m 公式 k≤60, m≤30（c3a-lap-coeff）",
+          "check_id": "c3a-1f1-sum"
+        },
+        {
+          "id": "C3A-03",
+          "statement": "A∈Q[[x]]、A(0)=1 时，L_A[Y]=(A−t)Y−x³tY_t 是 Q[[x,t]] 上的双射；特别地 F 是 (C5) 唯一的形式幂级数解，形式齐次方程只有零解",
+          "level": "已证明",
+          "proof_summary": "系数式 y_{k,m}=γ_{k,m}−Σ_{i≥1}A_iy_{k−i,m}+y_{k,m−1}+my_{k−3,m}，对 k+m 归纳",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "C3A-04",
+          "statement": "在 Q(x)[[t]] 中 Σ_m t^m/P_m = ₁F₁(1;1−λ;−t/x³)/(1−x)，λ=(1−x)/x³；每个 t^m 系数 1/P_m ∈ R_Z ⊂ Q(x)∩Z[[x]]，因此恒等式落在 Z[[x,t]] 中；[x^k t^m] = 不以上升结尾的合法序列数",
+          "level": "已证明",
+          "proof_summary": "i−λ = −b_i/x³ ⇒ (1−λ)_n = (−1)^n x^{−3n}Π_{i=1}^n b_i，逐项相等；λ 超越故 Pochhammer 符号非零",
+          "verified_range": "Pochhammer 按 Laurent 级数展开 vs 细分 DP，k≤40, m≤20；有理函数恒等式 n≤25（c3a-1f1-exact）",
+          "check_id": "c3a-1f1-const"
+        },
+        {
+          "id": "C3A-05",
+          "statement": "[x^k]1/P_m = Σ_s S(m+s,m)C(k+m−2s,k−3s)",
+          "level": "已证明",
+          "proof_summary": "1/P_m = (1−x)^{−m−1}/Π_{i=1}^m(1−iu)，u=x³/(1−x)，再用 Σ_N S(N,m)u^N = u^m/Π(1−iu)",
+          "verified_range": "对照不以上升结尾的计数，k≤40, m≤20",
+          "check_id": "c3a-1f1-stirling"
+        },
+        {
+          "id": "C3A-06",
+          "statement": "Kummer：在 Q(x)[[t]] 中 ₁F₁(1;1−λ;a) = e^a·₁F₁(−λ;1−λ;−a)，a=−t/x³；e^a 和 ₁F₁(−λ;1−λ;−a) 各自的系数在 x=0 有极点，所以这个分解不能逐因子放进 Q[[x,t]]",
+          "level": "已证明",
+          "proof_summary": "对 1/Π_{j=0}^n(λ−j) 做部分分式得 Q(λ) 中的恒等式，再用单同态 λ↦(1−x)/x³ 特殊化",
+          "verified_range": "Q(λ) 恒等式 n≤30（n+2 个点加次数论证，精确）；Laurent 展开 vs DP，k≤40, m≤20",
+          "check_id": "c3a-kummer"
+        },
+        {
+          "id": "C3A-07",
+          "statement": "下不完全 Gamma（形式版）：Σ_m t^m/P_m = −x^{−3}e^a·a^λγ(−λ,a) = x^{−3}e^aΣ_n(−a)^n/(n!(λ−n))",
+          "level": "已证明",
+          "proof_summary": "(−λ)_n/(1−λ)_n = −λ/(n−λ)，结合 C3A-04、C3A-06 以及 λ/(1−x) = x^{−3}",
+          "verified_range": "Laurent 展开 vs DP，k≤40, m≤20",
+          "check_id": "c3a-gamma"
+        },
+        {
+          "id": "C3A-08",
+          "statement": "₁F₁(1;−λ;−t/x³) = 1 + tΣ_m t^m/P_m",
+          "level": "已证明",
+          "proof_summary": "1/(−λ)_n = (1/(−λ))·1/(1−λ)_{n−1}，且 a/(−λ) = t/(1−x)",
+          "verified_range": "k≤40, n≤20",
+          "check_id": "c3a-1f1-shift"
+        },
+        {
+          "id": "C3A-09",
+          "statement": "形式 Laplace ℒ_s[ΣΨ_N s^N] := ΣN!Ψ_N 在 ord(Ψ_N)→∞ 的子模上良定义、𝓟-线性，与 ∂_t 和保序代换可交换，且 ℒ[∂_sΨ] = ℒ[Ψ] − Ψ_0；被积式满足 ord[s^N]Ψ ≥ N，[s^N t^m]Ψ ∈ x^{max(0,3N−3m)}Q[[x]]，所以每个 x^k t^m 系数只涉及 N ≤ k/3+m 的有限项",
+          "level": "已证明",
+          "proof_summary": "把 Ψ 写成 x、t、ts、x³s 的幂级数（同态 θ），比较各单项式的次数（笔记 §3.1）",
+          "verified_range": "赋值界在 k≤15, m≤6 内核对",
+          "check_id": "c3a-lap-naive"
+        },
+        {
+          "id": "C3A-10",
+          "statement": "一般原理：L_A[Y]=γ 的唯一解为 Y = A^{−1}ℒ_s[exp((t/x³)(e^{vs}−1))·γ(x,te^{vs})]，v=x³/A",
+          "level": "已证明",
+          "proof_summary": "x³t∂_tΦ = A∂_sΦ − tΦ；x³t∂_tγ(x,te^{vs}) = A∂_sγ(...)；于是 (A−t)Ψ − x³tΨ_t = A(Ψ−Ψ_s)，作用 ℒ 并分部积分后只剩 Aγ",
+          "verified_range": "6 个随机整数 γ × A∈{1−x, 1−x+x³}，k≤18, m≤9；算子恒等式逐项 k≤30, m≤16、全部 s 次数（c3a-lap-operator）",
+          "check_id": "c3a-lap-general"
+        },
+        {
+          "id": "C3A-11",
+          "statement": "草稿 §3 的形式 Laplace 表示：F = (1/(1−x))ℒ_s[exp((t/x³)(e^{us}−1))(1 + x²te^{us}/(1−te^{us})²)]，u=x³/(1−x)，在 Q[[x,t]]（实为 Z[[x,t]]）中成立",
+          "level": "已证明",
+          "proof_summary": "一般原理取 A=1−x、γ=1+x²t/(1−t)²，加上 (C5) 和解的唯一性",
+          "verified_range": "EGF 精确整数展开 vs DP k≤60, m≤30；独立朴素 Fraction 实现 k≤15, m≤6",
+          "check_id": "c3a-lap-F"
+        },
+        {
+          "id": "C3A-12",
+          "statement": "F = Σ_{j≥0} c_j(t^j/b_j)₁F₁(1;j+1−λ;−t/x³)，c_0=1，c_j=jx²；第 j 项（j≥1）恰为以上升到 j 结尾的序列的母函数",
+          "level": "已证明",
+          "proof_summary": "由 (j+1−λ)_n = (−1)^n x^{−3n}Π b_i，第 j 项的 t^n 系数为 1/Π_{i=j}^n b_i，再用 C3A-02",
+          "verified_range": "逐 j 用 Laurent 展开 vs 细分 DP，总和 vs U，k≤40, m≤20",
+          "check_id": "c3a-1f1-sum"
+        },
+        {
+          "id": "C3A-13",
+          "statement": "Kummer 形式：F = x^{−3}e^aΣ_nφ_n a^n/(λ−n)，φ(τ) = e^{−τ}(1 − x⁵τ/(1+x³τ)²)",
+          "level": "已证明",
+          "proof_summary": "对 C3A-12 的每一项做 Kummer 变换，再按 n=i+j 合并",
+          "verified_range": "Laurent 展开 vs DP，k≤40, m≤20",
+          "check_id": "c3a-kummer-F"
+        },
+        {
+          "id": "C3A-14",
+          "statement": "L_A[Y]=(1−t)^{−β} 的解为 Y_β = (1/A)(1−t)^{−β}Φ_1(1,β;1−A/x³;−t/(1−t),−t/x³) = (1/A)e^aΦ_1(−λ_A,β;1−λ_A;t,−a)；系数形式 Y_β = (1−t)^{−β}Σ_N t^N/(AΠ_{i≤N}b_i^{(A)})·Σ_m C(N,m)(β)_m(x³/(1−t))^m",
+          "level": "已证明",
+          "proof_summary": "右端展开成 Σ_j(β)_j t^j/j!；每个 t^j 的解是一个 ₁F₁；逐项 Kummer 后合成 Φ_1；再用 Φ_1 的 Kummer 型变换（Euler 积分，在参数开集上成立后作有理恒等延拓）",
+          "verified_range": "A∈{1−x, 1−x+x³}，β∈{0,1,2,1/2,−3}，k≤24，t^N 的 N≤10",
+          "check_id": "c3a-humbert-general"
+        },
+        {
+          "id": "C3A-15",
+          "statement": "有限闭式 F = (1/(1−x))[₁F₁(1;1−λ;a) + x²((1−t)^{−2}Φ_1(1,2;1−λ;−t/(1−t),a) − (1−t)^{−1}Φ_1(1,1;1−λ;−t/(1−t),a))] = (e^a/(1−x))[₁F₁(−λ;1−λ;−a) + x²(Φ_1(−λ,2;1−λ;t,−a) − Φ_1(−λ,1;1−λ;t,−a))]，a=−t/x³",
+          "level": "已证明",
+          "proof_summary": "g(t) = 1 + x²[(1−t)^{−2} − (1−t)^{−1}]，由 C3A-14 得 F = Y_0 + x²(Y_2 − Y_1)",
+          "verified_range": "变换后形式 k≤40, m≤16；未变换形式 k≤30, m≤12（Φ_1 与 Pochhammer 均按定义展开）",
+          "check_id": "c3a-humbert-F"
+        },
+        {
+          "id": "C3A-16",
+          "statement": "G_M = 1/P_M + x²Σ_{N≤M}P_N^{−1}Σ_{m≤N}C(N,m)x^{3m}[(m+1)!C(M−N+m+1,M−N) − m!C(M−N+m,M−N)]",
+          "level": "已证明",
+          "proof_summary": "C3A-15 闭式的直接系数展开",
+          "verified_range": "k≤60, M≤30",
+          "check_id": "c3a-humbert-coeff"
+        },
+        {
+          "id": "C3A-17",
+          "statement": "积分 I(x,t) = x^{−3}∫_0^∞exp((t(e^σ−1)−(1−x)σ)/x³)g(te^σ)dσ：x>0 且 Re t<0 时绝对收敛；t=0 时收敛 ⇔ x<1；Re t=0（t≠0）时 λ>0 即绝对收敛；实数 t>0 时发散。在 t<0 上满足 (C5)，0<I≤1/(1−x)，是 t→−∞ 时唯一有界的解。常数项部分 I_0 = x^{−3}e^aE_{λ+1}(a)",
+          "level": "已证明",
+          "proof_summary": "估计 |g|≤1+x²；在积分号下求导，并用 x³t∂_tJ = x³∂_σJ + (1−x−t)J 分部积分；齐次解 (−t)^λe^{−t/x³} 在 t→−∞ 时无界",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "C3A-18",
+          "statement": "λ∉Z≥0 时 S(x,t) := Σ_m t^m G_m(x) 在 |t|<1 收敛（半径恰为 1），在 t=0 解析，是满足 (C5) 的唯一这种解，且 S = x^{−3}e^aΣφ_n a^n/(λ−n)。尾项界：|Σ_{m>M}t^mG_m| ≤ B|t|^{M+1}/(1−|t|)",
+          "level": "已证明",
+          "proof_summary": "m 充分大时 |G_m| ≤ c_1|G_{m−1}| + c_2，c_1≤1/2，归纳得有界；Taylor 系数等于在该 x 处求值的形式恒等式",
+          "verified_range": "纯证明（尾项界在 c3a-analytic-counterex 中实际使用）",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "C3A-19",
+          "statement": "精确差值：0<x<1、λ∉Z≥0、t∈(−1,0) 时 I − S = x^{−3}K(x)e^a a^λ，K(x) = Σφ_n/(n−λ) + ∫_1^∞τ^{−λ−1}φ dτ；常数项部分 K = Γ(−λ)，故 Σt^m/P_m = x^{−3}e^a[E_{λ+1}(a) − Γ(−λ)a^λ] = −x^{−3}e^a a^λγ(−λ,a) ≠ I_0",
+          "level": "已证明",
+          "proof_summary": "代换 τ=ae^σ 得 I = x^{−3}e^a a^λ∫_a^∞τ^{−λ−1}φ；S 写成逐项积分形式；在 [a,1] 上逐项积分；常数项用 Prym 分解",
+          "verified_range": "数值证据：60 位 decimal，3 个点上残差 ≤3e−44（容差 1e−40）；常数项残差 2.8e−59（c3a-num-gap-const）；差值 ~3.8e−62 的点相对误差 3e−38（c3a-num-small-t）；Γ(−λ) 两种独立算法一致（c3a-num-gamma）",
+          "check_id": "c3a-num-gap-full"
+        },
+        {
+          "id": "C3A-20",
+          "statement": "草稿解析版本「F = x^{−3}∫_0^∞…dσ」（F 理解为 S=Σt^mG_m(x)）不成立",
+          "level": "已否定",
+          "proof_summary": "严格反例 (x,t)=(3/5,−1/2)：被积函数为正，所以 I>0；精确部分和（m≤400）加严格尾项界给出 S ≤ −1057.810873 + 3.5e−118 < 0",
+          "verified_range": "精确有理运算 + 严格尾项界（非数值近似）",
+          "check_id": "c3a-analytic-counterex"
+        },
+        {
+          "id": "C3A-21",
+          "statement": "固定 t<0、K≥3、0<x<1 时 |I − Σ_{k<K}f_k(t)x^k| ≤ (x^K/|t|)sup_{τ≤t}|f_{K−1}+τ(f′_{K−3}+xf′_{K−2}+x²f′_{K−1})|，即积分 I 是形式级数 F 在 x 方向的一个解析重求和",
+          "level": "已证明",
+          "proof_summary": "Y_K 的残差只含 x^{≥K} 项；用常数变易公式取在 −∞ 处归一的特解，配合 h(t)/h(τ) ≤ e^{−(|τ|−|t|)/x³}；有界性强制齐次部分系数 C=0",
+          "verified_range": "数值证据 (21/100,−1/2)：|I − Σ_{k<150}f_kx^k| = 6e−56（容差 1e−50），同时严格有 |S| > 1e44",
+          "check_id": "c3a-num-asym"
+        },
+        {
+          "id": "C3A-22",
+          "statement": "S 的极点结构：Res_{x_i}G_m = Res_{x_i}G_i·(−x_i^{−3})^{m−i}/(m−i)!（m≥i），故 Res_{x=x_i}S = Res_{x_i}G_i·t^ie^{−t/x_i³}，且 Res_{x_i}G_i<0；S 的极点在 x=0 聚集",
+          "level": "已证明",
+          "proof_summary": "b_m(x_i) = (i−m)x_i³ ≠ 0（m≠i），由 G_m = (G_{m−1}+mx²)/b_m 归纳；G_{i−1}(x_i)>0（正系数，x_i 在收敛半径内）且 b_i′<0",
+          "verified_range": "数值核对 i≤5, m≤i+8，相对偏差 5.3e−47（容差 1e−40）；Res_{x_i}G_i = −c_ix_i 对 i≤4 数值吻合（explore7）",
+          "check_id": "c3a-num-residue"
+        },
+        {
+          "id": "C3A-23",
+          "statement": "常数项部分的差 x^{−3}Γ(−λ)e^a a^λ 在 x→0+ 时：若 re^{1+r}<1（r=|t|/(1−x)，即 |t| < W(1/e)(1−x) ≈ 0.2785(1−x)），远离极点处指数小；若 re^{1+r}>1，则指数大",
+          "level": "已证明",
+          "proof_summary": "反射公式 + Stirling：ln(e^a a^λ/Γ(λ+1)) = λ(r+ln r+1) − ½ln(2πλ) + O(1/λ)",
+          "verified_range": "纯证明",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "C3A-24",
+          "statement": "带 g 部分的整体差值有同样的门槛（K(x)/Γ(−λ) 有界且远离 0）",
+          "level": "猜想",
+          "proof_summary": "只有数值：x=3/5, 2/5, 3/10, 21/100 时 K/Γ(−λ) ≈ 1.195, 1.336, 1.429, 1.535",
+          "verified_range": "4 个 x 值的高精度数值（logs/c3a_explore5.log, c3a_explore6.log）",
+          "check_id": "none"
+        },
+        {
+          "id": "C3A-25",
+          "statement": "f_k(t) 呈 Gevrey-1/3 增长（F 在 x 方向对 t≠0 发散）",
+          "level": "猜想",
+          "proof_summary": "数值：|f_k(−1/2)|^{1/k} 在 k=75, 150 约为 1.62, 2.01，比值约 (150/75)^{1/3}",
+          "verified_range": "k≤150, t=−1/2（explore6）",
+          "check_id": "none"
+        },
+        {
+          "id": "C3A-26",
+          "statement": "二项式基：U_k(m) = Σ_q N(k,q)C(m+1,q)（m≥−1），q>k 时 N(k,q)=0，可做二项式反演",
+          "level": "已证明",
+          "proof_summary": "取值集合加保序重标号构成双射；三元组条件只依赖 = 与 ≥",
+          "verified_range": "DFS（k≤9）= DP 反演；q>k 为 0 核对到 k≤30",
+          "check_id": "c3a-N-def"
+        },
+        {
+          "id": "C3A-27",
+          "statement": "1 + tF(x,t) = 𝒩(x,t/(1−t))/(1−t)，等价地 𝒩(x,y) = 1/(1+y) + yF(x,y/(1+y))/(1+y)²",
+          "level": "已证明",
+          "proof_summary": "对 Σ_{m≥−1}U_k(m)t^{m+1} 代入二项式基",
+          "verified_range": "N 用 DFS（k≤9），n≤41",
+          "check_id": "c3a-N-subst"
+        },
+        {
+          "id": "C3A-28",
+          "statement": "𝒩 的 PDE：(1−x(1+y)+x³(1−y²))𝒩 − x³y(1+y)²𝒩_y = 1−x+x³+x²y²，与三角递推（含初值修正）等价",
+          "level": "已证明",
+          "proof_summary": "由 F：Ñ=1+tF 满足 (1−x+x³−t)Ñ − x³tÑ_t = 1−x+x³+x²t²/(1−t)²，再代 t=y/(1+y)。由递推：用 θ=y∂_y 求母函数。两个方向都写了",
+          "verified_range": "逐系数 k,q≤30",
+          "check_id": "c3a-N-pde"
+        },
+        {
+          "id": "C3A-29",
+          "statement": "(C3) 三角递推 N(k,q)=N(k−1,q−1)+N(k−1,q)+(q−1)[N(k−3,q−2)+2N(k−3,q−1)+N(k−3,q)]（k≥3, q≥1）",
+          "level": "已证明",
+          "proof_summary": "引理 1 ⇒ (C5) ⇒ 𝒩 的 PDE ⇒ 取系数",
+          "verified_range": "k≤30",
+          "check_id": "c3a-N-rec"
+        },
+        {
+          "id": "C3A-30",
+          "statement": "𝒩 的原生 Laplace 表示：Ñ = A^{−1}ℒ_s[exp((t/x³)(e^{vs}−1))(A + x²t²e^{2vs}/(1−te^{vs})²)]，A=1−x+x³，v=x³/A，𝒩(x,y) = Ñ(x,y/(1+y))/(1+y)；另有系数形式 [y^q]𝒩 = Σ_i(−1)^{q−i}C(q,i)G_{i−1}",
+          "level": "已证明",
+          "proof_summary": "一般原理（C3A-10）取 A=1−x+x³，再代换",
+          "verified_range": "精确展开 vs 1+tF（DP）以及 N(k,q)：DP 反演 k,q≤30，DFS k≤9",
+          "check_id": "c3a-N-lap"
+        },
+        {
+          "id": "C3A-31",
+          "statement": "𝒩(x,y) = [(A+x²)₁F₁(1;−λ;ŷ) − 2x²(1+y)Φ_1(1,1;−λ;−y,ŷ) + x²(1+y)²Φ_1(1,2;−λ;−y,ŷ)]/(A(1+y))，ŷ=−y/((1+y)x³)，A=1−x+x³",
+          "level": "已证明",
+          "proof_summary": "C3A-14 取 A=1−x+x³（此时 λ_A=λ+1），右端拆成 (A+x²) − 2x²(1−t)^{−1} + x²(1−t)^{−2}，再代 t=y/(1+y)",
+          "verified_range": "k≤40, q≤14",
+          "check_id": "c3a-N-humbert"
+        },
+        {
+          "id": "C3A-32",
+          "statement": "h_k = Σ_q N(k,q)t^{q−1}(1−t)^{k−q} 是次数 ≤k−1 的多项式；H(z,t) = (1−t)F(z(1−t),t) = 1 + (𝒩(z(1−t),t/(1−t)) − 1)/t",
+          "level": "已证明",
+          "proof_summary": "二项式基加 Σ_m C(m+1,q)t^m = t^{q−1}/(1−t)^{q+1}，再做连续代换",
+          "verified_range": "k≤30（t^k..t^40 系数为 0；DFS 得到的 N 用于 k≤9）",
+          "check_id": "c3a-H-poly"
+        },
+        {
+          "id": "C3A-33",
+          "statement": "H 的 PDE：(1−z−z³t(1−t))H − z⁴t(1−t)H_z − z³t(1−t)²H_t = 1 + z²t",
+          "level": "已证明",
+          "proof_summary": "把 F(x,t) = H(x/(1−t),t)/(1−t) 代入 (C5)，用链式法则",
+          "verified_range": "z^k 系数 k≤30，t 方向精确多项式运算",
+          "check_id": "c3a-H-pde"
+        },
+        {
+          "id": "C3A-34",
+          "statement": "(C6)：h_k = h_{k−1} + t(1−t)[(1−t)h′_{k−3} + (k−2)h_{k−3}]（k≥3），h_0=h_1=1，h_2=1+t",
+          "level": "已证明",
+          "proof_summary": "取 H 的 PDE 的 z^k 系数",
+          "verified_range": "由递推生成的 h_k 与 DP 的 (1−t)^{k+1}Σ_mU_k(m)t^m 一致，k≤30",
+          "check_id": "c3a-H-rec"
+        },
+        {
+          "id": "C3A-35",
+          "statement": "带 g 部分的整体 K(x) 对所有允许的 x 都非零（从而 I≠S 处处成立）",
+          "level": "未完成",
+          "proof_summary": "常数项部分 K=Γ(−λ)≠0 已证明；整体只有 4 个 x 值的数值。反例 C3A-20 不依赖这一条",
+          "verified_range": "无",
+          "check_id": "none"
+        },
+        {
+          "id": "C3A-36",
+          "statement": "核对所用的定义层计数彼此一致（高度 DP、提示词表、多重链、细分 DP、DFS）",
+          "level": "已验证",
+          "proof_summary": "直接比对",
+          "verified_range": "高度 DP=提示词表（k≤10, m≤6），=多重链（k≤7, m≤4）；细分 DP 总数=高度 DP（k≤40, m≤20），=DFS（k≤7, m≤4）",
+          "check_id": "c3a-anchor"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "草稿 §3「解析版本（t<0）：F = x^{−3}∫_0^∞exp((t(e^σ−1)−(1−x)σ)/x³)·g(te^σ)dσ」：若 F 指 S(x,t)=Σ_m t^m G_m(x)（任务建议的比较对象），等式不成立。严格反例 (x,t)=(3/5,−1/2)：积分 I≈0.9018130207>0（被积函数为正），而 S ≤ −1057.810873（精确部分和 + 严格尾项界）。精确关系是 I − S = x^{−3}K(x)e^a a^λ（ODE 的齐次解）。正确的说法只有两种：形式 Laplace 恒等式（已证明），以及「I 渐近于 F，x→0+」（已证明）。",
+        "草稿「常数项部分 = x^{−3}e^aE_{λ+1}(a)」：作为积分的常数项部分是对的，但 Σ_m t^m/P_m = x^{−3}e^a[E_{λ+1}(a) − Γ(−λ)a^λ]，两者之差 x^{−3}Γ(−λ)e^a a^λ 永不为零。例：(3/5,−1/2) 处为 885.947066578982521659…，(3/10,−1/10) 处为 3.5774982569309233663e−8。",
+        "任务说明的「解析版本（t<0、x>0 小）」暗示 x 小时积分与 F 相等：只有 |t| < W(1/e)(1−x) ≈ 0.2785(1−x) 且远离极点 x_i 时，差值才超越所有阶（例 (21/100,−1/20) 差 3.8e−62）。|t| 稍大差值就指数爆炸：(21/100,−1/2) 处 S ≈ −9.73e44，而 I ≈ 0.76545。另外 S(·,t) 在 b_i 的正根 x_i（→0）处有单极点，留数 ∝ t^i e^{−t/x_i³}，所以 x→0+ 时 S 没有通常意义的渐近展开。",
+        "（表述不足，不是错误）草稿用「(e^{us}−1)/x³ 是 u 的幂级数」论证 ℒ_s 良定义：这句话本身对，但真正需要的是 [s^N]被积式的 (x,t) 阶 ≥ N（更细地 [s^N t^m] 的 x 赋值 ≥ 3N−3m），这才保证每个 x^k t^m 系数只涉及 N ≤ k/3+m 的有限项。",
+        "（澄清）提示词 (C5) 的「齐次解 t^λe^{−t/x³}」只在解析意义下存在；在 Q[[x,t]] 中齐次方程只有零解（L_A 是双射），所以形式解唯一。积分表示与 Σt^mG_m(x) 的分歧恰好来自这个解析齐次解。"
+      ],
+      "failed_directions": [
+        "只用一元 ₁F₁ 或不完全 Gamma 的有限闭式：没找到，也没证明不可能。原因是 t 方向 ODE 的右端在 t=1 有二阶极点，F=h∫h^{−1}g 的被积式 τ^{−λ−1}e^{τ/x³}τ/(1−τ)² 不是不完全 Gamma 型。转而得到了 Humbert Φ_1 闭式（两个 Φ_1 加一个 ₁F₁，已证明）。Φ_1(1,β;γ;X,Y) = Σ_m(β)_m X^m ₁F₁(1+m;γ+m;Y)/(γ)_m 一般不再化成有限个 ₁F₁，我没有进一步尝试（例如化成 Whittaker 函数的积分）。",
+        "带 g 部分的整体 K(x) ≠ 0 的一般证明：没做出来。常数项 K=Γ(−λ)≠0 已证明；整体只在 4 个 x 值上数值非零（K/Γ(−λ)≈1.2–1.5）。卡在 K 是一个解析延拓的 Mellin 变换，没找到可用于判定符号的闭式。",
+        "严格意义的 Borel 可和性（f_k 的 Gevrey-1/3 上界、Borel 变换的解析延拓）：没有证明。定理 5.5 只给出了带显式误差界的渐近展开；f_k 的增长阶只有数值支持。",
+        "带 g 部分的整体差值门槛 |t| ≈ 0.2785(1−x)：只有常数项部分由 Stirling 严格得到，整体只是数值观察。",
+        "数值部分没有用区间算术。decimal 双指数求积的误差只是逐级加密的估计，所以 c3a-num-* 只能算数值证据；严格的只有符号反例和 |S(21/100,−1/2)| > 1e44（精确有理部分和 + 严格尾项界）。",
+        "最初在 (21/100,−1/20) 用 100 位计算 K(x) 失败了：K ~ 5e−129 由 O(1) 量级的项抵消得到，100 位全是噪声，导致 c3a-num-small-t 一度 FAIL。改为 K 单独用 170 位后通过；笔记已注明。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c3a.py",
+      "check_run_output_tail": "PASS c3a-analytic-counterex draft analytic claim F = x^{-3} int_0^inf ... refuted at (x,t)=(3/5,-1/2): sum_m t^m G_m(x) <= -1057.810873 + 3.5e-118 < 0 (exact partial sum m<=400 + rigorous tail bound) while the integral is > 0\nPASS c3a-num-gamma [NUM] Gamma(-lambda) via reflection+Stirling == Prym decomposition sum_n (-1)^n/(n!(n-lambda)) + E_{lambda+1}(1) at lambda = 50/27, 75/8, 700/27 (60 digits, tol 1e-45 relative)\nPASS c3a-num-gap-const [NUM] I0 - sum_m t^m/P_m = x^{-3} Gamma(-lambda) e^a a^lambda at (x,t)=(3/5,-1/2),(2/5,-3/10),(3/10,-1/10); worst residual 2.8E-59 (tol 1e-45, relative to max(1,|gap|); 60-digit decimal quadrature)\nPASS c3a-num-gap-full [NUM] I - sum_m t^m G_m(x) = x^{-3} K(x) e^a a^lambda at the same 3 points; worst residual 3.0E-44 (tol 1e-40)\nPASS c3a-num-asym [NUM] x->0+ asymptotics at (x,t)=(21/100,-1/2): |I - sum_{k<150} f_k(t) x^k| = 6.0E-56 < 1e-50 (f_k exact from the PDE, == DP h_k/(1-t)^{k+1} for k<=30), while |sum_m t^m G_m(x)| > 1e44 rigorously (it is -9.729E+44)\nPASS c3a-num-small-t [NUM] at (x,t)=(21/100,-1/20): I - sum_m t^m G_m(x) = 3.8140E-62 matches x^{-3}K e^a a^lambda with relative error 3.0E-38 (tol 1e-25; I,S with 100 digits, K with 170 digits)\nPASS c3a-num-residue [NUM] residue law Res_{x_i}G_m = Res_{x_i}G_i (-x_i^{-3})^{m-i}/(m-i)! for i<=5, m<=i+8 (so Res_{x_i} sum_m t^m G_m = Res_{x_i}G_i t^i e^{-t/x_i^3}), Res_{x_i}G_i<0; worst rel dev 5.3E-47 (tol 1e-40, 60 digits)\n# elapsed 22.4s\nSUMMARY c3a pass=34 fail=0",
+      "check_runtime_seconds": 22.4,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c3a.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\c3a_lib.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\laurent.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\numerics.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore1_laplace.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore2_operator.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore3_1f1.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore4_N_H.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore5_numerics.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore6_asym.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore7_residue.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore8_humbert.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3a\\explore9_humbert_general.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore1.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore2.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore3.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore4.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore5.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore6.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore7.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore8.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_explore9.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check_run1.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check_run2.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check_run3.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check_run4.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3a_check_run5.log"
+      ],
+      "uncertainties": [
+        "「草稿解析版本错误」这一判定，依赖于把 F 理解为 S = Σ_m t^m G_m(x)（任务说明建议的比较对象）。如果草稿本意是「积分是 F 在 x 方向的 Borel–Laplace 和」，那么它在渐近意义下是对的（定理 5.5 已证明），只是不能写成等号。",
+        "数值检查（c3a-num-*）不是区间算术，求积误差只是逐级加密的估计。只有符号反例（c3a-analytic-counterex）和 |S(21/100,−1/2)| > 1e44 是严格的。",
+        "K(x) 的级数加尾积分在 λ 大时抵消严重（x=21/100 时 K~5e−129），需要约 170 位精度；精度不够会得出错误结论，核对模块已对此单独提高精度。",
+        "Humbert Φ_1 的 Kummer 型变换，形式有效性靠「实参数开集上的 Euler 积分 + 系数为有理函数」延拓得到。这是标准论证，但不是纯形式的组合证明。程序在 β∈{0,1,2,1/2,−3}、两种 A 上做了直接核对。",
+        "形式 Laplace 的 EGF 实现与朴素实现只在 k≤15、m≤6 上做了交叉对照；更大范围（k≤60, m≤30）只用了 EGF 实现，它与 DP 一致，而且负对照（改动被积式）会失败。"
+      ]
+    },
+    {
+      "area": "c3b",
+      "stage_conclusion": "C-3 的 D-finite 判定已经做完，主要结果都有完整证明，并且都对照原始定义（高度 DP、参考实现、多重链、原题直接计数、DFS）做了核对。\n(1) 定理 1【已证明】：F(x,t)=ΣU_k(m)x^k t^m 不满足任何非零的 x 方向线性 ODE（系数在 C[x,t] 中，证明对 C[x][[t]] 中的系数也成立），所以 F 不是 D-finite（Lipshitz 1989 Def. 2.1 意义）。原因是 t^m 的系数 G_m=W_m/P_m 在 x_m=1/ρ_m 处恰好新出现一个留数非零的单极点；x_m 两两不同，且趋于 0。\n(2) 推论 2【已证明】：不存在「系数只依赖 k 的多项式、在某个象限上成立」的非平凡递推。给了两个证明：一个直接用极点；另一个按提示词路线，构造 x 方向算子 L 使 LF 有理，再用有理函数满足一阶 ODE 得出矛盾。\n(3) 定理 3【已证明，这是本轮新得到的强化】：U 的全部「系数是 (k,m) 的多项式、在象限上成立」的递推，恰好是引理 1 算子 L1 的左倍式。由此得到维数公式：盒子 [0..A]×[0..B]、系数总次数 ≤D 时维数为 (A−2)·B·D(D+1)/2；分次版为 (A−2)B(Dk+1)Dm。\n(4) 定理 4、3′【已证明】：Φ=ΣN(k,q)x^k y^q 也不是 D-finite（用代数代换 y=t/(1−t) 证明，另给一个直接极点证明）；N 没有只依赖 k 的递推；N 的全部关系恰是三角递推 L_N 的左倍式，维数为 (A−2)(B−1)D(D+1)/2。证明方法是用代换 t=y/(1+y) 把问题搬回定理 3，再用一个饱和引理（相对 Y 与 1+Y）。\n(5) 数据实验【已验证】，用 k,m≤40 的精确表，在素数 2^31−1 上求秩（复跑用了第二个素数），找到的关系都用精确整数复核：\n- E1/E3A（系数只依赖 k）在所有测试参数下都列满秩，例如 (A,B,deg) 取 (6,6,6)、(10,3,6)、(3,10,6)、(4,4,12)、(15,1,8)、(1,15,8)、(2,2,30)、(25,0,10)、(0,25,10) 等，所以没有关系；\n- E2/E3B 的核维数与上面的公式在约 30 个盒子里逐一相等，并且核恰好由引理 1（对 N 是三角递推）及其左乘张成。\n(6) 为什么不矛盾：D-finite 要求每个下标方向都有一条「系数只依赖该下标」的递推（引理 D1、D2，已自证）。引理 1 只提供 m 方向那一条，k 方向那一条由推论 2 证明不存在。\n辅助结果：ρ_i 是唯一实根、严格递增，复根模长 √(i/ρ_i)<ρ_i；W_m(x_m)=1+Σ j(m)_j x_m^{3j+2}≥1；gcd(W_m,b_m)=1 在 m 不形如 n²(n−1) 时已证明，例外情形验证到 n≤8。因此 m≤647 时 G_m 恰有 3m+1 个单极点，k 方向任何多项式系数递推的阶至少为 3m+1。\n草稿和提示词里没有发现实质错误，只补全了若干细节、指出了几处表述不精确。",
+      "claims": [
+        {
+          "id": "T1",
+          "statement": "定理 1：不存在不全为 0 的 p_j∈C[x,t]（甚至 C[x][[t]]）使 Σ_j p_j(x,t)∂_x^j F=0；因此 F 不是 D-finite（对任何系数域 K⊆C）",
+          "level": "已证明",
+          "proof_summary": "约去 t 的公因子（C[[x,t]] 是整环）；取 t^m 系数，得到有理函数恒等式 Σ p_{jl}G_{m−l}^{(j)}=0；取 j*=max{j: p_{j0}≠0}，再选 m 使 p_{j*0}(x_m)≠0（x_m 两两不同）。G_m 在 x_m 处是留数非零的单极点，G_{m−l}（l≥1）在 x_m 处正则，于是该恒等式在 x_m 处有 j*+1 阶极点，矛盾。D-finite 推出存在这样的 ODE（引理 D1）",
+          "verified_range": "对一切 m 的证明；用到的事实由 C3B-CUB/PX/RES/INT/G/L1 精确核对",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "C2",
+          "statement": "推论 2：若 p_ab∈C[k] 不全为 0，则 Σ_{a≤A,b≤B} p_ab(k)U_{k−a}(m−b)=0 不可能对某象限 k≥k0, m≥m0 中的所有点成立",
+          "level": "已证明",
+          "proof_summary": "证明一：固定 m，H(x)=Σ p_ab(θ)(x^aG_{m−b}) 是多项式；它在 x_m 处的 (d+1) 阶极点系数是 (−1)^d d! c x_m^d C(x_m)，其中 C(x)=Σ[k^d]p_a0 x^a 与 m 无关，所以 C 在无穷多个 x_m 处为零，矛盾。证明二：令 L=Σp_ab(θ_x)x^a t^b，则 LF 是有理函数 R（因为 Σ_m U_k(m)t^m 与 G_m 都有理）；用 M=ND∂_x−(N_xD−ND_x) 零化 R，得 ML·F=0，且 ML≠0（整环），与定理 1 矛盾",
+          "verified_range": "一般证明；数据旁证见 E1",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "T3",
+          "statement": "定理 3：U 的全部「多项式系数、象限上成立」的递推构成左理想 O_U·L1，L1=1−S_m^{−1}−S_k^{−1}−m S_k^{−3}（引理 1）。盒子 [0..A]×[0..B]、总次数≤D 内的关系空间维数为 (A−2)B·D(D+1)/2（A≥3,B≥1,D≥1，否则为 0）；分次版为 (A−2)B(Dk+1)Dm",
+          "level": "已证明",
+          "proof_summary": "用 S_m^{−1}=1−S_k^{−1}−mS_k^{−3}−L1 把任意递推约化成 QL1+R，其中 R 只含 k 方向位移。命题 A：只含 k 方向位移、系数在 C[k,m] 中的非零递推不可能在象限上成立，因为它的首项系数多项式 C_m(x)（次数 ≤A）要在 G_m 的 m+1 个留数非零的单极点 x_0..x_m 处全为零。维数公式由角点支撑论证和最高次项论证得到",
+          "verified_range": "一般证明；数据见 E2",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "T4",
+          "statement": "定理 4：Φ(x,y)=ΣN(k,q)x^k y^q 不满足任何非零的 x 方向 ODE，因此不是 D-finite；N 也没有「系数只依赖 k、在象限上成立」的非平凡递推",
+          "level": "已证明",
+          "proof_summary": "证明一：代换 y=t/(1−t)，并利用 Φ(x,t/(1−t))=1−t+t(1−t)F，把 Φ 的 x-ODE 变成 F 的非齐次 x-ODE LF=r，再用 r∂_x−r_x 齐次化，与定理 1 矛盾。证明二：Ψ_q=Σ_i(−1)^{q−i}C(q,i)G_{i−1} 在 x_{q−1} 处是单极点，留数 =Res G_{q−1}≠0，而 Ψ_{q'}（q'<q）在该点正则，因此可逐字重复定理 1 和推论 2 的证明",
+          "verified_range": "一般证明；数据见 E3A",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "T3N",
+          "statement": "定理 3′：N 的全部多项式系数递推恰为 O_N·L_N，L_N=1−S_k^{−1}−S_k^{−1}S_q^{−1}−(q−1)S_k^{−3}(1+S_q^{−1})²（即 (C3) 三角递推）。盒子维数为 (A−2)(B−1)D(D+1)/2，分次版为 (A−2)(B−1)(Dk+1)Dq",
+          "level": "已证明",
+          "proof_summary": "代换 t=y/(1+y) 诱导算子环同构 ψ（θ_t↦(1+y)θ_y），并有恒等式 y·ψ(ℓ1)∘((1+y)²/y)=(1+y)ℓ_N。把 N 的关系搬到 U 上，乘 (1−t)^e 后由定理 3 得 𝓛=Λℓ_N，其中 Λ 的分母只含 y 与 1+y。饱和引理：Y·L 或 (1+Y)·L 属于 O_N L_N 时 L 也属于 O_N L_N（用 rem_{(1+Y)}(L_N)=1 自底向上归纳）",
+          "verified_range": "一般证明；恒等式在单项式上精确核对（C3B-ISO）；数据见 E3B",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "LemC",
+          "statement": "i≥1 时 y³−y²−i 只有一个实根 ρ_i，它是单根、1<ρ_i<i+1、关于 i 严格增；两个复根的模长为 √(i/ρ_i)<ρ_i。因此 x_i=1/ρ_i 是 b_i 唯一的最小模根，且 1=x_0>x_1>…→0；对 v≠m 有 b_v(x_m)=(m−v)x_m³≠0",
+          "level": "已证明",
+          "proof_summary": "求导分析单调性得唯一实根及其简单性；由 Vieta 得 |ω|²=i/ρ_i，再由 i=ρ³−ρ²<ρ³ 得 |ω|<ρ_i；由 f_{i'}(ρ_i)=i−i'<0 得单调性；b_v−b_m=(m−v)x³。判别式为 −i(27i+4)<0",
+          "verified_range": "证明对一切 i；用有理区间隔离根、判别式和单调性精确核对 1≤i≤60",
+          "check_id": "C3B-CUB"
+        },
+        {
+          "id": "LemP",
+          "statement": "G_m=W_m/P_m 在 x_m 处是单极点，留数为 −W_m(x_m)/((1+3m x_m²)m! x_m^{3m})<0，其中 W_m(x_m)=1+Σ_{j=1}^m j(m)_j x_m^{3j+2}≥1；G_l（l<m）在 b_m 的根处正则，且 G_l 的极点都在 |x|≥x_l 上；对 v<m，G_m 在 x_v 处也是单极点，留数非零",
+          "level": "已证明",
+          "proof_summary": "由 P_{j−1}(x_m)=(m)_j x_m^{3j} 得 W_m(x_m) 是正项和；由 G_m b_m=G_{m−1}+m x² 与 b_m'(x_m)≠0 得单极点；对 v<m，用除以 b_m(x_v)=(v−m)x_v³≠0 归纳",
+          "verified_range": "证明对一切 m；在 b_m 的模下核对 P_{j−1}≡(m)_j x^{3j} 与 W_m≡正系数多项式，1≤j≤m≤30",
+          "check_id": "C3B-PX"
+        },
+        {
+          "id": "INT",
+          "statement": "m≤30 时 G_{m−1}(x_m)+m x_m²>0 且 W_m(x_m)>0（用有理区间算术检验，不涉及浮点）",
+          "level": "已验证",
+          "proof_summary": "对 ρ_m 做有理二分隔离，再分开正、负系数做多项式区间求值；该结论另有一般证明（LemP）",
+          "verified_range": "1≤m≤30",
+          "check_id": "C3B-INT"
+        },
+        {
+          "id": "RES",
+          "statement": "在 b_v 的任意根 z 处，Res_z G_m=Res_z G_v·(−1)^{m−v}/((m−v)! z^{3(m−v)})",
+          "level": "已证明",
+          "proof_summary": "由 G_m=(G_{m−1}+m x²)/b_m 及 b_m(z)=(v−m)z³ 归纳；数值上用交叉相乘后模 b_v 余式为 0 的形式精确核对",
+          "verified_range": "证明对一切 v<m；精确核对 0≤v<m≤12",
+          "check_id": "C3B-RES"
+        },
+        {
+          "id": "GCD",
+          "statement": "m 不形如 n²(n−1) 时 gcd(W_m,b_m)=1",
+          "level": "已证明",
+          "proof_summary": "y³−y²−m 首一、整系数，有理根只能是满足 n²(n−1)=m 的整数；没有这样的根时 b_m 在 Q 上不可约。又 W_m(x_m)≥1≠0，所以 b_m 不整除 W_m",
+          "verified_range": "证明对一切非例外 m；另用直接 Euclid 精确核对 0≤m≤60（全部为 1）",
+          "check_id": "C3B-GCD1"
+        },
+        {
+          "id": "GCDEXC",
+          "statement": "例外 m=n²(n−1) 时，b_m=(1−nx)(1+(n−1)x+n(n−1)x²)，且其中的二次因子不整除 W_m",
+          "level": "已验证",
+          "proof_summary": "在二次因子模下逐步精确计算 W_m 的余式，余式非零；一般 n 未证（正性论证失效，因为二次因子的根在 G_{m−1} 的收敛圆之外）",
+          "verified_range": "n=2..8，即 m=4,18,48,100,180,294,448",
+          "check_id": "C3B-GCD2"
+        },
+        {
+          "id": "POLES647",
+          "statement": "gcd(W_m,P_m)=1 ⇔ 对一切 v≤m 有 gcd(W_v,b_v)=1。因此 m≤647 时 G_m 恰有 3m+1 个单极点，k 方向的常系数递推最小阶恰为 3m+1，且不存在阶更低的多项式系数递推；对一切 m，这类递推的阶都 ≥m+1",
+          "level": "已验证",
+          "proof_summary": "等价性已证明（极点逐层保持）；阶的下界已证明（首项系数多项式要在全部极点处为零）。m≤647 的结论由「非例外 m 已证明 + 例外 m≤448 已验证（下一个例外是 648）」合成；另用直接 Euclid 复核 m≤10",
+          "verified_range": "m≤647（证明 + 有限计算）；m+1 下界对一切 m 已证明",
+          "check_id": "C3B-GCD3"
+        },
+        {
+          "id": "ASYM",
+          "statement": "U_k(m)=c_m ρ_m^k(1+O(θ_m^k))，其中 θ_m<1，c_m=W_m(x_m)/((1+3m x_m²)m! x_m^{3m+1})；例如 c_4=215/2",
+          "level": "已证明",
+          "proof_summary": "G_m 是真分式，极点全为单极点，x_m 是唯一的最小模极点；用部分分式展开",
+          "verified_range": "一般证明；数值旁证（Decimal，容差 1e−3）：m≤5 时 U_300(m)/U_299(m) 接近 ρ_m",
+          "check_id": "C3B-NUM"
+        },
+        {
+          "id": "GM",
+          "statement": "G_m=W_m/P_m，其中 W_m=1+x²Σ_{j=1}^m j P_{j−1}（由 (1−x−m x³)G_m=G_{m−1}+m x² 得到）",
+          "level": "已证明",
+          "proof_summary": "对引理 1 乘 x^k 求和，再对 m 归纳",
+          "verified_range": "级数展开与 DP 表一致，k≤60、m≤30",
+          "check_id": "C3B-G"
+        },
+        {
+          "id": "L1",
+          "statement": "引理 1：U_k(m)=U_k(m−1)+U_{k−1}(m)+m U_{k−3}(m)",
+          "level": "已证明",
+          "proof_summary": "按最大值第一次出现的位置分类（独立重证）",
+          "verified_range": "1≤k≤60、0≤m≤30，对照高度 DP；DP 本身对照参考实现、多重链、暴力枚举和原题直接计数（C3B-A1）",
+          "check_id": "C3B-L1"
+        },
+        {
+          "id": "A1",
+          "statement": "快速 DP 与原始定义的独立实现一致",
+          "level": "已验证",
+          "proof_summary": "与参考实现 U_list、多重链、高度序列暴力枚举对照，并核对 a_direct(n,k)=U(⌈n/2⌉)U(⌊n/2⌋)",
+          "verified_range": "U_list：k≤12、m≤8；多重链：k≤7、m≤4；暴力：k≤6、m≤4；a_direct：k≤4、n≤8",
+          "check_id": "C3B-A1"
+        },
+        {
+          "id": "TODE",
+          "statement": "F 满足 t 方向一阶非齐次 ODE：(1−x−t)F−x³t∂_tF=1+x²t/(1−t)²",
+          "level": "已证明",
+          "proof_summary": "由引理 1 乘 t^m 求和得到",
+          "verified_range": "逐项核对 k,m≤40",
+          "check_id": "C3B-TODE"
+        },
+        {
+          "id": "PSI",
+          "statement": "Ψ_q=Σ_k N(k,q)x^k=Σ_i(−1)^{q−i}C(q,i)G_{i−1}；在 x_v（v<q）处 Res Ψ_q=(−1)^{q−1−v}Res G_v·Σ_j C(q,v+1+j)x_v^{−3j}/j!，其中和式各项为正，因此留数非零",
+          "level": "已证明",
+          "proof_summary": "合法性只依赖大小关系，所以 U_k(m)=ΣC(m+1,q)N(k,q)，再做二项式反演；留数公式由 RES 得到",
+          "verified_range": "DFS 定义与容斥一致（k≤8）；展开与 N 表一致（q≤12、k≤40）；留数公式模 b_v 精确核对（v<q≤12）",
+          "check_id": "C3B-PSI"
+        },
+        {
+          "id": "PHI",
+          "statement": "Φ(x,y)=1/(1+y)+y·F(x,y/(1+y))/(1+y)²",
+          "level": "已证明",
+          "proof_summary": "利用 Σ_m C(m+1,q)t^m=t^{q−1}/(1−t)^{q+1}",
+          "verified_range": "逐项核对 k,q≤20",
+          "check_id": "C3B-PHI"
+        },
+        {
+          "id": "YODE",
+          "statement": "Φ 满足 (1−x−xy+x³(1−y²))Φ−x³(1+y)²θ_yΦ=1−x+x³+x²y²；三角递推 L_N 在 q≥1 时只在 (k,q)=(2,2) 不成立",
+          "level": "已证明",
+          "proof_summary": "由三角递推求和，或由 t-ODE 代换得到",
+          "verified_range": "k,q≤40",
+          "check_id": "C3B-YODE"
+        },
+        {
+          "id": "ISO",
+          "statement": "搬运恒等式 y·ψ(ℓ1)∘((1+y)²/y)=(1+y)ℓ_N 成立，其中 ψ(ℓ1)=(1+y)^{−1}−x−x³(1+y)θ_y；并且 rem_{(1+Y)}(L_N)=1",
+          "level": "已证明",
+          "proof_summary": "直接计算。两边都形如 r_0+r_1θ_y，所以在 b=1,2 的单项式上相等就足以确定整个算子",
+          "verified_range": "在单项式 x^a y^b 上精确核对（a≤3、1≤b≤6）",
+          "check_id": "C3B-ISO"
+        },
+        {
+          "id": "E1",
+          "statement": "数据实验：U 不满足系数只依赖 k 的递推",
+          "level": "已验证",
+          "proof_summary": "模 p=2^31−1 列满秩，所以在 Q 上也列满秩，因此无关系；较大参数集的结论覆盖所有更小的 A、B 和次数",
+          "verified_range": "k,m≤40；(A,B,deg) 取 (6,6,6)、(10,3,6)、(3,10,6)、(4,4,12)、(15,1,8)、(1,15,8)（check 模块）；另有 (3,1,2)、(8,8,3)、(20,1,6)、(1,20,6)、(5,5,9)、(2,2,30)、(12,12,1)、(0,25,10)、(25,0,10)（探索日志，含第二个素数）",
+          "check_id": "C3B-E1"
+        },
+        {
+          "id": "E2",
+          "statement": "数据实验：U 的 (k,m) 多项式系数关系空间恰为 L1 的左倍式，维数等于 (A−2)B·D(D+1)/2，分次版等于 (A−2)B(Dk+1)Dm",
+          "level": "已验证",
+          "proof_summary": "模 p 核维数等于精确整数核对过的左倍式个数，且这些左倍式模 p 线性无关，所以有理核恰由它们张成",
+          "verified_range": "k,m≤40；总次数版 (A,B,D) 取 (3,1,1)、(3,1,3)、(5,2,2)、(6,2,3)、(4,3,4)、(6,4,2)、(2,6,4)、(6,0,4)；分次版取 (4,2,3,2)、(5,3,1,3)、(3,2,5,0)；探索日志另有约 15 个盒子",
+          "check_id": "C3B-E2"
+        },
+        {
+          "id": "E3A",
+          "statement": "数据实验：N 不满足系数只依赖 k 的递推",
+          "level": "已验证",
+          "proof_summary": "模 p 列满秩，与 E1 同法",
+          "verified_range": "k,q≤40；参数集与 E1 相同",
+          "check_id": "C3B-E3A"
+        },
+        {
+          "id": "E3B",
+          "statement": "数据实验：N 的 (k,q) 多项式系数关系空间恰为 L_N 的左倍式，维数等于 (A−2)(B−1)D(D+1)/2，分次版等于 (A−2)(B−1)(Dk+1)Dq",
+          "level": "已验证",
+          "proof_summary": "与 E2 同法",
+          "verified_range": "k,q≤40；总次数版 (A,B,D) 取 (3,2,1)、(3,2,3)、(5,3,2)、(6,3,3)、(4,4,4)、(6,4,2)、(3,1,3)、(2,4,3)；分次版取 (4,3,3,2)、(5,4,1,3)、(3,3,5,0)；探索日志另有约 15 个盒子",
+          "check_id": "C3B-E3B"
+        },
+        {
+          "id": "NONCONTRA",
+          "statement": "「满足引理 1」与「不是 D-finite」不矛盾：D-finite 推出每个下标方向都有一条「系数只依赖该下标」的递推；引理 1 只提供 m 方向那一条，k 方向那一条不存在（推论 2）",
+          "level": "已证明",
+          "proof_summary": "引理 D1 与 D2 自证（ODE 的系数逐项读出就是递推，Weyl 代数的作用是忠实的）。Lipshitz 1989 的元数据，以及其引言中关于 Def. 2.1、Remark 3.5、第 3 节的说明，经 Crossref 和 Semantic Scholar 只读核实；第 3 节原文未读到，因此没有引用其中的定理编号",
+          "verified_range": "证明",
+          "check_id": "proof-only"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "草稿 00 §3「y³−y²−i 只有一个实根 ρ_i>1」只对 i≥1 成立：i=0 时 y³−y²=y²(y−1) 有三个实根 0,0,1，需要单独约定 ρ_0=1。这是轻微不精确，不影响任何结论",
+        "草稿 00 §3「F 不是 D-finite」的论证结论正确，但有漏洞需要补：(a) 约去 t^e 要用到 C[[x,t]] 是整环；(b) 每个 t^m 系数恒等式要先当作有理函数恒等式，才能讨论 x_m 处的 Laurent 展开；(c) 要用 x_m 两两不同（ρ 严格增）才能选出使 p_{i*0}(x_m)≠0 的 m；(d) 要说明 j=0、i<i* 的项极点阶更低。这些都已在 notes §4 补全，不构成错误",
+        "草稿 00 §3「关于 t 满足一阶 ODE」不精确：F 满足的是一阶非齐次 ODE，右边是 1+x²t/(1−t)²；齐次化后是二阶。按 Lipshitz 的齐次定义，结论不变",
+        "提示词 (C2)「ρ_m 应是 ρ³=ρ²+m 的最大实根（未证）」：m≥1 时只有一个实根，「最大」是多余的；现在已经证明 x_m=1/ρ_m 是唯一的最小模单极点，并且 U_k(m)~c_m ρ_m^k",
+        "提示词 (C2)「阶 ≤3m+1」没有错，但可以加强：m≤647 时常系数递推的最小阶恰为 3m+1，并且不存在阶更低的多项式系数递推",
+        "没有发现需要标为「已否定」的陈述。(C3) 三角递推「k≥3」核对无误，在 q≥1 的范围内唯一例外是 (k,q)=(2,2)"
+      ],
+      "failed_directions": [
+        "查 Lipshitz 1989 第 3 节（高维 P-recursive 的定义）原文没有成功。WebSearch 和 WebFetch 都报模型错误（claude-sonnet-4-6 不可用）；ScienceDirect 对 curl 返回 403。最后只拿到 Crossref 与 Semantic Scholar 的元数据和论文引言，以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna、Melczer 论文和 Wikipedia 的二手表述。CORE 镜像是 PDF，属于文件下载，未经许可没有下载。因此没有转述 Lipshitz 第 3 节的确切条件，也没有引用其中的定理编号",
+        "N 的关系模，最初尝试用 L_N 直接消去 q 方向位移，失败了：L_N 关于 S_q 不是首一的（最高项系数是 (q−1)S_k^{−3}）。在多项式系数下无法像 U 那样消元；改用有理系数也只能约化到 S_q 次数 ≤1，剩下一个「两列独立性」问题（需要证明某些留数和关于 q 不是超几何的），没有继续下去。后来改用「代换 t=y/(1+y) 搬回 U + 饱和引理」完成了证明",
+        "对例外 m=n²(n−1) 一般地证明 gcd(W_m,b_m)=1 没有成功：二次因子的根 z 满足 |z|=1/√(n(n−1))>x_{m−1}，落在 G_{m−1} 的收敛圆之外，正性论证不适用；只精确验证到 n=8。这个结论不影响定理 1–4"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c3b.py",
+      "check_run_output_tail": "PASS C3B-A1 ... PASS C3B-L1 ... PASS C3B-TODE ... PASS C3B-CUB ... PASS C3B-G ... PASS C3B-PX ... PASS C3B-INT ... PASS C3B-RES ... PASS C3B-GCD1 ... PASS C3B-GCD2 ... PASS C3B-GCD3 ... PASS C3B-NUM ... PASS C3B-PSI ... PASS C3B-PHI ... PASS C3B-YODE ... PASS C3B-ISO ... PASS C3B-E1 ... PASS C3B-E2 ... PASS C3B-E2S ... PASS C3B-E3A ...\nPASS C3B-E3B N, coefficients in Q[k,q] (total degree<=D), generator L_N=1-S_k^-1-S_k^-1S_q^-1-(q-1)S_k^-3(1+S_q^-1)^2, formula (A-2)(B-1)D(D+1)/2: kernel (mod p) == span of exact left multiples of the generator, dimension == formula; (3, 2, 1):36u/1482eq ker=1 pred=1 gens=1; (3, 2, 3):120u/1482eq ker=6 pred=6 gens=6; (5, 3, 2):144u/1368eq ker=18 pred=18 gens=18; (6, 3, 3):280u/1330eq ker=48 pred=48 gens=48; (4, 4, 4):375u/1369eq ker=60 pred=60 gens=60; (6, 4, 2):210u/1295eq ker=36 pred=36 gens=36; (3, 1, 3):80u/1520eq ker=0 pred=0 gens=0; (2, 4, 3):150u/1443eq ker=0 pred=0 gens=0\nPASS C3B-E3S N, coefficients with deg_k<=Dk, deg_q<=Dq, formula (A-2)(B-1)(Dk+1)Dq: kernel (mod p) == span of exact left multiples of the generator, dimension == formula; (4, 3, 3, 2):240u/1406eq ker=32 pred=32 gens=32; (5, 4, 1, 3):240u/1332eq ker=54 pred=54 gens=54; (3, 3, 5, 0):96u/1444eq ker=0 pred=0 gens=0\n# elapsed 31.5s (numpy=True)\nSUMMARY c3b pass=22 fail=0",
+      "check_runtime_seconds": 32,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c3b.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3b\\relsearch.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3b\\explore_poles.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3b\\explore_relations.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3b\\explore_relations2.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c3b\\explore_misc.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_check_final.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_check_run1.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_explore_poles.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_explore_relations.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_explore_relations2.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c3b_explore_misc.log"
+      ],
+      "uncertainties": [
+        "定理 3′（N 的关系模是主左理想）证明中的局部化一步最需要复核：要把 Λ=(1+y)^eψ(𝒬)(1+y)y^{−1} 写成左分式 s^{−1}Λ_0，其中 s=y^a(1+y)^c，再用饱和引理剥掉 s。我认为这一步正确，并且它与 E3B 在约 20 个盒子里的维数完全吻合，但它是全文最精细的代数步骤",
+        "Lipshitz 1989 第 3 节的确切 P-recursive 定义和 Remark 3.5 的内容只通过论文引言（Semantic Scholar 收录）核实到存在，没有读到原文；关于代数代换封闭性的 [Lipshitz 1989, Prop. 2.3] 只是 BMP 2003 的二手引用，我没有依赖它，而是对本文需要的情形直接给了证明",
+        "gcd(W_m,b_m)=1 在例外 m=n²(n−1) 处只验证到 n=8，一般情形未证；因此「G_m 恰有 3m+1 个极点、k 方向最小阶 =3m+1」只对 m≤647 成立（其余 m 只证明了 ≥m+1）。定理 1–4 不依赖这一点",
+        "C3B-NUM 是 Decimal 数值检查（容差 1e−3），只作渐近公式的旁证；渐近公式本身由极点结构证明"
+      ]
+    },
+    {
+      "area": "c4",
+      "stage_conclusion": "C-4 两个子问题都已完成主体，正式核对模块 41/41 PASS（约 28 秒，退出码 0，可从任意目录运行）。\n(i) 近对角线 D(k,d)=N(k,k−d)：对一切 d≥0 证明了 D(k,d) 在 k≥2d+2 时等于一个 2d 次多项式 p_d，首项 2/(2^d d!)，次首项 −(4d²−3d)·2/(2^d d!)。门槛 2d+2 对每个 d 都精确：D(2d+1,d)−p_d(2d+1)=(−1)^{d+1}(d+1)!，D(2d,d)−p_d(2d)=(−1)^{d+1}(d+2)!/2。证法是把三角递推改写成 D 递推，再对缺陷 e_d=D−p_d 用同一递推倒推。门槛之所以是 K_{d−1}+2，是因为起决定作用的是 (k−d−1)D(k−3,d−1) 这一项。特例 D(k,0)=2（k≥2）、D(k,1)=k²−k−4（k≥4）。d≤12 的显式 p_d 用「Fraction 多项式恒等式 + 基点 + 归纳」做了计算机辅助证明，表中列 d≤5，并对 DP 得到的 N 核对到 k≤60。\n新的组合解释（模式展开）：对一切 k≥d，D(k,d)=Σ M(d;σ,β)·C⁺(k−d−β,σ−β)。M 是「所有值都特殊」的模式个数，σ≤2d+2，β∈{0}∪[2,d+2]。β≤d+2 给出门槛的组合来源；首项是 S(k,k−d) 首项的 2 倍，原因是有两族各 (2d−1)!! 个模式。M 由转移 DP 计算，并按定义暴力枚举核对到 d≤4。与 S(k,k−d) 的二阶 Euler 型非负展开相比：对 1≤d≤8 已证明 p_d 在任何整数平移的 C(k+c−j,2d) 基下都有负系数，所以这条类比不成立。非负的替代有三种：模式数 M；基点 2d+2 的 Newton 系数（对一切 d 已证明为正）；p_d(2d+1+m) 的单项式系数（d≤12 验证全正）。\n(ii) 分子 Num_q：从三角递推加 k≤2 的边界缺陷 [q=2]x² 证明了 F_q 的一阶递推、三项递推、次数 3q−2、首项 (q−1)!、最低项 2x^q（q≥2；q=1 时是 x），以及容斥式。新结果：Num_q 系数全非负，非零项恰为 x^q..x^{3q−4} 与 x^{3q−2}，用一个全正项的全历史递推证明；Num_q(1)=A000262(q)；gcd(Num_q,P_{q−1})=1 已验证到 q≤40，其中 1−x 与 b_{q−1}（不可约时）对一切 q 已证明。低次系数 [x^{q+j}]Num_q 在 q≥j+2 时是 2j 次多项式，门槛精确，对一切 j 已证明，j≤8 有显式式子。高次系数 [x^{3q−2−j}]Num_q 写成第一类 Stirling 数 c(q,i) 的多项式组合，j≤8 已证明，例如 [x^{3q−4}]=(q−1)!(q−1+H_{q−1})。反转分子的指数母函数有闭式，已证明。\n未完成：M 的闭式；gcd=1 的一般证明；一般 j 的高次系数结构；Num_q 正系数的组合解释。按协作规则我只写了自己的文件，没有写 Obsidian 项目记忆，由主 Agent 统一更新。",
+      "claims": [
+        {
+          "id": "C4-1",
+          "statement": "N 三角递推：k≥3、q≥1 时 N(k,q)=N(k−1,q−1)+N(k−1,q)+(q−1)[N(k−3,q−2)+2N(k−3,q−1)+N(k−3,q)]，初值 N(0,q)=[q=0]，N(1,q)=[q=1]，N(2,1)=1，N(2,2)=2；k=2 时递推不成立（边界缺陷）",
+          "level": "已证明",
+          "proof_summary": "按最大值 q 首次出现的位置分类：引理 A 保证位置只能是 1 或 2，且位置 2 时第 3 个元素也是 q；再对满射条件做集合计数。c4.md §1.2–1.3",
+          "verified_range": "递推表与高度 DP+容斥对照全部 k≤60；与按定义 DFS 对照 k≤8",
+          "check_id": "c4-N-rec-dp"
+        },
+        {
+          "id": "C4-2",
+          "statement": "块分解唯一因子分解：合法词 ⇔ S 块 [v] 与 T 块 [a,v,v]（a<v）按层弱降排列，末尾可接一个 E 块 [a,v]（层不高于前面所有块），表示唯一且可贪心求得；推论 G_m=W_m/P_m，W_m=1+x²Σ_{j≤m} jP_{j−1}",
+          "level": "已证明",
+          "proof_summary": "⇐ 从右往左归纳，跨界三元组的首项是层 v≥max；⇒ 对长度归纳用引理 A；唯一性来自首块的层等于 max w。c4.md §1.4–1.5",
+          "verified_range": "贪心分解在 d≤3 枚举的全部词上无断言失败；W_m 对 DP 核对 m≤15、模 x^61",
+          "check_id": "c4-Wm"
+        },
+        {
+          "id": "C4-3",
+          "statement": "D(k,d)=N(k,k−d) 满足 D(k,d)=D(k−1,d)+D(k−1,d−1)+(k−d−1)[D(k−3,d−1)+2D(k−3,d−2)+D(k−3,d−3)]（k≥3，k−d≥1）",
+          "level": "已证明",
+          "proof_summary": "在三角递推中取 q=k−d，逐项改写下标",
+          "verified_range": "DP 表 3≤k≤60，0≤d≤k−1",
+          "check_id": "c4-D-rec"
+        },
+        {
+          "id": "C4-4",
+          "statement": "D(k,0)=2（k≥2），例外 D(1,0)=D(0,0)=1；D(k,1)=k²−k−4（k≥4），例外 D(3,1)=4（多项式值 2）、D(2,1)=1（多项式值 −2）",
+          "level": "已证明",
+          "proof_summary": "由 D 递推：d=0 时各项退化为 D(k,0)=D(k−1,0)；d=1 时 k≥5 的差分为 2k−2，基点 D(4,1)=8",
+          "verified_range": "DP 表 k≤60",
+          "check_id": "c4-D1"
+        },
+        {
+          "id": "C4-5",
+          "statement": "定理 2（一切 d≥0）：D(k,d)=p_d(k) 对 k≥2d+2 成立，deg p_d=2d，首项 2/(2^d d!)；D(2d+1,d)−p_d(2d+1)=(−1)^{d+1}(d+1)!，D(2d,d)−p_d(2d)=(−1)^{d+1}(d+2)!/2，所以门槛 2d+2 对每个 d 都精确（K_d=K_{d−1}+2）",
+          "level": "已证明",
+          "proof_summary": "对 d 归纳：k≥2d+3 时 D 递推右边全在多项式区，差分是多项式 R_d，次数 2d−1、首项 c_{d−1}；缺陷 e_d 满足同一递推，在 k=2d+2 与 2d+1 两处倒推得到闭式。模式展开另给一个组合证明（β=d+2 的模式共 (d+1)! 个）。c4.md §2.3–2.4、§3.3",
+          "verified_range": "d≤12：对 DP 表核对 2d+2≤k≤60 全部相等，两个缺陷闭式成立",
+          "check_id": "c4-defect-closed"
+        },
+        {
+          "id": "C4-6",
+          "statement": "d≤12 的显式 p_d（c4.md 表 1 列 d≤5，分母 2^{d−1}d!，分子首一整系数），例如 p_2=(k⁴−10k³+43k²−98k+164)/4，p_3=(k⁶−27k⁵+331k⁴−2225k³+8560k²−17392k+11088)/24",
+          "level": "已证明",
+          "proof_summary": "计算机辅助：由 p_{d−1},p_{d−2},p_{d−3} 构造 R_d，以基点 D(2d+2,d) 累加得 p_d；用 Fraction 精确验证 p_d(k)−p_d(k−1)≡R_d(k)；再用 D 递推归纳",
+          "verified_range": "d≤12；对 DP 表 k≤60 逐点核对",
+          "check_id": "c4-pd-identity"
+        },
+        {
+          "id": "C4-7",
+          "statement": "门槛以下 d+1≤k≤2d+1 的每个 k 都是例外（表 2 列出 d≤5 的全部例外值）",
+          "level": "已验证",
+          "proof_summary": "k=2d、2d+1 两处已一般证明；其余 k 只有逐点计算",
+          "verified_range": "d≤12",
+          "check_id": "c4-pd-exceptions"
+        },
+        {
+          "id": "C4-8",
+          "statement": "次首项：p_d(k)=(2/(2^d d!))(k^{2d}−(4d²−3d)k^{2d−1}+…)；等价地在 m=k−2d−1 下 m^{2d−1} 的系数是首项系数的 5d 倍",
+          "level": "已证明",
+          "proof_summary": "比较恒等式 p_d(k)−p_d(k−1)=R_d(k) 两边 k^{2d−2} 的系数，得 (2d−1)r_d=2d·r_{d−1}−12d²+11d，r_d=−(4d²−3d) 满足它，且 r_1=−1",
+          "verified_range": "d≤12",
+          "check_id": "c4-pd-second"
+        },
+        {
+          "id": "C4-9",
+          "statement": "p_d(2d+1+m) 关于 m 的单项式系数全为正（如 p_1=m²+5m+2，p_2=(m⁴+10m³+43m²+82m+124)/4）",
+          "level": "猜想",
+          "proof_summary": "只有数据，未证明",
+          "verified_range": "d≤12",
+          "check_id": "c4-pd-shiftpos"
+        },
+        {
+          "id": "C4-10",
+          "statement": "基点为门槛 2d+2 的 Newton 系数 Δ^i D(2d+2,d)（i=0..2d）全是正整数，末项为 2(2d−1)!!",
+          "level": "已证明",
+          "proof_summary": "Δp_d(2d+2+n) 写成 p_{d−1},p_{d−2},p_{d−3} 平移后的组合；右移基点保持非负，乘 (d+2+n) 保持正性；第 0 项 D(2d+2,d)>0",
+          "verified_range": "一般证明；数值核对 d≤12",
+          "check_id": "c4-newton-pos"
+        },
+        {
+          "id": "C4-11",
+          "statement": "基点 2d+1 的 Newton 系数也全为正整数",
+          "level": "猜想",
+          "proof_summary": "只有数据；对奇数 d 需要 D(2d+1,d)>(d+1)!，未证",
+          "verified_range": "d≤12",
+          "check_id": "c4-newton-pos-2d1"
+        },
+        {
+          "id": "C4-12",
+          "statement": "模式展开（定理 3）：对一切 k≥d，D(k,d)=Σ_{σ,β} M(d;σ,β)·C⁺(k−d−β,σ−β)。M 为「全特殊值模式」的个数（平凡值指只作为单个 S 块出现一次的值），σ≤2d+2，β∈{0}∪{2..d+2}；q≥d+2 时右边就是 p_d",
+          "level": "已证明",
+          "proof_summary": "在块分解上删去平凡值的 S 块得到模式。逆映射是按层位置插回平凡值；由于平凡值必须大于 E 层，最小的 β 个值被固定在底部，所以计数是 C⁺(q−β,σ−β)。界由超额计数得到。c4.md §3.1–3.2",
+          "verified_range": "d≤6 时对 DP 表 d≤k≤60 全部核对；M 的转移 DP 与按定义暴力枚举对照 d≤3（核对模块内）及 d=4（日志）",
+          "check_id": "c4-pattern-expansion"
+        },
+        {
+          "id": "C4-13",
+          "statement": "首项与缺陷的组合来源：σ−β=2d 的模式恰为两族各 (2d−1)!! 个（无 E 块的完全配对；E 块为 [1,2] 加上完全配对），所以首项 2/(2^d d!) 是 S(k,k−d) 首项的 2 倍；β=d+2 的模式恰有 (d+1)! 个",
+          "level": "已证明",
+          "proof_summary": "由超额计数，等号只在 t=|A_2|=d 时取到，然后直接计数。c4.md 推论 3.3",
+          "verified_range": "d≤6 数值核对",
+          "check_id": "c4-pattern-props"
+        },
+        {
+          "id": "C4-14",
+          "statement": "模式数的若干族：M(d;2d−1,0)=M(d;2d+1,2)=(2d−1)!!，M(d;2d+2,d+1)=d(d+1)!/2，M(d;2d−2,0)=4(d−1)(2d−3)!!（d≥2）",
+          "level": "猜想",
+          "proof_summary": "只有数据",
+          "verified_range": "1≤d≤6",
+          "check_id": "c4-pattern-families"
+        },
+        {
+          "id": "C4-15",
+          "statement": "「p_d 存在 S(k,k−d) 那样的二阶 Euler 型非负展开」不成立：对任意整数 c，p_d 在基 {C(k+c−j,2d)}_{j=0..2d} 下总有负系数；完整序列分子 (1−x)^{2d+1}ΣD(k,d)x^k 也有负系数（d=1 时为 x²+x³−x⁴+3x⁵−2x⁶）",
+          "level": "已否定",
+          "proof_summary": "计算机辅助：h_1 作为平移量 s 的多项式是偶次且首项为负；Fujiwara 根界之外 h_1<0，界内整数逐个精确检查。d=1 可手算",
+          "verified_range": "1≤d≤8",
+          "check_id": "c4-hstar-neg"
+        },
+        {
+          "id": "C4-16",
+          "statement": "经典公式 S(k,k−d)=Σ_j ⟨⟨d,j⟩⟩C(k+d−1−j,2d)，系数非负且对一切 k≥0 成立、无例外（对照 D 的门槛 2d+2）",
+          "level": "已验证",
+          "proof_summary": "GKP (6.43)，数值核对",
+          "verified_range": "0≤d≤8，d≤k≤60",
+          "check_id": "c4-stirling-analog"
+        },
+        {
+          "id": "C4-17",
+          "statement": "b_{q−1}F_q=(x+2(q−1)x³)F_{q−1}+(q−1)x³F_{q−2}+[q=2]x²（q≥1）",
+          "level": "已证明",
+          "proof_summary": "三角递推乘 x^k 对 k≥3 求和；k≤2 的缺陷只有 Δ_q(2)=[q=2]",
+          "verified_range": "1≤q≤30，模 x^61（F 取自 DP）",
+          "check_id": "c4-F-rec"
+        },
+        {
+          "id": "C4-18",
+          "statement": "Num_q=(x+2(q−1)x³)Num_{q−1}+(q−1)x³b_{q−2}Num_{q−2}（q≥3），Num_1=x，Num_2=2x²+x⁴",
+          "level": "已证明",
+          "proof_summary": "上一条两边乘 P_{q−2}；q=2 的缺陷项 x²(1−x) 正好给出 Num_2",
+          "verified_range": "q≤19 时 DP 得到的 P_{q−1}F_q 等于递推结果",
+          "check_id": "c4-Num-rec"
+        },
+        {
+          "id": "C4-19",
+          "statement": "deg Num_q=3q−2，首项 (q−1)!，最低项 2x^q（q≥2；q=1 时为 x）",
+          "level": "已证明",
+          "proof_summary": "由三项递推：首项满足 L_q=(q−1)[2L_{q−1}−(q−2)L_{q−2}]=(q−1)!；最低项归纳",
+          "verified_range": "q≤70",
+          "check_id": "c4-Num-deg-lead-low"
+        },
+        {
+          "id": "C4-20",
+          "statement": "容斥式 Num_q=Σ_i (−1)^{q−i}C(q,i)W_{i−1}∏_{v=i}^{q−1}b_v（W_{−1}=1）",
+          "level": "已证明",
+          "proof_summary": "二项式反演 F_q=Σ(−1)^{q−i}C(q,i)G_{i−1}，再代入 G_m=W_m/P_m",
+          "verified_range": "q≤19，对照 DP 分子",
+          "check_id": "c4-Num-IE"
+        },
+        {
+          "id": "C4-21",
+          "statement": "gcd(Num_q,P_{q−1})=1，即 F_q=Num_q/P_{q−1} 是既约分式",
+          "level": "已验证",
+          "proof_summary": "q≤16 用有理 Euclid 全量计算；q≤40 逐个 b_i 做余式检验（b_i 两两互素、无重因子；b_4、b_18 分别检验其因子）",
+          "verified_range": "q≤40",
+          "check_id": "c4-Num-gcd40"
+        },
+        {
+          "id": "C4-22",
+          "statement": "对一切 q：1−x∤Num_q；b_{q−1} 正根的极小多项式不整除 Num_q，因此 b_{q−1} 不可约（q−1≠s²(s−1)）时 gcd(Num_q,b_{q−1})=1",
+          "level": "已证明",
+          "proof_summary": "Num_q(1)=A000262(q)>0；若该因子整除 Num_q，则 W_{q−1}(x*)=0，但 b_v(x*)=(q−1−v)x*³>0 推出 W_{q−1}(x*)>0，矛盾。c4.md §4.4",
+          "verified_range": "一般证明；实例 q≤40",
+          "check_id": "c4-Num-gcd40"
+        },
+        {
+          "id": "C4-23",
+          "statement": "对一切 q，gcd(Num_q,P_{q−1})=1",
+          "level": "猜想",
+          "proof_summary": "剩余 b_i（1≤i≤q−2）以及 b_{s²(s−1)} 的二次因子未证",
+          "verified_range": "q≤40",
+          "check_id": "c4-Num-gcd40"
+        },
+        {
+          "id": "C4-24",
+          "statement": "Num_q(1)=A000262(q)=Σ_j L(q,j)（无符号 Lah 数之和，集合划分成有序块的方式数）",
+          "level": "已证明",
+          "proof_summary": "x=1 时 b_v(1)=−v，递推变为 a(n)=(2n−1)a(n−1)−(n−1)(n−2)a(n−2)，与 e.g.f. exp(z/(1−z)) 的递推及初值相同；OEIS 只读快照确认",
+          "verified_range": "q≤40",
+          "check_id": "c4-Num-at-1"
+        },
+        {
+          "id": "C4-25",
+          "statement": "Num_q 系数全非负，非零项恰为 x^q..x^{3q−4} 与 x^{3q−2}（[x^{3q−3}]=0）；全正项全历史递推 Num_q=xNum_{q−1}+Σ_{m=2}^{q−2}(q−1)!/m!·x^{3(q−1−m)}(q−1−m+x)Num_m+(q−1)!((q−2)x^{3q−5}+qx^{3q−4}+x^{3q−2})",
+          "level": "已证明",
+          "proof_summary": "引入 Y_q^{(c)}=cNum_{q−1}+b_{q−2}Num_{q−2}，满足 Y_q^{(c)}=(1+(c−1)x)Num_{q−2}+c(q−2)x³Y_{q−1}^{(2−1/c)}；迭代展开即得，各项非负，再归纳确定支撑",
+          "verified_range": "支撑 q≤70；正项递推 q≤40",
+          "check_id": "c4-Num-posrec"
+        },
+        {
+          "id": "C4-26",
+          "statement": "低次系数 ν_j(q)=[x^{q+j}]Num_q=Σ_i π_i(q)D(q+j−i,j−i)，其中 π_i(q)=[x^i]P_{q−1}；q≥j+2 时是 2j 次多项式（首项 2/(2^j j!)），q=j+1 处差 (−1)^{j+1}(j+1)!，门槛精确。例：ν_1=q²−q−4（q≥3），ν_2=(q⁴−6q³+7q²−2q+76)/4（q≥4）",
+          "level": "已证明",
+          "proof_summary": "系数提取；π_i 由 c(q,q−b)=Σ⟨⟨b,k⟩⟩C(q+k,2b) 是 q 的多项式；门槛由定理 2 的缺陷闭式得到",
+          "verified_range": "一般 j 已证明；j≤8 时 j+2≤q≤70 数值核对",
+          "check_id": "c4-Num-low-poly"
+        },
+        {
+          "id": "C4-27",
+          "statement": "高次系数 [x^{3q−2−j}]Num_q（j≤8）等于 c4.md 表 6：j=0 为 (q−1)!，j=1 为 0，j=2 为 (q−1)!(q−1+H_{q−1})，j=3 为 (q−1)(q−1)!(H_{q−1}−1)，j=4 为 (q−1)c(q,1)−c(q,2)+c(q,3)，……",
+          "level": "已证明",
+          "proof_summary": "计算机辅助：公式代入系数递推，用 Stirling 递推化到 c(q−2,i) 基后各系数多项式恒为 0，再加 q=1,2 初值",
+          "verified_range": "j≤8，对一切 q≥1；数值核对 q≤70",
+          "check_id": "c4-Num-high-proof"
+        },
+        {
+          "id": "C4-28",
+          "statement": "一般 j：a_{q,j}=Σ_{i≤⌊j/2⌋+1}π_{j,i}(q)c(q,i)（π 为多项式）",
+          "level": "猜想",
+          "proof_summary": "j≤8 成立；e.g.f. 按 y 展开支持这一形式，但系数提取中的下标下移可能产生 q 的有理函数，未证",
+          "verified_range": "j≤8",
+          "check_id": "c4-Num-high-values"
+        },
+        {
+          "id": "C4-29",
+          "statement": "反转分子 R_q(y)=y^{3q−2}Num_q(1/y) 满足 Σ_q R_q z^q/q!=(y+1)(Φ−1)/y²−yΦ∫_0^{z/(1−z)}(1+w)^{y³−y²}e^{−y³w}dw，其中 Φ=(1−z)^{y³−y²}e^{y³z/(1−z)}",
+          "level": "已证明",
+          "proof_summary": "由递推导出二阶 ODE；Φ 与 Φ·I 是齐次解、−(y+1)/y² 是特解（形式幂级数计算）；验证初值后由解的唯一性得到",
+          "verified_range": "Q[y][[z]] 中逐项展开到 z^14 与真实 R_q 一致；ODE 逐项到 z^12",
+          "check_id": "c4-Num-egf"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "提示词 (C7) 与草稿说「最低次项 2x^q」：q=1 时不成立。Num_1=x，最低项系数是 1，所以应写成 q≥2。次数 3q−2 与首项 (q−1)! 在 q=1 时也成立。",
+        "草稿 §3 的 D 递推本身正确，但没写适用范围。它来自三角递推的 k≥3、q≥1，所以要求 k≥3 且 k−d≥1。",
+        "提示词与草稿都没有写出 F_q 递推里的边界缺陷项 [q=2]x²。三角递推在 k=2 时不成立：它给 N(2,2)=1，真值是 2，漏掉的是词 (1,2)。它们给的 Num_2=2x²+x⁴ 已经隐含了这一项，所以这只是推导上的遗漏，不是结论错误。",
+        "其余未发现实质性错误。草稿的粗估「门槛 k≥2d+2」恰好正确，而且对每个 d 都精确：k=2d+1 永远是例外，缺陷为 (−1)^{d+1}(d+1)!。提示词 (C3) 的 N(k,k−1)=k²−k−4 已对一切 k≥4 证明；除了它提到的 k=3，k=2 也是例外（N(2,1)=1，多项式值 −2）。"
+      ],
+      "failed_directions": [
+        "二阶 Euler 型非负展开：试了基 C(k+c−j,2d) 的各种整数平移、完整序列分子 Q_d(x)、多项式部分在平移 d+1、2d+1、2d+2、2d+3 下的 h* 向量，全部有负系数。对 d=1..8 已证明不可能（Fujiwara 根界加穷举）。成功的类比换成了「先选特殊值」型的模式展开。",
+        "M(d;σ,β) 的闭式或母函数：只得到按值转移的 DP，以及几族闭式（3 族已证、4 族只是观察）。卡点在于 a 值是指向更小值的函数，与满射和「全特殊」约束耦合，DP 里的待分配块数这个状态消不掉。",
+        "锚点 D(2d+2,d)（2, 8, 65, 574, 6012, 70674, …）的闭式：未找到。p_d 由递推只能确定到一个常数，这个常数需要一个非多项式区的真值。没有查 OEIS，因为 OEIS 查询归 c5b。",
+        "gcd(Num_q,P_{q−1})=1 的一般证明：只证了 1−x 与 b_{q−1}（用正根处 W_{q−1}>0）。对 b_i（i<q−1），G_i..G_{q−1} 以交错二项系数叠加，单一的正性论证排除不了相消。",
+        "高次系数一般 j：j≤8 已证明。想从 e.g.f. 按 y 展开证明「Stirling 数乘多项式」的一般形式，但提取系数时 z^a 因子会产生 c(q−1,·) 一类下标下移项，可能引入 q 的有理函数，没能完成。",
+        "Num_q 正系数的组合解释：正项递推暗示存在，但没有找到；容斥式本身是交错的。",
+        "「k∈[d+1,2d+1] 全是例外」的一般证明：只做到 k=2d、2d+1。缺陷公式里各项符号不一，无法一般地排除恰好为 0。",
+        "基点 2d+1 的 Newton 系数正性、p_d(2d+1+m) 单项式系数正性：只验证到 d≤12，没有证明。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c4.py",
+      "check_run_output_tail": "PASS c4-Num-low-poly j<=8：nu_j(q)=sum_i pi_i(q) p_{j-i}(q+j-i) 是 2j 次多项式(首项 2/(2^j j!))，对 j+2<=q<=70 等于 [x^{q+j}]Num_q，q=j+1 处差 (-1)^{j+1}(j+1)!（门槛恰为 j+2）\nPASS c4-Num-low-table c4.md 表 5 的 nu_j (j<=6) == 构造多项式\nPASS c4-Num-high-values j<=8, 1<=q<=70：[x^{3q-2-j}]Num_q == 表 6 的公式 sum_i pi_{j,i}(q) c(q,i)（c 为第一类无符号 Stirling 数）\nPASS c4-Num-high-proof j<=8：表 6 公式代入 a_{q,j}=2(q-1)a_{q-1,j}+a_{q-1,j-2}+(q-1)[a_{q-2,j-3}-a_{q-2,j-2}-(q-2)a_{q-2,j}] 后在 c(q-2,i) 基下系数多项式恒为 0（q>=3），且 q=1,2 初值吻合 ⇒ 对全部 q>=1 成立\nPASS c4-Num-egf q<=14：sum_q R_q(y) z^q/q! == (y+1)(e^{y^2 Lam}-1)/y^2 - y e^{y^2 Lam} int_0^{z/(1-z)} (1+w)^{y^3-y^2} e^{-y^3 w} dw，Lam=(y-1)ln(1-z)+yz/(1-z)（Q[y][[z]] 中逐项精确展开）\nPASS c4-Num-ode 由三项递推得到的 A(z)=sum R_q z^q/q! 满足 (1-z)^2A''=(y^2-1)+(2(1-z)+y^2(1-z)+y^3 z)A'+(y^3-y^2)A，逐项到 z^12\n# runtime 28.4s\nSUMMARY c4 pass=41 fail=0\n(exit code 0; run from C:\\Users\\Michael Song, i.e. outside the code directory)",
+      "check_runtime_seconds": 28.4,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c4.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c4_check_run.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\c4lib.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore1_diag.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore4_patterns.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore7_egf.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore9_pattern_brute.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore10_tables.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore11_posrec.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c4\\explore14_verify_notes.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c4_tables.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c4_explore9b_d4.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c4_verify_notes.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c4_oeis_A000262.log"
+      ],
+      "uncertainties": [
+        "块分解唯一性和模式展开（定理 3）是我自己写的证明。已用两种方式交叉验证：按定义暴力枚举对照 d≤4，以及对 DP 得到的 N 核对 k≤60、d≤6。复核时最值得逐句检查的是 Φ/Ψ 双射里的两步：「平凡值必大于 E 层」和「插入位置唯一」。",
+        "定理 3.5（无二阶 Euler 型非负展开）只证到 d≤8，依赖 Fujiwara 根界的整数上取整（用 Fraction 精确比较），d>8 未做。",
+        "e.g.f. 闭式（定理 4.9）用到形式幂级数里的 exp、(1+Z)^e=exp(e·ln(1+Z))、链式法则。齐次解的验证是手算的代数恒等式，另外逐项展开核对到 z^14。",
+        "A000262 的识别靠递推加初值证明。OEIS 编号只用一次只读抓取确认，快照存在 logs/c4_oeis_A000262.log，没有碰 data/oeis/。",
+        "d=6..12 的 p_d 系数只在 logs/c4_tables.log 里，那里的分母是 2^d d!、首项为 2，与笔记表 1 的 2^{d−1}d! 写法差一个因子 2。核对模块会重新构造这些多项式并全部核对。",
+        "笔记里手抄的表 1–7 已用 explore14/15/16 程序化比对，0 处不符；表 4 中 d=6 的数据只放在日志里。",
+        "运行 check_c4.py 会在共享的 code/ 目录生成 __pycache__（导入 core/polylib 的副作用），其他文件均未改动。"
+      ]
+    },
+    {
+      "area": "C-5a：渐近（固定 m、k→∞；固定 k、m→∞）与 h_k(t) 结构",
+      "stage_conclusion": "（1）固定 m≥1：已证明 U_k(m) = c_m ρ_m^k − c_{m−1} ρ_{m−1}^{k+3} + O(τ_m^k)。ρ_m 是 y³=y²+m 的唯一实根；x_m=1/ρ_m 是 G_m 唯一的最小模奇点，且为单极点，留数 c_m>0。相对误差率 θ_m = ρ_{m−1}/ρ_m 是精确的（次大极点系数 −c_{m−1}ρ_{m−1}³≠0），1−θ_m ~ 1/(3m)。c_m 的闭式为 c_m = ρ(ρ^{3m+1}/m! − Σ_{i<m} ρ^{3i}/i!)/(3ρ−2)。更强的结论是一个 Binet 型精确谱分解公式，给出全部极点和全部系数，与 DP 逐项精确核对到 m≤20、k≤60。c_4 = 215/2；c_18 = 37105325714711350249401/6830759936000 ≈ 5.432093363e9，两者都另用\"DP 数据乘精确零化多项式\"独立得到。数值部分（decimal 90 位）：m≤8 时，k=400 处实测衰减率与 θ_m 相差 <1e−6；k=60 时 m 越大越没收敛好，m=8 为 0.9695，理论值 0.9649。提示词的\"<0.4%\"只与相邻比 U_41/U_40 的解释吻合：m=2、3 的实测误差为 0.035%、0.28%，与理论 κ(1−θ)θ^40 的偏差约为 0.3% 和 3%。（2）固定 k：已证明 [m^{k−1}]U_k = (k²−2k−1)/(k−1)!（k≥4，k≤3 不成立），并给出 [m^{k−2}]、[m^{k−3}] 的闭式（k≥6、k≥8）。一般 d：(k−d)!·[m^{k−d}]U_k 和 N(k,k−d) 都在 k≥2d+2 时恰为 2d 次多项式，门槛精确，在 k=2d+1 处差 ±(d+1)!。（3）h_k：已证明 deg h_k = ⌊2k/3⌋，首项与第二首项都有闭式（按 k mod 3，用第一类 Stirling 数表示）。根源在于 G_{−j}(x)=Σ_k U_k(−j)x^k 是 3j−3 次多项式，满足 G_{−j−1}=(1−x+jx³)G_{−j}+jx²。推论：允许行偏序集的 μ(0̂,1̂)=U_k(−2)=0（k≥4）。其余已证明的结构：h_k(0)=1；h_k(1)=2；[t¹]h_k=R_k−k−1，g.f. 为 x²(1−x+x²)/((1−x)²(1−x−x³))；t=1 处各阶导数与 N(k,k−e) 的三角关系；H(z,t) 的一阶 PDE；h_k 在 [0,1] 无根；每个固定位置的系数最终为正。h_k 全实根且为单根：2≤k≤60 已验证（Sturm 精确计数），一般 k 仍是猜想。未完成：h_k(−1) 的闭式（在给定搜索空间里没有找到递推）、中间段符号模式的公式、固定位置系数转正门槛的证明。核对模块 37/37 PASS，34.5 秒，退出码 0。",
+      "claims": [
+        {
+          "id": "c5a-T1",
+          "statement": "引理1（U_k(m)=U_k(m−1)+U_{k−1}(m)+mU_{k−3}(m)，U_{−1}≡1，U_{−2}≡0）作为 m 的多项式恒等式对一切整数 m 成立；多项式值 U_k(−1)=0（k≥1）；对一切整数 m 有 (1−x−mx³)G_m = G_{m−1}+mx²，其中负 m 的 G_m 用多项式值定义",
+          "level": "已证明",
+          "proof_summary": "引理1按最大值第一次出现的位置分类自证；用二项式基 U_k(m)=Σ_q N(k,q)C(m+1,q) 得到多项式性；两边是多项式，在 m≥1 时相等，故恒等；代入 m=0 得 U_k(−1)=0；按 k 展开后乘 x^k 求和即得 G 递推",
+          "verified_range": "恒等式：k≤60，m∈[−25,60]；G 递推：m∈[−20,20]，系数 k≤57",
+          "check_id": "c5a-lemma1-Gm"
+        },
+        {
+          "id": "c5a-T2",
+          "statement": "G_m=W_m/P_m，W_m=1+x²Σ_{j=1}^m jP_{j−1}；m≥1 时 deg W_m=3m<deg P_m=3m+1；P_m 无平方因子",
+          "level": "已证明",
+          "proof_summary": "由 G 递推归纳得到；次数直接计算；b_i 的三个根互不相同（f_i 与 f_i' 无公共根）；b_i−b_j=(j−i)x³ 推出 b_i、b_j 互素",
+          "verified_range": "m≤20，k≤60（级数与 DP 比较）；无平方因子用精确 gcd 核对到 m≤8",
+          "check_id": "c5a-WP"
+        },
+        {
+          "id": "c5a-T3",
+          "statement": "y³−y²−j 恰有一个实根 ρ_j>1；复根满足 |σ_j|²=j/ρ_j=ρ_j(ρ_j−1)<ρ_j²；ρ_j、|σ_j| 都关于 j 严格递增；|σ_m|<ρ_{m−1}（ρ_0:=1）",
+          "level": "已证明",
+          "proof_summary": "单调性分析得到唯一实根；三根之积为 j；m<ρ_mρ_{m−1}² 因为 ρ_mρ_{m−1}²>ρ_{m−1}³=ρ_{m−1}²+m−1≥m",
+          "verified_range": "Sturm 精确计数 j≤30；不等式另用 decimal 抽查 j≤30",
+          "check_id": "c5a-roots"
+        },
+        {
+          "id": "c5a-T4",
+          "statement": "谱分解（Binet 型）精确公式：U_k(m)=Σ_{j=0}^m ((−1)^{m−j}/(m−j)!) Σ_{σ³=σ²+j} γ_j(σ)σ^{k+3(m−j)}，其中 γ_j(σ)=σ(σ^{3j+1}/j!−e_{j−1}(σ³))/(3σ−2)，j=0 项为 (−1)^m/m!；内层和等于 [y²](g̃_j(y)y^n mod f_j)，是有理数；也可写成只含 c_j(n)=[x^n]1/(1−x−jx³) 的形式（与 (C4) 实质相同）",
+          "level": "已证明",
+          "proof_summary": "真分式、单极点，用部分分式；旧极点的系数每步乘 (−σ³)/(m−j)；新极点留数为 (G_{m−1}(x_σ)+mx_σ²)/(x_σ(1+3mx_σ²))；利用 b_i(x_σ)=(m−i)x_σ³ 化简；最后用 Lagrange 插值恒等式",
+          "verified_range": "Lagrange 形式 m≤20、k≤60 精确相等；c_j 形式 m≤12、k≤60；b_m 极点分量过滤核对 1≤m≤20、3m≤k≤3m+60",
+          "check_id": "c5a-binet,c5a-filter"
+        },
+        {
+          "id": "c5a-T5",
+          "statement": "固定 m≥1：U_k(m)=c_mρ_m^k−c_{m−1}ρ_{m−1}^{k+3}+O(τ_m^k)，τ_m=max(ρ_{m−2},√(ρ_m(ρ_m−1)))<ρ_{m−1}；x_m=1/ρ_m 是唯一的最小模奇点，且为单极点，留数 c_m>0；相对误差 e_k=−κ_mθ_m^k(1+o(1))，θ_m=ρ_{m−1}/ρ_m 精确（不能改进），κ_m=c_{m−1}ρ_{m−1}³/c_m；e_{k+1}/e_k→θ_m；1−θ_m=(1/(3m))(1+O(m^{−1/3}))",
+          "level": "已证明",
+          "proof_summary": "由 T3 的模长排序和 T4 的系数公式直接得到；c_m>0 是因为 G_{m−1}(x_m) 等于正项收敛级数；次大极点唯一且系数非零",
+          "verified_range": "一般 m 证明；数值见 c5a-V1",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c5a-T6",
+          "statement": "c_m 闭式：c_m=ρ(ρ^{3m+1}/m!−Σ_{i<m}ρ^{3i}/i!)/(3ρ−2)=(G_{m−1}(x_m)+mx_m²)/(x_m(1+3mx_m²))=[ρ^{3m+3}/m!+Σ_{i<m}(m−i)ρ^{3i+1}/i!]/(ρ²+3m)；在 Q(ρ_m) 中有精确表示，例如 c_1=(10+15ρ+17ρ²)/31",
+          "level": "已证明",
+          "proof_summary": "在 Q[y]/(y³−y²−m) 中用 u=y³=y²+m 做代数化简；f_m' 在商环中可逆",
+          "verified_range": "商环恒等式 j≤20；表示式与闭式在 decimal 90 位下相差 <1e−70（m≤8）",
+          "check_id": "c5a-cm-form,c5a-cm-repr"
+        },
+        {
+          "id": "c5a-V1",
+          "statement": "数值核对：m≤8 时 e_k=U_k/(c_mρ_m^k)−1 在 0≤k≤400 全为负；k=400 处实测 e_{k+1}/e_k 与 θ_m 相差 <1e−6，两项渐近比与 1 相差 <1e−5；k=60 处偏差随 m 增大（m=8：0.9695 对 0.9649）",
+          "level": "已验证",
+          "proof_summary": "U_k(m) 用 DP 精确整数，除法用 decimal 90 位；容差写在 PASS 行中",
+          "verified_range": "m≤8，k≤400（表格列出 k=20、40、60、400）",
+          "check_id": "c5a-asym-m1,c5a-asym-m2,c5a-asym-m3,c5a-asym-m4,c5a-asym-m5,c5a-asym-m6,c5a-asym-m7,c5a-asym-m8"
+        },
+        {
+          "id": "c5a-T7",
+          "statement": "ρ_4=2，c_4=215/2（精确），即 U_k(4)=(215/2)2^k−c_3ρ_3^{k+3}+O(ρ_2^k)",
+          "level": "已证明",
+          "proof_summary": "闭式直接计算；另取 Q=P_4/(1−2x)，DP 数据给出 [x^k](QG_4)/2^k 恒等于 W_4(1/2)=645/512（12≤k≤72），c_4=W_4(1/2)/Q(1/2)",
+          "verified_range": "精确有理运算；k≤72",
+          "check_id": "c5a-c4"
+        },
+        {
+          "id": "c5a-T8",
+          "statement": "ρ_18=3，c_18=3(3^55/18!−e_17(27))/7=37105325714711350249401/6830759936000≈5432093363.31028（精确）",
+          "level": "已证明",
+          "proof_summary": "闭式计算；Q(ρ) 表示式求值；DP 过滤 Q=P_18/(1−3x)（54≤k≤114）给出同一有理数",
+          "verified_range": "精确有理运算",
+          "check_id": "c5a-c18"
+        },
+        {
+          "id": "c5a-V2",
+          "statement": "m=18 数值：θ_18=ρ_17/3≈0.9838299735，κ_18≈7.4708；k=1999 时 e_k≈−5.25e−14，实测衰减率与两项比和理论的差 <1e−8",
+          "level": "已验证",
+          "proof_summary": "DP 算到 k=2000，decimal 90 位",
+          "verified_range": "k≤2000",
+          "check_id": "c5a-asym-m18"
+        },
+        {
+          "id": "c5a-V3",
+          "statement": "提示词'm=2、3 在 k=40 时相差 <0.4%'只有理解为相邻比 U_41/U_40 才与理论吻合：相对误差 3.538e−4、2.792e−3，理论 κ(1−θ)θ^40 为 3.528e−4、2.713e−3；若指 U_40^{1/40} 误差为 5.3%、8.7%，若指 U_40/(cρ^40) 为 0.26%、3.0%",
+          "level": "已验证",
+          "proof_summary": "由 T5 得相邻比误差 ≈κ(1−θ)θ^k>0（从上方收敛），再与数值对照",
+          "verified_range": "m=2,3，k=40",
+          "check_id": "c5a-prompt-k40"
+        },
+        {
+          "id": "c5a-T9",
+          "statement": "N 三角递推 N(k,r+1)=N(k−1,r)+N(k−1,r+1)+r[N(k−3,r−1)+2N(k−3,r)+N(k−3,r+1)]（k≥3）",
+          "level": "已证明",
+          "proof_summary": "按最大值第一次出现的位置（1 或 2）分类；位置 2 的词形为 (a,q,q,T)，T 的值域有 4 种情况",
+          "verified_range": "3≤k≤60（N 由 DP 容斥得到，并与 DFS 定义核对到 k≤7）",
+          "check_id": "c5a-Ntri"
+        },
+        {
+          "id": "c5a-T10",
+          "statement": "对每个 d≥0，N(k,k−d)=p_d(k) 对 k≥2d+2 成立，p_d 是 2d 次多项式，首项 2/(2^d d!)；p_d(2d+1)−N(2d+1,d+1)=(−1)^d(d+1)!≠0，故门槛精确。d≤3 显式：2；k²−k−4；(k⁴−10k³+43k²−98k+164)/4；(k⁶−27k⁵+331k⁴−2225k³+8560k²−17392k+11088)/24",
+          "level": "已证明",
+          "proof_summary": "由 T9 得 D 的递推，对 d 归纳：k≥2d+3 时增量是多项式 Δ_d；k=2d+2 处只有 D(2d−1,d−1) 一项偏离，给出 δ_d=−(d+1)δ_{d−1}，δ_0=1",
+          "verified_range": "d≤3 精确符号恒等式加 k≤60 数据；一般 d：d≤11 时插值后在 [2d+2,60] 核对，并核对缺口",
+          "check_id": "c5a-D0123,c5a-Dgen"
+        },
+        {
+          "id": "c5a-T11",
+          "statement": "[m^{k−1}]U_k(m)=(k²−2k−1)/(k−1)!（k≥4）；k=3,2,1 不成立（实际值 2,2,1，公式值 1,−1,−2）；[m^k]U_k=2/k!（k≥2）",
+          "level": "已证明",
+          "proof_summary": "由二项式基展开 C(m+1,q) 的 m 幂系数（初等对称多项式），再用 N(k,k)=2、N(k,k−1)=k²−k−4",
+          "verified_range": "k≤60，m 系数由 DP 值的前向差分得到（不经过 N）",
+          "check_id": "c5a-mcoef"
+        },
+        {
+          "id": "c5a-T12",
+          "statement": "[m^{k−2}]U_k=(3k⁴−36k³+162k²−313k+422)/(12(k−2)!)（k≥6）；[m^{k−3}]U_k=(k⁶−30k⁵+379k⁴−2533k³+9570k²−19331k+13380)/(24(k−3)!)（k≥8）；一般地 (k−d)![m^{k−d}]U_k=Σ_e(−1)^{d−e}N(k,k−e)ẽ_{d−e}(k−e)（对一切 k≥d），在 k≥2d+2 时是 2d 次多项式，首项 1/(2^{d−1}d!)，在 k=2d+1 处差 (−1)^{d+1}(d+1)!",
+          "level": "已证明",
+          "proof_summary": "e_j(−1..n−2) 是 n 的多项式，被 n^{\\underline j} 整除；代入 T10；只有 e=d 一项达到最高次，也只有它在 2d+1 处偏离",
+          "verified_range": "d≤3：k≤60；一般 d：d≤11 时 [2d+2,60] 及缺口；ẽ 恒等式在 n≤69 上核对（多项式比较）",
+          "check_id": "c5a-mcoef,c5a-mcoef-gen"
+        },
+        {
+          "id": "c5a-T23",
+          "statement": "固定 k≥4：U_k(m)=(2/k!)(m+μ_k)^k(1+O(m^{−2}))，μ_k=(k²−2k−1)/2；在二项式基下 U_k=2C(m+1,k)+(k²−k−4)C(m+1,k−1)+p_2(k)C(m+1,k−2)+…",
+          "level": "已证明",
+          "proof_summary": "T11、T12 的直接推论",
+          "verified_range": "一般 k",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c5a-T13",
+          "statement": "h_k=Σ_q N(k,q)t^{q−1}(1−t)^{k−q}；h_{k,i}=Σ_{j≤i}(−1)^{i−j}C(k+1,i−j)U_k(j)，逆公式 U_k(m)=Σ_i h_{k,i}C(m−i+k,k)；(C6) 递推成立但需要初值 h_0=1、h_1=1、h_2=1+t；h_k(0)=1，h_k(1)=N(k,k)=2（k≥2）；n_k(z)=Σ_qN(k,q)z^{q−1}=(1+z)^{k−1}h_k(z/(1+z))",
+          "level": "已证明",
+          "proof_summary": "由二项式基和 Σ_m C(m+1,q)t^m=t^{q−1}/(1−t)^{q+1} 得出；递推来自引理1 乘 t^m 求和",
+          "verified_range": "k≤60（h_k 由 DP 直接算出）",
+          "check_id": "c5a-h-def,c5a-h-01"
+        },
+        {
+          "id": "c5a-T14",
+          "statement": "G_{−j}(x):=Σ_kU_k(−j)x^k 是多项式：G_{−1}=1，G_{−j−1}=(1−x+jx³)G_{−j}+jx²；次数 3j−3；最高六个系数为 (j−1)!、(j−1)!、−c(j,2)、(j−1)!、c(j,2)+c(j,3)、(j−1)!−c(j,2)−c(j,3)（c 为无符号第一类 Stirling 数，j≥2）",
+          "level": "已证明",
+          "proof_summary": "在 G 递推（T1）中取 m=−j；比较系数得到边界层递推，用 c(n+1,k)=nc(n,k)+c(n,k−1) 求解",
+          "verified_range": "j≤21，k≤60（与 DP 多项式在负整数处的值比较）",
+          "check_id": "c5a-Gneg"
+        },
+        {
+          "id": "c5a-T15",
+          "statement": "U_k(−j)=0 ⟺ 1≤j≤⌊(k+2)/3⌋（第一段零点），所以 U_k 被 (m+1)…(m+⌊(k+2)/3⌋) 整除；deg h_k=⌊2k/3⌋；首项系数：k=3a 为 (−1)^a a!，k=3a+1 为 (−1)^a c(a+2,2)，k=3a+2 为 (−1)^a (a+1)!；第二首项：k=3a 为 (−1)^{a+1}2a·a!，k=3a+1 为 (−1)^a[c(a+3,2)+c(a+3,3)−(a+2)!−(3a+2)c(a+2,2)]，k=3a+2 为 (−1)^a[c(a+3,2)+c(a+3,3)−3(a+1)(a+1)!]",
+          "level": "已证明",
+          "proof_summary": "互反引理 f(−j)=(−1)^dΣ_{i>d−j}h_iC(i+j−1,d) 加上 T14 的边界系数",
+          "verified_range": "1≤k≤60（第二首项为 3≤k≤60）；互反式 j≤25",
+          "check_id": "c5a-h-deg-lead"
+        },
+        {
+          "id": "c5a-T16",
+          "statement": "允许行偏序集 P_k 的 Möbius 函数 μ(0̂,1̂)=Σ_q(−1)^qN(k,q)=U_k(−2)，所以 k≥4 时为 0（k=1,2,3 时为 −1,1,1）；z=−1 是 n_k 的根，重数恰为 ⌈k/3⌉−1",
+          "level": "已证明",
+          "proof_summary": "Philip Hall 定理（引用 Stanley EC1 Prop 3.8.5）加上 N(k,q)=严格链数（zeta 多项式系数比较）；重数由 deg h_k 得出",
+          "verified_range": "Möbius 在 P_k 上直接计算 k≤10；重数 k≤60",
+          "check_id": "c5a-mobius,c5a-h-real"
+        },
+        {
+          "id": "c5a-T17",
+          "statement": "[t¹]h_k=R_k−k−1，Σ_k[t¹]h_kx^k=x²(1−x+x²)/((1−x)²(1−x−x³))，k≥2 时系数为正",
+          "level": "已证明",
+          "proof_summary": "G_1−1/(1−x)²，其中 W_1=1+x²−x³；(1−x+x²)/(1−x)=1+x²/(1−x)，与 1/((1−x)(1−x−x³)) 的系数都为正",
+          "verified_range": "k≤60",
+          "check_id": "c5a-h-t1"
+        },
+        {
+          "id": "c5a-T22",
+          "statement": "R_k=U_k(1)=c_1(k+3)+c_1(k−2)−1，c_1(n)=[x^n]1/(1−x−x³)；R_k=c_1ρ_1^k−1+O(0.826^k)",
+          "level": "已证明",
+          "proof_summary": "T4 的 c_j 形式取 m=1",
+          "verified_range": "k≤60（属于 c 形式的精确核对）",
+          "check_id": "c5a-binet"
+        },
+        {
+          "id": "c5a-T18",
+          "statement": "固定 i≥1 时 [t^i]h_k=c_iρ_i^k(1+o(1))，因而最终为正",
+          "level": "已证明",
+          "proof_summary": "h_{k,i}=Σ_r(−1)^rC(k+1,r)U_k(i−r)，由 ρ_j 严格递增和 T5 得出",
+          "verified_range": "一般 i",
+          "check_id": "proof-only"
+        },
+        {
+          "id": "c5a-V4",
+          "statement": "[t^i]h_k>0 的起点（之后到 k=60 都为正，前一个 k 为非正）：i=1..8 分别为 k=2,8,16,24,33,41,50,59",
+          "level": "已验证",
+          "proof_summary": "由 DP 算出的 h_k 逐项检查符号",
+          "verified_range": "k≤60",
+          "check_id": "c5a-h-fixed-i"
+        },
+        {
+          "id": "c5a-T19",
+          "statement": "h_k^{(d)}(1)=d!Σ_{e≤d}(−1)^eC(k−1−e,d−e)N(k,k−e)；h_k'(1)=−(k²−3k−2)（k≥4）；h_k''(1)=(k⁴−14k³+59k²−102k+140)/2（k≥6）；h_k'''(1)=(−k⁶+33k⁵−421k⁴+2743k³−10054k²+20060k−13800)/4（k≥8）",
+          "level": "已证明",
+          "proof_summary": "把 h_k(1−s) 按 N 展开，再代入 T10",
+          "verified_range": "d≤3，k≤60",
+          "check_id": "c5a-h-deriv"
+        },
+        {
+          "id": "c5a-T20",
+          "statement": "H(z,t)=Σh_k z^k=(1−t)F(z(1−t),t)，满足 (1−z)H−t(1−t)z³[(1−t)H_t+H+zH_z]=1+tz²；对固定 t∈(0,1)，Σ_k h_k(t)z^k 的收敛半径为 0",
+          "level": "已证明",
+          "proof_summary": "由 (C6) 递推乘 z^k 求和；收敛半径为 0 是因为 h_k(t)≥(1−t)^{k+1}t^mU_k(m)，且对每个 m 有 U_k(m)≳c_mρ_m^k，而 ρ_m→∞",
+          "verified_range": "PDE 核对 z^k 系数到 k≤60；收敛半径部分为纯证明",
+          "check_id": "c5a-H-pde"
+        },
+        {
+          "id": "c5a-T21",
+          "statement": "h_k 在 [0,1] 上没有根；h_k 实根 ⟺ n_k 实根（实 Möbius 变换）",
+          "level": "已证明",
+          "proof_summary": "t∈[0,1) 时 h_k(t)=(1−t)^{k+1}ΣU_k(m)t^m>0，h_k(1)=2；h_k 的根 t 与 n_k 的根 z=t/(1−t) 一一对应",
+          "verified_range": "一般 k（并用 Sturm 在 2≤k≤60 上核对 [0,1] 内无根）",
+          "check_id": "c5a-h-real"
+        },
+        {
+          "id": "c5a-V5",
+          "statement": "2≤k≤60：h_k 全是实根且都是单根；系数变号次数等于大于 1 的根的个数；N(k,·) 对数凹",
+          "level": "已验证",
+          "proof_summary": "整数化后做 Sturm 序列精确计数；Descartes 法则计数比较",
+          "verified_range": "2≤k≤60",
+          "check_id": "c5a-h-real"
+        },
+        {
+          "id": "c5a-C1",
+          "statement": "对一切 k，h_k 全是实根（等价于 N(k,·) 行多项式实根，从而对数凹）",
+          "level": "猜想",
+          "proof_summary": "只有数据；相邻根交错这条路线已被否定",
+          "verified_range": "2≤k≤60",
+          "check_id": "c5a-h-real"
+        },
+        {
+          "id": "c5a-R1",
+          "statement": "假设'相邻 h_k、h_{k+1} 的根交错'",
+          "level": "已否定",
+          "proof_summary": "反例 k=2：h_2=1+t 的根 −1 不在 h_3=1+2t−t² 的两根 1±√2 之间；2≤k≤12 用精确隔离区间逐一确认不交错，探索脚本显示 k≤35 全部不交错",
+          "verified_range": "2≤k≤12（核对模块），2≤k≤35（探索脚本）",
+          "check_id": "c5a-h-nointerlace"
+        },
+        {
+          "id": "c5a-U1",
+          "statement": "h_k(−1) 的闭式或递推",
+          "level": "未完成",
+          "proof_summary": "k≤60 的数据不满足任何阶≤15 的常系数递推，也不满足阶≤5、系数次数≤6 的多项式系数递推；log|h_k(−1)|/k 从 0.74 增到 1.08，像是超指数增长（未证）",
+          "verified_range": "k≤60",
+          "check_id": "c5a-h-m1"
+        },
+        {
+          "id": "c5a-U2",
+          "statement": "h_k 系数中间段的符号模式（周期约 3 的 '−−+/++−' 块）的一般规律",
+          "level": "未完成",
+          "proof_summary": "只证明了首两项为正、首项符号为 (−1)^{⌊k/3⌋}、每个固定位置最终为正；中间块只有 k≤60 的数据",
+          "verified_range": "k≤60（logs/c5a_explore_h.log）",
+          "check_id": "n/a"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "提示词 (C6)：递推 h_k=h_{k−1}+t(1−t)[(1−t)h'_{k−3}+(k−2)h_{k−3}]（k≥3）只给了初值 h_0=1。但 k=3 时要用到 h_2，h_1、h_2 并不由递推决定，必须补上 h_1=1、h_2=1+t。反例：若取 h_2=1，会得到 h_3=1+t−t²，而正确值是 1+2t−t²。这是不完整，不是错误。",
+        "提示词 (C2) 的数值说法'm=2、3 在 k=40 时相差 <0.4%'有歧义，只有理解成相邻比 U_41/U_40 才成立（实测 0.035%、0.28%）。若指 U_40^{1/40}，误差是 5.3%、8.7%；若指 U_40/(cρ^40)，m=3 时误差 3.0%，都与原话矛盾。另外 ρ_m 不只是'最大实根'，而是唯一实根。",
+        "草稿 §3（ρ_m 论证）：结论和 c_m 公式正确，但有三点没写完整：(a) 没有给出误差率，正确值是 θ_m=ρ_{m−1}/ρ_m，且不能改进；(b) '复根模长 √(i/ρ_i)<ρ_i'只说明 b_m 的复根比 ρ_m 小，判断次大极点还需要 |σ_m|<ρ_{m−1}；(c) 'G_{m−1} 在 |x|<1/ρ_{m−1} 解析'需要对 m 归纳。已在笔记中补齐。",
+        "草稿说'成立门槛的粗估 k≥2d+2（待精确化）'：现已证明 2d+2 就是精确门槛，在 k=2d+1 处的缺口为 (−1)^d(d+1)!。",
+        "（不属于草稿，是本子任务自查）我初稿写的 Σ_k[t¹]h_k x^k=x²/((1−x)²(1−x−x³)) 是错的，因为把 W_1 误写成 1+x²，漏了 P_0=1−x。核对模块对照 DP 发现了它（k=3 时错误式给出 3，正确值是 2）。正确的是 x²(1−x+x²)/((1−x)²(1−x−x³))，已更正；更正前的那次运行保留在 logs/c5a_check_run1_before_fix.log。"
+      ],
+      "failed_directions": [
+        "证明 h_k 全实根：试了最常见的'相邻 h_k 根交错'路线，被数据否定（k=2..35 全部不交错，核对模块对 2≤k≤12 精确确认）。(C6) 递推同时含导数项 (1−t)h' 和乘 t(1−t) 的项，标准的交错保持算子论证套不上。目前只有 k≤60 的精确验证，等级为猜想。",
+        "证明固定位置系数 [t^i]h_k 从具体门槛（2,8,16,24,33,41,50,59）起恒正：渐近为正已证明，但具体门槛需要显式误差界（复根项系数和第三极点的界）。g.f. 是有理函数，原则上可做，但没有完成。",
+        "h_k(−1) 的闭式或递推：在常系数阶≤15、多项式系数阶≤5 且次数≤6 的范围内都没有找到（每种设置至少多出 5 个方程）；增长似乎超指数；也没有找到组合解释。这是搜索结果，不能据此说它不是 P-recursive。",
+        "h_k 中间段符号模式（周期约 3 的块）：只有数据，没有找到可证明的公式。",
+        "b_m 复根处的系数 γ_m(σ) 是否非零：没有一般证明。主定理不需要这一点，因为次大极点已经是实根 ρ_{m−1}。",
+        "H(z,t) 的显式积分 / ₁F₁ 解：只给出 PDE 和 H=(1−t)F(z(1−t),t)，显式解归结为 F 的显式解，留给 C-3，没有重复做。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c5a.py",
+      "check_run_output_tail": "PASS c5a-h-nointerlace refutation: roots of h_k and h_{k+1} do NOT interlace for every 2<=k<=12 (exact Sturm isolation, pairwise-disjoint rational intervals of width <1e-9); explore script shows the same for k<=35; bad=[]\nPASS c5a-h-fixed-i [t^i]h_k > 0 exactly from k = 2,8,16,24,33,41,50,59 (i=1..8) up to k=60 (nonpositive at the previous k); asymptotically [t^i]h_k ~ c_i rho_i^k (proved)\nPASS c5a-h-m1 search result (not a theorem): h_k(-1) (k<=60) satisfies no constant-coefficient recurrence of order<=15 and no polynomial-coefficient recurrence of order<=5, degree<=6 (with >=5 surplus equations); found=[]\nSUMMARY c5a pass=37 fail=0\n(exit code 0)",
+      "check_runtime_seconds": 34.5,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c5a.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_asym.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_binet.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_poly.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_h.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_h2.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_thresh.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\explore_roots.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5a\\sym_deriv.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_check.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_check_run1_before_fix.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_asym.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_binet.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_poly.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_h.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_h2.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_thresh.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5a_explore_roots.log"
+      ],
+      "uncertainties": [
+        "h_k 全实根只有 2≤k≤60 的精确验证，没有证明思路（交错路线已被否定）。它是本报告中最强、也最容易被误读成定理的一条，等级必须保持为猜想。",
+        "Möbius 推论 μ_{P_k}(0̂,1̂)=U_k(−2) 依赖引用的 Philip Hall 定理和'N(k,q)=P_k 中长 q 的严格链数'（zeta 多项式系数比较，笔记 §1.2 附注只有一句话）。后者推导简单，但程序只在 k≤10 上直接用 Möbius 定义核对过。",
+        "数值表（k≤60）中的局部衰减率等是从 decimal 90 位计算四舍五入得到的；m 较大时 k≤60 远未收敛，偏差来自第三极点。结论依据的是 k=400 处的容差（1e−6 / 1e−5）以及精确的谱分解核对，不依赖 k≤60 的数值。",
+        "固定位置系数的转正门槛（2,8,16,24,33,41,50,59）只是 k≤60 的数据。对某个固定 i，'转正之后恒正'在 60 以外没有显式证明，只有渐近为正的证明。",
+        "本子任务与 C-4（N(k,k−d) 多项式）、C-2（显式公式，(C4) 与谱分解的 c_j 形式实质相同）、C-3（F 与 H 的显式解）有重叠。我按要求没有读取它们的文件，各子任务之间可能存在表述或门槛写法上的差异，需要主 Agent 对齐。"
+      ]
+    },
+    {
+      "area": "C-5（c5b）：OEIS 只读查询，判断 U_3/U_4 与 OEIS 的吻合是巧合还是结构",
+      "stage_conclusion": "1) 只读查询合规：用 curl 直接访问 oeis.org 共 68 次（条目原文 13、b 文件 16、按项搜索 37、反向引用搜索 2），每个 URL 只取一次，全部 HTTP 200；没用 agent-reach，没有发帖、提交或联系任何人。快照在 data/oeis/，INDEX.md 逐条记录 URL、时间和命中。\n2) A207123 家族全部与 core 一致：A207118–A207122（第 3..7 列，b 文件 n≤210，并与 a_direct/a_brute 对照）、A207123（545 项，反对角线读法）、A207117、A207124–A207127、A207069/A207070，offset 都是 1；Hardin 的 30 个 %e 样例数组都符合我们对题目方向的读法。OEIS 里这一族的全部 Empirical 递推（列 4k 阶，特征多项式为 (x−1)^(2k+1)(x+1)^(2k−1)；行 10/22/28/49/55/85 阶），以及 Barker 在 A207118、A207069、A326247 中的 g.f./闭式猜想，都已证明对一切 n 成立，递推阶数最小。\n3) R_k = A038718(k+2)：提示词的 offset 正确，并有「允许行 ↔ P_{k+2}² 中 Hamilton 路」的递归双射。但提示词给的 g.f. 写法有误：(1−x+x²)/((1−x)(1−x−x³)) 等于 1 + x·ΣR_k x^k；ΣR_k x^k 本身是 (1+x²−x³)/((1−x)(1−x−x³))。\n4) U_3 = A084990(m+1)：有结构，但只在 k=3 成立。两边同为 (m+1)(m²+5m+3)/3；草稿的双射正确，且保持取值集合。U_k(m) 等于允许行偏序集 P_k 的 zeta 多项式，N(k,q) 就是 P_k 的链数；单调三元组恰好是另一个 6 元行偏序集 Q_3 的多重链，P_3 与 Q_3 不同构但链数同为 (1,4,2)。k=4 时这种构造不再成立。\n5) U_4 = A326247(m+2)：判断为同一多项式的不同计数模型。两边同为 (m+1)(m+2)(m²+11m+6)/12 = C(m+2,2)²−4C(m+2,4)，已证明；A326247 实际数的是边的有序对；已构造显式、保持取值集合的分段双射 Φ。但在 A326247 的自然坐标下，它的对象不是行偏序集的多重链模型（有反例），也不延伸为对 k 的族。\n6) k≥5 没有类似对应：U_5、U_6、U_7 从 m=0、1、2 起的 8 项窗口全部无结果。其他搜索（N 三角三种展平、行和、N(k,k−1..k−3)、N(k,2)、N(k,3)、U_k(2..4)、U_k(k)、h_k、(C7) 分子、U 表六种展平）也全部无命中；命中的只有 c_2 = A077949、c_3 = A084386，二者定义与 c_i 相同，并可解释为单层块的计数。\n7) 附带结果：U_k(−j) = 0 对 1≤j≤⌊(k+2)/3⌋，且 U_{3j}(−j−1) = j!，已证明。这解释了 OEIS 为何分别用 n=m+1、n=m+2 作变量。\n8) check_c5b.py 33 条全部 PASS，耗时 7.9 秒，退出码 0。",
+      "claims": [
+        {
+          "id": "c5b-01",
+          "statement": "OEIS 只读查询合规：共 68 次 curl 请求（条目原文 13、b 文件 16、按项搜索 37、反向引用搜索 2），每个 URL 只取一次，全部 HTTP 200，全部来自 https://oeis.org/；快照文件大小与 logs/c5b_fetch.log 一致，并在 data/oeis/INDEX.md 中逐条列出",
+          "level": "已验证",
+          "proof_summary": "fetch.sh 抓取前先查日志、跳过已取过的 URL；核对模块解析日志，检查 URL 唯一、HTTP 码、文件存在且大小一致，以及 INDEX.md 是否覆盖全部快照",
+          "verified_range": "全部 68 个快照",
+          "check_id": "c5b.snapshots"
+        },
+        {
+          "id": "c5b-02",
+          "statement": "offset（%O）：A207117–A207127、A207069、A207070、A038718 为 1；A084990、A326247、A002620、A030179、A077949、A077974、A084386 为 0",
+          "level": "已验证",
+          "proof_summary": "从快照中解析 %O 行",
+          "verified_range": "21 个条目",
+          "check_id": "c5b.offsets"
+        },
+        {
+          "id": "c5b-03",
+          "statement": "Hardin 在 A207118–A207123 的 %e 中给出的 30 个样例数组，全部满足「行禁 001/010、列禁 001/011」（core.row_ok/col_ok），说明我们对横向、纵向的读法与条目一致",
+          "level": "已验证",
+          "proof_summary": "解析 %e 中的数组，逐行、逐列检查",
+          "verified_range": "30 个数组",
+          "check_id": "c5b.examples"
+        },
+        {
+          "id": "c5b-04",
+          "statement": "A207118–A207122（k=3..7）的 b 文件 n=1..210 全部等于 U_k(⌈n/2⌉)·U_k(⌊n/2⌋)（高度 DP），条目数据段是 b 文件的前缀",
+          "level": "已验证",
+          "proof_summary": "用 core.U_fast_column 计算后逐项比较",
+          "verified_range": "k=3..7, n=1..210",
+          "check_id": "c5b.col-data"
+        },
+        {
+          "id": "c5b-05",
+          "statement": "OEIS 列数据与原题定义的直接计数一致：a_direct（逐行转移，列三元组逐个字面检查）与 a_brute（暴力）",
+          "level": "已验证",
+          "proof_summary": "共比较 113 个值",
+          "verified_range": "a_direct: k=3..7, n=1..20；a_brute: n·k≤14",
+          "check_id": "c5b.col-direct"
+        },
+        {
+          "id": "c5b-06",
+          "statement": "A207123 的 b 文件 545 项按反对角线解码（同一反对角线内行号 n 递增）后，T(n,k)=a_k(n) 全部一致；%C 中的 8×10 表也一致",
+          "level": "已验证",
+          "proof_summary": "用高度 DP 对照全部 545 项；其中 n≤10、k≤6 的 60 项另与 a_direct 对照",
+          "verified_range": "n+k≤34",
+          "check_id": "c5b.table"
+        },
+        {
+          "id": "c5b-07",
+          "statement": "A207117（对角线）的 b 文件 n=1..19 等于 a_n(n)",
+          "level": "已验证",
+          "proof_summary": "高度 DP；n≤7 另与 a_direct 对照",
+          "verified_range": "n=1..19",
+          "check_id": "c5b.diag"
+        },
+        {
+          "id": "c5b-08",
+          "statement": "A207069、A207070、A207124–A207127（A207123 第 2..7 行）的 b 文件 k=1..210 等于 a_k(n)",
+          "level": "已验证",
+          "proof_summary": "高度 DP 乘积；k≤7 另与 a_direct 对照",
+          "verified_range": "n=2..7, k=1..210",
+          "check_id": "c5b.rows"
+        },
+        {
+          "id": "c5b-09",
+          "statement": "A207123 的 %Y「Row 2 is A207069 / Row 3 is A207070」对一切 k 数值成立，尽管这两个条目名称里的竖直规则是「禁 001 与 101」；从 4 行起两个问题不同（k=1 时为 8 对 9）",
+          "level": "已证明",
+          "proof_summary": "2 行时竖直三元组规则不起作用；3 行时本题规则 ⟺ r1≥r3，另一规则 ⟺ r2≥r3，两边都等于 R_k·U_k(2)。另按其定义直接计数复核",
+          "verified_range": "直接计数 k≤8；4 行反例 k=1",
+          "check_id": "c5b.rows23-def"
+        },
+        {
+          "id": "c5b-10",
+          "statement": "A207123 第 1 列 = A002620(n+2)，第 2 列 = A030179(n+2)",
+          "level": "已证明",
+          "proof_summary": "U_1=m+1、U_2=(m+1)²，所以 a_1(n)=⌈(n+2)/2⌉⌊(n+2)/2⌋=⌊(n+2)²/4⌋，a_2 是它的平方，与两条目的定义吻合",
+          "verified_range": "条目数据段 n≤55 / n≤35",
+          "check_id": "c5b.col12"
+        },
+        {
+          "id": "c5b-11",
+          "statement": "A207118–A207122 的 Empirical 递推（阶 4k）对一切 n 成立且阶数最小，特征多项式恰为 (x−1)^(2k+1)(x+1)^(2k−1)",
+          "level": "已证明",
+          "proof_summary": "由 T1，U_k 是 k 次多项式，所以 a_k(n) 在每个奇偶类上是 n 的 ≤2k 次多项式，被 (E²−1)^(2k+1) 零化；递推在 4k+2 个连续位置成立即恒成立（核到 a(1..8k+2)）。最小性：精确 BM 在 8k 项上给出阶 4k 且多项式相同",
+          "verified_range": "k=3..7（另在 b 文件 n≤210 上逐项成立）",
+          "check_id": "c5b.emp-col"
+        },
+        {
+          "id": "c5b-12",
+          "statement": "A207069、A207070、A207124、A207125、A207126、A207127 的 Empirical 递推（阶 10/22/28/49/55/85）对一切 k 成立且阶数最小",
+          "level": "已证明",
+          "proof_summary": "对 k≥2，a_k(n)=uᵀ(A_{m1}⊗A_{m2})^(k−2)v，故有 d=(m1+1)²(m2+1)² 阶的先验递推；在 k=e+1..e+1+d 上核对后即对一切 k 成立。精确 BM 在 2e 项上给出阶 e",
+          "verified_range": "分别核到 k=27/59/110/194/312/486，b 文件 k≤210",
+          "check_id": "c5b.emp-row"
+        },
+        {
+          "id": "c5b-13",
+          "statement": "Barker 在 A207118 中的 g.f. x(6+24x+…+x^11)/((1−x)^7(1+x)^5) 与偶/奇 n 的两个六次多项式猜想都成立",
+          "level": "已证明",
+          "proof_summary": "g.f.：由 c5b-11，乘以分母后 x^13 及以后系数为 0，前 13 个系数逐一相符。两个多项式与 U_3(n/2)²、U_3((n−1)/2)U_3((n+1)/2) 作 Fraction 多项式精确恒等",
+          "verified_range": "级数核到 x^119；b 文件 n≤210",
+          "check_id": "c5b.barker-207118"
+        },
+        {
+          "id": "c5b-14",
+          "statement": "Barker 在 A207069 中的经验 g.f. 成立；分母四个因子之积等于 1−Σc_i x^i，其中 1−x−2x²−x³、1+x²−x³ 分别对应 ρ_i²、1/ρ_l（ρ_i 为 y³−y²−1 的根）",
+          "level": "已证明",
+          "proof_summary": "递推已由 c5b-12 证明；分子与 D·ΣR_k²x^k 精确相符；根的解释用 f(y)f(−y) 与反转多项式两个精确恒等验证",
+          "verified_range": "级数核到 x^149",
+          "check_id": "c5b.barker-207069"
+        },
+        {
+          "id": "c5b-15",
+          "statement": "对一切 k≥0，R_k=A038718(k+2)（A038718 的 offset 是 1，提示词的 a(k+2) 正确）",
+          "level": "已证明",
+          "proof_summary": "R_k=R_{k−1}+R_{k−3}+1（按前缀 0^k/1w/011w 分类，或引理 1 取 m=1）；A038718 由其置换定义（= P_n² 中从 1 出发的 Hamilton 路）直接证明 a(n)=a(n−1)+a(n−3)+1（n≥4）；两边初值相同",
+          "verified_range": "b 文件 n=1..6023（高度 DP m=1）",
+          "check_id": "c5b.R-data"
+        },
+        {
+          "id": "c5b-16",
+          "statement": "存在自然的递归双射「长 k 的允许行 ↔ P_{k+2}² 中从 1 出发的 Hamilton 路」：0^k↔唯一以 2 结尾的之字形路，1w↔1·路(w)+1，011w↔1,3,2·路(w)+3。这解释了平移 2",
+          "level": "已证明",
+          "proof_summary": "两边的三分法逐项对应，对 k 归纳。另按置换定义暴力计数复核",
+          "verified_range": "置换暴力 n≤9；双射 k=0..10",
+          "check_id": "c5b.R-def"
+        },
+        {
+          "id": "c5b-17",
+          "statement": "Σ_{k≥0}R_k x^k=(1+x²−x³)/((1−x)(1−x−x³))；提示词中的 (1−x+x²)/((1−x)(1−x−x³)) 等于 1+x·ΣR_k x^k（即 A038718 按 OEIS 下标的 g.f.），不是 ΣR_k x^k 本身",
+          "level": "已证明",
+          "proof_summary": "由递推乘以 (1−x−x³)(1−x) 得到；x¹ 系数 1≠R_1=2 是反例",
+          "verified_range": "级数核到 x^199",
+          "check_id": "c5b.R-gf"
+        },
+        {
+          "id": "c5b-18",
+          "statement": "T1：U_k(m)=Σ_q N(k,q)C(m+1,q)，U_k 是 k 次多项式，在 m=−1 处为 0；T1′：N(k,q) 等于允许行偏序集 P_k 中从 0̂ 到 1̂ 恰 q 步的链数，所以 U_k(m)=Z(P_k,m+1)",
+          "level": "已证明",
+          "proof_summary": "T1：按取值集合分类，条件在严格增映射下不变。T1′：令 r_t=[w≥t]，值域恰为 {0..q−1} 的合法词 ↔ 1̂>r_1>…>r_{q−1}>0̂",
+          "verified_range": "T1：k≤8、m≤15（N 用 DFS）；T1′：k≤7",
+          "check_id": "c5b.binom-basis"
+        },
+        {
+          "id": "c5b-19",
+          "statement": "U_3(m)=(m+1)(m²+5m+3)/3=2C(m+3,3)−(m+1)=A084990(m+1)，对一切整数 m 成立（多项式恒等）；A084990 的「单调三元组」注释也成立",
+          "level": "已证明",
+          "proof_summary": "T1 加上 N(3,·)=(1,4,2)；A084990 的定义就是 n(n²+3n−1)/3",
+          "verified_range": "b 文件 n=0..1000；高度 DP n≤121；暴力 n≤20",
+          "check_id": "c5b.U3"
+        },
+        {
+          "id": "c5b-20",
+          "statement": "草稿 §3 的 U_3 双射正确：非增三元组不动，(a<b=c)↦(a,a,b)，(b<c≤a)↦(b,c,a)，是「合法三元组 → 单调三元组」的双射且保持取值集合",
+          "level": "已证明",
+          "proof_summary": "按情形分析，并给出显式逆映射 g3（x=y<z↦(x,z,z)，x<y≤z↦(z,x,y)）",
+          "verified_range": "m≤20 穷举",
+          "check_id": "c5b.bij3"
+        },
+        {
+          "id": "c5b-21",
+          "statement": "U_3 吻合的结构解释：单调三元组 = Q_3（两条 4 元链首尾粘合）的多重链；P_3 与 Q_3 链数同为 (1,4,2) 但不同构。k=4 时单调行偏序集的链数为 (1,6,6,2)≠(1,7,8,2)；「每个相邻三元组都单调」（m=1 时为 10≠9）和「k−2 条边」族（k=2 时为 3≠4）也失效",
+          "level": "已证明",
+          "proof_summary": "Q_3 中的链只能落在两条链之一上；按上覆盖结构区分两者（P_3 中 000、100 各有两个上覆盖，Q_3 中只有 000）",
+          "verified_range": "链数直接计数；Q_3 多重链 m≤8；穷举 720 个双射",
+          "check_id": "c5b.zeta3"
+        },
+        {
+          "id": "c5b-22",
+          "statement": "U_4(m)=(m+1)(m+2)(m²+11m+6)/12=C(m+2,2)²−4C(m+2,4)=A326247(m+2)，对 m≥−2 成立；Barker 在 A326247 中的三条猜想（四次多项式、g.f. x²(1+4x−3x²)/(1−x)^5、5 阶递推）都成立",
+          "level": "已证明",
+          "proof_summary": "T1 加上 N(4,·)=(1,7,8,2) 得到 U_4；以 n=m+2 代入作多项式恒等；三条猜想由 c5b-23 的闭式推出",
+          "verified_range": "b 文件 n=0..40",
+          "check_id": "c5b.U4"
+        },
+        {
+          "id": "c5b-23",
+          "statement": "A326247 实际计数的是 [n] 的 2-子集的有序对（可相同）且不交叉不嵌套者，A326247(n)=C(n,2)²−4C(n,4)；若按名称中的无序多重图理解，n=3 时只有 6 个，而数据为 9；%t 中调用的是 nesXQ，定义的却是 nestQ（疑似笔误）",
+          "level": "已证明",
+          "proof_summary": "坏的有序对只能出现在 4 个端点互异时：每个 4-子集的三种完美匹配中，一种交叉、一种嵌套，各给出 2 个有序对",
+          "verified_range": "按 %C 条件暴力计数 n≤12",
+          "check_id": "c5b.A326247-def"
+        },
+        {
+          "id": "c5b-24",
+          "statement": "显式、保持取值集合的分段双射 Φ：{0..m}^4 中的合法 4 元组 → {0..m+1} 上不交叉不嵌套的有序边对（即 A326247(m+2) 的对象）",
+          "level": "已证明",
+          "proof_summary": "合法 4 元组恰分为 SSSS/ST/TS/SSE 四类（引理）；可接受区间对分为 L≤/L>/R′/D1/D2；逐段给出映射与逆映射，再用 [x,y]↦{x,y+1} 变成边",
+          "verified_range": "m≤10 穷举（含逆映射逐点复原）",
+          "check_id": "c5b.bij4"
+        },
+        {
+          "id": "c5b-25",
+          "statement": "在自然坐标 (x1,y1,x2,y2) 下，A326247 的区间模型不是任何行集合的多重链模型；而本题的合法 4 元组和单调三元组都是",
+          "level": "已证明",
+          "proof_summary": "反例：(0,1,1,1) 与 (0,0,0,1) 都可接受，而 (0,1,1,2) 的两行恰为二者的行，却交叉、不可接受",
+          "verified_range": "反例；合法 ⟺ 各行允许在 m≤4 穷举",
+          "check_id": "c5b.nonrowposet"
+        },
+        {
+          "id": "c5b-26",
+          "statement": "k=5,6,7 没有类似对应：U_k(m) 在 m=0..7、1..8、2..9 三个窗口上的 OEIS 搜索均无结果",
+          "level": "已验证",
+          "proof_summary": "搜索项与高度 DP 值逐项一致；快照内容为 No results",
+          "verified_range": "9 次搜索，2026-10-04 快照",
+          "check_id": "c5b.k567-nohit"
+        },
+        {
+          "id": "c5b-27",
+          "statement": "其余 21 个派生序列的 OEIS 搜索均无命中：N 三角三种展平、行和、N(k,k−1)、N(k,k−2)、N(k,k−3)、N(k,2)=R_k−2、N(k,3)、U_k(2)、U_k(3)、U_k(4)、U_k(k)、h_k 系数、(C7) 分子系数、U 表六种反对角线展平",
+          "level": "已验证",
+          "proof_summary": "搜索项与 core 重算值逐项一致（N 用容斥，并与 DFS 在 k≤8 对照；另核 N(k,k−1)=k²−k−4 于 k≤13）",
+          "verified_range": "2026-10-04 快照",
+          "check_id": "c5b.nohit-other"
+        },
+        {
+          "id": "c5b-28",
+          "statement": "有命中的只有：R_k→仅 A038718；U_3(0..8) 与 U_3(2..10)→仅 A084990；U_4 两个窗口→仅 A326247；c_2→A077949 和带号版 A077974；c_3→A084386；引用 A207123 的条目共 11 个，即 A207117..A207127",
+          "level": "已验证",
+          "proof_summary": "解析快照的 Showing 行与 %I 行",
+          "verified_range": "全部有命中的快照",
+          "check_id": "c5b.hits"
+        },
+        {
+          "id": "c5b-29",
+          "statement": "c_2=A077949、c_3=A084386（定义同为 1/(1−x−ix³)）；组合上 c_v(n) 是「只由第 v 层块 [v]、[a,v,v] 组成的合法序列」的个数",
+          "level": "已证明",
+          "proof_summary": "从左往右读，分解唯一，计数为 Σ_i C(n−2i,i)v^i；这些序列中的三元组都合法",
+          "verified_range": "数据段逐项比较；v=2,3、n≤8 穷举",
+          "check_id": "c5b.c2c3"
+        },
+        {
+          "id": "c5b-30",
+          "statement": "A077949 的注释「Number of compositions of n into parts 1 and two sorts of parts 2」成立",
+          "level": "已否定",
+          "proof_summary": "反例 n=2：按该注释为 3（1+1、2a、2b），数据 a(2)=1。改为 parts 3 后 n≤14 全部吻合。只记录，未提交",
+          "verified_range": "n≤14",
+          "check_id": "c5b.A077949-comment"
+        },
+        {
+          "id": "c5b-31",
+          "statement": "对 1≤j≤⌊(k+2)/3⌋ 有 U_k(−j)=0，即 (m+1)…(m+⌊(k+2)/3⌋) 整除 U_k(m)；U_{3j}(−j−1)=j!；μ_{P_k}(0̂,1̂)=U_k(−2)，故 k≥4 时为 0",
+          "level": "已证明",
+          "proof_summary": "独立重证引理 1 的多项式形式后，在 m=−j 处对 j 归纳；j! 由 U_{3j}(−j−1)=j·U_{3j−3}(−j) 递推得到；Möbius 部分用 P. Hall 定理",
+          "verified_range": "引理 1 在 k,m≤30 对照；j!：j≤10；Möbius 按定义计算 k≤9",
+          "check_id": "c5b.negzeros"
+        },
+        {
+          "id": "c5b-32",
+          "statement": "U_k 的负整数零点恰好是 −1..−⌊(k+2)/3⌋（没有其他负整数零点）",
+          "level": "猜想",
+          "proof_summary": "「至少这些」已证明（c5b-31）；「恰好」只有数据支持",
+          "verified_range": "1≤k≤30，检查了 j≤31",
+          "check_id": "c5b.negzeros"
+        },
+        {
+          "id": "c5b-33",
+          "statement": "U_5=(m+1)(m+2)(m³+32m²+77m+30)/60，U_6=(m+1)(m+2)(m⁴+66m³+410m²+603m+180)/360，U_7=(m+1)(m+2)(m+3)(m⁴+113m³+1103m²+1618m+420)/2520（U_3、U_4 见前）",
+          "level": "已证明",
+          "proof_summary": "由 T1，U_k 是 k 次多项式；在 m=0..12 共 13 点与高度 DP 一致即为恒等",
+          "verified_range": "m=0..12",
+          "check_id": "c5b.polys"
+        },
+        {
+          "id": "c5b-34",
+          "statement": "行递推的最小阶 10/22/28/49/55/85 与末项系数，恰等于由 (C2) 的特征根集合 S_m 推出的「两两之积」个数与乘积",
+          "level": "已验证",
+          "proof_summary": "属于观察：从快照解析系数，与公式 s2(s2+1)/2+s2(s1−s2) 及根积比较；依赖 (C2) 的根结构，不是证明",
+          "verified_range": "第 2..7 行",
+          "check_id": "c5b.root-products"
+        },
+        {
+          "id": "c5b-35",
+          "statement": "解释性判断（非定理）：U_3=A084990(m+1) 有结构，但仅限 k=3；U_4=A326247(m+2) 是同一低次多项式的不同计数模型（附带一个人工构造的分段双射），在 OEIS 中看作巧合",
+          "level": "猜想",
+          "proof_summary": "判据：是否同一多项式（两者都是）；是否有保持取值集合的双射（两者都有）；是否两边都是同链数的行偏序集多重链模型（U_3 是，U_4 否，见 c5b-25）；能否延伸为对 k 的族（否，见 c5b-26、c5b-21）",
+          "verified_range": "见所引各条",
+          "check_id": "c5b.nonrowposet"
+        }
+      ],
+      "errors_found_in_draft_or_prompt": [
+        "提示词：『R_k … g.f. (1−x+x²)/((1−x)(1−x−x³))』若读作 Σ_k R_k x^k 则不对。反例：x¹ 系数是 1，而 R_1=2。该式其实是 A038718 按 OEIS 下标的 g.f.，即 Σ_n A038718(n+1)x^n = 1 + x·Σ_{k≥0}R_k x^k；正确写法是 Σ_{k≥0}R_k x^k = (1+x²−x³)/((1−x)(1−x−x³))。分母与 a(k+2) 都正确。[c5b.R-gf]",
+        "提示词沿用了 A326247 的名称『不交叉也不嵌套的 2 边标号多重图』。条目实际计数的是边的有序对（可相同）：%e 同时列出 {12,13} 与 {13,12}，%t 用 Tuples。若按无序多重集计数，n=3 只有 6 个，而数据 a(3)=9。U_4(m)=A326247(m+2) 这个数值恒等不受影响。[c5b.A326247-def]",
+        "草稿 §3 的 U_3 双射与『单调三元组』解释已独立证明，未发现错误（记录为复核结果）。",
+        "（OEIS 条目，非草稿）A077949 的注释 'Number of compositions of n into parts 1 and two sorts of parts 2' 与数据不符：n=2 时按注释为 3，数据为 1。应为 'two sorts of parts 3'，改后 n≤14 全部吻合。只记录，未提交。",
+        "（OEIS 条目，非草稿）A326247 的 %t 中 Select 调用的是 nesXQ，定义的却是 nestQ，疑似笔误。本机没有 Mathematica，未能运行验证。",
+        "（OEIS 条目，非草稿）A207069 和 A207070 名称里的竖直规则是『禁 001 与 101』，不是 A207123 的规则。A207123 的 %Y『Row 2/Row 3』交叉引用作为数列是对的（2、3 行已证明数值相等），但从 4 行起两个问题不同（k=1 时为 8 对 9）。",
+        "（OEIS 条目，非草稿）A038718 的 offset 是 1，但 g.f. 从 x⁰ 开始写，这正是提示词 g.f. 混淆的来源。"
+      ],
+      "failed_directions": [
+        "寻找对 k 一致的模型：试了单调 k 元组 2C(m+k,k)−(m+1)、『每个相邻三元组都单调』、把 A326247 看成『k−2 条边』的族，分别在 k=4（8≠9）、k=4（10≠9）、k=2（3≠4）失效，没有找到能同时解释 k=3 和 k=4 的统一模型。",
+        "U_4 ↔ A326247 的规范（非分段）双射：只得到按块型分段拼接的 Φ。试图在 A326247 的自然坐标下把它写成某个行偏序集的多重链，以便像 k=3 那样用『同链数』解释，被 T14 的反例否定。是否存在其他自然编码使它成为与 P_4 同链数的行偏序集，既未找到，也未能证明不存在。",
+        "OEIS 中没有 k≥5 的 U_k、N 三角和其他派生序列，除 c_2、c_3 外无已知结果可借用。",
+        "没有搜索 U_5..U_7 从 m≥3 起的窗口，也没有搜索缩放、差分、二项式变换后的版本，出于预算与必要性考虑。A326247 的 %t 笔误只能从文本指出，无法运行验证。"
+      ],
+      "check_script": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\checks\\check_c5b.py",
+      "check_run_output_tail": "PASS c5b.A077949-comment A077949 的注释「compositions of n into parts 1 and two sorts of parts 2」与数据不符（n=2 时为 3，数据为 1）；改成「two sorts of parts 3」则 n<=14 全符（只记录，不提交）\nPASS c5b.negzeros 引理 1（k<=30、m<=30 与高度 DP 一致）；U_k 在负整数处的零点恰为 m=-1..-floor((k+2)/3)（1<=k<=30；「至少这些」已证，「恰好」为 k<=30 的验证）；U_{3j}(-j-1)=j!（j<=10，已证）；mu_{P_k}(0,1)=U_k(-2)=sum_q (-1)^q N(k,q)（按定义算 Moebius 函数，k<=9）\nPASS c5b.polys U_3=(m+1)(m^2+5m+3)/3，U_4=(m+1)(m+2)(m^2+11m+6)/12，U_5=…，U_6=…，U_7=…：m=0..12 与高度 DP 一致\nPASS c5b.root-products （与 (C2) 的一致性检验）第 2..7 行最小递推的阶 10/22/28/49/55/85 与末项系数 …\nSUMMARY c5b pass=33 fail=0",
+      "check_runtime_seconds": 7.9,
+      "notes_file": "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\notes\\c5b.md",
+      "other_files": [
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\data\\oeis\\INDEX.md",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\data\\oeis\\ (68 个快照：A2071xx.txt、b2071xx.txt、search_*.txt 等)",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\fetch.sh",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\terms.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\build_list2.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\build_list5.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\make_index.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\bijections.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\polys.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\negroots.py",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\search_terms.json",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\code\\c5b\\terms.json",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_fetch.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_check.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_terms.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_bijections.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_polys.log",
+        "C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\\logs\\c5b_negroots.log"
+      ],
+      "uncertainties": [
+        "『巧合 vs 结构』的界线是解释性的（判据见 notes §11）。U_3 满足同一多项式、保持取值集合的双射、两边都是同链数的行偏序集多重链模型；U_4 只满足前两条。别人可能会把分段双射 Φ 也算作结构。",
+        "OEIS『无结果』只说明 2026-10-04 的快照中，没有条目的显示数据按顺序相邻、按绝对值含有这些项。缩放、起点超过 m=2、交错、差分等变形版本不在覆盖范围内。",
+        "把 A326247 读作『边的有序对』依据的是 %e 与 %t，与名称『multigraphs』不一致。作者本意若是无序多重图，则数据与名称之间本身就有矛盾；数值恒等 U_4(m)=A326247(m+2) 不受影响。",
+        "『U_k 的负整数零点恰为 −1..−⌊(k+2)/3⌋』只验证到 k≤30；已证明的只是『至少包含这些』。",
+        "行递推阶数与 (C2) 根积的一致性（c5b-34）依赖 (C2) 的特征根结构，那部分由其他 Agent 负责；这里只作数值观察，不是证明。"
+      ]
+    }
+  ],
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Explore"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "c1",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "a27b117e6e152b346",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667819,
+      "queuedAt": 1791108667790,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "c1",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791111518127,
+      "tokens": 378050,
+      "toolCalls": 70,
+      "durationMs": 2850295,
+      "resultPreview": "{\"area\":\"c1\",\"stage_conclusion\":\"C-1 复核完成。第 1 节归约 (a)(b)(c)、引理 1（含全部边界约定）、(C1)–(C7) 的每一条都已独立给出完整证明，写在 notes/c1.md；没有发现实质性错误，所以没有触发「立即停下」。check_c1.py 共 45 条检查，最终运行 pass=45 fail=0，退出码 0，耗时 78.5 s（当时有并行负载）。除两条标明容差的 decimal 数值检查外，全部用精确整数 / Fraction，范围达到或超过要求：k≤60、m≤20，多数扩到 m≤62 或 k≤132；N_brute 到 k≤9；a_direct 到 k≤9、n≤13；a_brute 覆盖全部 n·k≤20。一次性扩展脚本另外核对了 a_direct 的 k=10,11、N_brute 的 k=10,11，以及快速 DP 在 m=2…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "c2a",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "af520900602e0bdd9",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667821,
+      "queuedAt": 1791108667790,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "c2a",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791112811253,
+      "tokens": 405733,
+      "toolCalls": 64,
+      "durationMs": 4139470,
+      "resultPreview": "{\"area\":\"c2a\",\"stage_conclusion\":\"C-2（代数路线）已完成，结论如下。(1)【已证明】(1/t!)∇^t i^p|_{i=m} = h_{p−t}(m−t..m)，也就是 Broder r-Stirling 数 {p+m−t ⧵ m}_{m−t}。证明只用到有理函数恒等式 Σ_r(−1)^rC(t,r)/(1−(m−r)z) = t!z^t/∏(1−(m−r)z)。核对分三路：集合分拆暴力枚举（n≤9）、递推、母函数，都与 core.h_complete 比对。(2)【已证明】提示词 (C4) 的 Θ_t(n) 等于 Γ_m(n−3t;m−t) = [x^{n−3t}]∏_{v=m−t}^m b_v^{−1}。把 c_i 展开后，它和草稿 §2 的内层和逐项相同（第 p 项对应第 s=p−t 项）。但两条公式的外层并不逐项相同。Θ 公式的外层是 [x^{k…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "c2b",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "a3d536451dd2a23ff",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667823,
+      "queuedAt": 1791108667790,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "C-2 最简显式公式：组合路线（块分解）",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791112423029,
+      "tokens": 479317,
+      "toolCalls": 116,
+      "durationMs": 3751246,
+      "resultPreview": "{\"area\":\"C-2 最简显式公式：组合路线（块分解）\",\"stage_conclusion\":\"块分解已严格证明：合法序列与块词（单块 S_v=[v]、三块 T_{v,a}=[a,v,v]、截断块 E_{v,a}=[a,v]，层次非增，E 只能在末尾）之间是双射。k≤10、m≤4 的全部 13,695,758 个序列上「分解方式数=[合法]」都成立。由此推出几条结论：\\n(1) 按上升数细化的母函数：(1−x−m·y·x³)G_m(x,y)=G_{m−1}+m·y·x²，即 G_m=W_m/P_m，y=1 时就是 (C2)；还有引理 1 的 s-细化和三变量偏微分方程。\\n(2) 显式公式：U_k(m,s)=S(m+s,m)C(k+m−2s,k−3s)+Σ_j j·H(m,s−1,j)·C(k+m−j−2s,k+1−3s)，H(m,s,j)=h_s(j..m)=r-Stirling …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "c3a",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "a73021f212f3f9d39",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667825,
+      "queuedAt": 1791108667790,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "c3a：C-3 整张表的显式母函数（1F1 / 形式 Laplace / 指数积分 …",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791111961404,
+      "tokens": 471200,
+      "toolCalls": 71,
+      "durationMs": 3289620,
+      "resultPreview": "{\"area\":\"c3a：C-3 整张表的显式母函数（1F1 / 形式 Laplace / 指数积分 / Humbert Φ_1；N 的二元母函数 𝒩 与 h-多项式母函数 H）\",\"stage_conclusion\":\"任务里列出的 5 项都做完了，另外有两个计划外的结果。核对模块 check_c3a.py 共 34 条 PASS/FAIL 检查，最终一次运行 pass=34、fail=0，耗时 22.4 秒，退出码 0。\\n(1) Σ_m t^m/P_m = ₁F₁(1;1−λ;−t/x³)/(1−x)：已证明，并在 k≤40、m≤20 上核对。它是 Q(x)[[t]] 里的恒等式，每个 t^m 系数 1/P_m ∈ R_Z ⊂ Z[[x]]，所以恒等式实际落在 Z[[x,t]] 里。组合意义：系数等于「不以上升结尾」的合法序列数。Kummer 变换与下不完全 Gamma 形式也成立…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "c3b",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "aab7e5225d1caaefa",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667827,
+      "queuedAt": 1791108667790,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "c3b",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791111448961,
+      "tokens": 422665,
+      "toolCalls": 49,
+      "durationMs": 2777177,
+      "resultPreview": "{\"area\":\"c3b\",\"stage_conclusion\":\"C-3 的 D-finite 判定已经做完，主要结果都有完整证明，并且都对照原始定义（高度 DP、参考实现、多重链、原题直接计数、DFS）做了核对。\\n(1) 定理 1【已证明】：F(x,t)=ΣU_k(m)x^k t^m 不满足任何非零的 x 方向线性 ODE（系数在 C[x,t] 中，证明对 C[x][[t]] 中的系数也成立），所以 F 不是 D-finite（Lipshitz 1989 Def. 2.1 意义）。原因是 t^m 的系数 G_m=W_m/P_m 在 x_m=1/ρ_m 处恰好新出现一个留数非零的单极点；x_m 两两不同，且趋于 0。\\n(2) 推论 2【已证明】：不存在「系数只依赖 k 的多项式、在某个象限上成立」的非平凡递推。给了两个证明：一个直接用极点；另一个按提示词路线，构造 x 方向算子 L …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "c4",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "a8d9152159d9e05c4",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667829,
+      "queuedAt": 1791108667791,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "c4",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791112239469,
+      "tokens": 476715,
+      "toolCalls": 63,
+      "durationMs": 3567685,
+      "resultPreview": "{\"area\":\"c4\",\"stage_conclusion\":\"C-4 两个子问题都已完成主体，正式核对模块 41/41 PASS（约 28 秒，退出码 0，可从任意目录运行）。\\n(i) 近对角线 D(k,d)=N(k,k−d)：对一切 d≥0 证明了 D(k,d) 在 k≥2d+2 时等于一个 2d 次多项式 p_d，首项 2/(2^d d!)，次首项 −(4d²−3d)·2/(2^d d!)。门槛 2d+2 对每个 d 都精确：D(2d+1,d)−p_d(2d+1)=(−1)^{d+1}(d+1)!，D(2d,d)−p_d(2d)=(−1)^{d+1}(d+2)!/2。证法是把三角递推改写成 D 递推，再对缺陷 e_d=D−p_d 用同一递推倒推。门槛之所以是 K_{d−1}+2，是因为起决定作用的是 (k−d−1)D(k−3,d−1) 这一项。特例 D(k,0)=2（k≥2）、D…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "c5a",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "ab40d0a8be0e33eea",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667830,
+      "queuedAt": 1791108667791,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "C-5a：渐近（固定 m、k→∞；固定 k、m→∞）与 h_k(t) 结构",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791111320274,
+      "tokens": 382731,
+      "toolCalls": 48,
+      "durationMs": 2648490,
+      "resultPreview": "{\"area\":\"C-5a：渐近（固定 m、k→∞；固定 k、m→∞）与 h_k(t) 结构\",\"stage_conclusion\":\"（1）固定 m≥1：已证明 U_k(m) = c_m ρ_m^k − c_{m−1} ρ_{m−1}^{k+3} + O(τ_m^k)。ρ_m 是 y³=y²+m 的唯一实根；x_m=1/ρ_m 是 G_m 唯一的最小模奇点，且为单极点，留数 c_m>0。相对误差率 θ_m = ρ_{m−1}/ρ_m 是精确的（次大极点系数 −c_{m−1}ρ_{m−1}³≠0），1−θ_m ~ 1/(3m)。c_m 的闭式为 c_m = ρ(ρ^{3m+1}/m! − Σ_{i<m} ρ^{3i}/i!)/(3ρ−2)。更强的结论是一个 Binet 型精确谱分解公式，给出全部极点和全部系数，与 DP 逐项精确核对到 m≤20、k≤60。c_4 = 215/2；c_18 …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "c5b",
+      "phaseIndex": 1,
+      "phaseTitle": "Explore",
+      "agentId": "a46ffc370739eb25e",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1791108667832,
+      "queuedAt": 1791108667791,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "C-5（c5b）：OEIS 只读查询，判断 U_3/U_4 与 OEIS 的吻合是巧…",
+      "promptPreview": "你是组合数学 / 计算机代数研究助手，参与「任务 C」的一个子方向。全程中文。\n根目录 ROOT（Windows 路径）：C:\\Users\\Michael Song\\Desktop\\私人办公\\A207123-任务C-显式公式与母函数\n同一目录的 Git Bash 路径：/c/Users/Michael Song/Desktop/私人办公/A207123-任务C-显式公式与母函数\n开工前必须完整阅读：\n  1) ROOT\\notes\\原始任务说明.md —— 用户原始任务（定义、数据、待复核的 (C1)–(C8)、C-1…C-5 要求、交付规则）；\n  2) ROOT\\notes\\00-主线推导与分工.md —— 主 Agent 的推导草稿与【必须遵守的协作规则】（只写自己的文件、核对模块契约、只读查询、py -3.14 等）；\n  3) ROOT\\code\\core.py 与 ROOT\\c…",
+      "promptFramed": true,
+      "lastProgressAt": 1791111779075,
+      "tokens": 453783,
+      "toolCalls": 86,
+      "durationMs": 3107290,
+      "resultPreview": "{\"area\":\"C-5（c5b）：OEIS 只读查询，判断 U_3/U_4 与 OEIS 的吻合是巧合还是结构\",\"stage_conclusion\":\"1) 只读查询合规：用 curl 直接访问 oeis.org 共 68 次（条目原文 13、b 文件 16、按项搜索 37、反向引用搜索 2），每个 URL 只取一次，全部 HTTP 200；没用 agent-reach，没有发帖、提交或联系任何人。快照在 data/oeis/，INDEX.md 逐条记录 URL、时间和命中。\\n2) A207123 家族全部与 core 一致：A207118–A207122（第 3..7 列，b 文件 n≤210，并与 a_direct/a_brute 对照）、A207123（545 项，反对角线读法）、A207117、A207124–A207127、A207069/A207070，offset 都是…"
+    }
+  ],
+  "totalTokens": 3470194,
+  "totalToolCalls": 567
+}

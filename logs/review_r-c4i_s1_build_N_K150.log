@@ -1,0 +1,9 @@
+anchor1 U_column == U_slow (k<=7,m<=4): True
+anchor2 U_column == 0/1 matrix brute (k<=5,m<=3): True
+anchor3 U_column == prompt table (k<=10,m<=6): True
+U table built K=150 in 31.3s
+N table built in 31.6s
+anchor4 N(incl-excl) == DFS surjective words (k<=11): True
+anchor5 N == prompt triangle (k<=10): True
+ALL_ANCHORS_OK
+runtime 33.4s

@@ -1,0 +1,20 @@
+E m=3: total pairs 46178, pairs with n1+n2>=27: 2467
+E m=4: total pairs 78146, pairs with n1+n2>=27: 8108
+E m=5: total pairs 124390, pairs with n1+n2>=27: 19385
+E m=6: total pairs 188630, pairs with n1+n2>=27: 38757
+U m=2: total pairs 25191, pairs with n1+n2>=27: 385
+U m=3: total pairs 46178, pairs with n1+n2>=27: 2467
+U m=4: total pairs 78146, pairs with n1+n2>=27: 8108
+U m=5: total pairs 124390, pairs with n1+n2>=27: 19385
+U m=6: total pairs 188630, pairs with n1+n2>=27: 38757
+jobs: 137819
+E m=3 k0=0: tested 2467, consistent 0 (of which checks<5: 0) examples []
+E m=4 k0=0: tested 8108, consistent 0 (of which checks<5: 0) examples []
+E m=5 k0=0: tested 19385, consistent 59 (of which checks<5: 59) examples [(15, 0, 21, 8, 0), (16, 0, 21, 9, 0), (17, -1, 21, 8, 0), (17, 0, 21, 9, 0), (18, -1, 21, 9, 0), (18, 0, 20, 10, 0), (18, 0, 21, 10, 0), (18, 0, 21, 11, 0)]
+E m=6 k0=0: tested 38757, consistent 1024 (of which checks<5: 1024) examples [(9, 0, 24, 5, 0), (10, 0, 24, 6, 0), (11, -1, 24, 5, 0), (11, 0, 24, 6, 0), (11, 1, 24, 6, 0), (12, -1, 24, 6, 0), (12, 0, 23, 7, 0), (12, 0, 24, 7, 0)]
+U m=2 k0=0: tested 385, consistent 0 (of which checks<5: 0) examples []
+U m=3 k0=0: tested 2467, consistent 0 (of which checks<5: 0) examples []
+U m=4 k0=0: tested 8108, consistent 0 (of which checks<5: 0) examples []
+U m=5 k0=0: tested 19385, consistent 59 (of which checks<5: 59) examples [(15, 0, 21, 8, 0), (16, 0, 21, 9, 0), (17, -1, 21, 8, 0), (17, 0, 21, 9, 0), (18, -1, 21, 9, 0), (18, 0, 20, 10, 0), (18, 0, 21, 10, 0), (18, 0, 21, 11, 0)]
+U m=6 k0=0: tested 38757, consistent 1024 (of which checks<5: 1024) examples [(9, 0, 24, 5, 0), (10, 0, 24, 6, 0), (11, -1, 24, 5, 0), (11, 0, 24, 6, 0), (11, 1, 24, 6, 0), (12, -1, 24, 6, 0), (12, 0, 23, 7, 0), (12, 0, 24, 7, 0)]
+[time] 314.0s

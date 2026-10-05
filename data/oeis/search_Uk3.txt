@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:16,36,80,192,419,873,1837,3788,7629,15285
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

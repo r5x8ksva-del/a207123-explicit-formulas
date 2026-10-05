@@ -1,0 +1,2 @@
+notes 4.6 general g.f. for [t^i]h_k, i<=4, k<=60: True
+k=36 (numpy, descriptive): #real roots=20 of deg 24; max root=40.57; min root=-20.61; root closest to 0 = -4.782e-07; -1/h_{k,1} = -4.780e-07

@@ -1,0 +1,107 @@
+#0  00_head.md      count=1  found_in=00_head.md
+#1  01_summary.md   count=1  found_in=01_summary.md
+#2  03_C2.md        count=1  found_in=03_C2.md
+#3  05_C4.md        count=1  found_in=05_C4.md
+#4  06_C5.md        count=1  found_in=06_C5.md
+#5  06_C5.md        count=1  found_in=06_C5.md
+#6  07_formula.md   count=1  found_in=07_formula.md
+#7  04_C3.md        count=1  found_in=04_C3.md
+#8  10_uncertain.md count=1  found_in=10_uncertain.md
+#9  09_code.md      count=1  found_in=09_code.md
+#10 00_head.md      count=1  found_in=00_head.md
+#11 01_summary.md   count=1  found_in=01_summary.md
+#12 02_C1.md        count=1  found_in=02_C1.md
+#13 02_C1.md        count=1  found_in=02_C1.md
+#14 03_C2.md        count=1  found_in=03_C2.md
+#15 03_C2.md        count=1  found_in=03_C2.md
+#16 03_C2.md        count=1  found_in=03_C2.md
+#17 04_C3.md        count=1  found_in=04_C3.md
+#18 05_C4.md        count=1  found_in=05_C4.md
+#19 05_C4.md        count=1  found_in=05_C4.md
+#20 06_C5.md        count=1  found_in=06_C5.md
+#21 06_C5.md        count=1  found_in=06_C5.md
+#22 06_C5.md        count=1  found_in=06_C5.md
+#23 09_code.md      count=1  found_in=09_code.md
+report chars=53307, concat chars=53297
+  part 00_head.md in report: True
+  part 01_summary.md in report: True
+  part 02_C1.md in report: True
+  part 03_C2.md in report: True
+  part 04_C3.md in report: True
+  part 05_C4.md in report: True
+  part 06_C5.md in report: True
+  part 07_formula.md in report: True
+  part 08_failed.md in report: True
+  part 09_code.md in report: True
+  part 10_uncertain.md in report: True
+
+===== v2_numbers.py =====
+#4  [m^{k-1}]U_k vs (k^2-2k-1)/(k-1)!；mu_k(实际) vs (k^2-2k-1)/2
+   k= 1 deg=1 lc=1 (2/k!=2)  [m^{k-1}]=1 formula=-2  mu_true=1 mu_formula=-1  DIFF
+   k= 2 deg=2 lc=1 (2/k!=1)  [m^{k-1}]=2 formula=-1  mu_true=1 mu_formula=-1/2  DIFF
+   k= 3 deg=3 lc=1/3 (2/k!=1/3)  [m^{k-1}]=2 formula=1  mu_true=2 mu_formula=1  DIFF
+   k= 4 deg=4 lc=1/12 (2/k!=1/12)  [m^{k-1}]=7/6 formula=7/6  mu_true=7/2 mu_formula=7/2  OK
+   k= 5 deg=5 lc=1/60 (2/k!=1/60)  [m^{k-1}]=7/12 formula=7/12  mu_true=7 mu_formula=7  OK
+   k= 6 deg=6 lc=1/360 (2/k!=1/360)  [m^{k-1}]=23/120 formula=23/120  mu_true=23/2 mu_formula=23/2  OK
+   k= 7 deg=7 lc=1/2520 (2/k!=1/2520)  [m^{k-1}]=17/360 formula=17/360  mu_true=17 mu_formula=17  OK
+   k= 8 deg=8 lc=1/20160 (2/k!=1/20160)  [m^{k-1}]=47/5040 formula=47/5040  mu_true=47/2 mu_formula=47/2  OK
+   k= 9 deg=9 lc=1/181440 (2/k!=1/181440)  [m^{k-1}]=31/20160 formula=31/20160  mu_true=31 mu_formula=31  OK
+   k=10 deg=10 lc=1/1814400 (2/k!=1/1814400)  [m^{k-1}]=79/362880 formula=79/362880  mu_true=79/2 mu_formula=79/2  OK
+   k=11 deg=11 lc=1/19958400 (2/k!=1/19958400)  [m^{k-1}]=7/259200 formula=7/259200  mu_true=49 mu_formula=49  OK
+   k=12 deg=12 lc=1/239500800 (2/k!=1/239500800)  [m^{k-1}]=17/5702400 formula=17/5702400  mu_true=119/2 mu_formula=119/2  OK
+   U_3 = [Fraction(1, 1), Fraction(8, 3), Fraction(2, 1), Fraction(1, 3)]（低次在前；*3 = [Fraction(3, 1), Fraction(8, 1), Fraction(6, 1), Fraction(1, 1)]）
+#4  N(k,k), N(k,k-1), N(k,k-2) 对照 2, k^2-k-4, p_2(k)
+   k= 2 N(k,k)=2 N(k,k-1)=1 (k^2-k-4=-2) N(k,k-2)=0 (p_2(k)=19)  [DFS 定义一致]
+   k= 3 N(k,k)=2 N(k,k-1)=4 (k^2-k-4=2) N(k,k-2)=1 (p_2(k)=17)  [DFS 定义一致]
+   k= 4 N(k,k)=2 N(k,k-1)=8 (k^2-k-4=8) N(k,k-2)=7 (p_2(k)=19)  [DFS 定义一致]
+   k= 5 N(k,k)=2 N(k,k-1)=16 (k^2-k-4=16) N(k,k-2)=25 (p_2(k)=31)  [DFS 定义一致]
+   k= 6 N(k,k)=2 N(k,k-1)=26 (k^2-k-4=26) N(k,k-2)=65 (p_2(k)=65)  [DFS 定义一致]
+   k= 7 N(k,k)=2 N(k,k-1)=38 (k^2-k-4=38) N(k,k-2)=139 (p_2(k)=139)  [DFS 定义一致]
+   k= 8 N(k,k)=2 N(k,k-1)=52 (k^2-k-4=52) N(k,k-2)=277 (p_2(k)=277)  [DFS 定义一致]
+   k= 9 N(k,k)=2 N(k,k-1)=68 (k^2-k-4=68) N(k,k-2)=509 (p_2(k)=509)
+   k=10 N(k,k)=2 N(k,k-1)=86 (k^2-k-4=86) N(k,k-2)=871 (p_2(k)=871)
+   k=11 N(k,k)=2 N(k,k-1)=106 (k^2-k-4=106) N(k,k-2)=1405 (p_2(k)=1405)
+   k=12 N(k,k)=2 N(k,k-1)=128 (k^2-k-4=128) N(k,k-2)=2159 (p_2(k)=2159)
+#12 rho_1=1.465571231876  1/rho_1=0.682327803828（verify_all c5a-asym-m1 打印 theta=0.682327804，故 rho_0 取 1）
+    m=0：y^3=y^2 的实根为 0（二重）与 1，「y^3=y^2+m 的实根」在 m=0 不唯一
+    tau_2 = max(rho_0, sqrt(rho_2(rho_2-1))) = max(1, 1.08605203)
+    tau_1 = sqrt(rho_1(rho_1-1)) = 0.82603135（报告 τ_1≈0.826；max 式在 m=1 需要 rho_{-1}）
+#14 R_k=U_k(1)=c_1(k+3)+c_1(k-2)-1（c_1(n<0)=0），0<=k<=60：True；R_0..R_6=[1, 2, 4, 6, 9, 14, 21]
+#1  p_d(2d+1)<=0 的 d（1<=d<=101）：[69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101]
+    其中偶数 d：[]（偶数 d 时 p_d(2d+1)=D(2d+1,d)+(d+1)!>0）
+elapsed 0.1s
+
+===== v3_docs.py =====
+#0 r2_two_family 无条件 import numpy: True；check_c3b 用 try/except: True
+   屏蔽 numpy 运行 check_c3b：['# elapsed 320.6s (numpy=False)', 'SUMMARY c3b pass=22 fail=0']
+#5 data/oeis 中 search_U<k>_* 文件：['search_U3_m0.txt', 'search_U3_m2.txt', 'search_U4_m0.txt', 'search_U4_m2.txt', 'search_U5_m0.txt', 'search_U5_m1.txt', 'search_U5_m2.txt', 'search_U6_m0.txt', 'search_U6_m1.txt', 'search_U6_m2.txt', 'search_U7_m0.txt', 'search_U7_m1.txt', 'search_U7_m2.txt']
+#8 C3B-E2 盒子数=8，其中 ker=0 的 2 个
+#8 C3B-E2S 盒子数=3，其中 ker=0 的 1 个
+#8 C3B-E3B 盒子数=8，其中 ker=0 的 2 个
+#8 C3B-E3S 盒子数=3，其中 ker=0 的 1 个
+   r-c3b 判 T3N minor_gap（角点需取最大 β′）: True；x2 同判: True
+#9 r1/r2 是否 import core: False / False
+#10 logs/review_r-c1_r3_C2_final.log 含「G4c-reducible」: True
+#10 logs/review_r-c1_r4_C3_C6_C7_final.log 含「序型 DP（k<=28」: True
+#10 logs/review_r-c5b_negzeros_exact.log 含「1<=k<=70」: True
+#10 logs/review_x2-dfinite_kernel.log 含「X2-C-N」: True
+#10 logs/review_r-c3b_r2_rank.log 含「R-E3B」: True
+#10 logs/review_r-c3b_r5_extra.log 含「PASS N (A,B)=(3,12)」: True
+   报告「i≤3000」附近 120 字是否含 log/不在 verify_all: False
+   报告「扩到 k≤28」附近 120 字是否含 log/不在 verify_all: False
+   报告「确认到 k≤70」附近 120 字是否含 log/不在 verify_all: False
+   报告「另算了 44 个新盒子」附近 120 字是否含 log/不在 verify_all: False
+#14 报告中 R_k 的出现处是否有定义（「R_k=U_k(1)」或「R_k:=」）: False
+#15 报告中 N_i 的定义（「N_i:=」或「N_i=」）: False
+#18 报告中 c_d 的定义: False
+#20 报告中「初等对称」字样: False
+#21 报告中 Λ_k 出现: True；「P_3」出现次数 1
+#23 T3.6 说明「用 𝓗 以免与 r-Stirling 数 H(m,s,j) 混淆」: True；⑤ 表写「𝒩 与 H」: True
+#16 r4b_full.log 是否含 k<=60 结论: False；r4b_k60.log 含「k<=60 上仍相容 0 对」: True
+#22 c5a-prompt-k40 在日志里以 [numeric] 开头: True；c5a 笔记 §2.7 标【已验证，数值】: True
+
+===== 判定汇总（verify-consistency，对抗性复核 consistency 审计的 24 条） =====
+real=true : #0 #1 #2 #3 #4 #5 #8 #9 #10 #11 #12 #14 #15 #16 #18 #19 #20 #21 #22 #23
+real=false: #6（③ 已写明依赖文献并指向 T2.7）、#7（括号说法正确且不承担论证）、#13（Q[x] 基的陈述与变量名无关，无歧义）、#17（κ_j、κ_m 都就地定义，无歧义）
+修正审计者替换文字的条目：#1（不写「只在」「偶数 d 恒为正」，只说第 0 个系数）、#8（补 r-c3b 12 个 N 盒、排除晚起点攻击窗口）、#10（不说「多数」、列出缺路径的 4 处）、#16（补 r4b_full_small.log）、#22（不用【已验证】标数值结果，避免与 #2 同类冲突）
+脚本：code/review/final-audit/verify-consistency/v0_quotes.py、v1_block_numpy.py、v2_numbers.py、v3_docs.py；c3b 无 numpy 实跑输出 c3b_nonumpy.out

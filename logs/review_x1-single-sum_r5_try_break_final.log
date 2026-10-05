@@ -1,0 +1,5 @@
+PASS r5.thmS_linsys exact: (2,1)-shape single sums for U (m=1..3) and E (m=2..4), c in [-15,15], d in [-10,15], s over all integers, valid on k0<=k<=70 with k0 in {0,12,24}: all 14508 systems inconsistent; controls A_m (c=d=m) and E(k,1) (c=-2,d=0) consistent
+PASS r5.Sprime_linsys exact: S' shapes (1,1),(2,0),(2,2),(1,3),(3,0) for U, m=1,2, c in [-12,12], d in [-6,10], k0 in {0,15}, k<=70: all 8500 systems inconsistent
+# elapsed 206.4s
+SUMMARY r5 fail=0
+r5 exit=0

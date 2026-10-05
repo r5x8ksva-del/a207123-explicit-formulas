@@ -1,0 +1,7 @@
+PASS base.N :: 三角表 == 定义 DP 容斥 (k<=40)
+PASS T4.2.1-dp-vs-brute :: 自写按层 DP 的模式总数 d<=4 与定义暴力一致：[2, 7, 51, 459, 4990]
+PASS T4.2.1-d56 :: 模式总数 d=5,6 = 63537, 928393（报告 63537, 928393）；d=7,8 = 15323342, 282126075
+PASS T4.2.1-families-d8 :: σ<=2d+2、β∈{0}∪[2,d+2]；M(2d,0)=M(2d+2,2)=(2d-1)!!；β=d+2 的模式恰 (d+1)! 个且 σ=2d+2（1<=d<=8，按层 DP）
+PASS T4.2.1-expansion-d8 :: 模式展开 D(k,d)=Σ M(d;σ,β)C(k-d-β,σ-β) 对 d<=k<=80、d<=8 成立
+SUMMARY audit_c4_patterns pass=5 fail=0
+elapsed 1.3s

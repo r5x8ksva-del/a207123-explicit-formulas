@@ -1,0 +1,80 @@
+[lean_one 启动前：AVAIL=5542 COMMIT=14122 LIMIT=32429 HEADROOM=18307 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/HStruct.lean:26:9: error(lean.unknownIdentifier): Unknown identifier `le_or_lt`
+A207123/HStruct.lean:26:27: error: Tactic `rcases` failed: `x✝ : ?m.152` is not an inductive datatype
+A207123/HStruct.lean:108:9: error: unsolved goals
+case base
+k : ℕ
+⊢ 2 + 2 ≤ (1 + 1) ^ 2
+A207123/HStruct.lean:143:32: error: Ambiguous term
+  coe_mul
+Possible interpretations:
+  Finset.coe_mul : ∀ (s t : Finset ?m.243), ↑(s * t) = ↑s * ↑t
+  
+  Polynomial.coe_mul : ∀ («φ» ψ : ?m.243[X]), ↑(«φ» * ψ) = ↑«φ» * ↑ψ
+A207123/HStruct.lean:170:4: error: `simp` made no progress
+A207123/HStruct.lean:173:4: error: `simp` made no progress
+A207123/HStruct.lean:176:4: error: `simp` made no progress
+A207123/HStruct.lean:179:4: error: `simp` made no progress
+A207123/HStruct.lean:193:31: warning: This simp argument is unused:
+  X_pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_comp, C_comp, pow_comp, sub_comp, one_comp, X_comp, map_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/HStruct.lean:216:46: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HasDistribNeg ?m.376[X]
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+A207123/HStruct.lean:333:6: error: unsolved goals
+j : ℕ
+e :
+  1 - PowerSeries.X + PowerSeries.C ↑j * PowerSeries.X ^ 3 = 1 - PowerSeries.X - PowerSeries.C (-↑j) * PowerSeries.X ^ 3
+k : ℕ
+hy : -↑(j + 1) = -↑j - 1
+⊢ -↑j = -↑j + 1 - eval (-↑j) (upoly 0)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+A207123/HStruct.lean:336:6: error: unsolved goals
+j : ℕ
+e :
+  1 - PowerSeries.X + PowerSeries.C ↑j * PowerSeries.X ^ 3 = 1 - PowerSeries.X - PowerSeries.C (-↑j) * PowerSeries.X ^ 3
+k : ℕ
+hy : -↑(j + 1) = -↑j - 1
+⊢ ↑j ^ 2 = 1 - ↑j + ↑j ^ 2 - eval (-↑j) (upoly 1)
+A207123/HStruct.lean:334:29: warning: This simp argument is unused:
+  upoly_zero_eq_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [upoly_one_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/HStruct.lean:337:29: warning: This simp argument is unused:
+  upoly_one_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [upoly_two_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/HStruct.lean:551:2: error: ring failed, ring expressions not equal
+k : ℕ
+h : ↑k ! = (-1) ^ k * eval (-1) (descPochhammer ℚ k)
+h2 : (-1) ^ k * (-1) ^ k = 1
+⊢ eval (-1) (descPochhammer ℚ k) * (-1) ^ (k * 2) * 2 - ↑k ! * (-1) ^ k * 2 = 0
+A207123/HStruct.lean:804:4: error: unsolved goals
+k : ℕ
+hk : 1 ≤ k
+s : ℕ := (k + 2) / 3
+hs : s = (k + 2) / 3
+g : ℕ := k - s
+hg : g = k - s
+R : ℚ[X] := ∑ i ∈ range (g + 1), C ((hpoly k).coeff i) * X ^ i * (1 + X) ^ (g - i)
+hR : R = ∑ i ∈ range (g + 1), C ((hpoly k).coeff i) * X ^ i * (1 + X) ^ (g - i)
+hfac : nrowPoly k = (X - C (-1)) ^ (s - 1) * R
+⊢ (hpoly k).coeff g * (-1) ^ g = (-1) ^ g * (hpoly k).coeff g
+[lean_one 内存：PEAK=8113 MINHEAD=9291 KILLED=0 REASON=；用时 35s]
+[lean_one exit code 1]

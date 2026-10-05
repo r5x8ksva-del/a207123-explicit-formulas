@@ -1,0 +1,11 @@
+(a) c5a closed form == main-agent closed form in Q[y]/(y^3-y^2-m), exact, 1<=m<=60: True
+(b) representations c_1..c_8 in Q(rho) match notes table: True
+(c) m=4 rho=2: c5a-form == main-form == residue-form: True ; matches claim: True ; value=215/2
+(c) m=18 rho=3: c5a-form == main-form == residue-form: True ; matches claim: True ; value=37105325714711350249401/6830759936000
+(c) m=48 rho=4: c5a-form == main-form == residue-form: True ; matches claim: n/a ; value=2.378875842544e+25
+(c) m=100 rho=5: c5a-form == main-form == residue-form: True ; matches claim: n/a ; value=3.133345466885e+51
+(d) m=4 K=1200: U_K/rho^K = 1.0750000000000000000000000e+02 ; with 2nd-pole correction = 1.075000000000000000000000000000e+02 ; claim = 1.075000000000000000000000000000e+02 ; rel.diff = 7.878e-87
+(d) m=18 K=3200: U_K/rho^K = 5.4320933633102798461914062e+09 ; with 2nd-pole correction = 5.432093363310279846191406250000e+09 ; claim = 5.432093363310279846191406250000e+09 ; rel.diff = 6.345e-46
+(e) notes table of rho_m, c_m (m<=8, ~30 digits) reproduced: True
+(f) residue form (G_{m-1}(x_m)+m x_m^2)/(x_m(1+3m x_m^2)) == closed form, and c_m>0, 1<=m<=40 (decimal 110): True
+elapsed 8.7s

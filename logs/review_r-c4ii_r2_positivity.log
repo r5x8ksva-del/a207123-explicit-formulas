@@ -1,0 +1,10 @@
+PASS r2-anchor 自写递推 Num_q == r1 中 DP 锚定的 Num_q（q<=47）
+PASS r2-support 2<=q<=220：Num_q 系数全非负，非零项恰为 x^q..x^{3q-4} 与 x^{3q-2}（首个反例 None）
+PASS r2-posrec 正项全历史递推对 3<=q<=140 与三项递推结果逐系数相等
+PASS r2-Ylemma Y_q^(c) 递推对 4<=q<80、c in {2,3/2,-7/5} 成立（两边对 c 的依赖为 c 的仿射函数，3 个值足以证明对一切 c≠0 成立）
+PASS r2-Y2expand Y_q^(2) = sum_{n=1}^{q-3} (q-2)!/(q-n-1)! x^{3n-3}(n+x)Num_{q-n-1} + (q-2)! x^{3q-9}((q-2)x+qx^2+x^4)，3<=q<80
+PASS r2-A000262 Num_q(1) == A000262 递推 == Lah 数之和 (q<=220)，且 == OEIS 快照 %S/%T/%U 行 (q<=21)
+PASS r2-A000262-alt 另一证明的核对：Num_q(1) = sum_j C(q,j)(q-1)!/(j-1)!（容斥式在 x=1 处只剩 i>=1 的项），q<=220
+PASS r2-A000262-odd A000262(q) 对 1<=q<=220 全为奇数（递推 (n-1)(n-2) 偶、2n-1 奇，归纳对一切 q 成立）
+# runtime 5.1s
+SUMMARY pass=8 fail=0

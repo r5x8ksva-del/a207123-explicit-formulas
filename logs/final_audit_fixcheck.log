@@ -1,0 +1,139 @@
+# fixcheck（最终审计修订逐条复查）2026-10-04 17:39:01
+========================================================================
+>>> f1_applied.py  (rc=0, 0.0s)
+OK 00_head.md pair1: old_count=0 new_count=1
+OK 00_head.md pair2: old_count=0 new_count=1
+OK 00_head.md pair3: old_count=1 new_count=1
+OK 01_summary.md pair1: old_count=0 new_count=1
+OK 01_summary.md pair2: old_count=0 new_count=1
+OK 01_summary.md pair3: old_count=0 new_count=1
+OK 02_C1.md pair1: old_count=0 new_count=1
+OK 02_C1.md pair2: old_count=0 new_count=1
+OK 02_C1.md pair3: old_count=0 new_count=1
+OK 02_C1.md pair4: old_count=0 new_count=1
+OK 02_C1.md pair5: old_count=0 new_count=1
+OK 03_C2.md pair1: old_count=0 new_count=1
+OK 03_C2.md pair2: old_count=0 new_count=1
+OK 03_C2.md pair3: old_count=0 new_count=1
+OK 03_C2.md pair4: old_count=0 new_count=1
+OK 03_C2.md pair5: old_count=0 new_count=1
+OK 03_C2.md pair6: old_count=0 new_count=1
+OK 04_C3.md pair1: old_count=0 new_count=1
+OK 04_C3.md pair2: old_count=0 new_count=1
+OK 04_C3.md pair3: old_count=0 new_count=1
+OK 04_C3.md pair4: old_count=0 new_count=1
+OK 04_C3.md pair5: old_count=0 new_count=1
+OK 04_C3.md pair6: old_count=0 new_count=1
+OK 04_C3.md pair7: old_count=0 new_count=1
+OK 04_C3.md pair8: old_count=0 new_count=1
+OK 04_C3.md pair9: old_count=0 new_count=1
+OK 04_C3.md pair10: old_count=0 new_count=1
+OK 05_C4.md pair1: old_count=0 new_count=1
+OK 05_C4.md pair2: old_count=0 new_count=1
+OK 05_C4.md pair3: old_count=0 new_count=1
+OK 05_C4.md pair4: old_count=0 new_count=1
+OK 05_C4.md pair5: old_count=0 new_count=1
+OK 05_C4.md pair6: old_count=0 new_count=1
+OK 05_C4.md pair7: old_count=0 new_count=1
+OK 05_C4.md pair8: old_count=0 new_count=1
+OK 05_C4.md pair9: old_count=1 new_count=1
+OK 06_C5.md pair1: old_count=0 new_count=1
+OK 06_C5.md pair2: old_count=0 new_count=1
+OK 06_C5.md pair3: old_count=0 new_count=1
+OK 06_C5.md pair4: old_count=0 new_count=1
+OK 06_C5.md pair5: old_count=0 new_count=1
+OK 06_C5.md pair6: old_count=0 new_count=1
+OK 06_C5.md pair7: old_count=0 new_count=1
+OK 06_C5.md pair8: old_count=0 new_count=1
+OK 06_C5.md pair9: old_count=0 new_count=1
+OK 06_C5.md pair10: old_count=0 new_count=1
+OK 06_C5.md pair11: old_count=0 new_count=1
+OK 06_C5.md pair12: old_count=0 new_count=1
+OK 06_C5.md pair13: old_count=0 new_count=1
+OK 06_C5.md pair14: old_count=0 new_count=1
+OK 06_C5.md pair15: old_count=0 new_count=1
+OK 08_failed.md pair1: old_count=0 new_count=1
+OK 08_failed.md pair2: old_count=1 new_count=1
+OK 09_code.md pair1: old_count=0 new_count=1
+OK 09_code.md pair2: old_count=0 new_count=1
+OK 09_code.md pair3: old_count=0 new_count=1
+OK 10_uncertain.md pair1: old_count=0 new_count=1
+OK 10_uncertain.md pair2: old_count=0 new_count=1
+OK 10_uncertain.md pair3: old_count=0 new_count=1
+OK README.md pair1: old_count=0 new_count=1
+total pairs 60
+concat sep '' diff (len 56988 vs 56998)
+concat sep '\n' equal
+concat sep '\n\n' diff (len 57008 vs 56998)
+========================================================================
+>>> f2_numeric_labels.py  (rc=0, 0.0s)
+LABELED   c0.c0-cm                     ...：k=2000，m≤20，相对误差 <1e−8）、[c0.c0-cm]（数值）、c5a.*（见 T5.1）。  **T1.4（(C3) 二项式基、三角递推、对角
+LABELED   c0.c0-cm                     ...215/2 的精确核对是 c5a.c5a-c4）、[c0.c0-cm]（数值）、c1.C2-cm。  **T5.2（固定 k、m→∞：m 的次首项系数）【已证明
+LABELED   c1.C2-cm                     ...-growth（decimal 60 位，数值）、[c1.C2-cm]（decimal 数值：k=2000，m≤20，相对误差 <1e−8）、c0.c0-cm（
+NO-LABEL  c1.C2-cm                     ...c5a.c5a-c4）、c0.c0-cm（数值）、[c1.C2-cm]。  **T5.2（固定 k、m→∞：m 的次首项系数）【已证明】** 记 B_d(k):
+LABELED   c1.C2-growth                 ...m−1}(x_m)≥1，故 c_m>0。∎ 核对：[c1.C2-growth]（decimal 60 位，数值）、c1.C2-cm（decimal 数值：k=2000，
+NO-LABEL  c3a.c3a-num-asym             ...nst、c3a.c3a-num-gap-full、[c3a.c3a-num-asym]、c3a.c3a-num-small-t、c3a.c3a-num-residue（deci
+NO-LABEL  c3a.c3a-num-gamma            ...a-analytic-counterex（严格）、[c3a.c3a-num-gamma]、c3a.c3a-num-gap-const、c3a.c3a-num-gap-full、c
+NO-LABEL  c3a.c3a-num-gap-const        ...ex（严格）、c3a.c3a-num-gamma、[c3a.c3a-num-gap-const]、c3a.c3a-num-gap-full、c3a.c3a-num-asym、c3a.c3
+NO-LABEL  c3a.c3a-num-gap-full         ...ma、c3a.c3a-num-gap-const、[c3a.c3a-num-gap-full]、c3a.c3a-num-asym、c3a.c3a-num-small-t、c3a.c3a
+LABELED   c3a.c3a-num-residue          ...asym、c3a.c3a-num-small-t、[c3a.c3a-num-residue]（decimal 高精度，数值）；K 闭式与定义的一致性（7 个 x 值，偏差 ≤4.2·
+LABELED   c3a.c3a-num-small-t          ...ap-full、c3a.c3a-num-asym、[c3a.c3a-num-small-t]、c3a.c3a-num-residue（decimal 高精度，数值）；K 闭式与定义的
+LABELED   c4.c4-newton-pos-2d1         ...on-cex（c4.c4-pd-shiftpos、[c4.c4-newton-pos-2d1] 只是 d≤12 的数值观察）。  **T4.3（(C7) 分子 Num_q 的一般公式）
+NO-LABEL  c4.c4-pd-shiftpos            ...ree-lead、c4.c4-pd-second、[c4.c4-pd-shiftpos]（d≤12 的观察）、rv.rv-c4-shiftpos-cex（d≤46 全正、47≤d
+LABELED   c4.c4-pd-shiftpos            ...-cex、rv.rv-c4-newton-cex（[c4.c4-pd-shiftpos]、c4.c4-newton-pos-2d1 只是 d≤12 的数值观察）。  **T4.3
+LABELED   c5a.c5a-asym-m1              ...r、c5a.c5a-c4、c5a.c5a-c18、[c5a.c5a-asym-m1]..m8（decimal 90 位，数值；k=400 处实测率与 θ_m 相差 <1e−6
+NO-LABEL  c5a.c5a-cm-repr              ...，1≤m≤20）、c5a.c5a-cm-form、[c5a.c5a-cm-repr]、c5a.c5a-c4、c5a.c5a-c18、c5a.c5a-asym-m1..m8（d
+LABELED   c5a.c5a-prompt-k40           ...已证明的部分：decimal 90 位计算，核对 [c5a.c5a-prompt-k40]（数值））提示词「m=2、3 在 k=40 时相差 <0.4%」只在「相邻比 U_41/U
+LABELED   c5a.c5a-prompt-k40           ...=400 处实测率与 θ_m 相差 <1e−6）、[c5a.c5a-prompt-k40]（数值）、c0.c0-c4（数值收敛核对；c_4=215/2 的精确核对是 c5a.c5a
+NO-LABEL  c5a.c5a-roots                ...3%/8.7% 或 0.26%/3.0%。 核对：[c5a.c5a-roots]、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相等）、c5
+========================================================================
+>>> f3_newton_2d1.py 101 (rc=0, 0.4s)
+triangle vs core.N_from_U (k<=40): True
+DMAX 101 first d with some nonpositive Newton coeff at base 2d+1: 69
+  d=69 nonpositive indices (first few)=[0] count=1
+  d=71 nonpositive indices (first few)=[0] count=1
+  d=73 nonpositive indices (first few)=[0] count=1
+  d=74 nonpositive indices (first few)=[1] count=1
+  d=75 nonpositive indices (first few)=[0] count=1
+  d=76 nonpositive indices (first few)=[1] count=1
+  d=77 nonpositive indices (first few)=[0, 2] count=2
+  d=78 nonpositive indices (first few)=[1] count=1
+  d=79 nonpositive indices (first few)=[0, 2] count=2
+  d=80 nonpositive indices (first few)=[1] count=1
+  d=81 nonpositive indices (first few)=[0, 2] count=2
+  d=82 nonpositive indices (first few)=[1, 3] count=2
+elapsed 0.3s
+========================================================================
+>>> f3b_newton_detail.py  (rc=0, 0.1s)
+d=2 base 2d+2: [65, 74, 64, 30, 6]
+d=1 p_1(k)=k^2-k-4 check D(4..8,1): [8, 16, 26, 38, 52] [8, 16, 26, 38, 52]
+d=67 base 2d+1: N_0=1.902e+96 N_1=2.420e+97 N_2=1.034e+98  (d+1)!=2.480e+96  D(2d+2,d)=2.610e+97
+d=68 base 2d+1: N_0=3.820e+98 N_1=8.788e+98 N_2=5.317e+99  (d+1)!=1.711e+98  D(2d+2,d)=1.261e+99
+d=69 base 2d+1: N_0=-1.742e+99 N_1=6.317e+100 N_2=2.401e+101  (d+1)!=1.198e+100  D(2d+2,d)=6.143e+100
+d=70 base 2d+1: N_0=1.352e+102 N_1=1.666e+102 N_2=1.330e+103  (d+1)!=8.505e+101  D(2d+2,d)=3.018e+102
+d=72 base 2d+1: N_0=5.701e+105 N_1=1.765e+105 N_2=3.560e+106  (d+1)!=4.470e+105  D(2d+2,d)=7.465e+105
+d=74 base 2d+1: N_0=2.793e+109 N_1=-8.863e+108 N_2=1.051e+110  (d+1)!=2.481e+109  D(2d+2,d)=1.907e+109
+d=76 base 2d+1: N_0=1.533e+113 N_1=-1.031e+113 N_2=3.590e+113  (d+1)!=1.452e+113  D(2d+2,d)=5.024e+112
+========================================================================
+>>> f4_tailbound.py  (rc=0, 0.0s)
+lambda= 1.851851851851851851851851851851851851852 m0= 11 c1= 0.4562043795620437956204379562043795620438 c2= 1.970802919708029197080291970802919708029 max|G_m| (m0..M)= 911.3152714263064707286773578293892134005 B= 911.3152714263064707286773578293892134005
+tail bound = 3.529152e-118  (> 3.5e-118?) True  (<= 3.53e-118?) True
+partial sum = -1057.810872563562058551831161096832506970
+========================================================================
+>>> f5_math.py  (rc=0, 1.0s)
+PASS own-DP own triple DP == core.U_fast_table (k<=60,m<=14)
+PASS Rk-formula U_k(1)=c_1(k+3)+c_1(k-2)-1 with c_1(n<0)=0, 0<=k<=60; R_1..R_10=[2, 4, 6, 9, 14, 21, 31, 46, 68, 100]
+PASS v0-values xi=0.6823278038: v_(1,2)=xi^-3=3.147899 in (3.04,3.18); v_(2,3)=xi^5/(1-xi)^3=xi^-4=4.613470 (~4.61)
+PASS tau1 rho_1=1.465571232, tau_1=sqrt(rho_1(rho_1-1))=0.826031 = |complex root|=0.826031 < rho_0=1
+PASS laplace-identity N![s^N] of e^{jus}(e^{us}-1)^n/n! == [u^N] u^n/prod_{i=j}^{j+n}(1-iu), 0<=j,n<=4, N<=22
+PASS K-ratio-bounds 1 < 1+lam x^5 J <= 1+bound < 2 at 8 points; x=0.05 lam=7.6e+03 K/G=1.835941 ub=1.945268; x=0.10 lam=900 K/G=1.717420 ub=1.882266; x=0.21 lam=85.3 K/G=1.535091 ub=1.724674; x=0.30 lam=25.9 K/G=1.428866 ub=1.589176; x=0.40 lam=9.37 K/G=1.335900 ub=1.445898; x=0.60 lam=1.85 K/G=1.195007 ub=1.216263; x=0.80 lam=0.391 K/G=1.087841 ub=1.128000; x=0.95 lam=0.0583 K/G=1.020584 ub=1.045125
+PASS N-tri triangle N == core inclusion-exclusion (k<=40)
+PASS lc-rd lc(p_d)=2/(2^d d!), 2d*lc(p_d)=lc(p_{d-1}), r_d=-(4d^2-3d) for d<=12
+PASS hstar1 h*_1 = p_d(s+1)-(2d+1)p_d(s), s=2d-c; some h*_j<0; h*_1(s) has degree 2d, lc -2d*lc(p_d)<0 (d<=6, |c|<=20)
+PASS S2-identity S(k,k-d)=sum_j S_2(d+j,j)C(k,d+j) holds with associated Stirling (blocks>=2), 0<=d<=8, d<=k<45; fails if S_2 read as plain S
+PASS nu_j [x^{q+j}]Num_q = sum_{i<=j} pi_i(q) D(q+j-i,j-i), = polynomial form for q>=j+2 (q<=17, j<=5)
+PASS mu_k first two m-coefficients of (2/k!)(m+mu_k)^k match U_k for 4<=k<=14, not for k=3
+PASS C-basis N(k,k)=2, N(k,k-1)=k^2-k-4 (k>=4), N(k,k-2)=p_2(k) (k>=6); N(5,3)=25 vs p_2(5)=31; N(4,2)=7 vs 19
+PASS e_j-formula B_d(k) = sum_e (-1)^{d-e} N(k,k-e) e_{d-e}(-1,0,..,k-e-2)/(k-e)^{fall d-e} (e_j elementary symmetric), 0<=d<=k<=14
+PASS h_k(1)=N(k,k) h_k(1)=N(k,k) for 0<=k<=14 (h_0(1)=h_1(1)=1); h_{k,i}=sum_r (-1)^r C(k+1,r)U_k(i-r) vanishes for i>k
+SUMMARY fixcheck-math pass=15 fail=0

@@ -1,0 +1,6 @@
+PASS N_inversion_k10 N(10,q), q=0..10: DFS [0, 1, 98, 925, 3337, 6051, 6012, 3257, 871, 86, 2] == inversion of H form (9.9s)
+PASS alt_sum_vanish sum_i (-1)^(m-i) C(m,i) c_i(N) == 0 for 0<=N<3m and == m! at N=3m, m<=20
+PASS rWhitney_alias (x+r)^n == sum_k h_{n-k}(r..k+r) x^(k) (x integer in [-5,14], r<=7, n<=11)
+PASS F4_m1_example R_k = U_k(1) == c_1(k+3) + c_1(k-2) - 1 (c_1(n<0)=0), k<=70
+# elapsed 10.0s
+SUMMARY r5 pass=4 fail=0

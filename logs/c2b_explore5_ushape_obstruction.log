@@ -1,0 +1,39 @@
+target A
+   m= 1: no obstruction found ([(1, 'i-free part is a cube', Fraction(1, 1))])
+   m= 2: no obstruction found ([(2, 'i-free part is a cube', Fraction(8, 1)), (1, 'i-free part is a cube', Fraction(-1, 1))])
+   m= 3: no obstruction found ([(3, 'i-free part is a cube', Fraction(729, 8)), (2, 'i-free part is a cube', Fraction(-64, 1)), (1, 'i-free part is a cube', Fraction(1, 8))])
+   m= 4: no obstruction found ([(4, 'not a field'), (3, 'i-free part is a cube', Fraction(-19683, 8)), (2, 'i-free part is a cube', Fraction(64, 1)), (1, 'i-free part is a cube', Fraction(-1, 216))])
+   m= 5: no obstruction found ([(5, 'i-free part is a cube', Fraction(244140625, 13824)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(531441, 64)), (2, 'i-free part is a cube', Fraction(-512, 27)), (1, 'i-free part is a cube', Fraction(1, 13824))])
+   m= 6: no obstruction found ([(6, 'i-free part is a cube', Fraction(34012224, 125)), (5, 'i-free part is a cube', Fraction(-30517578125, 13824)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(-531441, 64)), (2, 'i-free part is a cube', Fraction(64, 27)), (1, 'i-free part is a cube', Fraction(-1, 1728000))])
+   m= 7: no obstruction found ([(7, 'i-free part is a cube', Fraction(1628413597910449, 373248000)), (6, 'i-free part is a cube', Fraction(-7346640384, 125)), (5, 'i-free part is a cube', Fraction(3814697265625, 110592)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(14348907, 4096)), (2, 'i-free part is a cube', Fraction(-512, 3375)), (1, 'i-free part is a cube', Fraction(1, 373248000))])
+   m= 8: no obstruction found ([(8, 'i-free part is a cube', Fraction(2251799813685248, 31255875)), (7, 'i-free part is a cube', Fraction(-558545864083284007, 373248000)), (6, 'i-free part is a cube', Fraction(198359290368, 125)), (5, 'i-free part is a cube', Fraction(-476837158203125, 2985984)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(-387420489, 512000)), (2, 'i-free part is a cube', Fraction(512, 91125)), (1, 'i-free part is a cube', Fraction(-1, 128024064000))])
+   m= 9: no obstruction found ([(9, 'i-free part is a cube', Fraction(109418989131512359209, 89915392000)), (8, 'i-free part is a cube', Fraction(-1152921504606846976, 31255875)), (7, 'i-free part is a cube', Fraction(191581231380566414401, 2985984000)), (6, 'i-free part is a cube', Fraction(-1586874322944, 125)), (5, 'i-free part is a cube', Fraction(59604644775390625, 191102976)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(387420489, 4096000)), (2, 'i-free part is a cube', Fraction(-4096, 31255875)), (1, 'i-free part is a cube', Fraction(1, 65548320768000))])
+   m=10: no obstruction found ([(10, 'i-free part is a cube', Fraction(3814697265625000000, 182284263)), (9, 'i-free part is a cube', Fraction(-79766443076872509863361, 89915392000)), (8, 'i-free part is a cube', Fraction(73786976294838206464, 31255875)), (7, 'i-free part is a cube', Fraction(-65712362363534280139543, 80621568000)), (6, 'i-free part is a cube', Fraction(5355700839936, 125)), (5, 'i-free part is a cube', Fraction(-59604644775390625, 191102976)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(-10460353203, 1404928000)), (2, 'i-free part is a cube', Fraction(64, 31255875)), (1, 'i-free part is a cube', Fraction(-1, 47784725839872000))])
+   m=11: no obstruction found ([(11, 'i-free part is a cube', Fraction(17449402268886407318558803753801, 47784725839872000000)), (10, 'i-free part is a cube', Fraction(-3814697265625000000000, 182284263)), (9, 'i-free part is a cube', Fraction(58149737003040059690390169, 719323136000)), (8, 'i-free part is a cube', Fraction(-37778931862957161709568, 843908625)), (7, 'i-free part is a cube', Fraction(22539340290692258087863249, 5159780352000)), (6, 'i-free part is a cube', Fraction(-1156831381426176, 15625)), (5, 'i-free part is a cube', Fraction(7450580596923828125, 41278242816)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(282429536481, 719323136000)), (2, 'i-free part is a cube', Fraction(-512, 22785532875)), (1, 'i-free part is a cube', Fraction(1, 47784725839872000000))])
+   m=12: no obstruction found ([(12, 'i-free part is a cube', Fraction(46005119909369701466112, 7133328125)), (11, 'i-free part is a cube', Fraction(-23225154419887808141001767796309131, 47784725839872000000)), (10, 'i-free part is a cube', Fraction(476837158203125000000000, 182284263)), (9, 'i-free part is a cube', Fraction(-1570042899082081611640534563, 719323136000)), (8, 'i-free part is a cube', Fraction(302231454903657293676544, 843908625)), (7, 'i-free part is a cube', Fraction(-7730993719707444524137094407, 644972544000000)), (6, 'i-free part is a cube', Fraction(1156831381426176, 15625)), (5, 'i-free part is a cube', Fraction(-931322574615478515625, 14158437285888)), (4, 'not a field'), (3, 'i-free part is a cube', Fraction(-10460353203, 719323136000)), (2, 'i-free part is a cube', Fraction(512, 2848191609375)), (1, 'i-free part is a cube', Fraction(-1, 63601470092869632000000))])
+target E
+   m= 1: no obstruction found ([(1, 'i-free part is a cube', Fraction(1, 1))])
+   m= 2: OBSTRUCTION at pole u=1/2, norm N(nu) = 17
+   m= 3: OBSTRUCTION at pole u=1/3, norm N(nu) = 2363/8
+   m= 4: OBSTRUCTION at pole u=1/3, norm N(nu) = -63801/8
+   m= 5: OBSTRUCTION at pole u=1/5, norm N(nu) = 1320570541/13824
+   m= 6: OBSTRUCTION at pole u=1/6, norm N(nu) = 5271706601/3000
+   m= 7: OBSTRUCTION at pole u=1/7, norm N(nu) = 12188371768577071/373248000
+   m= 8: OBSTRUCTION at pole u=1/8, norm N(nu) = 305891321129955101/500094000
+   m= 9: OBSTRUCTION at pole u=1/9, norm N(nu) = 9330953950303977139721/809238528000
+   m=10: OBSTRUCTION at pole u=1/10, norm N(nu) = 25490680976481138437689/116661928320
+   m=11: OBSTRUCTION at pole u=1/11, norm N(nu) = 28388411199372294439657519846693/6826389405696000000
+   m=12: OBSTRUCTION at pole u=1/12, norm N(nu) = 11750928254645847565075636013/147916692000000
+target U
+   m= 1: OBSTRUCTION at pole u=1/1, norm N(nu) = 3
+   m= 2: OBSTRUCTION at pole u=1/2, norm N(nu) = 103/2
+   m= 3: OBSTRUCTION at pole u=1/3, norm N(nu) = 21619/24
+   m= 4: OBSTRUCTION at pole u=1/3, norm N(nu) = -194571/8
+   m= 5: OBSTRUCTION at pole u=1/5, norm N(nu) = 20305015931/69120
+   m= 6: OBSTRUCTION at pole u=1/6, norm N(nu) = 97540993603/18000
+   m= 7: OBSTRUCTION at pole u=1/7, norm N(nu) = 29299443339257291/290304000
+   m= 8: OBSTRUCTION at pole u=1/8, norm N(nu) = 7577276141332338433/4000752000
+   m= 9: OBSTRUCTION at pole u=1/9, norm N(nu) = 2083431016128692625791/58265174016
+   m=10: OBSTRUCTION at pole u=1/10, norm N(nu) = 263840551372484512768093/388873094400
+   m=11: OBSTRUCTION at pole u=1/11, norm N(nu) = 6795027398040291230836424666006003/525631984238592000000
+   m=12: OBSTRUCTION at pole u=1/12, norm N(nu) = 438756626547667697725097831797/1775000304000000

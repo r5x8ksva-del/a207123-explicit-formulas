@@ -1,0 +1,24 @@
+2026-10-05 15:13:41 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\wdtest\t0.lean | exit 0 | 50s | PEAK=371 MINHEAD=19741 KILLED=0 REASON=
+2026-10-05 15:13:46 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\wdtest\t1.lean | exit 137 | 4s | PEAK=442 MINHEAD=19267 KILLED=1 REASON=lean private 442 MB > cap 20 MB
+2026-10-05 15:22:59 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\NumStruct_diag.lean | exit 137 | 371s | PEAK=9661 MINHEAD=9523 KILLED=1 REASON=lean private 9661 MB > cap 9500 MB
+2026-10-05 15:24:22 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\import_only.lean | exit 0 | 34s | PEAK=8027 MINHEAD=11095 KILLED=0 REASON=
+2026-10-05 15:26:29 | A207123/NumStruct.lean | exit 137 | 52s | PEAK=11160 MINHEAD=8220 KILLED=1 REASON=lean private 11160 MB > cap 11000 MB
+2026-10-05 15:27:58 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_b.lean | exit 0 | 37s | PEAK=8031 MINHEAD=11397 KILLED=0 REASON=
+2026-10-05 15:28:53 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_c.lean | exit 0 | 28s | PEAK=8047 MINHEAD=11385 KILLED=0 REASON=
+2026-10-05 15:29:43 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_d.lean | exit 1 | 35s | PEAK=8093 MINHEAD=11192 KILLED=0 REASON=
+2026-10-05 15:30:56 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_e.lean | exit 1 | 35s | PEAK=8091 MINHEAD=11155 KILLED=0 REASON=
+2026-10-05 15:32:06 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_g.lean | exit 137 | 44s | PEAK=9673 MINHEAD=9656 KILLED=1 REASON=lean private 9673 MB > cap 9500 MB
+2026-10-05 15:33:42 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_h.lean | exit 1 | 35s | PEAK=8094 MINHEAD=11348 KILLED=0 REASON=
+2026-10-05 15:37:52 | A207123/NumStruct.lean | exit 137 | 57s | PEAK=11175 MINHEAD=8162 KILLED=1 REASON=lean private 11175 MB > cap 11000 MB
+2026-10-05 15:39:15 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_g2.lean | exit 1 | 37s | PEAK=8096 MINHEAD=11362 KILLED=0 REASON=
+2026-10-05 15:40:35 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\P_g3.lean | exit 137 | 41s | PEAK=9514 MINHEAD=9863 KILLED=1 REASON=lean private 9514 MB > cap 9500 MB
+2026-10-05 15:43:13 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_b.lean | exit 137 | 49s | PEAK=9635 MINHEAD=7591 KILLED=1 REASON=lean private 9635 MB > cap 9500 MB
+2026-10-05 15:44:54 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_c.lean | exit 1 | 35s | PEAK=8523 MINHEAD=8517 KILLED=0 REASON=
+2026-10-05 15:47:14 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_d.lean | exit 1 | 49s | PEAK=8513 MINHEAD=7729 KILLED=0 REASON=
+2026-10-05 15:49:15 | C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\516bb9fb-ccf8-407d-b01b-4eddae19cedb\scratchpad\numdiag\T_e.lean | exit 0 | 27s | PEAK=8022 MINHEAD=8299 KILLED=0 REASON=
+2026-10-05 15:51:16 | A207123/NumStruct.lean | exit 0 | 48s | PEAK=8113 MINHEAD=8037 KILLED=0 REASON=
+2026-10-05 15:53:59 | A207123/NearDiag.lean | exit 1 | 43s | PEAK=8132 MINHEAD=8229 KILLED=0 REASON=
+2026-10-05 15:55:46 | A207123/NearDiag.lean | exit 0 | 39s | PEAK=8133 MINHEAD=9259 KILLED=0 REASON=
+2026-10-05 15:56:58 | A207123/HStruct.lean | exit 1 | 35s | PEAK=8113 MINHEAD=9291 KILLED=0 REASON=
+2026-10-05 15:59:07 | A207123/SmallK.lean | exit 0 | 30s | PEAK=8040 MINHEAD=9638 KILLED=0 REASON=
+2026-10-05 16:03:22 | A207123/HStruct.lean | exit 0 | 40s | PEAK=8123 MINHEAD=9539 KILLED=0 REASON=

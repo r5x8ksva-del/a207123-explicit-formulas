@@ -1,0 +1,23 @@
+OK  C4-1 三角递推对独立 N 表 3<=k<=100 全部成立；k=2 时公式给 N(2,2)=1 而真值 2（缺陷确认）
+OK  C4-3 D 递推 3<=k<=100, 0<=d<=k-1
+OK  C4-4 D(k,0)=2 (k>=2), D(k,1)=k^2-k-4 (4<=k<=100)，例外值确认
+p_d interpolated for d<=23 (K=100, margin>=6 extra points)
+OK  C4-5a D(k,d)=p_d(k) 对 2d+2<=k<=100 全成立，d<=23（p_d 由 2d+1 个点插值，其余点独立核对）[]
+OK  C4-5b deg p_d=2d 且首项 2/(2^d d!)，d<=23
+OK  C4-5c 缺陷闭式 e_d(2d+1)=(-1)^{d+1}(d+1)!, e_d(2d)=(-1)^{d+1}(d+2)!/2，d<=23
+OK  C4-7 门槛以下 d+1<=k<=2d+1 每点 D!=p_d，d<=23
+OK  C4-5d 缺陷递推 (‡) 在 max(3,d+1)<=k<=2d+2 全部成立，1<=d<=23
+OK  C4-6a 插值得到的 p_d 满足 p_d(k)-p_d(k-1) ≡ R_d(k)（多项式恒等），d<=23
+OK  C4-8 次首项 = -(4d^2-3d)*首项，1<=d<=23
+OK  C4-9 p_d(2d+1+m) 的 m 单项式系数全正，d<=23 []
+OK  C4-10 基点 2d+2 Newton 系数全为正整数，末项 2(2d-1)!!，d<=23
+OK  C4-11 基点 2d+1 Newton 系数全为正整数，d<=23 []
+OK  C4-11r 归约条件 D(2d+1,d)>(d+1)! 对奇数 d<=23 成立（最小比值 2）
+OK  INFO-den 2^{d-1}d!*p_d 为首一整系数，1<=d<=23；不成立的 d：[]
+OK  TAB1 c4.md 表 1 两列（k 与 m=k-2d-1）d<=5 与独立插值一致
+OK  TAB2 c4.md 表 2 (d<=5) 及 p_1(0),p_1(1),p_2(0..2) 与独立计算一致
+OK  TAB3 c4.md 表 3（Newton，基点 2d+2，d<=5）与基点 2d+1 的两例、锚点序列 一致
+OK  LOG-pd logs/c4_tables.log 中 d=0..12 的 p_d 系数（分母 2^d d!）与独立插值一致（比较了 13 个）
+OK  LOG-newton logs/c4_tables.log 中 Newton 系数（两个基点，d<=12）一致（比较了 26 行）
+OK  EX-3.3 c4.md §3.3 中 d=1、d=2 的模式展开显式式对一切 d<=k<=100 成立
+SUMMARY s2 ok=21 bad=0 runtime=0.6s

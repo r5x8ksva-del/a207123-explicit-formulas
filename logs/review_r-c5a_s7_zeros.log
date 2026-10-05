@@ -1,0 +1,4 @@
+(a) extra zeros U_k(-j)=0 with j>floor((k+2)/3), 1<=k<=130, 1<=j<=20000: none (3.1s)
+Fujiwara root bound <= 20000 (scan to j=20000 is then exhaustive) for k in: (1, 27)  count 27 ; bound at k=40,60,100,130: [60760, 208740, 979900, 2163070]
+(a) extra zeros U_k(-j)=0 with j>floor((k+2)/3), 1<=k<=60, 1<=j<=210000: none (26.3s)
+max Fujiwara bound over 1<=k<=60: 208740 (< 210000 => the j<=210000 scan is exhaustive for k<=60)

@@ -1,0 +1,26 @@
+PASS r1-anchor my height DP == core fast DP (k<=40,m<=20) == prompt table == core.U_list (m<=8,k<=12); a_direct(n,k) and a_brute == U(ceil)U(floor) (k<=4,n<=7 / small); DFS totals == DP (k<=7,m<=4)  [2.3s]
+PASS r1-refined refined counts by DFS (m<=5,k<=8): not-ascent == [x^k]1/P_m, ascent-to-j == [x^k] j x^2/prod_{v=j}^m b_v (C3A-02)
+PASS r1-Wm G_m = W_m/P_m, W_m = 1 + x^2 sum_j j P_{j-1}: Taylor coefficients == DP, k<=60, m<=30
+PASS r1-1f1 C3A-04: [t^n] 1F1(1;1-lam;-t/x^3)/(1-x) == 1/P_n(x0) exactly at 13 rational points x0, n<=25
+PASS r1-kummer C3A-06: [t^n] e^a 1F1(-lam;1-lam;-a)/(1-x) == 1/P_n(x0), 13 points, n<=25
+PASS r1-gamma C3A-07: [t^n] x^{-3} e^a sum (-a)^j/(j!(lam-j)) == 1/P_n(x0), 13 points, n<=25
+PASS r1-shift C3A-08: [t^n] 1F1(1;-lam;-t/x^3) == [n=0] + 1/P_{n-1}(x0), 13 points, n<=25
+PASS r1-1f1sum C3A-12: each term c_j t^j/b_j 1F1(1;j+1-lam;a) has t^m coeff c_j/prod_{i=j}^m b_i and the sum == G_m(x0); 13 points, m<=22
+PASS r1-kummerF C3A-13: [t^m] x^{-3} e^a sum phi_n a^n/(lam-n) == G_m(x0); 13 points, m<=22
+PASS r1-humbert-general C3A-14: Y_beta first form (1/A)(1-t)^{-b}Phi_1(1,b;1-A/x^3;-t/(1-t),-t/x^3), second form (1/A)e^a Phi_1(-lamA,b;1-lamA;t,-a) and coefficient form all == unique solution of (A-t)Y-x^3tY_t=(1-t)^{-b} (t-recursion), exactly at rational x0; 240 cases (5 A incl. 1+2x-x^2+3x^3, 6 beta), N<=12
+PASS r1-humbert-F C3A-15: both Humbert closed forms of F (Y_0 + x^2(Y_2 - Y_1), A=1-x) have t^M coeff == G_M(x0); 13 points, M<=16
+PASS r1-humbert-coeff C3A-16: coefficient formula for G_M == G_M(x0); 13 points, M<=25
+PASS r1-N-humbert C3A-31: Ncal Humbert form (A=1-x+x^3) has y^q coeff == sum_i (-1)^{q-i}C(q,i)G_{i-1}(x0); 13 points, q<=14
+PASS r1-phi1-transform Phi_1(al,be;ga;X,Y) = (1-X)^{-be} e^Y Phi_1(ga-al,be;ga;X/(X-1),-Y): all X^pY^q coefficients, p+q<=10, at 12 random rational (al,be,ga) (exact)
+PASS r1-pfaff-kummer Pfaff 2F1(a,b;c;X)=(1-X)^{-b}2F1(c-a,b;c;X/(X-1)) and Kummer 1F1(a;c;Y)=e^Y 1F1(c-a;c;-Y), coefficients <=15, same random parameters (these two give a purely formal proof of the Phi_1 transform)
+PASS r1-residue-exact C3A-22 at i=4 (x_4=1/2 rational): Res G_m = W_m(1/2)/P_m'(1/2) == Res G_4 (-8)^{m-4}/(m-4)! exactly for 4<=m<=40; Res G_4 = -215/4 < 0
+PASS r1-residue-c4 Res_{1/2} G_4 == -c_4 x_4 with c_4 = 645/6 (main-agent value): Res = -215/4
+PASS r1-counterex C3A-20: S(3/5,-1/2) = -1057.810872564 (+-6.6e-121, my own tail bound) < 0 while integrand > 0; S(21/100,-1/2) = -9.7295e+44, so |S| > 1e44 rigorously
+PASS r1-N-basis C3A-26: my DFS N(k,q) (k<=9) == binomial inversion of DP; N(k,q)=0 for q>k; U_k(m) = sum_q N(k,q)C(m+1,q) (k<=40, m<=40)
+PASS r1-N-pde C3A-28/29: x^k y^q coefficients of the Ncal PDE (incl. the 4 boundary corrections) and hence the triangle recurrence (k>=3,q>=1), k,q<=40
+PASS r1-N-subst C3A-27: [x^k t^n](1+tF) == sum_q N(k,q) C(n,q) i.e. 1+tF = Ncal(x,t/(1-t))/(1-t), k<=40, n<=41
+PASS r1-H C3A-32/34: h_k = (1-t)^{k+1} sum_m U_k(m)t^m has degree <= k-1 (k>=1), == sum_q N(k,q)t^{q-1}(1-t)^{k-q}; (C6) recurrence from h_0=h_1=1,h_2=1+t reproduces DP h_k, k<=40
+PASS r1-H-pde C3A-33: z^k coefficient of (1-z-z^3t(1-t))H - z^4t(1-t)H_z - z^3t(1-t)^2H_t == 1 + z^2 t, exact in t, k<=40
+PASS r1-laplace C3A-09/10/11/30 with my own naive implementation: F (A=1-x) == DP and 1+tF (A=1-x+x^3, gamma=A+x^2t^2/(1-t)^2) == DP for k<=18, m<=7; random gamma with A=1+2x-x^2+3x^3 solves L_A[Y]=gamma; valuation bound ord_x[s^N t^m] >= 3N-3m holds and all N > k/3+m terms vanish (truncation safe)
+# elapsed 42.6s
+SUMMARY r1 pass=24 fail=0

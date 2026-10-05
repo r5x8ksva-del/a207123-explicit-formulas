@@ -1,0 +1,3 @@
+per-factor check v=1..300: bad = [] (3.0s)
+direct gcd(W_m,P_m)=1 for m<=10: True (3.0s)
+RESULT True

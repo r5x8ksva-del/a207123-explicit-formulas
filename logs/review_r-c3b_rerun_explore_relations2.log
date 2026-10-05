@@ -1,0 +1,26 @@
+prime 2147483629
+U k-only (A,B,deg)=(20,1,6): 294 unknowns, 840 eqs, rank 294 -> none
+U k-only (A,B,deg)=(1,20,6): 294 unknowns, 840 eqs, rank 294 -> none
+U k-only (A,B,deg)=(5,5,9): 360 unknowns, 1296 eqs, rank 360 -> none
+U k-only (A,B,deg)=(2,2,30): 279 unknowns, 1521 eqs, rank 279 -> none
+U k-only (A,B,deg)=(12,12,1): 338 unknowns, 841 eqs, rank 338 -> none
+U k-only (A,B,deg)=(0,25,10): 286 unknowns, 656 eqs, rank 286 -> none
+U k-only (A,B,deg)=(25,0,10): 286 unknowns, 656 eqs, rank 286 -> none
+N k-only (A,B,deg)=(20,1,6): 294 unknowns, 840 eqs, rank 294 -> none
+N k-only (A,B,deg)=(1,20,6): 294 unknowns, 840 eqs, rank 294 -> none
+N k-only (A,B,deg)=(5,5,9): 360 unknowns, 1296 eqs, rank 360 -> none
+N k-only (A,B,deg)=(2,2,30): 279 unknowns, 1521 eqs, rank 279 -> none
+N k-only (A,B,deg)=(12,12,1): 338 unknowns, 841 eqs, rank 338 -> none
+N k-only (A,B,deg)=(0,25,10): 286 unknowns, 656 eqs, rank 286 -> none
+N k-only (A,B,deg)=(25,0,10): 286 unknowns, 656 eqs, rank 286 -> none
+U (A,B,D)=(7,3,3): 320 unknowns, 1292 eqs, kernel 90, predicted 90, left multiples 90 (rank 90, exact True)
+U (A,B,D)=(5,5,3): 360 unknowns, 1296 eqs, kernel 90, predicted 90, left multiples 90 (rank 90, exact True)
+U (A,B,D)=(3,1,8): 360 unknowns, 1520 eqs, kernel 36, predicted 36, left multiples 36 (rank 36, exact True)
+U (A,B,D)=(9,2,2): 180 unknowns, 1248 eqs, kernel 42, predicted 42, left multiples 42 (rank 42, exact True)
+U (A,B,D)=(4,6,2): 210 unknowns, 1295 eqs, kernel 36, predicted 36, left multiples 36 (rank 36, exact True)
+N (A,B,D)=(7,3,3): 320 unknowns, 1292 eqs, kernel 60, predicted 60, left multiples 60 (rank 60, exact True)
+N (A,B,D)=(5,5,3): 360 unknowns, 1296 eqs, kernel 72, predicted 72, left multiples 72 (rank 72, exact True)
+N (A,B,D)=(3,2,8): 540 unknowns, 1482 eqs, kernel 36, predicted 36, left multiples 36 (rank 36, exact True)
+N (A,B,D)=(9,3,2): 240 unknowns, 1216 eqs, kernel 42, predicted 42, left multiples 42 (rank 42, exact True)
+N (A,B,D)=(4,6,2): 210 unknowns, 1295 eqs, kernel 30, predicted 30, left multiples 30 (rank 30, exact True)
+elapsed 43.5s

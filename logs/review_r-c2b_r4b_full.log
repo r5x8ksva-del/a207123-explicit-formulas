@@ -1,0 +1,7 @@
+jobs 704186
+E m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 checks 0 []
+E m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=5 checks 0 []
+U m=4 k0=0: tested 78146, consistent 0, checks histogram {}, consistent with >=5 checks 0 []
+U m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 checks 0 []
+U m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=5 checks 0 []
+[time] 344.2s

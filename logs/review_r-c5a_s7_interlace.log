@@ -1,0 +1,2 @@
+(c) interlacing h_k vs h_{k+1}, 2<=k<=35: (all isolated, disjoint intervals, alternating?)
+    any alternating: [] ; all isolated & disjoint: True (234.0s)

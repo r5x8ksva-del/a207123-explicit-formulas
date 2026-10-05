@@ -1,0 +1,7 @@
+stats tables 0.2s
+(c) 1F1 vs NA (k<=40, m<=20): True  0.3s
+(e) incomplete-gamma series form vs NA: True  0.1s
+(f) F = sum_j c_j t^j/b_j 1F1(1;j+1-lam;a): per-j vs refined counts, total vs U: True  2.7s
+(g) Kummer form of F vs U: True  0.4s
+(d) Kummer identity in Q(lambda), n<=30 (n+2 points each, degree argument): True
+total 3.7s

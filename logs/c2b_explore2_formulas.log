@@ -1,0 +1,13 @@
+DP built 0.2s
+PASS refined DP totals == core.U_fast_table, k<=31 m<=12
+PASS refined DP == DFS enumeration (s, ending), k<=9 m<=3
+PASS complete (non-ascent-ending) with s ascents == S(m+s,m)C(k+m-2s,k-3s), k<=30 m<=12
+PASS ascent-ending with s ascents == sum_j j H(m,s-1,j) C(k+m-j-2s,k+1-3s), k<=30 m<=12
+PASS U_k(m) explicit double sum == core DP, k<=30 m<=12
+PASS U_k(m) = A_m(k+1) - sum_{j=1}^m A^{(j)}_m(k), k<=30 m<=12
+PASS (C4) U = Theta_m(k+1+3m) - sum_t Theta_t(k+3t) == core DP, k<=30 m<=12
+PASS Theta_t(n+3t) == [x^n] prod_{i=m-t}^m 1/b_i (= A^{(m-t)}_m(n)), n<=30 m<=12
+PASS #complete(k) == #legal(k+1) ending in 0; #ascent-ending(k) == #legal(k+1) with h_{k-1}<h_k=h_{k+1}, k<=30 m<=12
+PASS bivariate GF: (1-x-m y x^3) G_m(x,y) = G_{m-1}(x,y) + m y x^2, coefficients == DP, k<=30 m<=12
+PASS G_m = W_m/P_m (W_m = 1 + x^2 sum_j j P_{j-1}) == DP and x W_m = 1 - P_m - x sum_{j<m} P_j, k<=30 m<=12
+elapsed 0.5s

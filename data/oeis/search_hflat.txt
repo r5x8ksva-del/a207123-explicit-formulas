@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:1,2,-1,1,4,-3,1,8,-5,-2,1,14,-7,-8,2,1,23,-6,-27,11
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

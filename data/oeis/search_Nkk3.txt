@@ -1,0 +1,6 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:12,59,199,574,1446,3257,6809,13390
+No results.
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE

@@ -1,0 +1,120 @@
+# final audit math-c1c2 (02_C1.md, 03_C2.md, 07_formula.md) -- 2026-10-04 16:48:14
+========================================================================
+>>> a1_refined.py (rc=0, 9.6s)
+PASS anchor.full_enum refined DP (by #ascents and ending) == enumeration of all (m+1)^k sequences, (m+1)^k<=1.2e6, m<=7, k<=11; 3752525 sequences; bad=[]
+PASS anchor.dfs refined DP == DFS enumeration of legal sequences (m<=4,k<=11; m=5,6,k<=10); bad=[]
+PASS anchor.prompt DP totals == prompt table k=1..10, m=0..6
+PASS T2.2.refined_lemma U_k(m,s)=U_k(m-1,s)+U_{k-1}(m,s)+m U_{k-3}(m,s-1)+m[k=2][s=1] with U_0(m,s)=[s=0], U_{-1}=U_{-2}=0, U_k(-1,s)=0 (k>=1): 1<=k<=40, 0<=m<=12, all s; bad=[]
+PASS T2.2.no_U-1=1 using U_{-1}=1 (or U_{-1}(.,s)=[s=0]) together with m[k=2][s=1] breaks k=2 (double count): #bad (m<=5,s<=3) = {'const1': 20, 'delta_s0': 5}
+PASS T2.2.k2 U_2(m,0)=C(m+2,2), U_2(m,1)=C(m+1,2) (m<=12)
+PASS T2.2.gf_closed G_m(x,y)=W_m/P_m=1/P_m+y x^2 sum_j j/prod_{v=j}^m b_v (b_v=1-x-v y x^3) coefficientwise == refined DP, k<=30, m<=10, all s; bad=[] []
+PASS T2.2.gf_rec (1-x-m y x^3)G_m=G_{m-1}+m y x^2, G_{-1}=1 coefficientwise, k<=40, m<=12; bad=[]
+PASS T2.2.pde (1-x-t)F - y x^3 t F_t = 1 + y x^2 t/(1-t)^2 coefficientwise, k<=40, m<=12, all s; bad=[]
+PASS T2.1.stats greedy block parse: #ascents = #T+#E and (ends with ascent <=> last block E), all legal h, m<=4, 2<=k<=9; bad=[]
+PASS 07.H_rec_explicit H(m,s,j)=H(m,s,j+1)+j H(m,s-1,j), H(m,0,j)=1, H(m,s,m+1)=[s=0]; H(m,s,j)=(1/(m-j)!) sum_i (-1)^{m-j-i} C(m-j,i)(j+i)^{s+m-j}; 0<=j<=m<=14, s<20; bad=[]
+PASS T2.3.rstirling H(m,s,0)=H(m,s,1)=S(m+s,m) (m<15,s<20); H(m,s,j)={m+s, m}_j by brute-force set partitions (m+s<=9); bad=[]
+PASS T2.3.nabla (1/t!) sum_r (-1)^r C(t,r)(m-r)^p == h_{p-t}(m-t..m) (t<=m<=12, p<=30) == brute r-Stirling (n<=9); bad=[]
+PASS T2.3.coef [x^n y^s] prod_{v=j}^m (1-x-v y x^3)^{-1} = H(m,s,j) C(n+m-j-2s,n-3s), n<=30, 0<=j<=m<=10; bad=[]
+PASS T2.4.refined U_k(m,s)=S(m+s,m)C(k+m-2s,k-3s)+sum_j j H(m,s-1,j) C(k+m-j-2s,k+1-3s) == DP, 0<=k<=40, 0<=m<=12, all s; bad=[]
+PASS T2.4.parts term-by-term meaning: first term == #(not ending in ascent, s ascents); j-th summand == #(ending with ascent to value j, s ascents); k<=40, m<=12; bad=[]
+PASS T2.4.U(07) U_k(m)=sum_{s<=floor(k/3)} S(m+s,m)C(k+m-2s,k-3s)+sum_j j sum_{s<=floor((k-2)/3)} H(m,s,j)C(k-2+m-j-2s,k-2-3s) == plain DP, 0<=k<=60, 0<=m<=20; bad=[]
+# elapsed 9.6s
+SUMMARY a1 pass=17 fail=0
+========================================================================
+>>> a1b_extended.py (rc=0, 12.2s)
+PASS ext.anchor suffix-sum refined DP == naive refined DP (k<=40, m<=12); bad=[]
+PASS ext.T2.2.refined_lemma refined lemma 1 with the report conventions, 1<=k<=80, 0<=m<=24, all s; bad=[]
+PASS ext.T2.4.refined U_k(m,s) formula of T2.4 == DP, 0<=k<=80, 0<=m<=24, all s; bad=[]
+# elapsed 12.1s
+SUMMARY a1b pass=3 fail=0
+========================================================================
+>>> a2_numfield.py (rc=0, 0.6s)
+# K_2: W~_2 = [1, 0, 0, 0, 0, 2, 0, 0, 4]  N(W~_2-1)= 17/8  N(W~_2)= 103/16  N(x)= 1/2  N(4-2x)= 68
+PASS T2.6ii.K2 K_2 is a field; W~_2-1 = 2x^5+4x^8 = x^5(4-2x) in K_2; N(W~_2-1)=17/8, N(W~_2)=103/16, N(x)=1/2, N(4-2x)=68 (all exact)
+PASS T2.6.K1 in K_1: W~_1 = 1+x^5 = x(1+x); N(x)=1, N(1+x)=3, N(W~_1)=3
+PASS T2.6.Wtilde W_m == W~_i (mod b_i) for 1<=i<=m<=14 (exact remainders); bad=[]
+PASS T2.6.residue_closed_form directly computed Res_x*u' at the roots of b_i equals -W~_i x^{-3m-3}/(i^2 i! (-1)^{m-i}(m-i)!) for G_m, and the same with W~_i-1 for the E part (91 cases, field i<=12, i<=m<=14); bad=[]
+PASS T2.6.(3) r_i u'(xi_i) = (-1)^m (1+xi) xi^{-3m-2}/(m-1)! and W_m(xi)=xi(1+xi), exact in K_1 from W_m/P_m', m=1..15; bad=[]
+PASS T2.6ii.v17 E part, fiber u=1/2: v_17(N(residue element)) = [-2, 1] (== 1 mod 3) for m=2..20; so x^N * nu in Q is impossible; bad=[]
+PASS T2.6ii.c2b_table with c2b normalisation nu_i=-i*theta_i: N=17 (E, m=2), 103/2 (U, m=2); got 17, 103/2
+# xi=0.682327803828  v0(1,2)=3.1478990357  v0(2,3)=4.6134702676  disc f'=-35.9125
+# fiber (1,2) roots: [1.23278562+1.75889451j 1.23278562-1.75889451j 0.6823278 +0.j        ]
+# fiber (2,3) roots: [-1.13248943+2.55224345j -1.13248943-2.55224345j  0.79132552+0.49095582j
+  0.79132552-0.49095582j  0.6823278 +0.j        ]
+PASS T2.6i.numeric xi in (0.68,0.69); (1,2): v0=xi^3/(1-xi)^2=xi^{-3}=3.147899 in (3.04,3.18), disc(f')<0, one real fiber point (=xi); (2,3): v0=xi^{-4}, one real fiber point (=xi); non-real fiber points are not roots of any b_w (w<=200) [float, corroboration]
+# elapsed 0.4s
+SUMMARY a2 pass=8 fail=0
+========================================================================
+>>> a3_skeleton.py (rc=0, 8.0s)
+PASS T2.8.R R(p,s) by skeleton enumeration == sum_i (-1)^{p-i}C(p,i)S(i-1+s,i-1) (i=0 term [s=0]); s<=5, p<=2s+2; bad=[]
+# R rows: {2: [0, 0, 1, 4, 3], 3: [0, 0, 1, 12, 36, 40, 15], 4: [0, 0, 1, 28, 183, 496, 655, 420, 105]}
+PASS T2.8.R2s R(2s,s)=(2s-1)!! (s<=11; enumeration s<=5), R(0,0)=1, R(p,s)=0 for p>2s; first rows as in notes/c2b.md
+PASS T2.8.Nc_small N^c formula == DFS brute force (k<=9, all q), except (k,q)=(0,0): formula 0, truth 1; DP==DFS; bad=[]
+PASS T2.8.Nc_dp N^c formula == bitmask DP from good(), 0<=k<=22, 0<=q<=8 ((0,0) excluded); bad=[]
+PASS T2.8.inversion N(k,q)=sum_{i=1}^q (-1)^{q-i}C(q,i)U_k(i-1) (k>=1; k=0 with i=0 term, U_0(-1)=1) == bitmask DP, k<=22, q<=8; bad=[]
+# elapsed 8.0s
+SUMMARY a3 pass=5 fail=0
+========================================================================
+>>> a4_c1.py (rc=0, 4.6s)
+PASS T1.3(2).gcd gcd(W_m,P_m)=1 (Fraction Euclid), deg W_m=3m with lc (-1)^m m!, deg P_m=3m+1, P_m(0)=1, 0<=m<=14; bad=[] []
+PASS T1.3(2).BM Berlekamp-Massey on DP data U_0..U_{6m+8}(m): linear complexity 3m+1, connection polynomial == P_m; recurrence holds for all 3m+1<=k<=6m+8; 0<=m<=14; bad=[] []
+PASS T1.3(2).reversal y^{3m+1} P_m(1/y) == (y-1) prod_{i=1}^m (y^3-y^2-i) exactly, 0<=m<=14
+PASS T1.3(2).facts W_4(1/2)=645/512 (claimed 645/512); W_1-b_1 = x+x^2
+PASS T1.3(2)(3).algebra b_{y^2(y-1)}=(1-yx)(1+(y-1)x+y(y-1)x^2), quadratic disc -(y-1)(3y+1)<0 (y<=7); z^3-z^2-i has an integer root iff i=y^2(y-1) (i<=400); disc(z^3-z^2-i)=-i(4+27i) (i<=60)
+PASS T1.3(1).closed x W_m = 1 - P_m - x sum_{j<m} P_j as polynomials, m<=15; bad=[]
+#   m=1 rho=1.46557123187676 c_m=2.20960813177848 |U_3000/(c rho^k)-1|=1.03e-216 |res+c x|=2.0e-219 |alt-c|=2.0e-219
+#   m=2 rho=1.69562076955986 c_m=7.84111922937324 |U_3000/(c rho^k)-1|=9.61e-191 |res+c x|=1.3e-218 |alt-c|=1.3e-218
+#   m=3 rho=1.86370652781918 c_m=28.9768573169912 |U_3000/(c rho^k)-1|=9.42e-124 |res+c x|=5.1e-217 |alt-c|=5.5e-217
+#   m=4 rho=2 c_m=107.5 |U_1200/(c rho^k)-1|=2.88e-37 |res+c x|=0.0e+00 |alt-c|=0.0e+00
+#   m=5 rho=2.11634329862421 c_m=397.012371323434 |U_1200/(c rho^k)-1|=7.38e-30 |res+c x|=1.6e-215 |alt-c|=1.3e-214
+#   m=6 rho=2.21877658530166 c_m=1456.31682906564 |U_1200/(c rho^k)-1|=6.02e-25 |res+c x|=6.9e-213 |alt-c|=6.2e-214
+#   m=7 rho=2.31085216345886 c_m=5303.63000356539 |U_1200/(c rho^k)-1|=1.94e-21 |res+c x|=4.7e-212 |alt-c|=1.4e-212
+#   m=8 rho=2.39485867386606 c_m=19179.3074772177 |U_1200/(c rho^k)-1|=8.39e-19 |res+c x|=5.7e-210 |alt-c|=1.8e-210
+PASS T1.3(4).cm_residue c_m=(G_{m-1}(x_m)+m x_m^2)/(x_m(1+3m x_m^2)) satisfies U_k(m)/(c_m rho_m^k) -> 1 (m=1..3 at k=3000: err<1e-100; m<=8 at k=1200: <1e-10); Res_{x_m} W_m/P_m = W_m(x_m)/P_m'(x_m) == -c_m x_m (to 1e-150); c_1..c_3 match 06 decimals; c_1=(10+15rho+17rho^2)/31 [decimal, 220 digits]
+PASS T1.3(4).dominance rho_i>1, rho_i^3>i, |w|^2=i/rho_i<rho_i^2, f_{i+1}(rho_i)=-1, rho strictly increasing (i<30) [decimal]
+PASS T1.4.numbers N(k,k)=2 (2<=k<=40), N(k,k-1)=k^2-k-4 (4<=k<=40), N(3,2)=4, N(2,1)=1, N(4,3)=8; triangle recurrence from N(0,0)=1 + zero boundary gives N(2,2)=1 (wrong); with N(-1,0)=1,N(-1,q>0)=0,N(-2,.)=0 it reproduces N for all 1<=k<=30
+PASS T1.5.note generalized binomials: m=1,n=0,s=1 term S(2,1)C(-1,2)=1; c_5(1) summed to j<=1 gives 1-5=-4, true c_5(1)=1
+PASS T1.7.h h_3..h_6 from h_0=1,h_1=1,h_2=1+t match the prompt; h_2=1 would give h_3=1+t-t^2; recurrence == sum_q N(k,q)t^{q-1}(1-t)^{k-q} (k<=7)
+PASS T1.8.Num Num_q=P_{q-1} sum_k N(k,q)x^k: polynomial of degree 3q-2, lc (q-1)!, lowest term 2x^q for q>=2, Num_1=x (q<=8)
+PASS T1.2/T1.9.lc u_k: deg k, lc 2/k! (k>=2), u_k(-1)=0; a_k(n)=p(n)+(-1)^n q(n) with deg p=2k, lc c^2/4^k, deg q=2k-2, lc c^2 k/(2*4^k) (k<=8)
+# elapsed 4.6s
+SUMMARY a4 pass=13 fail=0
+========================================================================
+>>> a5_formula.py (rc=0, 19.9s)
+PASS T2.5.forms F3, Theta (incl. k=0), F4 (m! U) == DP for 0<=k<=45, 0<=m<=12; Theta_t(n+3t)=sum_s H(m,s,m-t)C(n+t-2s,n-3s) (n<12); bad={}
+PASS T2.5.cex m=1,k=3: Theta-type terms (Fraction(8, 1), Fraction(-2, 1)), H-type terms (5, 1), both sum to U_3(1)=6
+PASS T2.5.Rk R_k = c_1(k+3)+c_1(k-2)-1, 0<=k<=45 (c_1(n)=0 for n<0)
+PASS T2.5.F4cong P_{j-1} == i^(j) x^{3j} (mod b_i), 1<=i<=11, 1<=j<=13 (so W_m == W~_i mod b_i for m>=i)
+# k=m=100: digits(U)=99, digits max Theta single term (C(t,r) c_{m-r}(n), before /t!)=289, digits max F4 single term=289
+PASS 07.digits U_100(100) has 99 digits (H-type == DP); largest Theta single term before dividing by t! has 289 digits (F4: 289)
+# (k,m)=(60,20): H terms=421 vs (m+1)k/3=420 | Theta c-values=231 vs m^2/2=200 | Theta expanded=7931 vs m^2k/6+m^3/3=6667
+# (k,m)=(100,100): H terms=3334 vs (m+1)k/3=3367 | Theta c-values=5151 vs m^2/2=5000 | Theta expanded=518534 vs m^2k/6+m^3/3=500000
+# (k,m)=(30,12): H terms=131 vs (m+1)k/3=130 | Theta c-values=91 vs m^2/2=72 | Theta expanded=1729 vs m^2k/6+m^3/3=1296
+# (k,m)=(300,30): H terms=3101 vs (m+1)k/3=3100 | Theta c-values=496 vs m^2/2=450 | Theta expanded=60016 vs m^2k/6+m^3/3=54000
+# (k,m)=(30,300): H terms=3011 vs (m+1)k/3=3010 | Theta c-values=45451 vs m^2/2=45000 | Theta expanded=9590161 vs m^2k/6+m^3/3=9450000
+PASS 07.counts H terms 421 (60,20), 3334 (100,100); Theta c-values 231, 5151 (as in notes/c2a.md 7.1)
+# own timing K=200,M=30: lemma-1 0.0033s, H-type (recurrence atoms) 1.469s, ratio 449
+PASS T2.9.own_timing own run: lemma-1 table == H-type table (K=200,M=30); ratio H/lemma-1 = 449 (order-of-magnitude corroboration only)
+# elapsed 19.9s
+SUMMARY a5 pass=7 fail=0
+========================================================================
+>>> a6_ids.py (rc=0, 0.0s)
+cited ids checked: 100
+NOT FOUND: []
+SUMMARY a6 pass=1 fail=0
+========================================================================
+>>> a7_quotes.py (rc=0, 0.0s)
+03_C2.md 1 要用 k≤60 才全部被反驳（复核者 r-c2b，logs/review_r-c
+   in 报告.md: 1
+03_C2.md 1 主 Agent 与审计者共 6 次运行的范围：F4 最快，H、F3 最慢；见 l
+   in 报告.md: 1
+03_C2.md 1 x⁵−v_0(1−x)³）在实轴上都严格单调
+   in 报告.md: 1
+03_C2.md 1 其余奇数形状【已验证（数值，浮点纤维检验 α≥1、α+β≤12，只有 (2,1)
+   in 报告.md: 1
+02_C1.md 1 ρ_m 为 y³=y²+m 的实根，x_m=1/ρ_m
+   in 报告.md: 1
+02_C1.md 1 收敛半径 1/ρ_{m−1}>x_m
+   in 报告.md: 1
+========================================================================
+TOTAL PASS=53 FAIL=0

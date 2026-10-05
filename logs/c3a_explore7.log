@@ -1,0 +1,4 @@
+i=1 x_i=0.68232780382801927477  Res G_i=-1.50767706387694344627E+00  -c_i x_i(est from U_400)=-1.50767706387694344627E+00  worst rel dev of residue law m=i..i+6: 1.05E-77
+i=2 x_i=0.58975451230145836679  Res G_i=-4.62433544701660803611E+00  -c_i x_i(est from U_400)=-4.62433544701660803611E+00  worst rel dev of residue law m=i..i+6: 1.89E-77
+i=3 x_i=0.53656516467222292732  Res G_i=-1.55479722179749053623E+01  -c_i x_i(est from U_400)=-1.55479722179749053623E+01  worst rel dev of residue law m=i..i+6: 2.59E-77
+i=4 x_i=0.50000000000000000000  Res G_i=-5.37500000000000000000E+01  -c_i x_i(est from U_400)=-5.37499999999485780222E+01  worst rel dev of residue law m=i..i+6: 3.03E-77

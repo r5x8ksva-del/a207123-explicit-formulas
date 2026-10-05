@@ -1,0 +1,10 @@
+d=47: nonpositive m-coefficients at [91]
+d=48: nonpositive m-coefficients at [93]
+first d with a nonpositive coefficient (from d>=40): 47
+d<40 with nonpositive coefficient: []
+independent (height-DP + incl-excl, K=200) d=44: extra points agree=True, equals recurrence p_d=True, nonpositive m-coeffs=[]
+independent (height-DP + incl-excl, K=200) d=45: extra points agree=True, equals recurrence p_d=True, nonpositive m-coeffs=[]
+independent (height-DP + incl-excl, K=200) d=46: extra points agree=True, equals recurrence p_d=True, nonpositive m-coeffs=[]
+independent (height-DP + incl-excl, K=200) d=47: extra points agree=True, equals recurrence p_d=True, nonpositive m-coeffs=[91]
+independent (height-DP + incl-excl, K=200) d=48: extra points agree=True, equals recurrence p_d=True, nonpositive m-coeffs=[93]
+runtime 12.2s

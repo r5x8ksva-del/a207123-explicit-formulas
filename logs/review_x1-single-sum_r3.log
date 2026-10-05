@@ -1,0 +1,17 @@
+PASS r3.tables own DP tables (k<=30, m<=12) match prompt data; N, N^c, N^E by inclusion-exclusion == direct used-value-set DP for q<=4
+families: 11760 total, 8232 with gamma+eps>=2
+  target A : survivors [(1, 0, 2, 1, 1, 0), (1, 2, 2, 1, 1, -1)]; refuted at m(q)= {1: 8208, 2: 22}; distinct systems 1302
+  target E : survivors []; refuted at m(q)= {1: 8201, 2: 31}; distinct systems 1287
+  target U : survivors []; refuted at m(q)= {1: 8232}; distinct systems 1260
+  target N : survivors []; refuted at m(q)= {1: 7887, 2: 345}; distinct systems 1563
+  target Nc: survivors []; refuted at m(q)= {1: 7887, 2: 345}; distinct systems 1563
+  target NE: survivors []; refuted at m(q)= {2: 8217, 3: 15}; distinct systems 3277
+  solver stats {'modp_rigorous': 8228, 'exact': 1367}, box time 14.4s
+PASS r3.box independent re-run of the c2b box (8232 families, k<=30, m or q = 1..12): no family solvable for E, U, N, N^c, N^E; for A only (1,0,2,1,1,0) and its index shift (1,2,2,1,1,-1) survive
+PASS r3.box_minm minimal refuting m: U always m=1; E m<=2 (E: {1: 8201, 2: 31}); N,N^c q<=2; N^E q<=3 (matches c2b explore8 log)
+PASS r3.Es_closed own refined DP: E(k,2,2)=(k-4)(3k-1)/2 (k>=4, else 0), E(k,m,1)=C(k+m-1,k) (k>=2), E(k,1,s)=C(k-2s,s-1) (k>=3s-1), k<=60, m<=8
+PASS r3.Es_poly for k>=3s-1, E(k,m,s) agrees with a degree-(m+s-2) polynomial (fit on m+s-1 points, verified on 25 more), m<=8, s<=6
+PASS r3.Es_single complete single-term test (c forced by the subleading coefficient; no root-range assumption): E(k,m,s) is eventually A*C(k+c,deg) iff s=1 or m=1 (m<=8, s<=6); singles found: 13
+PASS r3.canon canonical 3-term u-decomposition U_k(m) = sum_s sum_r f_{r,s} C(k+m-r-2s, m+s) reproduces the DP (m<=6, k<=30); m=2: f_{0,s} = -2^s (1<=s<20); m=5: some f_{2,s} < 0
+# elapsed 15.1s
+SUMMARY r3 fail=0

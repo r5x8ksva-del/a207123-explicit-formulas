@@ -1,0 +1,5 @@
+PASS E1 U_fast_column == U_list（参考实现），每个 m=21..62 的整列 k<=60 [93.1s] 
+PASS E2 a_direct == U_k(ceil(n/2))U_k(floor(n/2))：k=10,11 (0<=n<=13)；1<=k<=7 (14<=n<=20) [89.1s] 
+PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11 [79.4s] 
+TIME c1-extended total 264.3s
+EXIT=0 WALL=265s

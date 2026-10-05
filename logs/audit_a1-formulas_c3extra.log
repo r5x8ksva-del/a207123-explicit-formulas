@@ -1,0 +1,3 @@
+PASS T3.2.Ls-identity :: ℒ_s[e^{jus}(e^{us}-1)^n/n!]=u^n/prod_{i=j}^{j+n}(1-iu)，0<=j,n<=6，到 u^25
+SUMMARY audit_c3_extra pass=1 fail=0
+elapsed 0.0s

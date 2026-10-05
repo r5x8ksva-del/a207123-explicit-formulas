@@ -1,0 +1,8 @@
+PASS rv-Ntri-vs-def N 三角递推 == 高度 DP 容斥（k<=40）== DFS 定义（k<=8）；下面大 k 的 N 用该递推（T1.4 已证明）
+PASS rv-c4-shiftpos-cex p_d(2d+1+m) 的单项式系数：1<=d<=46 全正；47<=d<=57 每个都有非正系数，d=47 恰为 m^91，系数为首项的 -122153 倍。所以 c4 的「以 m=k-2d-1 表示系数全正」一般不成立（N 由已证明的三角递推算到 k=240）
+PASS rv-c4-newton-cex 基点 2d+1 的第 0 个 Newton 系数 p_d(2d+1) = D(2d+1,d) − (−1)^{d+1}(d+1)!：奇数 d<=67 为正，奇数 69<=d<=101 全为负；d=69 时为 N(139,70)−70! = -1.7422e+99
+PASS rv-num-cong Num_q ≡ W_i·S_{q,i} (mod b_i)，S_{q,i}=Σ_t C(q,t)(q-1-i)_t x^{3t}，1<=q<=20，全部 0<=i<q（精确带余除法）
+PASS rv-num-laguerre S_{q,i}(x) = n!·v^n·L_n^{(i+1)}(−1/v)（v=x^3, n=q−1−i，广义 Laguerre），逐系数核对 1<=q<=30
+PASS rv-negzeros 1<=k<=40：U_k 的负整数零点恰为 -1..-floor((k+2)/3)（有理根定理：整数根整除 k!；Fujiwara 界内逐个精确求值，最大界 60761）
+PASS rv-sum-identity Σ_{j=1}^m j·h_{s−1}(j..m) = S(m+s,m) − [s=0]（1<=m<=15, 0<=s<=19；c2a 原文漏了 s=0）
+SUMMARY rv pass=7 fail=0 (12.4s)

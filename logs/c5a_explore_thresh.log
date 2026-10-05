@@ -1,0 +1,26 @@
+d= 1  D: deg=2 lc=1 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=2 lc=1 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1)
+d= 2  D: deg=4 lc=1/4 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=4 lc=1/4 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/4)
+d= 3  D: deg=6 lc=1/24 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=6 lc=1/24 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/24)
+d= 4  D: deg=8 lc=1/192 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=8 lc=1/192 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/192)
+d= 5  D: deg=10 lc=1/1920 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=10 lc=1/1920 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/1920)
+d= 6  D: deg=12 lc=1/23040 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=12 lc=1/23040 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/23040)
+d= 7  D: deg=14 lc=1/322560 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=14 lc=1/322560 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/322560)
+d= 8  D: deg=16 lc=1/5160960 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=16 lc=1/5160960 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/5160960)
+d= 9  D: deg=18 lc=1/92897280 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=18 lc=1/92897280 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/92897280)
+d=10  D: deg=20 lc=1/1857945600 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=20 lc=1/1857945600 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/1857945600)
+d=11  D: deg=22 lc=1/40874803200 poly on [2d+2,60]=True fails at 2d+1=True ; B: deg=22 lc=1/40874803200 poly on [2d+2,60]=True fails at 2d+1=True   (lc theory 1/(2^(d-1) d!) = 1/40874803200)
+(2) gt_j(y) == y^2(y^{3j+1}/j! - e_{j-1}(y^3)) mod f_j for j<=20: True
+   c_1 (new form) = 2.209608131778480819945052347810511
+   c_2 (new form) = 7.841119229373249859400914568273575
+   c_3 (new form) = 28.97685731699122847378362608989428
+   c_4 (new form) = 107.5
+   c_8 (new form) = 19179.30747721779970832328485645967
+   c_18 (new form) = 5432093363.310279603039617054988828
+(3) m=18: rho_17=2.951489920611884519 theta=0.983829973537294839 kappa=7.4708099705  (DP to k=2000 took 0.3s)
+   k=  60 e_k=-9.767928e-01 rate=0.9980748897 two-term ratio=0.3477217027
+   k= 200 e_k=-2.575216e-01 rate=0.9856298607 two-term ratio=0.8983303910
+   k= 500 e_k=-2.153415e-03 rate=0.9838402201 two-term ratio=0.9993904386
+   k=1000 e_k=-6.214660e-07 rate=0.9838299754 two-term ratio=0.9999998893
+   k=1500 e_k=-1.792430e-10 rate=0.9838299735 two-term ratio=1.0000000000
+   k=1999 e_k=-5.254690e-14 rate=0.9838299735 two-term ratio=1.0000000000
+elapsed 3.1s

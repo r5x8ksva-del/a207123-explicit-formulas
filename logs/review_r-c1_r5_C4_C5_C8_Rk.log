@@ -1,0 +1,13 @@
+INFO DP tables [3.4s]
+PASS C4a-c (C4) c_i(n)=sum_{0<=j<=n/3}C(n-2j,j)i^j（0^0=1）== [x^n]1/(1-x-i x^3)（级数求逆），0<=i<=25, 0<=n<=161 [0.0s] []
+PASS C4b-S (C4) [x^n]1/P_m = sum_{0<=s<=n/3} S(m+s,m)C(n+m-2s,m+s)，0<=m<=25, 0<=n<=81 [0.0s] []
+PASS C4c-generalized-refuted (C4 约定) 按广义二项式把求和推到 n/3 以外会出错：m=1,n=0 时 s=1 项=1、s=2 项=-10；c_5(1) 变为 -4（真值 1）；另 m=2,n=1 时 s<=3 的广义和=-305（真值 3）
+PASS C4d-pf (C4) m![x^n]1/P_m = sum_i(-1)^{m-i}C(m,i)c_i(n+3m)，0<=m<=25, 0<=n<=81；-3m<=n<0 时右边为 0 [0.0s] []
+PASS C4e-theta (C4) U_k(m)=Θ_m(k+1+3m)-sum_{t<m}Θ_t(k+3t) 对自写 DP：0<=k<=80（含 k=0）, 0<=m<=25，全部 Θ 为整数；Θ_t(k+3t)=[x^k]prod_{i=m-t}^m b_i^{-1}，0<=t<=m<=25, k<=80 [0.6s] []
+PASS C5-pde (C5) [x^k t^m]{(1-x-t)F - x^3 t F_t} == [x^k t^m]{1 + x^2 t/(1-t)^2}，0<=k<=80, 0<=m<=25（F 取自写 DP） [0.0s] []
+PASS C8a-pq (C8) 由精确 u_k 复合得到 p=(E+O)/2,q=(E-O)/2：deg p=2k、deg q=2k-2、lc p=c^2/4^k、lc q=c^2 k/(2*4^k)，且 p(n)+(-1)^n q(n)=U_k(ceil(n/2))U_k(floor(n/2)) 对 n<=4k+20，1<=k<=20 [0.5s] []
+PASS C8b-order (C8/A 推导链的数据核对) 模 1e9+7 的 BM 作用于 a_k(n)（n<=8k+19）：线性复杂度恰为 4k，连接多项式 ≡ (1-x)^{2k+1}(1+x)^{2k-1}，1<=k<=14 [0.0s] []
+PASS Rk-OEIS R_k = A038718(k+2)（快照 b038718.txt，offset 1）：DP 值 k<=60 一致；由已证明的 R_k=1+R_{k-1}+R_{k-3} 推出的 k<=6021 全部一致；A038718(k+1) 不成立：True [0.7s]
+TIME r5 total 5.5s
+SUMMARY r-c1-C4-C5-C8-Rk pass=9 fail=0
+EXIT=0

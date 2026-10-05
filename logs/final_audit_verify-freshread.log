@@ -1,0 +1,222 @@
+# final_audit_verify-freshread  2026-10-04 18:14:45
+# 对抗性复核 freshread 的 14 条发现（只读；脚本在 code/review/final-audit/verify-freshread/）
+
+######## v0_quotes.py ########
+== quote counts in report_parts ==
+#0 01_summary.md count=1
+#1 08_failed.md count=1
+#2 09_code.md count=1
+#3 03_C2.md count=1
+#4 00_head.md count=1
+#5 00_head.md count=1
+#6 06_C5.md count=1
+#7 06_C5.md count=1
+#8 04_C3.md count=1
+#9 01_summary.md count=1
+#10 03_C2.md count=1
+#11 03_C2.md count=1
+#12 06_C5.md count=1
+#13 08_failed.md count=1
+== quote counts in 报告.md ==
+#0 报告.md count=1
+#1 报告.md count=1
+#2 报告.md count=1
+#3 报告.md count=1
+#4 报告.md count=1
+#5 报告.md count=1
+#6 报告.md count=1
+#7 报告.md count=1
+#8 报告.md count=1
+#9 报告.md count=1
+#10 报告.md count=1
+#11 报告.md count=1
+#12 报告.md count=1
+#13 报告.md count=1
+报告.md len 56998 concat lens 56988 56998 56997
+equal(concat)? False True True
+
+[rc=0]
+
+######## v1_all.py ########
+
+============================== #0 01_summary N(k,q) 组合意义的核对范围 ==============================
+c1_extended.log:3 PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11 [79.1s] 
+review_r-c1_rerun_c1_extended.log:3 PASS E3 N_brute（DFS 定义）== 容斥 N(k,q)，k=10,11 [79.4s] 
+verify_all_final.log:84 PASS C3-brute (C3) 组合意义：core.N_brute（DFS 按定义数「值域恰为 q 个值的合法词」）== 容斥 N(k,q)，0<=k<=9（k=10,11 见 extended_checks.py 的 E3） [1.1s]
+verify_all_final.log:403 PASS c3a-N-def N(k,q) by DFS over surjective legal words (k<=9) == binomial inversion of the DP table; N(k,q)=0 for q>k (k<=30)
+verify_all_final.log:464 PASS C3B-PSI N: DFS definition == inclusion-exclusion (k<=8); Psi_q=sum_k N(k,q)x^k = sum_i (-1)^{q-i}C(q,i)G_{i-1} (q<=12,k<=40); Res_{x_v}Psi_q = (-1)^{q-1-v}Res_{x_v}G_v sum_j C(q,v+1+j)x_v^{-3j}/j
+verify_all_final.log:493 PASS c4-N-dfs N(k,q) == 按定义 DFS 枚举合法满射词（core.N_brute），k<=8
+verify_all_final.log:722 PASS rv-Ntri-vs-def N 三角递推 == 高度 DP 容斥（k<=40）== DFS 定义（k<=8）；下面大 k 的 N 用该递推（T1.4 已证明）
+review_r-c1_r4:2 PASS C3a-basis (C3) N 的组合意义与二项式基：DFS 定义（k<=9）== 序型 DP（k<=28，独立算法 0.2s）== 容斥；用序型 DP 的 N 重建 U_k(m)=sum_q N(k,q)C(m+1,q)，k<=28,m<=62；容斥 N 的零值 N(k,q)=0（q>k 或 q=0<k）
+01_summary 含「按定义直接计数只核到 k≤9」: True ; 含「k≤11」: False
+02_C1 T1.4 含「扩展脚本到 11」: True
+10_uncertain 含「扩展脚本到 k≤11」: True
+
+============================== #1 08_failed ④B.11「对 m=5,6 需要 k≤60」 ==============================
+review_r-c2b_r4b_full.log:2 E m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 checks 0 []
+review_r-c2b_r4b_full.log:3 E m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=5 checks 0 []
+review_r-c2b_r4b_full.log:5 U m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 checks 0 []
+review_r-c2b_r4b_full.log:6 U m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=5 checks 0 []
+review_r-c2b_r4b_k60.log:2 E m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 []
+review_r-c2b_r4b_k60.log:3 E m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 []
+review_r-c2b_r4b_k60.log:4 U m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 []
+review_r-c2b_r4b_k60.log:5 U m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 []
+r4c_example:1 E m=5 pair (15, 0, 21, 8) K=30 unknowns 31 equations 31 consistent checks 0
+r4c_example:2 E m=5 pair (15, 0, 21, 8) K=35 unknowns 34 equations 36 INCONSISTENT checks 0
+r4c_example:6 U m=5 pair (15, 0, 21, 8) K=30 unknowns 31 equations 31 consistent checks 0
+r4c_example:7 U m=5 pair (15, 0, 21, 8) K=35 unknowns 34 equations 36 INCONSISTENT checks 0
+r4c_example:11 E m=6 pair (9, 0, 24, 5) K=30 unknowns 31 equations 31 consistent checks 0
+r4c_example:12 E m=6 pair (9, 0, 24, 5) K=35 unknowns 34 equations 36 INCONSISTENT checks 0
+r4c_example:16 U m=6 pair (9, 0, 24, 5) K=30 unknowns 31 equations 31 consistent checks 0
+r4c_example:17 U m=6 pair (9, 0, 24, 5) K=35 unknowns 34 equations 36 INCONSISTENT checks 0
+T2.6(iv) 现文含「改用 k≤60 的数据后全部被反驳」: True
+T2.6(iv) 现文含「要用 k≤60 才」: False
+08_failed 现文含「需要 k≤60」: True
+
+============================== #2 09_code 总表 vs logs/verify_all_final.log ==============================
+verify_all_final.log mtime(UTC): 2026-10-04 17:22:43 size 63493
+09_code.md mtime(UTC): 2026-10-04 17:17:22
+报告表 TOTAL (290, 0, 217.7) ; 日志 TOTAL (290, 0, 271.0)
+  c0   报告 pass=13 fail=0 secs=4.2 | 日志 pass=13 fail=0 secs=4.7 
+  c1   报告 pass=45 fail=0 secs=46.6 | 日志 pass=45 fail=0 secs=66.4 
+  c2a  报告 pass=23 fail=0 secs=14.1 | 日志 pass=23 fail=0 secs=16.4 
+  c2b  报告 pass=33 fail=0 secs=36.3 | 日志 pass=33 fail=0 secs=47.1 
+  c3a  报告 pass=34 fail=0 secs=23.7 | 日志 pass=34 fail=0 secs=31.9 
+  c3b  报告 pass=22 fail=0 secs=22.1 | 日志 pass=22 fail=0 secs=24.6 
+  c4   报告 pass=41 fail=0 secs=23.9 | 日志 pass=41 fail=0 secs=29.0 
+  c5a  报告 pass=37 fail=0 secs=15.9 | 日志 pass=37 fail=0 secs=18.8 
+  c5b  报告 pass=33 fail=0 secs=5.7 | 日志 pass=33 fail=0 secs=4.5 
+  rv   报告 pass=7 fail=0 secs=16.2 | 日志 pass=7 fail=0 secs=20.1 
+  rv2  报告 pass=2 fail=0 secs=8.9 | 日志 pass=2 fail=0 secs=7.5 
+PASS/FAIL 计数全部一致: True ; secs 全部一致: False
+其他全量运行 TOTAL: {'verify_all_run1.log': (278, 0, 232.1), 'audit_a3-requirements_verify_rerun.log': (288, 0, 216.4)} (正常负载约 216–232 s)
+00_head 运行时长说法: ['约 3–4 分钟'] ; 09_code 是否写了分钟: False
+
+============================== #3 T2.9「各显式公式约 0.2–2.4 s」与所引 6 次运行 ==============================
+  c2a_check_run.log                          Lemma1=0.002 显式 0.242–1.643 (最快 F4, 最慢 F3) 倍数 121–822
+  review_x2-dfinite_check_c2a_run.log        Lemma1=0.002 显式 0.227–1.746 (最快 F4, 最慢 H) 倍数 114–873
+  verify_all_run1.log                        Lemma1=0.002 显式 0.275–1.975 (最快 F4, 最慢 F3) 倍数 138–988
+  verify_all_final.log                       Lemma1=0.003 显式 0.426–3.015 (最快 F4, 最慢 F3) 倍数 142–1005
+  audit_a3-requirements_verify_rerun.log     Lemma1=0.002 显式 0.342–2.405 (最快 F4, 最慢 F3) 倍数 171–1202
+  c2a_e5_bench_K200_M30.log Lemma1=0.003 显式 0.737–1.517 倍数 246–506
+6 次合计：显式公式 0.227–3.015 s，与引理 1 之比 114–1202
+若排除当前 verify_all_final.log：显式公式 0.227–2.405 s（见上各行）
+
+============================== #4 00_head「三轮多 Agent 工作流」 ==============================
+00_head.md:3 [三轮] - 日期：2026-10-04。主 Agent 负责推导主线、分工、整合与最终核对，另做了三轮多 Agent 工作流：第一轮 8 个方向并行研究；第二轮 11 个对抗性复核者逐条复核；第三轮 3 个审计者用独立程序逐条核对本报告里的公式、核对与笔记的一致性、交付要求是否齐全。
+08_failed.md:13 [两轮] **B. 两轮工作中出过的错（都已更正，记在这里便于复核）**
+08_failed.md:20 [三轮] 13. 第三轮审计发现、已更正的表述错误（都不影响结论）：T2.6(ii) 把截断块部分的范数对象写成 N(W̃_2)，应为 N(W̃_2−1)=17/8；T2.6(iii) 漏写 m≥2；T3.4(3) 的上界「≤−1057.810873+3.5·10^{−118}」舍入方向写反（精确部分和是 −
+09_code.md:47 [两轮] - 两轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`；逐条结论清单 `notes/review/claims_<area>.md`，逐条复核意见 `notes/review/<reviewe
+  logs/phase1_workflow_output.json 存在: True; 报告中被引用: True
+  logs/phase2_review_output.json 存在: True; 报告中被引用: True
+  logs/phase3_audit_output.json 存在: True; 报告中被引用: False
+  logs/phase4_final_audit_output.json 存在: True; 报告中被引用: False
+phase4 审计视角: ['requirements', 'math-c1c2', 'math-c3', 'math-c4c5', 'consistency'] 发现数 63 confirmed 58 real=True 计数 58
+patch_final_audit.py 文件头: """最终对抗审计（第四轮）确认的问题：逐条落到 report_parts 与 README。"""
+第四轮复核日志: ['final_audit_verify_consistency.log', 'final_audit_verify_math-c1c2.log', 'final_audit_verify_math-c3.log', 'final_audit_verify_math-c4c5.log', 'final_audit_verify_requirements.log']
+
+============================== #5 00_head「少数扩展范围只由第二轮复核脚本跑过…已注明并给出日志路径」 ==============================
+c1_extended.log:2 PASS E2 a_direct == U_k(ceil(n/2))U_k(floor(n/2))：k=10,11 (0<=n<=13)；1<=k<=7 (14<=n<=20) [56.0s] 
+c4_explore9b_d4.log: d=4 brute==DP: True 4990 46.3s
+verify_all_final.log:36 PASS B3-direct-vs-product core.a_direct（原题直接计数）== U_k(ceil(n/2))*U_k(floor(n/2))，1<=k<=9, 0<=n<=13（k=10,11 与 k<=7,n<=20 见 extended_checks.py 的 E2） [4.5s]
+verify_all_final.log:529 PASS c4-pattern-brute d<=3：按定义暴力枚举「全特殊值」合法满射词（块分解+平凡值判定）得到的 M(d;sigma,beta) == 模式 DP
+review_r-c3a_r3_growth.log:4 #   k=75: |f_k|^(1/k)=1.6688, |f_k|^(1/k)/k^(1/3)=0.3957, (log|f_k|-lgamma(k+1)/3)/k=-0.6074, sign=+
+review_r-c3a_r3_growth.log:6 #   k=150: |f_k|^(1/k)=2.0355, |f_k|^(1/k)/k^(1/3)=0.3831, (log|f_k|-lgamma(k+1)/3)/k=-0.6337, sign=+
+  02_C1.md 找到=True；该处后 160 字内含 logs/: False | 片段: 扩展脚本另核对 a_direct 到 k=11。  **T1.1（引理 1）【已证明】** 陈述：k≥1、m≥0 时 U_k(m)=U_k(m−1)+U_{k−1}(m
+  05_C4.md 找到=True；该处后 160 字内含 logs/: False | 片段: c4.c4-pattern-brute（按定义暴力枚举 d≤3；探索中 d=4）、c4.c4-pattern-props（σ≤2d+2：模式 DP 枚举到 σ=2d+3，该层为空）、c4.c4-pat
+  04_C3.md 找到=True；该处后 160 字内含 logs/: False | 片段: 精确计算 |f_k(−1/2)|^{1/k} 在 k=75、150 为 1.669、2.036（比值 1.22），与 (k!)^{1/3} 型增长相容，未证。 核对：c3a.c3a-analytic-counterex（严格）、c3a.c3a-num-gamma、c3a.c3a
+  05_C4.md 找到=True；该处后 160 字内含 logs/: True | 片段: 审计者 a1 算到 d≤60：d≤56 时负系数只出现在高次端，d=57–60 时次数 ≤d 的低次项也出现负号（例如 d=57 的 m^8、m^{
+  04_C3.md 找到=True；该处后 160 字内含 logs/: True | 片段: c3b 探索脚本 explore_relations2 用第二个素数 2147483629 跑的是另一批参数（U、N 各 7 组只依赖 k 的参数，全部列满秩；U、N 各 5
+
+============================== #6 T5.1 核对行 c5a-roots、c5a-cm-repr 的「数值」标注 ==============================
+verify_all_final.log:582 PASS c5a-roots y^3-y^2-j has exactly one real root rho_j, rho_j>1 (Sturm exact, j<=30); [numeric] rho_j increasing and |complex root|^2 = j/rho_j < rho_{j-1}^2 < rho_j^2 (j<=30); general proof in notes
+verify_all_final.log:590 PASS c5a-cm-repr c_m in Q(rho_m): exact r_m(y) = gt_m(y)/f_m'(y) mod f_m, e.g. c_1 = (10+15rho+17rho^2)/31; [numeric] r_m(rho_m) == closed form to 1e-70 (m<=8)
+  c5a.c5a-roots          紧随其后: 、c5a.c5a-binet（Lagrange 形式 m≤20、k≤60 精确相
+  c5a.c5a-cm-repr        紧随其后: 、c5a.c5a-c4、c5a.c5a-c18、c5a.c5a-asym-m1.
+  c5a.c5a-asym-m1..m8    紧随其后: （decimal 90 位，数值；k=400 处实测率与 θ_m 相差 <1e−
+  c5a.c5a-prompt-k40     紧随其后: （数值）、c0.c0-c4（数值收敛核对；c_4=215/2 的精确核对是 c5
+  c0.c0-cm               紧随其后: （数值）、c1.C2-cm。
+00_head 规则: True
+
+============================== #7 T5.3(1) 基本事实：独立重算 + 证明出处 ==============================
+U_fast_table 与参考实现 U_list 一致 (m<=8,k<=20): True
+h_k 由 (1−t)^{k+1}ΣU_k(m)t^m 截断得到，deg h_k ≤ max(k−1,0)（k≤30）: True
+h_k(0)=1 (k≤30): True
+h_k(1)=2 (2≤k≤30): True ; h_0(1),h_1(1)= 1 1
+[t^1]h_k = R_k−k−1 (k≤30): True ; >0 for 2≤k≤30: True ; k=0,1 值 0 0
+Σ h_{k,1}x^k = x²(1−x+x²)/((1−x)²(1−x−x³)) (k≤30): True
+h_k = Σ_q N(k,q)t^{q−1}(1−t)^{k−q} (1≤k≤30): True
+h_k^{(d)}(1)=d!Σ_e(−1)^eC(k−1−e,d−e)N(k,k−e) (d≤3, 1≤k≤30): True
+h_k'(1)=−(k²−3k−2) (4≤k≤30): True ; k=3 时 h_3'(1)= 0 公式给 2
+n_k(z):=Σ_q N(k,q)z^{q−1} == (1+z)^{k−1}h_k(z/(1+z)) (1≤k≤30): True
+T5.3(1) 段内含 notes/ 或 § 指针: False ; 含「证明」: True
+T5.3(1) 段内含 Σ_qN(k,q)z^{q−1}: False
+  notes/c5a.md 含 ### 4.1 基本事实: True
+  notes/c5a.md 含 ### 4.6 [t¹] 与固定位置的系数: True
+  notes/c5a.md 含 ### 4.7 t=1 处的各阶导数与 N 的关系: True
+  notes/c5a.md 含 N 行多项式 n_k(z) := Σ_q N(k,q)z^{q−1}: True
+
+============================== #8 T3.8 角点句中的记号 ==============================
+  报告各节中「α′」出现次数: 1
+  报告各节中「β*」出现次数: 1
+  报告各节中「α*」出现次数: 3
+  报告各节中「β′」出现次数: 3
+  报告各节中「q_{α*b}」出现次数: 1
+  报告各节中「q_{ab}」出现次数: 0
+  报告各节中「q_{α′β*}」出现次数: 0
+notes/c3b.md §6 定义: }−S^{(a+1,b)}−(m−b)S^{(a+3,b)}]（S^{(a,b)}:=X^aE^{−b}，S^{(a,b)}m=(m−b)S^{(a,b)}）。取 β*=Q 中最大的 b、q_{α′β*}≠0：位置 (α′,β*+1) 只收到 −q_{α′β*}，故 β*+1≤B；取 α*=最大的 a、q_{α*β′}≠0：位置 (α*+3,β′) 只收到 −(m−β′)q_{α*β′}，故 α*+3≤A。次数：设 e=max deg q_ab，QL1 的 e+1 次齐次部分 =−m·Σ[q_a
+T3.8 中 N 的下标 q 用法: ['Y: q↦q−1', '(q−1)X³(1+Y)²']
+
+============================== #9 01_summary 第 7 条与 T3.8 ==============================
+['L1=1−E^{−1}−X−mX³', 'Rel(U)=O_U·L1', 'Rel(N)=O_N·L_N，L_N=1−X−XY−(q−1)X³(1+Y)²']
+01_summary 第 7 条: 7. **F 与 N 的母函数都不是 D-finite**（有证明，不是「没找到」）；全部多项式系数象限递推恰为引理 1 算子生成的左理想。
+
+============================== #10「m=5,6 各有 59/1024 个零检验形状对」 ==============================
+E、U 在 m=5 的零检验形状对示例完全相同: True ; m=6: True
+（零检验 = 未知数等于方程数，任何数列都相容，所以形状对集合与目标数列 E/U 无关；计数 59/1024 对 E、U 都成立）
+  r4b_full:2 E m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 ch
+  r4b_full:3 E m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=
+  r4b_full:4 U m=4 k0=0: tested 78146, consistent 0, checks histogram {}, consistent with >=5 checks 0 
+  r4b_full:5 U m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 ch
+  r4b_full:6 U m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=
+
+============================== #11 T2.6 (i) 与 (iv) 的 α、β ==============================
+  03_C2 含「形状 C(k+c−αs, βs+d)」: True
+  03_C2 含「取 v=x^{α+β}/(1−x)^β」: True
+  03_C2 含「形状 Σ_s A(m,s)C(k+αm+β−γs, δm+εs+ζ)」: True
+  verify_all_final.log:342 PASS c2b.T7.box 单和形状 V(k)=sum_s A(m,s)C(k+alpha*m+beta-gamma*s, delta*m+eps*s+zeta)，参数盒 alpha∈[-1,2],beta∈[-3,3],gamma∈[0,3],delta∈[0,2],eps∈[-1,3],zeta∈[-3,3]（11760族，其中 gamma+eps>=2 有真检验的 8232 族）：对 E、U、N、N^c、N^E 无一族在 k<
+
+============================== #12 T5.4(2) 的 E 与 m_1、m_2 ==============================
+  报告中 m_1 出现次数: 3 ; T3.8 中 E 的定义: ['E^{−1}: m↦m−1']
+  emp-row 界: [('2', '10', '16'), ('3', '22', '36'), ('4', '28', '81'), ('5', '49', '144'), ('6', '55', '256'), ('7', '85', '400')]
+  (⌈n/2⌉+1)²(⌊n/2⌋+1)²: [(2, 16), (3, 36), (4, 81), (5, 144), (6, 256), (7, 400)]
+  emp-row 界: []
+  (⌈n/2⌉+1)²(⌊n/2⌋+1)²: [(2, 16), (3, 36), (4, 81), (5, 144), (6, 256), (7, 400)]
+  notes/c5b.md T4: **T4（行）【已证明】** 固定 n，令 m1 = ⌈n/2⌉，m2 = ⌊n/2⌋。对 k ≥ 2，a_k(n) = uᵀ(A_{m1} ⊗ A_{m2})^(k−2) v，其中 A_m 是高度 DP 在状态 (a,b) ∈ {0..m}² 上的 (m+1)² 阶转移矩阵（这正是 `U_fast_column` 的递推）。所以 (a_k(n))_{k≥2} 满足 d = (m1+1)²(m2+
+
+============================== #13 ④C.15 的文献只读访问记录 ==============================
+  c3b: **文献核实（只读）**：
+  c3b: - Lipshitz, L., *D-finite power series*, J. Algebra 122 (1989) 353–373，DOI 10.1016/0021-8693(89)90222-6（Crossref 元数据已核实）。其引言（经 Semantic Scholar 收录的论文首段核实）说明：一元时 D-finite ⇔ P-recursive；多元 D-finite 的定义见
+  c3b: - 多元 D-finite ⇔「对每个变量都有一条非平凡线性 ODE（系数为全体变量的多项式）」：Bousquet-Mélou & Petkovšek, *Walks confined in a quadrant are not always D-finite*（arXiv:math/0211432，TCS 2003）第 1 节与 Bousquet-Mélou & Mishna, *Walks w
+  c3b: - 一元 D-finite ⇔ P-recursive（带阶/次数界）：Melczer 学位论文 arXiv:1709.05051 的 Proposition 9（ar5iv 文本已核对）。
+  c3b: - Wikipedia「Holonomic function」条目的概述也指出多元情形的 P-recursive 需要「对整个数列及其适当特化」的递推（已读取页面核对）——与「仅有一个方向的递推不够」一致。
+  x2 文献日志 GET 行: ['# GET https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/0021-8693(89)90222-6?fields=title,year,abstract,venue', '# GET https://api.crossref.org/works/10.1016/0021-8693(89)90222-6']
+  00_head 第 9 行: - 只读查询：OEIS 用 curl 读了 68 次，每个 URL 只读一次，快照在 `data/oeis/`。另有子 Agent 对 Lipshitz 1989 做了几次文献元数据只读查询（见 ④C）。没有发帖、没有提交、没有联系任何人。
+
+[rc=0]
+
+######## 判定摘要 ########
+#0 real=True  01_summary 写「按定义直接计数只核到 k≤9」，但 c1_extended.log E3 已按 DFS 定义核 k=10,11；与 T1.4、⑥ 不一致
+#1 real=True  ④B.11「需要 k≤60」仍是 phase4 已判定无据的必要性说法；证据只说明 k≤30 不够、k≤60 足够（示例对 K=35 已矛盾）
+#2 real=True  ⑤ 总表（217.7 s）与它所指的 logs/verify_all_final.log（17:22 重跑，271.0 s）各模块耗时都不一致；PASS 数一致
+#3 real=True  所引 6 次运行之一的 verify_all_final.log 现为 H 2.999 s、F3 3.015 s，超出「约 0.2–2.4 s」；倍数 114–1202 仍符合约 100–1000
+#4 real=True  00_head 只写三轮；第四轮（phase4，5 个审计视角 + 逐条复核，58 条确认）在 ④B.13 被提到但无交代，phase3/phase4 原始输出未被引用
+#5 real=True  T1.0（c1_extended E2）与 T4.2（c4_explore9b_d4）的扩展范围来自第一轮脚本，无日志路径；T3.4(5) Gevrey 数据来自 r-c3a 亦无路径；00_head 的来源描述不全
+#6 real=True  c5a-roots、c5a-cm-repr 含 decimal 数值部分（日志 [numeric]），核对行未注「数值」，违反 00_head 规则
+#7 real=True  T5.3(1) 标【已证明】但无证明也无笔记指针；全部断言独立重算 k≤30 成立；证明在 c5a §4.1/§4.6/§4.7
+#8 real=True  α′、β*、α*、β′、q_{ab} 在报告中未定义（只在 c3b §6），且 q_{α*b} 与 N 的下标 q 同名
+#9 real=True  摘要第 7 条无主语，紧接「F 与 N」，可读成对 N 也成立；N 的关系理想由 L_N 生成
+#10 real=False  零检验形状对与目标数列无关（E、U 的示例对完全相同），「m=5,6 各有 59/1024 个」按 m 计数是准确的
+#11 real=False  (iv) 的形状公式把 α、β、γ、δ、ε、ζ 就地写明，不存在误读成 (i) 记号的可能；属记号风格
+#12 real=True  m_1、m_2 在报告中未定义（c5b 笔记 T4 中为 ⌈n/2⌉、⌊n/2⌋），E 在 T3.8 是 m 方向移位
+#13 real=True  ar5iv、Wikipedia 读的是其他文献正文与页面，不是 Lipshitz 1989 的元数据；Semantic Scholar 读到的是引言

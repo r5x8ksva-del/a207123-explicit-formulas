@@ -1,0 +1,12 @@
+K=200, M=30 (all U_k(m), 0<=k<=K, 0<=m<=M)
+  DP(core.U_fast_table, definition)                          0.580s   equal_to_DP=True
+  Lemma1 recurrence                                          0.003s   equal_to_DP=True
+  fixed-m linear recurrence (order 3m+1)                     0.359s   equal_to_DP=True
+  N triangle + sum_q N C(m+1,q)                              0.047s   equal_to_DP=True
+  H form (r-Stirling atoms by recurrence)                    1.098s   equal_to_DP=True
+  H form (r-Stirling atoms by explicit alternating sum)      1.517s   equal_to_DP=True
+  F3 form                                                    1.217s   equal_to_DP=True
+  Theta form (prompt C4; c_i atoms explicit)                 0.945s   equal_to_DP=True
+  H-outer + c_i inner                                        0.863s   equal_to_DP=True
+  F4 c_i partial fractions                                   0.737s   equal_to_DP=True
+  Gamma (cubic-Stirling) triangle recurrence + single j-sum    0.046s   equal_to_DP=True

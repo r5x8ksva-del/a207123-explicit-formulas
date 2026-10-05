@@ -1,0 +1,82 @@
+========================================================================
+[Q] exact quote presence
+  #0 03_C2.md count_in_part=1 count_in_report=1
+  #1 03_C2.md count_in_part=1 count_in_report=1
+  #2 03_C2.md count_in_part=1 count_in_report=1
+  #3 03_C2.md count_in_part=1 count_in_report=1
+  #4 02_C1.md count_in_part=1 count_in_report=1
+========================================================================
+[#0] grade definition and float-only evidence
+  00_head definition of 已验证: 只有精确程序核对，写明范围
+  original task: verify_all must cover every 已验证 -> True
+  r-c2a r4 log odd_shapes line: ['PASS odd_shapes_fiber fiber-point test (float, tol 1e-7) excludes every shape (alpha>=1, 2<=alpha+beta<=12) except [(2, 1)]']
+  verify_all_final mentions odd_shapes / fiber test: False False
+  08_failed says float only: True
+  precedent: numeric-only Gevrey claim labelled 猜想 in 04_C3: True
+  own fiber test (numpy roots + 60-digit Newton): shapes not excluded = [(2, 1)]
+  smallest exclusion margin over excluded shapes = 5.235e-01 at (1, 2)
+    (1, 2) witness eta=1.232786+1.758895i, w=-0.0235+0.1775i, margin 5.235e-01
+    (2, 3) witness eta=0.791326+0.490956i, w=-0.6297-0.1995i, margin 1.130e+00
+    (1, 4) witness eta=0.780080+0.363112i, w=-0.4602-0.4819i, margin 9.602e-01
+    (3, 2) witness eta=0.676164+0.698844i, w=-0.7712+0.3269i, margin 1.271e+00
+    (4, 1) witness eta=-0.744446+0.623150i, w=0.3563-1.9928i, margin 1.993e+00
+  NOTE: still floating/high-precision numerics, no interval arithmetic -> data, not proof
+========================================================================
+[#1] bench_k200_m30 runs
+  c2a_e5_bench_K200_M30.log                  c2a author (round 1 exploration e5_bench.py)  lemma1 0.003  explicit 0.737-1.517  fastest=F4 c_i partial fractions slowest=H form (r-Stirling atoms by explicit alternating sum) ratio 246-506
+  c2a_check_run.log                          c2a author (round 1 check_c2a run)            lemma1 0.002  explicit 0.242-1.643  fastest=F4 slowest=F3 ratio 121-822
+  verify_all_run1.log                        main agent (verify_all)                       lemma1 0.002  explicit 0.275-1.975  fastest=F4 slowest=F3 ratio 138-988
+  verify_all_final.log                       main agent (verify_all)                       lemma1 0.002  explicit 0.289-2.125  fastest=F4 slowest=H ratio 144-1062
+  audit_a3-requirements_verify_rerun.log     auditor a3 (verify_all rerun)                 lemma1 0.002  explicit 0.342-2.405  fastest=F4 slowest=F3 ratio 171-1202
+  review_x2-dfinite_check_c2a_run.log        reviewer x2 (check_c2a)                       lemma1 0.002  explicit 0.227-1.746  fastest=F4 slowest=H ratio 114-873
+  review_r-c2a_checkrun.log                  reviewer r-c2a (check_c2a, high load)         lemma1 0.007  explicit 0.859-7.237  fastest=F4 slowest=F3 ratio 123-1034
+  review_x1-single-sum_check_c2a.log         reviewer x1 (check_c2a, high load)            lemma1 0.006  explicit 0.744-5.558  fastest=F4 slowest=F3 ratio 124-926
+  all 6 normal-load runs: explicit 0.227-2.405 s, lemma1 0.002-0.003, ratio 114-1202
+  only the cited logs (e5 + verify_all-type logs): explicit 0.275-2.405 s, lemma1 0.002-0.003, ratio 138-1202
+  only main agent + auditor surviving logs: explicit 0.275-2.405 s, lemma1 0.002-0.002, ratio 138-1202
+  normal-load runs by main agent or auditor: 3 of 6
+  review_r-c2a_checkrun.log slowdown vs same-script normal runs 3.10-4.91 ; vs verify_all runs 2.28-4.37 ; median over both 3.45
+  review_x1-single-sum_check_c2a.log slowdown vs same-script normal runs 3.00-3.67 ; vs verify_all runs 2.05-3.07 ; median over both 3.00
+  r-c2a-review §1 says: True
+  F4 values: c2a_e5_bench_K200_M30=0.737, c2a_check_run=0.242, verify_all_run1=0.275, verify_all_final=0.289, audit_a3-requirements_verify_rerun=0.342, review_x2-dfinite_check_c2a_run=0.227
+  03_C2.md mtime < verify_all_final.log mtime: True
+========================================================================
+[#2] two-term box logs
+  review_r-c2b_r4b_full.log            mentions k<=60: False | lines: jobs 704186 || E m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 ch || E m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >= || U m=4 k0=0: tested 78146, consistent 0, checks histogram {}, consistent with >=5 checks 0  || U m=5 k0=0: tested 124390, consistent 59, checks histogram {0: 59}, consistent with >=5 ch || U m=6 k0=0: tested 188630, consistent 1024, checks histogram {0: 1024}, consistent with >=
+  review_r-c2b_r4b_full_small.log      mentions k<=60: False | lines: jobs 195693 || E m=3 k0=0: tested 46178, consistent 0, checks histogram {}, consistent with >=5 checks 0  || E m=4 k0=0: tested 78146, consistent 0, checks histogram {}, consistent with >=5 checks 0  || U m=2 k0=0: tested 25191, consistent 0, checks histogram {}, consistent with >=5 checks 0  || U m=3 k0=0: tested 46178, consistent 0, checks histogram {}, consistent with >=5 checks 0  || [time] 29.0s
+  review_r-c2b_r4b_k60.log             mentions k<=60: True  | lines: jobs 116284 || E m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] || E m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] || U m=5: k<=30 相容 59 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] || U m=6: k<=30 相容 1024 对（检验数集合 [0]）；其中在 k<=60 上仍相容 0 对 [] || [time] 399.7s
+  review_r-c2b_r4c_example.log         mentions k<=60: True  | lines: E m=5 pair (15, 0, 21, 8) K=30 unknowns 31 equations 31 consistent checks 0 || E m=5 pair (15, 0, 21, 8) K=35 unknowns 34 equations 36 INCONSISTENT checks 0 || E m=5 pair (15, 0, 21, 8) K=40 unknowns 37 equations 41 INCONSISTENT checks 0 || E m=5 pair (15, 0, 21, 8) K=45 unknowns 41 equations 46 INCONSISTENT checks 0 || E m=5 pair (15, 0, 21, 8) K=60 unknowns 51 equations 61 INCONSISTENT checks 0 || U m=5 pair (15, 0, 21, 8) K=30 unknowns 31 equations 31 consistent checks 0
+  example pairs inconsistent already at K=35: True
+  verify_all_final twoterm line has E m=3 & U m=2 only: True
+========================================================================
+[#3] v_0 for shapes (1,2) and (2,3)
+  exact: v_(1,2)(xi) == xi^-3 : True
+  exact: v_(2,3)(xi) == xi^-4 : True
+  exact: v_(2,3)(xi) == xi^-3 : False
+  exact: xi^5 - xi^-3 (1-xi)^3 == 0 ? False  (value in basis 1,xi,xi^2: ['-2', '3', '0'] )
+  xi=0.682327803828  xi^-3=3.1478990357  xi^-4=4.6134702676
+  shape (1,2): v0=3.147899 real fiber roots=['0.6823278038']
+  shape (2,3): v0=4.613470 real fiber roots=['0.6823278038']
+  (1,2) disc of f'=3x^2-2v0x+2v0: 4v0(v0-6)=-35.9125 (<0 => strictly increasing)
+  (2,3) f'=5x^4+3v0(1-x)^2>0 for every v0>0 (monotonicity does not depend on the value of v0)
+  ratio check: report interval (3.04,3.18) contains xi^-3: True ; contains xi^-4: False
+========================================================================
+[#4] rho_0
+  m=0 real roots of y^3-y^2-m: [np.float64(0.0), np.float64(1.0)]
+  m=1 real roots of y^3-y^2-m: [np.float64(1.4655712319)]
+  m=2 real roots of y^3-y^2-m: [np.float64(1.6956207696)]
+  m=3 real roots of y^3-y^2-m: [np.float64(1.8637065278)]
+  U_k(0) == 1 for k<=30: True => G_0=1/(1-x), radius 1 = 1/rho_0 needs rho_0=1
+  x_1 = 1/rho_1 = 0.682328 < 1 (so the proof step works with rho_0=1)
+  06_C5 inequality at m=1: rho_0^2 + m - 1 >= m  <=> rho_0^2 >= 1 : rho_0=1 -> True ; rho_0=0 -> False
+  02_C1 states rho_0 convention anywhere: False
+  notes/c1.md has convention rho_0:=1 : True
+  notes/c5a.md has convention rho_0 := 1 : True
+  02_C1 T1.3(4) proof uses 1/rho_{m-1} with m>=1: True
+DONE
+#0 03_C2.md -> ...otes/review/r-c2a-review.md §4.3；复核者 x1 另给了代数证明，见 x1-single-sum-review.md §2.4）。其余奇数形状【猜想（只有浮点数值证据，不是精确核对：纤维检验 α≥1、α+β≤12、容差 1e−7，未做区间算术；只有 (2,1) 不能由纤维法排除，而它正是定理 S 的形状；不在 verify_all 中，见 notes/review/r-c2a-review.md §4.3 与 logs/review_r-c2a_r4_negative.log）】，一般情形【未完成】。α+β=1 时平凡存在。 (ii)【已证明】截断块部分 E(k,m)（以上升结尾的序列数）对一切 ...
+#1 03_C2.md -> ...、F4 型算出的全部 U_k(m) 与定义 DP 一致。整表 K=200,M=30：引理 1 约 0.002–0.003 s，各显式公式约 0.2–2.4 s（c2a 作者 2 次（logs/c2a_e5_bench_K200_M30.log、logs/c2a_check_run.log）、复核者 x2 1 次（logs/review_x2-dfinite_check_c2a_run.log）、主 Agent 2 次（logs/verify_all_run1.log、logs/verify_all_final.log）、审计者 a3 1 次（logs/audit_a3-requirements_verify_rerun.log）共 6 次正常负载运行的范围：F4 最快，H、F3 最慢；除 e5 日志外见各日志的 bench_k200_m30 行；复核者 r-c2a、x1 运行时机器负载高，同项耗时约为同一脚本正常运行的 3–5 倍），即引理 1 快约 100–1000 倍。**单值的公平比较（第二轮复核更正）**：原子都用递推计算时（H 用 H 的...
+#2 03_C2.md -> ...。两项 u 型盒（E：3≤m≤6，U：2≤m≤6）在 k≤30 上 m=5,6 各有 59/1024 个「零检验」形状对（未知数等于方程数，任何数列都能拟合），改用 k≤60 的数据后全部被反驳（复核者 r-c2b：k≤30 全量重跑见 logs/review_r-c2b_r4b_full.log（E m=5,6；U m=4,5,6）与 logs/review_r-c2b_r4b_full_small.log（E m=3,4；U m=2,3），k≤60 的反驳见 logs/review_r-c2b_r4b_k60.log；不在 verify_all 中；verify_all 只复现 E m=3、U m=2）。第一轮原话「k≤30 上盒内无可解形状对」对 m=5,6 不成立，已更正。 核对：c2a.single_family_...
+#3 03_C2.md -> ...wr³>0、Re b_w(±ir)=1，所以 η 也只能是实数。但两种情形的纤维多项式（x³−v_0(1−x)²，v_0=ξ^{−3}∈(3.04,3.18)；x⁵−v_0(1−x)³，此时 v_0=v(ξ)=ξ^{−4}≈4.61）在实轴上都严格单调，只有一个实根，其余纤维点都是非实数（且 v′≠0），矛盾（notes/review/r-c2a-review.md §...
+#4 02_C1.md -> ...,q) 为长 k、值域恰为 {1..q} 的合法词数；c_i(n)=[x^n]1/b_i；H(m,s,j)=h_s(j,j+1,…,m)（完全齐次对称多项式）；ρ_m 为 y³=y²+m 的最大实根（m≥1 时是唯一实根；ρ_0=1），x_m=1/ρ_m。 > **二项式约定**：计数公式求和项里的 C(a,b) 按组合意义理解：C(a,b)=0，除非 0≤b≤a（与 c...
+all referenced log paths exist; no file was written

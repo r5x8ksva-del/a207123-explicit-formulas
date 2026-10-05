@@ -1,0 +1,5 @@
+prompt table (k<=10,m<=6) vs own DP: True
+height-vector brute force (k<=7, m<=4) vs own DP: True
+original matrix brute force a_k(n) (n*k<=20) == U_k(ceil)U_k(floor): True
+Lemma-1 recurrence table == own DP (k<=90, m<=40; plus m=50,60,70 with k<=60): True
+elapsed 23.7s

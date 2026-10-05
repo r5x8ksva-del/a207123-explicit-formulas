@@ -1,0 +1,15 @@
+(1) spectral formula (Lagrange form) == own DP, m<=25, k=0..3m+40 (complete by recurrence argument): True
+(2) spectral formula (c_j form) == own DP, m<=25, k=0..3m+40: True
+(3) R_k = c_1(k+3)+c_1(k-2)-1 (T22), k<=300 vs own DP: True
+(4) [numeric] rho_j increasing, |sigma_j|^2 = rho_j(rho_j-1), |sigma_j| increasing, |sigma_m| < rho_{m-1}, j,m<=2000: True
+    which pole is third (tau_m) for m=2..11: {2: '|sigma_m|', 3: 'rho_{m-2}', 4: 'rho_{m-2}', 5: 'rho_{m-2}', 6: 'rho_{m-2}', 7: 'rho_{m-2}', 8: 'rho_{m-2}', 9: 'rho_{m-2}', 10: 'rho_{m-2}', 11: 'rho_{m-2}'}
+(5) remainder after two terms divided by (c_{m-2}/2) rho_{m-2}^{k+6}  (should -> 1 when rho_{m-2} > |sigma_m|):
+    m=3  k=100: 1.000000033131; k=300: 1.000000000000; k=700: 1.000000000000
+    m=4  k=100: 0.999999943275; k=300: 0.999999999999; k=700: 0.999999999999
+    m=5  k=100: 0.999980410749; k=300: 0.999999999999; k=700: 0.999999999999
+    m=6  k=100: 0.999672291591; k=300: 0.999999999757; k=700: 0.999999999999
+    m=7  k=100: 0.998198899784; k=300: 0.999999977899; k=700: 0.999999999999
+    m=8  k=100: 0.994261750778; k=300: 0.999999549407; k=700: 0.999999999999
+(6) m=2 remainder / |sigma_2|^k (bounded, oscillating): 200:-0.3774681, 201:0.94861743, 202:-0.2301250, 203:-0.8012213, 400:0.88081059, 401:-0.6237722, 600:2589647103
+elapsed 6.3s
+(6-redo, prec 260) m=2 remainder / |sigma_2|^k (bounded, oscillating): 200:-0.3774681, 201:0.94861743, 202:-0.2301250, 203:-0.8012213, 400:0.88081059, 401:-0.6237722, 600:-0.8818851, 601:-0.0567687, 800:0.38007922, 1000:0.33846068

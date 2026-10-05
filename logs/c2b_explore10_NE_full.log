@@ -1,0 +1,4 @@
+R'(p,s,h0) inclusion-exclusion == brute force (s<=4, p<=2s): True
+sum_h0 R'(p,s,h0) == R(p,s) (s<=10): True
+N^E skeleton triple sum (R' by inclusion-exclusion) == DP, k<=30 q<=12: True
+elapsed 0.5s

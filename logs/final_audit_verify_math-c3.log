@@ -1,0 +1,53 @@
+#0 in 04_C3.md: count=1 ; in 报告.md: count=1
+#1 in 04_C3.md: count=1 ; in 报告.md: count=1
+#2 in 04_C3.md: count=1 ; in 报告.md: count=1
+#3 in 04_C3.md: count=1 ; in 报告.md: count=1
+#4 in 04_C3.md: count=1 ; in 报告.md: count=1
+#5 in 04_C3.md: count=1 ; in 报告.md: count=1
+#6 in 04_C3.md: count=1 ; in 报告.md: count=1
+#7 in 04_C3.md: count=1 ; in 报告.md: count=1
+#8 in 04_C3.md: count=1 ; in 报告.md: count=1
+
+===== v2_tail.py =====
+[a] recurrence G_m=(G_{m-1}+m x^2)/b_m reproduces U_fast_table, k<=30, m<=8: True
+[b] lambda = 50/27 = 1.8518518518518519
+[b] exact partial sum m<=400 = -1057.810872563562058551831161096832506970
+[c] m0=11 c1=0.456204 c2=1.970803 c2/(1-c1)=3.624161 max|G_m| (m0..400)=911.315271 at m=11
+[c] check-style rigorous tail bound = 3.529152152004226397750239019515061200565E-118  ; %.1e formatting -> 3.5e-118
+[c] bound <= 3.5e-118 ? False ; bound <= 3.53e-118 ? True
+[d] |G_400|=1.655173, c2'/(1-c1')=1.694048, tighter bound = 6.5604e-121
+[e] sum_{401<=m<=700} t^m G_m = 2.136627e-121 (actual tail magnitude ~ this)
+[e] S < 0 conclusion holds with either bound: True True
+
+===== v4_K_ratio.py =====
+x=0.95   lambda=0.058318     K/Gamma=1.020584  upper=1.045125  1<r<upper<2: True
+x=0.9    lambda=0.13717      K/Gamma=1.042024  upper=1.081000  1<r<upper<2: True
+x=0.8    lambda=0.39062      K/Gamma=1.087841  upper=1.128000  1<r<upper<2: True
+x=0.7    lambda=0.87464      K/Gamma=1.138382  upper=1.147000  1<r<upper<2: True
+x=0.69   lambda=0.94366      K/Gamma=1.143744  upper=1.147591  1<r<upper<2: True
+x=0.6    lambda=1.8519       K/Gamma=1.195007  upper=1.216263  1<r<upper<2: True  r-c3a value 1.195007  diff 2.9e-07
+x=0.5    lambda=4            K/Gamma=1.259766  upper=1.320000  1<r<upper<2: True
+x=0.4    lambda=9.375        K/Gamma=1.335900  upper=1.445898  1<r<upper<2: True  r-c3a value 1.335900  diff 2.7e-07
+x=0.3    lambda=25.926       K/Gamma=1.428866  upper=1.589176  1<r<upper<2: True  r-c3a value 1.428866  diff 4.8e-07
+x=0.21   lambda=85.304       K/Gamma=1.535091  upper=1.724674  1<r<upper<2: True  r-c3a value 1.535091  diff 3.3e-07
+x=0.1    lambda=900          K/Gamma=1.717420  upper=1.882266  1<r<upper<2: True  r-c3a value 1.717420  diff 3.5e-07
+x=0.05   lambda=7600         K/Gamma=1.835941  upper=1.945268  1<r<upper<2: True  r-c3a value 1.835941  diff 1.9e-07
+x=0.02   lambda=1.225e+05    K/Gamma=1.926706  upper=1.979216  1<r<upper<2: True
+x=0.01   lambda=9.9e+05      K/Gamma=1.961780  upper=1.989802  1<r<upper<2: True
+x=0.005  lambda=7.96e+06     K/Gamma=1.980459  upper=1.994950  1<r<upper<2: True
+all inside (1, upper) with upper<2: True
+
+===== v5_poles.py =====
+i=4 x_i=1/2 lambda=4 : Res G_m (m=i..i+5) nonzero: True ; residue law Res G_m = Res G_i (-x_i^-3)^(m-i)/(m-i)!: True ; eps*G_m(x_i+eps) ~ Res: True ; Res G_i = -215/4
+i=18 x_i=1/3 lambda=18 : Res G_m (m=i..i+5) nonzero: True ; residue law Res G_m = Res G_i (-x_i^-3)^(m-i)/(m-i)!: True ; eps*G_m(x_i+eps) ~ Res: True ; Res G_i = -12368441904903783416467/6830759936000
+
+===== reading-based checks (verify-math-c3) =====
+#0 c3b.md §9/§11: Lipshitz §3 not read; "D-finite⇔P-recursive 的定理编号均未引用"; 08_failed #14 "只用 D-finite 的标准定义"; logs/review_x2-dfinite_literature.log: intro only says §3 gives a P-recursive notion without the Remark 3.5 defect -> parenthetical equivalence exceeds verified evidence. REAL (imprecise)
+#1 code/c3b/explore_relations2.py p=PRIMES[1]=2147483629 runs konly (7+7) AND km (5+5 boxes); logs/c3b_explore_relations2.log kernel==predicted; boxes differ from check_c3b.py lists. REAL (minor)
+#2 v2_tail.py: check-style bound 3.529152e-118 > 3.5e-118; tighter bound 6.56e-121; actual tail ~2.1e-121; inequality true, cited bound value rounded down. REAL (minor)
+#3 check_c3a.py dp_stats = refined by ending type (notasc / asc_to[j]), no s-refined DP in check_c3a; '完整序列' defined only in notes/c2b.md. REAL (minor)
+#4 r-c3a-review.md §4 R2 has the bound/limit proof; report gives no pointer; c3a.md §5.6/§10 still say '整体为数值观察'/'K≠0 未完成'; v4_K_ratio.py confirms 1<K/Γ<upper<2, ->2. REAL (minor)
+#5 c3a.md §5 line 166 '凡涉及 S 时另设 λ∉Z_{≥0}'; v5_poles.py: x=1/2 (λ=4), x=1/3 (λ=18) G_m (m>=i) residues nonzero -> 𝒮 undefined there. REAL (minor)
+#6 c3b.md §5 proof 2 uses ℳ=ND∂_x−(N_xD−ND_x)=D²(R∂_x−R_x); clearing denominators is immediate, summary points to c3b §5; no logical gap. NOT REAL
+#7 c3a.md §2 states (β)_n≠0 as a precondition; report turns it into a claim for all β∈Q(x) (false for β∈Z_{≤0}). REAL (minor)
+#8 03_C2.md T2.2 is the y-refined G_m(x,y); T3.2 Laplace derivation only gives y=1 (= T1.3(1)); uses Lemma 1 via the PDE. REAL (minor)

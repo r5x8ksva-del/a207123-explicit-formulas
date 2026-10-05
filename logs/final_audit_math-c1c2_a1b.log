@@ -1,0 +1,5 @@
+PASS ext.anchor suffix-sum refined DP == naive refined DP (k<=40, m<=12); bad=[]
+PASS ext.T2.2.refined_lemma refined lemma 1 with the report conventions, 1<=k<=80, 0<=m<=24, all s; bad=[]
+PASS ext.T2.4.refined U_k(m,s) formula of T2.4 == DP, 0<=k<=80, 0<=m<=24, all s; bad=[]
+# elapsed 8.6s
+SUMMARY a1b pass=3 fail=0

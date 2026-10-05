@@ -1,0 +1,10 @@
+PASS r3-W-cong W_i ≡ 1 + sum_{l<=i} l (i)_l x^{3l+2} (mod b_i)，0<=i<=39（精确带余除法）
+PASS r3-Num-cong Num_q ≡ W_i·sum_{t=0}^{q-1-i} C(q,t)(q-1-i)_t x^{3t} (mod b_i)，全部 0<=i<q<=40（精确带余除法）
+PASS r3-Num-at-root q in {5,12,25,40}、全部 i<q：Num_q(x_i) > 0 且与 W_i(x_i)S_{q,i}(x_i) 相对误差 2.4e-58（60 位 Decimal，容差 1e-30）
+PASS r3-modcert-irred 模 p 证书（p=1000003，必要时 998244353）：对全部不可约 b_i（1<=i<1000）与 i<q<=1000，Num_q mod (p,b_i) 非零 ⇒ b_i∤Num_q（42.7s）
+PASS r3-modcert-red 模 p 证书：可约 b_{s^2(s-1)}（s=2..13，i=4..2028）的一次因子 1-sx 与二次因子 1+(s-1)x+s(s-1)x^2 都不整除 Num_q，i<q<=3000
+PASS r3-W-quad s=2..7：二次因子 1+(s-1)x+s(s-1)x^2 不整除 W_{s^2(s-1)}（模 p 非零）
+PASS r3-mod2 s 偶数：1+(s-1)x+s(s-1)x^2 ≡ 1+x (mod 2)；配合 A000262 恒为奇数（r2-A000262-odd）给出对一切 q 的证明
+# A000262(q) ≡ 0 (mod 3) 的 q（<400）前若干：[2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35]；全部 ≡2 (mod 3)：True
+# runtime 50.0s
+SUMMARY pass=7 fail=0

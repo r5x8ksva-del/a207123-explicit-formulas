@@ -1,0 +1,2 @@
+(a) L_A[Y_beta] == (1-t)^{-beta}, A in {1-x,1-x+x^3}, beta in {0,1,2,3,4,1/2,-3}, k<=30, t^N N<=12: True  5.4s
+(b) Ncal Humbert form == N(k,q) (k<=40, q<=14): True  1.1s

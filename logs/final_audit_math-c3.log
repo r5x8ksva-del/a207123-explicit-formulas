@@ -1,0 +1,75 @@
+# final-audit / math-c3 (04_C3.md) — run 2026-10-04 16:45:22
+# scripts: code/review/final-audit/math-c3/{a1_formal.py,a1_negctl.py,a2_analytic.py,a3_dfinite.py}
+## a1_formal.py
+PASS anchor :: U_fast_table(40,20) == reference U_list (m<=8, k<=40) == prompt table (k<=10,m<=6)
+PASS T3.1-1f1 :: Pochhammer/Laurent expansion of 1F1(1;1-lam;-t/x^3)/(1-x): no negative x-powers and == 1/P_m, k<=24, m<=8
+PASS T3.1-count :: [x^k]1/P_m == sum_s S(m+s,m)C(k+m-2s,k-3s) (k<=24,m<=8) == DFS count of legal sequences not ending in an ascent (k<=9,m<=3)
+PASS T3.1-kummer-gamma :: e^a 1F1(-lam;1-lam;-a) == (1-x) sum t^m/P_m and x^{-3} e^a sum_n (-a)^n/(n!(lam-n)) == sum t^m/P_m (Laurent, k<=24, m<=8)
+#   A=[1, -1] random gamma: identity=True valuation=True L_A[Y]=gamma True recursion==Y True
+#   A=[1, -1, 0, 1] random gamma: identity=True valuation=True L_A[Y]=gamma True recursion==Y True
+#   A=[1, 2, -1, 3] random gamma: identity=True valuation=True L_A[Y]=gamma True recursion==Y True
+PASS T3.2-general :: Phi_A=exp((t/x^3)(e^{vs}-1)), v=x^3/A, Psi=Phi_A gamma(x,t e^{vs}): x^3 t d_tPsi = A d_sPsi - tPsi exactly; ord_x[s^N t^m]>=3N-3m, ord[s^N]>=N; Y=A^{-1}L_s[Psi] satisfies L_A[Y]=gamma and equals the coefficient recursion of T3.2(i); 3 A x random integer gamma, k<=9, m<=3, s^N N<=6
+PASS T3.2-F :: F = (1/(1-x)) L_s[exp((t/x^3)(e^{us}-1))(1 + x^2 t e^{us}/(1-t e^{us})^2)] == DP U_k(m), k<=12, m<=4 (exact); identity/valuation also hold
+PASS T3.5-native-laplace :: 1+tF = A^{-1} L_s[exp((t/x^3)(e^{vs}-1))(A + x^2 t^2 e^{2vs}/(1-t e^{vs})^2)], A=1-x+x^3, v=x^3/A == 1+tF from DP, k<=12, m<=4
+PASS T3.2-Lcoef :: L_s[e^{jus}(e^{us}-1)^n/n!] = u^n/prod_{i=j}^{j+n}(1-iu) as series in u (j,n<=4, u^N N<=14)
+PASS T3.3(1)-1f1sum :: sum_j kappa_j (t^j/b_j) 1F1(1;j+1-lam;a), kappa_0=1, kappa_j=j x^2 (Pochhammer from lambda=x^-3-x^-2 as Laurent): no negative powers, sum == U_k(m) (k<=24, m<=8); term j>=1 == #legal seq ending with ascent to j, term 0 == #not ending in ascent (DFS, k<=9, m<=3)
+PASS T3.3(1)-kummerF :: F = x^{-3} e^a sum_n phi_n a^n/(lam-n), phi = e^{-tau}(1 - x^5 tau/(1+x^3 tau)^2): Laurent expansion == U_k(m), k<=20, m<=7
+PASS T3.3(2)-humbertF :: F = (1/(1-x))[1F1(1;1-lam;a) + x^2((1-t)^{-2}Phi_1(1,2;1-lam;-t/(1-t),a) - (1-t)^{-1}Phi_1(1,1;1-lam;-t/(1-t),a))] from the series definitions == U_k(m), k<=20, m<=8
+#   A=[1, -1] beta=1:ok; A=[1, -1] beta=2:ok; A=[1, -1] beta=1/2:ok; A=[1, -1] beta=-3:ok; A=[1, -1] beta=0:ok; A=[1, -1, 0, 1] beta=1:ok; A=[1, -1, 0, 1] beta=2:ok; A=[1, -1, 0, 1] beta=1/2:ok; A=[1, -1, 0, 1] beta=-3:ok; A=[1, -1, 0, 1] beta=0:ok; A=[1, 2, -1, 3] beta=1:ok; A=[1, 2, -1, 3] beta=2:ok; A=[1, 2, -1, 3] beta=1/2:ok; A=[1, 2, -1, 3] beta=-3:ok; A=[1, 2, -1, 3] beta=0:ok; A=[1, 0, 5, -2] beta=1:ok; A=[1, 0, 5, -2] beta=2:ok; A=[1, 0, 5, -2] beta=1/2:ok; A=[1, 0, 5, -2] beta=-3:ok; A=[1, 0, 5, -2] beta=0:ok
+PASS T3.3(2)-Ybeta :: coefficient form Y_beta (b_i^{(A)} = A - i x^3) satisfies (A-t)Y - x^3 t Y_t = (1-t)^{-beta} exactly, 4 A (incl. 1-x, 1-x+x^3) x beta in {1,2,1/2,-3,0}, k<=18, m<=8
+PASS T3.5-N-anchor :: N(k,q) by DFS over surjective legal words (k<=8) == binomial inversion sum_i (-1)^{q-i}C(q,i)U_k(i-1) (i.e. [y^q]Ncal = sum_i(-1)^{q-i}C(q,i)G_{i-1})
+PASS T3.5-subst :: 1+tF(x,t) = Ncal(x,t/(1-t))/(1-t) and Ncal = 1/(1+y) + y F(x,y/(1+y))/(1+y)^2, coefficientwise k<=20, n,q<=14
+PASS T3.5-pde :: Ncal PDE coefficientwise (k<=20, q<=14; boundary terms exactly at (0,0),(1,0),(3,0),(2,2)); (C3) triangle recurrence for k>=3,q>=1
+PASS T3.5-humbertN :: Ncal = [(A+x^2)1F1(1;-lam;yh) - 2x^2(1+y)Phi_1(1,1;-lam;-y,yh) + x^2(1+y)^2 Phi_1(1,2;-lam;-y,yh)]/(A(1+y)), yh=-y/((1+y)x^3), A=1-x+x^3: == N(k,q), k<=18, q<=9
+PASS T3.6-H :: h_k=(1-t)^{k+1}sum_m U_k(m)t^m has degree<=k-1 (t^k..t^20 vanish), == sum_q N(k,q)t^{q-1}(1-t)^{k-q} (k>=1) [=1+(Ncal(z(1-t),t/(1-t))-1)/t]; H-PDE z^k coefficients exact for k<=12; c5a form gives the same equations
+# elapsed 1.0s
+SUMMARY a1 pass=17 fail=0
+## a1_negctl.py (perturbed formulas must give False)
+kappa_j=j x^2 (true): True | kappa_j=j x^3 (perturbed): False
+Y_beta true b_i^(A): True | b_i from 1-x (perturbed): False | beta shift (1-t)^{-beta-1} wrong: False
+## a2_analytic.py
+#   S(3/5,-1/2) partial m<=400 = -1057.810872563562058551831161 ; c3a-type bound B=911.315 -> tail <= 3.529e-118 ; own bound C=1.69405 -> tail <= 6.560e-121
+PASS T3.4(3)-counterex :: exact partial sum m<=400 of S(3/5,-1/2) = -1057.81087256356205... ; rigorous tail <= 3.5292e-118 (c3a lemma bound) / 6.560e-121 (own bound); S<0 rigorously; partial sum > -1057.810873 (so the first-round "<= -1057.810873+3.5e-118" was indeed wrong-direction rounding)
+FINDING T3.4(3)-tailbound :: c3a-type rigorous tail bound = 3.529152e-118 > 3.5e-118 (report text rounds it down); sharper own bound 6.560e-121 keeps the inequality true
+PASS T3.4(3)-positivity :: g(w)=1+x^2 w/(1-w)^2 on w<=0 has min 0.910000 = 1-x^2/4 at w=-1 (x=3/5) > 0, so I>0
+PASS T3.4(4)-residue-exact :: W_m == W_i and W_m P_i' (m-i)! x^{3(m-i)} == (-1)^{m-i} W_i P_m' modulo the minimal polynomial of x_i (i=1,2,3 b_i irreducible; i=4: x_4=1/2), m=i..i+8  <=>  Res_{x_i}G_m = Res_{x_i}G_i (-x_i^{-3})^{m-i}/(m-i)!
+#   i=1 x_i=0.68232780382801932736 Res_{x_i}G_i=-1.5076770638769435395
+#   i=2 x_i=0.58975451230145838427 Res_{x_i}G_i=-4.6243354470166081705
+PASS T3.4(4)-residue-decimal :: Decimal(60): Res_{x_i}G_m (= W_m(x_i)/P_m'(x_i)) vs Res_{x_i}G_i(-x_i^{-3})^{m-i}/(m-i)!, i=1,2, m<=6: worst rel dev 1.3E-56
+#   i=1 circle |x-x_i|=0.030: min_{v<=400,circle}|b_v|=7.009e-02, sup_m<=400 max|G_m|=623.5513 (m>=100: 1.5240; 1/(x_i-delta)=1.5330); min_{50<=v<=400} min|b_v|/v=0.2706
+#      t=-0.50: contour integral 3.637775743226e+00+5.55e-17i  vs  Res G_i t^i e^{-t/x_i^3} = 3.637775743226e+00  (rel 1.5e-17)
+#      t=+0.60: contour integral -1.368328806345e-01+0.00e+00i  vs  Res G_i t^i e^{-t/x_i^3} = -1.368328806345e-01  (rel 8.1e-16)
+#      t=-0.90: contour integral 2.306505529833e+01+8.88e-16i  vs  Res G_i t^i e^{-t/x_i^3} = 2.306505529833e+01  (rel 3.9e-17)
+#   i=2 circle |x-x_i|=0.030: min_{v<=400,circle}|b_v|=8.591e-02, sup_m<=400 max|G_m|=25703.4603 (m>=100: 1.7724; 1/(x_i-delta)=1.7865); min_{50<=v<=400} min|b_v|/v=0.1666
+#      t=-0.50: contour integral -1.323153783004e+01+4.44e-16i  vs  Res G_i t^i e^{-t/x_i^3} = -1.323153783004e+01  (rel 2.1e-15)
+#      t=+0.60: contour integral -8.933191621583e-02-1.04e-17i  vs  Res G_i t^i e^{-t/x_i^3} = -8.933191621584e-02  (rel 6.1e-15)
+#      t=-0.90: contour integral -3.013367640978e+02+2.84e-14i  vs  Res G_i t^i e^{-t/x_i^3} = -3.013367640978e+02  (rel 2.6e-15)
+#   i=3 circle |x-x_i|=0.020: min_{v<=400,circle}|b_v|=6.793e-02, sup_m<=400 max|G_m|=530200.7414 (m>=100: 1.9179; 1/(x_i-delta)=1.9359); min_{50<=v<=400} min|b_v|/v=0.1282
+#      t=-0.50: contour integral 4.946125794593e+01+1.78e-15i  vs  Res G_i t^i e^{-t/x_i^3} = 4.946125794593e+01  (rel 6.2e-15)
+#      t=+0.60: contour integral -6.907324205715e-02+2.78e-17i  vs  Res G_i t^i e^{-t/x_i^3} = -6.907324205715e-02  (rel 2.0e-14)
+#      t=-0.90: contour integral 3.842623051882e+03+4.55e-13i  vs  Res G_i t^i e^{-t/x_i^3} = 3.842623051882e+03  (rel 6.3e-15)
+PASS T3.4(4)-uniform-bound :: on circles |x-x_i|=delta (i=1,2,3) no b_v (v<=400) vanishes, sup_m |G_m| stays bounded (tends to ~1/|x|), |b_v|>=c v for large v: the uniform-boundedness argument is consistent
+PASS T3.4(4)-contour :: trapezoid contour integral of S(x,t)=sum_m t^m G_m(x) around x_i (i=1,2,3; t=-0.5,0.6,-0.9) == Res_{x_i}G_i t^i e^{-t/x_i^3} (rel < 1e-9)
+PASS anchor-hk :: (C6) recurrence from h_0=h_1=1, h_2=1+t reproduces (1-t)^{k+1} sum_m U_k(m) t^m (DP), k<=30
+#   (x,t,K)=(0.3,-0.5,6): |I - sum_{k<K} f_k x^k| = 3.4323e-04 <= (x^K/|t|) sup|r_K| = 8.5568e-04
+#   (x,t,K)=(0.3,-0.5,9): |I - sum_{k<K} f_k x^k| = 1.2074e-05 <= (x^K/|t|) sup|r_K| = 3.2015e-05
+#   (x,t,K)=(0.25,-0.3333,12): |I - sum_{k<K} f_k x^k| = 1.7444e-07 <= (x^K/|t|) sup|r_K| = 5.7504e-07
+#   (x,t,K)=(0.4,-2,7): |I - sum_{k<K} f_k x^k| = 1.1298e-04 <= (x^K/|t|) sup|r_K| = 1.5423e-04
+PASS T3.4(4)-errbound :: explicit error bound with r_K = f_{K-1} + tau(f'_{K-3} + x f'_{K-2} + x^2 f'_{K-1}) holds at 4 (x,t,K) (float quadrature; matches the 4 reviewer points)
+PASS T3.4(5)-lambertW :: W_L(1/e) = 0.278464542761 (report: approx 0.2785); r e^{1+r}<1 <=> r < W_L(1/e)
+#   K/Gamma(-lam) = 1 + lam x^5 J(x): x=0.95:1.020584, x=0.90:1.042024, x=0.70:1.138382, x=0.60:1.195007, x=0.40:1.335900, x=0.30:1.428866, x=0.21:1.535091, x=0.10:1.717420, x=0.05:1.835941, x=0.02:1.926706
+PASS T3.4(2)-K-bounds :: 1 < 1+lam x^5 J < 2 at 10 x in [0.02,0.95], increasing towards 2 as x->0; matches reviewer values 1.195007 ... 1.835941
+PASS T3.4(2)-tricomi :: J(x) == x^{-6} U(2,lam+2,x^{-3}) numerically at x=0.4 (rel 3.8e-16); Q(-lam)=J by definition
+PASS T3.4(5)-small-t :: closed-form gap I-S at (21/100,-1/20) = 3.814017765530e-62 (double precision; report: 3.81401776553037367e-62)
+PASS T3.4(5)-bigS :: S(21/100,-1/2) = -9.729490e+44 (exact partial sum m<=500, tail <= 2.4e-150): |S| > 1e44 rigorously
+PASS T3.4(5)-fk-growth :: |f_k(-1/2)|^{1/k} = 1.66881 (k=75), 2.03555 (k=150), ratio 1.2198 (report: 1.669, 2.036, 1.22)
+# elapsed 1.8s
+SUMMARY a2 pass=14 fail=0
+## a3_dfinite.py
+PASS T3.8-log-vs-formula :: every box in verify_all_final.log satisfies ker == pred == gens == report formula (with its boundary conditions); C3B-E2: 8 boxes (2 with dim 0); C3B-E2S: 3 boxes (1 with dim 0); C3B-E3B: 8 boxes (2 with dim 0); C3B-E3S: 3 boxes (1 with dim 0); U total 11 (dim0: 3), N total 11 (dim0: 3)
+PASS T3.8-konly-log :: C3B-E1 / C3B-E3A parameter lists == report (6,6,6),(10,3,6),(3,10,6),(4,4,12),(15,1,8),(1,15,8); all full column rank
+#   U(3, 1, 1):1; U(3, 1, 3):6; U(5, 2, 2):18; U(6, 2, 3):48; U(4, 3, 4):60; U(6, 4, 2):48; U(2, 6, 4):0; U(6, 0, 4):0; U(4, 2, 3, 2):32; U(5, 3, 1, 3):54; U(3, 2, 5, 0):0; N(3, 2, 1):1; N(3, 2, 3):6; N(5, 3, 2):18; N(6, 3, 3):48; N(4, 4, 4):60; N(6, 4, 2):36; N(3, 1, 3):0; N(2, 4, 3):0; N(4, 3, 3, 2):32; N(5, 4, 1, 3):54; N(3, 3, 5, 0):0
+PASS T3.8-recompute :: own mod-2147483587 elimination: kernel dimension == report formula and unknown/equation counts == log, for all 22 (k,m)/(k,q)-coefficient boxes in verify_all
+PASS T3.8-konly-recompute :: own mod-2147483587 elimination: the 6 k-only parameter sets are full column rank for U and for N
+# elapsed 35.8s
+SUMMARY a3 pass=4 fail=0

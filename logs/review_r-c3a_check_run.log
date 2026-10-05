@@ -1,0 +1,37 @@
+PASS c3a-anchor height DP == prompt table (k<=10,m<=6) == multichain (k<=7,m<=4); refined DP (not-ascent / ascent-to-j) totals == height DP (k<=40,m<=20) and == DFS enumeration (k<=7,m<=4)
+PASS c3a-pde-F (1-x-t)F - x^3 t F_t = 1 + x^2 t/(1-t)^2 holds coefficientwise for the DP table, k<=60, m<=41
+PASS c3a-lap-general general principle: Y=(1/A)L_s[exp((t/x^3)(e^{vs}-1)) gamma(x,t e^{vs})], v=x^3/A, solves (A-t)Y-x^3 t Y_t=gamma; 6 random integer gamma, A in {1-x, 1-x+x^3}, k<=18, m<=9 (exact)
+PASS c3a-lap-operator key identity (1-x-t)Psi - x^3 t dPsi/dt = (1-x)(Psi - dPsi/ds) for Psi=exp((t/x^3)(e^{us}-1))g(t e^{us}), all coefficients x^k t^m s^N with k<=30, m<=16 (exact)
+PASS c3a-lap-F F = (1/(1-x)) L_s[exp((t/x^3)(e^{us}-1))(1 + x^2 t e^{us}/(1-t e^{us})^2)], u=x^3/(1-x): direct exact expansion == DP U_k(m) for k<=60, m<=30 (17.4s)
+PASS c3a-lap-naive naive implementation (ordinary s-series, Fraction, multiply [s^N] by N!) == DP for k<=15, m<=6; valuation bounds ord_x [s^N t^m]Psi >= 3N-3m and ord_(x,t) [s^N]Psi >= N hold in that range (well-definedness)
+PASS c3a-lap-coeff coefficient corollary [t^m]F = 1/P_m + x^2 sum_{j=1}^m j/prod_{i=j}^m b_i == DP, k<=60, m<=30
+PASS c3a-1f1-const sum_m t^m/P_m = 1F1(1;1-lambda;-t/x^3)/(1-x): Pochhammer expansion in Q(x) (as Laurent series) has no negative powers and equals #legal sequences not ending in an ascent, k<=40, m<=20
+PASS c3a-1f1-exact exact rational identity (-1)^n x^{-3n}/((1-x)(1-lambda)_n) = 1/P_n (polynomial cross-check), n<=25; hence each t^n coefficient lies in Q(x) and in Z[[x]]
+PASS c3a-1f1-stirling Stirling expansion of the 1F1 part: [x^k t^m] = sum_s S(m+s,m) C(k+m-2s,k-3s) == not-ascent counts, k<=40, m<=20
+PASS c3a-kummer Kummer: 1F1(1;1-lambda;a) = e^a 1F1(-lambda;1-lambda;-a): identity in Q(lambda)[[a]] (n<=30, exact via degree argument) and the Kummer form expanded in Q(x)[[t]] == not-ascent counts, k<=40, m<=20
+PASS c3a-gamma lower-incomplete-gamma form sum_m t^m/P_m = x^{-3} e^a sum_n (-a)^n/(n!(lambda-n)), a=-t/x^3, expanded in Q(x)[[t]] == not-ascent counts, k<=40, m<=20
+PASS c3a-1f1-sum F = sum_j c_j t^j/b_j 1F1(1;j+1-lambda;-t/x^3): term j=0 == not-ascent counts, term j>=1 == #sequences ending with an ascent to value j, total == U_k(m); k<=40, m<=20
+PASS c3a-kummer-F Kummer form of the whole table F = x^{-3} e^a sum_n phi_n a^n/(lambda-n), phi(tau)=e^{-tau}(1 - x^5 tau/(1+x^3 tau)^2), expanded in Q(x)[[t]] == U_k(m), k<=40, m<=20
+PASS c3a-1f1-shift 1F1(1;-lambda;-t/x^3) = 1 + t sum_m t^m/P_m (constant part of Ntilde = 1 + tF), k<=40, n<=20
+PASS c3a-humbert-general Humbert solution: Y_beta=(1/A)(1-t)^{-beta} Phi_1(1,beta;1-A/x^3;-t/(1-t),-t/x^3) solves (A-t)Y-x^3 t Y_t=(1-t)^{-beta}; A in {1-x,1-x+x^3}, beta in {0,1,2,1/2,-3}, k<=24, t^N N<=10 (Phi_1 and Pochhammers expanded from the definitions)
+PASS c3a-humbert-F closed form F = (1/(1-x))[1F1(1;1-lam;a) + x^2((1-t)^{-2}Phi_1(1,2;1-lam;-t/(1-t),a) - (1-t)^{-1}Phi_1(1,1;1-lam;-t/(1-t),a))] == DP (k<=40, m<=16); untransformed form e^a/(1-x)[1F1(-lam;1-lam;-a)+x^2(Phi_1(-lam,2;1-lam;t,-a)-Phi_1(-lam,1;1-lam;t,-a))] == DP (k<=30, m<=12)
+PASS c3a-humbert-coeff coefficient form of the Humbert closed form: G_M = 1/P_M + x^2 sum_{N<=M} P_N^{-1} sum_{m<=N} C(N,m) x^{3m} [(m+1)! C(M-N+m+1,M-N) - m! C(M-N+m,M-N)] == DP, k<=60, M<=30
+PASS c3a-N-def N(k,q) by DFS over surjective legal words (k<=9) == binomial inversion of the DP table; N(k,q)=0 for q>k (k<=30)
+PASS c3a-N-subst substitution 1 + t F(x,t) = Ncal(x, t/(1-t))/(1-t) with N from DFS (k<=9) and U from DP, n<=41
+PASS c3a-N-pde Ncal PDE (1 - x(1+y) + x^3(1-y^2))N - x^3 y(1+y)^2 N_y = 1 - x + x^3 + x^2 y^2, coefficientwise k,q<=30
+PASS c3a-N-rec triangle recurrence N(k,q)=N(k-1,q-1)+N(k-1,q)+(q-1)[N(k-3,q-2)+2N(k-3,q-1)+N(k-3,q)] (k>=3,q>=1), k<=30
+PASS c3a-N-lap native Laplace representation of Ntilde=1+tF (A=1-x+x^3) expanded exactly == 1+tF(DP), and Ncal(x,y)=Ntilde(x,y/(1+y))/(1+y) == N(k,q) (DP inversion k,q<=30; DFS k<=9) (1.3s)
+PASS c3a-N-humbert Humbert form Ncal(x,y) = [(A+x^2) 1F1(1;-lam;yh) - 2x^2(1+y)Phi_1(1,1;-lam;-y,yh) + x^2(1+y)^2 Phi_1(1,2;-lam;-y,yh)]/(A(1+y)), yh=-y/((1+y)x^3), A=1-x+x^3: expanded from the definitions == N(k,q) (DP inversion), k<=40, q<=14
+PASS c3a-H-poly h_k(t) := (1-t)^{k+1} sum_m U_k(m) t^m is a polynomial of degree <= k-1 (coefficients t^k..t^40 vanish, k<=30) and h_k = sum_q N(k,q) t^{q-1}(1-t)^{k-q}, i.e. H(z,t) = 1 + (Ncal(z(1-t), t/(1-t)) - 1)/t (k<=30; DFS-N k<=9)
+PASS c3a-H-pde H PDE (1 - z - z^3 t(1-t))H - z^4 t(1-t) H_z - z^3 t(1-t)^2 H_t = 1 + z^2 t, coefficient of z^k exact in t, k<=30
+PASS c3a-H-rec (C6) recurrence h_k = h_{k-1} + t(1-t)[(1-t)h'_{k-3} + (k-2)h_{k-3}] from h_0=h_1=1, h_2=1+t reproduces (1-t)^{k+1} sum_m U_k(m) t^m from the DP, k<=30
+PASS c3a-analytic-counterex draft analytic claim F = x^{-3} int_0^inf ... refuted at (x,t)=(3/5,-1/2): sum_m t^m G_m(x) <= -1057.810873 + 3.5e-118 < 0 (exact partial sum m<=400 + rigorous tail bound) while the integral is > 0
+PASS c3a-num-gamma [NUM] Gamma(-lambda) via reflection+Stirling == Prym decomposition sum_n (-1)^n/(n!(n-lambda)) + E_{lambda+1}(1) at lambda = 50/27, 75/8, 700/27 (60 digits, tol 1e-45 relative)
+PASS c3a-num-gap-const [NUM] I0 - sum_m t^m/P_m = x^{-3} Gamma(-lambda) e^a a^lambda at (x,t)=(3/5,-1/2),(2/5,-3/10),(3/10,-1/10); worst residual 2.8E-59 (tol 1e-45, relative to max(1,|gap|); 60-digit decimal quadrature)
+PASS c3a-num-gap-full [NUM] I - sum_m t^m G_m(x) = x^{-3} K(x) e^a a^lambda at the same 3 points; worst residual 3.0E-44 (tol 1e-40)
+PASS c3a-num-asym [NUM] x->0+ asymptotics at (x,t)=(21/100,-1/2): |I - sum_{k<150} f_k(t) x^k| = 6.0E-56 < 1e-50 (f_k exact from the PDE, == DP h_k/(1-t)^{k+1} for k<=30), while |sum_m t^m G_m(x)| > 1e44 rigorously (it is -9.729E+44)
+PASS c3a-num-small-t [NUM] at (x,t)=(21/100,-1/20): I - sum_m t^m G_m(x) = 3.8140E-62 matches x^{-3}K e^a a^lambda with relative error 3.0E-38 (tol 1e-25; I,S with 100 digits, K with 170 digits)
+PASS c3a-num-residue [NUM] residue law Res_{x_i}G_m = Res_{x_i}G_i (-x_i^{-3})^{m-i}/(m-i)! for i<=5, m<=i+8 (so Res_{x_i} sum_m t^m G_m = Res_{x_i}G_i t^i e^{-t/x_i^3}), Res_{x_i}G_i<0; worst rel dev 5.3E-47 (tol 1e-40, 60 digits)
+# elapsed 70.2s
+SUMMARY c3a pass=34 fail=0
+exit=0 wall=71.94123792648315
