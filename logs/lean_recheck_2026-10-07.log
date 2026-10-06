@@ -1,0 +1,28 @@
+# 第四轮收尾：单独重检三个在最后一次通过后又被改过的文件（本地 2026-10-07 00:15:49）
+
+## A207123/HStruct.lean
+[lean_one 启动前：AVAIL=5043 COMMIT=16249 LIMIT=32429 HEADROOM=16180 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/HStruct.lean:268:72: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  0 - 0
+in the target expression
+  ↑1! * ((-1) ^ 0 * ↑(Nat.choose 0 1) * ↑(N 0 0) + (-1) ^ 1 * ↑(Nat.choose 0 0) * ↑(N 0 0)) = -1
+
+case right
+⊢ ↑1! * ((-1) ^ 0 * ↑(Nat.choose 0 1) * ↑(N 0 0) + (-1) ^ 1 * ↑(Nat.choose 0 0) * ↑(N 0 0)) = -1
+[lean_one 内存：PEAK=8127 MINHEAD=6855 KILLED=0 REASON=；用时 464s]
+[lean_one exit code 1]
+
+## A207123/NumStruct.lean
+[lean_one 启动前：AVAIL=5956 COMMIT=16477 LIMIT=32429 HEADROOM=15952 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+[lean_one 内存：PEAK=8109 MINHEAD=6873 KILLED=0 REASON=；用时 34s]
+[lean_one exit code 0]
+
+## A207123/NearDiag.lean
+[lean_one 启动前：AVAIL=5979 COMMIT=16429 LIMIT=32429 HEADROOM=16000 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+[lean_one 内存：PEAK=8137 MINHEAD=6838 KILLED=0 REASON=；用时 38s]
+[lean_one exit code 0]
+
+## A207123/HStruct.lean（修复第 268 行的改写之后，本地 2026-10-07 00:27:33）
+[lean_one 启动前：AVAIL=5948 COMMIT=16401 LIMIT=32429 HEADROOM=16028 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+[lean_one 内存：PEAK=8130 MINHEAD=6969 KILLED=0 REASON=；用时 31s]
+[lean_one exit code 0]

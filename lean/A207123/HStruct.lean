@@ -2,7 +2,29 @@ import A207123.HNum
 import A207123.Poly
 
 /-!
-# 报告 T5.3：`h_k(t)` 的结构（草稿，文件头稍后补全）
+# 报告 T5.3(1)–(5)：`h_k(t)` 的结构
+
+`h_k` 是 `HNum.lean` 的 `hpoly k`（`Σ_m U_k(m)t^m = h_k(t)/(1−t)^{k+1}`），`u_k` 是 `Poly.lean` 的 `upoly k`
+（T1.2 中唯一的插值多项式，`u_k(−j)` 就是报告的 `U_k(−j)`）。
+
+* **T5.3(1)**：`hpoly_eval_zero_eq_one`（`h_k(0) = 1`）、`hpoly_eval_one_two`（`h_k(1) = 2`，`k ≥ 2`）、
+  `hpoly_coeff_one`（`[t¹]h_k = R_k − k − 1`）与 `hpoly_coeff_one_pos`、`hpoly_coeff_one_eq_zero`、母函数
+  `hpoly_coeff_one_gf`；反演式 `hpoly_coeff_eq_sum`；`t = 1` 处的各阶导数 `iterate_derivative_hpoly_eval_one`
+  （`k ≥ 1`；`k = 0` 的反例 `iterate_derivative_hpoly_eval_one_k_zero`）与 `hpoly_derivative_eval_one`；
+  N 行多项式 `nrowPoly`（`k ≥ 1`）与 `nrowPoly_eval`、`nrowPoly_eq`。
+* **T5.3(2)**：`Gneg j`（`G_{−j}(x) = Σ_k u_k(−j)x^k`）：`Gneg_one`、`Gneg_succ`、`Gneg_isPoly`（`3j−3` 次多项式）
+  与最高三项 `coeff_gnegPoly_top`、`coeff_gnegPoly_top_one`、`coeff_gnegPoly_top_two`；`upoly_eval_neg_eq_zero`
+  （`1 ≤ j ≤ ⌊(k+2)/3⌋` 时 `u_k(−j) = 0`）、`upoly_eval_neg_ne_zero`、`prod_dvd_upoly`、`upoly_three_mul_eval`。
+  「`U_k` 没有其他负整数零点」是有限范围的计算核对，没有形式化。
+* **T5.3(3)**：互反引理 `upoly_eval_neg_recip`；`natDegree_hpoly`（`deg h_k = ⌊2k/3⌋`）与首项系数
+  `leadingCoeff_hpoly_three_mul`、`leadingCoeff_hpoly_three_mul_add_one`、`leadingCoeff_hpoly_three_mul_add_two`、
+  符号 `leadingCoeff_hpoly_sign`。第二首项的闭式没有形式化。
+* **T5.3(4)**：`sum_neg_one_pow_N`（`Σ_q (−1)^q N(k,q) = u_k(−2)`）、`sum_neg_one_pow_N_eq_zero`（`k ≥ 4`）、
+  `sum_neg_one_pow_N_small`（`k = 1, 2, 3`）；`rootMultiplicity_nrowPoly`、`rootMultiplicity_nrowPoly_ceil`
+  （`n_k` 在 `z = −1` 处的根重数恰为 `⌈k/3⌉ − 1`）。第一个等号 `μ(0̂,1̂) = Σ_q (−1)^q N(k,q)`（Philip Hall 定理）
+  没有形式化。
+* **T5.3(5)**：`hpoly_pos_of_mem_Icc`、`hpoly_ne_zero_of_mem_Icc`（`h_k` 在 `[0,1]` 上没有根；另有
+  `hpoly_aeval_eq_tsum`）。「每个固定位置的系数最终为正」与「`Σ_k h_k(t)z^k` 的收敛半径为 0」没有形式化。
 -/
 
 namespace A207123
@@ -264,10 +286,12 @@ theorem iterate_derivative_hpoly_eval_one_k_zero :
       (-1) ^ e * ((0 - 1 - e).choose (1 - e) : ℚ) * (N 0 (0 - e) : ℚ)) = -1 := by
   constructor
   · rw [Function.iterate_one, hpoly_zero, derivative_one, eval_zero]
-  · rw [Finset.sum_range_succ, Finset.sum_range_one,
-      show (0 : ℕ) - 1 - 0 = 0 from rfl, show (1 : ℕ) - 0 = 1 from rfl, show (0 : ℕ) - 0 = 0 from rfl,
-      show (0 : ℕ) - 1 - 1 = 0 from rfl, show (1 : ℕ) - 1 = 0 from rfl,
-      show (0 : ℕ) - 1 = 0 from rfl, N_init.1]
+  · -- `rw [show (0 : ℕ) - 1 - 0 = 0 from rfl]` 会把目标里所有定义上等于 0 的自然数减法（`0 − 0`、`0 − 1`、
+    -- `1 − 1`、`0 − 1 − 1`）一并改写成 0（数字字面量的减法按定义相等匹配），之后不能再逐个改写它们
+    -- （2026-10-07 实测：原先接着写 `show (0 : ℕ) - 0 = 0 from rfl`，报「找不到这个式子」）。
+    rw [Finset.sum_range_succ, Finset.sum_range_one,
+      show (0 : ℕ) - 1 - 0 = 0 from rfl, show (1 : ℕ) - 0 = 1 from rfl, N_init.1,
+      show Nat.choose 0 1 = 0 from rfl, show Nat.choose 0 0 = 1 from rfl]
     norm_num
 
 /-- 报告 T5.3(1) 的 N 行多项式 `n_k(z) := Σ_{q=1}^{k} N(k,q)·z^{q−1}`（`k ≥ 1` 时 `N(k,0) = 0`，

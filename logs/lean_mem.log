@@ -22,3 +22,66 @@
 2026-10-05 15:56:58 | A207123/HStruct.lean | exit 1 | 35s | PEAK=8113 MINHEAD=9291 KILLED=0 REASON=
 2026-10-05 15:59:07 | A207123/SmallK.lean | exit 0 | 30s | PEAK=8040 MINHEAD=9638 KILLED=0 REASON=
 2026-10-05 16:03:22 | A207123/HStruct.lean | exit 0 | 40s | PEAK=8123 MINHEAD=9539 KILLED=0 REASON=
+2026-10-06 16:23:34 | A207123/HStruct.lean | exit 1 | 464s | PEAK=8127 MINHEAD=6855 KILLED=0 REASON=
+2026-10-06 16:24:09 | A207123/NumStruct.lean | exit 0 | 34s | PEAK=8109 MINHEAD=6873 KILLED=0 REASON=
+2026-10-06 16:24:49 | A207123/NearDiag.lean | exit 0 | 38s | PEAK=8137 MINHEAD=6838 KILLED=0 REASON=
+2026-10-06 16:28:05 | A207123/HStruct.lean | exit 0 | 31s | PEAK=8130 MINHEAD=6969 KILLED=0 REASON=
+2026-10-06 16:29:02 | A207123.Basic | exit 1 | 2s | PEAK=0 MINHEAD=15057 KILLED=0 REASON=
+2026-10-06 16:29:05 | A207123.Reduction | exit 1 | 2s | PEAK=0 MINHEAD=15018 KILLED=0 REASON=
+2026-10-06 16:29:08 | A207123.Formula | exit 1 | 2s | PEAK=0 MINHEAD=14970 KILLED=0 REASON=
+2026-10-06 16:29:12 | A207123.Binomial | exit 1 | 3s | PEAK=0 MINHEAD=15001 KILLED=0 REASON=
+2026-10-06 16:29:17 | A207123.Multichain | exit 1 | 4s | PEAK=0 MINHEAD=15008 KILLED=0 REASON=
+2026-10-06 16:29:21 | A207123.Recurrence | exit 1 | 3s | PEAK=0 MINHEAD=15008 KILLED=0 REASON=
+2026-10-06 16:29:26 | A207123.Ascent | exit 1 | 3s | PEAK=0 MINHEAD=14989 KILLED=0 REASON=
+2026-10-06 16:29:31 | A207123.NonDFinite | exit 1 | 4s | PEAK=0 MINHEAD=14982 KILLED=0 REASON=
+2026-10-06 16:29:35 | A207123.DFinite | exit 1 | 3s | PEAK=0 MINHEAD=14950 KILLED=0 REASON=
+2026-10-06 16:29:40 | A207123.OreRel | exit 1 | 4s | PEAK=0 MINHEAD=14952 KILLED=0 REASON=
+2026-10-06 16:29:44 | A207123.OreRelN | exit 1 | 3s | PEAK=0 MINHEAD=14933 KILLED=0 REASON=
+2026-10-06 16:29:49 | A207123.Poly | exit 1 | 4s | PEAK=0 MINHEAD=14971 KILLED=0 REASON=
+2026-10-06 16:29:53 | A207123.HNum | exit 1 | 3s | PEAK=0 MINHEAD=14990 KILLED=0 REASON=
+2026-10-06 16:29:58 | A207123.DFiniteN | exit 1 | 4s | PEAK=0 MINHEAD=14979 KILLED=0 REASON=
+2026-10-06 16:30:02 | A207123.NoKOnlyN | exit 1 | 3s | PEAK=0 MINHEAD=14932 KILLED=0 REASON=
+2026-10-06 16:30:07 | A207123.OreDim | exit 1 | 4s | PEAK=0 MINHEAD=14899 KILLED=0 REASON=
+2026-10-06 16:30:11 | A207123.Gosper | exit 1 | 3s | PEAK=0 MINHEAD=14910 KILLED=0 REASON=
+2026-10-06 16:30:16 | A207123.Growth | exit 1 | 3s | PEAK=0 MINHEAD=14883 KILLED=0 REASON=
+2026-10-06 16:30:21 | A207123.SmallK | exit 1 | 4s | PEAK=0 MINHEAD=14916 KILLED=0 REASON=
+2026-10-06 16:30:26 | A207123.Parity | exit 1 | 4s | PEAK=0 MINHEAD=14883 KILLED=0 REASON=
+2026-10-06 16:30:31 | A207123.NPDE | exit 1 | 4s | PEAK=0 MINHEAD=14846 KILLED=0 REASON=
+2026-10-06 16:30:35 | A207123.Coeffs | exit 1 | 3s | PEAK=0 MINHEAD=14873 KILLED=0 REASON=
+2026-10-06 16:30:40 | A207123.HGen | exit 1 | 4s | PEAK=0 MINHEAD=14851 KILLED=0 REASON=
+2026-10-06 16:30:45 | A207123.NumStruct | exit 1 | 3s | PEAK=0 MINHEAD=14828 KILLED=0 REASON=
+2026-10-06 16:30:49 | A207123.NearDiag | exit 1 | 3s | PEAK=0 MINHEAD=14807 KILLED=0 REASON=
+2026-10-06 16:32:07 | A207123.HStruct | exit 1 | 76s | PEAK=0 MINHEAD=13422 KILLED=0 REASON=
+2026-10-06 16:40:18 | +A207123.Basic | exit 0 | 430s | PEAK=0 MINHEAD=13293 KILLED=0 REASON=
+2026-10-06 16:41:34 | +A207123.Basic | exit 0 | 29s | PEAK=0 MINHEAD=13251 KILLED=0 REASON=
+2026-10-06 16:43:01 | +A207123.Basic | exit 1 | 3s | PEAK=0 MINHEAD=13036 KILLED=0 REASON=
+2026-10-06 16:54:38 | +A207123.Basic | exit 0 | 612s | PEAK=0 MINHEAD=11909 KILLED=0 REASON=
+2026-10-06 17:34:00 | A207123/Basic.lean -o .lake/build/lib/lean/A207123/Basic.olean -i .lake/build/lib/lean/A207123/Basic.ilean | exit 0 | 427s | PEAK=8042 MINHEAD=4487 KILLED=0 REASON=
+2026-10-06 17:34:45 | A207123/Reduction.lean -o .lake/build/lib/lean/A207123/Reduction.olean -i .lake/build/lib/lean/A207123/Reduction.ilean | exit 0 | 43s | PEAK=8048 MINHEAD=4712 KILLED=0 REASON=
+2026-10-06 17:35:18 | A207123/Formula.lean -o .lake/build/lib/lean/A207123/Formula.olean -i .lake/build/lib/lean/A207123/Formula.ilean | exit 0 | 31s | PEAK=8049 MINHEAD=4393 KILLED=0 REASON=
+2026-10-06 17:35:51 | A207123/Binomial.lean -o .lake/build/lib/lean/A207123/Binomial.olean -i .lake/build/lib/lean/A207123/Binomial.ilean | exit 0 | 32s | PEAK=8183 MINHEAD=4323 KILLED=0 REASON=
+2026-10-06 17:36:16 | A207123/Multichain.lean -o .lake/build/lib/lean/A207123/Multichain.olean -i .lake/build/lib/lean/A207123/Multichain.ilean | exit 0 | 24s | PEAK=8027 MINHEAD=4480 KILLED=0 REASON=
+2026-10-06 17:36:50 | A207123/Recurrence.lean -o .lake/build/lib/lean/A207123/Recurrence.olean -i .lake/build/lib/lean/A207123/Recurrence.ilean | exit 0 | 33s | PEAK=8067 MINHEAD=4542 KILLED=0 REASON=
+2026-10-06 17:37:18 | A207123/Ascent.lean -o .lake/build/lib/lean/A207123/Ascent.olean -i .lake/build/lib/lean/A207123/Ascent.ilean | exit 0 | 27s | PEAK=8057 MINHEAD=4548 KILLED=0 REASON=
+2026-10-06 17:37:54 | A207123/NonDFinite.lean -o .lake/build/lib/lean/A207123/NonDFinite.olean -i .lake/build/lib/lean/A207123/NonDFinite.ilean | exit 0 | 35s | PEAK=8110 MINHEAD=4677 KILLED=0 REASON=
+2026-10-06 17:38:32 | A207123/DFinite.lean -o .lake/build/lib/lean/A207123/DFinite.olean -i .lake/build/lib/lean/A207123/DFinite.ilean | exit 0 | 37s | PEAK=8102 MINHEAD=4744 KILLED=0 REASON=
+2026-10-06 17:39:04 | A207123/OreRel.lean -o .lake/build/lib/lean/A207123/OreRel.olean -i .lake/build/lib/lean/A207123/OreRel.ilean | exit 0 | 31s | PEAK=8085 MINHEAD=4705 KILLED=0 REASON=
+2026-10-06 17:39:43 | A207123/OreRelN.lean -o .lake/build/lib/lean/A207123/OreRelN.olean -i .lake/build/lib/lean/A207123/OreRelN.ilean | exit 0 | 37s | PEAK=8113 MINHEAD=4699 KILLED=0 REASON=
+2026-10-06 17:40:11 | A207123/Poly.lean -o .lake/build/lib/lean/A207123/Poly.olean -i .lake/build/lib/lean/A207123/Poly.ilean | exit 0 | 27s | PEAK=8049 MINHEAD=4717 KILLED=0 REASON=
+2026-10-06 17:40:48 | A207123/HNum.lean -o .lake/build/lib/lean/A207123/HNum.olean -i .lake/build/lib/lean/A207123/HNum.ilean | exit 0 | 36s | PEAK=8094 MINHEAD=4737 KILLED=0 REASON=
+2026-10-06 17:41:19 | A207123/DFiniteN.lean -o .lake/build/lib/lean/A207123/DFiniteN.olean -i .lake/build/lib/lean/A207123/DFiniteN.ilean | exit 0 | 30s | PEAK=8063 MINHEAD=4785 KILLED=0 REASON=
+2026-10-06 17:41:49 | A207123/NoKOnlyN.lean -o .lake/build/lib/lean/A207123/NoKOnlyN.olean -i .lake/build/lib/lean/A207123/NoKOnlyN.ilean | exit 0 | 28s | PEAK=8058 MINHEAD=4634 KILLED=0 REASON=
+2026-10-06 17:42:23 | A207123/OreDim.lean -o .lake/build/lib/lean/A207123/OreDim.olean -i .lake/build/lib/lean/A207123/OreDim.ilean | exit 0 | 32s | PEAK=8111 MINHEAD=4619 KILLED=0 REASON=
+2026-10-06 17:43:02 | A207123/Gosper.lean -o .lake/build/lib/lean/A207123/Gosper.olean -i .lake/build/lib/lean/A207123/Gosper.ilean | exit 0 | 37s | PEAK=8039 MINHEAD=4719 KILLED=0 REASON=
+2026-10-06 17:43:32 | A207123/Growth.lean -o .lake/build/lib/lean/A207123/Growth.olean -i .lake/build/lib/lean/A207123/Growth.ilean | exit 0 | 29s | PEAK=8038 MINHEAD=4737 KILLED=0 REASON=
+2026-10-06 17:44:01 | A207123/SmallK.lean -o .lake/build/lib/lean/A207123/SmallK.olean -i .lake/build/lib/lean/A207123/SmallK.ilean | exit 0 | 27s | PEAK=8042 MINHEAD=4807 KILLED=0 REASON=
+2026-10-06 17:44:32 | A207123/Parity.lean -o .lake/build/lib/lean/A207123/Parity.olean -i .lake/build/lib/lean/A207123/Parity.ilean | exit 0 | 30s | PEAK=8083 MINHEAD=4759 KILLED=0 REASON=
+2026-10-06 17:45:02 | A207123/NPDE.lean -o .lake/build/lib/lean/A207123/NPDE.olean -i .lake/build/lib/lean/A207123/NPDE.ilean | exit 0 | 29s | PEAK=8041 MINHEAD=6769 KILLED=0 REASON=
+2026-10-06 17:45:32 | A207123/Coeffs.lean -o .lake/build/lib/lean/A207123/Coeffs.olean -i .lake/build/lib/lean/A207123/Coeffs.ilean | exit 0 | 29s | PEAK=8089 MINHEAD=6725 KILLED=0 REASON=
+2026-10-06 17:45:58 | A207123/HGen.lean -o .lake/build/lib/lean/A207123/HGen.olean -i .lake/build/lib/lean/A207123/HGen.ilean | exit 0 | 25s | PEAK=8052 MINHEAD=6779 KILLED=0 REASON=
+2026-10-06 17:46:32 | A207123/NumStruct.lean -o .lake/build/lib/lean/A207123/NumStruct.olean -i .lake/build/lib/lean/A207123/NumStruct.ilean | exit 0 | 33s | PEAK=8131 MINHEAD=6577 KILLED=0 REASON=
+2026-10-06 17:47:04 | A207123/NearDiag.lean -o .lake/build/lib/lean/A207123/NearDiag.olean -i .lake/build/lib/lean/A207123/NearDiag.ilean | exit 0 | 31s | PEAK=8137 MINHEAD=6324 KILLED=0 REASON=
+2026-10-06 17:47:37 | A207123/HStruct.lean -o .lake/build/lib/lean/A207123/HStruct.olean -i .lake/build/lib/lean/A207123/HStruct.ilean | exit 0 | 32s | PEAK=8125 MINHEAD=6732 KILLED=0 REASON=
+2026-10-06 17:47:58 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8045 MINHEAD=6882 KILLED=0 REASON=
+2026-10-06 17:48:18 | Axioms.lean | exit 0 | 19s | PEAK=8073 MINHEAD=6859 KILLED=0 REASON=
+2026-10-06 17:48:39 | Checks.lean | exit 0 | 20s | PEAK=8079 MINHEAD=6848 KILLED=0 REASON=

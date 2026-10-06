@@ -194,6 +194,29 @@ C5 = [
     (r"(5)【已证明】U_4(m)=",
      r"(5)【已证明；前两个等号已在 Lean 中形式化：`A207123.U_four`、`U_four_choose`；=A326247(m+2)（该条目按"
      r"「不交叉也不嵌套的边对」组合定义）与双射 Φ 未形式化】U_4(m)="),
+    # T5.3(1)–(5)（HStruct.lean，2026-10-07 收尾时重编、登记并核对陈述）
+    (r"[t¹]h_k 的母函数与正性另用 T1.3(1) 的 G_1=W_1/P_1】基本事实：",
+     r"[t¹]h_k 的母函数与正性另用 T1.3(1) 的 G_1=W_1/P_1；已在 Lean 中形式化：`A207123.hpoly_eval_zero_eq_one`、"
+     r"`hpoly_eval_one_two`、`hpoly_coeff_one`、`hpoly_coeff_one_pos`、`hpoly_coeff_one_eq_zero`、`hpoly_coeff_one_gf`、"
+     r"`hpoly_coeff_eq_sum`、`iterate_derivative_hpoly_eval_one`（k≥1）与 k=0 的反例 "
+     r"`iterate_derivative_hpoly_eval_one_k_zero`、`hpoly_derivative_eval_one`、n_k 的 `nrowPoly_eval`、`nrowPoly_eq`"
+     r"（k≥1）】基本事实："),
+    (r"(2)【已证明】负整数处的值：",
+     r"(2)【已证明；已在 Lean 中形式化（U_k(−j) 指插值多项式 u_k 在 −j 处的值）：`A207123.Gneg_one`、`Gneg_succ`、"
+     r"`Gneg_isPoly`、`upoly_eval_neg_eq_zero`、`upoly_eval_neg_ne_zero`、`prod_dvd_upoly`、`upoly_three_mul_eval`，"
+     r"另有 G_{−j} 的最高三项 `coeff_gnegPoly_top`、`coeff_gnegPoly_top_one`、`coeff_gnegPoly_top_two`；"
+     r"下面【已验证】的「没有其他负整数零点」未形式化】负整数处的值："),
+    (r"(3)【已证明】**deg h_k=⌊2k/3⌋**",
+     r"(3)【已证明；已在 Lean 中形式化：`A207123.natDegree_hpoly`、`leadingCoeff_hpoly_three_mul`、"
+     r"`leadingCoeff_hpoly_three_mul_add_one`、`leadingCoeff_hpoly_three_mul_add_two`、`leadingCoeff_hpoly_sign`，"
+     r"互反引理 `upoly_eval_neg_recip`；第二首项的闭式未形式化】**deg h_k=⌊2k/3⌋**"),
+    (r"(4)【已证明】推论：允许行偏序集",
+     r"(4)【已证明；Σ_q(−1)^qN(k,q)=U_k(−2) 及其在 k≥4 与 k=1,2,3 时的值、n_k 在 z=−1 的根重数已在 Lean 中形式化："
+     r"`A207123.sum_neg_one_pow_N`、`sum_neg_one_pow_N_eq_zero`、`sum_neg_one_pow_N_small`、`rootMultiplicity_nrowPoly`、"
+     r"`rootMultiplicity_nrowPoly_ceil`；第一个等号（Philip Hall 定理）未形式化】推论：允许行偏序集"),
+    (r"(5)【已证明】h_k 在 [0,1] 上无根",
+     r"(5)【已证明；第一句已在 Lean 中形式化：`A207123.hpoly_pos_of_mem_Icc`、`hpoly_ne_zero_of_mem_Icc`"
+     r"（另有 `hpoly_aeval_eq_tsum`）；系数最终为正与收敛半径为 0 未形式化】h_k 在 [0,1] 上无根"),
 ]
 patch(P + '06_C5.md', C5)
 
@@ -253,7 +276,18 @@ ROWS_AGENT = [
     r"| `A207123/NearDiag.lean` | T4.1、T4.2(3)、T5.2（部分） | `ndPoly d`（p_d，Newton 形式）；`T4_1_a`、`T4_1`、"
     r"`T4_1_threshold`、`ndPoly_zero_one`；`T4_2_3`（基点 2d+2 的 Newton 系数为正整数，末项 2(2d−1)!!）；"
     r"`T5_2_formula`、`T5_2_top`、`T5_2_sub`、`T5_2_sub_three` |",
-]  # 待补：HStruct 及后续模块
+    r"| `A207123/HStruct.lean` | T5.3(1)–(5) | `nrowPoly k`（N 行多项式 n_k，k≥1）、`Gneg j`（G_{−j}）、`gnegPoly n`"
+    r"（G_{−(n+1)} 作为多项式）、`recipPoly k i`（互反引理中的 C(y−i+k,k)）；(1) `hpoly_eval_zero_eq_one`、"
+    r"`hpoly_eval_one_two`、`hpoly_coeff_one`、`hpoly_coeff_one_pos`、`hpoly_coeff_one_eq_zero`、`hpoly_coeff_one_gf`、"
+    r"`hpoly_coeff_eq_sum`、`iterate_derivative_hpoly_eval_one`（k≥1）与反例 `iterate_derivative_hpoly_eval_one_k_zero`、"
+    r"`hpoly_derivative_eval_one`、`nrowPoly_eval`、`nrowPoly_eq`；(2) `Gneg_one`、`Gneg_succ`、`Gneg_isPoly`、"
+    r"`coeff_gnegPoly_top`、`coeff_gnegPoly_top_one`、`coeff_gnegPoly_top_two`、`upoly_eval_neg_eq_zero`、"
+    r"`upoly_eval_neg_ne_zero`、`prod_dvd_upoly`、`upoly_three_mul_eval`；(3) `upoly_eval_neg_recip`、`natDegree_hpoly`、"
+    r"`leadingCoeff_hpoly_three_mul`、`leadingCoeff_hpoly_three_mul_add_one`、`leadingCoeff_hpoly_three_mul_add_two`、"
+    r"`leadingCoeff_hpoly_sign`；(4) `sum_neg_one_pow_N`、`sum_neg_one_pow_N_eq_zero`、`sum_neg_one_pow_N_small`、"
+    r"`rootMultiplicity_nrowPoly`、`rootMultiplicity_nrowPoly_ceil`；(5) `hpoly_aeval_eq_tsum`、`hpoly_pos_of_mem_Icc`、"
+    r"`hpoly_ne_zero_of_mem_Icc` |",
+]
 
 OLD_ANCHOR = r"| `Axioms.lean` | — | "
 s09 = open(P + '09_code.md', encoding='utf-8').read()
@@ -274,20 +308,97 @@ NEW_AXROW = (f"| `Axioms.lean` | — | 对 {NPRINT} 条定理（报告各条标�
 NEW_TABLE_ROWS = '\n'.join(ROWS + ROWS_AGENT) + '\n' + NEW_AXROW
 OLD_RUN = (r"| `run_lean_checks.sh` | — | 依次运行 `lake build`、`lake env lean Axioms.lean`、`lake env lean Checks.lean`，"
            r"输出写入 `logs/lean_build.log` |")
-NEW_RUN = (r"| `run_lean_checks.sh` | — | 按依赖顺序逐个模块 `lake build`（顺序由 `topo_order.py` 给出），再整体 `lake build` "
-           r"一次，然后依次运行 `lake env lean Axioms.lean`、`lake env lean Checks.lean`；每一步都经 `lean_one.sh` 串行执行"
-           r"（先拿锁，再等机器上没有其他 lean.exe），输出写入 `logs/lean_build.log` |" "\n"
-           r"| `lean_one.sh`、`topo_order.py` | — | 串行锁（同一时间只运行一个 Lean 进程；退出码 127 且没有输出说明进程被杀）"
-           r"与模块拓扑排序 |")
+NEW_RUN = (r"| `run_lean_checks.sh` | — | 按依赖顺序逐个模块 `lake build +A207123.X`（顺序由 `topo_order.py` 给出；任何一步失败"
+           r"就停止），再整体 `lake build` 一次（这时只剩根模块），然后依次运行 `lake env lean Axioms.lean`、"
+           r"`lake env lean Checks.lean`；每一步都经 `lean_one.sh` 串行执行（先拿锁，再等机器上没有其他 lean.exe），"
+           r"输出写入 `logs/lean_build.log` |" "\n"
+           r"| `run_lean_checks_direct.sh` | — | 同样三步、同样的日志格式，但第 1 步按依赖顺序直接 `lake env lean A207123/X.lean -o … -i …` "
+           r"从源码编译每个模块，最后编根模块（不经 lake 的构建记录核对：本机内存紧时那一步核对每次要 7–10 分钟）；"
+           r"lakefile 没有额外的编译选项，所以与 lake build 编译的是同一套设置。2026-10-07 的全量构建用的是它 |" "\n"
+           r"| `lean_one.sh`、`lean_watchdog.ps1`、`mem_status.ps1`、`topo_order.py` | — | 串行锁与内存保护（同一时间只运行一个 "
+           r"Lean 进程；启动前要求系统提交余量与可用内存足够，运行中 Lean 私有内存超过上限或系统提交余量过低就结束进程树，"
+           r"退出码 137）与模块拓扑排序 |")
 OLD_RERUN = r"重跑：在 `lean/` 下运行 `./run_lean_checks.sh`，或依次运行 `lake build`、`lake env lean Axioms.lean`、`lake env lean Checks.lean`（"
-NEW_RERUN = (r"重跑：在 `lean/` 下运行 `./run_lean_checks.sh`。本机（16 GB 内存）上单个 Lean 进程峰值超过 7.5 GB，"
+NEW_RERUN = (r"重跑：在 `lean/` 下运行 `./run_lean_checks.sh`，内存紧时改用 `./run_lean_checks_direct.sh`。"
+             r"本机（16 GB 内存）上单个 Lean 进程峰值超过 7.5 GB，"
              r"两个同时运行会被系统杀掉，所以不要直接整体 `lake build`（它会并行编译多个模块），也不要同时开两个编译；"
              r"内存充足的机器可以直接依次运行 `lake build`、`lake env lean Axioms.lean`、`lake env lean Checks.lean`（")
 patch(P + '09_code.md', [(OLD_AXROW, NEW_TABLE_ROWS), (OLD_RUN, NEW_RUN), (OLD_RERUN, NEW_RERUN)])
 
 # ====================================================================================================
-# 三、待补（Agent 完成后）：T4.1、T4.2(3)、T4.3、T5.2、T5.3 的标签；00_head；① 第 11 条；⑥ 与完成度表
+# 三、00_head、① 第 11 条、⑥ 与完成度表（2026-10-07 收尾时补上；T4.x、T5.2、T5.3 的标签见第一部分）
 # ====================================================================================================
+HEAD = [
+    (r"- Lean 形式化（2026-10-05 补做，同日第二、三轮扩充）：",
+     r"- Lean 形式化（2026-10-05 补做，同日第二、三轮扩充；第四轮 2026-10-05 至 10-07）："),
+    (r"（T3.8 的 Rel(U)=O_U·L1、Rel(N)=O_N·L_N，含饱和引理）。`#print axioms` 只显示",
+     r"（T3.8 的 Rel(U)=O_U·L1、Rel(N)=O_N·L_N，含饱和引理）。第四轮又形式化了：T1.2、T1.3(3) 与 T1.3(4) 中关于根的部分、"
+     r"T1.5–T1.9、T2.5 的公式部分、T2.7 的第一句、T2.8(1)、T3.5(1)(2) 与 (3) 中 [y^q]𝒩 的公式、T3.6、T3.7(3)、"
+     r"T3.8 的维数公式、T4.1、T4.2(3)、T4.3(1)–(5)（(4)(5) 只到各条标签注明的部分）、T5.2 的公式与前两个系数、"
+     r"T5.3(1)–(5) 的主体、T5.4(2) 的列方向与 (3)–(5) 的代数部分（逐条范围见各条标签与 ⑤ 的表）。"
+     r"`#print axioms` 只显示"),
+    (r"其余【已证明】仍是书面证明加程序核对（T3.7(3) 与 T3.8 的维数公式没有形式化）。形式化过程中没有发现报告陈述的错误或缺条件。",
+     r"其余【已证明】仍是书面证明加程序核对。前三轮形式化没有发现报告陈述的错误或缺条件；第四轮发现 6 处缺条件，"
+     r"都只缺约定或适用范围、结论不变，已补上：T1.2（k=1,2 要用 u_{−1}=1、u_{−2}=0）、T1.3(3)（判别式只对 i≥1 成立）、"
+     r"T1.6（逐项形式要「越界取 0」）、T1.9（要 k≥1）、T5.3(1) 的导数公式与 n_k（都要 k≥1）。第四轮各模块的主要定理"
+     r"陈述都已逐条对照本报告核对过（这是 AI 做的核对；Lean 只检查证明，不检查陈述是否忠实于报告）。"),
+]
+patch(P + '00_head.md', HEAD)
+
+SUMMARY = [
+    (r"（T3.8，含饱和引理）已在 Lean 4 + Mathlib 中从原始定义形式化证明，只依赖标准公理（见 ⑤）。",
+     r"（T3.8，含饱和引理）已在 Lean 4 + Mathlib 中从原始定义形式化证明；第四轮又加上 T1.2、T1.5–T1.9、"
+     r"𝒩 不是 D-finite（T3.7(3)）、T3.8 的维数公式、T4.1、T4.2(3)、T4.3(1)–(5) 与 T5.3(1)–(5) 的主体等"
+     r"（范围见各条标签）。全部只依赖标准公理（见 ⑤）。第四轮发现报告 6 处缺条件（只缺适用范围，结论不变），已补上。"),
+]
+patch(P + '01_summary.md', SUMMARY)
+
+s10 = open(P + '10_uncertain.md', encoding='utf-8').read()
+j0 = s10.index(r"1. **T3.8 的维数公式（U、N 两个版本）。**")
+j1 = s10.index('\n\n2. **T3.4(2)', j0)
+OLD_ITEM1 = s10[j0:j1]
+NEW_ITEM1 = (
+    r"1. **T4.3(6) 高次系数的一般结构：a_{q,j}=[x^{3q−2−j}]Num_q 对一切 j 都是 c(q,i)（i≤⌊j/2⌋+1）的 Q[q] 线性组合，"
+    r"以及其中的两个子断言。**（原第 1 处「T3.8 的维数公式」已在 Lean 第四轮形式化（`lean/A207123/OreDim.lean`，"
+    r"陈述已对照本报告核对），见 ⑤，移出本节；更早的「T3.8 中 N 的版本 Rel(N)=O_N·L_N」已在第三轮移出。）" "\n"
+    r"   为什么不确定：一般 j 的证明只有第二轮复核者 r-c4ii 一份（把 A_j(z):=Σ_q a_{q,j}z^q/q! 写成 u=z/(1−z)、"
+    r"L=−ln(1−z) 的多项式，用指标 ι 控制 L 的次数，再用 θ^d(L^i/i!) 与 q^d c(q,i) 的对应），主 Agent 读过，"
+    r"没有第二位复核者独立重推，也没有形式化。j≤8 的显式式子是计算机辅助证明；一般结构的数值核对到 j≤14，只在复核日志里"
+    r"（logs/review_r-c4ii_r6_structure.log），不在 verify_all 中。" "\n"
+    r"   下一步：请另一位复核者独立重推一般 j 的结构；或把 j≤14 的结构核对并入 verify_all。")
+UNC = [
+    (OLD_ITEM1, NEW_ITEM1),
+    (r"- 除了已在 Lean 中机器检查的条目（T1.0、T1.1、T1.3(1)(2)、T1.4、T2.2 的细化引理 1、T2.4 两式、T3.7(1)(2)、"
+     r"T3.8 的 Rel(U)=O_U·L1 与 Rel(N)=O_N·L_N，见 ⑤），其余【已证明】都是书面证明加程序核对，由 AI 撰写和复核，"
+     r"没有经过人类专家审稿，也没有形式化。",
+     r"- 除了已在 Lean 中机器检查的条目（各条标签注明了范围，汇总见 ⑤ 的表），其余【已证明】都是书面证明加程序核对，"
+     r"由 AI 撰写和复核，没有经过人类专家审稿，也没有形式化。机器检查过的条目也只保证证明正确；陈述是否忠实于本报告，"
+     r"是 AI 逐条对照的，没有人类核对过。"),
+    (r"- T4.3(6) 高次系数的一般结构、T2.6(i) 的 (1,2)/(2,3) 形状、T2.6(ii) 截断块部分对一切 m≥2 的统一证明："
+     r"各只经过一位复核者加主 Agent 核对（T2.6(ii) 的范数 17/8 主 Agent 已独立复算）。",
+     r"- T2.6(i) 的 (1,2)/(2,3) 形状、T2.6(ii) 截断块部分对一切 m≥2 的统一证明：没有形式化。(1,2)/(2,3) 有两份独立证明"
+     r"（复核者 r-c2a 的纤维论证与复核者 x1 的代数证明）；T2.6(ii) 的统一证明只有复核者 x1 一份，主 Agent 独立复算了范数 "
+     r"17/8，2≤m≤30 另有逐个的留数–范数证书（c2b 定理 6）。（T4.3(6) 已列为上面第 1 处。）"),
+    (r"- T5.3(4) 的 Möbius 推论用到 Philip Hall 定理（经典结果，未重证）。",
+     r"- T5.3(4) 的 Möbius 推论用到 Philip Hall 定理（经典结果，未重证；同一条里的 Σ_q(−1)^qN(k,q)=U_k(−2) 及其取值"
+     r"已在 Lean 中形式化）。"),
+    (r"N 的二项式基与三角递推（含 N(k,k−1)=k²−k−4）另有 Lean 形式化证明。 |",
+     r"N 的二项式基与三角递推（含 N(k,k−1)=k²−k−4）另有 Lean 形式化证明；Lean 第四轮又形式化了 T1.2、T1.3(3)、"
+     r"T1.5–T1.9，并据此补上 4 处缺条件（T1.2、T1.3(3)、T1.6、T1.9，结论不变）。 |"),
+    (r"（块分解 → Stirling / r-Stirling 数 × 二项式；主公式与按上升数细化的一式另有 Lean 形式化证明）",
+     r"（块分解 → Stirling / r-Stirling 数 × 二项式；主公式与按上升数细化的一式另有 Lean 形式化证明，T2.5 的公式部分、"
+     r"T2.7 第一句、T2.8(1) 的三层和也在第四轮形式化）"),
+    (r"以及 Rel(U)=O_U·L1、Rel(N)=O_N·L_N 另有 Lean 形式化证明）",
+     r"以及 Rel(U)=O_U·L1、Rel(N)=O_N·L_N 另有 Lean 形式化证明；第四轮又形式化了 𝒩 不是 D-finite 与 N 没有 k-only "
+     r"象限递推（T3.7(3)）、T3.8 的维数公式、T3.5(1)(2)、T3.6）"),
+    (r"低次与高次系数结构、e.g.f. 闭式。未完成：一般 M(d;σ,β) 的闭式。 |",
+     r"低次与高次系数结构、e.g.f. 闭式。T4.1、T4.2(3)、T4.3(1)–(3) 与 (4)(5) 的一部分已在 Lean 第四轮形式化。"
+     r"未完成：一般 M(d;σ,β) 的闭式。 |"),
+    (r"h_k：次数、首末项、负整数零点、Möbius 推论；实根性只是猜想。",
+     r"h_k：次数、首末项、负整数零点、Möbius 推论（T5.3(1)–(5) 的主体已在 Lean 第四轮形式化，另有 T1.3(4) 关于根的部分、"
+     r"T5.2 的公式与前两个系数、T5.4(3)–(5) 的代数部分）；实根性只是猜想。"),
+]
+patch(P + '10_uncertain.md', UNC)
 
 # ====================================================================================================
 # 四、一致性检查：标签与表中引用的 Lean 名字要么在 Axioms.lean 的 #print axioms 里，要么是定义 / Mathlib 名字
@@ -295,7 +406,7 @@ patch(P + '09_code.md', [(OLD_AXROW, NEW_TABLE_ROWS), (OLD_RUN, NEW_RUN), (OLD_R
 NOT_THEOREMS = {
     # 定义（def / 记号），不是定理
     'upoly', 'Uext', 'uext', 'rho', 'ci', 'Theta', 'ciZ', 'hpoly', 'Numq', 'parP', 'parQ', 'IsHyperTerm',
-    'A084990', 'NKser', 'tFrac', 'boxSp', 'IsDFinite',
+    'A084990', 'NKser', 'tFrac', 'boxSp', 'IsDFinite', 'nrowPoly', 'Gneg', 'gnegPoly', 'recipPoly',
     # Mathlib
     'Ring.choose', 'Ring.inverse', 'PowerSeries.subst', 'PowerSeries.rescale',
 }

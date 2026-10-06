@@ -1,21 +1,20 @@
 # 路线图：未来要做的事
 
-整理日期：2026-10-06。优先级是整理者（Claude）的判断，不是定论。背景见 `报告.md`、`猜想总表.md` 和 `README.md` 的「当前状态与待办」。
+整理日期：2026-10-06；2026-10-07 按 Lean 第四轮收尾更新。优先级是整理者（Claude）的判断，不是定论。背景见 `报告.md`、`猜想总表.md` 和 `README.md` 的「当前状态与待办」。
 
-## 1. 先做：Lean 第四轮收尾（有先后顺序）
+## 1. Lean 第四轮收尾（2026-10-07 已完成）
 
-1. 确认没有别的会话在改 `lean/` 下的文件（`HStruct.lean` 最后一次修改在它编译通过之后）。
-2. 重编 `lean/A207123/HStruct.lean`（T5.3），用 `lean/lean_one.sh`（带内存闸门与看门狗，一次只跑一个；单个编译峰值内存 ≥ 8 GB）。通过后登记进 `lean/A207123.lean` 与 `lean/Axioms.lean`。
-3. 核对 `NumStruct`、`NearDiag`、`HStruct` 等新文件的定理陈述与报告一致。Lean 只检查证明，不检查「陈述是否忠实」；目前记录里只有 `Poly`、`HNum`、`DFiniteN`、`Parity`、`Coeffs` 做过这项核对。
-4. 跑全量 `lean/run_lean_checks.sh`（逐个模块串行构建，再 `Axioms.lean`、`Checks.lean`，输出写入 `logs/lean_build.log`）。
-5. 应用报告补丁：`code/main_extra/report_patches/patch_lean4.py`（先加 `--dry` 只检查替换锚点）→ 正式应用 → `code/main_extra/assemble_report.py` 重拼报告。补丁里仍待补的标签：T5.3、00_head、① 第 11 条、⑥、完成度表。
-6. 全部完成后，回到 `猜想总表.md` 去掉 † 标记。
+- 重检了在最后一次通过之后又被改过的 HStruct、NumStruct、NearDiag。HStruct 有一处证明被 10-06 那次修改改坏，已修好并登记。
+- 第四轮 15 个模块的主要定理陈述都已对照报告核对（AI 核对），其中发现 T5.3(1) 两处要 k≥1，已补进报告。
+- 全量构建通过（`lean/run_lean_checks_direct.sh`；26 个模块加根模块，2649 个声明只依赖三条标准公理）。
+- 已应用报告补丁 `patch_lean4.py`、`patch_lean4_fixes3.py` 并重新拼接报告；`猜想总表.md` 已去掉 † 标记。
+- 收尾时发现原 `run_lean_checks.sh` 的逐模块构建从未跑通（模块名带回车符），已改正。内存紧时它每一步要先核对 Mathlib 的构建记录（7–10 分钟），所以另写了 `run_lean_checks_direct.sh`。详见 README「过程概览」第 11 条。
 
 ## 2. 加固报告里证据最薄的三处（报告 ⑥）
 
 | 项 | 现状 | 下一步 |
 |---|---|---|
-| T3.8 维数公式 | 书面证明 + 数据；Lean 形式化在 `OreDim.lean`（第四轮，待全量构建） | 核对 OreDim 的陈述；用 k≤100、q≤40 的长方形窗口复核更多盒子 |
+| T4.3(6) 高次系数的一般结构（2026-10-07 起列入报告 ⑥，替换已形式化的 T3.8 维数公式） | 一般 j 的证明只有复核者 r-c4ii 一份；j≤8 有计算机辅助证明，一般结构的数值核对到 j≤14 只在复核日志里 | 请第二位复核者独立重推；把 j≤14 的结构核对并入 `verify_all.py` |
 | T3.4(2) K(x) 闭式与「I≠𝒮」 | 只经一位复核者；7 点数值核对只在日志里 | 请第二位复核者独立推导 Mellin 表示；把数值核对并入 `verify_all.py`（或改用区间算术） |
 | T2.7 推论（非 proper 超几何多重和） | 依赖 Wilf–Zeilberger 1992、Zeilberger 1990，原文没读到 | 读原文并核对前提，或在本文中自证所需的封闭性质 |
 
