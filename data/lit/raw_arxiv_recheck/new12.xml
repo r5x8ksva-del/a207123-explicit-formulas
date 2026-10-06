@@ -1,0 +1,799 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/GFFaHip21VW3jIC+eKv3mp1wTA8</id>
+  <title>arXiv Query: search_query=au:Zeilberger&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-10-06T23:24:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Zeilberger&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>269</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.28650v1</id>
+    <title>A parking function analog of the Schröder numbers</title>
+    <updated>2026-09-23T18:01:03Z</updated>
+    <link href="https://arxiv.org/abs/2609.28650v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.28650v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pattern avoidance is a central topic in the study of permutations. Parking functions provide a natural setting in which to ask analogous questions. In this paper, we study parking functions whose parking permutations avoid the patterns $1234$ and $2134$, obtaining an analog of the Schröder numbers for parking functions. To enumerate these objects, we develop an enumeration scheme that runs in polynomial time and adapt the prefix-based framework introduced by Zeilberger in 1998, and later improved by Vatter, by instead using ``suffixes.''</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T18:01:03Z</published>
+    <arxiv:comment>2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Lucy Martinez</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25098v1</id>
+    <title>Approximating Pi (and other constants) by Radicals in the Footsteps of Rabbi Abraham Ibn Ezra and Guru RSJ Reddy</title>
+    <updated>2026-09-19T15:13:33Z</updated>
+    <link href="https://arxiv.org/abs/2609.25098v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25098v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by the polymath Abraham Ibn Ezra (1089-1167) who approximated π by 20/9 times the square-root of 2, and contemporary scholar, RSJ Reddy, who gave (14-sqrt(2))/4, we point out that both of these approximations are optimal in some sense, and we generate many other ones that are even more optimal, albeit not as nice.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-19T15:13:33Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10492v1</id>
+    <title>The Distribution of Double Deficiencies in Pattern-Avoiding Permutations</title>
+    <updated>2026-09-09T17:31:25Z</updated>
+    <link href="https://arxiv.org/abs/2609.10492v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10492v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the distribution of the number of double deficiencies (DD) in permutations of length n avoiding one or two patterns of length 3. Using structural decompositions of these avoidance classes--together with a lattice-path decomposition in the 321-avoiding case--we derive functional equations and convolution-type recurrences that efficiently compute the corresponding double-deficiency generating functions in all but one single-pattern case. In the 321-avoiding permutations, the resulting generating function is algebraic; we derive exact formulas for the mean and variance and prove that the distribution is close in total variation to Bin(n-2,1/4), with an explicit convergence rate. We also identify a DD-preserving symmetry that yields DD-Wilf equivalences, reducing the number of two-pattern cases that need to be considered separately. For the resulting two-pattern classes, we obtain explicit recurrences, including C-finite relations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T17:31:25Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tipaluck Krityakierne</name>
+    </author>
+    <author>
+      <name>Thotsaporn Aek Thanatipanonda</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20579v1</id>
+    <title>Estimating Many Constants With a Coin</title>
+    <updated>2026-08-20T21:24:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.20579v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20579v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extend, and fully implement, in Maple, Jim Propp's charming way of estimating Pi via tossing a fair coin, and compute many other constants, even going beyond the far more general set-up of Bruss and Paindaveine.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T21:24:16Z</published>
+    <arxiv:comment>4 pages. Accompanied by two Maple packages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26334v1</id>
+    <title>The Combinatorics of Multi-Lane Merging</title>
+    <updated>2026-07-28T23:14:37Z</updated>
+    <link href="https://arxiv.org/abs/2607.26334v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26334v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extend the nice treatment of V. Bardenova, E. Insko, K. Johnson, and S. Sullivan of the combinatorics of two-lane mergings to the multi-lane case.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T23:14:37Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Aurora Hiveley</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05431v1</id>
+    <title>A quick proof that $321$-avoiding permutations without double deficiencies are counted by the Motzkin numbers</title>
+    <updated>2026-07-03T09:16:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.05431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.05431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a short "proof from the Book" that $321$-avoiding permutations without double deficiencies are counted by the Motzkin numbers. Although this result was first proved by Rubey and Stump, our proof gives a much simpler and more transparent description of the same bijection.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-03T09:16:30Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tipaluck Krityakierne</name>
+    </author>
+    <author>
+      <name>Thotsaporn "Aek" Thanatipanonda</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05439v1</id>
+    <title>In How Many Ways can a Rectangle be Rectangled?</title>
+    <updated>2026-06-03T21:01:55Z</updated>
+    <link href="https://arxiv.org/abs/2606.05439v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05439v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There are $2^{n-1}$ ways to tile a $1 \times n$ rectangle with rectangular tiles (of any length, of course they all must have width $1$), but in how many ways can you tile a $100 \times 100$ checkerboard with such tiles? Neither humankind, nor computer-kind, will (most probably) ever know the exact number. But it is possible to compute these numbers for $m \times n$ rectangular grids, if $m$ is not too big, while $n$ can be as big as one wishes. This was initially done in 1988 by David Klarner and Spyros Magliveras, and beautifully extended, around 2006, by, at-the-time, first-year LSU undergraduate Joshua Smith, in collaboration with his faculty mentor, Helena Verrill. Here we extend this to weighted-counting, also keeping track of the number of tiles (that ranges from $1$ to $mn$), and the number of participating grid-edges (that range from $2m+2n$ to $2mn+m+n$). This quickly leads to statistical analyses (mean, variance, and higher moments) of these quantities. While we admire the clever approaches of Klarner-Magliveras and Smith-Verrill, we use two alternative approaches to the original problem, that are more amenable for deriving these generalizations. At the same time, we illustrate the power and beauty of experimental-yet-rigorous enumerative combinatorics.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T21:01:55Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Pablo Blanco</name>
+    </author>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.24315v1</id>
+    <title>Counting (and Randomly Generating) Hamiltonian Cycles in Rectangular Grids</title>
+    <updated>2026-03-25T13:53:14Z</updated>
+    <link href="https://arxiv.org/abs/2603.24315v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.24315v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We first fully implement, in Maple, the ingenious method of Robert Stoyan and Volker Strehl from 1995 to automatically derive generating functions for the number of Hamiltonian cycles in an m by n grid graph ,for a fixed width m, but general length n, and actually compute these generating functions for all m up to ten. We also show how to generate a uniformly-at-random such Hamiltonian cycle, and also derive more informative generating functions for other parameters besides the length of the grid graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-25T13:53:14Z</published>
+    <arxiv:comment>9 pages; Accompanied by two several Maple packages and numerous output files available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/volker.html Dedicated to Volker Strehl on his forthcoming 81st birthday</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Pablo Blanco</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09003v2</id>
+    <title>High-optical-depth, sub-Doppler-width absorption lines at telecom wavelengths in hot, optically driven rubidium vapor</title>
+    <updated>2026-09-18T12:08:34Z</updated>
+    <link href="https://arxiv.org/abs/2603.09003v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09003v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Doppler broadening presents a major limitation for high-resolution spectroscopy and nonlinear optics in room-temperature atomic vapors. Here, we demonstrate the suppression of Doppler broadening accompanied by pronounced absorption on the upper transition of a three-level ladder system, achieved by dressing the intermediate state with a strong control field. As a concrete realization, we study a hot vapor of $^{87}$Rb where the lower transition is driven by a strong control field resonant with the D2 line at a wavelength of 780 nm, while a weak counter-propagating probe field at the telecom C-band wavelength of 1529 nm ($5P_{(3/2)}\leftrightarrow 4D_{(5/2)}$) interrogates the dressed states. We observe absorption features with a resonant optical depth of approximately 4 and a full width at half maximum of about 17 MHz. Remarkably, this corresponds to an order-of-magnitude reduction relative to the Doppler width, while the optical depth on the upper transition of the ladder scheme exceeds that of the Doppler-broadened lower transition. The measured spectra are in good agreement with theoretical modeling. Combining high optical density with sub-Doppler-width absorption lines typically requires laser-cooled atoms, while our approach profits from the experimental simplicity of a hot-vapor platform.</summary>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-09T22:47:46Z</published>
+    <arxiv:primary_category term="physics.atom-ph"/>
+    <author>
+      <name>Inna Kviatkovsky</name>
+    </author>
+    <author>
+      <name>Lucas Pache</name>
+    </author>
+    <author>
+      <name>Viola-Antonella Zeilberger</name>
+    </author>
+    <author>
+      <name>Philipp Schneeweiss</name>
+    </author>
+    <author>
+      <name>Jürgen Volz</name>
+    </author>
+    <author>
+      <name>Arno Rauschenbeutel</name>
+    </author>
+    <author>
+      <name>Leonid Yatsenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.19255v1</id>
+    <title>Statistical Analysis of Hairpins and BasePairs in RNA Secondary Structures</title>
+    <updated>2026-02-22T16:11:22Z</updated>
+    <link href="https://arxiv.org/abs/2602.19255v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.19255v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive precise asymptotic expressions for the expectations, variances, covariance, and quite a few further mixed moments for the number of hairpins and the number of basepairs in RNA secondary structures, and give convincing evidence that the central-scaled distribution of the pair of random variables (hairpins, basepairs) tends in distribution to the bi-variate normal distribution with correlation $\sqrt{5 \sqrt{5} -11}/2= 0.2123322205\dots$</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-22T16:11:22Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>AJ Bu</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07803v1</id>
+    <title>How many coin tosses would you need until you get $n$ Heads or $m$ Tails?</title>
+    <updated>2025-12-08T18:32:27Z</updated>
+    <link href="https://arxiv.org/abs/2512.07803v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07803v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We harness both human ingenuity and the power of symbolic computation to study the number of coin tosses until reaching $n$ Heads or $m$ Tails. We also talk about the closely related problem of reaching $n$ Heads and $m$ Tails. This paper is accompanied by a Maple package that enables fast computation of expectations, variances, and higher moments of these quantities.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T18:32:27Z</published>
+    <arxiv:comment>12 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Svante Janson</name>
+    </author>
+    <author>
+      <name>Lucy Martinez</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.07314v3</id>
+    <title>The free bifibration on a functor</title>
+    <updated>2026-01-15T17:00:36Z</updated>
+    <link href="https://arxiv.org/abs/2511.07314v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.07314v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the problem of constructing the free bifibration generated by a functor of categories $p : D \to C$. This problem was previously considered by Lamarche, and is closely related to the problem, considered by Dawson, Paré, and Pronk, of ``freely adjoining adjoints'' to a category. We develop a proof-theoretic approach to the problem, beginning with a construction of the free bifibration $Λ_p : Bifib(p)\to C$ in which objects of $Bifib(p)$ are formulas of a primitive ``bifibrational logic'', and arrows are derivations in a cut-free sequent calculus modulo a notion of permutation equivalence. We show that instantiating the construction to the identity functor generates a _zigzag double category_ $\mathbb{Z}(C)$, which is also the free double category with companions and conjoints (or fibrant double category) on $C$. The approach adapts smoothly to the more general task of building $(P,N)$-fibrations, where one only asks for pushforwards along arrows in $P$ and pullbacks along arrows in $N$ for some subsets of arrows; this encompasses Kock and Joyal's notion of _ambifibration_ when $(P,N)$ form a factorization system. We establish a series of progressively stronger normal forms, guided by ideas of _focusing_ from proof theory, and obtain a canonicity result under assumption that the base category is factorization preordered relative to $P$ and $N$. This canonicity result allows us to decide the word problem and to enumerate relative homsets without duplicates. Finally, we describe several examples of a combinatorial nature, including a category of plane trees generated as a free bifibration over $ω$, and a category of increasing forests generated as a free ambifibration over $Δ$, which contains the lattices of noncrossing partitions as quotients of its fibers by the Beck-Chevalley condition for bicartesian squares.</summary>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T17:16:20Z</published>
+    <arxiv:comment>85 pages + 10 page appendix + TOC; version 2 includes typo fixes, more discussion of related work, and expanded discussion of splitting (\S3.3.2); version 3 corrects a mistake in the statement of Proposition 5.7, since the Beck-Chevalley condition should be restricted to bicartesian squares</arxiv:comment>
+    <arxiv:primary_category term="math.CT"/>
+    <author>
+      <name>Bryce Clarke</name>
+    </author>
+    <author>
+      <name>Gabriel Scherer</name>
+    </author>
+    <author>
+      <name>Noam Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.16153v2</id>
+    <title>Cutting 4 by $n$ grids into two congruent pieces</title>
+    <updated>2026-03-25T16:02:39Z</updated>
+    <link href="https://arxiv.org/abs/2510.16153v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.16153v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the March 2025 issue of Pour la Science, Jean-Paul Delahaye described a wonderful solution to the following problem: How many ways can you divide a 3 by 2n rectangle into two connected, congruent pieces? We show that this problem can be solved by the transfer matrix method, and demonstrate this by computing the generating function for the number of ways to divide a 4 by n rectangle into two connected, congruent parts.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-17T18:58:32Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03940v1</id>
+    <title>Every Fifth Real Number is Evil</title>
+    <updated>2025-10-04T20:51:33Z</updated>
+    <link href="https://arxiv.org/abs/2510.03940v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.03940v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fifteen years ago, then-Carleton-undergrad Isaac Hodes, proved that the Golden Ratio is evil. In this modest contribution to human knowledge, we show that in fact, every fifth real number is evil, and we present lots of other interesting numbers that are evil. We also show (in addition to many other fascinating facts), that the expected evil-location of a random evil number is 148.185185185185185... . It follows that the Golden Ratio is a fairly average evil real number, since, as first computed by Hodes, the evil location of the Golden Ratio is 146.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-04T20:51:33Z</published>
+    <arxiv:comment>5 pages, accompanied by a Maple package and output files available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/hodes.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.10245v1</id>
+    <title>The Challenge of Computing Geode Numbers</title>
+    <updated>2025-08-14T00:18:27Z</updated>
+    <link href="https://arxiv.org/abs/2508.10245v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.10245v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a fascinating recent American Mathematical Monthly article, Norman Wildberger and Dean Rubine introduced a new kind of combinatorial numbers, that they aptly named the ``Geode numbers''. While their definition is simple, these numbers are surprisingly hard to compute, in general. While the two-dimensional case has a nice closed-form expression, that make them easy to compute, already the three-dimensional case poses major computational challenges that we do meet, combining experimental mathematics and the holonomic ansatz. Alas, things get really complicated in four and higher dimensions, and we are unable to efficiently compute, for example, the $1000$-th term of the four-dimensional diagonal Geode sequence. A donation of $100$ US dollars to the OEIS, in honor of the first person to compute this number, is offered.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-14T00:18:27Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tewodros Amdeberhan</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.03841v3</id>
+    <title>Automated Counting of Spanning Trees for Several Infinite Families of Graphs</title>
+    <updated>2026-03-12T22:07:14Z</updated>
+    <link href="https://arxiv.org/abs/2507.03841v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.03841v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using the theoretical basis developed by Yao and Zeilberger, we consider certain graph families whose structure results in a rational generating function for sequences related to spanning tree enumeration. Said families are Powers of Cycles and Powers of Path; later, we briefly discuss Torus graphs and Grid graphs. In each case we know, a priori, that the set of spanning trees of the family of graphs can be described in terms of a finite-state-machine, and hence there is a finite transfer-matrix that guarantees the generating function is rational. Finding this ``grammar'', and hence the transfer-matrix is very tedious, so a much more efficient approach is to use experimental mathematics. Since computing numerical determinants is so fast, one can use the matrix tree theorem to generate sufficiently many terms, then fit the data to a rational function. The whole procedure can be done rigorously a posteriori.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-05T00:02:07Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Pablo Blanco</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.17862v1</id>
+    <title>Proofs Of Three Geode Conjectures</title>
+    <updated>2025-06-22T00:14:40Z</updated>
+    <link href="https://arxiv.org/abs/2506.17862v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.17862v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the May 2025 issue of the Amer. Math. Monthly, Norman J. Wildberger and Dean Rubine intoduced a new kind of multi-indexed numbers, that they call `Geode numbers', obtained from the Hyper-Catalan numbers. They posed three intriguing conjectures about them, that are proved in this note.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-22T00:14:40Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tewodros Amdeberhan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.08096v1</id>
+    <title>Hitting k primes by dice rolls</title>
+    <updated>2025-02-12T03:47:49Z</updated>
+    <link href="https://arxiv.org/abs/2502.08096v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.08096v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $S=(d_1,d_2,d_3, \ldots )$ be an infinite sequence of rolls of independent fair dice. For an integer $k \geq 1$, let $L_k=L_k(S)$ be the smallest $i$ so that there are $k$ integers $j \leq i$ for which $\sum_{t=1}^j d_t$ is a prime. Therefore, $L_k$ is the random variable whose value is the number of dice rolls required until the accumulated sum equals a prime $k$ times. It is known that the expected value of $L_1$ is close to $2.43$. Here we show that for large $k$, the expected value of $L_k$ is $(1+o(1)) k\log_e k$, where the $o(1)$-term tends to zero as $k$ tends to infinity. We also include some computational results about the distribution of $L_k$ for $k \leq 100$.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-12T03:47:49Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Noga Alon</name>
+    </author>
+    <author>
+      <name>Yaakov Malinovsky</name>
+    </author>
+    <author>
+      <name>Lucy Martinez</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.18061v2</id>
+    <title>Experimenting with the Garsia-Milne Involution Principle</title>
+    <updated>2025-03-04T20:55:52Z</updated>
+    <link href="https://arxiv.org/abs/2501.18061v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.18061v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1981, Adriano Garsia and Steve Milne found the first bijective proof of the celebrated Rogers-Ramanujan identities. To achieve this feat, they invented a versatile tool that they called the Involution Principle. In this note we revisit this useful principle from a very general perspective, independent of its application to specific combinatorial identities, and will explore its complexity.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-29T23:59:50Z</published>
+    <arxiv:comment>In memory of Adriano Garsia (1928-2024) and in honor of Stephen C. Milne's 75th birthday</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>SIGMA 21 (2025), 015, 6 pages</arxiv:journal_ref>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+    <arxiv:doi>10.3842/SIGMA.2025.015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3842/SIGMA.2025.015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.04189v1</id>
+    <title>Efficient Weighted Counting of Multiset Derangements</title>
+    <updated>2025-01-07T23:56:12Z</updated>
+    <link href="https://arxiv.org/abs/2501.04189v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.04189v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the Almkvist-Zeilberger algorithm, combined with a weighted version of the Even-Gillis Laguerre integral due to Foata and Zeilberger, in order to efficiently compute weight enumerators of multiset derangements according to the number of cycles. The present paper is inspired by important previous work by Mourad Ismail and his collaborators, done in the late 1970s, but still useful after all these years.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-07T23:56:12Z</published>
+    <arxiv:comment>6 pages. Dedicated to Mourad E.H. Ismail on his 80th birthday</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.11222v2</id>
+    <title>A Short Proof that the number of $(a,b)$-parking functions of length n $a(a+bn)^{n-1}$</title>
+    <updated>2024-12-21T22:26:59Z</updated>
+    <link href="https://arxiv.org/abs/2412.11222v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.11222v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a very short proof of the fact that the number of $(a,b)$-parking functions of length $n$ equals $a(a+bn)^{n-1}$. This was first proved in 2003 by Kung and Yan, via a very long and torturous route, as a corollary of a more general result. This new version contains a reference to previous work kindly communicated by Richard Stanley</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-15T15:30:09Z</published>
+    <arxiv:comment>2 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>AJ Bu</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16334v1</id>
+    <title>The $O(1/n^{85})$ Asymptotic expansion of OEIS sequence A85</title>
+    <updated>2024-10-19T22:27:54Z</updated>
+    <link href="https://arxiv.org/abs/2410.16334v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16334v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>One of the most important sequences in enumerative combinatorics is OEIS sequence A85, the number of involutions of length n. In the Art of Computer Programming, vol. 3, Don Knuth derived the O(1/n) asymptotic formula for these numbers. In this modest tribute to our two heroes, Neil Sloane who just turned 85, and Don Knuth who was 85 a year ago, we go all the way to an $O(1/n^{85})$ asymptotic formula.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-19T22:27:54Z</published>
+    <arxiv:comment>4 pages. In honor of Neil Sloane and Don Knuth</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07435v2</id>
+    <title>The (Symbolic and Numeric) Computational Challenges of Counting 0-1 Balanced Matrices</title>
+    <updated>2025-02-06T16:13:47Z</updated>
+    <link href="https://arxiv.org/abs/2410.07435v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07435v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A chessboard has the property that every row and every column has as many white squares as black squares. In this mostly methodological note, we address the problem of counting such rectangular arrays with a fixed (numeric) number of rows, but an arbitrary (symbolic) number of columns. We first address the ``vanilla" problem where there are no restrictions, and then go on to discuss the still-more-challenging problem of counting such binary arrays that are not permitted to contain a specified (finite) set of horizontal patterns, and a specified set of vertical patterns. While we can rigorously prove that each such sequence satisfies some linear recurrence equation with polynomial coefficients, actually finding these recurrences poses major {\it symbolic}-computational challenges, that we can only meet in some small cases. In fact, just generating as many as possible terms of these sequences is a big {\it numeric}-computational challenge. This was tackled by computer whiz Ron H. Hardin, who contributed several such sequences, and computed quite a few terms of each. We extend Hardin's sequences quite considerably. We also talk about the much easier problem of counting such restricted arrays without balance conditions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T21:08:04Z</published>
+    <arxiv:comment>Expanded computations and added references</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.10282v2</id>
+    <title>A combinatorial proof of Cramer's Rule</title>
+    <updated>2024-08-23T14:10:04Z</updated>
+    <link href="https://arxiv.org/abs/2408.10282v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.10282v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1750, Gabriel Cramer famously stated, without proof, his eponymous rule for solving a system of linear equations with as many equations as unknowns. We give a purely combinatorial, and purely self-contained, proof of this old chestnut, still useful after all these years.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-18T19:19:48Z</published>
+    <arxiv:comment>4 pages. This version corrects typos kindly pointed out by Alex Heaton</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.01887v1</id>
+    <title>The Logic of Political Survival Revisited: Consequences of Elite Uncertainty Under Authoritarian Rule</title>
+    <updated>2024-08-04T00:09:52Z</updated>
+    <link href="https://arxiv.org/abs/2408.01887v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.01887v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Existing research has established that autocrats offer concessions to prevent ouster by their inner circle. This paper examines how those concessions are influenced by the relative uncertainty of an autocrat's inner circle about remaining in that favored body. I take as my starting point the formal model of political survival presented in Bueno de Mesquita et al.'s The Logic of Political Survival. I extend the model to account for variation in the relative uncertainty of an autocrat's inner circle. To make the math tractable, I dispense with convention and introduce comparative statics across two models with different formulations of uncertainty. This exercise reveals a set of conditions under which to expect an increase in the concessions offered by an autocrat, with implications for development and democracy. Those findings yield a corresponding set of logical corollaries with potential to further our understanding of authoritarian politics, including an unexamined facet of the "dictator's dilemma" (Wintrobe 1990, 1998) and related incentives for members of an inner circle to permit purges or act to destabilize their ranks. The models also identify a source of policy volatility not found outside of autocracies. Taken together, the findings suggest a need for more research on elite uncertainty in autocracies.</summary>
+    <category term="econ.TH" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-04T00:09:52Z</published>
+    <arxiv:comment>20 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="econ.TH"/>
+    <author>
+      <name>Tamar Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.16155v1</id>
+    <title>von Neumann and Newman Pokers with Finite Decks</title>
+    <updated>2024-07-23T03:51:30Z</updated>
+    <link href="https://arxiv.org/abs/2407.16155v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.16155v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>John von Neumann studied a simplified version of poker where the "deck" consists of infinitely many cards, in fact, all real numbers between $0$ and $1$. We harness the power of computation, both numeric and symbolic, to investigate analogs with finitely many cards. We also study finite analogs of a simplified poker introduced by D.J. Newman, and conclude with a thorough investigation, fully implemented in Maple, of the three-player game, doing both the finite and the infinite versions. This paper is accompanied by two Maple packages and numerous output files.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-23T03:51:30Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Tipaluck Krityakierne</name>
+    </author>
+    <author>
+      <name>Thotsaporn Aek Thanatipanonda</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.12218v2</id>
+    <title>Exploring Werner Krandick's Binary Tree Jump Statistics</title>
+    <updated>2024-08-23T14:13:50Z</updated>
+    <link href="https://arxiv.org/abs/2407.12218v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.12218v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Twenty years ago, Werner Krandick defined two statistics on binary trees. The first one determines the number of jumps, when traversing the tree in depth-first-search, from a vertex to one closer to the root, and the second keeps tracks of the sum of the jump-distances. He used clever but ad hoc human-generated arguments to find explicit expressions for their expectations. In this methodological note, we illustrate the power of experimental mathematics and symbolic computation to do much more. We derive closed-form expressions for the actual weight-enumerators according to these statistics (from which not only the expectations, but also the variances, and as many higher moments as desired, can be obtained). We also actually give the first eight moments, and conjecture that the first statistic (number of jumps) is asymptotically normal, and prove that the second one (sum of jump distances) is definitely not. In this revised version we are happy to announce that Stephen Melczer and Tia Ruza fully proved the asymptotic normality, and we provide a link to their writeup.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-16T23:53:13Z</published>
+    <arxiv:comment>8 pages; This version contains a link to the full proof of asymptotic normality by S. Melczer and T. Ruza</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.15980v1</id>
+    <title>In How Ways Can You Play Stanley Solitaire?</title>
+    <updated>2024-06-23T01:51:48Z</updated>
+    <link href="https://arxiv.org/abs/2406.15980v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.15980v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a very simple solitaire game, named Stanley Solitaire, in honor of Richard Stanley, and prove an explicit closed-form formula for the number of ways of playing it. Alas, the only proof that we know is via a deep theorem of Richard Stanley from 1984. We challenge the readers to find a more elementary proof.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-23T01:51:48Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.13561v1</id>
+    <title>How to Answer Questions of the Type: If you toss a coin n times, how likely is HH to show up more than HT?</title>
+    <updated>2024-05-22T11:49:58Z</updated>
+    <link href="https://arxiv.org/abs/2405.13561v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.13561v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On March 16, 2024, Daniel Litt, in an X-post, proposed the following brainteaser: "Flip a fair coin 100 times. It gives a sequence of heads (H) and tails (T). For each HH in the sequence of flips, Alice gets a point; for each HT, Bob does, so e.g. for the sequence THHHT Alice gets 2 points and Bob gets 1 point. Who is most likely to win?" We show the power of symbolic computation, in particular the (continuous) Almkvist-Zeilberger algorithm, to answer this, and far more general, questions of this kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-22T11:49:58Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.03079v1</id>
+    <title>Explicit Expressions for the First 20 Moments of the Area Under Dyck and Motzkin Paths</title>
+    <updated>2024-05-05T23:17:44Z</updated>
+    <link href="https://arxiv.org/abs/2405.03079v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.03079v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Starting from AJ Bu's recent article that computed explicit expressions for the GENERATING functions of sums of powers of areas under Dyck and Motzkin paths, we deduce from them explicit expressions for the actual sequences. This enables taking the limits of the scaled moments and confirming, in an entirely elementary way, that they tend to those of the area under Brownian Excursion (up to any specified moment).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-05T23:17:44Z</published>
+    <arxiv:comment>5 pages. Accompanied by a Maple package and two output files available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/qew.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>AJ Bu</name>
+    </author>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.00881v1</id>
+    <title>Bijective and Automated Approaches to Abel Sums</title>
+    <updated>2024-05-01T21:48:47Z</updated>
+    <link href="https://arxiv.org/abs/2405.00881v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.00881v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present both bijective and automated approaches to Abel-type sums, dear to Dominique Foata.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-01T21:48:47Z</published>
+    <arxiv:comment>9 pages. Dedicated to Dominique Foata on his forthcoming 90th birthday</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gil Kalai</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.05276v1</id>
+    <title>On the complexity of normalization for the planar $λ$-calculus</title>
+    <updated>2024-04-08T08:08:27Z</updated>
+    <link href="https://arxiv.org/abs/2404.05276v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.05276v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We sketch a tentative proof of P-completeness for the $β$-convertibility problem on untyped planar (a.k.a. ordered or non-commutative) $λ$-terms.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-08T08:08:27Z</published>
+    <arxiv:comment>Abstract for the Trends in Linear Logic and Applications 2023 workshop, meant to be expanded into a proper paper in the future</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Anupam Das</name>
+    </author>
+    <author>
+      <name>Damiano Mazza</name>
+    </author>
+    <author>
+      <name>Lê Thành Dũng Nguyên</name>
+    </author>
+    <author>
+      <name>Noam Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.01483v3</id>
+    <title>Creating Decidable Diophantine Equations</title>
+    <updated>2024-06-10T17:15:36Z</updated>
+    <link href="https://arxiv.org/abs/2404.01483v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.01483v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalizing an argument of Matiyasevich, we illustrate a method to generate infinitely many diophantine equations whose solutions can be completely described by linear recurrences. In particular, we provide an integer-coefficient polynomial $p(x, y, z)$ whose only integer roots are consecutive triples of Tribonacci numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-01T21:07:16Z</published>
+    <arxiv:comment>This version corrects a misstated date</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Charles Kenney</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.07009v1</id>
+    <title>Solving Functional Equations Dear to W.T. Tutte using the Naive (yet fullly rigorous!) Guess And Check Method</title>
+    <updated>2024-03-09T03:00:25Z</updated>
+    <link href="https://arxiv.org/abs/2403.07009v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.07009v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In his seminal paper ``A census of planar triangulations", published in 1962, the iconic graph theorist (and code-breaker), W.T. Tutte, spent a few pages to prove that a certain bi-variate generating function that enumerates triangulations, satisfies a certain functional equation. He then used his genius to actually solve it, giving closed-form solutions to the enumerating sequences. While the first part, of deriving the functional equation, still needs human ingenuity, the second part, of solving it, can nowadays be fully automated. Our Maple program, accompanying this paper, Tutte.txt, can not only solve Tutte's original equation in a few seconds, it can also solve many, far more complicated ones, way beyond the scope of even such a giant as W.T. Tutte. We use our favorite method of ``guess and check" and show how it can always be made fully rigorous (if desired).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-09T03:00:25Z</published>
+    <arxiv:comment>5 pages. Accompanied by a Maple package and output files available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/tutte.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.15063v2</id>
+    <title>Efficient Evaluations of Weighted Sums over the Boolean Lattice inspired by conjectures of Berti, Corsi, Maspero, and Ventura</title>
+    <updated>2024-03-05T23:36:24Z</updated>
+    <link href="https://arxiv.org/abs/2402.15063v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.15063v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In their study of water waves, Massimiliano Berti, Livia Corsi, Alberto Maspero, and Paulo Ventura, came up with two intriguing conjectured identities involving certain weighted sums over the Boolean lattice. They were able to prove the first one, while the second is still open. In this methodological note, we will describe how to generate many terms of these types of weighted sums, and if in luck, evaluate them in closed-form. We were able to use this approach to give a new proof of their first conjecture, and while we failed to prove the second conjecture, we give overwhelming evidence for its veracity. In this second version, we are happy to announce that Mark van Hoeij was able to complete the proof of the second conjecture, by explicitly solving the second-order recurrence mentioned at the end.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-23T02:35:34Z</published>
+    <arxiv:comment>6 pages. Accompanied by a Maple package available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/bcmv.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.05938v1</id>
+    <title>The Jackson-Richmond 4CT Constant is EXACTLY 10/27</title>
+    <updated>2024-02-08T20:05:30Z</updated>
+    <link href="https://arxiv.org/abs/2402.05938v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.05938v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In their recent claimed computer-free proof of the Four Color Theorem, David Jackson and Bruce Richmond attempted to use sophisticated "asymptotic analysis" to explicitly compute a certain number whose positivity (according to them) implies this famous theorem. While the jury is still out whether their valiant attempt holds water, we prove, in this modest note, that this constant equals exactly 10/27. We also point out that their evaluation of this constant must be erroneous, for two good reasons. Finally, as an encore, we state many similar, but more complicated, results.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-08T20:05:30Z</published>
+    <arxiv:comment>4 pages. Accompanied by a Maple package and output files gotten from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/4ctJR.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.12430v1</id>
+    <title>Enumerating Seating Arrangements that Obey Social Distancing</title>
+    <updated>2024-01-23T01:34:30Z</updated>
+    <link href="https://arxiv.org/abs/2401.12430v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.12430v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study maximal seating arrangements, either on a line, or in a rectangular auditorium with a fixed number of columns but an arbitrary number of rows, that obey any prescribed set of `social distancing' restrictions. In addition to enumeration, we study the statistical distribution of the density, and give efficient algorithms for generating these at random</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-23T01:34:30Z</published>
+    <arxiv:comment>10 pages. Accompanied by a Maple package available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/social.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>George Spahn</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.14703v4</id>
+    <title>The categorical contours of the Chomsky-Schützenberger representation theorem</title>
+    <updated>2025-05-15T12:55:28Z</updated>
+    <link href="https://arxiv.org/abs/2405.14703v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.14703v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop fibrational perspectives on context-free grammars and on nondeterministic finite-state automata over categories and operads. A generalized CFG is a functor from a free colored operad (aka multicategory) generated by a pointed finite species into an arbitrary base operad: this encompasses classical CFGs by taking the base to be a certain operad constructed from a free monoid, as an instance of a more general construction of an \emph{operad of spliced arrows} $\mathcal{W}\,\mathcal{C}$ for any category $\mathcal{C}$. A generalized NFA is a functor from an arbitrary bipointed category or pointed operad satisfying the unique lifting of factorizations and finite fiber properties: this encompasses classical word automata and tree automata without $ε$-transitions, but also automata over non-free categories and operads. We show that generalized context-free and regular languages satisfy suitable generalizations of many of the usual closure properties, and in particular we give a simple conceptual proof that context-free languages are closed under intersection with regular languages. Finally, we observe that the splicing functor $\mathcal{W} : Cat \to Oper$ admits a left adjoint $\mathcal{C}: Oper \to Cat$, which we call the \emph{contour category} construction since the arrows of $\mathcal{C}\,\mathcal{O}$ have a geometric interpretation as oriented contours of operations of $\mathcal{O}$. A direct consequence of the contour / splicing adjunction is that every pointed finite species induces a universal CFG generating a language of \emph{tree contour words.} This leads us to a generalization of the Chomsky-Schützenberger Representation Theorem, establishing that a subset of a homset $L \subseteq \mathcal{C}(A,B)$ is a CFL of arrows if and only if it is a functorial image of the intersection of a $\mathcal{C}$-chromatic tree contour language with a regular language.</summary>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-29T12:09:35Z</published>
+    <arxiv:primary_category term="math.CT"/>
+    <arxiv:journal_ref>Logical Methods in Computer Science, Volume 21, Issue 2 (May 16, 2025) lmcs:13654</arxiv:journal_ref>
+    <author>
+      <name>Paul-André Melliès</name>
+    </author>
+    <author>
+      <name>Noam Zeilberger</name>
+    </author>
+    <arxiv:doi>10.46298/lmcs-21(2:12)2025</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/lmcs-21(2:12)2025" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.18153v1</id>
+    <title>Implementing and Experimenting with the Calabi-Wilf algorithm for random selection of a subspace over a finite field</title>
+    <updated>2023-10-27T14:00:34Z</updated>
+    <link href="https://arxiv.org/abs/2310.18153v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.18153v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We revisit, implement, and experiment with a beautiful algorithm, due to Calabi and Wilf for the random generation of subspaces over a finie field.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-27T14:00:34Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.08762v1</id>
+    <title>Explicit Expressions for Moments of the Duration of a 3-Player Gambler's Ruin</title>
+    <updated>2023-09-15T21:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2309.08762v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.08762v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using experimental mathematics and symbolic computation, we derive many moments for the duration of a three player (fair) gambler's ruin.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-15T21:00:01Z</published>
+    <arxiv:comment>9 pages. Accompanied by a Maple package and numerous output files obtainable from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/gr3.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+</feed>

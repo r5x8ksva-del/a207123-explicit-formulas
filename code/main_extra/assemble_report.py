@@ -30,7 +30,7 @@ if os.path.exists(log):
         m = re.match(r'PASS (\S+)', ln)
         if m:
             passed.add(m.group(1))
-    areas = ('c0', 'c1', 'c2a', 'c2b', 'c3a', 'c3b', 'c4', 'c5a', 'c5b', 'rv', 'rv2', 'rv3')
+    areas = ('c0', 'c1', 'c2a', 'c2b', 'c3a', 'c3b', 'c4', 'c5a', 'c5b', 'rv', 'rv2', 'rv3', 'rv4')
     # 报告里写成「模块.核对id」；日志里有的模块打印裸 id（如 C1-sum、c3a-1f1-const），
     # 有的打印带前缀的 id（如 c2b.T1.bijection、c5b.U3），两种都认。
     pat = re.compile(r'(?<![A-Za-z0-9_/\\])(' + '|'.join(areas) + r')\.([A-Za-z0-9][A-Za-z0-9_\-.]*[A-Za-z0-9])')

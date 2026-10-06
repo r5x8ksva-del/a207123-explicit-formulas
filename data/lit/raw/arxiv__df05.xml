@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/bezCqh67YF3AHEN1im5sVqxdFVw</id>
+  <title>arXiv Query: search_query=abs:holonomic AND abs:prime AND abs:logarithms&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:holonomic+AND+(abs:prime+AND+abs:logarithms)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0501379v1</id>
+    <title>On the non-holonomic character of logarithms, powers, and the n-th prime function</title>
+    <updated>2005-01-22T13:19:10Z</updated>
+    <link href="https://arxiv.org/abs/math/0501379v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0501379v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We establish that the sequences formed by logarithms and by "fractional" powers of integers, as well as the sequence of prime numbers, are non-holonomic, thereby answering three open problems of Gerhold [Electronic Journal of Combinatorics 11 (2004), R87]. Our proofs depend on basic complex analysis, namely a conjunction of the Structure Theorem for singularities of solutions to linear differential equations and of an Abelian theorem. A brief discussion is offered regarding the scope of singularity-based methods and several naturally occurring sequences are proved to be non-holonomic.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-01-22T13:19:10Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>The Electronic Journal of Combinatorics, vol. 11, no. 2, article A2. 2005.</arxiv:journal_ref>
+    <author>
+      <name>Philippe Flajolet</name>
+    </author>
+    <author>
+      <name>Stefan Gerhold</name>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+    </author>
+  </entry>
+</feed>

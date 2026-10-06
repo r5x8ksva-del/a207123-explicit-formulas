@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3CeDCENRA5wvofifujgP/mTvYuo</id>
+  <title>arXiv Query: search_query=abs:"Newton polygon" AND (abs:recurrence OR abs:annihilator OR abs:"Ore algebra" OR abs:operator)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:24:51Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Newton+polygon%22+AND+(abs:recurrence+OR+(abs:annihilator+OR+(abs:%22Ore+algebra%22+OR+abs:operator)))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>28</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1501.05095v2</id>
+    <title>Period integrals and mutation</title>
+    <updated>2015-01-23T12:31:39Z</updated>
+    <link href="https://arxiv.org/abs/1501.05095v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.05095v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $f$ be a Laurent polynomial in two variables, whose Newton polygon strictly contains the origin and whose vertices are primitive lattice points, and let $L_f$ be the minimal-order differential operator that annihilates the period integral of $f$. We prove several results about $f$ and $L_f$ in terms of the Newton polygon of $f$ and the combinatorial operation of *mutation*, in particular we give an in principle complete description of the monodromy of $L_f$ around the origin. Special attention is given to the class of *maximally mutable* Laurent polynomials, which has applications to the conjectured classification of Fano manifolds via mirror symmetry.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-21T09:07:16Z</published>
+    <arxiv:comment>29 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Ketil Tveiten</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.04801v2</id>
+    <title>Asymptotic formula of the number of Newton polygons</title>
+    <updated>2020-03-25T08:24:37Z</updated>
+    <link href="https://arxiv.org/abs/1707.04801v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.04801v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we enumerate Newton polygons asymptotically. The number of Newton polygons is computable by a simple recurrence equation, but unexpectedly the asymptotic formula of its logarithm contains growing oscillatory terms. As the terms come from non-trivial zeros of the Riemann zeta function, an estimation of the amplitude of the oscillating part is equivalent to the Riemann hypothesis.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-15T23:50:57Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Shushi Harashita</name>
+    </author>
+    <arxiv:doi>10.1007/s00209-020-02504-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00209-020-02504-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.02909v2</id>
+    <title>Newton Polygons of Hecke Operators</title>
+    <updated>2020-09-08T19:12:02Z</updated>
+    <link href="https://arxiv.org/abs/1912.02909v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.02909v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this computational paper we verify a truncated version of the Buzzard-Calegari conjecture on the Newton polygon of the Hecke operator $T_2$ for all large enough weights. We first develop a formula for computing $p$-adic valuations of exponential sums, which we then implement to compute $2$-adic valuations of traces of Hecke operators acting on spaces of cusp forms. Finally, we verify that if Newton polygon of the Buzzard-Calegari polynomial has a vertex at $n\leq 15$, then it agrees with the Newton polygon of $T_2$ up to $n$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-05T22:49:52Z</published>
+    <arxiv:comment>To appear in Annales mathématiques du Québec</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Liubomir Chiriac</name>
+    </author>
+    <author>
+      <name>Andrei Jorza</name>
+    </author>
+    <arxiv:doi>10.1007/s40316-020-00149-z</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s40316-020-00149-z" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.3889v1</id>
+    <title>Polygones de Newton de certaines sommes de caractères et séries de Poincaré</title>
+    <updated>2008-02-26T20:20:47Z</updated>
+    <link href="https://arxiv.org/abs/0802.3889v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.3889v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper, we shall precise the asymptotic behaviour of Newton polygons of $L$ functions associated to character sums, coming from some $n$ variable Laurent polynomials. In order to do this, we use the free sum on convex polytopes. This operation allows the determination of the limit of generic Newton polygons for the sum $Δ=Δ_1\oplus Δ_2$ when we know the limit of generic Newton polygons for each factor. To our knowledge, these are the first results concerning the asymptotic behaviour of Newton polygons for multivariable polynomials.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-26T20:20:47Z</published>
+    <arxiv:comment>22 pages, french</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Int. J. Number Theory 7 pp 1519-1542 (2011)</arxiv:journal_ref>
+    <author>
+      <name>R. Blache</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.10714v5</id>
+    <title>Tropical recurrent sequences</title>
+    <updated>2020-02-04T20:15:38Z</updated>
+    <link href="https://arxiv.org/abs/1807.10714v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.10714v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tropical recurrent sequences are introduced satisfying a given vector (being a tropical counterpart of classical linear recurrent sequences). We consider the case when Newton polygon of the vector has a single (bounded) edge. In this case there are periodic tropical recurrent sequences which are similar to classical linear recurrent sequences. A question is studied when there exists a non-periodic tropical recurrent sequence satisfying a given vector, and partial answers are provided to this question. Also an algorithm is designed which tests existence of non-periodic tropical recurrent sequences satisfying a given vector with integer coordinates. Finally, we introduce a tropical entropy of a vector and provide some bounds on it.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-27T16:34:16Z</published>
+    <arxiv:comment>it is described when the entropy is positive</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Dima Grigoriev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9910119v1</id>
+    <title>On elliptic operator pencils with general boundary conditions</title>
+    <updated>1999-10-22T13:20:01Z</updated>
+    <link href="https://arxiv.org/abs/math/9910119v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9910119v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper operator pencils $A(x,D,λ)$ are investigated which depend polynomially on the parameter $λ$ and act on a manifold with boundary. The operator A is assumed to satisfy the condition of N-ellipticity with parameter which is an ellipticity condition formulated with the use of the Newton polygon. We consider general boundary operators $B_1(x,D),...,B_m(x,D)$ and define N-ellipticity for the boundary value problem $(A,B_1,...,B_m)$ analogously to the Shapiro-Lopatinskii condition. It is shown that the boundary value problem is N-elliptic if and only if an a priori estimate holds, where the norms in the estimate are again defined in terms of the Newton polygon. These results are closely connected with singular perturbation theory and lead to uniform estimates for problems of Vishik-Lyusternik type containing a small parameter.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-10-22T13:20:01Z</published>
+    <arxiv:comment>32 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Integral Equations Operator Theory 39 (2001), 15-40</arxiv:journal_ref>
+    <author>
+      <name>R. Denk</name>
+    </author>
+    <author>
+      <name>R. Mennicken</name>
+    </author>
+    <author>
+      <name>L. Volevich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02845v2</id>
+    <title>Gevrey estimates of formal solutions for certain moment partial differential equations with variable coefficients</title>
+    <updated>2020-08-31T14:01:01Z</updated>
+    <link href="https://arxiv.org/abs/2002.02845v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02845v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of this paper is to investigate Gevrey properties of formal solutions of certain generalized linear partial differential equations with variable coefficients. In particular, we extend the notion of moment partial differential equations to include differential operators that are not connected with kernel functions. Using the modified version of Nagumo norms and the properties of the Newton polygon we compute the Gevrey estimate for formal solutions of such generalized partial differential equations.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-07T15:30:46Z</published>
+    <arxiv:comment>12 pages, 1 figure, minor typos and mistakes fixed</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Maria Suwińska</name>
+    </author>
+    <arxiv:doi>10.1007/s10883-020-09504-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10883-020-09504-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.00289v1</id>
+    <title>Inverse spectral problem for GK integrable system</title>
+    <updated>2015-03-01T14:56:57Z</updated>
+    <link href="https://arxiv.org/abs/1503.00289v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.00289v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A.Goncharov and R.Kenyon has defined a class of integrable system on a cluster varieties constructed out of a Newton polygon on the plane. In the present note we show that thiest cluster varieties coincides with the configuration spaces of collections of complete flags in an infinite dimensional space invariant with respect to two commuting operators. We use this interpretation to give explicit solution for these integrable systems in terms of theta-functions.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-01T14:56:57Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>V. V. Fock</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.11998v1</id>
+    <title>Estimates of formal solutions for some generalized moment partial differential equations</title>
+    <updated>2019-11-27T07:43:40Z</updated>
+    <link href="https://arxiv.org/abs/1911.11998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.11998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using increasing sequences of real numbers, we generalize the idea of formal moment differentiation first introduced by W. Balser and M. Yoshino. Slight departure from the concept of Gevrey sequences enables us to include a wide variety of operators in our study. Basing our approach on tools such as the Newton polygon and divergent formal norms, we obtain estimates for formal solutions of certain families of generalized linear moment partial differential equations with constant and time variable coefficients.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-27T07:43:40Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Journal of Mathematical Analysis and Applications 500 (2021), 125094,</arxiv:journal_ref>
+    <author>
+      <name>Alberto Lastra</name>
+    </author>
+    <author>
+      <name>Sławomir Michalik</name>
+    </author>
+    <author>
+      <name>Maria Suwińska</name>
+    </author>
+    <arxiv:doi>10.1016/j.jmaa.2021.125094</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jmaa.2021.125094" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1202.4183v1</id>
+    <title>Families of Artin-Schreier curves with Cartier-Manin matrix of constant rank</title>
+    <updated>2012-02-19T20:39:48Z</updated>
+    <link href="https://arxiv.org/abs/1202.4183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.4183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let k be an algebraically closed field of characteristic p &gt; 0. Every Artin-Schreier k-curve X has an equation of the form y^p - y = f(x) for some f(x) in k(x) such that p does not divide the least common multiple L of the orders of the poles of f(x). Under the condition that p is congruent to 1 mod L, Zhu proved that the Newton polygon of the L-function of X is determined by the Hodge polygon of f(x). In particular, the Newton polygon depends only on the orders of the poles of f(x) and not on the location of the poles or otherwise on the coefficients of f(x). In this paper, we prove an analogous result about the a-number of the p-torsion group scheme of the Jacobian of X, providing the first non-trivial examples of families of Jacobians with constant a-number. Equivalently, we consider the semi-linear Cartier operator on the sheaf of regular 1-forms of X and provide the first non-trivial examples of families of curves whose Cartier-Manin matrix has constant rank.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-19T20:39:48Z</published>
+    <arxiv:comment>11 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Linear Algebra Appl. 439 (2013), no. 7, 2158-2166</arxiv:journal_ref>
+    <author>
+      <name>Shawn Farnell</name>
+      <arxiv:affiliation>Kenyon College</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Rachel Pries</name>
+      <arxiv:affiliation>Colorado State University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/9907102v1</id>
+    <title>Boundary value problems for a class of elliptic operator pencils</title>
+    <updated>1999-07-15T14:41:55Z</updated>
+    <link href="https://arxiv.org/abs/math/9907102v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9907102v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper operator pencils $A(x,D,λ)$ are studied which act on a manifold with boundary and satisfy the condition of $N$-ellipticity with parameter, a generalization of the notion of ellipticity with parameter as introduced by Agmon and Agranovich--Vishik. Sobolev spaces corresponding to a Newton polygon are defined and investigated; in particular it is possible to describe their trace spaces. With respect to these spaces, an a priori estimate holds for the Dirichlet boundary value problem connected with an $N$-elliptic pencil, and a right parametrix is constructed.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-07-15T14:41:55Z</published>
+    <arxiv:comment>40 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Integral Equations Operator Theory 38 (2000), 410-436</arxiv:journal_ref>
+    <author>
+      <name>R. Denk</name>
+    </author>
+    <author>
+      <name>R. Mennicken</name>
+    </author>
+    <author>
+      <name>L. Volevich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1206.5178v1</id>
+    <title>Full support of the Kasteleyn operator associated with a bipartite toroidal graph</title>
+    <updated>2012-06-22T15:34:53Z</updated>
+    <link href="https://arxiv.org/abs/1206.5178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1206.5178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A perfect matching in a bipartite graph embedded on a torus defines a height function on the graph's faces and an associated height change vector in $\Z^2$. These matchings are enumerated by a combination of four evaluations of a bivariate Laurent polynomial, called Kasteleyn operator, whose coefficient of bidegree (i,j) is, up to the sign, the number of perfect matchings with height change (i,j). Therefore the Newton polygon of the Kasteleyn operator is the convex hull of the height change vectors. In this article, we prove that any point with integer coordinates in that polygon is realized by a perfect matching.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-06-22T15:34:53Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Álvar Ibeas Martín</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.05663v2</id>
+    <title>Endpoint estimates for one-dimensional oscillatory integral operator</title>
+    <updated>2016-02-22T03:43:10Z</updated>
+    <link href="https://arxiv.org/abs/1602.05663v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.05663v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The one-dimensional oscillatory integral operator associated to a real analytic phase $S$ is given by $$ T_λf(x) =\int_{-\infty}^\infty e^{iλS(x,y)} χ(x,y) f(y) dy. $$ In this paper, we obtain a complete characterization for the mapping properties of $T_λ$ on $L^p(\mathbb R)$ spaces, namely we prove that $\|T_λ\|_p \lesssim |λ|^{-α}\|f\|_p$ for some $α&gt;0$ if and only if the point $(\frac 1 {αp} , \frac 1 {αp'})$ lies in the reduced Newton polygon of $S$, and this estimate is sharp if and only if it lies on the reduced Newton diagram.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-18T02:34:57Z</published>
+    <arxiv:comment>30 pages. All comments are welcome! arXiv admin note: text overlap with arXiv:1511.05233</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Lechao Xiao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.13051v1</id>
+    <title>Symmetric Power L-functions of the hyper-Kloosterman Family</title>
+    <updated>2024-02-20T14:37:10Z</updated>
+    <link href="https://arxiv.org/abs/2402.13051v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.13051v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The symmetric power L-function of the hyper-Kloosterman family is a rational function over the integers. Its degree and complex absolute values of its zeros and poles are now known through the work of Fu and Wan. The purpose of this paper is to study the p-adic absolute value of these zeros and poles. In particular, we give a uniform lower bound, independent of the symmetric power, of the q-adic Newton polygon of this $L$-function under suitable conditions. We also give similar results for any other linear algebra operation of the hyper-Kloosterman family, such as tensor, exterior, symmetric powers, or combinations thereof.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-20T14:37:10Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>C. Douglas Haessig</name>
+    </author>
+    <author>
+      <name>Steven Sperber</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.09769v2</id>
+    <title>Slopes of overconvergent Hilbert modular forms</title>
+    <updated>2018-11-12T16:18:29Z</updated>
+    <link href="https://arxiv.org/abs/1710.09769v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.09769v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give an explicit description of the matrix associated to the $U_p$ operator acting on spaces of overconvergent Hilbert modular forms over totally real fields. Using this, we compute slopes for weights in the centre and near the boundary of weight space for certain real quadratic fields. \added[id=h]{Near the boundary of weight space we see that the slopes do not appear to be given by finite unions of arithmetic progressions but instead can be produced by a simple recipe from which we make a conjecture on the structure of slopes. We also prove a lower bound on the Newton polygon of the $U_p$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-26T15:49:13Z</published>
+    <arxiv:comment>22 pages, 7 figure, 7 tables. Final version, to appear in Experiment. Math. arXiv admin note: text overlap with arXiv:1610.09711</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Christopher Birkbeck</name>
+    </author>
+    <arxiv:doi>10.1080/10586458.2018.1538909</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/10586458.2018.1538909" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.12490v2</id>
+    <title>Slopes in eigenvarieties for definite unitary groups</title>
+    <updated>2020-06-01T22:41:36Z</updated>
+    <link href="https://arxiv.org/abs/2004.12490v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.12490v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We generalize bounds of Liu-Wan-Xiao for slopes in eigencurves for definite unitary groups of rank $2$ to slopes in eigenvarieties for definite unitary groups of any rank. We show that for a definite unitary group of rank $n$, the Newton polygon of the characteristic power series of the $U_p$ Hecke operator has exact growth rate $x^{1+\frac2{n(n-1)}}$, times a constant proportional to the distance of the weight from the boundary of weight space. The proof goes through the classification of forms associated to principal series representations. We also give a consequence for the geometry of these eigenvarieties over the boundary of weight space.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-26T22:12:02Z</published>
+    <arxiv:comment>41 pages; updated introduction and acknowledgments; submitted</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lynnelle Ye</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06244v1</id>
+    <title>Fast evaluation and root finding for polynomials with floating-point coefficients</title>
+    <updated>2023-02-13T10:29:31Z</updated>
+    <link href="https://arxiv.org/abs/2302.06244v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06244v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Evaluating or finding the roots of a polynomial $f(z) = f_0 + \cdots + f_d z^d$ with floating-point number coefficients is a ubiquitous problem. By using a piecewise approximation of $f$ obtained with a careful use of the Newton polygon of $f$, we improve state-of-the-art upper bounds on the number of operations to evaluate and find the roots of a polynomial. In particular, if the coefficients of $f$ are given with $m$ significant bits, we provide for the first time an algorithm that finds all the roots of $f$ with a relative condition number lower than $2^m$, using a number of bit operations quasi-linear in the bit-size of the floating-point representation of $f$. Notably, our new approach handles efficiently polynomials with coefficients ranging from $2^{-d}$ to $2^d$, both in theory and in practice.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-13T10:29:31Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Rémi Imbach</name>
+      <arxiv:affiliation>GAMBLE</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Guillaume Moroz</name>
+      <arxiv:affiliation>GAMBLE</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.10778v2</id>
+    <title>The Arithmetic of Semirings Part I: Ideals</title>
+    <updated>2026-08-06T19:28:56Z</updated>
+    <link href="https://arxiv.org/abs/2607.10778v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.10778v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study ideals in the semiring $\mathbb{N}$ of natural numbers, with a focus on those which are lost when extending from $\mathbb{N}$ to $\mathbb{Z}$. This leads to a new perspective on the classical theory of numerical semigroups, including the introduction of a natural multiplicative structure. We prove that unique factorization of ideals fails in $\mathbb{N}$ on several levels, introduce a handful of new tropical multiplicative invariants of numerical semigroups, characterize integral closures of ideals in terms of Newton polygons, and analyze the behavior of classical numerical semigroup invariants with respect to the product operation.</summary>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-12T14:14:18Z</published>
+    <arxiv:primary_category term="math.AC"/>
+    <author>
+      <name>Jay Chen</name>
+    </author>
+    <author>
+      <name>Trevor Hyde</name>
+    </author>
+    <author>
+      <name>Dorien Laurens</name>
+    </author>
+    <author>
+      <name>Jasper Piermarini</name>
+    </author>
+    <author>
+      <name>Harriet Simons</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.04413v1</id>
+    <title>Sharp estimates for convolution operators associated to hypersurfaces in $\mathbb{R}^3$ with height $h\le2$</title>
+    <updated>2024-03-07T11:18:43Z</updated>
+    <link href="https://arxiv.org/abs/2403.04413v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.04413v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we study the convolution operator $M_k$ with oscillatory kernel, which is related with solutions to the Cauchy problem for the strictly hyperbolic equations. The operator $M_k$ is associated to the characteristic hypersurface $Σ\subset \mathbb{R}^3$ of the equation and the smooth amplitude function, which is homogeneous of order $-k$ for large values of the argument. We study the convolution operators assuming that the support of the corresponding amplitude function is contained in a sufficiently small conic neighborhood of a given point $v\in Σ$ at which the height of the surface is less or equal to two. Such class contains surfaces related to simple and the $X_9, \, J_{10}$ type singularities in the sense of Arnol'd's classification. Denoting by $k_p$ the minimal exponent such that $M_k$ is $L^p\mapsto L^{p'}$-bounded for $k&gt;k_p,$ we show that the number $k_p$ depends on some discrete characteristics of the Newton polygon of a smooth function constructed in an appropriate coordinate system.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-07T11:18:43Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Ibrokhimbek Akramov</name>
+    </author>
+    <author>
+      <name>Isroil A. Ikromov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.27003v1</id>
+    <title>Algorithms for Linear Ordinary Differential Operators</title>
+    <updated>2026-07-29T14:59:38Z</updated>
+    <link href="https://arxiv.org/abs/2607.27003v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.27003v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe an implementation in Scratchpad II of linear ordinary differential operators over a differential ring, acting on a module equipped with a compatible derivation. The abstract data type facilities of the system allow such operators to be represented and manipulated as first-class objects while retaining the usual notation for operator application. For coefficients in a field, we give constructive algorithms for left and right division, greatest common divisors, least common multiples, and an extended Euclidean algorithm; the right-hand constructions may be obtained from the corresponding left-hand constructions in the opposite ring. We also discuss pseudo-division over polynomial coefficient rings and an Ore localization yielding a right field of fractions. Finally, we apply this operator arithmetic to factorization of ordinary differential equations, using the associated Riccati equation and Newton polygons to analyze possible singular parts of factors. Examples include operators with constant, elementary-function, rational-function, and matrix coefficients.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T14:59:38Z</published>
+    <arxiv:comment>This article is posted for historical archival. It was accepted for presentation and publication in the "Conference on Computers and Mathematics'', held at Stanford, California, 30 July--1 August 1986. The proceedings, however, did not appear. This is a translation of the contemporaneous Script/VM to LaTeX</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Jean Della Dora</name>
+    </author>
+    <author>
+      <name>Stephen M. Watt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1005.1156v3</id>
+    <title>A new computational approach to ideal theory in number fields</title>
+    <updated>2010-07-15T15:21:11Z</updated>
+    <link href="https://arxiv.org/abs/1005.1156v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1005.1156v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $K$ be the number field determined by a monic irreducible polynomial $f(x)$ with integer coefficients. In previous papers we parameterized the prime ideals of $K$ in terms of certain invariants attached to Newton polygons of higher order of the defining equation $f(x)$. In this paper we show how to carry out the basic operations on fractional ideals of $K$ in terms of these constructive representations of the prime ideals. From a computational perspective, these results facilitate the manipulation of fractional ideals of $K$ avoiding two heavy tasks: the construction of the maximal order of $K$ and the factorization of the discriminant of $f(x)$. The main computational ingredient is Montes algorithm, which is an extremely fast procedure to construct the prime ideals.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-05-07T08:50:22Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jordi Guardia</name>
+    </author>
+    <author>
+      <name>Jesus Montes</name>
+    </author>
+    <author>
+      <name>Enric Nart</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0204269v1</id>
+    <title>Estimates for Oscillatory Integral Operators</title>
+    <updated>2002-04-22T21:11:28Z</updated>
+    <link href="https://arxiv.org/abs/math/0204269v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0204269v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  This thesis is devoted to asymptotic norm estimates for oscillatory integral operators acting on the L^2 space of functions of one real variable. The operators in question have compact support and an oscillatory kernel of the form exp(i Lambda S(x,y)), where S(x,y) is a smooth real phase function, and Lambda is a large real number.
+  I study how the norm of the operator decays as Lambda goes to infinity, and how the rate of this decay can be determined from the properties of the phase function S(x,y).
+  For C^infinity phase functions I prove results formulated in terms of the Newton polygon of S(x,y), improving previously known estimates by Phong and Stein, and Seeger. My estimates are best possible or differ from the best possible ones by at most a power of log Lambda.
+  Main results of the thesis are based on a geometric analysis of the zero set of the Hessian S''_{xy} using Puiseux decompositions, and have appeared before in [math.CA/9911153]. New results obtained by a different method based on a stopping time argument are also included.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-04-22T21:11:28Z</published>
+    <arxiv:comment>Princeton University thesis, 71 pages, 23 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Vyacheslav S. Rychkov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12250v2</id>
+    <title>From Whole-Space Theory to Boundary Value Problems for Mixed-Order PDEs</title>
+    <updated>2026-09-25T12:27:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.12250v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12250v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a general principle for passing from the analysis of partial differential operators on the whole space to boundary value problems on the half-space. The reduction separates the boundary problem into restricted invertibility of the interior operator and a complementing problem formulated entirely on the trace space. For a broad class of operators admitting suitable factorizations, the restricted invertibility is governed by the whole-space theory of the factors, while the complementing problem determines both well-posedness and the admissible combinations of interior and boundary data. In this way, boundary value theory is reduced to whole-space operator theory together with an explicit analysis on the trace space.
+  We realize this principle for time-periodic partial differential equations and systems of mixed order, developing the required Newton-polygon function spaces, interpolation theory, and $L^p$-trace theory. For mixed-order differential operators under general boundary conditions, well-posedness and the admissible data space are determined by an explicit complemented boundary matrix. This yields new $L^p$-well-posedness results for Cahn--Hilliard equations with dynamic boundary conditions and for Cahn--Hilliard--Gurtin systems. Most notably, we obtain the first maximal $L^p$-regularity result for a genuinely mixed-order interior system coupled to dynamic boundary conditions carrying a distinct mixed-order structure.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T16:50:05Z</published>
+    <arxiv:comment>Substantial reorganization emphasizing the abstract reduction from whole-space theory to boundary value problems; streamlined and shortened the interpolation and trace arguments; added applications to Cahn--Hilliard equations with Liu--Wu boundary conditions and to the Cahn--Hilliard--Gurtin system with dynamic Goldstein--Miranville boundary conditions; corrected typos</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Guillaume Neuttiens</name>
+    </author>
+    <author>
+      <name>Jonas Sauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.08156v2</id>
+    <title>Characterizing Liouvillian Exceptional Points Through Newton Polygons and Tropical Geometry</title>
+    <updated>2026-08-27T16:44:48Z</updated>
+    <link href="https://arxiv.org/abs/2510.08156v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.08156v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The dynamics of open quantum systems described by the Lindblad master equation follows according to non-Hermitian operators. As a result, such systems can host non-Hermitian degeneracies called Liouvillian exceptional points (EPs). In this work, we show that Newton polygons and tropical geometric approach allow identification and characterization of Liouvillian EPs. We use two models -- dissipative spin$-1/2$ system and dissipative superconducting qubit system -- to illustrate our method. We demonstrate that our approach captures the anisotropy and order of the Liouvillian EPs, while also revealing the subtle dependence on the form of the perturbation. Our analytical analysis is supplemented by direct numerical calculations of the scaling and exchange of eigenvalues around Liouvillian EPs. Our analytical approach could be useful in understanding and designing Liouvillian EPs of desired order.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-09T12:36:20Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>J. Phys. A: Math. Theor. 59 135302 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Sayooj P</name>
+    </author>
+    <author>
+      <name>Awadhesh Narayan</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/ae557e</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/ae557e" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0705.3614v1</id>
+    <title>Bounding slopes of $p$-adic modular forms</title>
+    <updated>2007-05-24T16:25:56Z</updated>
+    <link href="https://arxiv.org/abs/0705.3614v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0705.3614v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $p$ be prime, $N$ be a positive integer prime to $p$, and $k$ be an integer. Let $P_k(t)$ be the characteristic series for Atkin's $U$ operator as an endomorphism of $p$-adic overconvergent modular forms of tame level $N$ and weight $k$. Motivated by conjectures of Gouvea and Mazur, we strengthen Wan's congruence between coefficients of $P_k$ and $P_{k'}$ for $k'$ close $p$-adically to $k$. For $p-1 | 12$, $N = 1$, $k = 0$, we compute a matrix for $U$ whose entries are coefficients in the power series of a rational function of two variables. We apply this computation to show for $p = 3$ a parabola below the Newton polygon $N_0$ of $P_0$, which coincides with $N_0$ infinitely often. As a consequence, we find a polygonal curve above $N_0$. This tightest bound on $N_0$ yields the strongest congruences between coefficients of $P_0$ and $P_k$ for $k$ of large 3-adic valuation.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-05-24T16:25:56Z</published>
+    <arxiv:comment>15 pages. June 2001 preprint</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Lawren Smithline</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.01126v2</id>
+    <title>Nonlinear stability of explicit self-similar solutions for the timelike extremal hypersurfaces in R^{1+3}</title>
+    <updated>2020-05-07T11:16:18Z</updated>
+    <link href="https://arxiv.org/abs/1907.01126v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.01126v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper is devoted to the study of the singularity phenomenon of timelike extremal hypersurfaces in Minkowski spacetime $\mathbb{R}^{1+3}$. We find that there are two explicit lightlike self-similar solutions to a graph representation of timelike extremal hypersurfaces in Minkowski spacetime $\mathbb{R}^{1+3}$, the geometry of them are two spheres. The linear mode unstable of those lightlike self-similar solutions for the radially symmetric membranes equation is given. After that, we show those self-similar solutions of the radially symmetric membranes equation are nonlinearly stable inside a strictly proper subset of the backward lightcone. This means that the dynamical behavior of those two spheres is as attractors. Meanwhile, we overcome the double roots case (the theorem of Poincaré can't be used) in solving the difference equation by construction of a Newton's polygon when we carry out the analysis of spectrum for the linear operator.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-02T02:16:43Z</published>
+    <arxiv:comment>41 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Weiping Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.24155v1</id>
+    <title>Newton strata realization for hypersurfaces via explicit p-adic cohomology</title>
+    <updated>2026-02-27T16:37:10Z</updated>
+    <link href="https://arxiv.org/abs/2602.24155v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.24155v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be a smooth projective hypersurface over a finite field $k$ of characteristic $p$. We address the problem of practically computing the zeta function $Z(X,T)$ of $X$ (equivalently, the point counts $\#X(\mathbb{F}_q)$, where $q = p^n$), and we focus on the case when $7 \leq p &lt; 50$. We use the theoretical framework of the variant of Kedlaya's algorithm in arXiv:archive/0601508, and we use the technique of controlled reduction as described in Costa's Thesis. We define an optimization problem that abstracts the key bottleneck in the implementation of controlled reduction. An algorithm that solves this problem is called a reduction policy. We present three reduction policies with different advantages and disadvantages. We also present a high-performance implementation of controlled reduction that contains GPU-optimized linear algebra code and a data structure for linear recurrences that the authors hope can be used to study further reduction policies. Our algorithms get state-of-the-art performance in many cases; for example, we beat arXiv:1402.6758 or arXiv:2203.02070 on many examples of quintic curves, while also being able to compute zeta functions of cubic fourfolds when $p = 7$. We also have the first (to our knowledge) systematic computations of zeta functions of quintic surfaces. We use our implementation to deduce many new explicit examples of varieties with specified Newton polygons, including a cubic fourfold which are neither ordinary nor supersingular, quartic K3 surfaces of various Artin-Mazur heights, and quintic surfaces of all possible domino numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-27T16:37:10Z</published>
+    <arxiv:comment>22 pages, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ryan Batubara</name>
+    </author>
+    <author>
+      <name>Jack J Garzella</name>
+    </author>
+    <author>
+      <name>Yongyuan Huang</name>
+    </author>
+    <author>
+      <name>Maximus Mellberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1411.0478v2</id>
+    <title>Trigonometric weight functions as K-theoretic stable envelope maps for the cotangent bundle of a flag variety</title>
+    <updated>2014-11-25T21:39:35Z</updated>
+    <link href="https://arxiv.org/abs/1411.0478v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1411.0478v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the cotangent bundle $T^*F_λ$ of a $GL_n$ partial flag variety, $λ=(λ_1,...,λ_N)$, $|λ|=\sum_iλ_i=n$, and the torus $T=(\C^\times)^{n+1}$ equivariant K-theory algebra $K_T(T^*F_λ)$. We introduce K-theoretic stable envelope maps $\Stab_σ: \oplus_{|λ|=n} K_T((T^*F_λ)^T)\to\oplus_{|λ|=n}K_T(T^*F_λ)$, where $σ\in S_n$. Using these maps we define a quantum loop algebra action on $\oplus_{|λ|=n}K_T(T^*F_λ)$. We describe the associated Bethe algebra $B^q(K_T(T^*F_λ))$ by generators and relations in terms of a discrete Wronski map. We prove that the limiting Bethe algebra $B^q(K_T(T^*F_λ))$, called the Gelfand-Zetlin algebra, coincides with the algebra of multiplication operators of the algebra $K_T(T^*F_λ)$. We conjecture that the Bethe algebra $B^q(K_T(T^*F_λ))$ coincides with the algebra of quantum multiplication on $K_T(T^*F_λ)$ introduced by Givental and Lee.
+  The stable envelope maps are defined with the help of Newton polygons of Laurent polynomials representing elements of $K_T(T^*F_λ)$ and with the help of the trigonometric weight functions introduced in [TV1, TV3] to construct q-hypergeometric solutions of trigonometric qKZ equations.
+  The paper has five appendices. In particular, in Appendix 5 we describe the Bethe algebra of the XXZ model by generators and relations.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-11-03T13:18:45Z</published>
+    <arxiv:comment>Latex, 56 pages, in the new Appendix 5 the Bethe algebra of the XXZ model is described by generators and relations</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>R. Rimanyi</name>
+    </author>
+    <author>
+      <name>V. Tarasov</name>
+    </author>
+    <author>
+      <name>A. Varchenko</name>
+    </author>
+    <arxiv:doi>10.1016/j.geomphys.2015.04.002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.geomphys.2015.04.002" title="doi"/>
+  </entry>
+</feed>

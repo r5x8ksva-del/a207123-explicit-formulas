@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/46K6/n8YltZIepOFdxsmge1Zv8g</id>
+  <title>arXiv Query: search_query=abs:OEIS AND abs:conjectures AND abs:recurrence&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:OEIS+AND+(abs:conjectures+AND+abs:recurrence)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2309.00487v1</id>
+    <title>Hardinian Arrays</title>
+    <updated>2023-09-01T14:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2309.00487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.00487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2014, R.H. Hardin contributed a family of sequences about king-moves on an array to the On-Line Encyclopedia of Integer Sequences (OEIS). The sequences were recently noticed in an automated search of the OEIS by Kauers and Koutschan, who conjectured a recurrence for one of them. We prove their conjecture as well as some older conjectures stated in the OEIS entries. We also have some new conjectures for the asymptotics of Hardin's sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-01T14:26:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.04177v2</id>
+    <title>Enumeration of Carlitz Multipermutations</title>
+    <updated>2017-02-16T22:13:31Z</updated>
+    <link href="https://arxiv.org/abs/1702.04177v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.04177v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A multipermutation with $k$ copies each of $1\ldots n$ is Carlitz if neighbours are different. We enumerate these objects for $k=2,3,4$ and derive recurrences. In particular, we prove and improve a conjectured recurrence for $k=3$, stated in OEIS, the Online Encyclopedia of Integer Sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-14T12:28:12Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Henrik Eriksson</name>
+    </author>
+    <author>
+      <name>Alexis Martin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15500v1</id>
+    <title>Three short proofs of Mathar's 2014 conjecture for OEIS A002627</title>
+    <updated>2026-05-15T00:36:49Z</updated>
+    <link href="https://arxiv.org/abs/2605.15500v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15500v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A002627, defined by the inhomogeneous first-order recurrence $a(n) = n\,a(n-1) + 1$ with $a(0) = 0$, R.~J.~Mathar recorded in February 2014 the conjectured second-order homogeneous recurrence \[ a(n) - (n+1)\,a(n-1) + (n-1)\,a(n-2) = 0, \qquad n \ge 2, \] which has remained marked as a conjecture on the OEIS for over a decade. We give three short proofs. The first is two lines: subtract the defining recurrence at adjacent indices and the constant cancels (we call this homogenisation). The second reads off the same relation from the exponential generating function $F(x) = (e^x-1)/(1-x)$. The third is a Pascal-rule telescoping on the binomial-sum form $a(m) = \sum_{k=0}^{m-1} k!\binom{m}{k}$. All three derivations are elementary, requiring nothing beyond undergraduate techniques. We remark that the same homogenisation trick clears an entire class of ``Conjecture: \dots'' entries on the OEIS, namely sequences satisfying $a(n) = p(n)\,a(n-1) + q(n)$ with simple $q$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T00:36:49Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.04654v2</id>
+    <title>Automated Proofs of Many Conjectured Recurrences in the OEIS made by R.J. Mathar</title>
+    <updated>2017-10-23T15:10:04Z</updated>
+    <link href="https://arxiv.org/abs/1707.04654v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.04654v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The On-Line Encyclopedia Of Integer Sequences , that wonderful resource that most combinatorialists, and many other mathematicians and scientists, use at least once a day, is a treasure trove of mathematical information, and, one of its charms is that it contains many intriguing conjectures. But one should be on one's guard, because some of the conjectures are either already theorems, or can be routinely proved. In this case study we demonstrate, and actually fully implement (in an accompanying Maple package), how to turn many conjectures made in the OEIS by R.J. Mathar, regarding linear recurrences satisfies by a certain class of sequences, into fully rigorously-proved theorems, but we argue, that one should not emulate us, and while it is nice to have one example, of an algorithm to actually construct proofs (that are known to exist by a priori theoretical reasons), life is too short to do it in all cases, and hence we propose a new category for the OEIS, that of "provable conjecture", as opposed to "proved conjecture" (alias theorem).</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-14T22:12:18Z</published>
+    <arxiv:comment>7 pages; Accompanied my a Maple package and sample input and output files available from http://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/mathar.html</arxiv:comment>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Mingjia Yang</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07325v1</id>
+    <title>Real-rooted Eulerian polynomials from permutations, words, and paths</title>
+    <updated>2026-09-07T10:40:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.07325v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07325v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study six Eulerian-type polynomial families. We prove that the
+  descent polynomials of derangements are real-rooted, settling the
+  derangement part of a conjecture of S.~Fu, Z.~Lin, and J.~Zeng. The proof
+  uses a compatible-pair recursion and finite-symbol stability. We also
+  resolve the real-rootedness conjecture in OEIS
+  \oeis{A335340}, strengthen the known rowwise real-rootedness of an even-top
+  descent family to consecutive strict interlacing, and prove real-rootedness,
+  consecutive interlacing, and real-rooted gamma-polynomials for U.~Shankar's
+  super-Eulerian polynomials. A differential recurrence gives consecutive
+  weak interlacing for ternary words counted by increasing runs.
+  Finally, we prove stability of the peak-value refinement and consecutive
+  interleaving of its positive weighted diagonals, settling a conjecture of
+  P.~Alexandersson and O.~Nabawanda.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T10:40:35Z</published>
+    <arxiv:comment>17 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.11734v2</id>
+    <title>On the records and zeros of a deterministic random walk</title>
+    <updated>2025-03-28T14:37:48Z</updated>
+    <link href="https://arxiv.org/abs/2503.11734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.11734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We settle two questions on sequence A120243 in the OEIS that were raised by Clark Kimberling and partly solve a conjecture of Van de Lune and Arias de Reyna. We extend Kimberling's questions to the framework of deterministic random walks, automatic sequences, and linear recurrences. Our results indicate that there may be a deeper connection between these structures. In particular, we conjecture that the records of deterministic random walks are $ξ$-Ostrowski automatic for a quadratic rotation number $ξ$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-14T12:45:27Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Henk Bruin</name>
+    </author>
+    <author>
+      <name>Robbert Fokkink</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.10205v2</id>
+    <title>Counting Standard Young Tableaux With Restricted Runs</title>
+    <updated>2020-08-08T19:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2006.10205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.10205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of Young Tableaux whose shape is a k by n rectangle is famously (nk)! 0! ... (k-1)!/((n+k-1)!(n+k-2)!... n!) implying that for each specific k, that sequence satisfies a linear recurrence equation with polynomial coefficients of the first order. But what about counting Young tableaux where certain "run lengths" are forbidden? Then things seem to get much more complicated. We conclude with four conjectures and pledge donations to the OEIS in honor of the first provers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-17T23:55:55Z</published>
+    <arxiv:comment>8 pages. Accompanied by Maple packages and C programs available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/cyt.html This version adds a footnote, and pledges donations to the OEIS in honor of the first provers</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.10288v1</id>
+    <title>On sequences associated to the invariant theory of rank two simple Lie algebras</title>
+    <updated>2019-11-23T00:11:51Z</updated>
+    <link href="https://arxiv.org/abs/1911.10288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.10288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two families of sequences, listed in the On-Line Encyclopedia of Integer Sequences (OEIS), which are associated to invariant theory of Lie algebras. For the first family, we prove combinatorially that the sequences A059710 and A108307 are related by a binomial transform. Based on this, we present two independent proofs of a recurrence equation for A059710, which was conjectured by Mihailovs. Besides, we also give a direct proof of Mihailovs' conjecture by the method of algebraic residues. As a consequence, closed formulae for the generating function of sequence A059710 are obtained in terms of classical Gaussian hypergeometric functions. Moreover, we show that sequences in the second family are also related by binomial transforms.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-23T00:11:51Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Jordan Tirrell</name>
+    </author>
+    <author>
+      <name>Bruce W. Westbury</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24832v1</id>
+    <title>Further proofs of conjectures from the OEIS</title>
+    <updated>2026-07-23T14:00:41Z</updated>
+    <link href="https://arxiv.org/abs/2607.24832v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24832v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the fourth work in a series devoted to proving conjectures recorded in the On-Line Encyclopedia of Integer Sequences (OEIS). The problems considered here concern elementary and multiplicative number theory, Fibonacci numbers, decimal concatenation, Diophantine and Pell equations, binary representations and bitwise operations, lattice paths, parity patterns, recurrences, and formal power series. Several of the results give complete characterizations of the relevant sequences; others establish exact identities, recurrences, generating functions, asymptotic estimates, integrality properties, or nonoccurrence results. The proofs use combinatorial bijections, congruences, Möbius inversion, valuations, Fibonacci identities, Pell-type arguments, Lucas' theorem, Riordan arrays, Lagrange inversion, and generating-function methods.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T14:00:41Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08506v5</id>
+    <title>On $d$-permutations and Pattern Avoidance Classes</title>
+    <updated>2024-04-24T01:58:11Z</updated>
+    <link href="https://arxiv.org/abs/2208.08506v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08506v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multidimensional permutations, or $d$-permutations, are represented by their diagrams on $[n]^d$ such that there exists exactly one point per hyperplane $x_i$ that satisfies $x_i= j$ for $i \in [d]$ and $j \in [n]$. Bonichon and Morel previously enumerated $3$-permutations avoiding small patterns, and we extend their results by first proving four conjectures, which exhaustively enumerate $3$-permutations avoiding any two fixed patterns of size $3$. We further provide a enumerative result relating $3$-permutation avoidance classes with their respective recurrence relations. In particular, we show a recurrence relation for $3$-permutations avoiding the patterns $132$ and $213$, which contributes a new sequence to the OEIS database. We then extend our results to completely enumerate $3$-permutations avoiding three patterns of size $3$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-17T19:55:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Nathan Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26613v1</id>
+    <title>On a Question of Lehmer concerning the Comtet Numbers</title>
+    <updated>2026-07-29T08:38:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.26613v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26613v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Comtet numbers $b(n,k)$ and $B(n,k)$ of the first and second kind arise from the powers of $(1+x)\log(1+x)$ and of its compositional inverse, respectively. By interpreting both families as special values of weighted Stirling polynomials, we answer Lehmer's question of whether $B(n,k)$ satisfies a recurrence with a fixed number of terms by proving the four-term recurrence $kB(n+1,k+1)=B(n,k-1)-(n-k)B(n,k)-B(n+1,k)$. The corresponding relation for the unsigned array was conjectured by M. Kurkov, but not proved, in OEIS A354794. We further derive explicit formulas, convolution identities, and differential-difference relations for the Touchard-type polynomials attached to the two families.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T08:38:59Z</published>
+    <arxiv:comment>34 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sangtae Jeong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0805.2128v1</id>
+    <title>Eight Hateful Sequences</title>
+    <updated>2008-05-14T18:15:27Z</updated>
+    <link href="https://arxiv.org/abs/0805.2128v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0805.2128v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In his July 1974 Scientific American column, Martin Gardner mentioned the Handbook of Integer Sequences, which then contained 2372 sequences. Today the On-Line Encyclopedia of Integer Sequences (the OEIS) contains 140000 sequences. This paper discusses eight of them, suggested by the theme of the Eighth Gathering For Gardner: they are all infinite, and all 'ateful in one way or another. Each one is connected with an unsolved problem. The sequences are related to: hateful numbers, Angelini's 1995 puzzle, the persistence of a number, Alekseyev's 123 sequence, the curling number conjecture, Quet's prime-generating recurrence, the traveling salesman's problem, and the Riemann Hypothesis.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-05-14T18:15:27Z</published>
+    <arxiv:comment>5 pages; paper for 8th Gathering for [Martin] Gardner</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>N. J. A. Sloane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.08444v1</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the Laguerre sequence~A025166</title>
+    <updated>2026-05-08T20:09:05Z</updated>
+    <link href="https://arxiv.org/abs/2605.08444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.08444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A025166, defined by $a(n) = -n!\,2^{n}\,L_{n}(1/2)$ where $L_{n}$ is the Laguerre polynomial of degree $n$, R.~J.~Mathar contributed in February 2013 the conjectured order-2 P-recursive recurrence \[ a(n) + (-4n+3)\, a(n-1) + 4(n-1)^{2}\, a(n-2) \;=\; 0, \qquad n \ge 2. \] We give a one-page proof. The exponential generating function $F(x) = -\exp\!\big(-x/(1-2x)\big)/(1-2x)$ satisfies the first-order linear ODE $(1-2x)^{2} F'(x) = (1-4x)\, F(x)$, and Mathar's recurrence then falls out by reading off the coefficient of $x^{n}/n!$. Both steps are short. The supplementary archive includes a SymPy script which checks the ODE identically and the recurrence numerically up to $n = 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T20:09:05Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03170v2</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the Meixner sequence A214615</title>
+    <updated>2026-05-06T13:14:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.03170v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03170v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A214615, defined by $a(n) = M_{n}(1)$ where $M_{n}$ is the $n$-th Meixner polynomial satisfying $M_{n+1}(x) = x\,M_{n}(x) - n^{2}\,M_{n-1}(x)$, R.~J.~Mathar contributed on 6~March 2013 the conjectured order-2 P-recursive recurrence $a(n) - a(n-1) + (n-1)^{2}\,a(n-2) = 0$ for $n \ge 2$. We give a one-page proof. The exponential generating function $F(t) = \exp\!\bigl(\arctan t\bigr)/\sqrt{1+t^{2}}$ satisfies the first-order linear ODE $(1+t^{2})\,F'(t) = (1-t)\,F(t)$, and Mathar's recurrence then falls out by reading off the coefficient of $t^{n}/n!$. Both steps are short. The supplementary archive includes a SymPy script that checks the ODE identically and the recurrence numerically up to $n = 500$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-04T21:29:07Z</published>
+    <arxiv:comment>v2: corrected author contact email address (no math content changes)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16553v1</id>
+    <title>An explicit algebraic generating function for OEIS A348410</title>
+    <updated>2026-05-15T18:53:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.16553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A348410, P. Bala recorded in February 2022 two equivalent closed forms, $a(n) = [x^{n}] ((1-x)(1-x^2))^{-n}$ and a single-index binomial sum. R. J. Mathar (October 2021) and V. Kotesovec (November 2021) each contributed a conjectured P-recursive recurrence -- Mathar's of order $4$, Kotesovec's of order $2$. We apply Lagrange-Bürmann inversion to Bala's $[x^n]$ form to derive the parametric expression $A(t) = (1 - y^2)/(1 - y - 4 y^2)$, where $y = y(t)$ is implicit by $y(1-y)^2(1+y) = t$. Eliminating $y$ via resultant gives the explicit algebraic equation $P(t, A) = 0$ of degree $4$ in $A$ and degree $2$ in $t$. As an immediate corollary (Stanley's classical algebraic-implies-D-finite theorem), $A(t)$ is D-finite. Mathar's and Kotesovec's specific recurrences are not directly proven here; we only verify Kotesovec's order-$2$ recurrence numerically for $n = 3, \ldots, 1000$ and observe that an explicit ODE-and-recurrence extraction from $P(t, A) = 0$ via the standard Bostan-Chyzak-Salvy algebraic-to-holonomic procedure would close both conjectures. The supplementary archive contains a SymPy script which derives $P(t, A)$ and checks the numerical evidence.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T18:53:57Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.02690v2</id>
+    <title>An effective analytic recurrence for prime numbers</title>
+    <updated>2025-10-12T09:23:36Z</updated>
+    <link href="https://arxiv.org/abs/2508.02690v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.02690v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Golomb--Keller formula expresses the next prime $p_{n+1}$ as a recurrence relation in terms of the first $n$ primes $p_1, \ldots, p_n$ using the Riemann zeta function and an Euler product, but requires taking a limit as $s \to \infty$, rendering it non-constructive. We transform this asymptotic formula into an effective recurrence by proving that a finite parameter $s \leq p_n$ suffices when combined with the ceiling function, establishing a constructive method valid for all $n \geq 1$.
+  The minimal integer parameter $s_n$ (OEIS A389650) reveals deep connections to prime constellations. We prove $\liminf_{n\to\infty} σ_n = 0$ unconditionally, where $σ_n = s_n/p_n$. The limit superior $C = \limsup σ_n$ satisfies $\log ψ\lesssim C \leq 0.4332$, where $ψ\approx 1.46557$ is the supergolden ratio. The lower bound is conditional on the twin prime conjecture; the upper bound is unconditional. The constant $C$ relates to the densest admissible prime constellation, connecting to the Hardy--Littlewood conjectures.
+  The method extends to Dirichlet L-functions, yielding other effective formulas for calculating $p_{n+1}$ but also for predicting residues of $p_{n+1}$ modulo any integer with reduced precision requirements.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T19:23:15Z</published>
+    <arxiv:comment>22 pages, 3 figures, 1 table. Major revision: (1) Main conjecture now proven using Nagura's theorem; (2) Complete asymptotic analysis with bounds on limsup; (3) Connection to supergolden ratio via twin prime conjecture; (4) Extended data to n=200 with empirical analysis</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Benoit Cloitre</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.04369v1</id>
+    <title>A short proof of Mathar's 2016 recurrence conjecture for OEIS A176677</title>
+    <updated>2026-05-06T00:14:44Z</updated>
+    <link href="https://arxiv.org/abs/2605.04369v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.04369v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A176677, defined by the quadratic convolution recurrence $a(0) = a(1) = 1$ and $a(n+1) = \sum_{p=0}^n a(p) a(n-p) - 1$ for $n \ge 1$, R.~J.~Mathar contributed in March 2016 the conjectured order-4 P-recursive recurrence \[ (n+1)\,a(n) + 2(-3n+1)\,a(n-1) + (9n-13)\,a(n-2) - 4\,a(n-3) + 4(-n+4)\,a(n-4) = 0. \] We give a short proof. The convolution recurrence translates directly into the algebraic equation $z(1-z) G(z)^2 - (1-z) G(z) + (1 - z - z^2) = 0$ for the ordinary generating function $G(z)$, and Mathar's recurrence then drops out as the coefficient form of a 1st-order linear inhomogeneous ODE $q_0(z) G(z) + q_1(z) G'(z) = R(z)$ that we verify by polynomial division modulo the algebraic equation. The polynomial $q_1(z)$ admits the factorization $q_1(z) = -z(z-1)(2z-1)(2z^2 + 3z - 1)$, whose roots are exactly the singularities of $G$. Deutsch's combinatorial interpretation (Motzkin paths of length $n-1$ with two-coloured level-zero horizontal steps) is preserved.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-06T00:14:44Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14213v1</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the reversible-binary-string sequence A032123</title>
+    <updated>2026-05-14T00:14:56Z</updated>
+    <link href="https://arxiv.org/abs/2605.14213v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14213v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A032123, the number of length-$2n$ black-and-white strings with $n$ black beads, considered up to reversal, R. J. Mathar contributed in November 2013 the conjectured order-5 P-recursive recurrence \[ \begin{aligned} &amp;n(n-1)\,a(n) - 2(n-1)(3n-4)\,a(n-1) + 4(2n^{2}-14n+19)\,a(n-2) &amp;\qquad + 8(n^{2}+5n-19)\,a(n-3) - 16(n-3)(3n-10)\,a(n-4) &amp;\qquad + 32(n-4)(2n-9)\,a(n-5) \;=\; 0, \qquad n \ge 6. \end{aligned} \] We give a short proof. Burnside's lemma applied to the reversal action gives the closed form $a(n) = \tfrac{1}{2}\bigl(\binom{2n}{n} + [n \text{ even}]\binom{n}{n/2}\bigr)$; the two summands satisfy elementary recurrences of order $1$ and $2$ respectively; and Mathar's order-5 operator, applied to each summand separately, reduces to a polynomial identity that simplifies to zero after a brief calculation. The supplementary archive includes a SymPy script which verifies the polynomial identities symbolically and checks Mathar's recurrence numerically for $n = 6, \ldots, 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T00:14:56Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.04148v3</id>
+    <title>Efficient Counting of Degree Sequences</title>
+    <updated>2017-02-14T17:12:30Z</updated>
+    <link href="https://arxiv.org/abs/1604.04148v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.04148v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Novel dynamic programming algorithms to count the set $D(n)$ of zero-free degree sequences of length $n$, the set $D_c(n)$ of degree sequences of connected graphs on $n$ vertices and the set $D_b(n)$ of degree sequences of biconnected graphs on $n$ vertices exactly are presented. They are all based on a recurrence of Barnes and Savage and shown to run in polynomial time and are asymptotically much faster than the previous best known algorithms for these problems. These appear to be the first polynomial time algorithms to compute $|D(n)|$, $|D_c(n)|$ and $|D_b(n)|$ to the author's knowledge and have enabled us to tabulate them up to $n=118$, the majority of which were unknown. The available numerical results of $|D(n)|$ tend to give more supporting evidence of a conjecture of Gordon F. Royle about the limit of $|D(n)|/|D(n-1)|$. The OEIS entries that can be computed by algorithms in this paper are A004251, A007721, A007722 and A095268.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-14T13:33:36Z</published>
+    <arxiv:comment>20 pages, 1 figure, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kai Wang</name>
+    </author>
+  </entry>
+</feed>

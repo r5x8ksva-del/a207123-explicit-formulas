@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/XpgEqjth2aJhpkSFb0nLmQD+vws</id>
+  <title>arXiv Query: search_query=(abs:OEIS) AND (abs:Lean OR abs:"language model" OR abs:"language models" OR abs:LLM OR abs:AI)&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-06T23:24:32Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:OEIS+AND+(abs:Lean+OR+(abs:%22language+model%22+OR+(abs:%22language+models%22+OR+(abs:LLM+OR+abs:AI))))&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.32264v1</id>
+    <title>LANTERN: Illuminating Hidden Mathematical Knowledge in Language Models</title>
+    <updated>2026-09-26T05:39:40Z</updated>
+    <link href="https://arxiv.org/abs/2609.32264v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.32264v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Language models can now prove theorems, but people still decide which problems to pursue. We ask whether a model's internal representations can help identify promising mathematical connections. We develop LANTERN, a fast, cost-efficient pipeline that uses a classifier over pretrained-model activations to rank candidate relations, followed by staged filtering, hypothesis generation, executable verification, and analytical checking. Applied to the On-Line Encyclopedia of Integer Sequences (OEIS), LANTERN ranked 50 million pairs among 10,000 frequently referenced sequences and produced 62 verified relations between pairs without an existing OEIS cross-reference. A content screen retained 13 relations worth presenting; nine of these are informative or insightful, including four which are entirely novel to the best of our knowledge: none appears in the OEIS or in our targeted literature search. The entire end-to-end process including classifier training, candidate ranking, filtering and verification took under 8 hours.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-26T05:39:40Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Pavel Tikhonov</name>
+    </author>
+    <author>
+      <name>Elena Tutubalina</name>
+    </author>
+    <author>
+      <name>Ivan Oseledets</name>
+    </author>
+    <author>
+      <name>Dmitry I. Ignatov</name>
+    </author>
+    <author>
+      <name>Mikhail Seleznyov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29411v1</id>
+    <title>Where Induction Runs Out: Description-Length Difficulty and the Memorisation Gap in Integer-Sequence Benchmarks</title>
+    <updated>2026-08-29T19:25:31Z</updated>
+    <link href="https://arxiv.org/abs/2608.29411v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29411v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Integer sequences from the On-Line Encyclopedia of Integer Sequences (OEIS) are increasingly used to benchmark mathematical reasoning in language models. We ask what such benchmarks actually measure, using an exactly computable reference learner: two-part minimum description length (MDL) over the class of P-recursive (holonomic) recurrences, evaluated on every prefix of a sequence as terms arrive. Three findings follow. First, MDL difficulty is a parameter count. The discovery point nd, the first prefix length at which a symbolic hypothesis beats verbatim storage, is predicted almost exactly by a combinatorial identifiability bound on the selected operator's order and degree. It is invariant to term magnitude: scaling Fibonacci over twelve orders of magnitude leaves nd unchanged, because a hypothesis must encode its own initial conditions and the magnitude cancels. Second, at scale the learner exhibits a regime our curated corpus could not produce even once: across 20,000 OEIS sequences, 89.98% of those that fit a recurrence on some prefix fit none at full length. We call this the wilderness -- induction acquires a theory, loses it, and never recovers. Third, evaluating three language models on sequences stratified by these MDL regimes refuted our pre-registered hypothesis: models do not confabulate where MDL reports no theory, but hedge appropriately. Confident errors are inverted, concentrating on the easy stratum, where apparent competence tracks recognition of the sequence rather than induction of its rule. OEIS-derived benchmarks therefore substantially measure memorisation, and MDL supplies a cheap, contamination-free difficulty signal they currently lack. Code and data are released.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-29T19:25:31Z</published>
+    <arxiv:comment>14 pages, 6 figures. Code and data: https://github.com/sabilashang/where-induction-runs-out. Archived: doi:10.5281/zenodo.21830331</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sabilashan Ganeshan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11941v2</id>
+    <title>OEIS Open: How many conjectures can language models turn into theorems?</title>
+    <updated>2026-08-13T09:23:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.11941v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11941v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct OEIS Open, a benchmark based on 492 open mathematical conjectures from the OEIS, formalized in Lean by Tsoukalas et al. Whereas these conjectures had previously been attempted only with a bespoke agent, our open-source evaluation code runs any generic language model (LM) against them, and is secure against LM cheating attempts. We find that LMs equipped with a minimal set of tools resolve 147 of these conjectures with a budget of \$50 per attempt, scoring 30% on OEIS Open. OEIS Open Lite is a random subset of 100 conjectures for cheaper evaluation. When evaluated with a budget of \$200 per attempt, the best current LM scores 44% on OEIS Open Lite. Giving LMs access to the mathematics literature via 476,000 papers from arXiv did not increase performance on OEIS Open Lite, and nor did using more sophisticated agent loops. The conjectures covered in this work are of uncertain mathematical significance, and most have likely received little previous attention. Nevertheless, our results show that LMs can resolve open research conjectures autonomously and at modest cost.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T11:28:36Z</published>
+    <arxiv:comment>26 pages, 6 figures. Code: https://github.com/epoch-research/LeanOpenProblems, results: https://github.com/epoch-research/LeanOpenProblems-results</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Tom Adamczewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25011v1</id>
+    <title>A Kernel-Certified Verification of the Erdős-Mollin-Walsh Conjecture below $10^{14}$</title>
+    <updated>2026-07-29T03:53:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.25011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Erdős problem 364 asks whether three consecutive powerful numbers exist, where $n$ is powerful if $p \mid n$ implies $p^2 \mid n$. Erdős (1976) and, independently, Mollin and Walsh (1986) conjectured that none do; the $abc$ conjecture implies at most finitely many. The conjecture remains open. We present the first verification of the conjecture at any finite bound that is checked end to end by a proof kernel: machine-checked theorems in Lean 4 establishing that no triple of consecutive powerful numbers exists below $10^{12}$ and below $10^{14}$, with the axiom footprint of both theorems being exactly {propext, Classical.choice, Quot.sound} -- no sorry, no native_decide, no trusted external computation. The statements are phrased in the byte-identical vocabulary of the google-deepmind/formal-conjectures formalization of the problem, and we prove abstractly that the open conjecture implies each bounded form, pinning the statement correspondence. The proof reduces the search to odd numbers via a mod-4 argument, represents every odd powerful number as $a^2 b^3$ with $a, b$ odd and $b$ squarefree, enumerates all odd powerful numbers by a fueled, kernel-reducible generator whose completeness is proved once and instantiated across 3,524 per-interval Boolean certificates, and eliminates the seven surviving distance-2 pairs (the members of OEIS A076445 below $10^{14}$) by explicit non-powerfulness witnesses. Every certificate's expected values are computed independently by a Python engine, so each kernel-checked equality doubles as a cross-implementation agreement. Total certified kernel time is roughly 46 CPU-hours. Larger uncertified computations exist (exhaustive to $10^{22}$; conditionally to about $7.38 \times 10^{28}$); our contribution is not a computational record but the elimination of trusted enumeration code from the evidence chain.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T03:53:11Z</published>
+    <arxiv:comment>13 pages. Lean 4 sources, certificates, and CI at https://github.com/ibrahimmian36/Optio</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Ibrahim Mian</name>
+    </author>
+    <author>
+      <name>Shayaan Siddique</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26035v1</id>
+    <title>Every Nonnegative Integer Is a Sum of a Triangular, a Pentagonal, and a Heptagonal Number</title>
+    <updated>2026-06-24T17:11:12Z</updated>
+    <link href="https://arxiv.org/abs/2606.26035v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26035v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, it is proved that any nonnegative integer can be written in the following form $$ x(x+1)/2 + y(3y+1)/2 + z(5z+1)/2, \qquad x,y,z \in \mathbb{N}. $$ This settles the conjecture recorded as OEIS A287616. All parts of the proof have been formalized in Lean 4, with the exception of two results: one externally cited theorem and one statement verified by symbolic computation. Both the natural-language proof and the Lean formalization were generated by the MechMath Agent Team developed by the authors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T17:11:12Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Yichuan Cao</name>
+    </author>
+    <author>
+      <name>Dakai Guo</name>
+    </author>
+    <author>
+      <name>Ruichen Qiu</name>
+    </author>
+    <author>
+      <name>Ruyong Feng</name>
+    </author>
+    <author>
+      <name>Xiao-Shan Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22997v1</id>
+    <title>A Greatest Common Divisor Criterion of Certain Binomial Coefficients</title>
+    <updated>2026-06-22T08:14:01Z</updated>
+    <link href="https://arxiv.org/abs/2606.22997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The binomial greatest common divisor (gcd) criterion recorded as OEIS A080170 is proven. The criterion also appears as conjecture (17) in Ralf Stephan's list of OEIS conjectures. For $k\geq 2$, put \[
+  D(k)=\gcd_{2\leq q\leq k+1}\binom{qk}{k},
+  \qquad n=k+1. \] If $P$ is the largest prime-power component $p^a$ exactly dividing $n$, then the criterion asserts \[
+  D(k)=1 \quad\Longleftrightarrow\quad \frac{n}{P}&gt;P. \] The proof is formalized in Lean and the Lean artifact is accepted as part of the Formal Conjectures project. Both the natural-language proof and the Lean formalization are generated by the MechMath Agent Team, an AI agent developed by the authors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-22T08:14:01Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Dakai Guo</name>
+    </author>
+    <author>
+      <name>Ruichen Qiu</name>
+    </author>
+    <author>
+      <name>Yichuan Cao</name>
+    </author>
+    <author>
+      <name>Ruyong Feng</name>
+    </author>
+    <author>
+      <name>Xiao-Shan Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.04016v1</id>
+    <title>Witness-split + window-cardinality refinement for $r_3(N)$: Architecture, empirical results, and a structural hard pocket</title>
+    <updated>2026-05-31T17:48:17Z</updated>
+    <link href="https://arxiv.org/abs/2606.04016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.04016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a reproducible computational framework for upper-bound searches on r_3(N), the maximum size of a 3-term-arithmetic-progression-free subset of [1,N]. The framework combines a verified lower-bound witness, endpoint forcing, depth-d witness-variable splitting, OEIS A003002 window-cardinality pruning, and recursive refinement of timed-out subproblems. Applied to the frontier case N = 212, K = 44, it found no feasible 44-set across millions of CP-SAT subproblems, supporting but not proving the conjectural value r_3(212) = 43. A 300-second recap leaves 45 resistant chunks; one-hour HiGHS MIP closes none of them; the full eight-hour HiGHS audit closes 25/45 and leaves 20/45 with dual bounds still pinned at 0.0. A CDCL/SAT re-attack on those LP-paradigm-resistant chunks closes 18 via conflict-driven clause learning; all eighteen carry independently verified DRAT proofs. The remaining two chunks (T1c) resist every tested paradigm under generous wall caps. We release the witness, solver scripts, result logs, tiered benchmark instances, verified DRAT/LRAT proofs, and a Lean formal-proof-search encoding of T1c, and frame the unit-gap problem r_3(212) in {43,44} as a target for stronger additive-combinatorial bounds, custom branch-and-bound, or formal proof-search systems.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-31T17:48:17Z</published>
+    <arxiv:comment>19 pages, 1 figure, ancillary files include tiered JSONL benchmarks and Lean encodings. Full proof artifacts and campaign data are available at Zenodo DOI 10.5281/zenodo.20463334</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Mehmet Ergezer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.22763v2</id>
+    <title>Advancing Mathematics Research with AI-Driven Formal Proof Search</title>
+    <updated>2026-06-08T12:23:48Z</updated>
+    <link href="https://arxiv.org/abs/2605.22763v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.22763v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) increasingly excel at mathematical reasoning, but their unreliability limits their utility in mathematics research. A mitigation is using LLMs to generate formal proofs in languages like Lean. We perform the first large-scale evaluation of this method's ability to solve open problems. Our most capable agent autonomously resolved 9 of 353 open Erdős problems at the per-problem cost of a few hundred dollars, proved 44/492 OEIS conjectures, and is being deployed in combinatorics, optimization, graph theory, algebraic geometry, and quantum optics research. A basic agent alternating LLM-based generation with Lean-based verification replicated the Erdős successes but proved costlier on the hardest problems. These findings demonstrate the power of AI-aided formal proof search and shed light on the agent designs that enable it.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T17:24:57Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>George Tsoukalas</name>
+    </author>
+    <author>
+      <name>Anton Kovsharov</name>
+    </author>
+    <author>
+      <name>Sergey Shirobokov</name>
+    </author>
+    <author>
+      <name>Anja Surina</name>
+    </author>
+    <author>
+      <name>Moritz Firsching</name>
+    </author>
+    <author>
+      <name>Gergely Bérczi</name>
+    </author>
+    <author>
+      <name>Francisco J. R. Ruiz</name>
+    </author>
+    <author>
+      <name>Arun Suggala</name>
+    </author>
+    <author>
+      <name>Adam Zsolt Wagner</name>
+    </author>
+    <author>
+      <name>Eric Wieser</name>
+    </author>
+    <author>
+      <name>Lei Yu</name>
+    </author>
+    <author>
+      <name>Aja Huang</name>
+    </author>
+    <author>
+      <name>Miklós Z. Horváth</name>
+    </author>
+    <author>
+      <name>Andrew Ferraiuolo</name>
+    </author>
+    <author>
+      <name>Henryk Michalewski</name>
+    </author>
+    <author>
+      <name>Edward Lockhart</name>
+    </author>
+    <author>
+      <name>Codrut Grosu</name>
+    </author>
+    <author>
+      <name>Thomas Hubert</name>
+    </author>
+    <author>
+      <name>Matej Balog</name>
+    </author>
+    <author>
+      <name>Pushmeet Kohli</name>
+    </author>
+    <author>
+      <name>Swarat Chaudhuri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01637v1</id>
+    <title>The Banach-Butterfly Invariant: Influence-Adaptive Walsh Geometry for Ternary Polynomial Threshold Functions</title>
+    <updated>2026-05-02T22:54:29Z</updated>
+    <link href="https://arxiv.org/abs/2605.01637v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01637v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the Banach-Butterfly Invariant (BBT), an influence-adaptive Banach geometry on the Walsh-Hadamard butterfly factorization. For a Boolean function $f:\{-1,+1\}^n\to\{-1,+1\}$ with coordinate influences $\mathrm{Inf}_\ell(f)$, BBT assigns exponent $p_\ell = 1+\mathrm{Inf}_\ell(f)$ to butterfly layer $\ell$, yielding the contraction invariant $μ(f)=\prod_\ell 2^{-\mathrm{Inf}_\ell/(1+\mathrm{Inf}_\ell)}$. We prove a Jensen lower bound $\log_2μ(f) \ge -I(f)/(1+I(f)/n)$ and that $μ$ is strictly Schur-convex in the influence vector (modulo permutation), giving scaling classes $μ\sim 2^{-n/2}$ (parity), $2^{-Θ(\sqrt{n})}$ (majority), $2^{-1/2}$ (dictators). $\log_2μ$ is rational but not polynomial in the Fourier coefficients while $μ$ is algebraic, and $μ$ separates functions with identical total influence (122 pairs at $n=3$).
+  Using the certified $n \le 4$ ternary Walsh-threshold universe from a companion synthesis manuscript as a finite testbed, we compute exact MILP minimum-support certificates for all 65,536 Boolean functions at $n=4$ (mean 6.42, max 9, all-odd by a parity argument) and on 10,000 of the 616,126 NPN-canonical representatives we enumerate at $n=5$ (matching OEIS A000370). Conditional Spearman $ρ(μ,|\mathrm{supp}|)$ at fixed total influence is $+0.571$ in the largest stratum at $n=4$ but reverses to $-0.38$ at $n=5$ under both function-uniform and NPN-canonical sampling: $μ$ is a valid Schur-convex concentration invariant, not a universal monotone predictor of minimum support across $n$.
+  A companion application paper validates a real-valued WHT activation-energy proxy inspired by this theory on five pretrained LLMs at W2A16, cutting wikitext-2 perplexity by 15-58% versus vanilla auto-round; the transfer from Boolean theory to the real-valued proxy is qualitative, not formal.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T22:54:29Z</published>
+    <arxiv:comment>21 pages, 3 figures. Theory paper; LLM-application companion in preparation. Code, certificates, and 616,126 NPN-canonical n=5 representatives in supplementary repository</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Gorgi Pavlov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.11757v1</id>
+    <title>Sequencelib: A Computational Platform for Formalizing the OEIS in Lean</title>
+    <updated>2026-01-16T20:21:45Z</updated>
+    <link href="https://arxiv.org/abs/2601.11757v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.11757v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The On-Line Encyclopedia of Integer Sequences (OEIS) is a web-accessible database cataloging interesting integer sequences and associated theorems. With more than 12,000 citations, the OEIS is one of the most highly cited resources in all of theoretical mathematics. In this paper, we present Sequencelib, a project to formalize the mathematics contained within the OEIS using the Lean programming language. Sequencelib includes a library of Lean formalizations of OEIS sequences as well as metaprogramming tools for programmatically attaching OEIS metadata to Lean definitions and deriving theorems about their values. Further, we describe OEIS-LT, a highly scalable Lean server that exposes these tools via a low-latency API. Finally, using OEIS-LT and prior work of Gauthier, et al., we describe a computational pipeline that formalized more than 25,000 sequences from the OEIS and proved more than 1.6 million theorems about their values. Our method makes use of a transpiler, available in OEIS-LT, that is capable of translating a subset of Standard ML to Lean, together with a set of performance improvement transformations and proofs of correctness.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-16T20:21:45Z</published>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Walter Moreira</name>
+    </author>
+    <author>
+      <name>Joe Stubbs</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04372v3</id>
+    <title>Benchmarking Large Language Models with Integer Sequence Generation Tasks</title>
+    <updated>2025-11-08T23:06:19Z</updated>
+    <link href="https://arxiv.org/abs/2411.04372v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04372v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a novel benchmark designed to rigorously evaluate the capabilities of large language models (LLMs) in mathematical reasoning and algorithmic code synthesis tasks. The benchmark comprises integer sequence generation tasks sourced from the Online Encyclopedia of Integer Sequences (OEIS), testing LLMs' abilities to accurately and efficiently generate Python code to compute these sequences without using lookup tables. Our comprehensive evaluation includes leading models from OpenAI (including the specialized reasoning-focused o-series), Anthropic, Meta, and Google across a carefully selected set of 1000 OEIS sequences categorized as ``easy'' or ``hard.'' Half of these sequences are classical sequences from the early days of OEIS and half were recently added to avoid contamination with the models' training data. To prevent models from exploiting memorized sequence values, we introduce an automated cheating detection mechanism that flags usage of lookup tables, validated by comparison with human expert evaluations. Experimental results demonstrate that reasoning-specialized models (o3, o3-mini, o4-mini from OpenAI, and Gemini 2.5-pro from Google) achieve substantial improvements in accuracy over non-reasoning models, especially on more complex tasks. However, overall model performance on the hard sequences is poor, highlighting persistent challenges in algorithmic reasoning. Our benchmark provides important insights into the strengths and limitations of state-of-the-art LLMs, particularly emphasizing the necessity for further advancements to reliably solve complex mathematical reasoning tasks algorithmically.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-07T02:05:43Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Daniel O'Malley</name>
+    </author>
+    <author>
+      <name>Manish Bhattarai</name>
+    </author>
+    <author>
+      <name>Nishath Rajiv Ranasinghe</name>
+    </author>
+    <author>
+      <name>Erick Draayer</name>
+    </author>
+    <author>
+      <name>Javier Santos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.18088v2</id>
+    <title>LLM-Driven Multimodal Opinion Expression Identification</title>
+    <updated>2024-06-29T09:55:50Z</updated>
+    <link href="https://arxiv.org/abs/2406.18088v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.18088v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Opinion Expression Identification (OEI) is essential in NLP for applications ranging from voice assistants to depression diagnosis. This study extends OEI to encompass multimodal inputs, underlining the significance of auditory cues in delivering emotional subtleties beyond the capabilities of text. We introduce a novel multimodal OEI (MOEI) task, integrating text and speech to mirror real-world scenarios. Utilizing CMU MOSEI and IEMOCAP datasets, we construct the CI-MOEI dataset. Additionally, Text-to-Speech (TTS) technology is applied to the MPQA dataset to obtain the CIM-OEI dataset. We design a template for the OEI task to take full advantage of the generative power of large language models (LLMs). Advancing further, we propose an LLM-driven method STOEI, which combines speech and text modal to identify opinion expressions. Our experiments demonstrate that MOEI significantly improves the performance while our method outperforms existing methods by 9.20\% and obtains SOTA results.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-26T05:52:47Z</published>
+    <arxiv:comment>5 pages, 3 Figures, Accept by Interspeech 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Proceedings of Interspeech 2024</arxiv:journal_ref>
+    <author>
+      <name>Bonian Jia</name>
+    </author>
+    <author>
+      <name>Huiyao Chen</name>
+    </author>
+    <author>
+      <name>Yueheng Sun</name>
+    </author>
+    <author>
+      <name>Meishan Zhang</name>
+    </author>
+    <author>
+      <name>Min Zhang</name>
+    </author>
+    <arxiv:doi>10.21437/Interspeech.2024-2550</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21437/Interspeech.2024-2550" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.08965v3</id>
+    <title>KitBit: A New AI Model for Solving Intelligence Tests and Numerical Series</title>
+    <updated>2023-12-20T19:47:36Z</updated>
+    <link href="https://arxiv.org/abs/2206.08965v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.08965v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The resolution of intelligence tests, in particular numerical sequences, has been of great interest in the evaluation of AI systems. We present a new computational model called KitBit that uses a reduced set of algorithms and their combinations to build a predictive model that finds the underlying pattern in numerical sequences, such as those included in IQ tests and others of much greater complexity. We present the fundamentals of the model and its application in different cases. First, the system is tested on a set of number series used in IQ tests collected from various sources. Next, our model is successfully applied on the sequences used to evaluate the models reported in the literature. In both cases, the system is capable of solving these types of problems in less than a second using standard computing power. Finally, KitBit's algorithms have been applied for the first time to the complete set of entire sequences of the well-known OEIS database. We find a pattern in the form of a list of algorithms and predict the following terms in the largest number of series to date. These results demonstrate the potential of KitBit to solve complex problems that could be represented numerically.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-17T18:40:11Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Corsino, V., Gilperez, J. M., &amp; Herrera, L. (2023). "KitBit: A New AI Model for Solving Intelligence Tests and Numerical Series." IEEE Transactions on Pattern Analysis and Machine Intelligence, 45(11), 13893-13903</arxiv:journal_ref>
+    <author>
+      <name>Víctor Corsino</name>
+    </author>
+    <author>
+      <name>José Manuel Gilpérez</name>
+    </author>
+    <author>
+      <name>Luis Herrera</name>
+    </author>
+    <arxiv:doi>10.1109/TPAMI.2023.3298592</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TPAMI.2023.3298592" title="doi"/>
+  </entry>
+</feed>

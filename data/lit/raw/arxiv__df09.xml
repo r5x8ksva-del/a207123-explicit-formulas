@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/nE+/oMzhl/m7BfVXAv39Uq+Fyg8</id>
+  <title>arXiv Query: search_query=abs:Lean AND abs:holonomic&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:45Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Lean+AND+abs:holonomic&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.13531v2</id>
+    <title>Ripple: An Open, AI-Formalized Lean 4 Framework for Computing with CRNs</title>
+    <updated>2026-07-21T21:34:46Z</updated>
+    <link href="https://arxiv.org/abs/2607.13531v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.13531v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present Ripple, an open, AI-formalized Lean 4 framework for the mathematics of computing with chemical reaction networks (CRNs) -- one extensible, machine-checked development that gathers several strands of the field into a single setting, and is built to grow. It formalizes: the theory of which real numbers a CRN can compute -- a single Lean definition of real-time CRN computation, the class of reals it captures, and the compilation pipeline (a GPAC / polynomial-ODE layer, a dual-rail compiler, and four stages down to large-population protocols) that realizes them, built so that adding a new number is a plug-in; three landmark population-protocol majority algorithms -- approximate, exact, and self-stabilizing exact majority; the stochastic-to-deterministic bridge, through three machine-checked versions of Kurtz's mean-field theorem; and two classical Turing-completeness results -- Bournez--Graca--Pouly for the deterministic GPAC and Soloveichik--Cook--Winfree--Bruck for stochastic CRNs. Each of these is verified to depend on exactly the three Mathlib foundational axioms, with no sorry. Along the way the formalization repaired genuine, previously unnoticed gaps in published proofs -- a compilation step that can transiently leave the unit interval, and an algebraic-number construction that silently rests on Catalan's conjecture -- and surfaced a sharp open problem about when a holonomic series admits an exact, rational-data polynomial-ODE encoding. The whole development is open and every proof is kernel-checked, so the results can be independently re-verified; and because it was written predominantly by AI agents using only publicly available models, the workflow that produced it can be reproduced with the same public toolchain.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T07:32:07Z</published>
+    <arxiv:comment>26 pages. v2 removes the incorrect claim that the formalization found a gap in the Angluin-Aspnes-Eisenstat (2008) approximate-majority proof: the flawed inequality was internal to our formalization, not their argument. It also corrects the attribution of zeta(3)'s CRN-computability to the Fermi-Dirac integral route. Abstract revised</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Ho-Lin Chen</name>
+    </author>
+    <author>
+      <name>Xiang Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.03205v2</id>
+    <title>HUSKY: Humanoid Skateboarding System via Physics-Aware Whole-Body Control</title>
+    <updated>2026-05-21T06:49:30Z</updated>
+    <link href="https://arxiv.org/abs/2602.03205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.03205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While current humanoid whole-body control frameworks predominantly rely on the static environment assumptions, addressing tasks characterized by high dynamism and complex interactions presents a formidable challenge. In this paper, we address humanoid skateboarding, a highly challenging task requiring stable dynamic maneuvering on an underactuated wheeled platform. This integrated system is governed by non-holonomic constraints and tightly coupled human-object interactions. Successfully executing this task requires simultaneous mastery of hybrid contact dynamics and robust balance control on a mechanically coupled, dynamically unstable skateboard. To overcome the aforementioned challenges, we propose HUSKY, a learning-based framework that integrates humanoid-skateboard system modeling and physics-aware whole-body control. We first model the coupling relationship between board tilt and truck steering angles, enabling a principled analysis of system dynamics. Building upon this, HUSKY leverages Adversarial Motion Priors (AMP) to learn human-like pushing motions and employs a physics-guided, heading-oriented strategy for lean-to-steer behaviors. Moreover, a trajectory-guided mechanism ensures smooth and stable transitions between pushing and steering. Experimental results on the Unitree G1 humanoid platform demonstrate that our framework enables stable and agile maneuvering on skateboards in real-world scenarios. The project page is available on https://husky-humanoid.github.io/.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-03T07:18:01Z</published>
+    <arxiv:comment>Accepted to RSS2026</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Jinrui Han</name>
+    </author>
+    <author>
+      <name>Dewei Wang</name>
+    </author>
+    <author>
+      <name>Chenyun Zhang</name>
+    </author>
+    <author>
+      <name>Xinzhe Liu</name>
+    </author>
+    <author>
+      <name>Ping Luo</name>
+    </author>
+    <author>
+      <name>Chenjia Bai</name>
+    </author>
+    <author>
+      <name>Xuelong Li</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/2rTI2g5vgECaAzFb7vtKbQkOqC0</id>
+  <title>arXiv Query: search_query=abs:"zeta polynomial" OR abs:"zeta polynomials"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-10-06T23:26:42Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22zeta+polynomial%22+OR+abs:%22zeta+polynomials%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.30350v1</id>
+    <title>Combinatorial aspects of the Delannoy Lattice</title>
+    <updated>2026-09-24T15:15:33Z</updated>
+    <link href="https://arxiv.org/abs/2609.30350v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.30350v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Delannoy numbers $d(n,k)$ count lattice paths from $(0,0)$ to $(n-k,k)$ using steps $(1,0),(0,1)$ and $(1,1)$. This paper introduces a graded poset $\mathcal{D}_n$ on the Delannoy paths ending on the line $x+y=n$, whose rank-generating function is the Delannoy polynomial $d_n(x)=\sum_{k=0}^n d(n,k)x^k$. We prove that $\\mathcal{D}_n$ is a self-dual lattice, which is call the Delannoy lattice. By establishing an explicit symmetric Boolean decomposition, we show that $\mathcal{D}_n$ is a symmetric Boolean order, thereby recovering the $γ$-positivity of $d_n(x)$. Such a decomposition is refined to a symmetric chain decomposition with the chain cover property, and is applied to determine all maximum antichains. We also investigate other combinatorial aspects of $\mathcal{D}_n$, including supersolvability, the Möbius number, characteristic polynomials, and zeta polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-24T15:15:33Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Xi Chen</name>
+    </author>
+    <author>
+      <name>Yuxian Dong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26916v1</id>
+    <title>Polytopes and posets associated to preorders</title>
+    <updated>2026-05-26T12:16:13Z</updated>
+    <link href="https://arxiv.org/abs/2605.26916v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26916v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Preorder polytopes, defined from preorders on finite sets, are introduced and studied from a lattice point enumeration point of view. They naturally generalize arbor polytopes, recently introduced and studied by the second named author. Preorder polytopes are shown to be lattice polytopes which satisfy a certain duality relating their Ehrhart polynomials with the zeta polynomials of their posets of lattice points. A combinatorial interpretation of the normalized volume of a preorder polytope is proven, together with formulas for the Ehrhart polynomial and the $h^\ast$-polynomial, and a combinatorial interpretation of the latter is conjectured. Several conjectures and results on the lattice point enumeration of arbor polytopes are generalized to preorder polytopes, new conjectures are proposed and new interesting examples of preorder polytopes are studied.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T12:16:13Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Frédéric Chapoton</name>
+      <arxiv:affiliation>IRMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christos A. Athanasiadis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.08968v1</id>
+    <title>Proofs of four generating function conjectures for arbor polytopes</title>
+    <updated>2026-05-09T14:22:48Z</updated>
+    <link href="https://arxiv.org/abs/2605.08968v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.08968v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proves four conjectured generating series, due to Chapoton, which concern invariants of posets and polytopes associated with a specific sequence of arbors. Two of these conjectures provide closed-form formulas for the generating series of the Zeta polynomial and the generating series of the M-triangle of the poset, respectively. The remaining two conjectures pertain, respectively, to the Ehrhart polynomial and the Laplace transform of the volume function of the associated arbor polytope.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-09T14:22:48Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Feihu Liu</name>
+    </author>
+    <author>
+      <name>Jinlong Tang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.04247v2</id>
+    <title>On posets and polytopes attached to arbors</title>
+    <updated>2025-08-25T11:52:48Z</updated>
+    <link href="https://arxiv.org/abs/2503.04247v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.04247v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Starting from the data of an arbor, which is a rooted tree with vertices decorated by disjoint sets, we introduce a lattice polytope and a partial order on its lattice points. We give recursive algorithms for various classical invariants of these polytopes and posets, using the tree structure. For linear arbors, we propose a conjecture exchanging the Ehrhart polynomial of the polytope with the Zeta polynomial of the poset for the reverse arbor. The general motivation comes from the action of a transmutation operator acting on M -triangles, which should link the posets considered here with some kinds of generalized noncrossing partitions and generalized associahedra. We give some evidence for this relationship in several cases, including notably some polytopes, namely halohedra and Hochschild polytopes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-06T09:30:38Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Frédéric Chapoton</name>
+      <arxiv:affiliation>IRMA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.18480v3</id>
+    <title>The Representations of Automorphism Groups of $\mathfrak{o}$-modules of type $(\ell,1^n)$</title>
+    <updated>2025-04-22T22:50:05Z</updated>
+    <link href="https://arxiv.org/abs/2501.18480v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.18480v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $\mathfrak{o}$ be the valuation ring of a non-Archimedean local field with finite residue field. We give a procedure to find the representation zeta polynomial of $\mathrm{Aut}_\mathfrak{o}(\mathfrak{o}_\ell\oplus\mathfrak{o}_1^{\oplus n})$ by induction on $n$. In particular, we show that the dimensions of the representations are given by evaluating finitely many polynomials at $q=|\mathfrak{o}_1|$.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-30T16:55:14Z</published>
+    <arxiv:comment>14 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>Alexander Jackson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.11979v2</id>
+    <title>On a q-analogue of the Zeta polynomial of posets</title>
+    <updated>2025-01-29T12:52:39Z</updated>
+    <link href="https://arxiv.org/abs/2402.11979v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.11979v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a q-analogue of the classical Zeta polynomial of  finite partially ordered sets, as a polynomial in one variable x  with coefficients depending on the indeterminate q. We prove some  properties of this polynomial invariant, including its behaviour  with respect to duality, product and disjoint union. The leading  term is a q-analogue of the number of maximal chains, but not  always with non-negative coefficients. The value at q=0 turns out  to be essentially the characteristic polynomial.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-19T09:26:13Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Frédéric Chapoton</name>
+      <arxiv:affiliation>IRMA</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.02200v6</id>
+    <title>Zeta-polynomials, superpolynomials, DAHA and plane curve singularities</title>
+    <updated>2025-01-15T01:01:02Z</updated>
+    <link href="https://arxiv.org/abs/2304.02200v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.02200v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We begin with modular form periods, a focal point of several Yuri Manin's works. The similarity is discussed between the corresponding zeta-polynomials and superpolynomials of algebraic links, closely related to Khovanov-Rozansky polynomials. We focus on DAHA superpolynomials and motivic ones, defined via compactified Jacobians of plane curve singularities and their counterparts in arbitrary ranks; the non-unibranch construction is new. They conjecturally coincide with the corresponding generalizations of L-functions and satisfy the Riemann Hypothesis in some sectors of the parameters. Presumably, the motivic ones an be interpreted as certain partition functions of Landau-Ginzburg models associated with plane curve singularities; RH for them is remarkably similar to the Lee-Yang circle theorem for Ising models. A q,t-deformation of the Witten index is obtained as an application. General perspectives of the motivic theory of isolated curve and surface singularities are discussed, including possible implications in number theory. Also, we introduce super-analogs of $ρ_{ab}$-invariants and discuss super-deformations of the Riemann's zeta. Among other topics: Verlinde algebras, and the topological vertex.</summary>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-05T03:09:58Z</published>
+    <arxiv:comment>v2-6: editing, more material on algebraic links and applications in number theory</arxiv:comment>
+    <arxiv:primary_category term="math.QA"/>
+    <arxiv:journal_ref>In: Tschinkel, Y. (eds) Arithmetic and Algebraic Geometry. Simons Symposia. Springer, Cham (2024)</arxiv:journal_ref>
+    <author>
+      <name>Ivan Cherednik</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-74134-0_2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-74134-0_2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.09826v1</id>
+    <title>Incidence Monoids: Automorphisms and Complexity</title>
+    <updated>2021-05-20T15:18:19Z</updated>
+    <link href="https://arxiv.org/abs/2105.09826v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.09826v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The algebraic monoid structure of an incidence algebra is investigated. We show that the multiplicative structure alone determines the algebra automorphisms of the incidence algebra. We present a formula that expresses the complexity of the incidence monoid with respect to the two sided action of its maximal torus in terms of the zeta polynomial of the poset. In addition, we characterize the finite (connected) posets whose incidence monoids have complexity $\leq 1$. Finally, we determine the covering relations of the adherence order on the incidence monoid of a star poset.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-20T15:18:19Z</published>
+    <arxiv:comment>The final version of this article will appear in the Semigroup Forum</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mahir Bilen Can</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.05731v1</id>
+    <title>Zeta-polynomials, Hilbert polynomials, and the Eichler-Shimura identities</title>
+    <updated>2019-04-11T14:41:04Z</updated>
+    <link href="https://arxiv.org/abs/1904.05731v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.05731v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2017, Ono, Rolen, and Sprung [ORS17] answered problems of Manin [Man16] by defining zeta-polynomials $Z_f(s)$ for even weight newforms $f\in S_k(Γ_0(N)$; these polynomials can be defined by applying the "Rodriguez-Villegas transform" to the period polynomial of $f$. It is known that these zeta-polynomials satisfy a functional equation $Z_f(s) = \pm Z_f(1-s)$ and they have a conjectural arithmetic-geometric interpretation. Here, we give analogous results for a slightly larger class of polynomials which are also defined using the Rodriguez-Villegas transform.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-11T14:41:04Z</published>
+    <arxiv:comment>This is a pre-print. Comments are appreciated</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Res Math Sci (2019) 6: 27</arxiv:journal_ref>
+    <author>
+      <name>Marie Jameson</name>
+    </author>
+    <arxiv:doi>10.1007/s40687-019-0190-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s40687-019-0190-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.03281v4</id>
+    <title>On Eisenstein polynomials and zeta polynomials II</title>
+    <updated>2020-02-26T09:06:23Z</updated>
+    <link href="https://arxiv.org/abs/1903.03281v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.03281v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Eisenstein polynomials, which were defined by the second author, are analogues of the concept of an Eisenstein series. The second author conjectured that there exist some analogous properties between Eisenstein series and Eisenstein polynomials. In the previous paper, the first author provided new analogous properties of Eisenstein polynomials and zeta polynomials for the Type II case. In this paper, the analogous properties of Eisenstein polynomials and zeta polynomials are shown to also hold for the Type I, Type III, and Type IV cases. These properties are finite analogies of certain properties of Eisenstein series.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-08T04:42:05Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tsuyoshi Miezaki</name>
+    </author>
+    <author>
+      <name>Manabu Oura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.06782v1</id>
+    <title>The divisibility of zeta functions of cyclotomic function fields</title>
+    <updated>2018-08-21T06:51:08Z</updated>
+    <link href="https://arxiv.org/abs/1808.06782v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.06782v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we generalize Bernoulli-Goss polynomials, and give a criterion on the divisibility of zeta functions of cyclotomic function fields. As an application of our criterion, for a given polynomial $f(u)$, we prove that there are infinitely many cyclotomic function fields whose zeta polynomial is divided by $f(u)$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-21T06:51:08Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Daisuke Shiomi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.06570v3</id>
+    <title>Representation Growth of Compact Special Linear Groups of degree two</title>
+    <updated>2021-11-18T07:24:38Z</updated>
+    <link href="https://arxiv.org/abs/1807.06570v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.06570v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the finite-dimensional continuous complex representations of $\mathrm{SL}_2$ over the ring of integers of non-Archimedean local fields of even residual characteristic. We prove that for characteristic two, the abscissa of convergence of the representation zeta function is $1$, resolving the last remaining open case of this problem. We additionally prove that, contrary to the expectation, the group algebras of $\mathbb C[\mathbb{SL}_2(\mathbb Z/(2^{2 r}))]$ and $\mathbb C[\mathbb{SL}_2(\mathbb F_2[t]/(t^{2r}))]$ are not isomorphic for any $r &gt; 1$. This is the first known class of reductive groups over finite rings wherein the representation theory in the equal and mixed characteristic settings is genuinely different. From our methods, we explicitly obtain the primitive representation zeta polynomials of $\mathrm{SL}_2\left (\mathbb F_2[t]/(t^{2r}) \right) $ and $\mathrm{SL}_2\left (\mathbb Z/(2^{2r}) \right) $ for $1 \leq r \leq 3$.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-17T17:23:01Z</published>
+    <arxiv:comment>49 pages, Improved the general presentation and corrected many typographical errors</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>M Hassain</name>
+    </author>
+    <author>
+      <name>Pooja Singla</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.02744v3</id>
+    <title>On Eisenstein polynomials and zeta polynomials</title>
+    <updated>2020-02-26T09:04:22Z</updated>
+    <link href="https://arxiv.org/abs/1807.02744v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.02744v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Eisenstein polynomials, which were defined by Oura, are analogues of the concept of an Eisenstein series. Oura conjectured that there exist some analogous properties between Eisenstein series and Eisenstein polynomials. In this paper, we provide new analogous properties of Eisenstein polynomials and zeta polynomials. These properties are finite analogies of certain properties of Eisenstein series.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-08T03:23:24Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tsuyoshi Miezaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.05879v2</id>
+    <title>Noncrossing partitions for periodic braids</title>
+    <updated>2017-05-03T23:28:02Z</updated>
+    <link href="https://arxiv.org/abs/1608.05879v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.05879v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An element in Artin's braid group $B_n$ is called periodic if it has a power which lies in the center of $B_n$. The conjugacy problem for periodic braids can be reduced to the following: given a divisor $1\le d&lt;n-1$ of $n-1$ and an element $α$ in the super summit set of $ε^d$, find $γ\in B_n$ such that $γ^{-1}αγ=ε^d$, where $ε=(σ_{n-1}\cdotsσ_1)σ_1$.
+  In this article we characterize the elements in the super summit set of $ε^d$ in the dual Garside structure by studying the combinatorics of noncrossing partitions arising from periodic braids. Our characterization directly provides a conjugating element $γ$. And it determines the size of the super summit set of $ε^d$ by using the zeta polynomial of the noncrossing partition lattice.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-21T00:08:50Z</published>
+    <arxiv:comment>published version in Journal of Combinatorial Theory, Series A</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>Journal of Combinatorial Theory, Series A 151C (2017) 36-50</arxiv:journal_ref>
+    <author>
+      <name>Eon-Kyung Lee</name>
+    </author>
+    <author>
+      <name>Sang-Jin Lee</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcta.2017.04.006</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcta.2017.04.006" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.07427v2</id>
+    <title>Special Values of Motivic $L$-Functions and Zeta-Polynomials for Symmetric Powers of Elliptic Curves</title>
+    <updated>2017-06-01T15:02:14Z</updated>
+    <link href="https://arxiv.org/abs/1606.07427v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.07427v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $\mathcal{M}$ be a pure motive over $\mathbb{Q}$ of odd weight $w\geq 3$, even rank $d\geq 2$, and global conductor $N$ whose $L$-function $L(s,\mathcal{M})$ coincides with the $L$-function of a self-dual algebraic tempered cuspidal symplectic representation of $\mathrm{GL}_{d}(\mathbb{A}_{\mathbb{Q}})$. We show that a certain polynomial which generates special values of $L(s,\mathcal{M})$ (including all of the critical values) has all of its zeros equidistributed on the unit circle, provided that $N$ or $w$ are sufficiently large with respect to $d$. These special values have arithmetic significance in the context of the Bloch-Kato conjecture. We focus on applications to symmetric powers of semistable elliptic curves over $\mathbb{Q}$. Using the Rodriguez-Villegas transform, we use these results to construct large classes of "zeta-polynomials" (in the sense of Manin) arising from symmetric powers of semistable elliptic curves; these polynomials have a functional equation relating $s\mapsto 1-s$, and all of their zeros on the line $\operatorname{Re}(s)=1/2$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-23T19:58:31Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Res. Math. Sci. 4 (2017), Paper No. 26, 16 pp</arxiv:journal_ref>
+    <author>
+      <name>Steffen Löbrich</name>
+    </author>
+    <author>
+      <name>Wenjun Ma</name>
+    </author>
+    <author>
+      <name>Jesse Thorner</name>
+    </author>
+    <arxiv:doi>10.1186/s40687-017-0114-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1186/s40687-017-0114-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.03159v1</id>
+    <title>Self-inversive polynomials, curves, and codes</title>
+    <updated>2016-06-10T02:19:02Z</updated>
+    <link href="https://arxiv.org/abs/1606.03159v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.03159v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study connections between self-inversive and self-reciprocal polynomials, reduction theory of binary forms, minimal models of curves, and formally self-dual codes. We prove that if $\mathcal X$ is a superelliptic curve defined over $\mathbb C$ and its reduced automorphism group is nontrivial or not isomorphic to a cyclic group, then we can write its equation as $y^n = f(x)$ or $y^n = x f(x)$, where $f(x)$ is a self-inversive or self-reciprocal polynomial. Moreover, we state a conjecture on the coefficients of the zeta polynomial of extremal formally self-dual codes.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-10T02:19:02Z</published>
+    <arxiv:primary_category term="math.CV"/>
+    <arxiv:journal_ref>Higher genus curves in mathematical physics and arithmetic geometry, 189--208, Contemp. Math., 703, Amer. Math. Soc., Providence, RI, 2018</arxiv:journal_ref>
+    <author>
+      <name>David Joyner</name>
+    </author>
+    <author>
+      <name>Tony Shaska</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1605.05536v2</id>
+    <title>Explorations in the theory of partition zeta functions</title>
+    <updated>2016-07-02T05:08:35Z</updated>
+    <link href="https://arxiv.org/abs/1605.05536v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1605.05536v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce and survey results on two families of zeta functions connected to the multiplicative and additive theories of integer partitions. In the case of the multiplicative theory, we provide specialization formulas and results on the analytic continuations of these "partition zeta functions", find unusual formulas for the Riemann zeta function, prove identities for multiple zeta values, and see that some of the formulas allow for $p$-adic interpolation. The second family we study was anticipated by Manin and makes use of modular forms, functions which are intimately related to integer partitions by universal polynomial recurrence relations. We survey recent work on these zeta polynomials, including the proof of their Riemann Hypothesis.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-05-18T12:01:58Z</published>
+    <arxiv:comment>41 pages, to appear in Exploring the Riemann Zeta Function, 190 years from Riemann's Birth, Springer, editors: H. Montgomery, A. Nikeghbali, and M. Rassias</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ken Ono</name>
+    </author>
+    <author>
+      <name>Larry Rolen</name>
+    </author>
+    <author>
+      <name>Robert Schneider</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.00752v3</id>
+    <title>Zeta-polynomials for modular form periods</title>
+    <updated>2016-10-04T14:06:17Z</updated>
+    <link href="https://arxiv.org/abs/1602.00752v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.00752v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Answering problems of Manin, we use the critical $L$-values of even weight $k\geq 4$ newforms $f\in S_k(Γ_0(N))$ to define zeta-polynomials $Z_f(s)$ which satisfy the functional equation $Z_f(s)=\pm Z_f(1-s)$, and which obey the Riemann Hypothesis: if $Z_f(ρ)=0$, then $\operatorname{Re}(ρ)=1/2$. The zeros of the $Z_f(s)$ on the critical line in $t$-aspect are distributed in a manner which is somewhat analogous to those of classical zeta-functions. These polynomials are assembled using (signed) Stirling numbers and "weighted moments" of critical values $L$-values. In analogy with Ehrhart polynomials which keep track of integer points in polytopes, the $Z_f(s)$ keep track of arithmetic information. Assuming the Bloch--Kato Tamagawa Number Conjecture, they encode the arithmetic of a combinatorial arithmetic-geometric object which we call the "Bloch-Kato complex" for $f$. Loosely speaking, these are graded sums of weighted moments of orders of Šafarevič-Tate groups associated to the Tate twists of the modular motives.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-02T00:13:15Z</published>
+    <arxiv:comment>15 pages, 3 figures. Minor edits in v2, to appear in Advances in Mathematics. arXiv admin note: text overlap with arXiv:1605.05536</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ken Ono</name>
+    </author>
+    <author>
+      <name>Larry Rolen</name>
+    </author>
+    <author>
+      <name>Florian Sprung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.2978v2</id>
+    <title>Scheduling Problems</title>
+    <updated>2015-12-02T01:35:34Z</updated>
+    <link href="https://arxiv.org/abs/1401.2978v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.2978v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the notion of a scheduling problem which is a boolean function $S$ over atomic formulas of the form $x_i \leq x_j$. Considering the $x_i$ as jobs to be performed, an integer assignment satisfying $S$ schedules the jobs subject to the constraints of the atomic formulas. The scheduling counting function counts the number of solutions to $S$. We prove that this counting function is a polynomial in the number of time slots allowed. Scheduling polynomials include the chromatic polynomial of a graph, the zeta polynomial of a lattice, the Billera-Jia-Reiner polynomial of a matroid.
+  To any scheduling problem, we associate not only a counting function for solutions, but also a quasisymmetric function and a quasisymmetric function in non-commuting variables. These scheduling functions include the chromatic symmetric functions of Sagan, Gebhard, and Stanley, and a close variant of Ehrenborg's quasisymmetric function for posets.
+  Geometrically, we consider the space of all solutions to a given scheduling problem. We extend a result of Steingrímmson by proving that the $h$-vector of the space of solutions is given by a shift of the scheduling polynomial. Furthermore, under certain niceness conditions on the defining boolean function, we prove partitionability of the space of solutions and positivity of fundamental expansions of the scheduling quasisymmetric functions and of the $h$-vector of the scheduling polynomial.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-13T20:50:30Z</published>
+    <arxiv:comment>Final version, substantially shortened, 18 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Felix Breuer</name>
+    </author>
+    <author>
+      <name>Caroline J. Klivans</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcta.2015.11.001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcta.2015.11.001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0908.2641v4</id>
+    <title>Chain enumeration of $k$-divisible noncrossing partitions of classical types</title>
+    <updated>2011-08-29T14:29:59Z</updated>
+    <link href="https://arxiv.org/abs/0908.2641v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0908.2641v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give combinatorial proofs of the formulas for the number of multichains in the $k$-divisible noncrossing partitions of classical types with certain conditions on the rank and the block size due to Krattenthaler and M{ü}ller. We also prove Armstrong's conjecture on the zeta polynomial of the poset of $k$-divisible noncrossing partitions of type $A$ invariant under a $180^\circ$ rotation in the cyclic representation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-08-18T21:13:25Z</published>
+    <arxiv:comment>23 pages, 9 figures, final version</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Combin. Theory Ser. A 118 (2011) 879-898</arxiv:journal_ref>
+    <author>
+      <name>Jang Soo Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0806.0434v2</id>
+    <title>Circular Peaks and Hilbert Series</title>
+    <updated>2008-06-05T02:07:30Z</updated>
+    <link href="https://arxiv.org/abs/0806.0434v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0806.0434v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The circular peak set of a permutation $σ$ is the set $\{σ(i)\mid σ(i-1)&lt;σ(i)&gt;σ(i+1)\}$. Let $\mathcal{P}_n$ be the set of all the subset $S\subseteq [n]$ such that there exists a permutation $σ$ which has the circular set $S$. We can make the set $\mathcal{P}_n$ into a poset $\mathscr{P}_n$ by defining $S\preceq T$ if $S\subseteq T$ as sets. In this paper, we prove that the poset $\mathscr{P}_n$ is a simplicial complex on the vertex set $[3,n]$. We study the $f$-vector, the $f$-polynomial, the reduced Euler characteristic, the M$\ddot{o}$bius function, the $h$-vector and the $h$-polynomial of $\mathscr{P}_n$. We also derive the zeta polynomial of $\mathscr{P}_n$ and give the formula for the number of the chains in $\mathscr{P}_n$. By the poset $\mathscr{P}_n$, we define two algebras $\mathcal{A}_{\mathscr{P}_n}$ and $\mathcal{B}_{\mathscr{P}_n}$. We consider the Hilbert polynomials and the Hilbert series of the algebra $\mathcal{A}_{\mathscr{P}_n}$ and $\mathcal{B}_{\mathscr{P}_n}$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-06-03T05:05:01Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Pierre Bouchard</name>
+    </author>
+    <author>
+      <name>Jun Ma</name>
+    </author>
+    <author>
+      <name>Yeong-Nan Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0708.2212v2</id>
+    <title>Enumerative Properties of NC^B(p,q)</title>
+    <updated>2008-11-20T21:22:45Z</updated>
+    <link href="https://arxiv.org/abs/0708.2212v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0708.2212v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We determine the rank generating function, the zeta polynomial and the Moebius function for the poset NC^B(p,q) of annular non-crossing partitions of type B, where p and q are two positive integers. We give an alternative treatment of some of these results in the case q=1, for which this poset is a lattice. We also consider the general case of multiannular non-crossing partitions of type B, and prove that this reduces to the cases of non-crossing partitions of type B in the annulus and in the disc.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-08-16T15:07:51Z</published>
+    <arxiv:comment>Revised version -- some corrections and new Section 6 concerning multi-annular partitions of type B. Accepted for publication in Annals of Combinatorics. 26 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>I. P. Goulden</name>
+    </author>
+    <author>
+      <name>Alexandru Nica</name>
+    </author>
+    <author>
+      <name>Ion Oancea</name>
+    </author>
+  </entry>
+</feed>

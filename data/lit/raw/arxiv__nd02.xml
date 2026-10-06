@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JycXJygOKtZCaQMfwpuz8K/JaOo</id>
+  <title>arXiv Query: search_query=au:Gessel AND abs:Stirling&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:02:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Gessel+AND+abs:Stirling&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2005.04133v1</id>
+    <title>A note on Stirling permutations</title>
+    <updated>2020-05-08T16:19:13Z</updated>
+    <link href="https://arxiv.org/abs/2005.04133v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.04133v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we generalize an identity of John Riordan and Robert Donaghey relating the enumerator for Stirling permutations to the Eulerian polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-08T16:19:13Z</published>
+    <arxiv:comment>Originally written in 1978 but not published until now</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ira M. Gessel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.11326v2</id>
+    <title>On the Almkvist-Meurman theorem for Bernoulli polynomials</title>
+    <updated>2023-03-16T18:37:36Z</updated>
+    <link href="https://arxiv.org/abs/2207.11326v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.11326v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Almkvist and Meurman showed that if h and k are integers, then so is $k^n(B_n(h/k) - B_n)$ where $B_n(u)$ is the Bernoulli polynomial. We give here a new and simpler proof of the Almkvist-Meurman theorem using generating functions. We describe some properties of these numbers and prove a common generalization of the Almkvist-Meurman theorem and a result of Gy on Bernoulli-Stirling numbers. We then give a simple generating function proof of an analogue of the Almkvist-Meurman theorem for Euler polynomials, due to Fox.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-22T20:36:31Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Integers 23 (2023), Paper No. A14, 10 pp</arxiv:journal_ref>
+    <author>
+      <name>Ira M. Gessel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.0622v2</id>
+    <title>Jacobi-Stirling polynomials and $P$-partitions</title>
+    <updated>2012-06-22T12:32:35Z</updated>
+    <link href="https://arxiv.org/abs/1201.0622v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.0622v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the diagonal generating function of the Jacobi-Stirling numbers of the second kind $ \JS(n+k,n;z)$ by generalizing the analogous results for the Stirling and Legendre-Stirling numbers. More precisely, letting $\JS(n+k,n;z)=p_{k,0}(n)+p_{k,1}(n)z+...+p_{k,k}(n)z^k$, we show that $(1-t)^{3k-i+1}\sum_{n\geq0}p_{k,i}(n)t^n$ is a polynomial in $t$ with nonnegative integral coefficients and provide combinatorial interpretations of the coefficients by using Stanley's theory of $P$-partitions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-03T13:05:41Z</published>
+    <arxiv:comment>18 pages, 4 figures, 1 table, minor modifications, to appear in European Journal of Combinatorics, 2012</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ira M. Gessel</name>
+    </author>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+    <author>
+      <name>Jiang Zeng</name>
+    </author>
+  </entry>
+</feed>

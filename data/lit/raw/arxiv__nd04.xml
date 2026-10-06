@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/itLHCyom0YoIeu8B7LUF95FnZu4</id>
+  <title>arXiv Query: search_query=abs:Legendre-Stirling&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:09:46Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Legendre-Stirling&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1111.2817v1</id>
+    <title>Combinatorial interpretations of particular evaluations of complete and elementary symmetric functions</title>
+    <updated>2011-11-11T18:48:30Z</updated>
+    <link href="https://arxiv.org/abs/1111.2817v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1111.2817v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Jacobi-Stirling numbers and the Legendre-Stirling numbers of the first and second kind were first introduced in [6], [7]. In this paper we note that Jacobi-Stirling numbers and Legendre-Stirling numbers are specializations of elementary and complete symmetric functions. We then study combinatorial interpretations of this specialization and obtain new combinatorial interpretations of the Jacobi-Stirling and Legendre-Stirling numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-11-11T18:48:30Z</published>
+    <arxiv:comment>22 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electr. J. of Combin. 19 (2012), #P60</arxiv:journal_ref>
+    <author>
+      <name>Pietro Mongelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.10998v1</id>
+    <title>On certain combinatorial expansions of the Legendre-Stirling numbers</title>
+    <updated>2018-05-28T16:01:16Z</updated>
+    <link href="https://arxiv.org/abs/1805.10998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.10998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Legendre-Stirling numbers of the second kind were introduced by Everitt et al. in the spectral theory of powers of the Legendre differential expressions. In this paper, we provide a combinatorial code for Legendre-Stirling set partitions. As an application, we obtain combinatorial expansions of the Legendre-Stirling numbers of both kinds. Moreover, we present grammatical descriptions of the Jacobi-Stirling numbers of both kinds.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-28T16:01:16Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shi-Mei Ma</name>
+    </author>
+    <author>
+      <name>Jun Ma</name>
+    </author>
+    <author>
+      <name>Yeong-Nan Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.0477v2</id>
+    <title>On the asymptotic normality of the Legendre-Stirling numbers of the second kind</title>
+    <updated>2014-08-28T06:40:47Z</updated>
+    <link href="https://arxiv.org/abs/1408.0477v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.0477v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the Legendre-Stirling numbers of the second kind asymptotic formulae are derived in terms of a local central limit theorem. Thereby, supplements of the recently published asymptotic analysis of the Chebyshev-Stirling numbers are established. Moreover, we provide results on the asymptotic normality and unimodality for modified Legendre-Stirling numbers.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-03T09:39:03Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Wolfgang Gawronski</name>
+    </author>
+    <author>
+      <name>Lance L. Littlejohn</name>
+    </author>
+    <author>
+      <name>Thorsten Neuschel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1208.1420v2</id>
+    <title>Context-free Grammars and Multivariate Stable Polynomials over Stirling Permutations</title>
+    <updated>2012-08-08T02:56:35Z</updated>
+    <link href="https://arxiv.org/abs/1208.1420v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1208.1420v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Haglund and Visontai established the stability of the multivariate Eulerian polynomials as the generating polynomials of the Stirling permutations, which serves as a unification of some results of Bóna, Brenti, Janson, Kuba, and Panholzer concerning Stirling permutations. Let $B_n(x)$ be the generating polynomials of the descent statistic over Legendre-Stirling permutations, and let $T_n(x)=2^nC_n(x/2)$, where $C_n(x)$ are the second-order Eulerian polynomials. Haglund and Visontai proposed the problems of finding multivariate stable refinements of the polynomials $B_n(x)$ and $T_n(x)$. We obtain context-free grammars leading to multivariate stable refinements of the polynomials $B_n(x)$ and $T_n(x)$. Moreover, the grammars enable us to obtain combinatorial interpretations of the multivariate polynomials in terms of Legendre-Stirling permutations and marked Stirling permutations. Such stable multivariate polynomials provide solutions to two problems posed by Haglund and Visontai.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-08-07T13:37:24Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>William Y. C. Chen</name>
+    </author>
+    <author>
+      <name>Robert X. J. Hao</name>
+    </author>
+    <author>
+      <name>Harold R. L. Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0905.2899v2</id>
+    <title>Combinatorial interpretations of the Jacobi-Stirling numbers</title>
+    <updated>2009-05-20T17:27:57Z</updated>
+    <link href="https://arxiv.org/abs/0905.2899v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0905.2899v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The Jacobi-Stirling numbers of the first and second kinds were introduced in 2006 in the spectral theory and are polynomial refinements of the Legendre-Stirling numbers. Andrews and Littlejohn have recently given a combinatorial interpretation for the second kind of the latter numbers. Noticing that these numbers are very similar to the classical central factorial numbers, we give combinatorial interpretations for the Jacobi-Stirling numbers of both kinds, which provide a unified treatment of the combinatorial theories for the two previous sequences and also for the Stirling numbers of both kinds.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-05-18T14:43:53Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yoann Gelineau</name>
+    </author>
+    <author>
+      <name>Jiang Zeng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.13645v4</id>
+    <title>Asymptotics on a class of Legendre formulas</title>
+    <updated>2021-08-11T15:01:48Z</updated>
+    <link href="https://arxiv.org/abs/2010.13645v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.13645v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $f$ be a real-valued function of a single variable such that it is positive over the primes. In this article, we construct a factorial, $n!_f$, associated to $f$, called the associated Legendre formula, or $f$-factorial, and show, subject to certain criteria, that $n!_f$ satisfies a weak Stirling approximation. As an application, we will give weak approximations to the Bhargava factorial over the set of primes and to a less well-known Legendre formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-26T15:05:38Z</published>
+    <arxiv:comment>15 pages, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Maiyu Diaz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.0622v2</id>
+    <title>Jacobi-Stirling polynomials and $P$-partitions</title>
+    <updated>2012-06-22T12:32:35Z</updated>
+    <link href="https://arxiv.org/abs/1201.0622v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.0622v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the diagonal generating function of the Jacobi-Stirling numbers of the second kind $ \JS(n+k,n;z)$ by generalizing the analogous results for the Stirling and Legendre-Stirling numbers. More precisely, letting $\JS(n+k,n;z)=p_{k,0}(n)+p_{k,1}(n)z+...+p_{k,k}(n)z^k$, we show that $(1-t)^{3k-i+1}\sum_{n\geq0}p_{k,i}(n)t^n$ is a polynomial in $t$ with nonnegative integral coefficients and provide combinatorial interpretations of the coefficients by using Stanley's theory of $P$-partitions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-03T13:05:41Z</published>
+    <arxiv:comment>18 pages, 4 figures, 1 table, minor modifications, to appear in European Journal of Combinatorics, 2012</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ira M. Gessel</name>
+    </author>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+    <author>
+      <name>Jiang Zeng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1802.02861v3</id>
+    <title>Gamma-positivity and partial gamma-positivity of descent-type polynomials</title>
+    <updated>2019-02-25T01:18:16Z</updated>
+    <link href="https://arxiv.org/abs/1802.02861v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1802.02861v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study gamma-positivity of descent-type polynomials by introducing the change of context-free grammars method. We first present grammatical proofs of the gamma-positivity of the Eulerian polynomials, type B Eulerian polynomials, derangement polynomials, Narayana polynomials and type B Narayana polynomials. We then provide partial gamma-positive expansions for several multivariate polynomials associated to Stirling permutations, Legendre-Stirling permutations, Jacobi-Stirling permutations and type B derangements, and the recurrences for the partial gamma-coefficients of these expansions are also obtained. Moreover, we define variants of the Foata-Strehl group action which are used to give combinatorial interpretations for the coefficients of most of these partial gamma-positive expansions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-02-08T14:06:10Z</published>
+    <arxiv:comment>31 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shi-Mei Ma</name>
+    </author>
+    <author>
+      <name>Jun Ma</name>
+    </author>
+    <author>
+      <name>Yeong-Nan Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1211.0099v1</id>
+    <title>Application of a composition of generating functions for obtaining explicit formulas of polynomials</title>
+    <updated>2012-11-01T05:26:51Z</updated>
+    <link href="https://arxiv.org/abs/1211.0099v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1211.0099v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Using notions of composita and composition of generating functions we obtain explicit formulas for Chebyshev polynomials, Legendre polynomials, Gegenbauer polynomials, Associated Laguerre polynomials, Stirling polynomials, Abel polynomials, Bernoulli Polynomials of the Second Kind, Generalized Bernoulli polynomials, Euler Polynomials, Peters polynomials, Narumi polynomials, Humbert polynomials, Lerch polynomials and Mahler polynomials.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-11-01T05:26:51Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Vladimir Kruchinin</name>
+    </author>
+    <author>
+      <name>Dmitry Kruchinin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0808.2307v3</id>
+    <title>Boolean complexes for Ferrers graphs</title>
+    <updated>2010-08-11T21:36:06Z</updated>
+    <link href="https://arxiv.org/abs/0808.2307v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0808.2307v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we provide an explicit formula for calculating the boolean number of a Ferrers graph. By previous work of the last two authors, this determines the homotopy type of the boolean complex of the graph. Specializing to staircase shapes, we show that the boolean numbers of the associated Ferrers graphs are the Genocchi numbers of the second kind, and obtain a relation between the Legendre-Stirling numbers and the Genocchi numbers of the second kind. In another application, we compute the boolean number of a complete bipartite graph, corresponding to a rectangular Ferrers shape, which is expressed in terms of the Stirling numbers of the second kind. Finally, we analyze the complexity of calculating the boolean number of a Ferrers graph using these results and show that it is a significant improvement over calculating by edge recursion.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-08-17T19:06:47Z</published>
+    <arxiv:comment>final version, to appear in the The Australasian Journal of Combinatorics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Kari Ragnarsson</name>
+    </author>
+    <author>
+      <name>Bridget Eileen Tenner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.00353v1</id>
+    <title>Bounds on the $p$-adic valuation of the factorial, hyperfactorial and superfactorial</title>
+    <updated>2024-08-01T07:49:35Z</updated>
+    <link href="https://arxiv.org/abs/2408.00353v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.00353v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we investigate the $p$-adic valuation $ν_p$ of quantities such as the factorial $n!$, the hyperfactorial $H(n)$ or the superfactorial $\mathrm{sf}(n)$. In particular, we obtain simple bounds (both upper and lower) for $ν_p$, using the Legendre-de Polignac formula. Other iterated quantities such as the Berezin function, are also considered. Beyond their recreational character, such quantities, often related to very large numbers, may find applications for cryptography purposes. Finally, lower and upper bounds for the $p$-adic valuation of Stirling numbers of the first kind and Catalan numbers are briefly discussed.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-01T07:49:35Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jean-Christophe Pain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.01544v2</id>
+    <title>$q$-log-convexity from linear transformations and polynomials with only real zeros</title>
+    <updated>2018-07-23T19:54:35Z</updated>
+    <link href="https://arxiv.org/abs/1609.01544v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.01544v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we mainly study the stability of iterated polynomials and linear transformations preserving the strong $q$-log-convexity of polynomials
+  Let $[T_{n,k}]_{n,k\geq0}$ be an array of nonnegative numbers. We give some criteria for the linear transformation $$y_n(q)=\sum_{k=0}^nT_{n,k}x_k(q)$$ preserving the strong $q$-log-convexity (resp. log-convexity). As applications, we derive that some linear transformations (for instance, the Stirling transformations of two kinds, the Jacobi-Stirling transformations of two kinds, the Legendre-Stirling transformations of two kinds, the central factorial transformations, and so on) preserve the strong $q$-log-convexity (resp. log-convexity) in a unified manner. In particular, we confirm a conjecture of Lin and Zeng, and extend some results of Chen {\it et al.}, and Zhu for strong $q$-log-convexity of polynomials, and some results of Liu and Wang for transformations preserving the log-convexity.
+  The stability property of iterated polynomials implies the $q$-log-convexity. By applying the method of interlacing of zeros, we also present two criteria for the stability of the iterated Sturm sequences and $q$-log-convexity of polynomials. As consequences, we get the stabilities of iterated Eulerian polynomials of type $A$ and $B$, and their $q$-analogs. In addition, we also prove that the generating functions of alternating runs of type $A$ and $B$, the longest alternating subsequence and up-down runs of permutations form a $q$-log-convex sequence, respectively.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-06T13:24:58Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>European Journal of Combinatorics, Volume 73, October 2018, Pages 231-246</arxiv:journal_ref>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+    <arxiv:doi>10.1016/j.euromechflu.2017.09.013</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.euromechflu.2017.09.013" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.04663v3</id>
+    <title>A note on "exotic integrals"</title>
+    <updated>2022-05-11T12:46:55Z</updated>
+    <link href="https://arxiv.org/abs/2204.04663v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.04663v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider Bernoulli measures $μ_p$ on the interval $[0,1]$. For the standard Lebesgue measure the digits $0$ and $1$ in the binary representation of real numbers appear with an equal probability $1/2$. For the Bernoulli measures, the digits $0$ and $1$ appear with probabilities $p$ and $1-p$, respectively. We provide explicit expressions for various $μ_p$-integrals. In particular, integrals of polynomials are expressed in terms of the determinants of special Hessenberg matrices, which, in turn, are constructed from the Pascal matrices of binomial coefficients. This allows us to find closed-form expressions for the Fourier coefficients of $μ_p$ in the Legendre polynomial basis. At the same time, the trigonometric Fourier coefficients are values of some special entire function, which admits an explicit infinite product expansion and satisfies interesting properties, including connections with the Stirling numbers and the polylogarithm.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-10T11:39:09Z</published>
+    <arxiv:comment>In September 2021, I submitted the article to a journal where Prof. Strichartz was one of the editors. Unfortunately, he passed away in December 2021. Yesterday, in April 2022, the main editor of the journal decided to withdraw my submission because no one is able to support it at the moment. Update: new interesting formulas and connections with the polylogarithm added to version 2 and 3</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Anton A. Kutsenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.05268v3</id>
+    <title>Sums of powers of integers and the sequence A304330</title>
+    <updated>2025-01-24T16:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2405.05268v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.05268v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For integer $k \geq 1$, let $S_k(n)$ denote the sum of the $k$th powers of the first $n$ positive integers. In this paper, we derive a new formula expressing $2^{2k}$ times $S_{2k}(n)$ as a sum of $k$ terms involving the numbers in the $k$th row of the integer sequence A304330, which is closely related to the central factorial numbers with even indices of the second kind. Furthermore, we provide an alternative proof of Knuth's formula for $S_{2k}(n)$ and show that it can equally be expressed in terms of A304330. Moreover, we obtain corresponding formulas for $2^{2k-1}S_{2k-1}(n)$ and determine the Faulhaber form of both $S_{2k}(n)$ and $S_{2k+1}(n)$ in terms of A304330 and the Legendre-Stirling numbers of the first kind.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-25T15:11:20Z</published>
+    <arxiv:comment>20 pages, published version</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, Vol. 28 (2025), Article 25.1.3</arxiv:journal_ref>
+    <author>
+      <name>José L. Cereceda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1611.00957v2</id>
+    <title>Zeta Series Generating Function Transformations Related to Generalized Stirling Numbers and Partial Sums of the Hurwitz Zeta Function</title>
+    <updated>2016-11-09T22:29:16Z</updated>
+    <link href="https://arxiv.org/abs/1611.00957v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1611.00957v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a generalized class of modified zeta series transformations generating the partial sums of the Hurwitz zeta function and series expansions of the Lerch transcendent function. The new transformation coefficients we define within the article satisfy expansions by generalized harmonic number sequences, or the partial sums of the Hurwitz zeta function, which are analogous to known properties for the Stirling numbers of the first kind and for the known transformation coefficients employed to enumerate variants of the polylogarithm function series. Applications of the new results we prove in the article include new series expansions of the Dirichlet beta function, the Legendre chi function, BBP-type series identities for special constants, alternating and exotic Euler sum variants, alternating zeta functions with powers of quadratic denominators, and particular series defining special cases of the Riemann zeta function constants at the positive integers $s \geq 3$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-11-03T11:11:06Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Maxie D. Schmidt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.05167v1</id>
+    <title>Total positivity from a kind of lattice paths</title>
+    <updated>2023-08-09T18:11:15Z</updated>
+    <link href="https://arxiv.org/abs/2308.05167v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.05167v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Total positivity of matrices is deeply studied and plays an important role in various branches of mathematics. The main purpose of this paper is to study total positivity of a matrix $M=[M_{n,k}]_{n,k}$ generated by the weighted lattice paths in $\mathbb{N}^2$ from the origin $(0,0)$ to the point $(k,n)$ consisting of types of steps: $(0,1)$ and $(1,t+i)$ for $0\leq i\leq \ell$, where each step $(0,1)$ from height~$n-1$ gets the weight~$b_n(\textbf{y})$ and each step $(1,t+i)$ from height~$n-t-i$ gets the weight $a_n^{(i)}(\textbf{x})$.
+  Using an algebraic method, we prove that the $\textbf{x}$-total positivity of the weight matrix $[a_i^{(i-j)}(\textbf{x})]_{i,j}$ implies that of $M$. Furthermore, using the Lindström-Gessel-Viennot lemma, we obtain that both $M$ and the Toeplitz matrix of each row sequence of $M$ with $t\geq1$ are $\textbf{x}$-totally positive under the following three cases respectively: (1) $\ell=1$, (2) $\ell=2$ and restrictions for $a_n^{(i)}$, (3) general $\ell$ and both $a^{(i)}_n$ and $b_n$ are independent of $n$. In addition, for the case (3), we show that the matrix $M$ is a Riordan array, present its explicit formula and prove total positivity of the Toeplitz matrix of the each column of $M$. In particular, from the results for Toeplitz-total positivity, we also obtain the Pólya frequency and log-concavity of the corresponding sequence.
+  Finally, as applications, we in a unified manner establish total positivity and the Toeplitz-total positivity for many well-known combinatorial triangles, including the Pascal triangle, the Pascal square, the Delannoy triangle, the Delannoy square, the signless Stirling triangle of the first kind, the Legendre-Stirling triangle of the first kind, the Jacobi-Stirling triangle of the first kind, the Brenti's recursive matrix, and so on.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-09T18:11:15Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yu-Jie Cui</name>
+    </author>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.12694v2</id>
+    <title>A generalization of Bohr-Mollerup's theorem for higher order convex functions: a tutorial</title>
+    <updated>2023-08-01T13:45:08Z</updated>
+    <link href="https://arxiv.org/abs/2207.12694v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.12694v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In its additive version, Bohr-Mollerup's remarkable theorem states that the unique (up to an additive constant) convex solution $f(x)$ to the equation $Δf(x)=\ln x$ on the open half-line $(0,\infty)$ is the log-gamma function $f(x)=\lnΓ(x)$, where $Δ$ denotes the classical difference operator and $Γ(x)$ denotes the Euler gamma function. In a recently published open access book, the authors provided and illustrated a far-reaching generalization of Bohr-Mollerup's theorem by considering the functional equation $Δf(x)=g(x)$, where $g$ can be chosen from a wide and rich class of functions that have convexity or concavity properties of any order. They also showed that the solutions $f(x)$ arising from this generalization satisfy counterparts of many properties of the log-gamma function (or equivalently, the gamma function), including analogues of Bohr-Mollerup's theorem itself, Burnside's formula, Euler's infinite product, Euler's reflection formula, Gauss' limit, Gauss' multiplication formula, Gautschi's inequality, Legendre's duplication formula, Raabe's formula, Stirling's formula, Wallis's product formula, Weierstrass' infinite product, and Wendel's inequality for the gamma function. In this paper, we review the main results of this new and intriguing theory and provide an illustrative application.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-26T07:30:41Z</published>
+    <arxiv:comment>This paper is a tutorial for the reader of the open access monograph entitled "A Generalization of Bohr-Mollerup's Theorem for Higher Order Convex Functions" (arXiv:2009.14742, https://link.springer.com/book/9783030950873)</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>Aequationes Mathematicae 98 (2) (2024) 455-481</arxiv:journal_ref>
+    <author>
+      <name>Jean-Luc Marichal</name>
+    </author>
+    <author>
+      <name>Naïm Zenaïdi</name>
+    </author>
+    <arxiv:doi>10.1007/s00010-023-00968-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00010-023-00968-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.02912v1</id>
+    <title>Generating functions for finite sums involving higher powers of binomial coefficients: Analysis of hypergeometric functions including new families of polynomials and numbers</title>
+    <updated>2019-01-04T13:53:48Z</updated>
+    <link href="https://arxiv.org/abs/1901.02912v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.02912v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The origin of this study is based on not only explicit formulas of finite sums involving higher powers of binomial coefficients, but also explicit evaluations of generating functions for this sums. It should be emphasized that this study contains both new results and literature surveys about some of the related results that have existed so far. With the aid of hypergeometric function, generating functions for a new family of the combinatorial numbers, related to finite sums of powers of binomial coefficients, are constructed. By using these generating functions, a number of new identities have been obtained and at the same time previously well-known formulas and identities have been generalized. Moreover, on this occasion, we identify new families of polynomials including some families of well-known numbers such as Bernoulli numbers, Euler numbers, Stirling numbers, Franel numbers, Catalan numbers, Changhee numbers, Daehee numbers and the others, and also for the polynomials such as the Legendre polynomials, Michael Vowe polynomial, the Mirimanoff polynomial, Golombek type polynomials, and the others. We also give both Riemann and $p$-adic integral representations of these polynomials. Finally, we give combinatorial interpretations of these new families of numbers, polynomials and finite sums of the powers of binomial coefficients. We also give open questions for ordinary generating functions for these numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-04T13:53:48Z</published>
+    <arxiv:comment>36 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Journal of Mathematical Analysis and Applications 2019</arxiv:journal_ref>
+    <author>
+      <name>Yilmaz Simsek</name>
+    </author>
+    <arxiv:doi>10.1016/j.jmaa.2019.05.015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jmaa.2019.05.015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.08411v1</id>
+    <title>On the interplay between hypergeometric series, Fourier-Legendre expansions and Euler sums</title>
+    <updated>2018-06-21T19:46:06Z</updated>
+    <link href="https://arxiv.org/abs/1806.08411v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.08411v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we continue the investigation about the interplay between hypergeometric functions and Fourier-Legendre ($\textrm{FL}$) series expansions. In the section "Hypergeometric series related to $π,π^2$ and the lemniscate constant", through the FL-expansion of $\left[x(1-x)\right]^μ$ (with $μ+1\in\frac{1}{4}\mathbb{N}$) we prove that all the hypergeometric series $$
+  \sum_{n\geq 0}\frac{(-1)^n(4n+1)}{p(n)}\left[\frac{1}{4^n}\binom{2n}{n}\right]^3,\quad \sum_{n\geq 0}\frac{(4n+1)}{p(n)}\left[\frac{1}{4^n}\binom{2n}{n}\right]^4,$$
+  $$\quad \sum_{n\geq 0}\frac{(4n+1)}{p(n)^2}\left[\frac{1}{4^n}\binom{2n}{n}\right]^4,\; \sum_{n\geq 0}\frac{1}{p(n)}\left[\frac{1}{4^n}\binom{2n}{n}\right]^3,\; \sum_{n\geq 0}\frac{1}{p(n)}\left[\frac{1}{4^n}\binom{2n}{n}\right]^2 $$ return rational multiples of $\frac{1}π,\frac{1}{π^2}$ or the lemniscate constant, as soon as $p(x)$ is a polynomial fulfilling suitable symmetry constraints. Additionally, by computing the FL-expansions of $\frac{\log x}{\sqrt{x}}$ and related functions, we show that in many cases the hypergeometric $\phantom{}_{p+1} F_{p}(\ldots , z)$ function evaluated at $z=\pm 1$ can be converted into a combination of Euler sums. In particular we perform an explicit evaluation of $$ \sum_{n\geq 0}\frac{1}{(2n+1)^2}\left[\frac{1}{4^n}\binom{2n}{n}\right]^2,\quad \sum_{n\geq 0}\frac{1}{(2n+1)^3}\left[\frac{1}{4^n}\binom{2n}{n}\right]^2. $$ In the section "Twisted hypergeometric series" we show that the conversion of some $\phantom{}_{p+1} F_{p}(\ldots,\pm 1)$ values into combinations of Euler sums, driven by FL-expansions, applies equally well to some twisted hypergeometric series, i.e. series of the form $\sum_{n\geq 0} a_n b_n$ where $a_n$ is a Stirling number of the first kind and $\sum_{n\geq 0}b_n z^n = \phantom{}_{p+1} F_{p}(\ldots;z)$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-21T19:46:06Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Marco Cantarini</name>
+    </author>
+    <author>
+      <name>Jacopo D'Aurizio</name>
+    </author>
+  </entry>
+</feed>

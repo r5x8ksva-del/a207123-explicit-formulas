@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/51XjezKbNWfsDj5z8z/Ffwj63w8</id>
+  <title>arXiv Query: search_query=au:Kauers AND au:Koutschan&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:24Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Kauers+AND+au:Koutschan&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2202.07966v2</id>
+    <title>Guessing with Little Data</title>
+    <updated>2022-07-08T12:37:58Z</updated>
+    <link href="https://arxiv.org/abs/2202.07966v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.07966v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reconstructing a hypothetical recurrence equation from the first terms of an infinite sequence is a classical and well-known technique in experimental mathematics. We propose a variation of this technique which can succeed with fewer input terms.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-16T10:20:17Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of ISSAC 2022, pp 83--90</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1145/3476446.3535486</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3476446.3535486" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.03691v2</id>
+    <title>Integral D-Finite Functions</title>
+    <updated>2015-06-30T07:27:48Z</updated>
+    <link href="https://arxiv.org/abs/1501.03691v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.03691v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a differential analog of the notion of integral closure of algebraic function fields. We present an algorithm for computing the integral closure of the algebra defined by a linear differential operator. Our algorithm is a direct analog of van Hoeij's algorithm for computing integral bases of algebraic function fields.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-15T14:29:19Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of the International Symposium on Symbolic and Algebraic Computation (ISSAC 2015), pages 251-258, 2015. ACM, New York, USA, ISBN 978-1-4503-3435-8</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1145/2755996.2756658</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/2755996.2756658" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0808.0571v2</id>
+    <title>A Proof of George Andrews' and Dave Robbins' q-TSPP Conjecture (modulo a finite amount of routine calculations)</title>
+    <updated>2009-01-27T17:56:10Z</updated>
+    <link href="https://arxiv.org/abs/0808.0571v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0808.0571v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In the historic conference Combinatoire Enumerative[LL] wonderfully organized by Gilbert Labelle and Pierre Leroux there were many stimulating lectures, including a very interesting one by Pierre Leroux himself, who talked about his joint work with Xavier Viennot[LV], on solving differential equations combinatorially! During the problem session of that very same colloque, chaired by Pierre Leroux, Richard Stanley raised some intriguing problems about the enumeration of plane partitions, that he later expanded into a fascinating article[Sta1]. Most of these problems concerned the enumeration of symmetry classes of plane partitions, that were discussed in more detail in another article of Stanley[Sta2]. All of the conjectures in the latter article have since been proved (see Dave Bressoud's modern classic[B]), except one, that, so far, resisted the efforts of the greatest minds in enumerative combinatorics. It concerns the proof of an explicit formula for the q-enumeration of totally symmetric plane partitions, conjectured independently by George Andrews and Dave Robbins([Sta2],[Sta1](conj. 7), [B](conj. 13)). In this tribute to Pierre Leroux, we describe how to prove that last stronghold.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-08-05T12:46:46Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05345v1</id>
+    <title>Creative Telescoping</title>
+    <updated>2025-05-08T15:33:10Z</updated>
+    <link href="https://arxiv.org/abs/2505.05345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>These notes on creative telescoping are based on a series of lectures at the Institut Henri Poincare in November and December 2023.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T15:33:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1002.4384v2</id>
+    <title>Proof of George Andrews's and David Robbins's q-TSPP Conjecture</title>
+    <updated>2012-12-06T17:56:47Z</updated>
+    <link href="https://arxiv.org/abs/1002.4384v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1002.4384v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The conjecture that the orbit-counting generating function for totally symmetric plane partitions can be written as an explicit product formula, has been stated independently by George Andrews and David Robbins around 1983. We present a proof of this long-standing conjecture.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-02-23T18:09:17Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proceedings of the National Academy of Sciences 108(6), pp. 2196-2199. 2011. ISSN 0027-8424</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+    <arxiv:doi>10.1073/pnas.1019186108</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1073/pnas.1019186108" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11787v2</id>
+    <title>A Shape Lemma for Ideals of Differential Operators</title>
+    <updated>2025-04-30T06:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2502.11787v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11787v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a version of the classical shape lemma for zero-dimensional ideals of a commutative multivariate polynomial ring to the noncommutative setting of zero-dimensional ideals in an algebra of differential operators.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T13:26:16Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0806.4300v1</id>
+    <title>Proof of Ira Gessel's Lattice Path Conjecture</title>
+    <updated>2008-06-26T15:42:29Z</updated>
+    <link href="https://arxiv.org/abs/0806.4300v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0806.4300v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We present a computer-aided, yet fully rigorous, proof of Ira Gessel's tantalizingly simply-stated conjecture that the number of ways of walking $2n$ steps in the region $x+y \geq 0, y \geq 0$ of the square-lattice with unit steps in the east, west, north, and south directions, that start and end at the origin, equals $16^n\frac{(5/6)_n(1/2)_n}{(5/3)_n(2)_n}$ .</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-06-26T15:42:29Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+    <arxiv:doi>10.1073/pnas.0901678106</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1073/pnas.0901678106" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.01787v3</id>
+    <title>How does the Gerrymander Sequence Continue?</title>
+    <updated>2022-11-30T07:23:22Z</updated>
+    <link href="https://arxiv.org/abs/2209.01787v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.01787v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute the next few terms of the OEIS sequence A348456 and provide guessed equations for the generating functions of some sequences in its context.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-05T06:51:33Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Integer Sequences Vol 25 (2022) Article 22.9.7</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>George Spahn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.00424v1</id>
+    <title>Reduction-Based Creative Telescoping for Algebraic Functions</title>
+    <updated>2016-02-01T08:19:40Z</updated>
+    <link href="https://arxiv.org/abs/1602.00424v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.00424v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuing a series of articles in the past few years on creative telescoping using reductions, we develop a new algorithm to construct minimal telescopers for algebraic functions. This algorithm is based on Trager's Hermite reduction and on polynomial reduction, which was originally designed for hyperexponential functions and extended to the algebraic case in this paper.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-01T08:19:40Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06396v2</id>
+    <title>Transcendence Certificates for D-finite Functions</title>
+    <updated>2023-09-19T12:14:17Z</updated>
+    <link href="https://arxiv.org/abs/2302.06396v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06396v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although in theory we can decide whether a given D-finite function is transcendental, transcendence proofs remain a challenge in practice. Typically, transcendence is certified by checking certain incomplete sufficient conditions. In this paper we propose an additional such condition which catches some cases on which other tests fail.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-13T14:36:20Z</published>
+    <arxiv:comment>9 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of International Symposium on Symbolic and Algebraic Computation 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+    <arxiv:doi>10.1145/3597066.3597091</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3597066.3597091" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1611.07421v1</id>
+    <title>Reduction-Based Creative Telescoping for Fuchsian D-finite Functions</title>
+    <updated>2016-11-22T17:05:04Z</updated>
+    <link href="https://arxiv.org/abs/1611.07421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1611.07421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuing a series of articles in the past few years on creative telescoping using reductions, we adapt Trager's Hermite reduction for algebraic functions to fuchsian D-finite functions and develop a reduction-based creative telescoping algorithm for this class of functions, thereby generalizing our recent reduction-based algorithm for algebraic functions, presented at ISSAC 2016.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-11-22T17:05:04Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1602.00424</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Mark van Hoeij</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.4818v2</id>
+    <title>Computer-Assisted Proofs of Some Identities for Bessel Functions of Fractional Order</title>
+    <updated>2013-07-19T10:56:59Z</updated>
+    <link href="https://arxiv.org/abs/1305.4818v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.4818v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We employ computer algebra algorithms to prove a collection of identities involving Bessel functions with half-integer orders and other special functions. These identities appear in the famous Handbook of Mathematical Functions, as well as in its successor, the DLMF, but their proofs were lost. We use generating functions and symbolic summation techniques to produce new proofs for them.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-21T13:53:11Z</published>
+    <arxiv:comment>Final version, some typos were corrected. 21 pages, uses svmult.cls</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>In Carsten Schneider and Johannes Bluemlein (eds.): Computer Algebra in Quantum Field Theory: Integration, Summation and Special Functions. Texts &amp; Monographs in Symbolic Computation, Springer-Verlag Wien 2013</arxiv:journal_ref>
+    <author>
+      <name>Stefan Gerhold</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Peter Paule</name>
+    </author>
+    <author>
+      <name>Carsten Schneider</name>
+    </author>
+    <author>
+      <name>Burkhard Zimmermann</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-7091-1616-6_3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-7091-1616-6_3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.03757v3</id>
+    <title>Non-minimality of minimal telescopers explained by residues</title>
+    <updated>2025-05-01T03:34:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.03757v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.03757v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Elaborating on an approach recently proposed by Mark van Hoeij, we continue to investigate why creative telescoping occasionally fails to find the minimal-order annihilating operator of a given definite sum or integral. We offer an explanation based on the consideration of residues.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T03:40:29Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Xiuyun Li</name>
+    </author>
+    <author>
+      <name>Rong-Hua Wang</name>
+    </author>
+    <author>
+      <name>Yisen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.2409v3</id>
+    <title>A Generalized Apagodu-Zeilberger Algorithm</title>
+    <updated>2014-08-02T19:32:33Z</updated>
+    <link href="https://arxiv.org/abs/1402.2409v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.2409v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Apagodu-Zeilberger algorithm can be used for computing annihilating operators for definite sums over hypergeometric terms, or for definite integrals over hyperexponential functions. In this paper, we propose a generalization of this algorithm which is applicable to arbitrary $\partial$-finite functions. In analogy to the hypergeometric case, we introduce the notion of proper $\partial$-finite functions. We show that the algorithm always succeeds for these functions, and we give a tight a priori bound for the order of the output operator.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-11T09:35:59Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of the International Symposium on Symbolic and Algebraic Computation (ISSAC 2014), pages 107-114, 2014. ACM, New York, USA, ISBN 978-1-4503-2501-1</arxiv:journal_ref>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1145/2608628.2608641</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/2608628.2608641" title="doi"/>
+  </entry>
+</feed>

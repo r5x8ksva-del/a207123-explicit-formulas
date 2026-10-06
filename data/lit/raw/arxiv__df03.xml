@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yGtbOBkIR9zPPK9TIC2brJvmiDE</id>
+  <title>arXiv Query: search_query=abs:"D-finite" AND abs:diagonal AND abs:"power series"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:25Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22D-finite%22+AND+(abs:diagonal+AND+abs:%22power+series%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2506.22011v2</id>
+    <title>Single-exponential bounds for diagonals of D-finite power series</title>
+    <updated>2026-01-23T08:40:22Z</updated>
+    <link href="https://arxiv.org/abs/2506.22011v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.22011v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>D-finite power series appear ubiquitously in combinatorics, number theory, and mathematical physics. They satisfy systems of linear partial differential equations whose solution spaces are finite-dimensional, which makes them enjoy a lot of nice properties. After attempts by others in the 1980s, Lipshitz was the first to prove that the class they form in the multivariate case is closed under the operation of diagonal. In particular, an earlier work by Gessel had addressed the D-finiteness of the diagonals of multivariate rational power series. In this paper, we give another proof of Gessel's result that fixes a gap in his original proof, while extending it to the full class of D-finite power series. We also provide a single exponential bound on the degree and order of the defining differential equation satisfied by the diagonal of a D-finite power series in terms of the degree and order of the input differential system.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-27T08:24:48Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+    </author>
+    <author>
+      <name>Pingchuan Ma</name>
+    </author>
+    <author>
+      <name>Chaochao Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1110.5577v2</id>
+    <title>A Note on Lipshitz's Lemma 3</title>
+    <updated>2011-11-06T02:27:01Z</updated>
+    <link href="https://arxiv.org/abs/1110.5577v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1110.5577v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note, we give a remark on the proof of Lemma 3 in Lipshitz's paper "The diagonal of a D-Finite power series is D-Finite". This remark is motivated by the observation that the statement from line -8 to -3 on page 375 of that paper seems not completely correct.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-10-23T03:26:19Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.RA"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Ziming Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.09429v2</id>
+    <title>Galois groups of reductions modulo p of D-finite series</title>
+    <updated>2025-05-06T15:28:29Z</updated>
+    <link href="https://arxiv.org/abs/2504.09429v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.09429v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is to investigate the algebraicity behavior of reductions of $D$-finite power series modulo prime numbers. For many classes of D-finite functions, such as diagonals of multivariate algebraic series or hypergeometric functions, it is known that their reductions modulo prime numbers, when defined, are algebraic. We formulate a conjecture that uniformizes the Galois groups of these reductions across different prime numbers. We then focus on hypergeometric functions, which serves as a test case for our conjecture. Refining the construction of an annihilating polynomial for the reduction of a hypergeometric function modulo a prime number p, we extract information on the respective Galois groups and show that they behave nicely as p varies.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-13T04:33:30Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Xavier Caruso</name>
+    </author>
+    <author>
+      <name>Florian Fürnsinn</name>
+    </author>
+    <author>
+      <name>Daniel Vargas-Montoya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.07984v2</id>
+    <title>Symmetries of non-linear ODEs: lambda extensions of the Ising correlations</title>
+    <updated>2022-12-26T18:12:34Z</updated>
+    <link href="https://arxiv.org/abs/2212.07984v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.07984v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper provides several illustrations of the numerous remarkable properties of the lambda-extensions of the two-point correlation functions of the Ising model, sheding some light on the non-linear ODEs of the Painlevé type. We first show that this concept also exists for the factors of the two-point correlation functions focusing, for pedagogical reasons, on two examples namely C(0,5) and C(2,5) at $ν= -k$. We then display, in a learn-by-example approach, some of the puzzling properties and structures of these lambda-extensions: for an infinite set of (algebraic) values of $ λ$ these power series become algebraic functions, and for a finite set of (rational) values of lambda they become D-finite functions, more precisely polynomials (of different degrees) in the complete elliptic integrals of the first and second kind K and E. For generic values of $ λ$ these power series are not D-finite, they are differentially algebraic. For an infinite number of other (rational) values of $ λ$ these power series are globally bounded series, thus providing an example of an infinite number of globally bounded differentially algebraic series. Finally, taking the example of a product of two diagonal two-point correlation functions, we suggest that many more families of non-linear ODEs of the Painlevé type remain to be discovered on the two-dimensional Ising model, as well as their structures, and in particular their associated lambda extensions. The question of their possible reduction, after complicated transformations, to Okamoto sigma forms of Painlevé VI remains an extremely difficult challenge.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-15T17:31:57Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>S. Boukraa</name>
+    </author>
+    <author>
+      <name>J. -M. Maillard</name>
+    </author>
+  </entry>
+</feed>

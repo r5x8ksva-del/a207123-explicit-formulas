@@ -1,0 +1,10 @@
+[lean_one 启动前：AVAIL=5568 COMMIT=17499 LIMIT=32429 HEADROOM=14930 TOTAL=16045；看门狗上限 CAP=9500MB，MINHEAD=3000MB]
+A207123/NotStirlingLike.lean:55:41: error: ring failed, ring expressions not equal
+x y z : ℕ × ℕ
+⊢ ↑y.1 * ↑z.2 - ↑y.1 * ↑x.2 - ↑x.1 * ↑z.2 + ↑x.1 * ↑y.2 + ↑x.2 * ↑z.1 - ↑y.2 * ↑z.1 =
+    -(↑y.1 * ↑z.2) + ↑y.1 * ↑x.2 + ↑x.1 * ↑z.2 - ↑x.1 * ↑y.2 - ↑x.2 * ↑z.1 + ↑y.2 * ↑z.1
+A207123/NotStirlingLike.lean:143:26: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A207123/NotStirlingLike.lean:144:6: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A207123/NotStirlingLike.lean:158:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+[lean_one 内存：PEAK=8045 MINHEAD=5560 KILLED=0 REASON= QFAIL=0；用时 411s]
+[lean_one exit code 1]

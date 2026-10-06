@@ -1,0 +1,629 @@
+% Draft manuscript (first English draft, started 2026-10-07).
+% Source of truth for statements, proofs and checks: the report in the parent folder, ../notes/, ../code/checks/, ../lean/.
+% Lines marked TODO need a decision or a check by the human authors before submission.
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{introthm}{Theorem}
+\renewcommand{\theintrothm}{\Alph{introthm}}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\stirling}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\rstirling}[3]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}_{#3}}
+\newcommand{\lean}[1]{\texttt{#1}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\DeclareMathOperator{\Rel}{Rel}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\lc}{lc}
+
+\begin{document}
+
+\title[Pattern-avoiding binary arrays and a Stirling-type table]{Pattern-avoiding binary arrays and a Stirling-type table:\\ explicit formulas, exact recurrence orders, and non-D-finiteness}
+
+% TODO(authors): names and affiliations. (A colored \todo inside \author may break under amsart's uppercasing.)
+\author{Author names to be added}
+
+\date{Draft of 7 October 2026}
+
+\begin{abstract}
+Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ as three consecutive entries and no column contains $001$ or $011$ (OEIS A207123 and its columns A207118--A207122). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$. We study the table $U_k(m)$. For each $m$, the generating function $\sum_k U_k(m)x^k$ equals $W_m/P_m$ with $P_m=\prod_{i=0}^{m}(1-x-ix^3)$ and is in lowest terms, so the minimal order of a linear recurrence in $k$ is exactly $3m+1$. A unique factorization of the sequences into blocks gives a positive double-sum formula in terms of Stirling and $r$-Stirling numbers, and we show that for $m\ge1$ no single sum of the form $\sum_s A(s)\binom{k+c-2s}{m+s+d}$ exists. The bivariate generating function is not D-finite; $U$ satisfies no nontrivial recurrence whose coefficients depend only on $k$; every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence; and $U$ is not Stirling-like in the sense of Kauers. Finally, the near-diagonal entries $N(k,k-d)$ of the associated triangle are polynomials of degree $2d$ in $k$ exactly from $k=2d+2$ on. The reduction, the exact recurrence orders, the explicit formula, the non-D-finiteness, the description of all quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
+\end{abstract}
+
+\subjclass[2020]{05A15; 11B73; 33F10; 68V20}
+\keywords{pattern-avoiding arrays, Stirling numbers, $r$-Stirling numbers, D-finite power series, Ore algebras, formal verification}
+
+\maketitle
+
+% =====================================================================
+\section{Introduction}\label{sec:intro}
+
+\subsection{The arrays}
+Let $a_k(n)$ be the number of $n\times k$ matrices over $\{0,1\}$ such that, reading each row from left to right, no three consecutive entries form $001$ or $010$, and, reading each column from top to bottom, no three consecutive entries form $001$ or $011$. The table $T(n,k)=a_k(n)$ is OEIS A207123, contributed by R.~H.~Hardin, and its columns $k=3,\dots,7$ are A207118--A207122 \cite{OEIS}. The OEIS records empirical linear recurrences for these columns; as of October 2026 they are marked as empirical or conjectural.
+
+The column condition says exactly that a $0$ is never followed, two places further down, by a $1$. Hence the odd-numbered rows and the even-numbered rows are, column by column, weakly decreasing, and the two halves do not interact. Encoding each column of each half by its number of ones (its \emph{height}) turns the row condition into a condition on consecutive heights. This gives (Proposition~\ref{prop:reduction})
+\begin{equation}\label{eq:reduction}
+  a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor),
+\end{equation}
+where $U_k(m)$ is the number of sequences $(h_1,\dots,h_k)\in\{0,\dots,m\}^k$ such that every triple $(a,b,c)=(h_j,h_{j+1},h_{j+2})$ is \emph{good}:
+\[
+  b=c\quad\text{or}\quad a\ge\max(b,c).
+\]
+The column half of this argument is the same elementary observation that C.~Krause used in June 2026 to prove formulas for the related arrays A202093--A202099, whose rows and columns both avoid $001$ and $011$ \cite{Krause}; there the row condition also decouples and the count is a product of binomial coefficients. For our row condition it does not, and the whole difficulty is in the table $U_k(m)$.
+
+Table~\ref{tab:U} shows a few values. In OEIS terms, $U_k(1)=\text{A038718}(k+2)$, $U_3(m)=\text{A084990}(m+1)$ and $U_4(m)=\text{A326247}(m+2)$; we know no structural reason for the last coincidence.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|rrrrrr}
+\toprule
+$k\backslash m$ & 0 & 1 & 2 & 3 & 4 & 5\\
+\midrule
+0 & 1 & 1 & 1 & 1 & 1 & 1\\
+1 & 1 & 2 & 3 & 4 & 5 & 6\\
+2 & 1 & 4 & 9 & 16 & 25 & 36\\
+3 & 1 & 6 & 17 & 36 & 65 & 106\\
+4 & 1 & 9 & 32 & 80 & 165 & 301\\
+5 & 1 & 14 & 64 & 192 & 457 & 938\\
+6 & 1 & 21 & 119 & 419 & 1136 & 2604\\
+7 & 1 & 31 & 214 & 873 & 2669 & 6778\\
+8 & 1 & 46 & 388 & 1837 & 6334 & 17802\\
+\bottomrule
+\end{tabular}
+\caption{The numbers $U_k(m)$ for $0\le k\le 8$, $0\le m\le 5$.}\label{tab:U}
+\end{table}
+
+\subsection{Main results}
+Throughout, $b_i(x)=1-x-ix^3$,
+\[
+  P_m=\prod_{i=0}^{m}b_i,\qquad W_m=1+x^2\sum_{j=1}^{m}j\,P_{j-1}\quad(P_{-1}=1),\qquad G_m(x)=\sum_{k\ge0}U_k(m)x^k .
+\]
+The starting point is the four-term recurrence (Lemma~\ref{lem:rec})
+\begin{equation}\label{eq:rec}
+  U_k(m)=U_k(m-1)+U_{k-1}(m)+m\,U_{k-3}(m)\qquad(k\ge1,\ m\ge0)
+\end{equation}
+with suitable boundary values.
+
+\begin{introthm}[Exact recurrence order; Theorem~\ref{thm:gf}]\label{thmA}
+For every $m\ge0$, $G_m=W_m/P_m$ and $\gcd(W_m,P_m)=1$. Consequently the minimal order of a linear recurrence with constant coefficients satisfied by $(U_k(m))_{k\ge0}$ is exactly $3m+1$, and its characteristic polynomial is $(y-1)\prod_{i=1}^{m}(y^3-y^2-i)$.
+\end{introthm}
+
+\begin{introthm}[Positive explicit formula; Theorem~\ref{thm:explicit}]\label{thmB}
+With Stirling numbers of the second kind $\stirling{n}{k}$ and $H(m,s,j)=h_s(j,j+1,\dots,m)$, which for $1\le j\le m$ is the $r$-Stirling number $\rstirling{m+s}{m}{j}$ of Broder \cite{Broder},
+\[
+  U_k(m)=\sum_{s\ge0}\stirling{m+s}{m}\binom{k+m-2s}{k-3s}+\sum_{j=1}^{m}j\sum_{s\ge0}H(m,s,j)\binom{k-2+m-j-2s}{k-2-3s}.
+\]
+Every term is a nonnegative integer with a combinatorial meaning, and the formula refines according to the number of ascents.
+\end{introthm}
+
+\begin{introthm}[No single-family sum; Theorems~\ref{thm:S} and~\ref{thm:Spart}]\label{thmC}
+Let $m\ge1$. There are no integers $c,d,k_0$ and complex numbers $A(s)$ independent of $k$ such that $U_k(m)=\sum_s A(s)\binom{k+c-2s}{m+s+d}$ for all $k\ge k_0$. The same holds, for every $m\ge2$, for the number of sequences that end with an ascent.
+\end{introthm}
+
+\begin{introthm}[Non-D-finiteness and all quadrant recurrences; Theorems~\ref{thm:nonD}, \ref{thm:ideal} and Corollary~\ref{cor:stirlinglike}]\label{thmD}
+\begin{enumerate}
+\item $F(x,t)=\sum_{k,m}U_k(m)x^kt^m$ satisfies no nonzero linear differential equation in $x$ with polynomial coefficients; hence $F$ is not D-finite.
+\item There is no nontrivial recurrence $\sum_{a\le A,\,b\le B}p_{ab}(k)\,U_{k-a}(m-b)=0$ with polynomial coefficients depending only on $k$ that holds on a quadrant $k\ge k_0$, $m\ge m_0$.
+\item In the Ore algebra $\C[k,m]\langle X,E^{-1}\rangle$ of backward shifts, the operators annihilating $U$ on some quadrant form exactly the left ideal generated by $L_1=1-E^{-1}-X-mX^3$. The space of such operators with support in $[0,A]\times[0,B]$ and coefficients of total degree at most $D$ has dimension $(A-2)\,B\,D(D+1)/2$ when $A\ge3$, $B\ge1$, $D\ge1$, and $0$ otherwise.
+\item Every nonzero such operator has three monomials whose exponent vectors span a lattice triangle of normalized area at least $3$. In particular $U$ is not Stirling-like in the sense of Kauers \cite{Kauers07}.
+\end{enumerate}
+\end{introthm}
+
+The triangle $N(k,q)$, the number of good words of length $k$ that use exactly the letters $1,\dots,q$, plays for $U$ the role that the numbers $q!\stirling{k}{q}$ of surjections play for powers: $U_k(m)=\sum_q N(k,q)\binom{m+1}{q}$, just as $m^k=\sum_q q!\stirling{k}{q}\binom{m}{q}$.
+
+\begin{introthm}[Near-diagonal; Theorem~\ref{thm:neardiag}]\label{thmE}
+For every $d\ge0$ there is a polynomial $p_d$ of degree $2d$ with leading coefficient $2/(2^d d!)$ such that $N(k,k-d)=p_d(k)$ for all $k\ge2d+2$, and $N(2d+1,d+1)\ne p_d(2d+1)$. For example $N(k,k-1)=k^2-k-4$ for $k\ge4$.
+\end{introthm}
+
+\subsection{Related work}
+Lipshitz \cite{Lipshitz} and Stanley \cite{Stanley80} developed the theory of D-finite power series; Zeilberger \cite{Zeilberger90} and Wilf--Zeilberger \cite{WZ92} the holonomic approach to special function identities. Kauers \cite{Kauers07} introduced Stirling-like sequences: bivariate sequences whose annihilator is generated by a three-term operator whose two shift vectors form a basis of $\Z^2$. His Example~5 shows that the annihilator of the Stirling numbers of the second kind is exactly the left ideal generated by the triangular recurrence. The argument has two steps: there is no recurrence in one variable only, and every annihilating operator reduces modulo the generator to one in one variable. Our Theorem~\ref{thm:ideal} follows the same outline for the four-term operator $L_1$, which is not of Stirling-like shape (Corollary~\ref{cor:stirlinglike}), with polynomial instead of rational coefficients and annihilation on a quadrant. Chyzak, Kauers and Salvy \cite{CKS09} show that the Stirling numbers are not $\partial$-finite. Klazar \cite{Klazar} studies Bell numbers and their relatives. The $r$-Stirling numbers are due to Broder \cite{Broder}, and polynomiality of diagonals of Stirling-type triangles goes back to Gessel and Stanley \cite{GesselStanley}.
+
+For arrays avoiding finite sets of horizontal and vertical patterns, linear recurrences in one dimension for a fixed size of the other exist by a transfer-matrix argument; see Theorem~2 of Dougherty-Bliss, Koutschan, Ter-Saakov and Zeilberger \cite{DBKTZ}. Dougherty-Bliss and Kauers \cite{DBK} proved closed forms and D-finiteness results for a different family of Hardin's arrays (king-move arrays). We are not aware of previous work on the table $U_k(m)$ itself. \todo{complete the literature search in MathSciNet, zbMATH, Google Scholar and Web of Science before submission; see the repository notes.}
+
+\subsection{Formal verification}
+The results listed in Section~\ref{sec:lean} are formalized in Lean~4 \cite{Lean4} with Mathlib \cite{Mathlib}, starting from the definitions of $a_k(n)$ and $U_k(m)$. The formal proofs use only the three standard axioms. Lean checks proofs, not the faithfulness of formal statements to the statements in this paper; Section~\ref{sec:lean} lists the definitions that a reader has to compare.
+
+\subsection{Organization}
+Section~\ref{sec:prelim} proves the reduction and the basic recurrence. Section~\ref{sec:gf} treats the generating functions in $k$. Section~\ref{sec:blocks} gives the block decomposition and the explicit formula. Section~\ref{sec:single} proves that single-family sums do not exist. Section~\ref{sec:nonD} contains the non-D-finiteness and the description of all quadrant recurrences. Section~\ref{sec:neardiag} treats the near-diagonal. Section~\ref{sec:lean} describes the formalization, and Section~\ref{sec:open} lists open problems.
+
+% =====================================================================
+\section{The reduction and the basic recurrence}\label{sec:prelim}
+
+\begin{definition}
+A triple $(a,b,c)$ of integers is \emph{good} if $b=c$ or $a\ge\max(b,c)$. For $k,m\ge0$ let $L_k(m)$ be the set of $h\in\{0,\dots,m\}^k$ such that $(h_j,h_{j+1},h_{j+2})$ is good for $1\le j\le k-2$, and let $U_k(m)=|L_k(m)|$.
+\end{definition}
+
+Thus $U_k(0)=1$, $U_0(m)=1$, $U_1(m)=m+1$ and $U_2(m)=(m+1)^2$.
+
+\emph{Convention.} In all summation formulas, $\binom{a}{b}=0$ unless $0\le b\le a$ (also when $a<0$), and sums over $s$ or $j$ run over the finitely many indices with a nonzero summand. This convention is needed: with the generalized binomial coefficients for $a<0$ the formulas below are false. When the upper index is a polynomial variable, as in $\binom{m+1}{q}$ regarded as a polynomial in $m$, the polynomial binomial coefficient is meant.
+
+\begin{proposition}[Reduction]\label{prop:reduction}
+For all $k,n\ge0$, $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$.
+\end{proposition}
+
+\begin{proof}
+A column $(e_1,\dots,e_n)$ contains $001$ or $011$ in three consecutive places if and only if $e_i=0$ and $e_{i+2}=1$ for some $i$. So the column condition says that $e_i\ge e_{i+2}$ for all $i$. It couples only rows of the same parity: the rows $1,3,5,\dots$ form, column by column, a weakly decreasing $0/1$ matrix with $\lceil n/2\rceil$ rows, and so do the rows $2,4,\dots$ with $\lfloor n/2\rfloor$ rows. The row condition concerns each row separately.
+
+A column-wise weakly decreasing $0/1$ matrix with $M$ rows is determined by its height vector $h\in\{0,\dots,M\}^k$, where $h_j$ is the number of ones in column $j$. Row $r$ then reads $([r\le h_1],\dots,[r\le h_k])$. For three consecutive columns with heights $(a,b,c)$, some row reads $001$ if and only if $c>\max(a,b)$ (take $r=c$), and some row reads $010$ if and only if $b>\max(a,c)$ (take $r=b$). Neither happens if and only if $c\le\max(a,b)$ and $b\le\max(a,c)$. If $b<c$ the first inequality gives $c\le a$; if $b>c$ the second gives $b\le a$. Hence neither happens if and only if $(a,b,c)$ is good. The two halves are independent, which gives the product.
+\end{proof}
+
+Reversing all rows (or all columns) shows that the reading direction does not matter for the count.
+
+Let $\Lambda_k$ be the set of words in $\{0,1\}^k$ avoiding $001$ and $010$, ordered componentwise. The proof shows that a column-wise decreasing matrix with $m$ rows satisfying the row condition is a multichain $x_1\le\dots\le x_m$ in $\Lambda_k$ (read from the bottom row up). Hence:
+
+\begin{proposition}\label{prop:multichain}
+$U_k(m)$ is the number of multichains $x_1\le x_2\le\dots\le x_m$ in $\Lambda_k$, that is, the value $Z(\Lambda_k,m+1)$ of the zeta polynomial of $\Lambda_k$ in Stanley's normalization. In particular $U_k(1)=|\Lambda_k|$.
+\end{proposition}
+
+\begin{lemma}[Basic recurrence]\label{lem:rec}
+For $k\ge1$ and $m\ge0$,
+\[
+  U_k(m)=U_k(m-1)+U_{k-1}(m)+m\,U_{k-3}(m),
+\]
+with the conventions $U_0\equiv1$, $U_{-1}\equiv1$, $U_{-2}\equiv0$ and $U_k(-1)=0$ for $k\ge1$.
+\end{lemma}
+
+% TODO(authors): this recurrence was given in the problem statement we started from; decide on attribution.
+\begin{proof}
+Classify $h\in L_k(m)$ by the first position $i$ at which the value $m$ occurs.
+If $m$ does not occur, $h\in L_k(m-1)$.
+If $i=1$, every triple starting at position $1$ is good because $a=m\ge\max(b,c)$, so $h_2,\dots,h_k$ is an arbitrary element of $L_{k-1}(m)$.
+If $i=2$, then $h_1<m$ ($m$ choices). For $k=2$ this gives $m=m\,U_{-1}(m)$ sequences. For $k\ge3$ the triple $(h_1,m,h_3)$ has $a<b$, so it is good only if $h_3=m$; after that the triples $(m,m,\cdot)$ and $(m,\cdot,\cdot)$ are automatically good, and $h_4,\dots,h_k$ is an arbitrary element of $L_{k-3}(m)$. For $k=1$ the case does not occur ($m\,U_{-2}=0$).
+If $i\ge3$, the triple $(h_{i-2},h_{i-1},m)$ has $b<c$ and $a<c$, which is not good.
+The four cases are disjoint and exhaustive.
+\end{proof}
+
+\subsection{The triangle $N(k,q)$}
+Goodness is defined using only $=$ and $\ge$, so it is preserved by strictly increasing maps of the alphabet. Let $N(k,q)$ be the number of good words of length $k$ over $\{1,\dots,q\}$ in which every letter occurs ($N(0,0)=1$). Sorting the words in $L_k(m)$ by their set of values gives
+\begin{equation}\label{eq:Nbasis}
+  U_k(m)=\sum_{q=0}^{k}N(k,q)\binom{m+1}{q},\qquad N(k,q)=\sum_{i}(-1)^{q-i}\binom{q}{i}U_k(i-1),
+\end{equation}
+where in the inversion $U_0(-1)=1$ and $U_k(-1)=0$ for $k\ge1$.
+
+\begin{proposition}[Triangular recurrence]\label{prop:Ntri}
+For $k\ge3$ and $r\ge0$, with $N$ taken to be $0$ outside $0\le q\le k$,
+\[
+  N(k,r+1)=N(k-1,r)+N(k-1,r+1)+r\bigl[N(k-3,r-1)+2N(k-3,r)+N(k-3,r+1)\bigr].
+\]
+The recurrence does not hold for $k=2$; the initial values are $N(0,0)=1$, $N(1,1)=1$, $N(2,1)=1$, $N(2,2)=2$.
+\end{proposition}
+
+\begin{proof}[Sketch]
+Let $q=r+1$ be the largest letter; as in Lemma~\ref{lem:rec} it first occurs at position $1$ or $2$. At position $1$ the tail is a good word using all of $\{1,\dots,q\}$ or all of $\{1,\dots,q-1\}$. At position $2$ the word starts $a\,q\,q$ with $a<q$, and the tail $t$ is any good word; the set $\{1,\dots,q-1\}$ minus the letters of $t$ is either empty ($a$ arbitrary, $q-1$ choices) or $\{a\}$ ($a$ forced), and in each case $t$ may or may not contain $q$. This gives the four terms in the bracket.
+\end{proof}
+
+The diagonal satisfies $N(k,k)=2$ for $k\ge2$, and $N(k,k-1)=k^2-k-4$ for $k\ge4$ (a special case of Theorem~\ref{thm:neardiag}).
+
+% =====================================================================
+\section{Generating functions in $k$ and exact recurrence orders}\label{sec:gf}
+
+\begin{theorem}\label{thm:gf}
+Let $m\ge0$.
+\begin{enumerate}
+\item $(1-x-mx^3)\,G_m=G_{m-1}+mx^2$ with $G_{-1}=1$; hence $G_m=W_m/P_m$.
+\item $\gcd(W_m,P_m)=1$ in $\Q[x]$. Since $\deg P_m=3m+1$, $\deg W_m=3m$ and $P_m(0)=1$, the minimal order of a linear recurrence with constant coefficients satisfied by $U_k(m)$ for all large $k$ is exactly $3m+1$, with characteristic polynomial $(y-1)\prod_{i=1}^{m}(y^3-y^2-i)$.
+\item $P_m$ is squarefree. In particular all poles of $G_m$ are simple.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Multiply Lemma~\ref{lem:rec} by $x^k$ and sum over $k\ge1$, using $U_{-2}=0$ and $U_{-1}=1$: $G_m-1=(G_{m-1}-1)+x\,G_m+m x^2+m x^3G_m$. For the closed form use induction on $m$ and $W_m=W_{m-1}+mx^2P_{m-1}$.
+
+(2) For $j>i$ the polynomial $b_i$ divides $P_{j-1}$, so $W_m\equiv W_i\pmod{b_i}$ for $i\le m$. Let $d\in\Z[x]$ be a primitive irreducible common factor of $W_m$ and $P_m$. Then $d$ divides some $b_i$ and hence $W_i$. By Gauss's lemma $d$ divides $W_i$ in $\Z[x]$, so $d(1)$ divides $W_i(1)=1$; here $P_{j-1}(1)=0$ for $j\ge1$ because $b_0=1-x$. This excludes $d=b_0$. For $i\ge1$, $b_i$ has a rational root if and only if $i=y^2(y-1)$ for an integer $y\ge2$ (rational root theorem), and then
+\[
+  b_i=(1-yx)\bigl(1+(y-1)x+y(y-1)x^2\bigr),
+\]
+where the quadratic factor has discriminant $-(y-1)(3y+1)<0$. The values at $x=1$ of the possible factors are $b_i(1)=-i$, $1-y$ and $y^2$. The condition $d(1)=\pm1$ leaves only $d=b_1$ and $d=1-2x$ (from $b_4$). But $W_1-b_1=x+x^2$ is coprime to $b_1$, and $W_4(1/2)=645/512\ne0$.
+
+The statement about recurrences is the standard fact that the minimal order of a linear recurrence satisfied by the coefficients of a rational function $W/P$ in lowest terms with $P(0)\ne0$ and $\deg W<\deg P$ is $\deg P$; the characteristic polynomial is the reciprocal of $P_m$.
+
+(3) A common root of $b_i$ and $b_j$ ($i\ne j$) would satisfy $(i-j)x^3=0$, impossible since $b_i(0)=1$. For $i\ge1$ the reciprocal $z^3-z^2-i$ of $b_i$ has discriminant $-i(4+27i)\ne0$, and $b_0$ is linear.
+\end{proof}
+
+\begin{corollary}[Growth]\label{cor:growth}
+For $m\ge1$ the polynomial $y^3-y^2-m$ has a unique real root $\rho_m>1$; put $\rho_0:=1$, the largest real root of $y^3-y^2$. The sequence $\rho_m$ is strictly increasing, and every other root $\sigma$ satisfies $|\sigma|^2=m/\rho_m<\rho_m^2$. Consequently $x_m=1/\rho_m$ is the unique root of $P_m$ of smallest modulus and
+\[
+  U_k(m)=c_m\rho_m^k+O(r^k)\quad(k\to\infty)
+\]
+for some $r<\rho_m$, where
+\[
+  c_m=\frac{G_{m-1}(x_m)+m x_m^2}{x_m(1+3m x_m^2)}>0 .
+\]
+\end{corollary}
+
+\begin{proof}
+$f(y)=y^3-y^2-m$ is negative for $y\le1$ and increasing for $y\ge2/3$, so it has a unique real root $\rho_m>1$; $f_{m+1}(\rho_m)=-1<0$ gives monotonicity; the product of the roots gives $|\sigma|^2\rho_m=m<\rho_m^3$. The roots of $P_m$ are the reciprocals of the roots of $y^3-y^2-v$ ($0\le v\le m$, the case $v=0$ meaning the root $1$), so $x_m$ is the unique root of smallest modulus, and it is a simple pole by Theorem~\ref{thm:gf}. The coefficient of $1/(1-\rho_m x)$ in the partial fraction expansion of $G_m=(G_{m-1}+mx^2)/b_m$ is $c_m$, and $G_{m-1}(x_m)\ge1$ because $G_{m-1}$ has nonnegative coefficients, constant term $1$ and radius of convergence $1/\rho_{m-1}>x_m$.
+\end{proof}
+
+\begin{remark}
+A finer analysis of the partial fraction expansion gives $U_k(m)=c_m\rho_m^k-c_{m-1}\rho_{m-1}^{k+3}+O(\tau_m^k)$ with $\tau_m<\rho_{m-1}$, so the relative error of the leading term decays exactly like $(\rho_{m-1}/\rho_m)^k$, and $1-\rho_{m-1}/\rho_m\sim1/(3m)$. When $\rho_m$ is an integer, that is $m=y^2(y-1)$, the constant $c_m$ is rational; for instance $c_4=215/2$. \todo{decide whether to include the full asymptotic statement (report T5.1) with proof.}
+\end{remark}
+
+\begin{corollary}[Columns of the original table]\label{cor:columns}
+For fixed $k\ge1$ there are polynomials $p,q$ with $\deg p=2k$ and $\deg q=2k-2$ such that $a_k(n)=p(n)+(-1)^nq(n)$ for all $n\ge0$. The generating function $\sum_n a_k(n)x^n$ has reduced denominator $(1-x)^{2k+1}(1+x)^{2k-1}$, so the minimal order of a linear recurrence for the $k$-th column is $4k$.
+\end{corollary}
+
+\begin{proof}[Sketch]
+By telescoping Lemma~\ref{lem:rec}, $U_k(m)=u_k(m)$ for a polynomial $u_k$ of degree $k$ with leading coefficient $2/k!$ ($k\ge2$). Then $a_k(n)=u_k(n/2)^2$ for even $n$ and $u_k((n+1)/2)\,u_k((n-1)/2)$ for odd $n$, and the expansion $u(y+h)u(y-h)=u(y)^2+h^2\bigl(u u''-u'^2\bigr)(y)+O(h^4)$ gives the degrees. The numerators of the two parts do not vanish at $x=\pm1$.
+\end{proof}
+
+The existence of some linear recurrence for each column also follows from the general transfer-matrix argument of \cite[Theorem~2]{DBKTZ}; the point of Corollary~\ref{cor:columns} is the exact order for every $k$. The empirical recurrences recorded in the OEIS for the columns $k=3,\dots,7$ (A207118--A207122) have order $4k$ and characteristic polynomial exactly $(x-1)^{2k+1}(x+1)^{2k-1}$, and they hold for the first terms; by Corollary~\ref{cor:columns} they therefore hold for all $n$. The empirical recurrences for the rows $n=2,\dots,7$ (A207069, A207070, A207124--A207127) hold as well: each row $k\mapsto U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$ is a product of two sequences satisfying linear recurrences with constant coefficients, so its minimal order is bounded a~priori and the claim reduces to a finite computation. Both checks were done in exact arithmetic. \todo{decide how much of this (report T1.9, T5.4) to include; the column statement is the easiest part of the paper to be anticipated by others.}
+
+% =====================================================================
+\section{Block decomposition and an explicit formula}\label{sec:blocks}
+
+\begin{definition}
+For integers $0\le a<v$ define the blocks
+\[
+  S_v=[v],\qquad T_{v,a}=[a,v,v],\qquad E_{v,a}=[a,v],
+\]
+and also $S_0=[0]$. The number $v$ is the \emph{level} of the block and $a$ its \emph{valley}.
+\end{definition}
+
+\begin{theorem}[Unique factorization]\label{thm:blocks}
+Concatenation is a bijection from the set of finite sequences of blocks with weakly decreasing levels in $\{0,\dots,m\}$, in which only the last block may be an $E$-block, onto $\bigcup_k L_k(m)$. Equivalently, as an identity between languages,
+\[
+  \mathcal L(\le m)=B_m^*\cdot\bigl(\mathcal L(\le m-1)\sqcup E_m\bigr),\qquad B_m=\{S_m\}\cup\{T_{m,a}:a<m\},\quad E_m=\{E_{m,a}:a<m\}.
+\]
+\end{theorem}
+
+\begin{proof}
+\emph{Every concatenation is good.} Let $p$ be a position that is not a valley, with value $v$ equal to the level of its block. All later values are at most $v$: the rest of the block equals $v$, later blocks have level at most $v$, and valleys are below levels. So every triple starting at $p$ has $a\ge\max(b,c)$. A triple starting at the valley of a $T$-block is $(a,v,v)$, which is good. The valley of an $E$-block is followed by only one entry.
+
+\emph{Existence.} Induct on the length. Let $M=\max h$, first attained at position $i$. As in Lemma~\ref{lem:rec}, $i\in\{1,2\}$. If $i=1$, split off $S_M$. If $i=2$ and $k=2$, the sequence is $E_{M,h_1}$. If $i=2$ and $k\ge3$, then $h_3=M$ and we split off $T_{M,h_1}$. The remainder is good and has maximum at most $M$.
+
+\emph{Uniqueness.} The level of the first block equals $\max h$. If $h_1=\max h$ the first block is $S_{h_1}$; otherwise it is a $T$- or an $E$-block, and an $E$-block can only be the last block. Finally, if $a<v$ then $(a,v,c)$ is good only for $c=v$, so a pair $(a,v)$ that is not at the end must be completed to $T_{v,a}$.
+\end{proof}
+
+The ascents $h_i<h_{i+1}$ of a good sequence occur exactly after the valleys, so the number of ascents equals the number of $T$- and $E$-blocks, and a sequence ends with an ascent if and only if its last block is an $E$-block.
+
+\begin{theorem}\label{thm:gfxy}
+Let $U_k(m,s)$ be the number of $h\in L_k(m)$ with $s$ ascents, $G_m(x,y)=\sum_{k,s}U_k(m,s)x^ky^s$, and $b_v=1-x-v\,y\,x^3$. Then $G_{-1}=1$,
+\[
+  G_m=\frac{G_{m-1}+m\,y\,x^2}{1-x-m\,y\,x^3},\qquad\text{equivalently}\qquad
+  G_m=\frac{1}{\prod_{v=0}^{m}b_v}+y\,x^2\sum_{j=1}^{m}\frac{j}{\prod_{v=j}^{m}b_v}.
+\]
+\end{theorem}
+
+\begin{proof}
+Translate Theorem~\ref{thm:blocks}: $B_m^*$ contributes $1/(1-x-m y x^3)$ (one single block, $m$ triple blocks with one ascent each), $E_m$ contributes $m y x^2$, and the sequences with maximum at most $m-1$ contribute $G_{m-1}$.
+\end{proof}
+
+For $y=1$ this is a combinatorial proof of Theorem~\ref{thm:gf}(1). The first term counts the sequences that do not end with an ascent, and the term with index $j$ counts those that end with an $E$-block of level $j$.
+
+\begin{lemma}\label{lem:coef}
+Let $H(m,s,j)=h_s(j,j+1,\dots,m)$ be the complete homogeneous symmetric polynomial of degree $s$ evaluated at $j,\dots,m$. Then
+\[
+  [x^ny^s]\prod_{v=j}^{m}\frac{1}{1-x-v\,y\,x^3}=H(m,s,j)\binom{n+m-j-2s}{n-3s}.
+\]
+Moreover $H(m,s,0)=H(m,s,1)=\stirling{m+s}{m}$, and for $1\le j\le m$, $H(m,s,j)=\rstirling{m+s}{m}{j}$ is the number of partitions of $\{1,\dots,m+s\}$ into $m$ blocks such that $1,\dots,j$ lie in distinct blocks.
+\end{lemma}
+
+\begin{proof}
+With $u=x^3/(1-x)$ we have $1-x-v y x^3=(1-x)(1-vyu)$, hence
+\[
+  \prod_{v=j}^{m}\frac{1}{1-x-vyx^3}=\sum_{s\ge0}H(m,s,j)\,y^s\,\frac{x^{3s}}{(1-x)^{m-j+1+s}},
+\]
+and $[x^n]\,x^{3s}(1-x)^{-N}=\binom{n-3s+N-1}{N-1}$. The identification with $r$-Stirling numbers is Broder's formula \cite{Broder}.
+\end{proof}
+
+\begin{theorem}[Explicit formula]\label{thm:explicit}
+With the binomial convention of Section~\ref{sec:prelim} and $H(m,-1,j):=0$, for all $k,m\ge0$,
+\begin{align*}
+  U_k(m)&=\sum_{s\ge0}\stirling{m+s}{m}\binom{k+m-2s}{k-3s}+\sum_{j=1}^{m}j\sum_{s\ge0}H(m,s,j)\binom{k-2+m-j-2s}{k-2-3s},\\
+  U_k(m,s)&=\stirling{m+s}{m}\binom{k+m-2s}{k-3s}+\sum_{j=1}^{m}j\,H(m,s-1,j)\binom{k+m-j-2s}{k+1-3s}.
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+Extract coefficients in Theorem~\ref{thm:gfxy} using Lemma~\ref{lem:coef}.
+\end{proof}
+
+The first summand counts sequences that do not end with an ascent. For each $s$ it is a single product: such sequences with $s$ ascents correspond to a choice of the $k-3s$ positions of single blocks among $k+m-2s$ slots together with a set partition of $\{1,\dots,m+s\}$ into $m$ blocks, and there is an explicit bijection. The factor $j$ in the second summand is the choice of the valley of the final $E$-block.
+
+\begin{remark}[Other forms]
+Using the telescoping identity $jx^3Q_j=(1-x)Q_j-Q_{j+1}$ for $Q_j=\prod_{v=j}^{m}b_v^{-1}$ one obtains equivalent formulas with one positive single sum and one subtracted double sum, and an alternating form with divided differences $\frac1{t!}\nabla^t i^p|_{i=m}=h_{p-t}(m-t,\dots,m)$. If the Stirling-type numbers are expanded, all of these become triple sums. For computing a whole table the recurrence \eqref{eq:rec} is faster by two to three orders of magnitude.
+\end{remark}
+
+% =====================================================================
+\section{There is no single-family sum}\label{sec:single}
+
+The first summand of Theorem~\ref{thm:explicit} is a single sum of products of a Stirling number and a binomial coefficient. We show that $U_k(m)$ itself has no expression of this kind.
+
+\begin{theorem}\label{thm:S}
+Let $m\ge1$. There are no integers $c,d,k_0$ and complex numbers $A(s)$ $(s\in\Z)$, independent of $k$, such that
+\[
+  U_k(m)=\sum_{s}A(s)\binom{k+c-2s}{m+s+d}\qquad\text{for all }k\ge k_0 .
+\]
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1: shape of the generating function.} We use the binomial convention of Section~\ref{sec:prelim}; in particular the sum over $s$ is finite for each $k$. Let $u=x^3/(1-x)$. For $n\ge0$,
+\[
+  \sum_{k}\binom{k+c-2s}{n}x^k=\frac{x^{\,n-c+2s}}{(1-x)^{n+1}},
+\]
+and for $n=m+s+d$ this equals $x^{g}u^{s+m+d+1}$ with $g=-2(m+d)-c-3$, independent of $s$. Since the binomial vanishes unless $s\ge-m-d$, the right-hand side sums, in $\C((x))$, to $x^g\tilde A(u)$ with $\tilde A(u)=\sum_sA(s)u^{s+m+d+1}\in\C[[u]]$. It differs from the actual coefficients only for finitely many $k$, so
+\begin{equation}\label{eq:shape}
+  G_m=x^g\tilde A(u)+L(x)
+\end{equation}
+for a Laurent polynomial $L$.
+
+\emph{Step 2: $\tilde A$ is rational.} The series $x$ is a root of $T^3+uT-u$, which is Eisenstein at the prime $u$ of $\C[[u]]$; hence $[\C((u))(x):\C((u))]=3$ and $1,x,x^2$ are linearly independent over $\C((u))$. Now $\tilde A(u)=x^{-g}(G_m-L)$ lies in $\C(x)=\C(u)[x]$, so $\tilde A=\alpha+\beta x+\gamma x^2$ with $\alpha,\beta,\gamma\in\C(u)$. Comparing coordinates over $\C((u))$ gives $\beta=\gamma=0$, so $\tilde A\in\C(u)$.
+
+\emph{Step 3: residues on the fibre $u=1$.} The equation $u(x)=1$ is equivalent to $b_1(x)=1-x-x^3=0$, so the fibre over $u=1$ consists of the three roots $\xi_1,\xi_2,\xi_3$ of $b_1$. At such a root, $1-\xi=\xi^3$, hence $b_w(\xi)=(1-w)\xi^3$, $\xi\,b_1'(\xi)=2\xi-3$, $u'(\xi)=(3-2\xi)/\xi^4\ne0$, and $W_m(\xi)=W_1(\xi)=\xi(1+\xi)\ne0$. So $G_m$ has a simple pole at each $\xi_i$, and a direct computation gives
+\[
+  \Res_{x=\xi}G_m\cdot u'(\xi)=\frac{(-1)^m(1+\xi)\,\xi^{-3m-2}}{(m-1)!}.
+\]
+On the other hand $u-1$ is a local coordinate at $\xi$, and \eqref{eq:shape} gives $\Res_{x=\xi}G_m=\xi^g\Res_{u=1}\tilde A/u'(\xi)$. Hence $\theta:=(1+\xi)\xi^{-M}$ with $M=3m+2+g$ takes the same value at the three roots. Since $b_1$ is irreducible over $\Q$, the three values are Galois conjugate, so $\theta\in\Q$.
+
+\emph{Step 4: a norm.} Let $f=X^3+X-1$, the monic minimal polynomial of $\xi$. Then $\Nm(\xi)=-f(0)=1$ and $\Nm(1+\xi)=-f(-1)=3$, so $\theta^3=\Nm(\theta)=3$, which has no rational solution.
+\end{proof}
+
+For $m=0$ the statement fails ($U_k(0)=1$). The part of $U_k(m)$ counting sequences that do not end with an ascent is of the excluded form, with $A(s)=\stirling{m+s}{m}$; so it is the sequences ending with an ascent that destroy the single-family structure. They cannot be written in this form either:
+
+\begin{theorem}\label{thm:Spart}
+Let $U^{\uparrow}_k(m)$ be the number of $h\in L_k(m)$ with $h_{k-1}<h_k$. For every $m\ge2$ the conclusion of Theorem~\ref{thm:S} holds with $U_k(m)$ replaced by $U^{\uparrow}_k(m)$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:gfxy} with $y=1$, $G^{\uparrow}_m(x):=\sum_kU^{\uparrow}_k(m)x^k=(W_m-1)/P_m=x^2\sum_{j=1}^{m}j/\prod_{v=j}^{m}b_v$. Steps~1 and~2 are unchanged. The fibre $u=1/i$ is the root set of $b_i$. Let $1\le i\le m$ and let $\eta$ be a root of $b_i$. Then $1-\eta=i\eta^3$, so
+\[
+  b_v(\eta)=(i-v)\eta^3,\qquad b_i'(\eta)=\frac{2\eta-3}{\eta},\qquad u'(\eta)=\frac{3-2\eta}{i^2\eta^4}.
+\]
+Only the terms with $j\le i$ have a pole at $\eta$, and with $\tilde W_i:=1+\sum_{j=1}^{i}j\,\frac{i!}{(i-j)!}\,x^{3j+2}$ one finds
+\[
+  \Res_{x=\eta}G^{\uparrow}_m\cdot u'(\eta)=\frac{(-1)^{m-i+1}\bigl(\tilde W_i(\eta)-1\bigr)\,\eta^{-3m-3}}{(m-i)!\,i!\,i^2}.
+\]
+Take $i=2\le m$. The polynomial $b_2=1-x-2x^3$ has no rational root, so it is irreducible over $\Q$, and as in Step~3 the quantity $\theta=(\tilde W_2(\eta)-1)\eta^{-3m-3-g}$ is rational. Now $\tilde W_2-1=2x^5+4x^8$, and $2\eta^3=1-\eta$ gives $\tilde W_2(\eta)-1=\eta^5(4-2\eta)$, so $\theta=(4-2\eta)\eta^n$ with $n=2-3m-g$. In $\Q(\eta)$ we have $\Nm(\eta)=1/2$ and $\Nm(4-2\eta)=68$, so $\Nm(\theta)=17\cdot2^{2-n}$. But $\Nm(\theta)=\theta^3$ for rational $\theta$, and the $17$-adic valuation of a rational cube is divisible by $3$.
+\end{proof}
+
+For $m=1$, $G^{\uparrow}_1=x^2/b_1=x^{-1}u/(1-u)$ is of the excluded form, so the bound $m\ge2$ is sharp.
+
+\begin{remark}
+The same fibre argument excludes single sums $\sum_sA(s)\binom{k+c-\alpha s}{\beta s+d}$ for several other shapes $(\alpha,\beta)$: when $\alpha\ge1$ and $\alpha+\beta$ is even, for $(\alpha,\beta)=(3,0)$, and for $(\alpha,\beta)=(1,2),(2,3)$. For the remaining shapes with $\alpha\ge1$, $\alpha+\beta$ odd and $\alpha+\beta\le12$ we only have floating-point evidence ($(2,1)$ is the shape of Theorem~\ref{thm:S}). For every $m\ge2$, two-family sums $G_m=x^{g_1}A_1(u)+x^{g_2}A_2(u)+L(x)$ are excluded by exact computation when $|g_i+3m+3|\le6000$, but not in general. \todo{decide which of these to include, with proofs (report T2.6(i),(iii)).}
+\end{remark}
+
+\begin{remark}[Proper hypergeometric multisums]
+The partial sums $\sum_{j<m}P_j$, which are the reason for the sum over $j$ in Theorem~\ref{thm:explicit}, are not Gosper-summable in $m$ over $\Q(x)$ (formalized). Combining the counting argument of Wilf and Zeilberger \cite[Theorem~4.1]{WZ92} with Theorem~\ref{thm:nonD}(2), one can show that $U_k(m)$ is not a finite multisum of a proper hypergeometric term under natural boundary conditions. \todo{this result (report T2.7') has been checked by one reviewer only; get a second independent check before including it with a proof.}
+\end{remark}
+
+% =====================================================================
+\section{Non-D-finiteness and all quadrant recurrences}\label{sec:nonD}
+
+Let $F(x,t)=\sum_{k,m\ge0}U_k(m)x^kt^m=\sum_m G_m(x)t^m$. Recall that $f\in K[[x,t]]$ is \emph{D-finite} if all partial derivatives $\partial_x^i\partial_t^jf$ span a finite-dimensional vector space over $K(x,t)$ \cite{Lipshitz}. If $f$ is D-finite then, for each variable, $f$ satisfies a nonzero linear differential equation in that variable with polynomial coefficients.
+
+\begin{theorem}\label{thm:nonD}
+\begin{enumerate}
+\item There are no $p_0,\dots,p_r\in\C[x,t]$, not all zero, with $\sum_jp_j\,\partial_x^jF=0$. In particular $F$ is not D-finite (over any subfield of $\C$).
+\item There is no recurrence $\sum_{a\le A}\sum_{b\le B}p_{ab}(k)\,U_{k-a}(m-b)=0$ with $p_{ab}\in\C[k]$ not all zero that holds for all $k\ge k_0$, $m\ge m_0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Suppose such an equation exists. Since $\C[[x,t]]$ is a domain we may divide by a power of $t$ and assume that $p_{j0}(x):=p_j(x,0)$ are not all zero. Writing $p_j=\sum_lp_{jl}(x)t^l$, the coefficient of $t^m$ gives the identity of rational functions
+\[
+  \sum_j\sum_lp_{jl}(x)\,G_{m-l}^{(j)}(x)=0,
+\]
+where here $G_n:=0$ for $n<0$, because $F=\sum_{m\ge0}G_mt^m$ (this is not the convention $G_{-1}=1$ of Theorem~\ref{thm:gf}).
+Let $j^*=\max\{j:p_{j0}\ne0\}$. The points $x_m=1/\rho_m$ are pairwise distinct (Corollary~\ref{cor:growth}), so we can choose $m$ with $p_{j^*0}(x_m)\ne0$. At $x_m$ we have $b_v(x_m)=(m-v)x_m^3\ne0$ for $v\ne m$, so $G_{m-l}$ is holomorphic at $x_m$ for $l\ge1$, while $G_m$ has a simple pole with nonzero residue because $W_m(x_m)=1+\sum_{j=1}^{m}j\,m^{\underline j}x_m^{3j+2}>0$. Hence $G_m^{(j^*)}$ has a pole of order exactly $j^*+1$ at $x_m$, and all other terms have poles of order at most $j^*$. This is a contradiction.
+
+If $F$ were D-finite, then $F,\partial_xF,\dots,\partial_x^dF$ would be linearly dependent over $\C(x,t)$ for some $d$, and clearing denominators would give an equation excluded by~(1).
+
+(2) Multiply the recurrence by $x^kt^m$ and sum over all $k,m\ge0$ (with $U$ extended by $0$). With $\vartheta=x\partial_x$ the left-hand side becomes $\mathcal L F$ for the nonzero operator $\mathcal L=\sum_{a,b}p_{ab}(\vartheta)\,x^at^b$. Its coefficients vanish on the quadrant. For each fixed $m<m_0$ the corresponding coefficient series in $x$ is rational, because each $G_{m'}$ is rational; for each fixed $k<k_0$ the coefficient series in $t$ is rational, because $U_{k'}(m)$ is a polynomial in $m$. So $\mathcal LF=R$ is a rational function. If $R=0$ we contradict~(1). Otherwise $(R\,\partial_x-R_x)\mathcal L$ is a nonzero operator (the ring of differential operators over $\C(x,t)$ is a domain) annihilating $F$, and clearing denominators again contradicts~(1).
+\end{proof}
+
+The basic recurrence~\eqref{eq:rec} has coefficients depending only on $m$; it corresponds to a differential equation in $t$. D-finiteness would require such an equation in every direction, and part~(2) shows that the $k$-direction fails. The same statements hold for the generating function of the triangle $N$.
+
+\subsection{The ideal of quadrant recurrences}
+Let $\mathcal A=\{f:\NN^2\to\C\}$. For $p\in\C[k,m]$ let $p$ act by multiplication, $(pf)(k,m)=p(k,m)f(k,m)$, and let
+\[
+  (Xf)(k,m)=f(k-1,m),\qquad(E^{-1}f)(k,m)=f(k,m-1),
+\]
+with $f=0$ at negative indices. Let $\mathcal O\subset\operatorname{End}_\C(\mathcal A)$ be the algebra generated by $k$, $m$, $X$ and $E^{-1}$. Every element of $\mathcal O$ has a unique normal form $\sum_{(a,b)}r_{ab}(k,m)X^aE^{-b}$, so $\mathcal O$ is the Ore algebra $\C[k,m]\langle X,E^{-1}\rangle$ acting faithfully. Define the \emph{support} $\Supp(R)=\{(a,b):r_{ab}\ne0\}$ and
+\[
+  \Rel(U)=\{R\in\mathcal O:\ (RU)(k,m)=0\text{ for all }k\ge k_0,\ m\ge m_0,\text{ for some }k_0,m_0\}.
+\]
+Lemma~\ref{lem:rec} says that $L_1=1-E^{-1}-X-mX^3\in\Rel(U)$.
+
+\begin{theorem}\label{thm:ideal}
+\begin{enumerate}
+\item $\Rel(U)=\mathcal O\cdot L_1$.
+\item For $A,B,D\ge0$ let $V(A,B,D)$ be the space of $R\in\Rel(U)$ with $\Supp(R)\subseteq[0,A]\times[0,B]$ and all coefficients of total degree at most $D$. Then
+\[
+  \dim V(A,B,D)=\begin{cases}(A-2)\,B\,\dfrac{D(D+1)}{2}&\text{if }A\ge3,\ B\ge1,\ D\ge1,\\[1ex] 0&\text{otherwise.}\end{cases}
+\]
+If instead the degrees in $k$ and $m$ are bounded by $D_k$ and $D_m$, the dimension is $(A-2)B(D_k+1)D_m$ for $A\ge3$, $B\ge1$, $D_m\ge1$, and $0$ otherwise.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Since $L_1U$ vanishes for $k\ge3$, $m\ge1$, and every element of $\mathcal O$ looks back only a bounded number of steps, $\mathcal O L_1\subseteq\Rel(U)$. Conversely, using $E^{-1}=1-X-mX^3-L_1$ repeatedly, every $R\in\mathcal O$ can be written as $R=QL_1+\sum_{a\le A}r_a(k,m)X^a$. If $R\in\Rel(U)$ then the pure part $R_0=\sum_ar_aX^a$ is in $\Rel(U)$ as well. Fix $m\ge m_0$ and suppose that the $r_a(\cdot,m)$ are not all zero. Since $\sum_ar_a(k,m)U_{k-a}(m)=0$ for $k\ge k_0$,
+\[
+  S_m(x):=\sum_a r_a(\vartheta,m)\bigl(x^aG_m(x)\bigr)
+\]
+is a polynomial. Let $D=\max_a\deg_kr_a(k,m)$ and $C_m(z)=\sum_a[k^D]r_a(k,m)\,z^a$, a nonzero polynomial of degree at most $A$. At a root $z$ of $P_m$, $G_m$ has a simple pole with nonzero residue $\varrho$ (Theorem~\ref{thm:gf}), and the coefficient of $(x-z)^{-D-1}$ in $S_m$ is $(-1)^DD!\,z^{D}\varrho\,C_m(z)$. Hence $C_m$ vanishes at all $3m+1$ roots of $P_m$, which is impossible once $3m+1>A$. So $r_a(\cdot,m)=0$ for all large $m$, hence $r_a=0$, and $R=QL_1$.
+
+(2) Right multiplication by $L_1$ is injective, and it maps a normal form $q$ to $q-q\cdot E^{-1}-q\cdot X-(m-b)\,q\cdot X^3$, with the obvious meaning. If $QL_1\in V(A,B,D)$ and $Q\ne0$, comparing corner terms shows that $\Supp(Q)\subseteq[0,A-3]\times[0,B-1]$ and that the coefficients of $Q$ have degree at most $D-1$: a term of $Q$ with the largest $b$ produces a term of $QL_1$ in row $b+1$; the largest $a$ in $\Supp(Q)$ produces a term of $QL_1$ in column $a+3$; and the monomial $k^im^jX^aE^{-b}$ of $Q$ that is lexicographically largest with respect to (degree of $k^im^j$, $a$, $b$, $j$) produces, through $-(m-b)X^3$, the monomial $k^im^{j+1}X^{a+3}E^{-b}$ of $QL_1$, which no other term cancels. (For the bound on the degrees in $k$ and $m$ separately, use the corresponding weights.) Conversely every such $Q$ gives an element of $V(A,B,D)$. Counting monomials $k^im^jX^aE^{-b}$ in the small box gives the formula.
+\end{proof}
+
+Theorem~\ref{thm:ideal} was also confirmed by exact linear algebra (ranks modulo large primes and exact kernels over $\Q$) for many boxes, using the values $U_k(m)$ in the window $0\le k,m\le40$. The analogous statement for the triangle holds with $\Rel(N)=\mathcal O\cdot L_N$, $L_N=1-X-XY-(q-1)X^3(1+Y)^2$, where $Y$ shifts $q$; its proof needs an additional saturation lemma.
+
+\subsection{$U$ is not Stirling-like}
+For lattice points $p,p',p''$ write $\det(p,p',p'')=\det(p'-p,\ p''-p)$; its absolute value is twice the area of the triangle.
+
+\begin{proposition}\label{prop:triangle}
+Let $R\in\Rel(U)$, $R\ne0$. Then $\Supp(R)$ contains three points $p_0,p_1,p_2$ with $\det(p_0,p_1,p_2)\ge3$. In particular $|\Supp(R)|\ge3$, and if $\Supp(R)\subseteq\{q_0,q_1,q_2\}$ for some lattice points $q_0,q_1,q_2$, then $|\det(q_0,q_1,q_2)|\ge3$.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:ideal}, $R=QL_1$ with $Q\ne0$; let $q$ be the normal form of $Q$. The normal form of $R$ is
+\[
+  r(a,b)=q(a,b)-q(a,b-1)-q(a-1,b)-(m-b)\,q(a-3,b),
+\]
+with $q=0$ at negative indices. Let $\beta^-$ and $\beta^+$ be the smallest and the largest second coordinate in $\Supp(Q)$, let $\alpha^-$ and $\alpha^+$ be the smallest and the largest first coordinate in row $\beta^-$, and choose $(\alpha',\beta^+)\in\Supp(Q)$. Then
+\[
+  r(\alpha^-,\beta^-)=q(\alpha^-,\beta^-),\qquad r(\alpha^++3,\beta^-)=-(m-\beta^-)\,q(\alpha^+,\beta^-),\qquad r(\alpha',\beta^++1)=-q(\alpha',\beta^+),
+\]
+all nonzero because $\C[k,m]$ is a domain. These three points give $\det=(\alpha^+-\alpha^-+3)(\beta^+-\beta^-+1)\ge3$. If $\Supp(R)\subseteq\{q_0,q_1,q_2\}$, these three points are a permutation of $q_0,q_1,q_2$ (their determinant is nonzero, so they are distinct), and a permutation changes the determinant at most by a sign.
+\end{proof}
+
+The three points are the vertices of a translate of the Newton triangle of $L_1$, with vertices $(0,0),(3,0),(0,1)$, stretched in both directions. This is the combinatorial content of the fact that Newton polygons are additive under multiplication.
+
+\begin{corollary}\label{cor:stirlinglike}
+Let $T=\sum_{i=0}^{2}c_i(k,m)\,S^{(s_i,t_i)}$, where $(S^{(s,t)}f)(k,m)=f(k+s,m+t)$, the points $(s_i,t_i)\in\Z^2$ are pairwise distinct, the $c_i$ are rational functions, not all zero, and $|\det((s_0,t_0),(s_1,t_1),(s_2,t_2))|\le2$. Then $T$ does not annihilate $U$ at all points of any quadrant where its coefficients are defined. In particular $U$ satisfies no recurrence with at most two terms, and $U$ is not Stirling-like in the sense of \cite[Definition~3]{Kauers07}.
+\end{corollary}
+
+\begin{proof}
+Suppose $T$ annihilates $U$ on a quadrant, away from the poles of the $c_i$. Choose integers $c\ge\max_is_i$ and $d\ge\max_it_i$ and evaluate the relation at $(k-c,m-d)$. Write $c_i(k-c,m-d)=n_i(k,m)/\Delta(k,m)$ with polynomials $n_i$ and a common denominator $\Delta$. Then $R'=\sum_in_i\,X^{c-s_i}E^{-(d-t_i)}$ satisfies $(R'U)(k,m)=0$ on a quadrant wherever $\Delta(k,m)\ne0$, and $R=\Delta\cdot R'$ satisfies it everywhere on that quadrant. So $R\in\Rel(U)$. The points $(c-s_i,d-t_i)$ are pairwise distinct, so the normal form of $R$ has the coefficients $\Delta\,n_i$, not all zero; hence $R\ne0$, and $\Supp(R)$ is contained in the image of $\{(s_i,t_i)\}$ under $(s,t)\mapsto(c-s,d-t)$, which preserves $|\det|$. This contradicts Proposition~\ref{prop:triangle}. A Stirling-like sequence is annihilated by its three-term generator $u+v\,N^{v_1}K^{v_2}-w\,N^{w_1}K^{w_2}$, whose shift points $(0,0),(v_1,v_2),(w_1,w_2)$ are distinct with $|\det|=1$ because $(v_1,v_2),(w_1,w_2)$ form a basis of $\Z^2$.
+\end{proof}
+
+In particular, the results of \cite{Kauers07} on Stirling-like sequences do not apply to $U$ directly.
+
+\begin{remark}
+In \cite[Section~2.2]{Kauers07} sequences are functions on all of $\Z^2$, operators have rational coefficients, and the annihilator of $f$ consists of the operators $Q$ with $Q\cdot f\equiv0$; Kauers extends $S_2$ and the other classical triangles to $\Z^2$ so that their recurrences hold everywhere. If some extension of $U$ to $\Z^2$ were Stirling-like, its three-term generator would annihilate that extension at all points where its coefficients are defined, and in particular it would annihilate $U$ on a quadrant of $\NN^2$, which Corollary~\ref{cor:stirlinglike} excludes. This passage from \cite[Definition~3]{Kauers07} to Proposition~\ref{prop:triangle} is the only part of this subsection that is not formalized.
+\end{remark}
+
+% =====================================================================
+\section{The near-diagonal of the triangle}\label{sec:neardiag}
+
+For $d\ge0$ put $D(k,d)=N(k,k-d)$. The triangular recurrence (Proposition~\ref{prop:Ntri}) with $r=k-d-1$ reads
+\begin{equation}\label{eq:Drec}
+  D(k,d)=D(k-1,d)+D(k-1,d-1)+(k-d-1)\bigl[D(k-3,d-1)+2D(k-3,d-2)+D(k-3,d-3)\bigr]
+\end{equation}
+for $k\ge3$ and $k-d\ge1$, with $D(\cdot,d)=0$ for $d<0$.
+
+\begin{theorem}\label{thm:neardiag}
+For every $d\ge0$ there is a unique polynomial $p_d\in\Q[k]$ with $D(k,d)=p_d(k)$ for all $k\ge2d+2$. It has degree $2d$, leading coefficient $2/(2^dd!)$ (twice that of $\stirling{k}{k-d}$), and second coefficient $-(4d^2-3d)$ times the leading one. The defect $e_d=D(\cdot,d)-p_d$ satisfies
+\[
+  e_d(2d+1)=(-1)^{d+1}(d+1)!,\qquad e_d(2d)=(-1)^{d+1}\frac{(d+2)!}{2},
+\]
+so the threshold $2d+2$ is sharp for every $d$.
+\end{theorem}
+
+\begin{proof}
+Induct on $d$; $p_0=2$. For $k\ge2d+3$ all terms on the right of \eqref{eq:Drec} except $D(k-1,d)$ are, by induction, polynomial in $k$, so $D(k,d)-D(k-1,d)=R_d(k)$ for a polynomial $R_d$, and summing from the base point $D(2d+2,d)$ gives $p_d$. The top-degree term of $R_d$ comes only from $(k-d-1)p_{d-1}(k-3)$, so $2d\,\lc(p_d)=\lc(p_{d-1})$. Subtracting the polynomial identity from \eqref{eq:Drec} gives a recurrence for $e_d$, and evaluating it at $k=2d+2$ and $k=2d+1$ gives the defect values by induction. Comparing the coefficients of $k^{2d-2}$ gives the second coefficient.
+\end{proof}
+
+For example $p_0=2$, $p_1=k^2-k-4$ ($k\ge4$),
+\[
+  p_2=\frac{k^4-10k^3+43k^2-98k+164}{4}\ (k\ge6),\qquad
+  p_3=\frac{k^6-27k^5+331k^4-2225k^3+8560k^2-17392k+11088}{24}\ (k\ge8).
+\]
+Written in the variable $k-2d-1$, the coefficients of $p_d$ are positive for $d\le46$ but not for $d=47,\dots,57$.
+
+% =====================================================================
+\section{Formal verification}\label{sec:lean}
+
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 27 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Result & Lean name\\
+\midrule
+Proposition~\ref{prop:reduction}, \ref{prop:multichain} & \lean{a\_eq}, \lean{U\_eq\_multichains}\\
+Lemma~\ref{lem:rec} & \lean{lemma1}\\
+Proposition~\ref{prop:Ntri} & \lean{N\_tri}, \lean{N\_init}\\
+Theorem~\ref{thm:gf} & \lean{G\_rec}, \lean{isCoprime\_W\_P}, \lean{min\_order}, \lean{order\_lower\_bound}, \lean{squarefree\_Ppoly}\\
+Theorem~\ref{thm:explicit} & \lean{U\_explicit}, \lean{Us\_explicit}\\
+Theorem~\ref{thm:nonD} & \lean{not\_isDFinite\_FK}, \lean{no\_k\_only\_recurrence}\\
+Theorem~\ref{thm:ideal} & \lean{RelU\_eq}, \lean{RelU\_iff\_mem\_span}, \lean{finrank\_relU\_tot}, \lean{finrank\_relU\_gr}\\
+Proposition~\ref{prop:triangle} & \lean{relU\_support\_det}, \lean{relU\_card\_support}, \lean{not\_mem\_relU\_of\_support\_subset}\\
+Theorem~\ref{thm:neardiag} & \lean{T4\_1}, \lean{T4\_1\_threshold}\\
+Corollary~\ref{cor:columns} & \lean{T1\_9}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Several further results of the accompanying report are formalized as well, including the version of Theorem~\ref{thm:ideal} for the triangle $N$. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 2675 declarations of the development finds no other axiom.
+
+Not formalized: the block decomposition (Theorem~\ref{thm:blocks}) and the generating function of Theorem~\ref{thm:gfxy} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); the identification of $H(m,s,j)$ with $r$-Stirling numbers in Lemma~\ref{lem:coef} and the bijection described after Theorem~\ref{thm:explicit}; Theorems~\ref{thm:S} and~\ref{thm:Spart}; the asymptotic part of Corollary~\ref{cor:growth} and the remark after it; the remarks on further shapes and on proper hypergeometric multisums; and the passage from Kauers' definition to Proposition~\ref{prop:triangle} in Corollary~\ref{cor:stirlinglike}.
+
+The definitions that carry the meaning of the formal statements are: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. \todo{the authors must compare these definitions with the statements in this paper; a checklist is in the notes folder of the repository.}
+
+% =====================================================================
+\section{Open problems}\label{sec:open}
+
+\begin{enumerate}
+\item \emph{Real roots.} Let $\sum_mU_k(m)t^m=h_k(t)/(1-t)^{k+1}$. We have $\deg h_k=\lfloor2k/3\rfloor$, $h_k(0)=1$, $h_k(1)=2$ for $k\ge2$, and $U_k$ vanishes at $-1,\dots,-\lfloor(k+2)/3\rfloor$. Exact Sturm sequences show that $h_k$ has only real and simple roots for $k\le150$; this would imply that every row $N(k,\cdot)$ is log-concave. The usual interlacing approach fails: the roots of $h_k$ and $h_{k+1}$ do not interlace for $2\le k\le35$.
+\item \emph{Two-family sums.} Prove that $G_m$ is never of the form $x^{g_1}A_1(u)+x^{g_2}A_2(u)+L(x)$ for $m\ge2$; this is known for $|g_i+3m+3|\le6000$.
+\item \emph{Shorter formulas.} Find a meaningful class of formulas in which the double sum of Theorem~\ref{thm:explicit} is provably shortest.
+\item \emph{The triangle.} Find a single or short double sum for $N(k,q)$.
+\item \emph{Other zeros.} Show that $U_k$ has no negative integer zeros other than $-1,\dots,-\lfloor(k+2)/3\rfloor$ (verified for $k\le70$).
+\end{enumerate}
+
+% =====================================================================
+\section*{Statement on the use of AI tools}
+\todo{the authors must review and adapt this statement to the policy of the target venue.}
+The mathematical exploration, the proofs in this draft, the computer checks and the Lean formalization were produced with substantial assistance from a large language model (Claude, Anthropic) working under the direction of the author(s). The written proofs were cross-checked by several independent AI reviewers, and the computational statements by independent programs, in exact arithmetic except for a minority of checks that use high-precision decimal arithmetic and are labelled as numerical in the accompanying report. The proofs of the results listed in Section~\ref{sec:lean} are machine-checked; the faithfulness of the formal statements to the statements in this paper was checked by AI. The author(s) take full responsibility for the content.
+
+\section*{Data and code}
+The verification scripts (305 automated checks, mostly exact; the high-precision numerical ones are labelled), the Lean development and the notes are available at \todo{repository URL; the repository is currently private}.
+
+\begin{thebibliography}{99}
+
+\bibitem{Broder}
+A.~Z. Broder, The $r$-Stirling numbers, \emph{Discrete Math.} \textbf{49} (1984), 241--259.
+
+\bibitem{CKS09}
+F.~Chyzak, M.~Kauers, B.~Salvy, A non-holonomic systems approach to special function identities, in: \emph{Proc. ISSAC 2009}, ACM, 2009; arXiv:0904.2761. \todo{pages}
+
+\bibitem{DBK}
+R.~Dougherty-Bliss, M.~Kauers, Hardinian arrays, \emph{Electron. J. Combin.} (2024), doi:10.37236/12358; arXiv:2309.00487. \todo{volume and article number}
+
+\bibitem{DBKTZ}
+R.~Dougherty-Bliss, C.~Koutschan, N.~Ter-Saakov, D.~Zeilberger, The (symbolic and numeric) computational challenges of counting 0-1 balanced matrices, arXiv:2410.07435.
+
+\bibitem{GesselStanley}
+I.~Gessel, R.~P. Stanley, Stirling polynomials, \emph{J. Combin. Theory Ser. A} \textbf{24} (1978), 24--33.
+
+\bibitem{Kauers07}
+M.~Kauers, Summation algorithms for Stirling number identities, \emph{J. Symbolic Comput.} \textbf{42} (2007), 948--970.
+
+\bibitem{Klazar}
+M.~Klazar, Bell numbers, their relatives, and algebraic differential equations, \emph{J. Combin. Theory Ser. A} \textbf{102} (2003), 63--87.
+
+\bibitem{Krause}
+C.~Krause, Proof of formula, attachment to OEIS A202093, June 2026, \url{https://oeis.org/A202093/a202093.txt}.
+
+\bibitem{Lean4}
+L.~de~Moura, S.~Ullrich, The Lean~4 theorem prover and programming language, in: \emph{CADE-28}, Lecture Notes in Comput. Sci. 12699, Springer, 2021. \todo{pages}
+
+\bibitem{Lipshitz}
+L.~Lipshitz, D-finite power series, \emph{J. Algebra} \textbf{122} (1989), 353--373.
+
+\bibitem{Mathlib}
+The mathlib Community, The Lean mathematical library, in: \emph{Proc. CPP 2020}, ACM, 2020. \todo{pages}
+
+\bibitem{OEIS}
+OEIS Foundation Inc., The On-Line Encyclopedia of Integer Sequences, \url{https://oeis.org}; entries A207118--A207123, A038718, A084990, A326247.
+
+\bibitem{Stanley80}
+R.~P. Stanley, Differentiably finite power series, \emph{European J. Combin.} \textbf{1} (1980), 175--188.
+
+\bibitem{WZ92}
+H.~S. Wilf, D.~Zeilberger, An algorithmic proof theory for hypergeometric (ordinary and ``$q$'') multisum/integral identities, \emph{Invent. Math.} \textbf{108} (1992), 575--633.
+
+\bibitem{Zeilberger90}
+D.~Zeilberger, A holonomic systems approach to special functions identities, \emph{J. Comput. Appl. Math.} \textbf{32} (1990), 321--368.
+
+\end{thebibliography}
+
+\end{document}

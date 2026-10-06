@@ -1,0 +1,802 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/jciiOs07vjE4Lv0ca/CpqRrBP34</id>
+  <title>arXiv Query: search_query=(abs:"binary arrays" OR abs:"0-1 arrays" OR abs:"binary matrices" OR abs:"01-matrices") AND (abs:avoiding OR abs:pattern OR abs:patterns OR abs:forbidden)&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-06T23:24:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:%22binary+arrays%22+OR+(abs:%220-1+arrays%22+OR+(abs:%22binary+matrices%22+OR+abs:%2201-matrices%22)))+AND+(abs:avoiding+OR+(abs:pattern+OR+(abs:patterns+OR+abs:forbidden)))&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>37</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.02550v2</id>
+    <title>A Joint Bayesian Boolean Matrix Factorization with Application to Chromosomal Copy Number Alterations in Multiple Myeloma</title>
+    <updated>2026-08-26T16:53:43Z</updated>
+    <link href="https://arxiv.org/abs/2608.02550v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.02550v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Boolean matrix factorization provides an interpretable framework for discovering latent binary patterns in high-dimensional data, yet existing methods typically analyze a single binary matrix or factorize multiple matrices independently, failing to exploit shared latent structure across related datasets. We propose Joint Bayesian Boolean Matrix Factorization (JBBMF), a model that simultaneously factorizes two related binary matrices through a shared latent Boolean pattern matrix and dataset-specific loading matrices. To capture dependence between paired datasets, we introduce a conditional prior linking the loading matrices, allowing latent factors to persist or change across conditions while preserving a common interpretable representation. The model combines Boolean matrix factorization with a Bernoulli observation model and conjugate priors, yielding closed-form full conditional distributions and an efficient Gibbs sampler for posterior inference,uncertainty quantification for latent factors, reconstructed matrices, and noise parameters. Simulation studies demonstrate that jointly modeling related binary datasets substantially improves recovery of shared latent factors compared with independently applying standard Boolean matrix factorization to each dataset, while maintaining high reconstruction accuracy. We apply JBBMF to paired chromosomal copy number alteration profiles from multiple myeloma patients collected at diagnosis and relapse. The analysis identifies recurrent chromosomal alteration signatures shared between disease stages and quantifies the uncertainty of these findings. \texttt{JBBMF} offers a flexible and interpretable Bayesian model for the joint analysis of related binary datasets in genomics and other application domains.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-03T17:35:13Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Adolphus Wagala</name>
+    </author>
+    <author>
+      <name>Samur Mehmet</name>
+    </author>
+    <author>
+      <name>Giovanni Parmigiani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22636v2</id>
+    <title>Spectral Gap for the Binary Fixed-Margin Swap Chain</title>
+    <updated>2026-07-13T03:28:59Z</updated>
+    <link href="https://arxiv.org/abs/2606.22636v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22636v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove an explicit spectral-gap lower bound for the lazy swap chain on binary matrices with prescribed row and column sums. This chain is a standard sampler for fixed-margin null models in ecology, statistics, and network analysis. Kannan, Tetali, and Vempala (KTV) conjectured that it mixes rapidly for all feasible margins \citep{kannan1997simple}. We show that for every feasible set of margins on an $m\times n$ binary matrix, the lazy swap chain has spectral gap at least $$\binom{m}{2}^{-1}\binom{n}{2}^{-1}.$$ The bound is tight in the worst case. Thus, our result proves this KTV conjecture in a stronger quantitative form. The same spectral-gap bound also verifies the Mihail--Vazirani conjecture for fixed-margin 0/1-matrix polytopes.
+  The proof gives a new route to fixed-margin sampling that avoids stability assumptions and canonical-path constructions. We compare the swap chain with a two-row heat-bath chain and use a local-to-global spectral reduction to reduce the analysis from arbitrary $m\times n$ matrices to a three-row problem. The remaining three-row inequality is then proved by separating the scalar column-count sector from the non-scalar Johnson harmonic sectors.
+  The proof itself was generated by ChatGPT 5.5 Pro. The author's role was to pose the problem, guide the search direction, evaluate the AI-generated arguments, rewrite the proof, and take responsibility for the final form and validity of the result. The full proof of the main theorem has been formalized in Lean, and the accompanying formalization is available at the anonymous repository https://github.com/guanyangwang/ktv-swap-lean.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-21T18:46:59Z</published>
+    <arxiv:comment>add acorollary and additional references</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Weibo Fu</name>
+    </author>
+    <author>
+      <name>Qian Qin</name>
+    </author>
+    <author>
+      <name>Guanyang Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.17491v2</id>
+    <title>A Bayesian Boolean Matrix Factorization with Application to Copy Number Analysis in Cancer</title>
+    <updated>2026-06-17T02:23:03Z</updated>
+    <link href="https://arxiv.org/abs/2606.17491v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.17491v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Binary data factorization is common, but real-valued methods ignore discreteness and yield hard-to-interpret factors. Boolean Matrix Factorization (BooMF) instead decomposes a binary matrix into two lower-rank binary matrices via logical AND and OR, expressing the data as a Boolean disjunction of interpretable patterns. In cancer genomics, BooMF can reveal coordinated feature changes that may drive tumor evolution, unlike rotational or additive decompositions. Most existing BooMF methods are heuristic, greedy, sensitive to initialization, prone to local optima, and do not support principled model selection or uncertainty quantification. We introduce Bayesian Boolean Matrix Factorization (BBMF), a fully conjugate generative model with sparsity-inducing priors. It enforces Boolean constraints, yields interpretable latent factors with coherent uncertainty quantification, and admits Gibbs sampling with closed-form full conditionals. Because cancer evolution often involves widespread, near-simultaneous chromosome-number changes (e.g., whole-genome duplication followed by instability and selection), Boolean factorizations capture these patterns more naturally than additive models. Applied to arm-level copy-number alteration data in multiple myeloma, where entries indicate presence/absence of chromosomal-arm amplifications, BBMF finds a small set of interpretable bicliques linking patient subsets to recurrently co-altered chromosomal arms, providing a compact, biologically meaningful summary of tumor heterogeneity and demonstrating BBMF's utility for uncovering discrete latent structure in complex binary data.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-16T04:03:03Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Adolphus Wagala</name>
+    </author>
+    <author>
+      <name>Mehmet Samur</name>
+    </author>
+    <author>
+      <name>Giovanni Parmigiani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01942v1</id>
+    <title>Combinatorial Analysis of Dyadic and Quasi-Dyadic Codes</title>
+    <updated>2026-05-03T16:00:45Z</updated>
+    <link href="https://arxiv.org/abs/2605.01942v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01942v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum low-density parity-check (QLDPC) codes offer a promising route to scalable fault-tolerant quantum computation, but their performance under iterative decoding is strongly influenced by short-cycle structure and other harmful subgraphs in the associated Tanner graphs. This paper develops an algebraic framework for constructing and analyzing (Q)LDPC codes from dyadic and quasi-dyadic matrices-translation-invariant $2^\ell \times 2^\ell$ binary matrices specified compactly by a signature row and forming a commutative ring with recursive block structure. Leveraging this structure, we relate cycles in lifted Tanner graphs to tailless backtrackless closed walks in the protograph and derive efficient, implementable methods to enumerate and control short cycles (notably $4$-, $6$-, and $8$-cycles). We introduce dyadic-aware PEG-style construction algorithms that use forbidden sets of shifts to maximize attainable girth when possible and otherwise minimize the multiplicity of the shortest cycles at the target girth. Motivated by error-floor phenomena, we further characterize and explicitly enumerate absorbing sets in key dyadic layout boundary cases, identifying configurations that induce abundant $(a,0)$-absorbing sets. Finally, we propose CSS-oriented dyadic constructions that satisfy commutation constraints by design and demonstrate via belief-propagation simulations that reducing short-cycle multiplicity can yield substantial decoding gains even when girth cannot be increased.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-03T16:00:45Z</published>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Anthony Gómez-Fonseca</name>
+    </author>
+    <author>
+      <name>Gretchen L. Matthews</name>
+    </author>
+    <author>
+      <name>Kirsten D. Morris</name>
+    </author>
+    <author>
+      <name>Tefjol Pllaha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12274v2</id>
+    <title>Forbidden Induced Subgraph Characterization of Word-Representable Co-bipartite Graphs</title>
+    <updated>2026-04-11T10:10:09Z</updated>
+    <link href="https://arxiv.org/abs/2512.12274v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12274v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph $G$ with vertex set $V(G)$ and edge set $E(G)$ is said to be word-representable if there exists a word $w$ over the alphabet $V(G)$ such that, for any two distinct letters $x,y \in V(G)$, the letters $x$ and $y$ alternate in $w$ if and only if $(x,y) \in E(G)$. Equivalently, a graph is word-representable if and only if it admits a semi-transitive orientation, that is, an acyclic orientation in which, for every directed path $v_0 \rightarrow v_1 \rightarrow \cdots \rightarrow v_m$ with $m \ge 2$, either there is no arc between $v_0$ and $v_m$, or, for all $1 \le i &lt; j \le m$, there exists an arc from $v_i$ to $v_j$. In this work, we provide a comprehensive structural and algorithmic characterization of word-representable co-bipartite graphs, a class of graphs whose vertex set can be partitioned into two cliques.
+  This work unifies graph-theoretic and matrix-theoretic perspectives. We first establish that a co-bipartite graph is a circle graph if and only if it is a permutation graph, thereby deriving a minimal forbidden induced subgraph characterization for co-bipartite circle graphs. The central contribution then connects semi-transitivity with the circularly compatible ones property of binary matrices. In addition to the structural characterization, the paper introduces a linear-time recognition algorithm for semi-transitive co-bipartite graphs, utilizing Safe's matrix recognition framework.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-13T10:30:09Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Eshwar Srinivasan</name>
+    </author>
+    <author>
+      <name>Ramesh Hariharasubramanian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.18974v3</id>
+    <title>An Efficient Frequency-Based Approach for Maximal Square Detection in Binary Matrices</title>
+    <updated>2025-07-21T14:50:41Z</updated>
+    <link href="https://arxiv.org/abs/2503.18974v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.18974v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Detecting maximal square submatrices of ones in binary matrices is a fundamental problem with applications in computer vision and pattern recognition. While the standard dynamic programming (DP) solution achieves optimal asymptotic complexity, its practical performance suffers from repeated minimum operations and inefficient memory access patterns that degrade cache utilization. To address these limitations, we introduce a novel frequency-based algorithm that employs a greedy approach to track the columnar continuity of ones through an adaptive frequency array and a dynamic thresholding mechanism. Extensive benchmarking demonstrates that the frequency-based algorithm achieves faster performance than the standard DP in 100% of test cases with an average speedup of 3.32x, a maximum speedup of 4.60x, and a minimum speedup of 2.31x across matrices up to 5000x5000 with densities from 0.1 to 0.9. The algorithm's average speedup exceeds 2.5x for all densities and rises to over 3.5x for densities of 0.7 and higher across all matrix sizes. These results demonstrate that the frequency-based approach is a superior alternative to standard DP and opens new possibilities for efficient matrix analysis in performance-critical applications.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-22T06:14:33Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Swastik Bhandari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07435v2</id>
+    <title>The (Symbolic and Numeric) Computational Challenges of Counting 0-1 Balanced Matrices</title>
+    <updated>2025-02-06T16:13:47Z</updated>
+    <link href="https://arxiv.org/abs/2410.07435v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07435v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A chessboard has the property that every row and every column has as many white squares as black squares. In this mostly methodological note, we address the problem of counting such rectangular arrays with a fixed (numeric) number of rows, but an arbitrary (symbolic) number of columns. We first address the ``vanilla" problem where there are no restrictions, and then go on to discuss the still-more-challenging problem of counting such binary arrays that are not permitted to contain a specified (finite) set of horizontal patterns, and a specified set of vertical patterns. While we can rigorously prove that each such sequence satisfies some linear recurrence equation with polynomial coefficients, actually finding these recurrences poses major {\it symbolic}-computational challenges, that we can only meet in some small cases. In fact, just generating as many as possible terms of these sequences is a big {\it numeric}-computational challenge. This was tackled by computer whiz Ron H. Hardin, who contributed several such sequences, and computed quite a few terms of each. We extend Hardin's sequences quite considerably. We also talk about the much easier problem of counting such restricted arrays without balance conditions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T21:08:04Z</published>
+    <arxiv:comment>Expanded computations and added references</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.12169v2</id>
+    <title>ReorderBench: A Benchmark for Matrix Reordering</title>
+    <updated>2025-04-10T07:55:15Z</updated>
+    <link href="https://arxiv.org/abs/2408.12169v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.12169v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Matrix reordering permutes the rows and columns of a matrix to reveal meaningful visual patterns, such as blocks that represent clusters. A comprehensive collection of matrices, along with a scoring method for measuring the quality of visual patterns in these matrices, contributes to building a benchmark. This benchmark is essential for selecting or designing suitable reordering algorithms for specific tasks. In this paper, we build a matrix reordering benchmark, ReorderBench, with the goal of evaluating and improving matrix reordering techniques. This is achieved by generating a large set of representative and diverse matrices and scoring these matrices with a convolution- and entropy-based method. Our benchmark contains 2,835,000 binary matrices and 5,670,000 continuous matrices, each featuring one of four visual patterns: block, off-diagonal block, star, or band. We demonstrate the usefulness of ReorderBench through three main applications in matrix reordering: 1) evaluating different reordering algorithms, 2) creating a unified scoring model to measure the visual patterns in any matrix, and 3) developing a deep learning model for matrix reordering.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-22T07:31:46Z</published>
+    <arxiv:comment>Submitted to IEEE TVCG</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jiangning Zhu</name>
+    </author>
+    <author>
+      <name>Zheng Wang</name>
+    </author>
+    <author>
+      <name>Zhiyang Shen</name>
+    </author>
+    <author>
+      <name>Lai Wei</name>
+    </author>
+    <author>
+      <name>Fengyuan Tian</name>
+    </author>
+    <author>
+      <name>Mengchen Liu</name>
+    </author>
+    <author>
+      <name>Shixia Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.08342v2</id>
+    <title>Sparse Linear Regression with Constraints: A Flexible Entropy-based Framework</title>
+    <updated>2023-11-17T20:38:36Z</updated>
+    <link href="https://arxiv.org/abs/2311.08342v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.08342v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a new approach to solve the sparse linear regression problem, i.e., to determine a k-sparse vector w in R^d that minimizes the cost ||y - Aw||^2_2. In contrast to the existing methods, our proposed approach splits this k-sparse vector into two parts -- (a) a column stochastic binary matrix V, and (b) a vector x in R^k. Here, the binary matrix V encodes the location of the k non-zero entries in w. Equivalently, it encodes the subset of k columns in the matrix A that map w to y. We demonstrate that this enables modeling several non-trivial application-specific structural constraints on w as constraints on V. The vector x comprises of the actual non-zero values in w. We use Maximum Entropy Principle (MEP) to solve the resulting optimization problem. In particular, we ascribe a probability distribution to the set of all feasible binary matrices V, and iteratively determine this distribution and the vector x such that the associated Shannon entropy gets minimized, and the regression cost attains a pre-specified value. The resulting algorithm employs homotopy from the convex entropy function to the non-convex cost function to avoid poor local minimum. We demonstrate the efficacy and flexibility of our proposed approach in incorporating a variety of practical constraints, that are otherwise difficult to model using the existing benchmark methods.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-14T17:39:27Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Amber Srivastava</name>
+    </author>
+    <author>
+      <name>Alisina Bayati</name>
+    </author>
+    <author>
+      <name>Srinivasa Salapaka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.06518v4</id>
+    <title>Pattern Avoidance in Weak Ascent Sequences</title>
+    <updated>2024-07-15T15:19:49Z</updated>
+    <link href="https://arxiv.org/abs/2309.06518v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.06518v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study pattern avoidance in weak ascent sequences, giving some results for patterns of length 3. This is an analogous study to one given by Duncan and Steingrímsson (2011) for ascent sequences. More precisely, we provide systematically the generating functions for the number of weak ascent sequences avoiding the patterns $001, 011, 012, 021$, and $102$. Additionally, we establish bijective connections between pattern-avoiding weak ascent sequences and other combinatorial objects, such as compositions, upper triangular 01-matrices, and plane trees.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-12T18:50:15Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 26:1, Permutation Patterns 2023, Special issues (August 21, 2024) dmtcs:12273</arxiv:journal_ref>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Toufik Mansour</name>
+    </author>
+    <author>
+      <name>José L. Ramírez</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.12273</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.12273" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.04089v1</id>
+    <title>On Minimally Non-Firm Binary Matrices</title>
+    <updated>2022-06-08T18:00:25Z</updated>
+    <link href="https://arxiv.org/abs/2206.04089v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.04089v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a binary matrix X, the Boolean rank br(X) is the smallest integer k for which X equals the Boolean sum of k rank-1 binary matrices, and the isolation number i(X) is the maximum number of 1s no two of which are in a same row, column and a 2x2 submatrix of all 1s. In this paper, we continue Lubiw's study of firm matrices. X is said to be firm if i(X)=br(X) and this equality holds for all its submatrices. We show that the stronger concept of superfirmness of X is equivalent to having no odd holes in the rectangle cover graph of X, the graph in which br(X) and i(X) translate to the clique cover and the independence number, respectively. A binary matrix is minimally non-firm if it is not firm but all of its proper submatrices are. We introduce two matrix operations that lead to generalised binary matrices and use these operations to derive four infinite classes of minimally non-firm matrices. We hope that our work may pave the way towards a complete characterisation of firm matrices via forbidden submatrices.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-08T18:00:25Z</published>
+    <arxiv:comment>ISCO 2022</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Reka Agnes Kovacs</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.03159v2</id>
+    <title>Weak ascent sequences and related combinatorial structures</title>
+    <updated>2022-10-10T07:21:52Z</updated>
+    <link href="https://arxiv.org/abs/2111.03159v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.03159v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we introduce {\em weak ascent sequences}, a class of number sequences that properly contains ascent sequences. We show how these sequences uniquely encode each of the following objects: permutations avoiding a particular length-4 bivincular pattern; upper-triangular binary matrices that satisfy a column-adjacency rule; factorial posets that are weakly (3+1)-free. We also show how weak ascent sequences are related to a class of pattern avoiding inversion sequences that has been a topic of recent research by Auli and Elizalde. Finally, we consider the problem of enumerating these new sequences and give a closed form expression for the number of weak ascent sequences having a prescribed length and number of weak ascents.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-04T21:04:00Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.13434v2</id>
+    <title>Binary Matrix Factorisation and Completion via Integer Programming</title>
+    <updated>2021-08-03T20:22:47Z</updated>
+    <link href="https://arxiv.org/abs/2106.13434v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.13434v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Binary matrix factorisation is an essential tool for identifying discrete patterns in binary data. In this paper we consider the rank-k binary matrix factorisation problem (k-BMF) under Boolean arithmetic: we are given an n x m binary matrix X with possibly missing entries and need to find two binary matrices A and B of dimension n x k and k x m respectively, which minimise the distance between X and the Boolean product of A and B in the squared Frobenius distance. We present a compact and two exponential size integer programs (IPs) for k-BMF and show that the compact IP has a weak LP relaxation, while the exponential size IPs have a stronger equivalent LP relaxation. We introduce a new objective function, which differs from the traditional squared Frobenius objective in attributing a weight to zero entries of the input matrix that is proportional to the number of times the zero is erroneously covered in a rank-k factorisation. For one of the exponential size IPs we describe a computational approach based on column generation. Experimental results on synthetic and real word datasets suggest that our integer programming approach is competitive against available methods for k-BMF and provides accurate low-error factorisations.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-25T05:17:51Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Reka A. Kovacs</name>
+    </author>
+    <author>
+      <name>Oktay Gunluk</name>
+    </author>
+    <author>
+      <name>Raphael A. Hauser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.04637v4</id>
+    <title>New Quantum-Safe Versions of Decisional Diffie-Hellman Assumption in the General Linear Group and Their Applications: Two New Key-agreements</title>
+    <updated>2022-08-04T01:08:12Z</updated>
+    <link href="https://arxiv.org/abs/2104.04637v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.04637v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffie-Hellman key-agreement and RSA cryptosystem are widely used to provide security in internet protocols. But both of the two algorithms are totally breakable using Shor's algorithms. This paper proposes two connected matrix-based key-agreements: (a) Diffie-Hellman Key-Agreement with Errors and (b) RSA-Resemble Key-agreement, which, respectively, bear resemblance to Diffie-Hellman key-agreement and RSA cryptosystem and thereby they gain some of the well-known security characteristics of these two algorithms, but without being subject to Shor's algorithms attacks. That is, the new schemes avoid the direct reliance on the hardness of Discrete Logarithm and Integer Factoring problems which are solvable by Shor's algorithms. The paper introduces a new family of quantum-safe hardness assumptions which consist of taking noisy powers of binary matrices. The new assumptions are derived from Decisional Diffie-Hellman (DDH) assumption in the general linear group GL(n,2) by introducing random noise into a quadruple similar to that which define the DDH assumption in GL(n,2(. Thereby we make certain that the resulting quadruple is secure against Shor's algorithm attack and any other DLP-based attack. Thence, the resulting assumptions, are used as basis for the two key-agreement schemes. We prove that these key-agreements are secure -- in key indistinguishability notion -- under the new assumptions.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-09T23:15:23Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Abdelhaliem Babiker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.15562v6</id>
+    <title>Down-step statistics in generalized Dyck paths</title>
+    <updated>2022-05-13T12:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2007.15562v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.15562v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of down-steps between pairs of up-steps in $k_t$-Dyck paths, a generalization of Dyck paths consisting of steps $\{(1, k), (1, -1)\}$ such that the path stays (weakly) above the line $y=-t$, is studied. Results are proved bijectively and by means of generating functions, and lead to several interesting identities as well as links to other combinatorial structures. In particular, there is a connection between $k_t$-Dyck paths and perforation patterns for punctured convolutional codes (binary matrices) used in coding theory. Surprisingly, upon restriction to usual Dyck paths this yields a new combinatorial interpretation of Catalan numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-30T16:11:27Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 24, no. 1, Combinatorics (May 24, 2022) dmtcs:7163</arxiv:journal_ref>
+    <author>
+      <name>Andrei Asinowski</name>
+    </author>
+    <author>
+      <name>Benjamin Hackl</name>
+    </author>
+    <author>
+      <name>Sarah J. Selkirk</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.7163</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.7163" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.16180v1</id>
+    <title>Binary Random Projections with Controllable Sparsity Patterns</title>
+    <updated>2020-06-29T16:45:26Z</updated>
+    <link href="https://arxiv.org/abs/2006.16180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.16180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Random projection is often used to project higher-dimensional vectors onto a lower-dimensional space, while approximately preserving their pairwise distances. It has emerged as a powerful tool in various data processing tasks and has attracted considerable research interest. Partly motivated by the recent discoveries in neuroscience, in this paper we study the problem of random projection using binary matrices with controllable sparsity patterns. Specifically, we proposed two sparse binary projection models that work on general data vectors. Compared with the conventional random projection models with dense projection matrices, our proposed models enjoy significant computational advantages due to their sparsity structure, as well as improved accuracies in empirical evaluations.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-29T16:45:26Z</published>
+    <arxiv:comment>19 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wenye Li</name>
+    </author>
+    <author>
+      <name>Shuzhong Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.05878v1</id>
+    <title>Variable dimension non-overlapping matrices</title>
+    <updated>2020-06-10T15:04:16Z</updated>
+    <link href="https://arxiv.org/abs/2006.05878v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.05878v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Since some years, non-overlapping sets of strings (also called cross-bifix-free sets) have had an increasing interest in the frame of the researches about Theory of Codes. Recently some non-overlapping sets of strings with variable length were introduced. Moreover, the notion of non-overlapping strings has been naturally extended to the two dimensional case leading to several definitions of non-overlapping sets of matrices (or pictures). Starting from these results, in this paper we introduce non-overlapping sets of binary matrices having variable dimension. Indeed, we use non-overlapping variable length strings as rows of the matrices and imposing the avoidance of two consecutive patterns of length k, we get the desired sets of non-ovelapping matrices with variable dimension.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-10T15:04:16Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Elena Barcucci</name>
+    </author>
+    <author>
+      <name>Antonio Bernini</name>
+    </author>
+    <author>
+      <name>Renzo Pinzani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.11622v1</id>
+    <title>Revisiting compact RDF stores based on k2-trees</title>
+    <updated>2020-02-26T17:03:28Z</updated>
+    <link href="https://arxiv.org/abs/2002.11622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.11622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new compact representation to efficiently store and query large RDF datasets in main memory. Our proposal, called BMatrix, is based on the k2-tree, a data structure devised to represent binary matrices in a compressed way, and aims at improving the results of previous state-of-the-art alternatives, especially in datasets with a relatively large number of predicates. We introduce our technique, together with some improvements on the basic k2-tree that can be applied to our solution in order to boost compression. Experimental results in the flagship RDF dataset DBPedia show that our proposal achieves better compression than existing alternatives, while yielding competitive query times, particularly in the most frequent triple patterns and in queries with unbound predicate, in which we outperform existing solutions.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-26T17:03:28Z</published>
+    <arxiv:comment>This research has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie Actions H2020-MSCA-RISE-2015 BIRDS GA No. 690941</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Nieves R. Brisaboa</name>
+    </author>
+    <author>
+      <name>Ana Cerdeira-Pena</name>
+    </author>
+    <author>
+      <name>Guillermo de Bernardo</name>
+    </author>
+    <author>
+      <name>Antonio Fariña</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.04251v2</id>
+    <title>A divide-and-conquer algorithm for binary matrix completion</title>
+    <updated>2020-06-19T21:40:10Z</updated>
+    <link href="https://arxiv.org/abs/1907.04251v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.04251v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose an algorithm for low rank matrix completion for matrices with binary entries which obtains explicit binary factors. Our algorithm, which we call TBMC (\emph{Tiling for Binary Matrix Completion}), gives interpretable output in the form of binary factors which represent a decomposition of the matrix into tiles. Our approach is inspired by a popular algorithm from the data mining community called PROXIMUS: it adopts the same recursive partitioning approach while extending to missing data. The algorithm relies upon rank-one approximations of incomplete binary matrices, and we propose a linear programming (LP) approach for solving this subproblem. We also prove a $2$-approximation result for the LP approach which holds for any level of subsampling and for any subsampling pattern. Our numerical experiments show that TBMC outperforms existing methods on recommender systems arising in the context of real datasets.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-09T15:33:06Z</published>
+    <arxiv:comment>14 pages,4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>Linear Algebra and its Applications, Volume 601, 2020, Pages 113-133</arxiv:journal_ref>
+    <author>
+      <name>Melanie Beckerleg</name>
+    </author>
+    <author>
+      <name>Andrew Thompson</name>
+    </author>
+    <arxiv:doi>10.1016/j.laa.2020.04.017</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.laa.2020.04.017" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.00697v1</id>
+    <title>The Trustworthy Pal: Controlling the False Discovery Rate in Boolean Matrix Factorization</title>
+    <updated>2019-07-01T12:23:49Z</updated>
+    <link href="https://arxiv.org/abs/1907.00697v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.00697v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Boolean matrix factorization (BMF) is a popular and powerful technique for inferring knowledge from data. The mining result is the Boolean product of two matrices, approximating the input dataset. The Boolean product is a disjunction of rank-1 binary matrices, each describing a feature-relation, called pattern, for a group of samples. Yet, there are no guarantees that any of the returned patterns do not actually arise from noise, i.e., are false discoveries. In this paper, we propose and discuss the usage of the false discovery rate in the unsupervised BMF setting. We prove two bounds on the probability that a found pattern is constituted of random Bernoulli-distributed noise. Each bound exploits a specific property of the factorization which minimizes the approximation error---yielding new insights on the minimizers of Boolean matrix factorization. This leads to improved BMF algorithms by replacing heuristic rank selection techniques with a theoretically well-based approach. Our empirical demonstration shows that both bounds deliver excellent results in various practical settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-01T12:23:49Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sibylle Hess</name>
+    </author>
+    <author>
+      <name>Nico Piatkowski</name>
+    </author>
+    <author>
+      <name>Katharina Morik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.11390v1</id>
+    <title>Joint Estimation of DOA and Frequency with Sub-Nyquist Sampling in a Binary Array Radar System</title>
+    <updated>2018-10-26T15:35:48Z</updated>
+    <link href="https://arxiv.org/abs/1810.11390v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.11390v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, several array radar structures combined with sub-Nyquist techniques and corresponding algorithms have been extensively studied. Carrier frequency and direction-of-arrival (DOA) estimations of multiple narrow-band signals received by array radars at the sub-Nyquist rates are considered in this paper. We propose a new sub-Nyquist array radar architecture (a binary array radar separately connected to a multi-coset structure with M branches) and an efficient joint estimation algorithm which can match frequencies up with corresponding DOAs. We further come up with a delay pattern augmenting method, by which the capability of the number of identifiable signals can increase from M-1 to Q-1 (Q is extended degrees of freedom). We further conclude that the minimum total sampling rate 2MB is sufficient to identify $ {K \leq Q-1}$ narrow-band signals of maximum bandwidth $B$ inside. The effectiveness and performance of the estimation algorithm together with the augmenting method have been verified by simulations.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-26T15:35:48Z</published>
+    <arxiv:comment>6 pages, 2 figures, conference</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Zhan Zhang</name>
+    </author>
+    <author>
+      <name>Ping Wei</name>
+    </author>
+    <author>
+      <name>Lijuan Deng</name>
+    </author>
+    <author>
+      <name>Huaguo Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1803.09003v1</id>
+    <title>On the structure of matrices avoiding interval-minor patterns</title>
+    <updated>2018-03-23T22:41:46Z</updated>
+    <link href="https://arxiv.org/abs/1803.09003v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.09003v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the structure of 01-matrices avoiding a pattern P as an interval minor. We focus on critical P-avoiders, i.e., on the P-avoiding matrices in which changing a 0-entry to a 1-entry always creates a copy of P as an interval minor.
+  Let Q be the 3x3 permutation matrix corresponding to the permutation 231. As our main result, we show that for every pattern P that has no rotated copy of Q as interval minor, there is a constant c(P) such that any row and any column in any critical P-avoiding matrix can be partitioned into at most c(P) intervals, each consisting entirely of 0-entries or entirely of 1-entries. In contrast, for any pattern P that contains a rotated copy of Q, we construct critical P-avoiding matrices of arbitrary size $n\times n$ having a row with $Ω(n)$ alternating intervals of 0-entries and 1-entries.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-23T22:41:46Z</published>
+    <arxiv:comment>29 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Vít Jelínek</name>
+    </author>
+    <author>
+      <name>Stanislav Kučera</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1803.04547v2</id>
+    <title>Analysis of spectral clustering algorithms for community detection: the general bipartite setting</title>
+    <updated>2018-12-22T23:24:58Z</updated>
+    <link href="https://arxiv.org/abs/1803.04547v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.04547v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider spectral clustering algorithms for community detection under a general bipartite stochastic block model (SBM). A modern spectral clustering algorithm consists of three steps: (1) regularization of an appropriate adjacency or Laplacian matrix (2) a form of spectral truncation and (3) a k-means type algorithm in the reduced spectral domain. We focus on the adjacency-based spectral clustering and for the first step, propose a new data-driven regularization that can restore the concentration of the adjacency matrix even for the sparse networks. This result is based on recent work on regularization of random binary matrices, but avoids using unknown population level parameters, and instead estimates the necessary quantities from the data. We also propose and study a novel variation of the spectral truncation step and show how this variation changes the nature of the misclassification rate in a general SBM. We then show how the consistency results can be extended to models beyond SBMs, such as inhomogeneous random graph models with approximate clusters, including a graphon clustering problem, as well as general sub-Gaussian biclustering. A theme of the paper is providing a better understanding of the analysis of spectral methods for community detection and establishing consistency results, under fairly general clustering models and for a wide regime of degree growths, including sparse cases where the average expected degree grows arbitrarily slowly.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-12T21:50:58Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Zhixin Zhou</name>
+    </author>
+    <author>
+      <name>Arash A. Amini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.07290v3</id>
+    <title>Comparing the Switch and Curveball Markov Chains for Sampling Binary Matrices with Fixed Marginals</title>
+    <updated>2017-10-18T15:01:37Z</updated>
+    <link href="https://arxiv.org/abs/1709.07290v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.07290v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Curveball algorithm is a variation on well-known switch-based Markov chain approaches for uniformly sampling binary matrices with fixed row and column sums. Instead of a switch, the Curveball algorithm performs a so-called binomial trade in every iteration of the algorithm. Intuitively, this could lead to a better convergence rate for reaching the stationary (uniform) distribution in certain cases. Some experimental evidence for this has been given in the literature. In this note we give a spectral gap comparison between two switch-based chains and the Curveball chain. In particular, this comparison allows us to conclude that the Curveball Markov chain is rapidly mixing whenever one of the two switch chains is rapidly mixing. Our analysis directly extends to the case of sampling binary matrices with forbidden entries (under the assumption of irreducibility). This in particular captures the case of sampling simple directed graphs with given degrees. As a by-product of our analysis, we show that the switch Markov chain of the Kannan-Tetali-Vempala conjecture only has non-negative eigenvalues if the sampled binary matrices have at least three columns. This shows that the Markov chain does not have to be made lazy, which is of independent interest. We also obtain an improved bound on the smallest eigenvalue for the switch Markov chain studied by Greenhill for uniformly sampling simple directed regular graphs.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-21T12:56:17Z</published>
+    <arxiv:comment>New revised version. One erroneous claim has been replaced by weaker claim (see footnote 7 on page 12)</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Corrie Jacobien Carstens</name>
+    </author>
+    <author>
+      <name>Pieter Kleer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1708.07352v1</id>
+    <title>Structural Identifiability of Cyclic Graphical Models of Biological Networks with Latent Variables</title>
+    <updated>2017-08-24T10:55:55Z</updated>
+    <link href="https://arxiv.org/abs/1708.07352v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1708.07352v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An efficient structural identifiability analysis algorithm is developed in this study for a broad range of network structures. The proposed method adopts the Wright's path coefficient method to generate identifiability equations in forms of symbolic polynomials, and then converts these symbolic equations to binary matrices (called identifiability matrix). Several matrix operations are introduced for identifiability matrix reduction with system equivalency maintained. Based on the reduced identifiability matrices, the structural identifiability of each parameter is determined. A number of benchmark models are used to verify the validity of the proposed approach. Finally, the network module for influenza A virus replication is employed as a real example to illustrate the application of the proposed approach in practice. The proposed approach can deal with cyclic networks with latent variables. The key advantage is that it intentionally avoids symbolic computation and is thus highly efficient. Also, this method is capable of determining the identifiability of each single parameter and is thus of higher resolution in comparison with many existing approaches. Overall, this study provides a basis for systematic examination and refinement of graphical models of biological networks from the identifiability point of view, and it has a significant potential to be extended to more complex network structures or high-dimensional systems.</summary>
+    <category term="q-bio.MN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-08-24T10:55:55Z</published>
+    <arxiv:primary_category term="q-bio.MN"/>
+    <author>
+      <name>Yulin Wang</name>
+    </author>
+    <author>
+      <name>Na Lu</name>
+    </author>
+    <author>
+      <name>Hongyu Miao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.06166v2</id>
+    <title>Bayesian Boolean Matrix Factorisation</title>
+    <updated>2017-02-25T14:17:44Z</updated>
+    <link href="https://arxiv.org/abs/1702.06166v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.06166v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Boolean matrix factorisation aims to decompose a binary data matrix into an approximate Boolean product of two low rank, binary matrices: one containing meaningful patterns, the other quantifying how the observations can be expressed as a combination of these patterns. We introduce the OrMachine, a probabilistic generative model for Boolean matrix factorisation and derive a Metropolised Gibbs sampler that facilitates efficient parallel posterior inference. On real world and simulated data, our method outperforms all currently existing approaches for Boolean matrix factorisation and completion. This is the first method to provide full posterior inference for Boolean Matrix factorisation which is relevant in applications, e.g. for controlling false positive rates in collaborative filtering and, crucially, improves the interpretability of the inferred patterns. The proposed algorithm scales to large datasets as we demonstrate by analysing single cell gene expression data in 1.3 million mouse brain cells across 11 thousand genes on commodity hardware.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-20T20:31:39Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Tammo Rukat</name>
+    </author>
+    <author>
+      <name>Chris C. Holmes</name>
+    </author>
+    <author>
+      <name>Michalis K. Titsias</name>
+    </author>
+    <author>
+      <name>Christopher Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.06121v1</id>
+    <title>Reconstructing binary matrices under window constraints from their row and column sums</title>
+    <updated>2017-02-20T14:51:14Z</updated>
+    <link href="https://arxiv.org/abs/1702.06121v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.06121v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The present paper deals with the discrete inverse problem of reconstructing binary matrices from their row and column sums under additional constraints on the number and pattern of entries in specified minors. While the classical consistency and reconstruction problems for two directions in discrete tomography can be solved in polynomial time, it turns out that these window constraints cause various unexpected complexity jumps back and forth from polynomial-time solvability to $\mathbb{N}\mathbb{P}$-hardness.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-20T14:51:14Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Andreas Alpers</name>
+    </author>
+    <author>
+      <name>Peter Gritzmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1605.02038v2</id>
+    <title>Markov Chain methods for the bipartite Boolean quadratic programming problem</title>
+    <updated>2016-10-24T18:44:11Z</updated>
+    <link href="https://arxiv.org/abs/1605.02038v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1605.02038v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Bipartite Boolean Quadratic Programming Problem (BBQP) which is an extension of the well known Boolean Quadratic Programming Problem (BQP). Applications of the BBQP include mining discrete patterns from binary data, approximating matrices by rank-one binary matrices, computing the cut-norm of a matrix, and solving optimisation problems such as maximum weight biclique, bipartite maximum weight cut, maximum weight induced sub-graph of a bipartite graph, etc. For the BBQP, we first present several algorithmic components, specifically, hill climbers and mutations, and then show how to combine them in a high-performance metaheuristic. Instead of hand-tuning a standard metaheuristic to test the efficiency of the hybrid of the components, we chose to use an automated generation of a multi-component metaheuristic to save human time, and also improve objectivity in the analysis and comparisons of components. For this we designed a new metaheuristic schema which we call Conditional Markov Chain Search (CMCS). We show that CMCS is flexible enough to model several standard metaheuristics; this flexibility is controlled by multiple numeric parameters, and so is convenient for automated generation. We study the configurations revealed by our approach and show that the best of them outperforms the previous state-of-the-art BBQP algorithm by several orders of magnitude. In our experiments we use benchmark instances introduced in the preliminary version of this paper and described here, which have already become the de facto standard in the BBQP literature.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-05-06T19:06:56Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Daniel Karapetyan</name>
+    </author>
+    <author>
+      <name>Abraham P. Punnen</name>
+    </author>
+    <author>
+      <name>Andrew J. Parkes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.01699v2</id>
+    <title>Low Rank Approximation of Binary Matrices: Column Subset Selection and Generalizations</title>
+    <updated>2017-04-20T14:47:54Z</updated>
+    <link href="https://arxiv.org/abs/1511.01699v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.01699v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Low rank matrix approximation is an important tool in machine learning. Given a data matrix, low rank approximation helps to find factors, patterns and provides concise representations for the data. Research on low rank approximation usually focus on real matrices. However, in many applications data are binary (categorical) rather than continuous. This leads to the problem of low rank approximation of binary matrix. Here we are given a $d \times n$ binary matrix $A$ and a small integer $k$. The goal is to find two binary matrices $U$ and $V$ of sizes $d \times k$ and $k \times n$ respectively, so that the Frobenius norm of $A - U V$ is minimized. There are two models of this problem, depending on the definition of the dot product of binary vectors: The $\mathrm{GF}(2)$ model and the Boolean semiring model. Unlike low rank approximation of real matrix which can be efficiently solved by Singular Value Decomposition, approximation of binary matrix is $NP$-hard even for $k=1$.
+  In this paper, we consider the problem of Column Subset Selection (CSS), in which one low rank matrix must be formed by $k$ columns of the data matrix. We characterize the approximation ratio of CSS for binary matrices. For $GF(2)$ model, we show the approximation ratio of CSS is bounded by $\frac{k}{2}+1+\frac{k}{2(2^k-1)}$ and this bound is asymptotically tight. For Boolean model, it turns out that CSS is no longer sufficient to obtain a bound. We then develop a Generalized CSS (GCSS) procedure in which the columns of one low rank matrix are generated from Boolean formulas operating bitwise on columns of the data matrix. We show the approximation ratio of GCSS is bounded by $2^{k-1}+1$, and the exponential dependency on $k$ is inherent.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-05T11:26:52Z</published>
+    <arxiv:comment>38 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Chen Dan</name>
+    </author>
+    <author>
+      <name>Kristoffer Arnsfelt Hansen</name>
+    </author>
+    <author>
+      <name>He Jiang</name>
+    </author>
+    <author>
+      <name>Liwei Wang</name>
+    </author>
+    <author>
+      <name>Yuchen Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.04065v2</id>
+    <title>Locating Patterns in the De Bruijn Torus</title>
+    <updated>2015-11-23T15:33:06Z</updated>
+    <link href="https://arxiv.org/abs/1505.04065v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.04065v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The de Bruijn torus (or grid) problem looks to find an $n$-by-$m$ binary matrix in which every possible $j$-by-$k$ submatrix appears exactly once. The existence and construction of these binary matrices was determined in the 70's, with generalizations to $d$-ary matrices in the 80's and 90's. However, these constructions lacked efficient decoding methods, leading to new constructions in the early 2000's. The new constructions develop cross-shaped patterns (rather than rectangular), and rely on a concept known as a half de Bruijn sequence. In this paper, we further advance this construction beyond cross-shape patterns. Furthermore, we show results for universal cycle grids, based off of the one-dimensional universal cycles introduced by Chung, Diaconis, and Graham, in the 90's. These grids have many applications such as robotic vision, location detection, and projective touch-screen displays.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-15T13:55:06Z</published>
+    <arxiv:comment>16 pages, 4 figures; to appear in Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Victoria Horan</name>
+    </author>
+    <author>
+      <name>Brett Stevens</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.0224v1</id>
+    <title>Linear-Time Algorithms for Finding Tucker Submatrices and Lekkerkerker-Boland Subgraphs</title>
+    <updated>2013-12-31T21:56:04Z</updated>
+    <link href="https://arxiv.org/abs/1401.0224v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.0224v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lekkerkerker and Boland characterized the minimal forbidden induced subgraphs for the class of interval graphs. We give a linear-time algorithm to find one in any graph that is not an interval graph. Tucker characterized the minimal forbidden submatrices of binary matrices that do not have the consecutive-ones property. We give a linear-time algorithm to find one in any binary matrix that does not have the consecutive-ones property.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-31T21:56:04Z</published>
+    <arxiv:comment>A preliminary version of this work appeared in WG13: 39th International Workshop on Graph-Theoretic Concepts in Computer Science</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Nathan Lindzey</name>
+    </author>
+    <author>
+      <name>Ross M. McConnell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1312.0194v1</id>
+    <title>Some Combinatorial Problems on Binary Matrices in Programming Courses</title>
+    <updated>2013-12-01T09:05:14Z</updated>
+    <link href="https://arxiv.org/abs/1312.0194v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1312.0194v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The study proves the existence of an algorithm to receive all elements of a class of binary matrices without obtaining redundant elements, e. g. without obtaining binary matrices that do not belong to the class. This makes it possible to avoid checking whether each of the objects received possesses the necessary properties. This significantly improves the efficiency of the algorithm in terms of the criterion of time. Certain useful educational effects related to the analysis of such problems in programming classes are also pointed out.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-01T09:05:14Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <arxiv:journal_ref>Informational Technologies in Education, 2012, 12, 39-43</arxiv:journal_ref>
+    <author>
+      <name>Krasimir Yordzhev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1310.4954v2</id>
+    <title>Compressed Vertical Partitioning for Full-In-Memory RDF Management</title>
+    <updated>2013-10-21T09:00:47Z</updated>
+    <link href="https://arxiv.org/abs/1310.4954v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1310.4954v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Web of Data has been gaining momentum and this leads to increasingly publish more semi-structured datasets following the RDF model, based on atomic triple units of subject, predicate, and object. Although it is a simple model, compression methods become necessary because datasets are increasingly larger and various scalability issues arise around their organization and storage. This requirement is more restrictive in RDF stores because efficient SPARQL resolution on the compressed RDF datasets is also required.
+  This article introduces a novel RDF indexing technique (called k2-triples) supporting efficient SPARQL resolution in compressed space. k2-triples, uses the predicate to vertically partition the dataset into disjoint subsets of pairs (subject, object), one per predicate. These subsets are represented as binary matrices in which 1-bits mean that the corresponding triple exists in the dataset. This model results in very sparse matrices, which are efficiently compressed using k2-trees. We enhance this model with two compact indexes listing the predicates related to each different subject and object, in order to address the specific weaknesses of vertically partitioned representations. The resulting technique not only achieves by far the most compressed representations, but also the best overall performance for RDF retrieval in our experiments. Our approach uses up to 10 times less space than a state of the art baseline, and outperforms its performance by several order of magnitude on the most basic query patterns. In addition, we optimize traditional join algorithms on k2-triples and define a novel one leveraging its specific features. Our experimental results show that our technique overcomes traditional vertical partitioning for join resolution, reporting the best numbers for joins in which the non-joined nodes are provided, and being competitive in the majority of the cases.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-10-18T08:58:01Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Sandra Álvarez-García</name>
+    </author>
+    <author>
+      <name>Nieves R. Brisaboa</name>
+    </author>
+    <author>
+      <name>Javier D. Fernández</name>
+    </author>
+    <author>
+      <name>Miguel A. Martínez-Prieto</name>
+    </author>
+    <author>
+      <name>Gonzalo Navarro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4286v1</id>
+    <title>(a,b)-rectangle patterns in permutations and words</title>
+    <updated>2013-04-15T22:58:42Z</updated>
+    <link href="https://arxiv.org/abs/1304.4286v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4286v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce the notion of a $(a,b)$-rectangle pattern on permutations that not only generalizes the notion of successive elements (bonds) in permutations, but is also related to mesh patterns introduced recently by Brändén and Claesson. We call the $(k,k)$-rectangle pattern the $k$-box pattern. To provide an enumeration result on the maximum number of occurrences of the 1-box pattern, we establish an enumerative result on pattern-avoiding signed permutations.
+  Further, we extend the notion of $(k,\ell)$-rectangle patterns to words and binary matrices, and provide distribution of $(1,\ell)$-rectangle patterns on words; explicit formulas are given for up to 7 letter alphabets where $\ell \in \{1,2\}$, while obtaining distributions for larger alphabets depends on inverting a matrix we provide. We also provide similar results for the distribution of bonds over words. As a corollary to our studies we confirm a conjecture of Mathar on the number of "stable LEGO walls" of width 7 as well as prove three conjectures due to Hardin and a conjecture due to Barker. We also enumerate two sequences published by Hardin in the On-Line Encyclopedia of Integer Sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T22:58:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Jeffrey Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1210.3684v2</id>
+    <title>Heuristic algorithms for the bipartite unconstrained 0-1 quadratic programming problem</title>
+    <updated>2013-07-22T16:17:35Z</updated>
+    <link href="https://arxiv.org/abs/1210.3684v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1210.3684v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Bipartite Unconstrained 0-1 Quadratic Programming Problem (BQP) which is a relaxation of the Unconstrained 0-1 Quadratic Programming Problem (QP). Applications of the BQP include mining discrete patterns from binary data, approximating matrices by rank-one binary matrices, computing cut-norm of a matrix, and solving optimization problems such as maximum weight biclique, bipartite maximum weight cut, maximum weight induced subgraph of a bipartite graph, etc. We propose several classes of heuristic approaches to solve the BQP and discuss a number of construction algorithms, local search algorithms and their combinations. Results of extensive computational experiments are reported to establish the practical performance of our algorithms. For this purpose, we propose several sets of test instances based on various applications of the BQP. Our algorithms are compared with state-of-the-art heuristics for QP which can also be used to solve BQP with reformulation. We also study theoretical properties of the neighborhoods and algorithms. In particular, we establish complexity of all neighborhood search algorithms and establish tight worst-case performance ratio for the greedy algorithm.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-10-13T07:43:38Z</published>
+    <arxiv:comment>17 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Daniel Karapetyan</name>
+    </author>
+    <author>
+      <name>Abraham P. Punnen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1206.1837v2</id>
+    <title>Efficient Algorithms for Finding Tucker Patterns</title>
+    <updated>2012-06-30T05:18:12Z</updated>
+    <link href="https://arxiv.org/abs/1206.1837v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1206.1837v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Consecutive Ones Property is an important notion for binary matrices, both from a theoretical and applied point of view. Tucker gave in 1972 a characterization of matrices that do not satisfy the Consecutive Ones Property in terms of forbidden submatrices, the Tucker patterns. We describe here a linear time algorithm to find a Tucker pattern in a non-C1P binary matrix, which allows to extract in linear time a certificate for the non-C1P. We also describe an output-sensitive algorithm to enumerate all Tucker patterns of a non-C1P binary matrix.
+
+This paper had been withdrawn due to some missing cases in Algorithms 2 and 3.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-06-08T18:54:33Z</published>
+    <arxiv:comment>15 pages. Preliminary version This paper had been withdrawn due to some missing cases in Algorithms 2 and 3</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Cedric Chauve</name>
+    </author>
+    <author>
+      <name>Tamon Stephen</name>
+    </author>
+    <author>
+      <name>Maria Tamayo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0701600v5</id>
+    <title>Random dense bipartite graphs and directed graphs with specified degrees</title>
+    <updated>2009-05-01T11:31:09Z</updated>
+    <link href="https://arxiv.org/abs/math/0701600v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0701600v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let S and T be vectors of positive integers with the same sum. We study the uniform distribution on the space of simple bipartite graphs with degree sequence S in one part and T in the other; equivalently, binary matrices with row sums S and column sums T. In particular, we find precise formulae for the probabilities that a given bipartite graph is edge-disjoint from, a subgraph of, or an induced subgraph of a random graph in the class. We also give similar formulae for the uniform distribution on the set of simple directed graphs with out-degrees S and in-degrees T. In each case, the graphs or digraphs are required to be sufficiently dense, with the degrees varying within certain limits, and the subgraphs are required to be sufficiently sparse. Previous results were restricted to spaces of sparse graphs. Our theorems are based on an enumeration of bipartite graphs avoiding a given set of edges, proved by multidimensional complex integration. As a sample application, we determine the expected permanent of a random binary matrix with row sums S and column sums T.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-01-22T03:29:05Z</published>
+    <arxiv:comment>Corrected the name of a cited author. A concise version has been accepted by Random Structures and Algorithms</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Catherine Greenhill</name>
+    </author>
+    <author>
+      <name>Brendan D. McKay</name>
+    </author>
+  </entry>
+</feed>

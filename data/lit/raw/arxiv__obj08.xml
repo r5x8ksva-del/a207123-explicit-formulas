@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KtWcXywxQ6d7MiWu7zT43KN0vUg</id>
+  <title>arXiv Query: search_query=abs:"zeta polynomial" AND abs:binary&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:09:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22zeta+polynomial%22+AND+abs:binary&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1606.03159v1</id>
+    <title>Self-inversive polynomials, curves, and codes</title>
+    <updated>2016-06-10T02:19:02Z</updated>
+    <link href="https://arxiv.org/abs/1606.03159v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.03159v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study connections between self-inversive and self-reciprocal polynomials, reduction theory of binary forms, minimal models of curves, and formally self-dual codes. We prove that if $\mathcal X$ is a superelliptic curve defined over $\mathbb C$ and its reduced automorphism group is nontrivial or not isomorphic to a cyclic group, then we can write its equation as $y^n = f(x)$ or $y^n = x f(x)$, where $f(x)$ is a self-inversive or self-reciprocal polynomial. Moreover, we state a conjecture on the coefficients of the zeta polynomial of extremal formally self-dual codes.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-10T02:19:02Z</published>
+    <arxiv:primary_category term="math.CV"/>
+    <arxiv:journal_ref>Higher genus curves in mathematical physics and arithmetic geometry, 189--208, Contemp. Math., 703, Amer. Math. Soc., Providence, RI, 2018</arxiv:journal_ref>
+    <author>
+      <name>David Joyner</name>
+    </author>
+    <author>
+      <name>Tony Shaska</name>
+    </author>
+  </entry>
+</feed>

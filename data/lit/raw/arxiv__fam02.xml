@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/f+fCySbwL01XzKfnkO21c0BEn2w</id>
+  <title>arXiv Query: search_query=all:Hardin AND all:OEIS&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T20:58:17Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:Hardin+AND+all:OEIS&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2309.00487v1</id>
+    <title>Hardinian Arrays</title>
+    <updated>2023-09-01T14:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2309.00487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.00487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2014, R.H. Hardin contributed a family of sequences about king-moves on an array to the On-Line Encyclopedia of Integer Sequences (OEIS). The sequences were recently noticed in an automated search of the OEIS by Kauers and Koutschan, who conjectured a recurrence for one of them. We prove their conjecture as well as some older conjectures stated in the OEIS entries. We also have some new conjectures for the asymptotics of Hardin's sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-01T14:26:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+</feed>

@@ -19,12 +19,12 @@ SUMMARY c0 pass=13 fail=0 (4.0s)
 PASS B1-fast-vs-height core.U_fast_table == core.U_height_table（第1节参考实现）k<=60,m<=20；另抽查 m=30,40 整列 k<=60（m=21..62 每一整列见 code/c1/extended_checks.py 的 E1） [0.5s]
 PASS B2-dp-vs-multichain 高度 DP == core.U_multichain（允许行偏序集的多重链定义）0<=k<=12,0<=m<=15；另 0<=k<=6,m<=40 [0.8s]
 PASS B3-direct-vs-product core.a_direct（原题直接计数）== U_k(ceil(n/2))*U_k(floor(n/2))，1<=k<=9, 0<=n<=13（k=10,11 与 k<=7,n<=20 见 extended_checks.py 的 E2） [2.6s]
-PASS B4-brute core.a_brute（2^(nk) 全枚举）== core.a_direct == U 乘积公式，全部 k>=1,n>=0,n*k<=20 [pairs=86 ; 24.5s]
+PASS B4-brute core.a_brute（2^(nk) 全枚举）== core.a_direct == U 乘积公式，全部 k>=1,n>=0,n*k<=20 [pairs=86 ; 24.3s]
 PASS B5-prompt-table 第2节 U_k(m) 表（k=1..10, m=0..6）== 参考实现 DP [0.0s]
 PASS B6-Rk R_k=U_k(1)：R_1..R_10=2,4,..,100；sum_k R_k x^k=(1+x^2-x^3)/((1-x)(1-x-x^3))；R_k=[x^{k+1}](1-x+x^2)/((1-x)(1-x-x^3))；R_k=1+R_{k-1}+R_{k-3}（k<=60） [list=True gf1=True shift=True rec=True; 0.0s]
 PASS B7-a3 a_3(1..6) = 6,36,102,289,612,1296（a_direct 与乘积公式） [a3=[6, 36, 102, 289, 612, 1296]; 0.0s]
 PASS R1-col-rule (a) 列规则 <=> 对所有 i: b_i>=b_{i+2}（8 个三元组 + 长度<=12 的全部 0/1 列） [0.0s]
-PASS R2-heights (b) 高度 (a,b,c) 在 {0..M}^3（M<=12）上「各行都不是001/010」<=> good(a,b,c)；且「列单调不增+行规则」的 m×k 矩阵（2^(mk) 全枚举，mk<=16）个数 == U_k(m) [matrix pairs=66; 0.9s]
+PASS R2-heights (b) 高度 (a,b,c) 在 {0..M}^3（M<=12）上「各行都不是001/010」<=> good(a,b,c)；且「列单调不增+行规则」的 m×k 矩阵（2^(mk) 全枚举，mk<=16）个数 == U_k(m) [matrix pairs=66; 0.7s]
 PASS L1-ref 引理1 U_k(m)=U_k(m-1)+U_{k-1}(m)+m*U_{k-3}(m)（含边界约定）在参考实现表上成立，1<=k<=60, 0<=m<=20 [0.0s]
 PASS L1-fast 引理1 在快速 DP 表上成立，1<=k<=60, 0<=m<=62 [0.0s]
 PASS L1-cases 引理1 证明的分类逐类计数（DFS 枚举合法序列）：(i)=U_k(m-1),(ii)=U_{k-1}(m),(iii)=m*U_{k-3}(m)且 h_3 被迫为 m，(iv)=0；1<=k<=8, 0<=m<=6 [0.1s]
@@ -34,20 +34,20 @@ PASS C1-poly-monomial (C1) 单项式基交叉核对：polylib.interpolate 过 m=
 PASS C2-rec (C2) (1-x-m x^3) G_m = G_{m-1} + m x^2（G_{-1}=1），0<=m<=20，逐项到 x^132 [0.0s]
 PASS C2-closed (C2) x P_m G_m = 1 - P_m - x sum_{j<m} P_j（逐项到 x^132），且右边 = x*W_m，W_m = 1 + x^2 sum_{j=1}^m j P_{j-1}，deg W_m = 3m < deg P_m = 3m+1，lc P_m=(-1)^{m+1}m!，lc W_m=(-1)^m m!，0<=m<=20 [0.0s]
 PASS C2-order (C2) 以 P_m 为特征多项式的 3m+1 阶递推对 DP 数据 U_k(m) 成立，3m+1<=k<=132，0<=m<=20 [0.0s]
-PASS C2-gcd (C2 最简性) 精确 gcd(W_m, P_m) = 1（Fraction 欧几里得），0<=m<=20 [2.7s]
-PASS C2-BM (C2 最简性，独立于闭式) Berlekamp–Massey 直接作用于 DP 数据 U_0..U_{6m+7}(m)：线性复杂度恰为 3m+1，连接多项式恰为 P_m，0<=m<=20 [1.9s]
-PASS C2-allm-ingredients (C2 对一切 m 的最简性证明的各成分) W_m≡W_i (mod b_i)（i<=m<=20）；W_i(1)=1（i<=60）；b_i 可约 <=> i=y^2(y-1)（i<=60 只有 4,18,48）且 b_i=(1-yx)(1+(y-1)x+y(y-1)x^2)、二次因子判别式<0；d(1)=±1 的不可约因子只有 b_1 与 1-2x，且 W_1-b_1=x+x^2、W_4(1/2)=645/512≠0 [reducible b_i (i<=60): [4, 18, 48] ; 0.1s]
+PASS C2-gcd (C2 最简性) 精确 gcd(W_m, P_m) = 1（Fraction 欧几里得），0<=m<=20 [2.3s]
+PASS C2-BM (C2 最简性，独立于闭式) Berlekamp–Massey 直接作用于 DP 数据 U_0..U_{6m+7}(m)：线性复杂度恰为 3m+1，连接多项式恰为 P_m，0<=m<=20 [1.6s]
+PASS C2-allm-ingredients (C2 对一切 m 的最简性证明的各成分) W_m≡W_i (mod b_i)（i<=m<=20）；W_i(1)=1（i<=60）；b_i 可约 <=> i=y^2(y-1)（i<=60 只有 4,18,48）且 b_i=(1-yx)(1+(y-1)x+y(y-1)x^2)、二次因子判别式<0；d(1)=±1 的不可约因子只有 b_1 与 1-2x，且 W_1-b_1=x+x^2、W_4(1/2)=645/512≠0 [reducible b_i (i<=60): [4, 18, 48] ; 0.0s]
 PASS C2-sqfree (C2) P_m 无重因子：每个 b_i 与 b_i' 互素（i<=60），z^3-z^2-i 的判别式=-i(4+27i)<0（i<=60），b_i 两两互素（i<j<=20），并对 m<=8 直接验证 gcd(P_m,P_m')=1（故 G_m 的极点全是单极点） [0.0s]
-PASS C2-growth (C2 增长率，数值检查) rho_m = y^3=y^2+m 的唯一实根；DP 比值 U_2001(m)/U_2000(m) 与 rho_m 之差 < 1e-9（decimal 60 位，容差 1e-9），1<=m<=20 [max |U_2001(m)/U_2000(m) - rho_m| = 6.06e-14; 1.5s]
-PASS C2-cm (C2 推论，数值检查) 单极点留数 c_m=(G_{m-1}(x_m)+m x_m^2)/(x_m(1+3m x_m^2))，x_m=1/rho_m，G_{m-1}=W_{m-1}/P_{m-1}：|U_2000(m)/(c_m rho_m^2000) - 1| < 1e-8（decimal 150 位，容差 1e-8）；另 P_{m-1}(x_m)=m! x_m^{3m}（相对误差<1e-100）；1<=m<=20 [max relative error = 1.34e-12; 1.5s]
+PASS C2-growth (C2 增长率，数值检查) rho_m = y^3=y^2+m 的唯一实根；DP 比值 U_2001(m)/U_2000(m) 与 rho_m 之差 < 1e-9（decimal 60 位，容差 1e-9），1<=m<=20 [max |U_2001(m)/U_2000(m) - rho_m| = 6.06e-14; 1.3s]
+PASS C2-cm (C2 推论，数值检查) 单极点留数 c_m=(G_{m-1}(x_m)+m x_m^2)/(x_m(1+3m x_m^2))，x_m=1/rho_m，G_{m-1}=W_{m-1}/P_{m-1}：|U_2000(m)/(c_m rho_m^2000) - 1| < 1e-8（decimal 150 位，容差 1e-8）；另 P_{m-1}(x_m)=m! x_m^{3m}（相对误差<1e-100）；1<=m<=20 [max relative error = 1.34e-12; 1.3s]
 PASS C3-zero (C3) 容斥 N(k,q)=sum_i (-1)^{q-i}C(q,i)U_k(i-1)（由 DP 列 m<=62）：N(k,q)=0 对 k<q<=63，N(k,0)=0（k>=1），N(0,0)=1；0<=k<=60 [0.0s]
 PASS C3-basis (C3) 二项式基 U_k(m)=sum_{q=0}^{k} N(k,q) C(m+1,q)，0<=k<=60, 0<=m<=62 [0.0s]
-PASS C3-brute (C3) 组合意义：core.N_brute（DFS 按定义数「值域恰为 q 个值的合法词」）== 容斥 N(k,q)，0<=k<=9（k=10,11 见 extended_checks.py 的 E3） [0.8s]
+PASS C3-brute (C3) 组合意义：core.N_brute（DFS 按定义数「值域恰为 q 个值的合法词」）== 容斥 N(k,q)，0<=k<=9（k=10,11 见 extended_checks.py 的 E3） [0.6s]
 PASS C3-tri (C3) 三角递推 N(k,r+1)=N(k-1,r)+N(k-1,r+1)+r[N(k-3,r-1)+2N(k-3,r)+N(k-3,r+1)]，3<=k<=60, 0<=r<=k [0.0s]
 PASS C3-init (C3 初值说明) 只给 N(0,0)=1+零边界时 k=2 处递推给出 N(2,2)=1≠2，故 k>=3 的递推需要 k=1,2 两行作初值；若约定 N(-1,0)=1、N(-2,.)=0（对应 U_{-1}≡1、U_{-2}≡0），递推对 1<=k<=60 全部成立 [zero-boundary k=2 gives N(2,2)=1 (true 2); with N(-1,0)=1 holds k>=1: True; 0.0s]
 PASS C3-diag (C3) N(k,k)=2（2<=k<=60）；N(k,k-1)=k^2-k-4（4<=k<=60）；N(3,2)=4（公式在 k=3 不成立） [diag=True subdiag=True small=True; 0.0s]
 PASS C3-prompt (C3) 提示词 N 三角形 k=1..10 与容斥值一致 [0.0s]
-PASS C3-cases (C3) 三角递推证明的 6 类逐类计数（DFS 枚举满射合法词）与 N(k-1,q),N(k-1,q-1),(q-1)N(k-3,q),(q-1)N(k-3,q-1)[两类],(q-1)N(k-3,q-2) 一致，且无其他情形；3<=k<=8 [0.2s]
+PASS C3-cases (C3) 三角递推证明的 6 类逐类计数（DFS 枚举满射合法词）与 N(k-1,q),N(k-1,q-1),(q-1)N(k-3,q),(q-1)N(k-3,q-1)[两类],(q-1)N(k-3,q-2) 一致，且无其他情形；3<=k<=8 [0.1s]
 PASS C4-c (C4) c_i(n)=sum_{0<=j<=n/3} C(n-2j,j) i^j == [x^n] 1/(1-x-i x^3)（级数求逆），0<=i<=20, 0<=n<=125 [0.0s]
 PASS C4-S (C4) [x^n] 1/P_m = sum_{0<=s<=n/3} S(s+m,m) C(n+m-2s,m+s)，0<=m<=20, 0<=n<=60 [0.0s]
 PASS C4-pf (C4) m!*[x^n]1/P_m = sum_i (-1)^{m-i}C(m,i) c_i(n+3m)，0<=m<=20, 0<=n<=60；且 -3m<=n<0 时右边为 0 [0.0s]
@@ -61,7 +61,7 @@ PASS C7-poly (C7) P_{q-1}*sum_k N(k,q)x^k（N 由 DP 容斥，k<=90）是多项�
 PASS C7-given (C7) q=1..4 的分子：x；2x^2+x^4；2x^3+2x^4+7x^5+2x^7；2x^4+8x^5+13x^6+15x^7+29x^8+6x^10 [0.0s]
 PASS C7-ie-rec (C7 证明所用的两个恒等式) Num_q = sum_i (-1)^{q-i}C(q,i) W_{i-1} prod_{v=i}^{q-1} b_v（1<=q<=20）；Num_q = (x+2(q-1)x^3)Num_{q-1} + (q-1)x^3 b_{q-2} Num_{q-2}（3<=q<=20） [0.0s]
 PASS C8-pq (C8 推导链) 由 DP 数据插值：a_k(n)=U_k(ceil(n/2))U_k(floor(n/2)) = p(n)+(-1)^n q(n)，deg p=2k、deg q=2k-2，lc(p)=c^2/4^k、lc(q)=c^2 k/(2*4^k)（c=lc(u_k)），对 n<=4k+11 逐点成立，1<=k<=15 [0.1s]
-TIME c1 total 39.4s
+TIME c1 total 37.8s
 SUMMARY c1 pass=45 fail=0
 ========================================================================
 >>> check_c2a.py
@@ -87,8 +87,8 @@ PASS single_family_facts facts for Theorem S: b_1 has no rational root; N(xi)=1,
 PASS single_family_linsys evidence: linear systems U_k(m) = sum_s A(s) C(k+c-2s,s+e) (k0<=k<=45) inconsistent for m=1..3, k0 in {0,6}, c in [-4,4], e in [-4,6] (594 systems); controls U_k(0)=1 and [x^k]1/P_m (m<=3) solvable
 PASS two_family_residue two-family necessary residue conditions: theta_v ~ W_v(xi) xi^{-3m-3} (v=1,2; m<=8); fiber-1 condition has exactly 14 solutions with |a|,|b|<=150 and none satisfies fiber 2 => for every m>=2 no representation x^{g1}A1(u)+x^{g2}A2(u)+Laurent poly with |g_i+3m+3|<=150
 PASS N_inversion N(k,q) = sum_{i=1}^q (-1)^{q-i} C(q,i) U_H(k,i-1) == DFS definition N_brute (k<=8) and core inclusion-exclusion N_from_U (k<=40, q<=20)
-PASS bench_k200_m30 all U_k(m), 0<=k<=200, 0<=m<=30: Lemma-1 recurrence, fixed-m linear recurrence, N triangle, H, F3, Theta, H-outer+c_i, F4 all == DP; seconds (this run, noisy): DP 0.327, Lemma1 0.002, linrec 0.236, Ntri 0.030, rStirling_table 0.003, c_table 0.206, H 1.881, F3 1.935, Theta 0.332, ThetaH 0.335, F4 0.262
-# elapsed 12.1s
+PASS bench_k200_m30 all U_k(m), 0<=k<=200, 0<=m<=30: Lemma-1 recurrence, fixed-m linear recurrence, N triangle, H, F3, Theta, H-outer+c_i, F4 all == DP; seconds (this run, noisy): DP 0.285, Lemma1 0.001, linrec 0.191, Ntri 0.026, rStirling_table 0.003, c_table 0.184, H 1.561, F3 1.627, Theta 0.275, ThetaH 0.285, F4 0.231
+# elapsed 10.2s
 SUMMARY c2a pass=23 fail=0
 ========================================================================
 >>> check_c2b.py
@@ -184,7 +184,7 @@ PASS c2b.T8.Nc N^c(k,q)=sum_{s>=0} sum_{p=0}^{2s} C(q,p) R(p,s) C(k-2s+p-1, s+q-
 PASS c2b.T8.NE N^E(k,q)=sum_{s>=1,p,h0} R'(p,s,h0) C(q-1-h0,p-1-h0) C(k-1-2s+p-h0, s+q-2-h0) (k<=30,q<=12)；R'(端点恰为{0..p-1}且最小头为h0的s弧骨架数)=sum_{z1,z2}(-1)^{z1+z2}C(h0,z1)C(p-1-h0,z2)[h_s(h0-z1..p-1-z1-z2)-h_s(h0-z1+1..p-1-z1-z2)]，与骨架暴力枚举一致(s<=4)且 sum_h0 R'=R (s<=10)
 PASS c2b.T8.Reul R(p,s)=sum_k <<s,k>> C(2s-2-k,2s-p)（<<s,k>> 为二阶 Euler 数）(1<=s<=11, 0<=p<=2s+2)
 PASS c2b.T9.misc 望远镜关系 x*sum_{j=1}^m Q_j + x^3*sum_j j*Q_j = Q_1 - 1（Q_j=prod_{v=j}^m b_v^{-1}）；部分分式 sum_{i=0}^m Q_i = sum_{v=1}^m (-1)^{m-v}/((m-v)! b_v) * sum_{r=0}^{v} v^{m-v+r}(1-x)^{-(m-v+r)}/r!（截断指数和）；级数核对到 x^24，m<=8
-[time] 32.9s
+[time] 33.1s
 SUMMARY c2b pass=33 fail=0
 ========================================================================
 >>> check_c3a.py
@@ -192,7 +192,7 @@ PASS c3a-anchor height DP == prompt table (k<=10,m<=6) == multichain (k<=7,m<=4)
 PASS c3a-pde-F (1-x-t)F - x^3 t F_t = 1 + x^2 t/(1-t)^2 holds coefficientwise for the DP table, k<=60, m<=41
 PASS c3a-lap-general general principle: Y=(1/A)L_s[exp((t/x^3)(e^{vs}-1)) gamma(x,t e^{vs})], v=x^3/A, solves (A-t)Y-x^3 t Y_t=gamma; 6 random integer gamma, A in {1-x, 1-x+x^3}, k<=18, m<=9 (exact)
 PASS c3a-lap-operator key identity (1-x-t)Psi - x^3 t dPsi/dt = (1-x)(Psi - dPsi/ds) for Psi=exp((t/x^3)(e^{us}-1))g(t e^{us}), all coefficients x^k t^m s^N with k<=30, m<=16 (exact)
-PASS c3a-lap-F F = (1/(1-x)) L_s[exp((t/x^3)(e^{us}-1))(1 + x^2 t e^{us}/(1-t e^{us})^2)], u=x^3/(1-x): direct exact expansion == DP U_k(m) for k<=60, m<=30 (5.4s)
+PASS c3a-lap-F F = (1/(1-x)) L_s[exp((t/x^3)(e^{us}-1))(1 + x^2 t e^{us}/(1-t e^{us})^2)], u=x^3/(1-x): direct exact expansion == DP U_k(m) for k<=60, m<=30 (5.3s)
 PASS c3a-lap-naive naive implementation (ordinary s-series, Fraction, multiply [s^N] by N!) == DP for k<=15, m<=6; valuation bounds ord_x [s^N t^m]Psi >= 3N-3m and ord_(x,t) [s^N]Psi >= N hold in that range (well-definedness)
 PASS c3a-lap-coeff coefficient corollary [t^m]F = 1/P_m + x^2 sum_{j=1}^m j/prod_{i=j}^m b_i == DP, k<=60, m<=30
 PASS c3a-1f1-const sum_m t^m/P_m = 1F1(1;1-lambda;-t/x^3)/(1-x): Pochhammer expansion in Q(x) (as Laurent series) has no negative powers and equals #legal sequences not ending in an ascent, k<=40, m<=20
@@ -222,7 +222,7 @@ PASS c3a-num-gap-full [NUM] I - sum_m t^m G_m(x) = x^{-3} K(x) e^a a^lambda at t
 PASS c3a-num-asym [NUM] x->0+ asymptotics at (x,t)=(21/100,-1/2): |I - sum_{k<150} f_k(t) x^k| = 6.0E-56 < 1e-50 (f_k exact from the PDE, == DP h_k/(1-t)^{k+1} for k<=30), while |sum_m t^m G_m(x)| > 1e44 rigorously (it is -9.729E+44)
 PASS c3a-num-small-t [NUM] at (x,t)=(21/100,-1/20): I - sum_m t^m G_m(x) = 3.8140E-62 matches x^{-3}K e^a a^lambda with relative error 3.0E-38 (tol 1e-25; I,S with 100 digits, K with 170 digits)
 PASS c3a-num-residue [NUM] residue law Res_{x_i}G_m = Res_{x_i}G_i (-x_i^{-3})^{m-i}/(m-i)! for i<=5, m<=i+8 (so Res_{x_i} sum_m t^m G_m = Res_{x_i}G_i t^i e^{-t/x_i^3}), Res_{x_i}G_i<0; worst rel dev 5.3E-47 (tol 1e-40, 60 digits)
-# elapsed 22.3s
+# elapsed 21.7s
 SUMMARY c3a pass=34 fail=0
 ========================================================================
 >>> check_c3b.py
@@ -248,7 +248,7 @@ PASS C3B-E2S U, coefficients with deg_k<=Dk, deg_m<=Dm, formula (A-2)B(Dk+1)Dm: 
 PASS C3B-E3A N: NO recurrence sum_{a<=A,b<=B} p_ab(k) X(k-a,m-b)=0 with coefficients depending on k only, on quadrant [A..40]x[B..40] (full column rank mod p=2^31-1 => none over Q; each set covers all smaller A,B,deg): (A,B,deg)=(6,6,6):343 unknowns/1225 eqs rank 343; (A,B,deg)=(10,3,6):308 unknowns/1178 eqs rank 308; (A,B,deg)=(3,10,6):308 unknowns/1178 eqs rank 308; (A,B,deg)=(4,4,12):325 unknowns/1369 eqs rank 325; (A,B,deg)=(15,1,8):288 unknowns/1040 eqs rank 288; (A,B,deg)=(1,15,8):288 unknowns/1040 eqs rank 288
 PASS C3B-E3B N, coefficients in Q[k,q] (total degree<=D), generator L_N=1-S_k^-1-S_k^-1S_q^-1-(q-1)S_k^-3(1+S_q^-1)^2, formula (A-2)(B-1)D(D+1)/2: kernel (mod p) == span of exact left multiples of the generator, dimension == formula; (3, 2, 1):36u/1482eq ker=1 pred=1 gens=1; (3, 2, 3):120u/1482eq ker=6 pred=6 gens=6; (5, 3, 2):144u/1368eq ker=18 pred=18 gens=18; (6, 3, 3):280u/1330eq ker=48 pred=48 gens=48; (4, 4, 4):375u/1369eq ker=60 pred=60 gens=60; (6, 4, 2):210u/1295eq ker=36 pred=36 gens=36; (3, 1, 3):80u/1520eq ker=0 pred=0 gens=0; (2, 4, 3):150u/1443eq ker=0 pred=0 gens=0
 PASS C3B-E3S N, coefficients with deg_k<=Dk, deg_q<=Dq, formula (A-2)(B-1)(Dk+1)Dq: kernel (mod p) == span of exact left multiples of the generator, dimension == formula; (4, 3, 3, 2):240u/1406eq ker=32 pred=32 gens=32; (5, 4, 1, 3):240u/1332eq ker=54 pred=54 gens=54; (3, 3, 5, 0):96u/1444eq ker=0 pred=0 gens=0
-# elapsed 19.8s (numpy=True)
+# elapsed 20.5s (numpy=True)
 SUMMARY c3b pass=22 fail=0
 ========================================================================
 >>> check_c4.py
@@ -293,7 +293,7 @@ PASS c4-Num-high-values j<=8, 1<=q<=70：[x^{3q-2-j}]Num_q == 表 6 的公式 su
 PASS c4-Num-high-proof j<=8：表 6 公式代入 a_{q,j}=2(q-1)a_{q-1,j}+a_{q-1,j-2}+(q-1)[a_{q-2,j-3}-a_{q-2,j-2}-(q-2)a_{q-2,j}] 后在 c(q-2,i) 基下系数多项式恒为 0（q>=3），且 q=1,2 初值吻合 ⇒ 对全部 q>=1 成立
 PASS c4-Num-egf q<=14：sum_q R_q(y) z^q/q! == (y+1)(e^{y^2 Lam}-1)/y^2 - y e^{y^2 Lam} int_0^{z/(1-z)} (1+w)^{y^3-y^2} e^{-y^3 w} dw，Lam=(y-1)ln(1-z)+yz/(1-z)（Q[y][[z]] 中逐项精确展开）
 PASS c4-Num-ode 由三项递推得到的 A(z)=sum R_q z^q/q! 满足 (1-z)^2A''=(y^2-1)+(2(1-z)+y^2(1-z)+y^3 z)A'+(y^3-y^2)A，逐项到 z^12
-# runtime 21.6s
+# runtime 22.5s
 SUMMARY c4 pass=41 fail=0
 ========================================================================
 >>> check_c5a.py
@@ -384,31 +384,44 @@ SUMMARY rv pass=7 fail=0 (14.6s)
 ========================================================================
 >>> check_rv2.py
 PASS rv2-x1-r1 复核者 x1 的 r1：留数元闭式、E 部分纤维 u=1/2 的统一阻碍（m=2..34）、证书复算；子脚本 9 条 PASS（4.3s，输出 logs/rv2_x1_r1.log）
-PASS rv2-x1-r2 复核者 x1 的 r2：U 两族 |a|,|b|<=6000 无表示（m>=2），E 两项 |a|,|b|<=1500 无表示（m>=3）；子脚本 7 条 PASS（4.0s，输出 logs/rv2_x1_r2.log）
-SUMMARY rv2 pass=2 fail=0 (8.3s)
+PASS rv2-x1-r2 复核者 x1 的 r2：U 两族 |a|,|b|<=6000 无表示（m>=2），E 两项 |a|,|b|<=1500 无表示（m>=3）；子脚本 7 条 PASS（3.6s，输出 logs/rv2_x1_r2.log）
+SUMMARY rv2 pass=2 fail=0 (7.9s)
 ========================================================================
 >>> check_rv3.py
-PASS rv3-c4ii-r6 T4.3(6)：由 T4.3(7) 的闭式精确算出 A_j∈Q[u,L]（j<=14），指标界 ι<=⌊j/2⌋+1、三角化得到的 Σπ_{j,i}(q)c(q,i) 在 q<=60 上等于真实系数、两个子断言、与表 6（j<=8）一致；子脚本 6 条 PASS、0 条 FAIL（0.3s，输出 logs/rv3_c4ii_r6.log）
+PASS rv3-c4ii-r6 T4.3(6)：由 T4.3(7) 的闭式精确算出 A_j∈Q[u,L]（j<=14），指标界 ι<=⌊j/2⌋+1、三角化得到的 Σπ_{j,i}(q)c(q,i) 在 q<=60 上等于真实系数、两个子断言、与表 6（j<=8）一致；子脚本 6 条 PASS、0 条 FAIL（0.2s，输出 logs/rv3_c4ii_r6.log）
 PASS rv3-s6-t436-a T4.3(6) 第二份独立证明（s6-t436，由一阶 ODE 的分量递推 θA_j=uA_{j−2}+u²A_{j−3}，不用 T4.3(7)）的逐式核对：锚点、各引理、T4.3(7) 闭式到 z^30；25 条 OK、0 条 BAD（5.9s，输出 logs/rv3_s6_t436_a.log）
-PASS rv3-s6-t436-b T4.3(6)：按 s6-t436 证明的构造法求 π_{j,i}（j<=40）与真实 a_{q,j}（q<=300）逐项相同，只用命题形状的拟合法（j<=24）与构造法逐系数相同，子断言、表 6、r-c4ii 的 j=9..14 都一致；14 条 OK、0 条 BAD（22.6s，输出 logs/rv3_s6_t436_b.log）
-PASS rv3-c3a-r2 T3.4(2)：K 的定义与闭式 Γ(−λ)[1+λx⁵J] 在 7 个 x 上一致、1<K/Γ(−λ)<2、端到端 I−𝒮 与闭式一致（decimal 高精度，数值）；子脚本 11 条 PASS、0 条 FAIL（13.8s，输出 logs/rv3_c3a_r2.log）
-PASS rv3-s6-t342-K T3.4(2)：K 的定义（级数+尾积分）与闭式 Γ(−λ)[1+λx⁵J] 在 13 个 x（0.18..0.9）上一致，另核对路线 B 的两半与 K 的符号（s6-t342 自写 decimal 与求积，数值）；13 条 PASS、0 条 FAIL（16.3s，输出 logs/rv3_s6_t342_K.log）
-PASS rv3-s6-t342-e T3.4(2)：端到端 I−𝒮（I 求积、𝒮 精确有理部分和）与闭式在 11 组 (x,t) 上一致；推论 1<K/Γ(−λ)<2−x 与 K 的符号在 105 个 x 上成立（数值）；116 条 PASS、0 条 FAIL（19.1s，输出 logs/rv3_s6_t342_e.log）
-SUMMARY rv3 pass=6 fail=0 (78.0s)
+PASS rv3-s6-t436-b T4.3(6)：按 s6-t436 证明的构造法求 π_{j,i}（j<=40）与真实 a_{q,j}（q<=300）逐项相同，只用命题形状的拟合法（j<=24）与构造法逐系数相同，子断言、表 6、r-c4ii 的 j=9..14 都一致；14 条 OK、0 条 BAD（22.9s，输出 logs/rv3_s6_t436_b.log）
+PASS rv3-c3a-r2 T3.4(2)：K 的定义与闭式 Γ(−λ)[1+λx⁵J] 在 7 个 x 上一致、1<K/Γ(−λ)<2、端到端 I−𝒮 与闭式一致（decimal 高精度，数值）；子脚本 11 条 PASS、0 条 FAIL（12.7s，输出 logs/rv3_c3a_r2.log）
+PASS rv3-s6-t342-K T3.4(2)：K 的定义（级数+尾积分）与闭式 Γ(−λ)[1+λx⁵J] 在 13 个 x（0.18..0.9）上一致，另核对路线 B 的两半与 K 的符号（s6-t342 自写 decimal 与求积，数值）；13 条 PASS、0 条 FAIL（14.9s，输出 logs/rv3_s6_t342_K.log）
+PASS rv3-s6-t342-e T3.4(2)：端到端 I−𝒮（I 求积、𝒮 精确有理部分和）与闭式在 11 组 (x,t) 上一致；推论 1<K/Γ(−λ)<2−x 与 K 的符号在 105 个 x 上成立（数值）；116 条 PASS、0 条 FAIL（17.2s，输出 logs/rv3_s6_t342_e.log）
+SUMMARY rv3 pass=6 fail=0 (73.9s)
+========================================================================
+>>> check_rv4.py
+PASS rv4-t26ii-a a.E 部分母函数 (W_m−1)/P_m 与自写 DP 一致（1≤m≤6，0≤k≤30）
+PASS rv4-t26ii-b b.在 b_i 的根处 b_v(η)=(i−v)η³、η·b_i′(η)=2η−3（1≤i≤8，0≤v≤44）
+PASS rv4-t26ii-c c.留数闭式在 Q[x]/(b_i) 中精确成立（1≤i≤8，i≤m≤40，共 292 组）
+PASS rv4-t26ii-d1 d.N(η)=1/2，N(4−2η)=68  1/2, 68
+PASS rv4-t26ii-d2 d.W̃_2(η)−1 = η⁵(4−2η)
+PASS rv4-t26ii-d3 d.N(W̃_2(η)−1) = 17/8  17/8
+PASS rv4-t26ii-d4 d.对 −60≤n≤60，N((4−2η)η^n) 的 17-进赋值都是 1（不是 3 的倍数，故不是有理数的立方）
+PASS rv4-t26ii-e1 e.b_1、b_2 没有有理根（三次式，故在 Q 上不可约）
+PASS rv4-t26ii-e2 e.b_4 有有理根 1/2（可约；证明只用 i=1、2，不受影响）
+SUMMARY rv4 pass=9 fail=0  (1.4s, 子脚本退出码 0)
 ========================================================================
 area     pass   fail    rc  summary     secs  status
-c0         13      0     0      yes      4.1  PASS
-c1         45      0     0      yes     39.5  PASS
-c2a        23      0     0      yes     12.2  PASS
-c2b        33      0     0      yes     32.9  PASS
-c3a        34      0     0      yes     22.4  PASS
-c3b        22      0     0      yes     20.0  PASS
-c4         41      0     0      yes     21.7  PASS
-c5a        37      0     0      yes     14.2  PASS
-c5b        33      0     0      yes      5.2  PASS
+c0         13      0     0      yes      4.0  PASS
+c1         45      0     0      yes     37.8  PASS
+c2a        23      0     0      yes     10.3  PASS
+c2b        33      0     0      yes     33.2  PASS
+c3a        34      0     0      yes     21.8  PASS
+c3b        22      0     0      yes     20.7  PASS
+c4         41      0     0      yes     22.6  PASS
+c5a        37      0     0      yes     14.0  PASS
+c5b        33      0     0      yes      4.6  PASS
 rv          7      0     0      yes     14.7  PASS
-rv2         2      0     0      yes      8.3  PASS
-rv3         6      0     0      yes     78.0  PASS
+rv2         2      0     0      yes      7.9  PASS
+rv3         6      0     0      yes     74.0  PASS
+rv4         9      0     0      yes      1.4  PASS
 ------------------------------------------------------------------------
-TOTAL pass=296 fail=0 modules=12 failed_modules=-  (273.3s)
+TOTAL pass=305 fail=0 modules=13 failed_modules=-  (267.0s)
 OVERALL: PASS

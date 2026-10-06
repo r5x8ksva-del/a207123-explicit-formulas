@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/aMlfLu9InTdQrrEU1PfnyIcM2B4</id>
+  <title>arXiv Query: search_query=(abs:"1-x-mx^3" OR abs:"x^3=x^2+m" OR abs:"y^3=y^2+m") OR (abs:Narayana AND abs:generalized AND abs:recurrence)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:25:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:%221-x-mx%5E3%22+OR+(abs:%22x%5E3%3Dx%5E2%2Bm%22+OR+abs:%22y%5E3%3Dy%5E2%2Bm%22))+OR+(abs:Narayana+AND+(abs:generalized+AND+abs:recurrence))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2108.03590v1</id>
+    <title>On the positive zeros of generalized Narayana polynomials related to the Boros-Moll polynomials</title>
+    <updated>2021-08-08T08:37:06Z</updated>
+    <link href="https://arxiv.org/abs/2108.03590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.03590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generalized Narayana polynomials $N_{n,m}(x)$ arose from the study of infinite log-concavity of the Boros-Moll polynomials. The real-rootedness of $N_{n,m}(x)$ had been proved by Chen, Yang and Zhang. They also showed that when $n\geq m+2$, each of the generalized Narayana polynomials has one and only one positive zero and $m$ negative zeros, where the negative zeros of $N_{n,m}(x)$ and $N_{n+1,m+1}(x)$ have interlacing relations. In this paper, we study the properties of the positive zeros of $N_{n,m}(x)$ for $n\geq m+2$. We first obtain a new recurrence relation for the generalized Narayana polynomials. Based on this recurrence relation, we prove upper and lower bounds for the positive zeros of $N_{n,m}(x)$. Moreover, the monotonicity of the positive zeros of $N_{n,m}(x)$ are also proved by using the new recurrence relation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-08T08:37:06Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>James J. Y. Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1202.1203v3</id>
+    <title>A probabilistic interpretation of a sequence related to Narayana polynomials</title>
+    <updated>2012-03-20T16:22:36Z</updated>
+    <link href="https://arxiv.org/abs/1202.1203v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.1203v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A sequence of coefficients appearing in a recurrence for the Narayana polynomials is generalized. The coefficients are given a probabilistic interpretation in terms of beta distributed random variables. The recurrence established by M. Lasalle is then obtained from a classical convolution identity. Some arithmetical properties of the generalized coefficients are also established.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-06T17:01:36Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>T. Amdeberhan</name>
+    </author>
+    <author>
+      <name>V. H. Moll</name>
+    </author>
+    <author>
+      <name>C. Vignat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.04150v1</id>
+    <title>Hurwitz Stability of Generalized Turán Expressions of Polynomial Sequences</title>
+    <updated>2026-10-02T23:52:27Z</updated>
+    <link href="https://arxiv.org/abs/2610.04150v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.04150v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we prove the weak Hurwitz stability conjecture for the strong Turán expressions of Eulerian polynomials, as well as the corresponding conjecture for Narayana polynomials, which were conjectured by Liu and Yan. We generalize the notion of Turán expressions of polynomial sequences, and provide a criterion for the generalized stability of generalized Turán expressions. Based on our sufficient condition, we not only confirm Liu and Yan's conjectures but also obtain the generalized stability of generalized Turán expressions of a class of recurrent polynomial sequences and generalized Narayana polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-02T23:52:27Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Huihua Gao</name>
+    </author>
+    <author>
+      <name>Xin-Bei Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.00521v2</id>
+    <title>The Real-rootedness of Generalized Narayana Polynomials</title>
+    <updated>2016-02-29T01:49:58Z</updated>
+    <link href="https://arxiv.org/abs/1602.00521v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.00521v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we prove the real-rootedness of two classes of generalized Narayana polynomials: one arising as the $h$-polynomials of the generalized associahedron associated to the finite Weyl groups, the other arising in the study of the infinite log-concavity of the Boros-Moll polynomials. For the former, Brändén has already proved that these $h$-polynomials have only real zeros. We establish certain recurrence relations for the two classes of Narayana polynomials, from which we derive the real-rootedness. To prove the real-rootedness, we use a sufficient condition, due to Liu and Wang, to determine whether two polynomials have interlaced zeros. The recurrence relations are verified with the help of the Mathematica package \textit{HolonomicFunctions}.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-01T13:44:27Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Herman Z. Q. Chen</name>
+    </author>
+    <author>
+      <name>Arthur L. B. Yang</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.15208v2</id>
+    <title>Self-Convolutions of Generalized Narayana Numbers</title>
+    <updated>2026-05-20T21:19:36Z</updated>
+    <link href="https://arxiv.org/abs/2602.15208v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.15208v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the Fibonacci numbers $F_n$, we have the self-convolution formula $5 \sum_{i=0}^n F_i F_{n-i} = (2n)F_{n+1} - (n+1)F_n$. We find the corresponding self-convolution formula for the Narayana numbers $R_n$ which satisfy $R_n = R_{n-1} + R_{n-3}$, and then generalize it to the $k$-step Narayana numbers $\mathcal{R}_n$ with order-$k$ recurrence formula $\mathcal{R}_n = \mathcal{R}_{n-1} + \mathcal{R}_{n-k}$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-16T21:37:17Z</published>
+    <arxiv:comment>12 pages. To appear in Fibonacci Quarterly. Second version contains minor fixes</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Greg Dresden</name>
+    </author>
+    <author>
+      <name>Yuechen Xiao</name>
+    </author>
+    <author>
+      <name>Guanzhang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.11355v5</id>
+    <title>Boolean-Narayana numbers</title>
+    <updated>2026-06-16T17:01:03Z</updated>
+    <link href="https://arxiv.org/abs/2602.11355v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.11355v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a refinement of Boolean-Catalan numbers and call them Boolean-Narayana numbers. We provide an explicit formula for these numbers, and prove unimodality, log-concavity, and real-roots-only results for their sequences. We also prove a three-term recurrence relation for their generating polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-11T20:42:57Z</published>
+    <arxiv:comment>16 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Miklos Bona</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.03490v1</id>
+    <title>Summing Formulas For Generalized Tribonacci Numbers</title>
+    <updated>2019-10-07T08:26:44Z</updated>
+    <link href="https://arxiv.org/abs/1910.03490v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.03490v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, closed forms of the summation formulas for generalized Tribonacci numbers are presented. Then, some previous results are recovered as particular cases of the present results. As special cases, we give summation formulas of Tribonacci, Tribonacci-Lucas, Padovan, Perrin, Narayana and some other third order linear recurrance sequences. All the summing formulas of well known recurrence sequences which we deal with are linear except the cases Pell-Padovan and Padovan-Perrin.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-07T08:26:44Z</published>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Yüksel Soykan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.08855v1</id>
+    <title>A Recursion for the FiboNarayana and the Generalized Narayana Numbers</title>
+    <updated>2019-10-19T22:49:47Z</updated>
+    <link href="https://arxiv.org/abs/1910.08855v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.08855v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Lucas polynomials, $\{n\}$, are polynomials in $s$ and $t$ given by $\{ n \} = s \{ n-1 \} + t \{ n-2 \}$ for $n \geq 2$ with $ \{ 0 \} = 0$ and $\{ 1 \} = 1$. The lucanomial coefficients, an analogue of the binomial coefficients, are given by \[ \Bigl\{ \begin{array}{c} n\\k \end{array} \Bigr \} = \frac{ \{n\}! }{ \{k\}! \{n-k\}!}. \] When $s = t = 1$ then $\{ n \} = F_n$ and the lucanomial coefficient becomes the fibonomial coefficient \[ \binom{n}{k}_F = \frac{F_n!}{F_k! F_{n-k}!}. \] The well-known Narayana numbers, $N_{n,k}$ satisfy the equation \[ N_{n,k} = \frac{1}{n} \binom{n}{k} \binom{n}{k-1}. \]
+  \[ %C_n = \sum_{k=1}^n N_{n,k}. %\] In 2018, Bennett, Carrillo, Machacek and Sagan defined the generalized Narayana numbers and conjectured that these numbers are positive integers for $n \geq 1$. In this paper we define the FiboNarayana number $N_{n,k,F}$ and give a new recurrence relation for both the FiboNarayana numbers and the generalized Narayana numbers, proving the conjecture that these are positive integers for $n \geq 1$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-19T22:49:47Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kristina Garrett</name>
+    </author>
+    <author>
+      <name>Kendra Killpatrick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1208.0024v2</id>
+    <title>Parallelogram polyominoes, the sandpile model on a complete bipartite graph, and a q,t-Narayana polynomial</title>
+    <updated>2013-01-20T10:13:20Z</updated>
+    <link href="https://arxiv.org/abs/1208.0024v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1208.0024v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We classify recurrent configurations of the sandpile model on the complete bipartite graph K_{m,n} in which one designated vertex is a sink. We present a bijection from these recurrent configurations to decorated parallelogram polyominoes whose bounding box is a m*n rectangle. Several special types of recurrent configurations and their properties via this bijection are examined. For example, recurrent configurations whose sum of heights is minimal are shown to correspond to polyominoes of least area. Two other classes of recurrent configurations are shown to be related to bicomposition matrices, a matrix analogue of set partitions, and (2+2)-free partially ordered sets.
+  A canonical toppling process for recurrent configurations gives rise to a path within the associated parallelogram polyominoes. This path bounces off the external edges of the polyomino, and is reminiscent of Haglund's well-known bounce statistic for Dyck paths. We define a collection of polynomials that we call q,t-Narayana polynomials, defined to be the generating function of the bistatistic (area,parabounce) on the set of parallelogram polyominoes, akin to the (area,hagbounce) bistatistic defined on Dyck paths in Haglund (2003). In doing so, we have extended a bistatistic of Egge, Haglund, Kremer and Killpatrick (2003) to the set of parallelogram polyominoes. This is one answer to their question concerning extensions to other combinatorial objects.
+  We conjecture the q,t-Narayana polynomials to be symmetric and prove this conjecture for numerous special cases. We also show a relationship between Haglund's (area,hagbounce) statistic on Dyck paths, and our bistatistic (area,parabounce) on a sub-collection of those parallelogram polyominoes living in a (n+1)*n rectangle.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-07-31T20:11:02Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+    <author>
+      <name>Yvan Le Borgne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.14956v1</id>
+    <title>On Weighted and Bounded Multidimensional Catalan Numbers</title>
+    <updated>2025-10-16T17:58:33Z</updated>
+    <link href="https://arxiv.org/abs/2510.14956v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.14956v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a weighted analog for the multidimensional Catalan numbers, obtain matrix-based recurrences for some of them, and give conditions under which they are periodic. Building on this framework, we introduce two new sequences of triangular arrays: the first one enumerates the $k$-dimensional Balanced ballot paths of exact height $s$; the second one is a new multidimensional generalization of the Narayana numbers, which count the number of Balanced ballot paths with exactly $p$ peaks.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-16T17:58:33Z</published>
+    <arxiv:comment>13 pages, 5 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ryota Inagaki</name>
+    </author>
+    <author>
+      <name>Dimana Pramatarova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.06921v3</id>
+    <title>Linear $k$-Chord Diagrams</title>
+    <updated>2020-10-20T09:32:55Z</updated>
+    <link href="https://arxiv.org/abs/2004.06921v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.06921v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We generalize the notion of linear chord diagrams to the case of matched sets of size $k$, which we call $k$-chord diagrams. We provide formal generating functions and recurrence relations enumerating these $k$-chord diagrams by the number of short chords, where the latter is defined as all members of the matched set being adjacent, and is the generalization of a short chord or loop in a linear chord diagram. We also enumerate $k$-chord diagrams by the number of connected components built from short chords and provide the associated generating functions in this case. We show that the distributions of short chords and connected components are asymptotically Poisson, and provide the associated means. Finally, we provide recurrence relations enumerating non-crossing $k$-chord diagrams by the number of short chords, generalising the Narayana numbers, and establish asymptotic normality, providing the associated means and variances. Applications to generalized games of memory are also discussed.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-15T07:45:38Z</published>
+    <arxiv:comment>v2 corrected Theorem 27. v3 substantial reorganization of the paper, including a new title and abstract, version published in the Journal of Integer Sequences</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, Vol. 23 (2020), Article 20.9.1</arxiv:journal_ref>
+    <author>
+      <name>Donovan Young</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.10224v2</id>
+    <title>Triangular Recurrences, Generalized Eulerian Numbers, and Related Number Triangles</title>
+    <updated>2023-01-26T22:07:39Z</updated>
+    <link href="https://arxiv.org/abs/2207.10224v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.10224v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many combinatorial and other number triangles are solutions of recurrences of the Graham-Knuth-Patashnik (GKP) type. Such triangles and their defining recurrences are investigated analytically. They are acted on by a transformation group generated by two involutions: a left-right reflection and an upper binomial transformation, acting row-wise. The group also acts on the bivariate exponential generating function (EGF) of the triangle. By the method of characteristics, the EGF of any GKP triangle has an implicit representation in terms of the Gauss hypergeometric function. There are several parametric cases when this EGF can be obtained in closed form. One is when the triangle elements are the generalized Stirling numbers of Hsu and Shiue. Another is when they are generalized Eulerian numbers of a newly defined kind. These numbers are related to the Hsu-Shiue ones by an upper binomial transformation, and can be viewed as coefficients of connection between polynomial bases, in a manner that generalizes the classical Worpitzky identity. Many identities involving these generalized Eulerian numbers and related generalized Narayana numbers are derived, including closed-form evaluations in combinatorially significant cases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-20T22:50:14Z</published>
+    <arxiv:comment>62 pages, final version, accepted by Advances in Applied Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. in Appl. Math. 146 (2023), Paper No. 102485, 62 pp</arxiv:journal_ref>
+    <author>
+      <name>Robert S. Maier</name>
+    </author>
+    <arxiv:doi>10.1016/j.aam.2023.102485</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aam.2023.102485" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25731v1</id>
+    <title>Enumerating Multi-Operator Monomials in Commutative and Noncommutative Settings</title>
+    <updated>2026-04-28T14:59:22Z</updated>
+    <link href="https://arxiv.org/abs/2604.25731v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25731v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study enumeration problems for multi-operator monomials generated from one indeterminate by an associative multiplication together with finitely many unary operators. We consider four regimes, according to whether multiplication is commutative and whether the unary operators commute. In the case where the unary operators do not commute, we obtain explicit multigraded generating functions and coefficient formulas, including a multinomial refinement of the Narayana numbers, together with interpretations in terms of rooted trees, restricted lattice paths, and binary trees. When the unary operators commute, we derive canonical representatives and effective recurrences, with corresponding monotonicity conditions in the combinatorial models. When multiplication is commutative, the sequence decomposition is replaced by a multiset decomposition, leading to exp--log generating functions and Euler-transform recurrences. In special cases, the resulting sequences recover classical families including the Catalan numbers, the small Schröder numbers, and rooted-tree numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T14:59:22Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yu Hin Au</name>
+    </author>
+    <author>
+      <name>Murray R. Bremner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.03680v1</id>
+    <title>Separating zeros of polynomials using an added interlacing point</title>
+    <updated>2026-04-04T10:51:26Z</updated>
+    <link href="https://arxiv.org/abs/2604.03680v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.03680v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Following a systematic analysis of existing results, we investigate when complete interlacing between the zeros of distinct polynomial sequences, $\{\mathcal{P}_n\}$ and $\{\mathcal{G}_n\}$ can be achieved by using a naturally arising extra point. Specifically, we analyse several general mixed recurrence relations that ensure the $n+1$ zeros of the polynomial $(x-E)\mathcal{P}_n(x)$ interlace with the $k$ zeros of $\mathcal{G}_k$, where $k=n$ or $n+1$. In addition, we show that imposing specific conditions on the extra point $E$ yields full interlacing between the zeros of $\mathcal{P}_n$ and $\mathcal{G}_k$ for a suitable choice of $n$. The approach provides a consolidated framework broadly applicable to both orthogonal and non-orthogonal polynomials and we illustrate this with new interlacing results for zeros of Krawtchouk, Meixner, and Narayana polynomials. We also illustrate that this general approach can be used to recover and refine existing results regarding the complete interlacing of zeros for classical Jacobi and Laguerre polynomials.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-04T10:51:26Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Kerstin Jordaan</name>
+    </author>
+    <author>
+      <name>Vikash Kumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.01062v1</id>
+    <title>Positivity of iterated sequences of polynomials</title>
+    <updated>2018-07-03T10:03:29Z</updated>
+    <link href="https://arxiv.org/abs/1807.01062v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.01062v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present some criteria for the $2$-$q$-log-convexity and $3$-$q$-log-convexity of combinatorial sequences, which can be regarded as the first column of certain infinite triangular array $[A_{n,k}(q)]_{n,k\geq0}$ of polynomials in $q$ with nonnegative coefficients satisfying the recurrence relation $$A_{n,k}(q)=A_{n-1,k-1}(q)+g_k(q)A_{n-1,k}(q)+h_{k+1}(q)A_{n-1,k+1}(q).$$ Those criterions can also be presented by continued fractions and generating functions. These allow a unified treatment of the $2$-$q$-log-convexity of alternating Eulerian polynomials, $2$-log-convexity of Euler numbers, and $3$-$q$-log-convexity of many classical polynomials, including the Bell polynomials, the Eulerian polynomials of Types $A$ and $B$, the $q$-Schröder numbers, $q$-central Delannoy numbers, the Narayana polynomials of Types $A$ and $B$, the generating functions of rows in the Catalan triangles of Aigner and Shapiro, the generating functions of rows in the large Schröder triangle, and so on, which extend many known results for $q$-log-convexity.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-03T10:03:29Z</published>
+    <arxiv:comment>It will to appear in SIAM Journal on Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.00716v2</id>
+    <title>A spectral extremal problem on non-bipartite triangle-free graphs</title>
+    <updated>2024-03-12T03:38:38Z</updated>
+    <link href="https://arxiv.org/abs/2304.00716v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.00716v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A theorem of Nosal and Nikiforov states that if $G$ is a triangle-free graph with $m$ edges, then $λ(G)\le \sqrt{m}$, where the equality holds if and only if $G$ is a complete bipartite graph. A well-known spectral conjecture of Bollobás and Nikiforov [J. Combin. Theory Ser. B 97 (2007)] asserts that if $G$ is a $K_{r+1}$-free graph with $m$ edges, then $λ_1^2(G) + λ_2^2(G) \le (1-\frac{1}{r})2m$. Recently, Lin, Ning and Wu [Combin. Probab. Comput. 30 (2021)] confirmed the conjecture in the case $r=2$. Using this base case, they proved further that $λ(G)\le \sqrt{m-1}$ for every non-bipartite triangle-free graph $G$, with equality if and only if $m=5$ and $G=C_5$. Moreover, Zhai and Shu [Discrete Math. 345 (2022)] presented an improvement by showing $λ(G) \le β(m)$, where $β(m)$ is the largest root of $Z(x):=x^3-x^2-(m-2)x+m-3$. The equality in Zhai--Shu's result holds only if $m$ is odd and $G$ is obtained from the complete bipartite graph $K_{2,\frac{m-1}{2}}$ by subdividing exactly one edge. Motivated by this observation, Zhai and Shu proposed a question to find a sharp bound when $m$ is even. We shall solve this question by using a different method and characterize three kinds of spectral extremal graphs over all triangle-free non-bipartite graphs with even size. Our proof technique is mainly based on applying Cauchy interlacing theorem of eigenvalues of a graph, and with the aid of a triangle counting lemma in terms of both eigenvalues and the size of a graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-03T04:38:37Z</published>
+    <arxiv:comment>28 pages. Following reviewer's suggestion, we have changed the original title. arXiv admin note: text overlap with arXiv:2204.09884</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electron. J. Combin. 31 (1) (2024), #P1.52</arxiv:journal_ref>
+    <author>
+      <name>Yongtao Li</name>
+    </author>
+    <author>
+      <name>Lihua Feng</name>
+    </author>
+    <author>
+      <name>Yuejian Peng</name>
+    </author>
+    <arxiv:doi>10.37236/12009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.37236/12009" title="doi"/>
+  </entry>
+</feed>

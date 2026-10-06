@@ -1,0 +1,694 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/moK3zLmGTie0SLLqmeBdg3KkkMA</id>
+  <title>arXiv Query: search_query=(abs:"pattern avoidance" OR abs:"pattern-avoiding" OR abs:"avoiding patterns") AND (abs:"two-dimensional" OR abs:arrays OR abs:matrices)&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-06T23:26:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:%22pattern+avoidance%22+OR+(abs:%22pattern-avoiding%22+OR+abs:%22avoiding+patterns%22))+AND+(abs:%22two-dimensional%22+OR+(abs:arrays+OR+abs:matrices))&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>32</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25528v2</id>
+    <title>On separable permutations and three other pairs in the Schröder class</title>
+    <updated>2026-06-05T03:30:02Z</updated>
+    <link href="https://arxiv.org/abs/2603.25528v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25528v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study positional statistics for four families of pattern-avoiding permutations counted by the large Schröder numbers. Specifically, we focus on the pairs of patterns $\{2413,3142\}$ (separable permutations), $\{1324,1423\}$, $\{1423,2413\}$, and $\{1324,2134\}$. For each class, we derive multivariate generating functions that track the relative positions of specific entries. Our approach combines structural decompositions with the kernel method to obtain explicit formulas involving the generating function for the Schröder numbers. As a byproduct, we obtain alternative proofs that each of these classes is enumerated by the Schröder numbers. We also identify several known triangular arrays arising from our positional refinements, including connections to the central binomial coefficients and sequences appearing in the work of Kreweras on covering hierarchies.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T15:00:56Z</published>
+    <arxiv:comment>15 pages. Revised version with a better introduction</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Juan B. Gil</name>
+    </author>
+    <author>
+      <name>Oscar A. Lopez</name>
+    </author>
+    <author>
+      <name>Michael D. Weiner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.15920v1</id>
+    <title>Schubert Polynomials and Elementary Symmetric Products</title>
+    <updated>2025-11-19T23:07:57Z</updated>
+    <link href="https://arxiv.org/abs/2511.15920v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.15920v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the factorization of Schubert polynomials into elementary symmetric polynomials. We conjecture that this occurs when the permutation corresponding to the Schubert polynomial does not contain the patterns $1432$, $1423$, $4132$, and $3142$. We prove one direction of this and provide progress towards the second direction, including obstructions arising from permutations with a rectangular array of crosses in their bottom pipe dream. This characterization helps us identify new ties between elementary symmetric polynomials and Schubert polynomials. It contributes to the broader understanding of pattern avoidance phenomena in algebraic combinatorics.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-19T23:07:57Z</published>
+    <arxiv:comment>8 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Oma Makhija</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.06118v4</id>
+    <title>Growing Avoiders from the Right: An Operator-Theoretic Approach</title>
+    <updated>2025-12-13T14:25:25Z</updated>
+    <link href="https://arxiv.org/abs/2511.06118v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.06118v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>(Work in progress) Marcus and Tardos \cite{MarcusTardos2004} proved the Stanley--Wilf conjecture by reducing pattern avoidance to an extremal problem on $0$--$1$ matrices. We give a parallel proof for classical permutation patterns that stays entirely in the ``grow from the right'' world of enumerative combinatorics. A $v$-avoiding permutation is built by right insertion; at each step we keep a pruned family of locations of $(k{-}1)$-partial occurrences of $v$ (the \emph{frontier}), each carrying its forbidden rank interval. The insertion step then induces a nonnegative transfer operator on a doubly weighted $\ell^\infty$ space. A quadratic penalty in the length makes this operator bounded, and a Neumann-series argument on a natural separable predual yields analyticity of the growth series, hence finite exponential growth for $\Av(v)$.
+  The formulation is completely internal -- we never pass to $0$--$1$ matrices -- and it cleanly separates the pattern-dependent combinatorics of the frontier from a purely operator-theoretic core. In particular, we obtain an abstract ``right-insertion/transfer-operator'' theorem: any system whose frontier grows at most linearly and whose transfer operator satisfies a uniform quadratic length bound has an analytic growth series.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-08T20:02:09Z</published>
+    <arxiv:comment>Status update Dec 2025. The proof uses a duality Neumann series step that needs continuity of a summation functional in a decaying weight space, but this continuity fails, leaving a gap. The main and abstract theorems are provisional while I fix this or replace it with a combinatorial lemma. Suggestions welcome, please email me</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Reza Rastegar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.10480v2</id>
+    <title>Some algebraic properties of ASM varieties</title>
+    <updated>2025-05-16T12:03:01Z</updated>
+    <link href="https://arxiv.org/abs/2505.10480v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.10480v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fulton's matrix Schubert varieties are affine varieties that arise in the study of Schubert calculus in the complete flag variety. Weigandt showed that arbitrary intersections of matrix Schubert varieties, now called ASM varieties, are indexed by alternating sign matrices (ASMs), objects with a long history in enumerative combinatorics. It is very difficult to assess Cohen-Macaulayness of ASM varieties or to compute their codimension, though these properties are well understood for matrix Schubert varieties due to work of Fulton. In this paper we study these properties of ASM varieties with a focus on the relationship between a pair of ASMs and their direct sum. We also consider ASM pattern avoidance from an algebro-geometric perspective.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-15T16:28:50Z</published>
+    <arxiv:comment>From UMN REU, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ilani Axelrod-Freed</name>
+    </author>
+    <author>
+      <name>Hanson Hao</name>
+    </author>
+    <author>
+      <name>Matthew Kendall</name>
+    </author>
+    <author>
+      <name>Patricia Klein</name>
+    </author>
+    <author>
+      <name>Yuyuan Luo</name>
+    </author>
+    <arxiv:doi>10.1017/S0017089525100840</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/S0017089525100840" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.10849v1</id>
+    <title>Ordered InAs quantum dots on pre-patterned GaAs (0 0 1) by local oxidation nanolithography</title>
+    <updated>2025-01-18T18:48:12Z</updated>
+    <link href="https://arxiv.org/abs/2501.10849v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.10849v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ordered InAs quantum dot (QD) arrays have been obtained on pre-patterned GaAs (0 0 1) substrates by atomic force microscopy (AFM) local oxidation nanolithography. Prior to InAs molecular beam epitaxy (MBE) deposition, an ordered square array of nanoholes is formed at the GaAs pre-patterned surface following in situ etching with atomic hydrogen. A low substrate temperature is maintained during the whole process in order to avoid pattern smoothing. Our results show that the density and dimensions of the nanoholes on the GaAs surface determine InAs QD size, nucleation site and InAs dose necessary for their formation. As a function of the geometrical parameters of the nanohole array, we can obtain either ordered 2D arrays of separated QD, closely packed QD or localized areas for QD formation.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-18T18:48:12Z</published>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>J. Crystal Growth 284, 313-318 (2005)</arxiv:journal_ref>
+    <author>
+      <name>J. Martín-Sánchez</name>
+    </author>
+    <author>
+      <name>Y. González</name>
+    </author>
+    <author>
+      <name>L. González</name>
+    </author>
+    <author>
+      <name>M. Tello</name>
+    </author>
+    <author>
+      <name>R. García</name>
+    </author>
+    <author>
+      <name>D. Granados</name>
+    </author>
+    <author>
+      <name>J. M. García</name>
+    </author>
+    <author>
+      <name>F. Briones</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcrysgro.2005.06.055</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcrysgro.2005.06.055" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.19730v3</id>
+    <title>High-dimensional permutons: theory and applications</title>
+    <updated>2025-01-31T18:34:43Z</updated>
+    <link href="https://arxiv.org/abs/2412.19730v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.19730v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Permutons, which are probability measures on the unit square $[0, 1]^2$ with uniform marginals, are the natural scaling limits for sequences of (random) permutations.
+  We introduce a $d$-dimensional generalization of these measures for all $d \ge 2$, which we call $d$-dimensional permutons, and extend -- from the two-dimensional setting -- the theory to prove convergence of sequences of (random) $d$-dimensional permutations to (random) $d$-dimensional permutons.
+  Building on this new theory, we determine the random high-dimensional permuton limits for two natural families of high-dimensional permutations. First, we determine the $3$-dimensional permuton limit for Schnyder wood permutations, which bijectively encode planar triangulations decorated by triples of spanning trees known as Schnyder woods. Second, we identify the $d$-dimensional permuton limit for $d$-separable permutations, a pattern-avoiding class of $d$-dimensional permutations generalizing ordinary separable permutations.
+  Both high-dimensional permuton limits are random and connected to previously studied universal 2-dimensional permutons, such as the Brownian separable permutons and the skew Brownian permutons, and share interesting connections with objects arising from random geometry, including the continuum random tree, Schramm--Loewner evolutions, and Liouville quantum gravity surfaces.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-27T16:40:41Z</published>
+    <arxiv:comment>Please feel free to make comments! (Additional remarks added.)</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Jacopo Borga</name>
+    </author>
+    <author>
+      <name>Andrew Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.07662v2</id>
+    <title>Enumeration of pattern-avoiding alternating sign matrices: An asymptotic dichotomy</title>
+    <updated>2025-09-12T10:22:12Z</updated>
+    <link href="https://arxiv.org/abs/2411.07662v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.07662v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We completely classify the asymptotic behavior of the number of alternating sign matrices classically avoiding a single permutation pattern, in the sense of [Johansson and Linusson 2007]. In particular, we give a uniform proof of an exponential upper bound for the number of alternating sign matrices classically avoiding one of eleven particular patterns, and a super-exponential lower bound for all other single-pattern avoidance classes. We also show that for any fixed integer $k$, there is an exponential upper bound for the number of alternating sign matrices that classically avoid any single permutation pattern and contain precisely $k$ negative ones. Finally, we prove that there must be at most $3$ negative ones in an alternating sign matrix which classically avoids both $2143$ and $3412$, and we exactly enumerate the number of them with precisely $3$ negative ones.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-12T09:25:51Z</published>
+    <arxiv:comment>revised according to referees' comments</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mathilde Bouvel</name>
+    </author>
+    <author>
+      <name>Eric S. Egge</name>
+    </author>
+    <author>
+      <name>Rebecca N. Smith</name>
+    </author>
+    <author>
+      <name>Jessica Striker</name>
+    </author>
+    <author>
+      <name>Justin M. Troyka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.05311v4</id>
+    <title>Key-avoidance for alternating sign matrices</title>
+    <updated>2025-03-11T12:28:08Z</updated>
+    <link href="https://arxiv.org/abs/2408.05311v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.05311v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We initiate a systematic study of key-avoidance on alternating sign matrices (ASMs) defined via pattern-avoidance on an associated permutation called the \emph{key} of an ASM. We enumerate alternating sign matrices whose key avoids a given set of permutation patterns in several instances. We show that ASMs whose key avoids $231$ are permutations, thus any known enumeration for a set of permutation patterns including $231$ extends to ASMs. We furthermore enumerate by the Catalan numbers ASMs whose key avoids both $312$ and $321$. We also show ASMs whose key avoids $312$ are in bijection with the gapless monotone triangles of [Ayyer, Cori, Gouyou-Beauchamps 2011]. Thus key-avoidance generalizes the notion of $312$-avoidance studied there. Finally, we enumerate ASMs with a given key avoiding $312$ and $321$ using a connection to Schubert polynomials, thereby deriving an interesting Catalan identity.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-09T19:20:18Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 27:1, Permutation Patterns 2024, Special issues (March 13, 2025) dmtcs:14058</arxiv:journal_ref>
+    <author>
+      <name>Mathilde Bouvel</name>
+    </author>
+    <author>
+      <name>Rebecca Smith</name>
+    </author>
+    <author>
+      <name>Jessica Striker</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.14058</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.14058" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.02782v2</id>
+    <title>Log-concavity and log-convexity via distributive lattices</title>
+    <updated>2026-09-14T18:28:24Z</updated>
+    <link href="https://arxiv.org/abs/2408.02782v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.02782v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a lemma, which we call the Order Ideal Lemma, that can be used to demonstrate a wide array of log-concavity and log-convexity results in a combinatorial manner using order ideals in distributive lattices. We use the Order Ideal Lemma to prove log-concavity and log-convexity of various sequences involving lattice paths (Catalan, Motzkin and large Schröder numbers), intervals in Young's lattice, order polynomials, specializations of Schur and Schur Q-functions, Lucas sequences, descent and peak polynomials of permutations, pattern avoidance, set partitions, and noncrossing partitions. We end with a section with conjectures and outlining future directions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-05T18:58:35Z</published>
+    <arxiv:comment>40 pages, 10 figuess, corrected the proof of Theorem 6.7</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jinting Liang</name>
+      <arxiv:affiliation>University of British Columbia</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruce E. Sagan</name>
+      <arxiv:affiliation>Michigan State University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.03322v1</id>
+    <title>Enhancing Aeroacoustic Wind Tunnel Studies through Massive Channel Upscaling with MEMS Microphones</title>
+    <updated>2024-05-06T09:59:20Z</updated>
+    <link href="https://arxiv.org/abs/2405.03322v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.03322v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a large 6~m x 3~m aperture 7200 MEMS microphone array. The array is designed so that sub-arrays with optimized point spread functions can be used for beamforming and thus, enable the research of source directivity in wind tunnel facilities. The total array consists of modular 800 microphone panels, each consisting of four unique PCB board designs. This modular architecture allows for the time-synchronized measurement of an arbitrary number of panels and thus, aperture size and total number of sensors. The panels can be installed without a gap so that the array's microphone pattern avoids high sidelobes in the point spread function. The array's capabilities are evaluated on a 1:9.5 airframe half model in an open wind tunnel at DNW-NWB. The total source emission is quantified and the directivity is evaluated with beamforming. Additional far-field microphones are employed to validate the results.</summary>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ins-det" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-06T09:59:20Z</published>
+    <arxiv:comment>30th AIAA/CEAS Aeroacoustics Conference</arxiv:comment>
+    <arxiv:primary_category term="cs.SD"/>
+    <author>
+      <name>Daniel Ernst</name>
+    </author>
+    <author>
+      <name>Armin Goudarzi</name>
+    </author>
+    <author>
+      <name>Reinhard Geisler</name>
+    </author>
+    <author>
+      <name>Florian Philipp</name>
+    </author>
+    <author>
+      <name>Thomas Ahlefeldt</name>
+    </author>
+    <author>
+      <name>Carsten Spehr</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.16404v1</id>
+    <title>Counting $U(N)^{\otimes r}\otimes O(N)^{\otimes q}$ invariants and tensor model observables</title>
+    <updated>2024-04-25T08:31:40Z</updated>
+    <link href="https://arxiv.org/abs/2404.16404v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.16404v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>$U(N)^{\otimes r} \otimes O(N)^{\otimes q}$ invariants are constructed by contractions of complex tensors of order $r+q$, also denoted $(r,q)$. These tensors transform under $r$ fundamental representations of the unitary group $U(N)$ and $q$ fundamental representations of the orthogonal group $O(N)$. Therefore, $U(N)^{\otimes r} \otimes O(N)^{\otimes q}$ invariants are tensor model observables endowed with a tensor field of order $(r,q)$. We enumerate these observables using group theoretic formulae, for arbitrary tensor fields of order $(r,q)$. Inspecting lower-order cases reveals that, at order $(1,1)$, the number of invariants corresponds to a number of 2- or 4-ary necklaces that exhibit pattern avoidance, offering insights into enumerative combinatorics. For a general order $(r,q)$, the counting can be interpreted as the partition function of a topological quantum field theory (TQFT) with the symmetric group serving as gauge group. We identify the 2-complex pertaining to the enumeration of the invariants, which in turn defines the TQFT, and establish a correspondence with countings associated with covers of diverse topologies. For $r&gt;1$, the number of invariants matches the number of ($q$-dependent) weighted equivalence classes of branched covers of the 2-sphere with $r$ branched points. At $r=1$, the counting maps to the enumeration of branched covers of the 2-sphere with $q+3$ branched points. The formalism unveils a wide array of novel integer sequences that have not been previously documented. We also provide various codes for running computational experiments.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-25T08:31:40Z</published>
+    <arxiv:comment>49 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Remi Cocou Avohou</name>
+    </author>
+    <author>
+      <name>Joseph Ben Geloun</name>
+    </author>
+    <author>
+      <name>Reiko Toriumi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.06518v4</id>
+    <title>Pattern Avoidance in Weak Ascent Sequences</title>
+    <updated>2024-07-15T15:19:49Z</updated>
+    <link href="https://arxiv.org/abs/2309.06518v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.06518v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study pattern avoidance in weak ascent sequences, giving some results for patterns of length 3. This is an analogous study to one given by Duncan and Steingrímsson (2011) for ascent sequences. More precisely, we provide systematically the generating functions for the number of weak ascent sequences avoiding the patterns $001, 011, 012, 021$, and $102$. Additionally, we establish bijective connections between pattern-avoiding weak ascent sequences and other combinatorial objects, such as compositions, upper triangular 01-matrices, and plane trees.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-12T18:50:15Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 26:1, Permutation Patterns 2023, Special issues (August 21, 2024) dmtcs:12273</arxiv:journal_ref>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Toufik Mansour</name>
+    </author>
+    <author>
+      <name>José L. Ramírez</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.12273</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.12273" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.04112v1</id>
+    <title>Improved Pattern-Avoidance Bounds for Greedy BSTs via Matrix Decomposition</title>
+    <updated>2022-11-08T09:21:28Z</updated>
+    <link href="https://arxiv.org/abs/2211.04112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.04112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Greedy BST (or simply Greedy) is an online self-adjusting binary search tree defined in the geometric view ([Lucas, 1988; Munro, 2000; Demaine, Harmon, Iacono, Kane, Patrascu, SODA 2009). Along with Splay trees (Sleator, Tarjan 1985), Greedy is considered the most promising candidate for being dynamically optimal, i.e., starting with any initial tree, their access costs on any sequence is conjectured to be within $O(1)$ factor of the offline optimal. However, in the past four decades, the question has remained elusive even for highly restricted input.
+  In this paper, we prove new bounds on the cost of Greedy in the ''pattern avoidance'' regime. Our new results include:
+  The (preorder) traversal conjecture for Greedy holds up to a factor of $O(2^{α(n)})$, improving upon the bound of $2^{α(n)^{O(1)}}$ in (Chalermsook et al., FOCS 2015). This is the best known bound obtained by any online BSTs.
+  We settle the postorder traversal conjecture for Greedy.
+  The deque conjecture for Greedy holds up to a factor of $O(α(n))$, improving upon the bound $2^{O(α(n))}$ in (Chalermsook, et al., WADS 2015).
+  The split conjecture holds for Greedy up to a factor of $O(2^{α(n)})$.
+  Key to all these results is to partition (based on the input structures) the execution log of Greedy into several simpler-to-analyze subsets for which classical forbidden submatrix bounds can be leveraged. Finally, we show the applicability of this technique to handle a class of increasingly complex pattern-avoiding input sequences, called $k$-increasing sequences.
+  As a bonus, we discover a new class of permutation matrices whose extremal bounds are polynomially bounded. This gives a partial progress on an open question by Jacob Fox (2013).</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-08T09:21:28Z</published>
+    <arxiv:comment>Accepted to SODA 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Parinya Chalermsook</name>
+    </author>
+    <author>
+      <name>Manoj Gupta</name>
+    </author>
+    <author>
+      <name>Wanchote Jiamjitrak</name>
+    </author>
+    <author>
+      <name>Nidia Obscura Acosta</name>
+    </author>
+    <author>
+      <name>Akash Pareek</name>
+    </author>
+    <author>
+      <name>Sorrachai Yingchareonthawornchai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.07715v3</id>
+    <title>Combinatorial Exploration: An algorithmic framework for enumeration</title>
+    <updated>2024-10-15T16:23:50Z</updated>
+    <link href="https://arxiv.org/abs/2202.07715v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.07715v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Combinatorial Exploration is a new domain-agnostic algorithmic framework to automatically and rigorously study the structure of combinatorial objects and derive their counting sequences and generating functions. We describe how it works and provide an open-source Python implementation. As a prerequisite, we build up a new theoretical foundation for combinatorial decomposition strategies and combinatorial specifications.
+  We then apply Combinatorial Exploration to the domain of permutation patterns, to great effect. We rederive hundreds of results in the literature in a uniform manner and prove many new ones. These results can be found in a new public database, the Permutation Pattern Avoidance Library (PermPAL) at https://permpal.com. Finally, we give three additional proofs-of-concept, showing examples of how Combinatorial Exploration can prove results in the domains of alternating sign matrices, polyominoes, and set partitions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-15T20:29:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Michael H. Albert</name>
+    </author>
+    <author>
+      <name>Christian Bean</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Émile Nadeau</name>
+    </author>
+    <author>
+      <name>Jay Pantone</name>
+    </author>
+    <author>
+      <name>Henning Ulfarsson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.11527v2</id>
+    <title>Permutations with non-decreasing transposition array and pattern avoidance</title>
+    <updated>2022-08-16T09:26:59Z</updated>
+    <link href="https://arxiv.org/abs/2111.11527v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.11527v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give some results about a bijection associating each permutation with a subexcedant function. This function is related to a particular decomposition of the permutation as a product of transpositions and therefore it has been called transposition array in the literature. In particular, we identify anti-exceedance positions of the permutation through its transposition array and we give an expression of the bijection in terms of the cycle structure of the permutation. We give a characterization of a family of permutations having a non-decreasing transposition array and study length 3 pattern avoidance therein.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-22T20:56:29Z</published>
+    <arxiv:comment>20 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Fufa Beyene</name>
+    </author>
+    <author>
+      <name>Roberto Mantaci</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.03159v2</id>
+    <title>Weak ascent sequences and related combinatorial structures</title>
+    <updated>2022-10-10T07:21:52Z</updated>
+    <link href="https://arxiv.org/abs/2111.03159v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.03159v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we introduce {\em weak ascent sequences}, a class of number sequences that properly contains ascent sequences. We show how these sequences uniquely encode each of the following objects: permutations avoiding a particular length-4 bivincular pattern; upper-triangular binary matrices that satisfy a column-adjacency rule; factorial posets that are weakly (3+1)-free. We also show how weak ascent sequences are related to a class of pattern avoiding inversion sequences that has been a topic of recent research by Auli and Elizalde. Finally, we consider the problem of enumerating these new sequences and give a closed form expression for the number of weak ascent sequences having a prescribed length and number of weak ascents.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-04T21:04:00Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.14516v1</id>
+    <title>Constructions in combinatorics via neural networks</title>
+    <updated>2021-04-29T17:32:56Z</updated>
+    <link href="https://arxiv.org/abs/2104.14516v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.14516v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate how by using a reinforcement learning algorithm, the deep cross-entropy method, one can find explicit constructions and counterexamples to several open conjectures in extremal combinatorics and graph theory. Amongst the conjectures we refute are a question of Brualdi and Cao about maximizing permanents of pattern avoiding matrices, and several problems related to the adjacency and distance eigenvalues of graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-29T17:32:56Z</published>
+    <arxiv:comment>23 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Adam Zsolt Wagner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.00379v2</id>
+    <title>Pattern-Avoiding (0,1)-Matrices</title>
+    <updated>2020-05-05T15:10:07Z</updated>
+    <link href="https://arxiv.org/abs/2005.00379v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.00379v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate pattern-avoiding (0,1)-matrices as generalizations of pattern-avoiding permutations. Our emphasis is on 123-avoiding and 321-avoiding patterns for which we obtain exact results as to the maximum number of 1's such matrices can have. We also give algorithms when carried out in all possible ways, construct all of the pattern-avoiding matrices of these two types.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-01T13:52:03Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Richard A. Brualdi</name>
+    </author>
+    <author>
+      <name>Lei Cao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.11505v2</id>
+    <title>Refining the bijections among ascent sequences, (2+2)-free posets, integer matrices and pattern-avoiding permutations</title>
+    <updated>2019-05-23T19:32:41Z</updated>
+    <link href="https://arxiv.org/abs/1807.11505v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.11505v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The combined work of Bousquet-Mélou, Claesson, Dukes, Jelínek, Kitaev, Kubitzke and Parviainen has resulted in non-trivial bijections among ascent sequences, (2+2)-free posets, upper-triangular integer matrices, and pattern-avoiding permutations. To probe the finer behavior of these bijections, we study two types of restrictions on ascent sequences. These restrictions are motivated by our results that their images under the bijections are natural and combinatorially significant. In addition, for one restriction, we are able to determine the effect of poset duality on the corresponding ascent sequences, matrices and permutations, thereby answering a question of the first author and Parviainen in this case. The second restriction should appeal to Catalaniacs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-30T18:01:37Z</published>
+    <arxiv:comment>24 pages, 4 figures. To appear in Journal of Combinatorial Theory, Series A</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+    <author>
+      <name>Peter R. W. McNamara</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.02411v1</id>
+    <title>Improved bounds on the extremal function of hypergraphs</title>
+    <updated>2018-07-05T00:46:02Z</updated>
+    <link href="https://arxiv.org/abs/1807.02411v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.02411v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A fundamental problem in pattern avoidance is describing the asymptotic behavior of the extremal function and its generalizations. We prove an equivalence between the asymptotics of the graph extremal function for a class of bipartite graphs and the asymptotics of the matrix extremal function. We use the equivalence to prove several new bounds on the extremal functions of graphs. We develop a new method to bound the extremal function of hypergraphs in terms of the extremal function of their associated multidimensional matrices, improving the bound of the extremal function of $d$-permutation hypergraphs of length $k$ from $O(n^{d-1})$ to $2^{O(k)}n^{d-1}$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-05T00:46:02Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>William Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.06265v3</id>
+    <title>Pattern Avoidance of Generalized Permutations</title>
+    <updated>2018-05-14T06:04:02Z</updated>
+    <link href="https://arxiv.org/abs/1804.06265v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.06265v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study pattern avoidances of generalized permutations and show that the number of all generalized permutations avoiding $π$ is independent of the choice of $π\in S_3$, which extends the classic results on permutations avoiding $π\in S_3$. Extending both Dyck path and Riordan path, we introduce the Catalan-Riordan path which turns out to be a combinatorial interpretation of the difference array of Catalan numbers. As applications, we interpret both Motzkin and Riordan numbers in two ways, via semistandard Young tableaux of two rows and generalized permutations avoiding $π\in S_3$. Analogous to Lewis's method, we establish a bijection from generalized permutations to rectangular semistandard Young tableaux which will recover several known results in the literature.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-17T13:59:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Zhousheng Mei</name>
+    </author>
+    <author>
+      <name>Suijie Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.01597v1</id>
+    <title>Counting with Borel's Triangle</title>
+    <updated>2018-04-04T20:20:13Z</updated>
+    <link href="https://arxiv.org/abs/1804.01597v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.01597v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Borel's triangle is an array of integers closely related to the classical Catalan numbers. In this paper we study combinatorial statistics counted by Borel's triangle. We present various combinatorial interpretations of Borel's triangle in terms of lattice paths, binary trees, and pattern avoiding permutations and matchings, and derive a functional equation that is useful in analyzing the involved structures.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-04T20:20:13Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yue Cai</name>
+    </author>
+    <author>
+      <name>Catherine Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1610.09806v2</id>
+    <title>The design of efficient algorithms for enumeration</title>
+    <updated>2017-05-15T11:17:22Z</updated>
+    <link href="https://arxiv.org/abs/1610.09806v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1610.09806v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many algorithms have been developed for enumerating various combinatorial objects in time exponentially less than the number of objects. Two common classes of algorithms are dynamic programming and the transfer matrix method. This paper covers the design and implementation of such algorithms.
+  A host of general techniques for improving efficiency are described. Three quite different example problems are used for examples: 1324 pattern avoiding permutations, three-dimensional polycubes, and two-dimensional directed animals.
+  For those new to the field, this paper is designed to be an introduction to many of the tricks for producing efficient enumeration algorithms. For those more experienced, it will hopefully help them understand the interrelationship and implications of a variety of techniques, many or most of which will be familiar. The author certainly found his understanding improved as a result of writing this paper.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-10-31T07:09:34Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Andrew R. Conway</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.03364v1</id>
+    <title>Relations on words</title>
+    <updated>2016-02-10T13:27:25Z</updated>
+    <link href="https://arxiv.org/abs/1602.03364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.03364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the first part of this survey, we present classical notions arising in combinatorics on words: growth function of a language, complexity function of an infinite word, pattern avoidance, periodicity and uniform recurrence. Our presentation tries to set up a unified framework with respect to a given binary relation.
+  In the second part, we mainly focus on abelian equivalence, $k$-abelian equivalence, combinatorial coefficients and associated relations, Parikh matrices and $M$-equivalence. In particular, some new refinements of abelian equivalence are introduced.</summary>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-10T13:27:25Z</published>
+    <arxiv:primary_category term="cs.FL"/>
+    <author>
+      <name>Michel Rigo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.03874v1</id>
+    <title>Extremal Functions of Forbidden Multidimensional Matrices</title>
+    <updated>2015-06-11T23:50:07Z</updated>
+    <link href="https://arxiv.org/abs/1506.03874v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.03874v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pattern avoidance is a central topic in graph theory and combinatorics. Pattern avoidance in matrices has applications in computer science and engineering, such as robot motion planning and VLSI circuit design. A $d$-dimensional zero-one matrix $A$ avoids another $d$-dimensional zero-one matrix $P$ if no submatrix of $A$ can be transformed to $P$ by changing some ones to zeros. A fundamental problem is to study the maximum number of nonzero entries in a $d$-dimensional $n \times \cdots \times n$ matrix that avoids $P$. This maximum number, denoted by $f(n,P,d)$, is called the extremal function.
+  We advance the extremal theory of matrices in two directions. The methods that we use come from combinatorics, probability, and analysis. Firstly, we obtain non-trivial lower and upper bounds on $f(n,P,d)$ when $n$ is large for every $d$-dimensional block permutation matrix $P$. We establish the tight bound $Θ(n^{d-1})$ on $f(n,P,d)$ for every $d$-dimensional tuple permutation matrix $P$. This tight bound has the lowest possible order that an extremal function of a nontrivial matrix can ever achieve. Secondly, we show that $f(n,P,d)$ is super-homogeneous for a class of matrices $P$. We use this super-homogeneity to show that the limit inferior of the sequence $\{ {f(n,P,d) \over n^{d-1}}\}$ has a lower bound $2^{Ω(k^{1/ d})}$ for a family of $k \times \cdots \times k$ permutation matrices $P$. We also improve the upper bound on the limit superior from $2^{O(k \log k)}$ to $2^{O(k)}$ for all $k \times \cdots \times k$ permutation matrices and show that the new upper bound also holds for tuple permutation matrices.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-11T23:50:07Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jesse T. Geneson</name>
+    </author>
+    <author>
+      <name>Peter M. Tian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.00914v1</id>
+    <title>p-Ascent Sequences</title>
+    <updated>2015-03-03T12:11:11Z</updated>
+    <link href="https://arxiv.org/abs/1503.00914v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.00914v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A sequence $(a_1, \ldots, a_n)$ of nonnegative integers is an {\em ascent sequence} if $a_0 =0$ and for all $i \geq 2$, $a_i$ is at most 1 plus the number of ascents in $(a_1, \ldots, a_{i-1})$. Ascent sequences were introduced by Bousquet-Mélou, Claesson, Dukes, and Kitaev, who showed that these sequences of length $n$ are in 1-to-1 correspondence with \tpt-free posets of size $n$, which, in turn, are in 1-to-1 correspondence with interval orders of size $n$. Ascent sequences are also in bijection with several other classes of combinatorial objects including the set of upper triangular matrices with nonnegative integer entries such that no row or column contains all zeros, permutations that avoid a certain mesh pattern, and the set of Stoimenow matchings.
+  In this paper, we introduce a generalization of ascent sequences, which we call {\em $p$-ascent sequences}, where $p \geq 1$. A sequence $(a_1, \ldots, a_n)$ of nonnegative integers is a $p$-ascent sequence if $a_0 =0$ and for all $i \geq 2$, $a_i$ is at most $p$ plus the number of ascents in $(a_1, \ldots, a_{i-1})$. Thus, in our terminology, ascent sequences are 1-ascent sequences. We generalize a result of the authors by enumerating $p$-ascent sequences with respect to the number of $0$s. We also generalize a result of Dukes, Kitaev, Remmel, and Steingrímsson by finding the generating function for the number of $p$-ascent sequences which have no consecutive repeated elements. Finally, we initiate the study of pattern-avoiding $p$-ascent sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-03T12:11:11Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Jeffrey Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1405.3146v1</id>
+    <title>Enumeration of polyominoes defined in terms of pattern avoidance or convexity constraints</title>
+    <updated>2014-05-13T13:42:40Z</updated>
+    <link href="https://arxiv.org/abs/1405.3146v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1405.3146v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this thesis, we consider the problem of characterizing and enumerating sets of polyominoes described in terms of some constraints, defined either by convexity or by pattern containment. We are interested in a well known subclass of convex polyominoes, the k-convex polyominoes for which the enumeration according to the semi-perimeter is known only for k=1,2. We obtain, from a recursive decomposition, the generating function of the class of k-convex parallelogram polyominoes, which turns out to be rational. Noting that this generating function can be expressed in terms of the Fibonacci polynomials, we describe a bijection between the class of k-parallelogram polyominoes and the class of planted planar trees having height less than k+3. In the second part of the thesis we examine the notion of pattern avoidance, which has been extensively studied for permutations. We introduce the concept of pattern avoidance in the context of matrices, more precisely permutation matrices and polyomino matrices. We present definitions analogous to those given for permutations and in particular we define polyomino classes, i.e. sets downward closed with respect to the containment relation. So, the study of the old and new properties of the redefined sets of objects has not only become interesting, but it has also suggested the study of the associated poset. In both approaches our results can be used to treat open problems related to polyominoes as well as other combinatorial objects.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-05-13T13:42:40Z</published>
+    <arxiv:comment>PhD thesis</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Daniela Battaglino</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.3336v1</id>
+    <title>Permutation Patterns in Latin Squares</title>
+    <updated>2014-02-13T23:34:33Z</updated>
+    <link href="https://arxiv.org/abs/1402.3336v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.3336v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study pattern avoidance in Latin Squares, which gives us a two dimensional analogue of the well studied notion of pattern avoidance in permutations. Our main results include enumerating and characterizing the Latin Squares which avoid patterns of length three and a generalization of the Erdős-Szekeres theorem. We also discuss equivalence classes among longer patterns, and conclude by describing open questions of interest both in light of pattern avoidance and their potential to reveal information about the structure of Latin Squares. Along the way, we show that classical results need not trivially generalize, and demonstrate techniques that may help answer future questions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-13T23:34:33Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Australsian Journal of Combinatorics 59 (2014) 218-228</arxiv:journal_ref>
+    <author>
+      <name>Michael J. Earnest</name>
+    </author>
+    <author>
+      <name>Samuel C. Gutekunst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4286v1</id>
+    <title>(a,b)-rectangle patterns in permutations and words</title>
+    <updated>2013-04-15T22:58:42Z</updated>
+    <link href="https://arxiv.org/abs/1304.4286v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4286v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce the notion of a $(a,b)$-rectangle pattern on permutations that not only generalizes the notion of successive elements (bonds) in permutations, but is also related to mesh patterns introduced recently by Brändén and Claesson. We call the $(k,k)$-rectangle pattern the $k$-box pattern. To provide an enumeration result on the maximum number of occurrences of the 1-box pattern, we establish an enumerative result on pattern-avoiding signed permutations.
+  Further, we extend the notion of $(k,\ell)$-rectangle patterns to words and binary matrices, and provide distribution of $(1,\ell)$-rectangle patterns on words; explicit formulas are given for up to 7 letter alphabets where $\ell \in \{1,2\}$, while obtaining distributions for larger alphabets depends on inverting a matrix we provide. We also provide similar results for the distribution of bonds over words. As a corollary to our studies we confirm a conjecture of Mathar on the number of "stable LEGO walls" of width 7 as well as prove three conjectures due to Hardin and a conjecture due to Barker. We also enumerate two sequences published by Hardin in the On-Line Encyclopedia of Integer Sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T22:58:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Jeffrey Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1101.1666v1</id>
+    <title>Monotone triangles and 312 Pattern Avoidance</title>
+    <updated>2011-01-09T19:41:56Z</updated>
+    <link href="https://arxiv.org/abs/1101.1666v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1101.1666v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate a natural bijection between a subclass of alternating sign matrices (ASMs) defined by a condition on the corresponding monotone triangle which we call the gapless condition and a subclass of totally symmetric self-complementary plane partitions defined by a similar condition on the corresponding fundamental domains or Magog triangles. We prove that, when restricted to permutations, this class of ASMs reduces to 312-avoiding permutations. This leads us to generalize pattern avoidance on permutations to a family of words associated to ASMs, which we call Gog words. We translate the gapless condition on monotone trangles into a pattern avoidance-like condition on Gog words associated. We estimate the number of gapless monotone triangles using a bijection with p-branchings.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-01-09T19:41:56Z</published>
+    <arxiv:comment>24 pages, 1 figure, dedicated to Doron Zeilberger on the occasion of his sixtieth birthday</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electronic Journal of Combinatorics, Volume 18, Issue 2, P26 (2011)</arxiv:journal_ref>
+    <author>
+      <name>Arvind Ayyer</name>
+    </author>
+    <author>
+      <name>Robert Cori</name>
+    </author>
+    <author>
+      <name>Dominique Gouyou-Beauchamps</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1009.5828v1</id>
+    <title>Stellar intensity interferometry: Optimizing air Cherenkov telescope array layouts</title>
+    <updated>2010-09-29T10:07:31Z</updated>
+    <link href="https://arxiv.org/abs/1009.5828v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1009.5828v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kilometric-scale optical imagers seem feasible to realize by intensity interferometry, using telescopes primarily erected for measuring Cherenkov light induced by gamma rays. Planned arrays envision 50--100 telescopes, distributed over some 1--4 km$^2$. Although array layouts and telescope sizes will primarily be chosen for gamma-ray observations, also their interferometric performance may be optimized. Observations of stellar objects were numerically simulated for different array geometries, yielding signal-to-noise ratios for different Fourier components of the source images in the interferometric $(u,v)$-plane. Simulations were made for layouts actually proposed for future Cherenkov telescope arrays, and for subsets with only a fraction of the telescopes. All large arrays provide dense sampling of the $(u,v)$-plane due to the sheer number of telescopes, irrespective of their geographic orientation or stellar coordinates. However, for improved coverage of the $(u,v)$-plane and a wider variety of baselines (enabling better image reconstruction), an exact east-west grid should be avoided for the numerous smaller telescopes, and repetitive geometric patterns avoided for the few large ones. Sparse arrays become severely limited by a lack of short baselines, and to cover astrophysically relevant dimensions between 0.1--3 milliarcseconds in visible wavelengths, baselines between pairs of telescopes should cover the whole interval 30--2000 m.</summary>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-09-29T10:07:31Z</published>
+    <arxiv:comment>12 pages, 10 figures; presented at the SPIE conference "Optical and Infrared Interferometry II", San Diego, CA, USA (June 2010)</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.IM"/>
+    <arxiv:journal_ref>Optical and Infrared Interferometry II (W.C.Danchi, F.Delplancke, J.K.Rajagopal, eds.), Proc. SPIE vol. 7734, 77341T (2010)</arxiv:journal_ref>
+    <author>
+      <name>Hannes Jensen</name>
+    </author>
+    <author>
+      <name>Dainis Dravins</name>
+    </author>
+    <author>
+      <name>Stephan LeBohec</name>
+    </author>
+    <author>
+      <name>Paul D. Nuñez</name>
+    </author>
+    <arxiv:doi>10.1117/12.856412</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1117/12.856412" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0309135v2</id>
+    <title>Aztec Diamonds and Baxter Permutations</title>
+    <updated>2004-03-02T21:37:46Z</updated>
+    <link href="https://arxiv.org/abs/math/0309135v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0309135v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We present a proof of a conjecture about the relationship between Baxter permutations and pairs of alternating sign matrices that are produced from domino tilings of Aztec diamonds. It is shown that if and only if a tiling corresponds to a pair of ASMs that are both permutation matrices, the larger permutation matrix corresponds to a Baxter permutation.
+  There has been a thriving literature on both pattern-avoiding permutations of various kinds and tilings of regions using dominos or rhombuses as tiles. However, there have not as of yet been many links between these two areas of enumerative combinatorics. This paper gives one such link.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-09-07T20:55:10Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>The Electronic Journal of Combinatorics 17 (2010), #R105</arxiv:journal_ref>
+    <author>
+      <name>Hal Canary</name>
+    </author>
+  </entry>
+</feed>

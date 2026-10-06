@@ -2,7 +2,7 @@
 
 **运行方式**：在本文件夹下执行 `py -3.14 verify_all.py`（需要 numpy：rv2 调用的复核脚本没有纯 Python 回退）。它依次运行 `code/checks/check_*.py`，逐条打印 `PASS <id> <描述（含范围）>` 或 `FAIL …`，最后给出总表；任何 FAIL、子模块异常退出或缺少 SUMMARY 行都会使退出码为 1。
 
-**12 个核对模块**（除 check_rv2.py、check_rv3.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举；check_rv3.py 运行复核者 r-c4ii、r-c3a、s6-t436、s6-t342 的脚本，同样不导入 core，各脚本按定义自算真值：Num_q 的递推，K、I、𝒮 的定义）
+**13 个核对模块**（除 check_rv2.py、check_rv3.py、check_rv4.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举；check_rv3.py 运行复核者 r-c4ii、r-c3a、s6-t436、s6-t342 的脚本，同样不导入 core，各脚本按定义自算真值：Num_q 的递推，K、I、𝒮 的定义；check_rv4.py 运行主 Agent 重推 T2.6(ii) 时写的独立脚本，不导入 core、不复用 x1 的脚本，以自写的 DP 作真值，其余是 Q[x]/(b_i) 中的精确代数）
 
 | 模块 | 内容 | 检查数 |
 |---|---|---|
@@ -18,25 +18,27 @@
 | `check_rv.py` | 第二轮复核的产物：N 三角对照定义、两个反例的范围（d≤46 全正、47≤d≤57 失效；奇数 d≤67 为正、69≤d≤101 为负）、Num_q 同余与 Laguerre 恒等式、负整数零点严格有限验证（k≤40）、恒等式补 s=0 | 7 |
 | `check_rv2.py` | 复核者 x1 的两个独立脚本（不导入 core）：E 部分在 u=1/2 的统一阻碍（m=2..34）与证书复算；U 两族 \|指数\|≤6000、E 两项 ≤1500 无表示 | 2 |
 | `check_rv3.py` | 报告 ⑥ 原有两处所依赖的复核者脚本（不导入 core）：T4.3(6) 由 (7) 的闭式推出 j≤14、按第二份证明构造到 j≤40 与拟合到 j≤24（真实系数 q≤300）；T3.4(2) K 的闭式与定义（两套实现，7 个与 13 个 x）、端到端 I−𝒮（4 组与 11 组 (x,t)）、推论在 105 个 x 上的扫描 | 6 |
+| `check_rv4.py` | 主 Agent 独立重推 T2.6(ii) 所依赖的计算（不导入 core、不复用 x1 的脚本）：E 部分母函数对照自写 DP（m≤6、k≤30）；b_i 根处的化简与留数闭式在 Q[x]/(b_i) 中精确成立（1≤i≤8、i≤m≤40）；K_2 中的范数与 17-进赋值（\|n\|≤60）；b_1、b_2 不可约、b_4 可约。子脚本的完整输出在 `logs/rv4_main_t26ii.log`；反向检查（把闭式常数改成 2 倍，应报 FAIL）见 `logs/main_t26ii_check_reverse.log` | 9 |
 
-**最终一次运行**（本地 2026-10-07，完整输出 `logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行；2026-10-05 的上一次最终运行（11 个模块、290 条，当时本机另有会话在跑基准测试，用时 630.7 s）另存为 `logs/verify_all_final_2026-10-05.log`）：
+**最终一次运行**（本地 2026-10-07，加入 rv4 之后，完整输出 `logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行；同日加入 rv4 之前的一次（12 个模块、296 条）另存为 `logs/verify_all_final_2026-10-07_before_rv4.log`，2026-10-05 的一次（11 个模块、290 条，当时本机另有会话在跑基准测试，用时 630.7 s）另存为 `logs/verify_all_final_2026-10-05.log`）：
 
 ```
 area     pass   fail    rc  summary     secs  status
-c0         13      0     0      yes      4.1  PASS
-c1         45      0     0      yes     39.5  PASS
-c2a        23      0     0      yes     12.2  PASS
-c2b        33      0     0      yes     32.9  PASS
-c3a        34      0     0      yes     22.4  PASS
-c3b        22      0     0      yes     20.0  PASS
-c4         41      0     0      yes     21.7  PASS
-c5a        37      0     0      yes     14.2  PASS
-c5b        33      0     0      yes      5.2  PASS
+c0         13      0     0      yes      4.0  PASS
+c1         45      0     0      yes     37.8  PASS
+c2a        23      0     0      yes     10.3  PASS
+c2b        33      0     0      yes     33.2  PASS
+c3a        34      0     0      yes     21.8  PASS
+c3b        22      0     0      yes     20.7  PASS
+c4         41      0     0      yes     22.6  PASS
+c5a        37      0     0      yes     14.0  PASS
+c5b        33      0     0      yes      4.6  PASS
 rv          7      0     0      yes     14.7  PASS
-rv2         2      0     0      yes      8.3  PASS
-rv3         6      0     0      yes     78.0  PASS
+rv2         2      0     0      yes      7.9  PASS
+rv3         6      0     0      yes     74.0  PASS
+rv4         9      0     0      yes      1.4  PASS
 ------------------------------------------------------------------------
-TOTAL pass=296 fail=0 modules=12 failed_modules=-  (273.3s)
+TOTAL pass=305 fail=0 modules=13 failed_modules=-  (267.0s)
 OVERALL: PASS
 ```
 
@@ -70,7 +72,8 @@ OVERALL: PASS
 | `A207123/NumStruct.lean` | T4.3(1)–(5)（(4)(5) 部分） | `Nser_three_term`（F_q 的递推，含边界项 [q=2]x²）与反例 `Nser_three_term_needs_boundary`；`Numq_three_term`、`Numq_three_term_boundary`、`leadingCoeff_Numq_rec`；容斥闭式 `Num_eq_IE_closed_form`；正项全历史递推 `Numq_full_history`（反例 `full_history_at_two`）、`Numq_hasNonnegCoeffs`、`Numq_coeff_gap`、`Numq_coeff_pos_iff`（支撑）；`Numq_eval_one_rec`、`Numq_eval_one_init`；`Numq_coeff_q_add`、`Numq_coeff_q_add_one`、`Numq_coeff_q_add_two` 与 j≤2 的门槛；`N_six_four`（N(6,4)=65，写法见其说明：不能让内核去核对含具体数字的 `N a b` 之间的定义相等） |
 | `A207123/NearDiag.lean` | T4.1、T4.2(3)、T5.2（部分） | `ndPoly d`（p_d，Newton 形式）；`T4_1_a`、`T4_1`、`T4_1_threshold`、`ndPoly_zero_one`；`T4_2_3`（基点 2d+2 的 Newton 系数为正整数，末项 2(2d−1)!!）；`T5_2_formula`、`T5_2_top`、`T5_2_sub`、`T5_2_sub_three` |
 | `A207123/HStruct.lean` | T5.3(1)–(5) | `nrowPoly k`（N 行多项式 n_k，k≥1）、`Gneg j`（G_{−j}）、`gnegPoly n`（G_{−(n+1)} 作为多项式）、`recipPoly k i`（互反引理中的 C(y−i+k,k)）；(1) `hpoly_eval_zero_eq_one`、`hpoly_eval_one_two`、`hpoly_coeff_one`、`hpoly_coeff_one_pos`、`hpoly_coeff_one_eq_zero`、`hpoly_coeff_one_gf`、`hpoly_coeff_eq_sum`、`iterate_derivative_hpoly_eval_one`（k≥1）与反例 `iterate_derivative_hpoly_eval_one_k_zero`、`hpoly_derivative_eval_one`、`nrowPoly_eval`、`nrowPoly_eq`；(2) `Gneg_one`、`Gneg_succ`、`Gneg_isPoly`、`coeff_gnegPoly_top`、`coeff_gnegPoly_top_one`、`coeff_gnegPoly_top_two`、`upoly_eval_neg_eq_zero`、`upoly_eval_neg_ne_zero`、`prod_dvd_upoly`、`upoly_three_mul_eval`；(3) `upoly_eval_neg_recip`、`natDegree_hpoly`、`leadingCoeff_hpoly_three_mul`、`leadingCoeff_hpoly_three_mul_add_one`、`leadingCoeff_hpoly_three_mul_add_two`、`leadingCoeff_hpoly_sign`；(4) `sum_neg_one_pow_N`、`sum_neg_one_pow_N_eq_zero`、`sum_neg_one_pow_N_small`、`rootMultiplicity_nrowPoly`、`rootMultiplicity_nrowPoly_ceil`；(5) `hpoly_aeval_eq_tsum`、`hpoly_pos_of_mem_Icc`、`hpoly_ne_zero_of_mem_Icc` |
-| `Axioms.lean` | — | 对 252 条定理（报告各条标签与上表中列出的定理）`#print axioms`：全部只依赖 propext、Classical.choice、Quot.sound（其中 `rowRule_iff_allowed` 只用到 Quot.sound、propext）；另对 A207123 各模块的全部 2649 个声明（含辅助引理与自动生成的声明）做全量扫描，依赖其他公理的声明为 0 个 |
+| `A207123/NotStirlingLike.lean` | T3.9（2026-10-07） | `det2`（三个格点的二倍有向面积）；`TU_three_points`（Q≠0 时 Q·L1 的正规形支撑里有三个点，二倍面积 ≥3）；`relU_support_det`、`relU_card_support`（Rel(U) 的非零元至少有三项）、`not_mem_relU_of_support_subset`（支撑含于二倍面积 ≤2 的三点时不在 Rel(U) 中）；从 Kauers 的定义到这里的一步是书面论证，写在文件头 |
+| `Axioms.lean` | — | 对 256 条定理（报告各条标签与上表中列出的定理）`#print axioms`：全部只依赖 propext、Classical.choice、Quot.sound（其中 `rowRule_iff_allowed` 只用到 Quot.sound、propext）；另对 A207123 各模块的全部 2675 个声明（含辅助引理与自动生成的声明）做全量扫描，依赖其他公理的声明为 0 个（2026-10-07 加入 NotStirlingLike.lean 后重跑：新模块单独编译、根模块重编、`Axioms.lean` 与 `Checks.lean` 重跑都通过，日志 logs/lean_notstirling_run2.log、logs/lean_root_2026-10-07.log、logs/lean_axioms_2026-10-07.log、logs/lean_checks_2026-10-07.log；其余 26 个模块沿用当天早些时候全量构建的结果，没有重编） |
 | `Checks.lean` | — | 用 `native_decide` 把定义与数据对照：任务说明第 2 节（k=7、10 两行，R_1..R_10，a_3(1..6)）、(C3) 的 N 三角形 k=7、10 两行（经 `N_inv`、`U_eq_F` 计算）、U_6(3,s) 与 U_7(2,s)（经 `Us_explicit` 计算，对照 Python 按定义暴力枚举的数据）；这是计算核对，依赖编译器，不是证明的一部分 |
 | `run_lean_checks.sh` | — | 按依赖顺序逐个模块 `lake build +A207123.X`（顺序由 `topo_order.py` 给出；任何一步失败就停止），再整体 `lake build` 一次（这时只剩根模块），然后依次运行 `lake env lean Axioms.lean`、`lake env lean Checks.lean`；每一步都经 `lean_one.sh` 串行执行（先拿锁，再等机器上没有其他 lean.exe），输出写入 `logs/lean_build.log` |
 | `run_lean_checks_direct.sh` | — | 同样三步、同样的日志格式，但第 1 步按依赖顺序直接 `lake env lean A207123/X.lean -o … -i …` 从源码编译每个模块，最后编根模块（不经 lake 的构建记录核对：本机内存紧时那一步核对每次要 7–10 分钟）；lakefile 没有额外的编译选项，所以与 lake build 编译的是同一套设置。2026-10-07 的全量构建用的是它 |
@@ -85,4 +88,4 @@ OVERALL: PASS
 - `code/main_extra/gcd_minimal_order.py`：最小阶逐因子检验（v≤300）。
 - 各方向的探索脚本在 `code/<area>/`，复核者的独立脚本在 `code/review/<reviewer>/`，对应日志在 `logs/`（文件名带 area 或 `review_` 前缀）。
 - 各轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`、`logs/phase4b_recheck_output.json`；第四轮各审计者的独立脚本在 `code/review/final-audit/`，输出为 `logs/final_audit_*.log`；报告各轮修订的补丁脚本在 `code/main_extra/report_patches/`；逐条结论清单 `notes/review/claims_<area>.md`，逐条复核意见 `notes/review/<reviewer>-review.md`。
-- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final_2026-10-05.log`（第四轮修订后，11 个模块 290 条）、`logs/verify_all_2026-10-07.log`（修好 c5b 之后，11 个模块 290 条）、`logs/verify_all_final.log`（最终，2026-10-07 加固 ⑥ 之后，12 个模块 296 条）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。
+- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final_2026-10-05.log`（第四轮修订后，11 个模块 290 条）、`logs/verify_all_2026-10-07.log`（修好 c5b 之后，11 个模块 290 条）、`logs/verify_all_final_2026-10-07_before_rv4.log`（2026-10-07 加固原 ⑥ 三处之后，12 个模块 296 条）、`logs/verify_all_final.log`（最终，2026-10-07 加入 rv4 之后，13 个模块 305 条）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。

@@ -150,6 +150,11 @@ import A207123
 #print axioms A207123.mem_relBoxU_iff
 #print axioms A207123.mem_relBoxN_iff
 #print axioms A207123.finrank_spanBox
+-- T3.8 的推论：U 不是 Kauers 意义下的 Stirling-like（NotStirlingLike.lean，2026-10-07）
+#print axioms A207123.TU_three_points
+#print axioms A207123.relU_support_det
+#print axioms A207123.relU_card_support
+#print axioms A207123.not_mem_relU_of_support_subset
 -- T2.7 的前半：Σ_{j<m} P_j 不是 Gosper 可和的（Gosper.lean）
 #print axioms A207123.partialSum_P_not_hypergeometric
 #print axioms A207123.no_gosper_solution

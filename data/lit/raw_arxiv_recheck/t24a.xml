@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/mh7SHlOd6n2uO1Pu+nLUzy1HrYQ</id>
+  <title>arXiv Query: search_query=abs:"r-Stirling" AND (abs:words OR abs:patterns OR abs:sequences OR abs:arrays)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:25:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22r-Stirling%22+AND+(abs:words+OR+(abs:patterns+OR+(abs:sequences+OR+abs:arrays)))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1412.0345v2</id>
+    <title>Quadrant Marked Mesh Patterns and the r-Stirling Numbers</title>
+    <updated>2014-12-18T21:24:54Z</updated>
+    <link href="https://arxiv.org/abs/1412.0345v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.0345v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Marked mesh patterns are a very general type of permutation pattern. We examine a particular marked mesh pattern originally defined by Kitaev and Remmel, and show that its generating function is described by the $r$-Stirling numbers. We examine some ramifications of various properties of the $r$-Stirling numbers for this generating function, and find (seemingly new) formulas for the $r$-Stirling numbers in terms of the classical Stirling numbers and harmonic numbers. We also answer some questions posed by Kitaev and Remmel and show a connection to another mesh pattern introduced by Kitaev and Liese.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-01T04:29:38Z</published>
+    <arxiv:comment>20 pages v.2: Corrected an out-of-date reference</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Matt Davis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.12897v1</id>
+    <title>Restricted $r$-Stirling Numbers and their Combinatorial Applications</title>
+    <updated>2018-11-30T17:08:48Z</updated>
+    <link href="https://arxiv.org/abs/1811.12897v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.12897v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study set partitions with $r$ distinguished elements and block sizes found in an arbitrary index set $S$. The enumeration of these $(S,r)$-partitions leads to the introduction of $(S,r)$-Stirling numbers, an extremely wide-ranging generalization of the classical Stirling numbers and the $r$-Stirling numbers. We also introduce the associated $(S,r)$-Bell and $(S,r)$-factorial numbers. We study fundamental aspects of these numbers, including recurrence relations and determinantal expressions. For $S$ with some extra structure, we show that the inverse of the $(S,r)$-Stirling matrix encodes the Möbius functions of two families of posets. Through several examples, we demonstrate that for some $S$ the matrices and their inverses involve the enumeration sequences of several combinatorial objects. Further, we highlight how the $(S,r)$-Stirling numbers naturally arise in the enumeration of cliques and acyclic orientations of special graphs, underlining their ubiquity and importance. Finally, we introduce related $(S,r)$ generalizations of the poly-Bernoulli and poly-Cauchy numbers, uniting many past works on generalized combinatorial sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-30T17:08:48Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Miguel Méndez</name>
+    </author>
+    <author>
+      <name>José L. Ramírez</name>
+    </author>
+    <author>
+      <name>Tanay Wakhare</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.5573v2</id>
+    <title>Associated Lah numbers and r-Stirling numbers</title>
+    <updated>2014-05-12T17:30:31Z</updated>
+    <link href="https://arxiv.org/abs/1404.5573v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.5573v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the associated Lah numbers. Some recurrence relations and convolution identities are established. An extension of the associated Stirling and Lah numbers to the r-Stirling and r-Lah numbers are also given. For all these sequences we give combinatorial interpretation, generating functions, recurrence relations, convolution identities. In the sequel, we develop a section on nested sums related to binomial coefficient.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-22T17:49:35Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Hacene Belbachir</name>
+    </author>
+    <author>
+      <name>Imad Eddine Bousbaa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.07276v1</id>
+    <title>On the periodicity problem of residual r-Fubini sequences</title>
+    <updated>2017-01-25T12:10:30Z</updated>
+    <link href="https://arxiv.org/abs/1701.07276v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.07276v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For any positive integer $r$, the $r$-Fubini number with parameter $n$, denoted by $F_{n,r}$, is equal to the number of ways that the elements of a set with $n+r$ elements can be weak ordered such that the $r$ least elements are in distinct orders. In this article we focus on the sequence of residues of the $r$-Fubini numbers modulo a positive integer $s$ and show that this sequence is periodic and then, exhibit how to calculate its period length. As an extra result, an explicit formula for the $r$-Stirling numbers is obtained which is frequently used in calculations.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-25T12:10:30Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Amir Abbas Asgari</name>
+    </author>
+    <author>
+      <name>Majid Jahangiri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.23473v1</id>
+    <title>Heterogeneous Stirling numbers and heterogeneous Bell polynomials</title>
+    <updated>2025-03-30T15:13:10Z</updated>
+    <link href="https://arxiv.org/abs/2503.23473v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.23473v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a novel generalization of Stirling and Lah numbers, termed ``heterogeneous Stirling numbers," which smoothly interpolate between these classical combinatorial sequences. Specifically, we define heterogeneous Stirling numbers of the second and first kinds, demonstrating their convergence to standard Stirling numbers for lambda=0 and to (signed) Lah numbers for lambda =1. We derive fundamental properties, including generating functions, explicit formulas, and recurrence relations. Furthermore, we extend these concepts to heterogeneous Bell polynomials, obtaining analogous results such as generating function, combinatorial identity and Dobinski-like formula. Finally, we introduce and analyse heterogeneous r-Stirling numbers of the second kind and their associated r-Bell polynomials.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-30T15:13:10Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.12436v2</id>
+    <title>Statistics on clusters and $r$-Stirling permutations</title>
+    <updated>2023-05-18T04:33:44Z</updated>
+    <link href="https://arxiv.org/abs/2209.12436v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.12436v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Goulden$\unicode{x2013}$Jackson cluster method, adapted to permutations by Elizalde and Noy, reduces the problem of counting permutations by occurrences of a prescribed consecutive pattern to that of counting clusters, which are special permutations with a lot of structure. Recently, Zhuang found a generalization of the cluster method which specializes to refinements by additional permutation statistics, namely the inverse descent number $\operatorname{ides}$, the inverse peak number $\operatorname{ipk}$, and the inverse left peak number $\operatorname{ilpk}$. Continuing this line of work, we study the enumeration of $2134\cdots m$-clusters by $\operatorname{ides}$, $\operatorname{ipk}$, and $\operatorname{ilpk}$, which allows us to derive formulas for counting permutations by occurrences of the consecutive pattern $2134\cdots m$ jointly with each of these statistics. Analogous results for the pattern $12\cdots (m-2)m(m-1)$ are obtained via symmetry arguments. Along the way, we discover that $2134\cdots (r+1)$-clusters are equinumerous with $r$-Stirling permutations introduced by Gessel and Stanley, and we establish some joint equidistributions between these two families of permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-26T05:57:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergi Elizalde</name>
+    </author>
+    <author>
+      <name>Justin M. Troyka</name>
+    </author>
+    <author>
+      <name>Yan Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.04144v1</id>
+    <title>A sum up method for solving summations of the form $\sum_{k=n_0}^{n} A_{n,k}$ and rising and falling factorial transforms</title>
+    <updated>2023-12-07T08:58:53Z</updated>
+    <link href="https://arxiv.org/abs/2312.04144v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.04144v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we discuss a method that utilizes the recurrence of $A_{n,k}$ to solve summations of the form $\sum_{k=n_0}^{n} A_{n,k}$. It is observed that by repeating the procedure, the upper bound of summation is reduced and tilts toward the lower bound. This method of summation is mostly suitable for combinatorial sequences such as binomial coefficients, Stirling numbers of both kinds, etc. After the main method is displayed, some examples are illustrated. Some useful identities about Stirling and r-Stirling numbers are obtained. Finally, two transforms called rising and falling factorial transforms which turn the basis of power polynomials into factorial basis are derived. These transforms verify and simplify the results obtained in the examples section. Also, these transforms describe the relationship between fractional derivatives (or fractional integrals) and falling factorial (or rising factorial) by its series expansion.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-07T08:58:53Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Parham Zarghami</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.04616v5</id>
+    <title>Records for the number of distinct sites visited by a random walk on the fully-connected lattice</title>
+    <updated>2015-10-13T08:08:00Z</updated>
+    <link href="https://arxiv.org/abs/1505.04616v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.04616v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a random walk on the fully-connected lattice with $N$ sites and study the time evolution of the number of distinct sites $s$ visited by the walker on a subset with $n$ sites. A record value $v$ is obtained for $s$ at a record time $t$ when the walker visits a site of the subset for the first time. The record time $t$ is a partial covering time when $v&lt;n$ and a total covering time when $v=n$. The probability distributions for the number of records $s$, the record value $v$ and the record (covering) time $t$, involving $r$-Stirling numbers, are obtained using generating function techniques. The mean values, variances and skewnesses are deduced from the generating functions. In the scaling limit the probability distributions for $s$ and $v$ lead to the same Gaussian density. The fluctuations of the record time $t$ are also Gaussian at partial covering, when $n-v={\mathrm O}(n)$. They are distributed according to the type-I Gumbel extreme-value distribution at total covering, when $v=n$. A discrete sequence of generalized Gumbel distributions, indexed by $n-v$, is obtained at almost total covering, when $n-v={\mathrm O}(1)$. These generalized Gumbel distributions are crossing over to the Gaussian distribution when $n-v$ increases.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.class-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-18T13:03:09Z</published>
+    <arxiv:comment>26 pages, 6 figures, 45 references</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Phys. A 48 (2015) 445001</arxiv:journal_ref>
+    <author>
+      <name>L. Turban</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8113/48/44/445001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8113/48/44/445001" title="doi"/>
+  </entry>
+</feed>

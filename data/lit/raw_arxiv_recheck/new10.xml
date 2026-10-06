@@ -1,0 +1,708 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/c23vBqQDDfiIxrRImeAAhcs9gYc</id>
+  <title>arXiv Query: search_query=au:Koutschan&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:24:42Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Koutschan&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>75</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.13666v1</id>
+    <title>When Does the Dice Sum Become Prime?</title>
+    <updated>2026-05-13T15:24:36Z</updated>
+    <link href="https://arxiv.org/abs/2605.13666v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.13666v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a (possibly infinite) subset $A$ of the natural numbers, we ask how many times a fair six-sided die must be rolled until the rolled numbers add up to an element of $A$. Using a one-dimensional dynamic programming recursion together with truncation and rigorous error bounds, we compute the expected number of rolls efficiently and with very high accuracy. When $A$ is the set of prime numbers, the irregular distribution of primes makes it difficult to obtain explicit error estimates. Nevertheless, the density of primes implies that the associated survival probability decays exponentially fast, which enables highly accurate truncation estimates. As a result, our calculations yield significantly sharper estimates for this expectation and its higher moments than the original results of Conroy, Alon, and Malinovsky. In particular, we determine the expectation to more than $1000$ decimal places.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T15:24:36Z</published>
+    <arxiv:comment>14 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Tipaluck Krityakierne</name>
+    </author>
+    <author>
+      <name>Thotsaporn Aek Thanatipanonda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05345v1</id>
+    <title>Creative Telescoping</title>
+    <updated>2025-05-08T15:33:10Z</updated>
+    <link href="https://arxiv.org/abs/2505.05345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>These notes on creative telescoping are based on a series of lectures at the Institut Henri Poincare in November and December 2023.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T15:33:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11787v2</id>
+    <title>A Shape Lemma for Ideals of Differential Operators</title>
+    <updated>2025-04-30T06:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2502.11787v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11787v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a version of the classical shape lemma for zero-dimensional ideals of a commutative multivariate polynomial ring to the noncommutative setting of zero-dimensional ideals in an algebra of differential operators.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T13:26:16Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.03757v3</id>
+    <title>Non-minimality of minimal telescopers explained by residues</title>
+    <updated>2025-05-01T03:34:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.03757v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.03757v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Elaborating on an approach recently proposed by Mark van Hoeij, we continue to investigate why creative telescoping occasionally fails to find the minimal-order annihilating operator of a given definite sum or integral. We offer an explanation based on the consideration of residues.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T03:40:29Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Xiuyun Li</name>
+    </author>
+    <author>
+      <name>Rong-Hua Wang</name>
+    </author>
+    <author>
+      <name>Yisen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07435v2</id>
+    <title>The (Symbolic and Numeric) Computational Challenges of Counting 0-1 Balanced Matrices</title>
+    <updated>2025-02-06T16:13:47Z</updated>
+    <link href="https://arxiv.org/abs/2410.07435v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07435v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A chessboard has the property that every row and every column has as many white squares as black squares. In this mostly methodological note, we address the problem of counting such rectangular arrays with a fixed (numeric) number of rows, but an arbitrary (symbolic) number of columns. We first address the ``vanilla" problem where there are no restrictions, and then go on to discuss the still-more-challenging problem of counting such binary arrays that are not permitted to contain a specified (finite) set of horizontal patterns, and a specified set of vertical patterns. While we can rigorously prove that each such sequence satisfies some linear recurrence equation with polynomial coefficients, actually finding these recurrences poses major {\it symbolic}-computational challenges, that we can only meet in some small cases. In fact, just generating as many as possible terms of these sequences is a big {\it numeric}-computational challenge. This was tackled by computer whiz Ron H. Hardin, who contributed several such sequences, and computed quite a few terms of each. We extend Hardin's sequences quite considerably. We also talk about the much easier problem of counting such restricted arrays without balance conditions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T21:08:04Z</published>
+    <arxiv:comment>Expanded computations and added references</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.16318v2</id>
+    <title>Quaternary Legendre pairs II</title>
+    <updated>2025-03-27T10:30:16Z</updated>
+    <link href="https://arxiv.org/abs/2408.16318v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.16318v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quaternary Legendre pairs are pertinent to the construction of quaternary Hadamard matrices and have many applications, for example in coding theory and communications. In contrast to binary Legendre pairs, quaternary ones can exist for even length $\ell$ as well. It is conjectured that there is a quaternary Legendre pair for any even $\ell$. The smallest open case until now had been $\ell=28$, and $\ell=38$ was the only length $\ell$ with $28\le \ell\le 60$ resolved before. Here we provide constructions for $\ell=28,30,32$, and $34$. In parallel and independently, Jedwab and Pender found a construction of quaternary Legendre pairs of length $\ell=(q-1)/2$ for any prime power $q\equiv 1\bmod 4$, which in particular covers $\ell=30$, $36$, and $40$, so that now $\ell=42$ is the smallest unresolved case. The main new idea of this paper is a way to separate the search for the subsequences along even and odd indices which substantially reduces the complexity of the search algorithm. In addition, we use Galois theory for cyclotomic fields to derive conditions which improve the PSD test.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-29T07:37:15Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics 348(9), Article 114501, 2025</arxiv:journal_ref>
+    <author>
+      <name>Ilias S. Kotsireas</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Arne Winterhof</name>
+    </author>
+    <arxiv:doi>10.1016/j.disc.2025.114501</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.disc.2025.114501" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.02421v2</id>
+    <title>Representing Piecewise-Linear Functions by Functions with Minimal Arity</title>
+    <updated>2026-06-17T21:50:44Z</updated>
+    <link href="https://arxiv.org/abs/2406.02421v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.02421v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Any continuous piecewise-linear function $F\colon \mathbb{R}^{n}\to \mathbb{R}$ can be represented as a linear combination of $\max$ functions of at most $n+1$ affine-linear functions. In our previous paper [``Representing piecewise linear functions by functions with small arity'', AAECC, 2023], we showed that this upper bound of $n+1$ arguments is tight. In the present paper, we extend this result by establishing a correspondence between the function $F$ and the minimal number of arguments that are needed in any such decomposition. We show that the tessellation of the input space $\mathbb{R}^{n}$ induced by the function $F$ has a direct connection to the number of arguments in the $\max$ functions.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-04T15:39:08Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Anton Ponomarchuk</name>
+    </author>
+    <author>
+      <name>Josef Schicho</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.02430v2</id>
+    <title>How to generate all possible rational Wilf-Zeilberger forms?</title>
+    <updated>2025-06-08T03:31:43Z</updated>
+    <link href="https://arxiv.org/abs/2405.02430v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.02430v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Wilf-Zeilberger pairs are fundamental in the algorithmic theory of Wilf and Zeilberger for computer-generated proofs of combinatorial identities. Wilf-Zeilberger forms are their high-dimensional generalizations, which can be used for proving and discovering convergence acceleration formulas. This paper presents a structural description of all possible rational such forms, which can be viewed as an additive analog of the classical Ore-Sato theorem. Based on this analog, we show a structural decomposition of so-called multivariate hyperarithmetic terms, which extend multivariate hypergeometric terms to the additive setting.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-03T18:52:23Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Yisen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.08481v1</id>
+    <title>Determinant evaluations inspired by Di Francesco's determinant for twenty-vertex configurations</title>
+    <updated>2024-01-16T16:35:00Z</updated>
+    <link href="https://arxiv.org/abs/2401.08481v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.08481v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In his work on the twenty vertex model, Di Francesco [Electron. J. Combin. 28(4) (2021), Paper No. 4.38] found a determinant formula for the number of configurations in a specific such model, and he conjectured a closed form product formula for the evaluation of this determinant. We prove this conjecture here. Moreover, we actually generalize this determinant evaluation to a one-parameter family of determinant evaluations, and we present many more determinant evaluations of similar type - some proved, some left open as conjectures.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-16T16:35:00Z</published>
+    <arxiv:comment>AmS-LaTeX, 37 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Symbol. Comput. 127 (2025), 102352</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+      <arxiv:affiliation>RICAM, Austrian Academy of Sciences</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christian Krattenthaler</name>
+      <arxiv:affiliation>Universität Wien</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michael Schlosser</name>
+      <arxiv:affiliation>Universität Wien</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.08446v3</id>
+    <title>Diagonally symmetric alternating sign matrices</title>
+    <updated>2026-10-01T14:31:46Z</updated>
+    <link href="https://arxiv.org/abs/2309.08446v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.08446v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The enumeration of diagonally symmetric alternating sign matrices (DSASMs) is studied, and a Pfaffian formula is obtained for the number of DSASMs of any fixed size, where the entries for the Pfaffian are positive integers given by simple binomial coefficient expressions. This result provides the first known case of an exact enumeration formula for an alternating sign matrix symmetry class in which a simple product formula does not seem to exist. Pfaffian formulae are also obtained for DSASM generating functions associated with several natural statistics, including the number of nonzero strictly upper triangular entries in a DSASM, the number of nonzero diagonal entries in a DSASM, and the column number of the unique 1 in the first row of a DSASM. The proofs of these results involve introducing a version of the six-vertex model whose configurations are in bijection with DSASMs of fixed size, and obtaining a Pfaffian expression for its partition function. Various related topics are also studied, involving diagonally symmetric permutation matrices, off-diagonally symmetric alternating sign matrices, certain natural involutions on DSASMs, and the asymptotic enumeration of DSASMs and other classes of alternating sign matrices.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-15T14:49:07Z</published>
+    <arxiv:comment>76 pages. v3: minor changes, published version. v2: information added on some results from papers which appeared since v1 (e.g., Refs. [37] &amp; [50]), some parts expanded (e.g., proofs of Propositions 3.1 &amp; 5.1)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Mathematics 504 (2026) 111235</arxiv:journal_ref>
+    <author>
+      <name>Roger E. Behrend</name>
+    </author>
+    <author>
+      <name>Ilse Fischer</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2026.111235</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2026.111235" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.02925v1</id>
+    <title>Collisionless shock region of the KdV equation and an entry in Gradshteyn and Ryzhik</title>
+    <updated>2023-09-06T11:35:33Z</updated>
+    <link href="https://arxiv.org/abs/2309.02925v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.02925v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The long-time behavior of solutions to the initial value problem for the Korteweg-de Vries equation on the whole line, with general initial conditions has been described uniformly using five different asymptotic forms. Four of these asymptotic forms were expected: the quiescent behavior (for |x| very large), a soliton region (in which the solution behaves as a collection of isolated solitary waves), a self-similar region (in which the solution is described via a Painlevé transcendent), and a similarity region (where the solution behaves as a simple trigonometric function of the quantities t and x/t). A fifth asymptotic form, lying between the self-similar (Painlevé) and the similarity one, has been described in terms of classical elliptic functions. An integral of elliptic type, giving an explicit representation of the phase, has appeared in this context. The same integral has appeared in the table of integrals by Gradshteyn and Ryzhik. Our goal here is to confirm the validity of this entry.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-06T11:35:33Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Tewodros Amdeberhan</name>
+    </author>
+    <author>
+      <name>Victor Moll</name>
+    </author>
+    <author>
+      <name>John Lopez Santander</name>
+    </author>
+    <author>
+      <name>Ken McLaughlin</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.01912v3</id>
+    <title>Yay for Determinants!</title>
+    <updated>2023-09-09T00:15:33Z</updated>
+    <link href="https://arxiv.org/abs/2307.01912v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.01912v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this {\it case study}, we hope to show why Sheldon Axler was not just wrong, but {\em wrong}, when he urged, in 1995: ``Down with Determinants!''. We first recall how determinants are useful in enumerative combinatorics, and then illustrate three versatile tools (Dodgson's condensation, the holonomic ansatz and constant term evaluations) to operate in tandem to prove a certain intriguing determinantal formula conjectured by the first author. We conclude with a postscript describing yet another, much more efficient, method for evaluating determinants: `ask determinant-guru, Christian Krattenthaler', but advise people only to use it as a last resort, since if we would have used this last method right away, we would not have had the fun of doing it all by ourselves.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-04T20:42:37Z</published>
+    <arxiv:comment>15 pages; 2 new sections added beyond the first version; dedicated to Christian Krattenthaler on his 65th birthday; this paper appeared (in a revised form) in the journal, SLC (Séminaire Lotharingien de Combinatoire), under a new title "A case study in determinant evaluations"; {\tt https://www.mat.univie.ac.at/~slc/wpapers/s89amdkozeil.pdf}</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>A case study in determinant evaluations, Séminaire Lotharingien de Combinatoire, 89 (2023), Article B89a</arxiv:journal_ref>
+    <author>
+      <name>Tewodros Amdeberhan</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16933v1</id>
+    <title>Representing Piecewise Linear Functions by Functions with Small Arity</title>
+    <updated>2023-05-26T13:48:37Z</updated>
+    <link href="https://arxiv.org/abs/2305.16933v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16933v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A piecewise linear function can be described in different forms: as an arbitrarily nested expression of $\min$- and $\max$-functions, as a difference of two convex piecewise linear functions, or as a linear combination of maxima of affine-linear functions. In this paper, we provide two main results: first, we show that for every piecewise linear function there exists a linear combination of $\max$-functions with at most $n+1$ arguments, and give an algorithm for its computation. Moreover, these arguments are contained in the finite set of affine-linear functions that coincide with the given function in some open set. Second, we prove that the piecewise linear function $\max(0, x_{1}, \ldots, x_{n})$ cannot be represented as a linear combination of maxima of less than $n+1$ affine-linear arguments. This was conjectured by Wang and Sun in 2005 in a paper on representations of piecewise linear functions as linear combination of maxima.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-26T13:48:37Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Bernhard Moser</name>
+    </author>
+    <author>
+      <name>Anton Ponomarchuk</name>
+    </author>
+    <author>
+      <name>Josef Schicho</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02560v4</id>
+    <title>On Potentials Integrated by the Nikiforov-Uvarov Method</title>
+    <updated>2023-04-16T21:32:58Z</updated>
+    <link href="https://arxiv.org/abs/2303.02560v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02560v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We discuss basic potentials of the nonrelativistic and relativistic quantum mechanics that can be integrated in the Nikiforov and Uvarov paradigm with the aid of a computer algebra system. This consideration may help the readers to study analytical methods of quantum physics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T03:09:23Z</published>
+    <arxiv:comment>51 pages, 19 tables; 3 figures; complementary Mathematica notebook is available from the authors; It is also posted on Wolfram community https://community.wolfram.com/groups/-/m/t/2897057</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Lina Ellis</name>
+    </author>
+    <author>
+      <name>Ikumi Ellis</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Sergei K. Suslov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06396v2</id>
+    <title>Transcendence Certificates for D-finite Functions</title>
+    <updated>2023-09-19T12:14:17Z</updated>
+    <link href="https://arxiv.org/abs/2302.06396v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06396v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although in theory we can decide whether a given D-finite function is transcendental, transcendence proofs remain a challenge in practice. Typically, transcendence is certified by checking certain incomplete sufficient conditions. In this paper we propose an additional such condition which catches some cases on which other tests fail.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-13T14:36:20Z</published>
+    <arxiv:comment>9 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of International Symposium on Symbolic and Algebraic Computation 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+    <arxiv:doi>10.1145/3597066.3597091</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3597066.3597091" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.04067v2</id>
+    <title>A Unified Approach to Unimodality of Gaussian Polynomials</title>
+    <updated>2023-08-31T23:31:22Z</updated>
+    <link href="https://arxiv.org/abs/2302.04067v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.04067v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2013, Pak and Panova proved the strict unimodality property of $q$-binomial coefficients $\binom{\ell+m}{m}_q$ (as polynomials in $q$) based on the combinatorics of Young tableaux and the semigroup property of Kronecker coefficients. They showed it to be true for all $\ell,m\geq 8$ and a few other cases. We propose a different approach to this problem based on computer algebra, where we establish a closed form for the coefficients of these polynomials and then use cylindrical algebraic decomposition to identify exactly the range of coefficients where strict unimodality holds. This strategy allows us to tackle generalizations of the problem, e.g., to show unimodality with larger gaps or unimodality of related sequences. In particular, we present proofs of two additional cases of a conjecture by Stanley and Zanello.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-08T14:08:56Z</published>
+    <arxiv:comment>Supplementary material at https://wongey.github.io/unimodality</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>ISSAC 2023: Proceedings of the 2023 International Symposium on Symbolic and Algebraic Computation, July 2023, Pages 434-442</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Ali K. Uncu</name>
+    </author>
+    <author>
+      <name>Elaine Wong</name>
+    </author>
+    <arxiv:doi>10.1145/3597066.3597113</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3597066.3597113" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.01787v3</id>
+    <title>How does the Gerrymander Sequence Continue?</title>
+    <updated>2022-11-30T07:23:22Z</updated>
+    <link href="https://arxiv.org/abs/2209.01787v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.01787v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute the next few terms of the OEIS sequence A348456 and provide guessed equations for the generating functions of some sequences in its context.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-05T06:51:33Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Integer Sequences Vol 25 (2022) Article 22.9.7</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>George Spahn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.07966v2</id>
+    <title>Guessing with Little Data</title>
+    <updated>2022-07-08T12:37:58Z</updated>
+    <link href="https://arxiv.org/abs/2202.07966v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.07966v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reconstructing a hypothetical recurrence equation from the first terms of an infinite sequence is a classical and well-known technique in experimental mathematics. We propose a variation of this technique which can succeed with fewer input terms.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-16T10:20:17Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of ISSAC 2022, pp 83--90</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1145/3476446.3535486</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3476446.3535486" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.00533v1</id>
+    <title>Realizations of Rigid Graphs</title>
+    <updated>2022-01-03T09:24:17Z</updated>
+    <link href="https://arxiv.org/abs/2201.00533v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.00533v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A minimally rigid graph, also called Laman graph, models a planar framework which is rigid for a general choice of distances between its vertices. In other words, there are finitely many ways, up to isometries, to realize such a graph in the plane. Using ideas from algebraic and tropical geometry, we derive a recursive formula for the number of such realizations. Combining computational results with the construction of new rigid graphs via gluing techniques, we can give a new lower bound on the maximal possible number of realizations for graphs with a given number of vertices.</summary>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-03T09:24:17Z</published>
+    <arxiv:comment>In Proceedings ADG 2021, arXiv:2112.14770</arxiv:comment>
+    <arxiv:primary_category term="cs.CG"/>
+    <arxiv:journal_ref>EPTCS 352, 2021, pp. 4-13</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+      <arxiv:affiliation>Johann Radon Institute for Computational and Applied Mathematics</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.4204/EPTCS.352.2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4204/EPTCS.352.2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.08796v1</id>
+    <title>Apéry limits for elliptic $L$-values</title>
+    <updated>2021-11-16T21:49:43Z</updated>
+    <link href="https://arxiv.org/abs/2111.08796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.08796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For an (irreducible) recurrence equation with coefficients from $\mathbb Z[n]$ and its two linearly independent rational solutions $u_n,v_n$, the limit of $u_n/v_n$ as $n\to\infty$, when exists, is called the Apéry limit. We give a construction that realises certain quotients of $L$-values of elliptic curves as Apéry limits.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-16T21:49:43Z</published>
+    <arxiv:comment>6 pages, 3 recurrence equations (including Apéry's for $ζ(3)$)</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Bull. Austral. Math. Soc. 106 (2022), no. 2, 273--279</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Wadim Zudilin</name>
+    </author>
+    <arxiv:doi>10.1017/S0004972721001295</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/S0004972721001295" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.02105v3</id>
+    <title>Legendre pairs of lengths $\ell\equiv0$ (mod 5)</title>
+    <updated>2024-04-08T21:44:10Z</updated>
+    <link href="https://arxiv.org/abs/2111.02105v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.02105v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By assuming a type of balance for length $\ell=87$ and non-trivial subgroups of multiplier groups of Legendre pairs (LPs) for length $\ell=85$, we find LPs of these lengths. We then study the power spectral density (PSD) values of m-compressions of LPs of length 5m. We also formulate a conjecture for Legendre pairs of lengths $\ell \equiv 0$ (mod 5) and demonstrate how it can be used to decrease the search space and storage requirements for finding such LPs. The newly found LPs decrease the number of integers in the range $\leq 200$ for which the existence question of LPs remains unsolved from 12 to 10.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-03T09:53:47Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Special Matrices 2023; 11: 20230105</arxiv:journal_ref>
+    <author>
+      <name>Ilias Kotsireas</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Dursun Bulutoglu</name>
+    </author>
+    <author>
+      <name>David Arquette</name>
+    </author>
+    <author>
+      <name>Jonathan Turner</name>
+    </author>
+    <author>
+      <name>Kenneth Ryan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.08539v2</id>
+    <title>Binomial Determinants for Tiling Problems Yield to the Holonomic Ansatz</title>
+    <updated>2021-09-21T09:31:00Z</updated>
+    <link href="https://arxiv.org/abs/2105.08539v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.08539v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present and prove closed form expressions for some families of binomial determinants with signed Kronecker deltas that are located along an arbitrary diagonal in the corresponding matrix. They count cyclically symmetric rhombus tilings of hexagonal regions with triangular holes. We extend a previous systematic study of these families, where the locations of the Kronecker deltas depended on an additional parameter, to families with negative Kronecker deltas. By adapting Zeilberger's holonomic ansatz to make it work for our problems, we can take full advantage of computer algebra tools for symbolic summation. This, together with the combinatorial interpretation, allows us to realize some new determinantal relationships. From there, we are able to resolve all remaining open conjectures related to these determinants, including one from 2005 due to Lascoux and Krattenthaler.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-18T14:14:56Z</published>
+    <arxiv:comment>45 pages; Supplementary material at https://wongey.github.io/binom-det</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>European Journal of Combinatorics, Volume 99, January 2022, 103437</arxiv:journal_ref>
+    <author>
+      <name>Hao Du</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thotsaporn Thanatipanonda</name>
+    </author>
+    <author>
+      <name>Elaine Wong</name>
+    </author>
+    <arxiv:doi>10.1016/j.ejc.2021.103437</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ejc.2021.103437" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.10147v1</id>
+    <title>There are EXACTLY 1493804444499093354916284290188948031229880469556 Ways to Derange a Standard Deck of Cards (ignoring suits) [and many other such useful facts]</title>
+    <updated>2021-01-25T14:53:38Z</updated>
+    <link href="https://arxiv.org/abs/2101.10147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.10147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this memorial tribute to Joe Gillis, who taught us that Special Functions count, we show how the seminal Even-Gillis integral formula for the number of derangements of a multiset, in terms of Laguerre polynomials, can be used to efficiently compute not only the number of the title, but much harder ones, when it is interfaced with Wilf-Zeilberger algorithmic proof theory.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-25T14:53:38Z</published>
+    <arxiv:comment>Accompanied by a Maple package and output files that can be gotten from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/multider.html</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.08308v1</id>
+    <title>Tweaking the Beukers Integrals In Search of More Miraculous Irrationality Proofs A La Apery</title>
+    <updated>2021-01-20T20:23:05Z</updated>
+    <link href="https://arxiv.org/abs/2101.08308v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.08308v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There are only aleph-zero rational numbers, while there are 2 to the power aleph-zero real numbers. Hence the probability that a randomly chosen real number would be rational is 0. Yet proving rigorously that any specific, natural, real constant, is irrational is usually very hard, witness that there are still no proofs of the irrationality of the Euler-Mascheroni constant, the Catalan constant, or Zeta(5).
+  Inspired by Frits Beukers' elegant rendition of Apery's seminal proofs of the irrationality of Zeta(2) and Zeta(3), and heavily using algorithmic proof theory, we systematically searched for other similar integrals, that lead to irrationality proofs. We found quite a few candidates for such proofs, including the square-root of Pi times Gamma(7/3)/Gamma(-1/6) and Gamma(19/6)/Gamma(8/3) divided by the square-root of Pi.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-20T20:23:05Z</published>
+    <arxiv:comment>21 pages, accompanied by three Maple packages available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/beukers.html</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.03116v3</id>
+    <title>Legendre pairs of lengths $\ell \equiv 0$ (mod $3$)</title>
+    <updated>2021-10-16T23:17:53Z</updated>
+    <link href="https://arxiv.org/abs/2101.03116v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.03116v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a proposition that connects constant-PAF sequences and the corresponding Legendre pairs with integer PSD values. We show how to determine explicitly the complete spectrum of the $(\ell/3)$-rd value of the discrete Fourier transform for Legendre pairs of lengths $\ell \equiv 0 \, (\mod 3)$. This is accomplished by two new algorithms based on number-theoretic arguments. As an application, we prove that Legendre pairs of the open lengths 117, 129, 133, and 147 exist by finding Legendre pairs of these lengths with a multiplier group of order at least 3. As a consequence, 85, 87, 115, 145, 159, 161, 169, 175, 177, 185, 187, 195 are the twelve integers in the range &lt; 200 for which the question of existence of Legendre pairs remains unsolved.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-08T17:16:05Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Combinatorial Designs 29(12):870-887, 2021</arxiv:journal_ref>
+    <author>
+      <name>Ilias Kotsireas</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1002/jcd.21806</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/jcd.21806" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.08889v2</id>
+    <title>Creative Telescoping on Multiple Sums</title>
+    <updated>2021-03-17T08:51:17Z</updated>
+    <link href="https://arxiv.org/abs/2010.08889v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.08889v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We showcase a collection of practical strategies to deal with a problem arising from an analysis of integral estimators derived via quasi-Monte Carlo methods. The problem reduces to a triple binomial sum, thereby enabling us to open up the holonomic toolkit, which contains tools such as creative telescoping that can be used to deduce a recurrence satisfied by the sum. While applying these techniques, a host of issues arose that partly needed to be resolved by hand. In other words, no creative telescoping implementation currently exists that can resolve all these issues automatically. Thus, we felt the need to compile the different strategies we tried and the difficulties that we encountered along the way. In particular, we highlight the necessity of the certificate in these computations and how its complexity can greatly influence the computation time.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-18T00:00:02Z</published>
+    <arxiv:comment>22 pages; Supplementary material at https://wongey.github.io/digital-nets-walsh/</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Mathematics in Computer Science, Vol. 15(3), Pages 483-498 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Elaine Wong</name>
+    </author>
+    <arxiv:doi>10.1007/s11786-021-00514-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11786-021-00514-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.12380v1</id>
+    <title>Common Factors in Fraction-Free Matrix Decompositions</title>
+    <updated>2020-05-25T20:26:47Z</updated>
+    <link href="https://arxiv.org/abs/2005.12380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.12380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider LU and QR matrix decompositions using exact computations. We show that fraction-free Gauss--Bareiss reduction leads to triangular matrices having a non-trivial number of common row factors. We identify two types of common factors: systematic and statistical. Systematic factors depend on the reduction process, independent of the data, while statistical factors depend on the specific data. We relate the existence of row factors in the LU decomposition to factors appearing in the Smith--Jacobson normal form of the matrix. For statistical factors, we identify some of the mechanisms that create them and give estimates of the frequency of their occurrence. Similar observations apply to the common factors in a fraction-free QR decomposition. Our conclusions are tested experimentally.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-25T20:26:47Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Mathematics in Computer Science 15(4), pp. 589-608, 2021</arxiv:journal_ref>
+    <author>
+      <name>Johannes Middeke</name>
+    </author>
+    <author>
+      <name>David J. Jeffrey</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1007/s11786-020-00495-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11786-020-00495-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.00789v2</id>
+    <title>Diagonals of rational functions: from differential algebra to effective algebraic geometry (unabridged version)</title>
+    <updated>2022-04-26T16:12:51Z</updated>
+    <link href="https://arxiv.org/abs/2002.00789v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.00789v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the results we had obtained on diagonals of nine and ten parameters families of rational functions using creative telescoping, yielding modular forms expressed as pullbacked $ _2F_1$ hypergeometric functions, can be obtained, much more efficiently, calculating the $ j$-invariant of an elliptic curve canonically associated with the denominator of the rational functions. In the case where creative telescoping yields pullbacked $ _2F_1$ hypergeometric functions, we generalize this result to other families of rational functions in three, and even more than three, variables. We also generalise this result to rational functions in more than three variables when the denominator can be associated to an algebraic variety corresponding to products of elliptic curves, foliation in elliptic curves. We also extend these results to rational functions in three variables when the denominator is associated with a {\em genus-two curve such that its Jacobian is a split Jacobian} corresponding to the product of two elliptic curves. We sketch the situation where the denominator of the rational function is associated with algebraic varieties that are not of the general type, having an infinite set of birational automorphisms. We finally provide some examples of rational functions in more than three variables, where the telescopers have pullbacked $ _2F_1$ hypergeometric solutions, the denominator corresponding to an algebraic variety being not simply foliated in elliptic curves, but having a selected elliptic curve in the variety explaining the pullbacked $ _2F_1$ hypergeometric solution.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-03T14:38:10Z</published>
+    <arxiv:comment>51 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Y. Abdelaziz</name>
+    </author>
+    <author>
+      <name>S. Boukraa</name>
+    </author>
+    <author>
+      <name>C. Koutschan</name>
+    </author>
+    <author>
+      <name>J-M. Maillard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.11599v2</id>
+    <title>Calculation and Properties of Zonal Polynomials</title>
+    <updated>2020-04-29T17:05:55Z</updated>
+    <link href="https://arxiv.org/abs/2001.11599v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.11599v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the zonal polynomials, a family of symmetric polynomials that appear in many mathematical contexts, such as multivariate statistics, differential geometry, representation theory, and combinatorics. We present two computer algebra packages, in SageMath and in Mathematica, for their computation. With the help of these software packages, we carry out an experimental mathematics study of some properties of zonal polynomials. Moreover, we derive and prove closed forms for several infinite families of zonal polynomial coefficients.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-30T22:52:38Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Mathematics in Computer Science 14:623-640, 2020</arxiv:journal_ref>
+    <author>
+      <name>Lin Jiu</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1007/s11786-020-00458-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11786-020-00458-0" title="doi"/>
+  </entry>
+</feed>

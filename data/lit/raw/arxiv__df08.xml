@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/C7Kz/efbVTBhCwpOysIAinS9U0M</id>
+  <title>arXiv Query: search_query=abs:Humbert AND abs:hypergeometric&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:44Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Humbert+AND+abs:hypergeometric&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.14942v2</id>
+    <title>Asymptotics of the Humbert Function $Ψ_1$ for Two Large Arguments</title>
+    <updated>2024-08-09T04:58:58Z</updated>
+    <link href="https://arxiv.org/abs/2403.14942v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.14942v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Wald and Henkel (2018) derived the leading-order estimate of the Humbert functions $Φ_2$, $Φ_3$ and $Ξ_2$ for two large arguments, but their technique cannot handle the Humbert function $Ψ_1$. In this paper, we establish the leading asymptotic behavior of the Humbert function $Ψ_1$ for two large arguments. Our proof is based on a connection formula of the Gauss hypergeometric function and Nagel's approach (2004). This approach is also applied to deduce asymptotic expansions of the generalized hypergeometric function $_pF_q$ $(p\leqslant q)$ for large parameters, which are not contained in NIST handbook.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-22T04:29:49Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>SIGMA 20 (2024), 074, 13 pages</arxiv:journal_ref>
+    <author>
+      <name>Peng-Cheng Hang</name>
+    </author>
+    <author>
+      <name>Min-Jie Luo</name>
+    </author>
+    <arxiv:doi>10.3842/SIGMA.2024.074</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3842/SIGMA.2024.074" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.08407v5</id>
+    <title>An extension of basic Humbert hypergeometric functions Φ1, Φ2 and Φ3</title>
+    <updated>2025-02-10T18:23:30Z</updated>
+    <link href="https://arxiv.org/abs/2104.08407v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.08407v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given the growing quantity of proposals and works of basic hypergeometric functions in the scope of $q$-calculus, it is important to introduce a systematic classification of $q$-calculus. Our aim in this article is to investigate certain interesting several $q$-partial derivative formulas, $q$-contiguous function relations, $q$-recurrence relations, various $q$-partial differential equations, summation formulas, transformation formulas and $q$-integrals representations for basic Humbert confluent hypergeometric functions under what constraints of parameters. These interesting properties, as special cases, include many known expansions of basic Humbert hypergeometric functions, and are also include particular interest in the area.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-16T23:48:36Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Ayman Shehata</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.01689v1</id>
+    <title>Certain new formulas for bibasic Humbert hypergeometric functions $Ψ_{1}$ and $Ψ_{2}$</title>
+    <updated>2022-07-04T19:38:34Z</updated>
+    <link href="https://arxiv.org/abs/2207.01689v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.01689v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main aim of the present work is to give some interesting the $q$-analogues of various $q$-recurrence relations, $q$-recursion formulas, $q$-partial derivative relations, $q$-integral representations, transformation and summation formulas for bibasic Humbert hypergeometric functions $Ψ_{1}$ and $Ψ_{2}$ on two independent bases $q$ and $p$ of two variables and some developments formulae, believed to be new, by using the conception of $q$-calculus. Finally, some interesting special cases and straightforward identities connected with bibasic Humbert hypergeometric series of the types $Ψ_{1}$ and $Ψ_{2}$ are established when the two independent bases $q$ and $p$ are equal.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-04T19:38:34Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Ayman Shehata</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.05051v3</id>
+    <title>Derivatives of Humbert confluent hypergeometric functions with respect to their parameters</title>
+    <updated>2025-12-13T10:29:49Z</updated>
+    <link href="https://arxiv.org/abs/2104.05051v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.05051v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Humbert confluent hypergeometric functions of two variables arise in many problems of mathematical physics and applied analysis, yet their behavior with respect to parameters has not been systematically studied. In this paper we investigate derivatives with respect to numerator and denominator parameters for the seven classical Humbert functions Φ{1}, Φ{2}, Φ_{3}, Psi_{1}, Psi_{2}, Ξ_{1} and Ξ_{2}. Using their double series representations together with elementary properties of the Gamma and digamma functions, we derive explicit formulas for first order parameter derivatives and express them in compact form in terms of Srivastava triple hypergeometric function F{3}. By differentiating the underlying partial differential equations, we further obtain simple operator recurrences for derivatives of arbitrary order, which yield closed differentiation and reduction formulas in terms of contiguous Humbert functions. Finally, we indicate how these results lead to Taylor type parameter expansions and illustrate their use with basic numerical examples and plots.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-11T16:55:41Z</published>
+    <arxiv:comment>20</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Ayman Shehata</name>
+    </author>
+    <author>
+      <name>Recep Sahin</name>
+    </author>
+    <author>
+      <name>Oguz Yagcı</name>
+    </author>
+    <author>
+      <name>Shimaa I. Moustafa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.08828v1</id>
+    <title>Study of dynamical symmetrietry algebra of $Ψ_2$-Humbert function</title>
+    <updated>2024-11-13T18:07:47Z</updated>
+    <link href="https://arxiv.org/abs/2411.08828v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.08828v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The study is devoted to the construction of dynamical symmetry algebra of confluent hypergeometric function $_1F_1$ and $Ψ_2$-Humbert function and to derive some generating relations and reduction formulas for $_1F_1$ and $Ψ_2$ functions.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-13T18:07:47Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Ayman Shehata</name>
+    </author>
+    <author>
+      <name>Dinesh Kumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0810.3796v1</id>
+    <title>Applications of the operator $H(α,β)$ to the Humbert double hypergeometric functions</title>
+    <updated>2008-10-21T10:47:23Z</updated>
+    <link href="https://arxiv.org/abs/0810.3796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0810.3796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  By making use of some techniques based upon certain inverse new pairs of symbolic operators, the author investigate several decomposition formulas associated with Humbert hypergeometric functions $Φ_1 $, $Φ_2 $, $Φ_3 $, $Ψ_1 $, $Ψ_2 $, $Ξ_1 $ and $Ξ_2 $. These operational representations are constructed and applied in order to derive the corresponding decomposition formulas. With the help of these inverse pairs of symbolic operators, a total 34 decomposition formulas are found. Euler type integrals, which are connected with Humbert's functions are found.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-10-21T10:47:23Z</published>
+    <arxiv:comment>11</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>A. Hasanov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.00325v1</id>
+    <title>Asymptotics of Saran's hypergeometric function $F_K$</title>
+    <updated>2024-05-01T05:19:42Z</updated>
+    <link href="https://arxiv.org/abs/2405.00325v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.00325v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we first establish asymptotic expansions of the Humbert function $Ψ_1$ for one large variable. The resulting expansions are then used to derive an asymptotic expansion of Saran's hypergeometric function $F_K$ when two of its variables become simultaneously large.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-01T05:19:42Z</published>
+    <arxiv:comment>18 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Peng-Cheng Hang</name>
+    </author>
+    <author>
+      <name>Min-Jie Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1605.01820v1</id>
+    <title>On a representation of Humbert's double hypergeometric series $Φ_3$ in a series of Gauss's $_2F_1$ function</title>
+    <updated>2016-05-06T04:44:18Z</updated>
+    <link href="https://arxiv.org/abs/1605.01820v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1605.01820v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Very recently a new series representation of Humbert's double hypergeometric series $Φ_3$ in series of Gauss's $_2F_1$ function was given by one of us. The aim of this short research note is to provide an alternative proof of the result. A few interesting special cases are also given.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-05-06T04:44:18Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CV"/>
+    <author>
+      <name>Arjun K. Rathie</name>
+    </author>
+    <author>
+      <name>Victor V. Manako</name>
+    </author>
+    <author>
+      <name>Harsh Vardhan Harsh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.12697v3</id>
+    <title>On Bibasic Humbert hypergeometric function $Φ_1$</title>
+    <updated>2023-03-25T20:11:51Z</updated>
+    <link href="https://arxiv.org/abs/2202.12697v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.12697v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The main aim of this work is to derive the $q$-recurrence relations, $q$-partial derivative relations and summation formula of bibasic Humbert hypergeometric function $Φ_1$ on two independent bases $q$ and $q_{1}$ of two variables and some developments formulae, believed to be new, by using the conception of $q$-calculus.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-24T04:50:20Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>Malaysian Journal of Mathematical Sciences 2023</arxiv:journal_ref>
+    <author>
+      <name>Ayed Aledamat</name>
+    </author>
+    <author>
+      <name>Ayman Shehata</name>
+    </author>
+    <arxiv:doi>10.47836/mjms.17.1.07</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.47836/mjms.17.1.07" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.09280v3</id>
+    <title>Asymptotic expansions of the Humbert Function $Φ_1$ and their applications</title>
+    <updated>2026-02-23T11:57:19Z</updated>
+    <link href="https://arxiv.org/abs/2504.09280v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.09280v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper systematically studies the asymptotics of Humbert's bivariate confluent hypergeometric function $Φ_1[a,b;c;x, y]$. Specifically, we establish explicit asymptotic expansions in five distinct regimes: (i) $x\to\infty$; (ii) $y\to\infty$; (iii) $x\to\infty,\,y\to\infty$; (iv) $x$ or $y$ small, $xy$ fixed; and (v) $x\to 1$, $y$ fixed. The utility of these expansions is illustrated through concrete applications in the theory of Saran's hypergeometric function $F_M$, the Glauber-Ising model, and the theory of Prabhakar-type fractional integral operators. Several potential directions for future work are also outlined.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-12T16:51:31Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Peng-Cheng Hang</name>
+    </author>
+    <author>
+      <name>Liangjian Hu</name>
+    </author>
+    <author>
+      <name>Min-Jie Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.07963v2</id>
+    <title>On the spherical clothoid</title>
+    <updated>2022-03-22T00:47:13Z</updated>
+    <link href="https://arxiv.org/abs/2203.07963v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.07963v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We revisit a nonlinear spline primitive for 3-space first studied by Even Mehlum. It is the spherical clothoid, the spherical curve with geodesic curvature a linear function of arc length. We present its Cartesian coordinate functions using confluent hypergeometric functions (the Kummer functions) and its stereographic projection onto the complex plane. New Humbert series results are also presented along with generating function formulas related to the associated Meixner-Pollaczek polynomials.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-15T14:48:04Z</published>
+    <arxiv:comment>12 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Alexandru Ionut</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.02049v1</id>
+    <title>The asymptotic expansion of the Humbert hyper-Bessel function</title>
+    <updated>2022-02-04T09:42:53Z</updated>
+    <link href="https://arxiv.org/abs/2202.02049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.02049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the asymptotic expansion of the Humbert hyper-Bessel function expressed in terms of a ${}_0F_2$ hypergeometric function by \[J_{m,n}(x)=\frac{(x/3)^{m+n}}{m! n!}\,{}_0F_2(-\!\!\!-;m+1, n+1; -(x/3)^3)\] as $x\to+\infty$, where $m$, $n$ are not necessarily non-negative integers. Particular attention is paid to the determination of the exponentially small contribution. The main approach utilised is that described by the author (J. Comput. Appl. Math. {\bf 234} (2010) 488-504); a leading-order estimate is also obtained by application of the saddle-point method applied to an integral representation containing a Bessel function. Numerical results are presented to demonstrate the accuracy of the resulting compound expansion.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-04T09:42:53Z</published>
+    <arxiv:comment>14 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>R B Paris</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.09866v1</id>
+    <title>On the fully analytical cumulative distribution of product of correlated Gaussian random Variables with zero means</title>
+    <updated>2025-09-11T21:39:00Z</updated>
+    <link href="https://arxiv.org/abs/2509.09866v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.09866v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive a fully analytical, one-line closed-form expression for the cumulative distribution function (CDF) of the product of two correlated zero-mean normal random variables, avoiding any series representation. This result complements the well-known compact density formula with an equally compact and computationally practical CDF representation. Our main formula expresses the CDF in terms of Humbert's confluent hypergeometric function $Φ_1$ and modified Bessel functions $K_ν$, offering both theoretical elegance and computational efficiency. High-precision numerical experiments confirm pointwise agreement with Monte Carlo simulations and other benchmarks to machine accuracy. The resulting representation provides a tractable tool for applications in wireless fading channel modeling, nonlinear signal processing, statistics, finance, and applied probability.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-11T21:39:00Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Erdinc Akyildirim</name>
+    </author>
+    <author>
+      <name>Alper Hekimoglu</name>
+    </author>
+  </entry>
+</feed>

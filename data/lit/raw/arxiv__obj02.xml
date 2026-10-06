@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zoSTfy0Er4GzViq/1EyVeVhCMSM</id>
+  <title>arXiv Query: search_query=abs:words AND abs:"consecutive patterns" AND abs:"length 3"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:words+AND+(abs:%22consecutive+patterns%22+AND+abs:%22length+3%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1507.06154v2</id>
+    <title>Avoiding vincular patterns on alternating words</title>
+    <updated>2016-03-01T01:15:48Z</updated>
+    <link href="https://arxiv.org/abs/1507.06154v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.06154v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A word $w=w_1w_2\cdots w_n$ is alternating if either $w_1&lt;w_2&gt;w_3&lt;w_4&gt;\cdots$ (when the word is up-down) or $w_1&gt;w_2&lt;w_3&gt;w_4&lt;\cdots$ (when the word is down-up). The study of alternating words avoiding classical permutation patterns was initiated by the authors in~\cite{GKZ}, where, in particular, it was shown that 123-avoiding up-down words of even length are counted by the Narayana numbers.
+  However, not much was understood on the structure of 123-avoiding up-down words. In this paper, we fill in this gap by introducing the notion of a cut-pair that allows us to subdivide the set of words in question into equivalence classes. We provide a combinatorial argument to show that the number of equivalence classes is given by the Catalan numbers, which induces an alternative (combinatorial) proof of the corresponding result in~\cite{GKZ}.
+  Further, we extend the enumerative results in~\cite{GKZ} to the case of alternating words avoiding a vincular pattern of length 3. We show that it is sufficient to enumerate up-down words of even length avoiding the consecutive pattern $\underline{132}$ and up-down words of odd length avoiding the consecutive pattern $\underline{312}$ to answer all of our enumerative questions. The former of the two key cases is enumerated by the Stirling numbers of the second kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-22T12:29:05Z</published>
+    <arxiv:comment>25 pages; To appear in Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alice L. L. Gao</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.06585v4</id>
+    <title>Penney's game for permutations</title>
+    <updated>2026-07-06T15:51:11Z</updated>
+    <link href="https://arxiv.org/abs/2404.06585v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.06585v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the permutation analogue of Penney's game for words. Two players, in order, each choose a permutation of length $k\ge3$; then a sequence of independent random values from a continuous distribution is generated, until the relative order of the last $k$ numbers coincides with one of the chosen permutations, making that player the winner.
+  We compute the winning probabilities for all pairs of permutations of length 3 and some pairs of length 4, showing that, as in the original version for words, the game is non-transitive. Our proofs introduce new bijections for consecutive patterns in permutations. We also give some formulas to compute the winning probabilities more generally, and conjecture a winning strategy for the second player when $k$ is arbitrary.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-09T19:26:25Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 28:1, Permutation Patterns 2025, Special issues (July 8, 2026) dmtcs:16361</arxiv:journal_ref>
+    <author>
+      <name>Sergi Elizalde</name>
+    </author>
+    <author>
+      <name>Yixin Lin</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.16361</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.16361" title="doi"/>
+  </entry>
+</feed>

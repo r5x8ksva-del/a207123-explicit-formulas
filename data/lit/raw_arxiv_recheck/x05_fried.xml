@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/LOuFGGXtHLv75S4q9CTnM7W4wfE</id>
+  <title>arXiv Query: search_query=au:Fried AND abs:OEIS&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T23:27:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Fried+AND+abs:OEIS&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24832v1</id>
+    <title>Further proofs of conjectures from the OEIS</title>
+    <updated>2026-07-23T14:00:41Z</updated>
+    <link href="https://arxiv.org/abs/2607.24832v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24832v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the fourth work in a series devoted to proving conjectures recorded in the On-Line Encyclopedia of Integer Sequences (OEIS). The problems considered here concern elementary and multiplicative number theory, Fibonacci numbers, decimal concatenation, Diophantine and Pell equations, binary representations and bitwise operations, lattice paths, parity patterns, recurrences, and formal power series. Several of the results give complete characterizations of the relevant sequences; others establish exact identities, recurrences, generating functions, asymptotic estimates, integrality properties, or nonoccurrence results. The proofs use combinatorial bijections, congruences, Möbius inversion, valuations, Fibonacci identities, Pell-type arguments, Lucas' theorem, Riordan arrays, Lagrange inversion, and generating-function methods.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T14:00:41Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.14196v1</id>
+    <title>Even-up words and their variants</title>
+    <updated>2025-05-20T10:52:21Z</updated>
+    <link href="https://arxiv.org/abs/2505.14196v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.14196v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by OEIS sequence A377912, which consists of the nonnegative integers in which every even digit (except possibly the last) is immediately followed by a strictly larger digit, we define even-up and odd-up words over an alphabet of size~$k$ via similar constraints. We introduce and analyze weak and cyclic variants of these words, deriving explicit generating functions for all eight resulting classes. We then study Catalan words under analogous restrictions. Our results provide new combinatorial interpretations for many integer sequences, including the Motzkin numbers, the Riordan numbers, and the generalized Catalan numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T10:52:21Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.03013v1</id>
+    <title>Counting k-ary words by number of adjacency differences of a prescribed size</title>
+    <updated>2025-04-03T20:17:37Z</updated>
+    <link href="https://arxiv.org/abs/2504.03013v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.03013v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, the general problem of enumerating permutations $π=π_1\cdots π_n$ such that $π_{i+r}-π_i \neq s$ for all $1\leq i\leq n-r$, where $r$ and $s$ are fixed, was considered by Spahn and Zeilberger. In this paper, we consider an analogous problem on $k$-ary words involving the distribution of the corresponding statistic. Note that for $k$-ary words, it suffices to consider only the $r=1$ case of the aforementioned problem on permutations. Here, we compute for arbitrary $s$ an explicit formula for the ordinary generating function for $n \geq 0$ of the distribution of the statistic on $k$-ary words $ρ=ρ_1\cdotsρ_n$ recording the number of indices $i$ such that $ρ_{i+1}-ρ_i=s$. This result may then be used to find a comparable formula for finite set partitions with a fixed number of blocks, represented sequentially as restricted growth functions. Further, several sequences from the OEIS arise as enumerators of certain classes of $k$-ary words avoiding adjacencies with a prescribed difference. The comparable problem where one tracks indices $i$ such that the absolute difference $|a_{i+1}-a_i|$ is a fixed number is also considered on $k$-ary words and the corresponding generating function may be expressed in terms of Chebyshev polynomials. Finally, combinatorial proofs are found for several related recurrences and formulas for the total number of adjacencies of the form $a(a+s)$ on the various structures.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-03T20:17:37Z</published>
+    <arxiv:comment>A slightly abbreviated version of this paper will appear in the Journal of Combinatorics later in 2025 or in 2026</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+    <author>
+      <name>Toufik Mansour</name>
+    </author>
+    <author>
+      <name>Mark Shattuck</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.00644v1</id>
+    <title>Equivalent conditions for the $n$th element of the Beatty sequence $B_{\sqrt{2}}$ being even</title>
+    <updated>2022-12-28T08:40:50Z</updated>
+    <link href="https://arxiv.org/abs/2301.00644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.00644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide equivalent conditions for the $n$th element of the Beatty sequence $B_{\sqrt{2}}$ being even. In particular, we show that the integer sequences A090892 and A120752 in the OEIS are essentially identical.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-28T08:40:50Z</published>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+</feed>

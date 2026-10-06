@@ -1,0 +1,1038 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JBPXUKSu+eMvhPXQjEwe8hew/vA</id>
+  <title>arXiv Query: search_query=(abs:"not D-finite" OR abs:"non-D-finite" OR abs:"non-holonomic" OR abs:nonholonomic) AND abs:sequence&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-06T23:24:29Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:%22not+D-finite%22+OR+(abs:%22non-D-finite%22+OR+(abs:%22non-holonomic%22+OR+abs:nonholonomic)))+AND+abs:sequence&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>54</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02220v1</id>
+    <title>Recurrences for permutations with long increasing subsequences</title>
+    <updated>2026-09-02T07:33:53Z</updated>
+    <link href="https://arxiv.org/abs/2609.02220v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02220v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove two simple bivariate recurrences for the number of permutations with a long increasing subsequence. The two recurrences imply D-finiteness of the sequence in a certain range. As a consequence, we also obtain a proof of a conjecture posed by Kauers and Koutschan in 2023.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T07:33:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Chen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.15322v1</id>
+    <title>Iterative State- and Control-Dependent Model Predictive Control: A Jacobian-Free Formulation for Constrained Nonlinear Systems</title>
+    <updated>2026-08-15T16:58:01Z</updated>
+    <link href="https://arxiv.org/abs/2608.15322v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.15322v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents an iterative model predictive control algorithm that stabilizes constrained nonlinear systems without evaluating a single plant derivative. By factoring the exact nonlinear dynamics into a pseudo-linear form using state- and control-dependent coefficients (SCDCs), we replace the standard nonconvex optimization with a sequence of constrained linear-quadratic programs. Refreezing the coefficient matrices along the previously predicted trajectory drives the iteration. Near the origin, we prove this sequence contracts to a unique fixed point. We explicitly bound the number of iterations required to reach any stopping tolerance, and we quantify the distance from the fixed point to a true Karush-Kuhn-Tucker point, showing this optimality gap vanishes quadratically as the state approaches the origin. Inflating the discrete algebraic Riccati equation generates terminal ingredients that guarantee recursive feasibility and asymptotic stability, even when the solver terminates early. We adapt the terminal penalty online, proving it remains uniformly bounded, and we secure output feedback through the block-observable canonical form, which extracts the exact system state directly from past inputs and outputs. Retaining the block-banded structure of the subproblem forces the computational cost to scale linearly with the horizon length $\ell$. This $O(\ell)$ complexity matches the iterative linear quadratic regulator (iLQR) but sharply undercuts the $O(\ell^3)$ scaling of dense sequential quadratic programming (SQP). Numerical studies on a saturated quadrotor, a nonholonomic integrator, and a nonminimum-phase plant illustrate the theoretical bounds and map how the algorithm compares with iLQR, SQP, and linear-parameter-varying MPC.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-15T16:58:01Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Mohammadreza Kamaldar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16553v1</id>
+    <title>An explicit algebraic generating function for OEIS A348410</title>
+    <updated>2026-05-15T18:53:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.16553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A348410, P. Bala recorded in February 2022 two equivalent closed forms, $a(n) = [x^{n}] ((1-x)(1-x^2))^{-n}$ and a single-index binomial sum. R. J. Mathar (October 2021) and V. Kotesovec (November 2021) each contributed a conjectured P-recursive recurrence -- Mathar's of order $4$, Kotesovec's of order $2$. We apply Lagrange-Bürmann inversion to Bala's $[x^n]$ form to derive the parametric expression $A(t) = (1 - y^2)/(1 - y - 4 y^2)$, where $y = y(t)$ is implicit by $y(1-y)^2(1+y) = t$. Eliminating $y$ via resultant gives the explicit algebraic equation $P(t, A) = 0$ of degree $4$ in $A$ and degree $2$ in $t$. As an immediate corollary (Stanley's classical algebraic-implies-D-finite theorem), $A(t)$ is D-finite. Mathar's and Kotesovec's specific recurrences are not directly proven here; we only verify Kotesovec's order-$2$ recurrence numerically for $n = 3, \ldots, 1000$ and observe that an explicit ODE-and-recurrence extraction from $P(t, A) = 0$ via the standard Bostan-Chyzak-Salvy algebraic-to-holonomic procedure would close both conjectures. The supplementary archive contains a SymPy script which derives $P(t, A)$ and checks the numerical evidence.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T18:53:57Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15352v1</id>
+    <title>Diffusion Policy for Coordinated Control of a Nonholonomic Mobile Base and Dual Arms in Door Opening and Passing</title>
+    <updated>2026-05-14T19:23:46Z</updated>
+    <link href="https://arxiv.org/abs/2605.15352v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15352v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Opening heavy, self closing doors, especially those that require pulling remains a long standing challenge in robotics. Humans naturally employ both arms in a dexterous manner, rotating the handle, widening the gap, holding the door, switching arms when needed, and moving through while maintaining clearance. To replicate such behaviors, a robot must perform a long sequence of motions spanning multiple stages and interactions with different parts of the door. Traditional approaches rely on state machines that transition between manually defined stages (e.g., pulling after the knob is rotated, passing after the gap is sufficiently wide). While intuitive, these methods lack robustness, as hand crafted trajectories fail to generalize to the diversity of real world conditions without extensive engineering effort. Recent advances in imitation learning offer a scalable alternative, yet no existing visual action model has demonstrated simultaneous coordination of a nonholonomic base and dual arms for the complete door opening and passing task. In this paper, we tackle this complex, highly constrained problem using a diffusion based visuomotor control policy. Our results demonstrate that a single end to end policy can be learned to execute long horizon tasks requiring tight coordination between manipulation and locomotion. The resulting policy not only achieves a high success rate in opening and traversing damped pull doors but also demonstrates strong robustness to external disturbances capabilities that are difficult to realize with traditional methods.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T19:23:46Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Shangqun Yu</name>
+    </author>
+    <author>
+      <name>Matthew En</name>
+    </author>
+    <author>
+      <name>Daniel Wu</name>
+    </author>
+    <author>
+      <name>Sangjun Park</name>
+    </author>
+    <author>
+      <name>Ziyi Zhou</name>
+    </author>
+    <author>
+      <name>Seyed Fakoorian</name>
+    </author>
+    <author>
+      <name>Donghyun Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.22668v2</id>
+    <title>Penalised and constrained geodesics in geometric control theory</title>
+    <updated>2026-09-09T08:30:34Z</updated>
+    <link href="https://arxiv.org/abs/2604.22668v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.22668v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In many problems in optimal control, one seeks to minimise an objective function subject to constraints on the velocity of the system. Imposing these constraints directly -- the ``hard-constrained'' approach -- is often analytically and computationally challenging. A natural alternative is to penalise violations of the constraints, solving a sequence of ``soft-constrained'' problems indexed by a penalty parameter $q$, and hoping that solutions converge to solutions of the hard-constrained problem as $q \to \infty$.
+  We show that this approach is justified when applied to a broad class of geometric control problems on a Riemannian manifold $(M,g)$. We first consider the case where there are no autonomous dynamics, and so the control problem reduces to the problem of finding a curve of minimal length or energy between two points, subject to a nonholonomic velocity constraint/penalty determined by the choice of a bracket-generating subbundle $D$ of $TM$. We show that any sequence of solutions to the soft-constrained problem has an accumulation point which is a solution to the hard-constrained problem. Subsequently, we show how to transform a broad class of optimal control problems to the problem of finding a geodesic, by trivialising the inherent dynamics of the system using a change of coordinates inspired by the interaction picture transformation in quantum mechanics.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-24T15:48:03Z</published>
+    <arxiv:comment>Major revisions in v2: fixed error in proof of convergence (Section 3) and reduction of control problem to length-minimisation (Section 4). 27 pages</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Rufus Lawrence</name>
+    </author>
+    <author>
+      <name>Aleš Wodecki</name>
+    </author>
+    <author>
+      <name>Johannes Aspman</name>
+    </author>
+    <author>
+      <name>Jakub Mareček</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.01956v1</id>
+    <title>Receding-Horizon Nonlinear Optimal Control With Safety Constraints Using Constrained Approximate Dynamic Programming</title>
+    <updated>2026-04-02T12:20:13Z</updated>
+    <link href="https://arxiv.org/abs/2604.01956v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.01956v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a receding-horizon optimal control for nonlinear continuous-time systems subject to state constraints. The cost is a quadratic finite-horizon integral. The key enabling technique is a new constrained approximate dynamic programming (C-ADP) approach for finite-horizon nonlinear optimal control with constraints that are affine in the control. The C-ADP approach is intuitive because it uses a quadratic approximation of the cost-to-go function at each backward step. This method yields a sequence of analytic closed-form optimal control functions, which have identical structure and where parameters are obtained from 2 Riccati-like difference equations. This C-ADP method is well suited for real-time implementation. Thus, we use the C-ADP approach in combination with control barrier functions to obtain a continuous-time receding-horizon optimal control that is farsighted in the sense that it optimizes the integral cost subject to state constraints along the entire prediction horizon. Lastly, receding-horizon C-ADP control is demonstrated in simulation of a nonholonomic ground robot subject to velocity and no-collision constraints. We compare performance with 3 other approaches.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-02T12:20:13Z</published>
+    <arxiv:comment>8 pages, 2 figures, conference paper</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Ricardo Gutierrez</name>
+    </author>
+    <author>
+      <name>Jesse B. Hoagg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.09714v1</id>
+    <title>Fast Motion Planning for Non-Holonomic Mobile Robots via a Rectangular Corridor Representation of Structured Environments</title>
+    <updated>2026-02-10T12:18:14Z</updated>
+    <link href="https://arxiv.org/abs/2602.09714v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.09714v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a complete framework for fast motion planning of non-holonomic autonomous mobile robots in highly complex but structured environments. Conventional grid-based planners struggle with scalability, while many kinematically-feasible planners impose a significant computational burden due to their search space complexity. To overcome these limitations, our approach introduces a deterministic free-space decomposition that creates a compact graph of overlapping rectangular corridors. This method enables a significant reduction in the search space, without sacrificing path resolution. The framework then performs online motion planning by finding a sequence of rectangles and generating a near-time-optimal, kinematically-feasible trajectory using an analytical planner. The result is a highly efficient solution for large-scale navigation. We validate our framework through extensive simulations and on a physical robot. The implementation is publicly available as open-source software.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-10T12:18:14Z</published>
+    <arxiv:comment>ICRA 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Alejandro Gonzalez-Garcia</name>
+    </author>
+    <author>
+      <name>Sebastiaan Wyns</name>
+    </author>
+    <author>
+      <name>Sonia De Santis</name>
+    </author>
+    <author>
+      <name>Jan Swevers</name>
+    </author>
+    <author>
+      <name>Wilm Decré</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.13183v2</id>
+    <title>Efficient Path Generation with Curvature Guarantees by Mollification</title>
+    <updated>2026-03-05T09:41:45Z</updated>
+    <link href="https://arxiv.org/abs/2512.13183v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.13183v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Path generation, the process of converting high-level mission specifications, such as sequences of waypoints from a path planner, into smooth, executable paths, is a fundamental challenge in mobile robotics. Most path following and trajectory tracking algorithms require the desired path to be defined by at least twice continuously differentiable functions to guarantee key properties such as global convergence, especially for nonholonomic robots like unicycles with speed constraints. Consequently, path generation methods must bridge the gap between convenient but non-differentiable planning outputs, such as piecewise linear segments, and the differentiability requirements imposed by downstream control algorithms. While techniques such as spline interpolation or optimization-based methods are commonly used to smooth non-differentiable paths or create feasible ones from sequences of waypoints, they either produce unnecessarily complex trajectories or are computationally expensive. In this work, we present a method to regularize non-differentiable functions and generate feasible paths through mollification. Specifically, we approximate an arbitrary path with a differentiable function that can converge to it with arbitrary precision. Additionally, we provide a systematic method for bounding the curvature of generated paths, which we demonstrate by applying it to paths resulting from linking a sequence of waypoints with segments. The proposed approach is analytically shown to be computationally more efficient than standard interpolation methods, enabling real-time implementation on microcontrollers, while remaining compatible with standard trajectory tracking and path following algorithms.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-15T10:48:42Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Alfredo González-Calvin</name>
+    </author>
+    <author>
+      <name>Juan F. Jiménez</name>
+    </author>
+    <author>
+      <name>Héctor García de Marina</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.22338v1</id>
+    <title>Nonholonomic Narrow Dead-End Escape with Deep Reinforcement Learning</title>
+    <updated>2025-11-27T11:19:51Z</updated>
+    <link href="https://arxiv.org/abs/2511.22338v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.22338v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nonholonomic constraints restrict feasible velocities without reducing configuration-space dimension, which makes collision-free geometric paths generally non-executable for car-like robots. Ackermann steering further imposes curvature bounds and forbids in-place rotation, so escaping from narrow dead ends typically requires tightly sequenced forward and reverse maneuvers. Classical planners that decouple global search and local steering struggle in these settings because narrow passages occupy low-measure regions and nonholonomic reachability shrinks the set of valid connections, which degrades sampling efficiency and increases sensitivity to clearances. We study nonholonomic narrow dead-end escape for Ackermann vehicles and contribute three components. First, we construct a generator that samples multi-phase forward-reverse trajectories compatible with Ackermann kinematics and inflates their envelopes to synthesize families of narrow dead ends that are guaranteed to admit at least one feasible escape. Second, we construct a training environment that enforces kinematic constraints and train a policy using the soft actor-critic algorithm. Third, we evaluate against representative classical planners that combine global search with nonholonomic steering. Across parameterized dead-end families, the learned policy solves a larger fraction of instances, reduces maneuver count, and maintains comparable path length and planning time while under the same sensing and control limits. We provide our project as open source at https://github.com/gitagitty/cisDRL-RobotNav.git</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-27T11:19:51Z</published>
+    <arxiv:comment>14 pages, 5 figures, 1 table, submitted to arXiv</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Denghan Xiong</name>
+    </author>
+    <author>
+      <name>Yanzhe Zhao</name>
+    </author>
+    <author>
+      <name>Yutong Chen</name>
+    </author>
+    <author>
+      <name>Zichun Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.12329v1</id>
+    <title>Target Defense against Sequentially Arriving Intruders: Algorithm for Agents with Dubins Dynamics</title>
+    <updated>2025-11-15T19:13:07Z</updated>
+    <link href="https://arxiv.org/abs/2511.12329v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.12329v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a variant of the target defense problem where a single defender is tasked to capture a sequence of incoming intruders. Both the defender and the intruders have non-holonomic dynamics. The intruders' objective is to breach the target perimeter without being captured by the defender, while the defender's goal is to capture as many intruders as possible. After one intruder breaches or is captured, the next appears randomly on a fixed circle surrounding the target. Therefore, the defender's final position in one game becomes its starting position for the next. We divide an intruder-defender engagement into two phases, partial information and full information, depending on the information available to the players. We address the capturability of an intruder by the defender using the notions of Dubins path and guarding arc. We quantify the percentage of capture for both finite and infinite sequences of incoming intruders. Finally, the theoretical results are verified through numerical examples using Monte-Carlo-type random trials of experiments.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-15T19:13:07Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Arman Pourghorban</name>
+    </author>
+    <author>
+      <name>Dipankar Maity</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.02121v1</id>
+    <title>On the integrality of some P-recursive sequences</title>
+    <updated>2025-11-03T23:22:10Z</updated>
+    <link href="https://arxiv.org/abs/2511.02121v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.02121v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the arithmetic nature of P-recursive sequences through the lens of their D-finite generating functions. Building on classical tools from differential algebra, we revisit the integrality criterion for Motzkin-type sequences due to Klazar and Luca, and propose a unified method for analysing global boundedness and algebraicity within a broader class of holonomic sequences. The central contribution is an algorithm that determines whether all, none, or a one-dimensional family of solutions to certain second-order recurrences are globally bounded. This approach generalizes earlier ad hoc methods and applies successfully to several well-known sequences from the On-Line Encyclopedia of Integer Sequences (OEIS).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-03T23:22:10Z</published>
+    <arxiv:comment>30 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Anastasia Matveeva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.06142v2</id>
+    <title>On the generating series of the degree sequence</title>
+    <updated>2026-08-01T14:08:35Z</updated>
+    <link href="https://arxiv.org/abs/2510.06142v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.06142v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the generating series associated with the degree sequence of a monomial self-map of a projective toric variety. We establish conditions under which this series has its circle of convergence as a natural boundary, and hence is a transcendental, non-holonomic function. In the case of toric surfaces, our results are sharp; moreover, we answer a question of Bell by proving that its reduction modulo $p$ is transcendental for all but finitely many prime numbers $p$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-07T17:15:53Z</published>
+    <arxiv:comment>Typos fixed</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Math. Ann. vol. 396 no. 10 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Quang-Khai Nguyen</name>
+    </author>
+    <arxiv:doi>10.1007/s00208-026-03517-2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00208-026-03517-2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.21722v1</id>
+    <title>Discrete Generating Series and Linear Difference Equations</title>
+    <updated>2025-04-30T15:08:16Z</updated>
+    <link href="https://arxiv.org/abs/2504.21722v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.21722v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define discrete generating series for arbitrary functions \( f \colon \mathbb{Z}^n \rightarrow \mathbb{C} \) and derive functional relations that these series satisfy. For linear difference equations with constant coefficients, we establish explicit functional equations linking the generating series to the initial data, and for equations with polynomial coefficients, we introduce an analogue of Stanley's \( D \)-finiteness criterion, proving that a discrete generating series is \( D \)-finite if and only if the corresponding sequence is polynomially recursive. The framework is further generalized to multidimensional settings, where we investigate the interplay between discrete generating series and solutions to Cauchy problems for difference equations. Key structural properties are uncovered through the introduction of polynomial shift operators and projection techniques. The theory is illustrated with concrete examples, including the Tribonacci recurrence and Schröder's second problem.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-30T15:08:16Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Vitaly Alekseev</name>
+    </author>
+    <author>
+      <name>Tom Cuchta</name>
+    </author>
+    <author>
+      <name>Alexander Lyapin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.16517v1</id>
+    <title>On non-holonomicity, transcendence and $p$-adic valuations</title>
+    <updated>2024-12-21T07:34:40Z</updated>
+    <link href="https://arxiv.org/abs/2412.16517v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.16517v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $ν_q(n)$ be the p-adic valuation of $n$. We show that the power series with coefficients $ν_q(n)$, respectively $ν_p(n)(\mathrm{ mod\;} k)$, are non-holonomic and not algebraic in characteristic 0. We find infinitely many rational numbers and infinitely many algebraic irrational numbers for which the values of these series are transcendental. We apply these results to some $p$-automatic sequences, one of them being the period-doubling sequence.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-21T07:34:40Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Cristian Cobeli</name>
+    </author>
+    <author>
+      <name>Mihai Prunescu</name>
+    </author>
+    <author>
+      <name>Alexandru Zaharescu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.18231v2</id>
+    <title>ReloPush: Multi-object Rearrangement in Confined Spaces with a Nonholonomic Mobile Robot Pusher</title>
+    <updated>2025-03-12T16:15:03Z</updated>
+    <link href="https://arxiv.org/abs/2409.18231v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.18231v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We focus on push-based multi-object rearrangement planning using a nonholonomically constrained mobile robot. The simultaneous geometric, kinematic, and physics constraints make this problem especially challenging. Prior work on rearrangement planning often relaxes some of these constraints by assuming dexterous hardware, prehensile manipulation, or sparsely occupied workspaces. Our key insight is that by capturing these constraints into a unified representation, we could empower a constrained robot to tackle difficult problem instances by modifying the environment in its favor. To this end, we introduce a Push-Traversability graph, whose vertices represent poses that the robot can push objects from, and edges represent optimal, kinematically feasible, and stable transitions between them. Based on this graph, we develop ReloPush, a graph-based planning framework that takes as input a complex multi-object rearrangement task and breaks it down into a sequence of single-object pushing tasks. We evaluate ReloPush across a series of challenging scenarios, involving the rearrangement of densely cluttered workspaces with up to nine objects, using a 1/10-scale robot racecar. ReloPush exhibits orders of magnitude faster runtimes and significantly more robust execution in the real world, evidenced in lower execution times and fewer losses of object contact, compared to two baselines lacking our proposed graph structure.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-26T19:21:06Z</published>
+    <arxiv:comment>Preprint of final version, accepted to ICRA 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Jeeho Ahn</name>
+    </author>
+    <author>
+      <name>Christoforos Mavrogiannis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.13395v2</id>
+    <title>A virtually nilpotent group whose Green series is not D-finite</title>
+    <updated>2026-04-27T21:08:06Z</updated>
+    <link href="https://arxiv.org/abs/2409.13395v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.13395v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide the first example of virtually nilpotent group, with a specific generating set, for which the Green series (sometimes called cogrowth series) is not $D$-finite. The proof relies on an arithmetical miracle, and the study of the subword complexity of a multiplicative sequence coming out of it.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-20T10:55:14Z</published>
+    <arxiv:comment>v2: Published version taking into account referee suggestions. Slight change in title v1: 11 pages, 2 figures. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <arxiv:journal_ref>International Journal of Algebra and Computation, Vol. 36, No. 3, pp. 237-247 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Corentin Bodart</name>
+    </author>
+    <arxiv:doi>10.1142/S0218196726500074</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S0218196726500074" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.08133v1</id>
+    <title>Asymptotics of bivariate algebraico-logarithmic generating functions</title>
+    <updated>2024-05-13T19:18:32Z</updated>
+    <link href="https://arxiv.org/abs/2405.08133v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.08133v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive asymptotic formulae for the coefficients of bivariate generating functions with algebraic and logarithmic factors. Logarithms appear when encoding cycles of combinatorial objects, and also implicitly when objects can be broken into indecomposable parts. Asymptotics are quickly computable and can verify combinatorial properties of sequences and assist in randomly generating objects. While multiple approaches for algebraic asymptotics have recently emerged, we find that the contour manipulation approach can be extended to these D-finite generating functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-13T19:18:32Z</published>
+    <arxiv:comment>To appear in the 2024 FPSAC proceedings in "Séminaire Lotharingien de Combinatoire"</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Torin Greenwood</name>
+    </author>
+    <author>
+      <name>Tristan Larson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.13098v4</id>
+    <title>A simple proof for generalized Fibonacci numbers with dying rabbits</title>
+    <updated>2025-04-09T09:29:10Z</updated>
+    <link href="https://arxiv.org/abs/2312.13098v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.13098v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the generalized Fibonacci counting problem with rabbits that become fertile at age $f$ and die at age $d$, with $1&lt;=f&lt;=d$ and $d$ finite or infinite. We provide a simple proof, based exclusively on a counting argumentation, for a recursive formula that gives the $n$th generalized Fibonacci number as a function of at most 3 previous numbers. The formula generalizes both the original Fibonacci sequence, for $f=2$ and $d=\infty$ (or $f=1$ and $d=2$), and other Fibonacci-related sequences, such as the Padovan sequence, for $f=2$ and $d=3$, the Tribonacci, for $f=1$ and $d=3$, Tetranacci, for $f=1$ and $d=4$, and alike sequences, for $f=1$ and finite values of $d$.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-20T15:18:10Z</published>
+    <arxiv:primary_category term="math.HO"/>
+    <arxiv:journal_ref>A combinatorial proof for the Fibonacci dying rabbits problem, Bulletin of the ICA (Institute of Combinatorics and its Applications), Volume 103, pp. 25-46, 2025</arxiv:journal_ref>
+    <author>
+      <name>Roberto De Prisco</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.11589v2</id>
+    <title>Output-Feedback Nonlinear Model Predictive Control with Iterative State- and Control-Dependent Coefficients</title>
+    <updated>2023-09-28T16:46:18Z</updated>
+    <link href="https://arxiv.org/abs/2309.11589v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.11589v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By optimizing the predicted performance over a receding horizon, model predictive control (MPC) provides the ability to enforce state and control constraints. The present paper considers an extension of MPC for nonlinear systems that can be written in pseudo-linear form with state- and control-dependent coefficients. The main innovation is to apply quadratic programming iteratively over the horizon, where the predicted state trajectory is updated based on the updated control sequence. Output-feedback control is facilitated by using the block-observable canonical form for linear, time-varying dynamics. This control technique is illustrated on various numerical examples, including the Kapitza pendulum with slider-crank actuation, the nonholonomic integrator, the electromagnetically controlled oscillator, and the triple integrator with control-magnitude saturation.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-20T18:54:26Z</published>
+    <arxiv:comment>Submitted to 2024 American Control Conference</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Mohammadreza Kamaldar</name>
+    </author>
+    <author>
+      <name>Dennis S. Bernstein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.12397v4</id>
+    <title>Uncountably many enumerations of well-quasi-ordered permutation classes</title>
+    <updated>2025-09-13T18:24:49Z</updated>
+    <link href="https://arxiv.org/abs/2211.12397v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.12397v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct an uncountable family of well-quasi-ordered permutation classes, each with a distinct enumeration sequence. This disproves a conjecture that all well-quasi-ordered permutation classes have algebraic generating functions, and in fact shows that many such classes lack D-finite or D-algebraic generating functions. Our construction is based on an uncountably large collection of factor-closed, well-quasi-ordered binary languages due to Pouzet.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-22T16:42:14Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Combinatorial Theory 6(1), (2026) #16</arxiv:journal_ref>
+    <author>
+      <name>Robert Brignall</name>
+    </author>
+    <author>
+      <name>Vincent Vatter</name>
+    </author>
+    <arxiv:doi>10.5070/C66165703</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5070/C66165703" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.12401v3</id>
+    <title>Jet Functors in Noncommutative Geometry</title>
+    <updated>2025-03-25T15:21:50Z</updated>
+    <link href="https://arxiv.org/abs/2204.12401v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.12401v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article we construct three infinite families of endofunctors $J_d^{(n)}$, $J_d^{[n]}$, and $J_d^n$ on the category of left $A$-modules, where $A$ is a unital associative algebra over a commutative ring $\mathbb{k}$, equipped with an exterior algebra $Ω^\bullet_d$. We prove that these functors generalize the corresponding classical notions of nonholonomic, semiholonomic, and holonomic jet functors, respectively. Our functors come equipped with natural transformations from the identity functor to the corresponding jet functors, which play the rôles of the classical prolongation maps. This allows us to define the notion of linear differential operators with respect to $Ω^{\bullet}_d$. We show that if $Ω^1_d$ is flat as a right $A$-module, the semiholonomic jet functor satisfies the semiholonomic jet exact sequence $0 \rightarrow \bigotimes^n_A Ω^1_d \rightarrow J^{[n]}_d\rightarrow J^{[n-1]}_d \rightarrow 0$. Moreover, we construct a functor of symmetric (in a suitable noncommutative sense) forms $S^n_d$ associated to $Ω^\bullet_d$, and proceed to introduce the corresponding noncommutative analogue of the Spencer $δ$-complex. We give necessary and sufficient conditions under which the holonomic jet functor $J_d^n$ satisfies the (holonomic) jet exact sequence, $0\rightarrow S^n_d \rightarrow J_d^n \rightarrow J_d^{n-1} \rightarrow 0$. In particular, for $n=1$ the sequence is always exact, for $n=2$ it is exact for $Ω^1_d$ flat as a right $A$-module, and for $n\ge 3$, it is sufficient to have $Ω^1_d$, $Ω^2_d$, and $Ω^3_d$ flat as right $A$-modules and the vanishing of the Spencer $δ$-cohomology $H^{\bullet,2}_{δ_d}$.</summary>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-26T15:58:16Z</published>
+    <arxiv:comment>61 pages. Improved presentation. Corrected minor errors. Included minor new results</arxiv:comment>
+    <arxiv:primary_category term="math.QA"/>
+    <author>
+      <name>Keegan J. Flood</name>
+    </author>
+    <author>
+      <name>Mauro Mantegazza</name>
+    </author>
+    <author>
+      <name>Henrik Winther</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.09928v3</id>
+    <title>A numerical study of L-convex polyominoes and 201-avoiding ascent sequences</title>
+    <updated>2023-11-20T06:30:46Z</updated>
+    <link href="https://arxiv.org/abs/2109.09928v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.09928v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For L-convex polyominoes we give the asymptotics of the generating function coefficients, obtained by analysis of the coefficients derived from the functional equation given by Castiglione et al. \cite{CFMRR7}. For 201-avoiding ascent sequences, we conjecture the solution, obtained from the first 23 coefficients of the generating function. The solution is D-finite, indeed algebraic. The conjectured solution then correctly generates all subsequent coefficients. We also obtain the asymptotics, both from direct analysis of the coefficients, and from the conjectured solution. As well as presenting these new results, our purpose is to illustrate the methods used, so that they may be more widely applied.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-21T03:12:14Z</published>
+    <arxiv:comment>11 pages, 12 figures, accepted in Séminaire Lotharingien de Combinatoire, vol. 87B, 2023</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Anthony Guttmann</name>
+    </author>
+    <author>
+      <name>Vaclav Kotesovec</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.09574v3</id>
+    <title>On the representation of non-holonomic univariate power series</title>
+    <updated>2022-04-14T19:27:25Z</updated>
+    <link href="https://arxiv.org/abs/2109.09574v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.09574v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Holonomic functions play an essential role in Computer Algebra since they allow the application of many symbolic algorithms. Among all algorithmic attempts to find formulas for power series, the holonomic property remains the most important requirement to be satisfied by the function under consideration. The targeted functions mainly summarize that of meromorphic functions. However, expressions like $\tan(z)$, $z/(\exp(z)-1)$, $\sec(z)$, etc., particularly, reciprocals, quotients and compositions of holonomic functions, are generally not holonomic. Therefore their power series are inaccessible by the holonomic framework. From the mathematical dictionaries, one can observe that most of the known closed-form formulas of non-holonomic power series involve another sequence whose evaluation depends on some finite summations. In the case of $\tan(z)$ and $\sec(z)$ the corresponding sequences are the Bernoulli and Euler numbers, respectively. Thus providing a symbolic approach that yields complete representations when linear summations for power series coefficients of non-holonomic functions appear, might be seen as a step forward towards the representation of non-holonomic power series.
+  By adapting the method of ansatz with undetermined coefficients, we build an algorithm that computes least-order quadratic differential equations with polynomial coefficients for a large class of non-holonomic functions. A differential equation resulting from this procedure is converted into a recurrence equation by applying the Cauchy product formula and rewriting powers into polynomials and derivatives into shifts. Finally, using enough initial values we are able to give normal form representations to characterize several non-holonomic power series and prove non-trivial identities. We discuss this algorithm and its implementation for Maple 2022.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-20T14:29:02Z</published>
+    <arxiv:comment>20 pages; 26 references. Update: revised version</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Bertrand Teguia Tabuguia</name>
+    </author>
+    <author>
+      <name>Wolfram Koepf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.02112v1</id>
+    <title>P-finite Recurrences From Generating Functions with Roots of Polynomials</title>
+    <updated>2021-09-05T16:18:08Z</updated>
+    <link href="https://arxiv.org/abs/2109.02112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.02112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive the P-finite recurrences for classes of sequences with ordinary generating function containing roots of polynomials. The focus is on establishing the D-finite differential equations such that the familiar steps of reducing their power series expansions apply.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-05T16:18:08Z</published>
+    <arxiv:comment>18 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Richard J. Mathar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.00605v2</id>
+    <title>Backstepping Mean-Field Density Control for Large-Scale Heterogeneous Nonlinear Stochastic Systems</title>
+    <updated>2022-03-24T21:55:06Z</updated>
+    <link href="https://arxiv.org/abs/2109.00605v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.00605v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work studies the problem of controlling the mean-field density of large-scale stochastic systems, which has applications in various fields such as swarm robotics. Recently, there is a growing amount of literature that employs mean-field partial differential equations (PDEs) to model the density evolution and uses density feedback to design control laws which, by acting on individual systems, stabilize their density towards a target profile. In spite of its stability property and computational efficiency, the success of density feedback relies on assuming the systems to be homogeneous first-order integrators (plus white noise) and ignores higher-order dynamics, making it less applicable in practice. In this work, we present a backstepping design algorithm that extends density control to heterogeneous and higher-order stochastic systems in strict-feedback forms. We show that the strict-feedback form in the individual level corresponds to, in the collective level, a PDE (of densities) distributedly driven by a collection of heterogeneous stochastic systems. The presented backstepping design then starts with a density feedback design for the PDE, followed by a sequence of stabilizing design for the remaining stochastic systems. We present a candidate control law with stability proof and apply it to nonholonomic mobile robots. A simulation is included to verify the effectiveness of the algorithm.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-01T20:28:23Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Tongjia Zheng</name>
+    </author>
+    <author>
+      <name>Qing Han</name>
+    </author>
+    <author>
+      <name>Hai Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.08155v1</id>
+    <title>Sequence Positivity Through Numeric Analytic Continuation: Uniqueness of the Canham Model for Biomembranes</title>
+    <updated>2020-11-16T18:26:34Z</updated>
+    <link href="https://arxiv.org/abs/2011.08155v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.08155v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove solution uniqueness for the genus one Canham variational problem arising in the shape prediction of biomembranes. The proof builds on a result of Yu and Chen that reduces the variational problem to proving non-negativity of a sequence defined by a linear recurrence relation with polynomial coefficients. We combine rigorous numeric analytic continuation of D-finite functions with classic bounds from singularity analysis to derive an effective index where the asymptotic behaviour of the sequence, which is positive, dominates the sequence behaviour. Positivity of the finite number of remaining terms is then checked computationally.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-16T18:26:34Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Stephen Melczer</name>
+    </author>
+    <author>
+      <name>Marc Mezzarobba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.04281v1</id>
+    <title>Rational dynamical systems, $S$-units, and $D$-finite power series</title>
+    <updated>2020-05-08T20:34:39Z</updated>
+    <link href="https://arxiv.org/abs/2005.04281v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.04281v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $K$ be an algebraically closed field of characteristic zero and let $G$ be a finitely generated subgroup of the multiplicative group of $K$. We consider $K$-valued sequences of the form $a_n:=f(\varphi^n(x_0))$, where $\varphi\colon X\to X$ and $f\colon X\to\mathbb{P}^1$ are rational maps defined over $K$ and $x_0\in X$ is a point whose forward orbit avoids the indeterminacy loci of $\varphi$ and $f$. Many classical sequences from number theory and algebraic combinatorics fall under this dynamical framework, and we show that the set of $n$ for which $a_n\in G$ is a finite union of arithmetic progressions along with a set of Banach density zero. In addition, we show that if $a_n\in G$ for every $n$ and $X$ is irreducible and the $\varphi$ orbit of $x$ is Zariski dense in $X$ then there are a multiplicative torus $\mathbb{G}_m^d$ and maps $Ψ:\mathbb{G}_m^d \to \mathbb{G}_m^d$ and $g:\mathbb{G}_m^d \to \mathbb{G}_m$ such that $a_n = g\circ Ψ^n(y)$ for some $y\in \mathbb{G}_m^d$. We then obtain results about the coefficients of $D$-finite power series using these facts.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-08T20:34:39Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Alg. Number Th. 15 (2021) 1699-1728</arxiv:journal_ref>
+    <author>
+      <name>Jason P. Bell</name>
+    </author>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Ehsaan Hossain</name>
+    </author>
+    <arxiv:doi>10.2140/ant.2021.15.1699</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/ant.2021.15.1699" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.01255v1</id>
+    <title>Height Gap Conjectures, $D$-Finiteness, and Weak Dynamical Mordell-Lang</title>
+    <updated>2020-03-02T23:55:27Z</updated>
+    <link href="https://arxiv.org/abs/2003.01255v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.01255v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In previous work, the first author, Ghioca, and the third author introduced a broad dynamical framework giving rise to many classical sequences from number theory and algebraic combinatorics. Specifically, these are sequences of the form $f(Φ^n(x))$, where $Φ\colon X\to X$ and $f\colon X\to\mathbb{P}^1$ are rational maps defined over $\overline{\mathbb{Q}}$ and $x\in X(\overline{\mathbb{Q}})$ is a point whose forward orbit avoids the indeterminacy loci of $Φ$ and $f$. They conjectured that if the sequence is infinite, then $\limsup \frac{h(f(Φ^n(x)))}{\log n} &gt; 0$. They also made a corresponding conjecture for $\liminf$ and showed that it implies the Dynamical Mordell-Lang Conjecture. In this paper, we prove the $\limsup$ conjecture as well as the $\liminf$ conjecture away from a set of density $0$. As applications, we prove results concerning the growth rate of coefficients of $D$-finite power series as well as the Dynamical Mordell-Lang Conjecture up to a set of density $0$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-02T23:55:27Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Math. Ann. 378 (2020), no. 3-4, 971--992</arxiv:journal_ref>
+    <author>
+      <name>Jason P. Bell</name>
+    </author>
+    <author>
+      <name>Fei Hu</name>
+    </author>
+    <author>
+      <name>Matthew Satriano</name>
+    </author>
+    <arxiv:doi>10.1007/s00208-020-02062-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00208-020-02062-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02783v1</id>
+    <title>Integral P-Recursive Sequences</title>
+    <updated>2020-02-07T13:49:00Z</updated>
+    <link href="https://arxiv.org/abs/2002.02783v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02783v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an earlier paper, the notion of integrality known from algebraic number fields and fields of algebraic functions has been extended to D-finite functions. The aim of the present paper is to extend the notion to the case of P-recursive sequences. In order to do so, we formulate a general algorithm for finding all integral elements for valued vector spaces and then show that this algorithm includes not only the algebraic and the D-finite cases but also covers the case of P-recursive sequences.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-07T13:49:00Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.10950v2</id>
+    <title>Cosmology of Lorentz fiber-bundle induced scalar-tensor theories</title>
+    <updated>2019-12-19T17:50:06Z</updated>
+    <link href="https://arxiv.org/abs/1907.10950v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.10950v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the cosmological applications of scalar-tensor theories that arise effectively from the Lorentz fiber bundle of a Finsler-like geometry. We first show that the involved nonlinear connection induces a new scalar degree of freedom and eventually a scalar-tensor theory. Using both a holonomic and a nonholonomic basis, we show the appearance of an effective dark-energy sector, which additionally acquires an explicit interaction with the matter sector, arising purely from the internal structure of the theory. Applying the theory at late times we find that we can obtain the thermal history of the Universe, namely the sequence of matter and dark-energy epochs, and moreover the effective dark-energy equation-of-state parameter can be quintessencelike, phantomlike, or experience the phantom-divide crossing during cosmological evolution. Furthermore, applying the scenario at early times, we see that one can acquire an exponential de Sitter solution as well as obtain an inflationary realization with the desired scale-factor evolution. These features arise purely from the intrinsic geometrical structure of Finsler-like geometry and reveal the capabilities of the construction.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-25T10:29:03Z</published>
+    <arxiv:comment>12 pages, 2 figures, version published in Phys. Rev. D</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>Phys. Rev. D 100, 124035 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Satoshi Ikeda</name>
+    </author>
+    <author>
+      <name>Emmanuel N. Saridakis</name>
+    </author>
+    <author>
+      <name>Panayiotis C. Stavrinos</name>
+    </author>
+    <author>
+      <name>Alkiviadis Triantafyllopoulos</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.100.124035</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.100.124035" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.06450v1</id>
+    <title>D-finiteness, rationality, and height</title>
+    <updated>2019-05-15T21:56:25Z</updated>
+    <link href="https://arxiv.org/abs/1905.06450v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.06450v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by a result of van der Poorten and Shparlinski for univariate power series, Bell and Chen prove that if a multivariate power series over a field of characteristic 0 is D-finite and its coefficients belong to a finite set then it is a rational function. We extend and strengthen their results to certain power series whose coefficients may form an infinite set. We also prove that if the coefficients of a univariate D-finite power series `look like' the coefficients of a rational function then the power series is rational. Our work relies on the theory of Weil heights, the Manin-Mumford theorem for tori, an application of the Subspace Theorem, and various combinatorial arguments involving heights, power series, and linear recurrence sequences.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-15T21:56:25Z</published>
+    <arxiv:comment>18 pages, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Jason P. Bell</name>
+    </author>
+    <author>
+      <name>Khoa D. Nguyen</name>
+    </author>
+    <author>
+      <name>Umberto Zannier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.03557v2</id>
+    <title>Keep Rollin' - Whole-Body Motion Control and Planning for Wheeled Quadrupedal Robots</title>
+    <updated>2019-02-07T09:47:20Z</updated>
+    <link href="https://arxiv.org/abs/1809.03557v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.03557v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show dynamic locomotion strategies for wheeled quadrupedal robots, which combine the advantages of both walking and driving. The developed optimization framework tightly integrates the additional degrees of freedom introduced by the wheels. Our approach relies on a zero-moment point based motion optimization which continuously updates reference trajectories. The reference motions are tracked by a hierarchical whole-body controller which computes optimal generalized accelerations and contact forces by solving a sequence of prioritized tasks including the nonholonomic rolling constraints. Our approach has been tested on ANYmal, a quadrupedal robot that is fully torque-controlled including the non-steerable wheels attached to its legs. We conducted experiments on flat and inclined terrains as well as over steps, whereby we show that integrating the wheels into the motion control and planning framework results in intuitive motion trajectories, which enable more robust and dynamic locomotion compared to other wheeled-legged robots. Moreover, with a speed of 4 m/s and a reduction of the cost of transport by 83 % we prove the superiority of wheeled-legged robots compared to their legged counterparts.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-10T19:23:13Z</published>
+    <arxiv:comment>IEEE Robotics and Automation Letters</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <arxiv:journal_ref>IEEE Robotics and Automation Letters 2019</arxiv:journal_ref>
+    <author>
+      <name>Marko Bjelonic</name>
+    </author>
+    <author>
+      <name>C. Dario Bellicoso</name>
+    </author>
+    <author>
+      <name>Yvain de Viragh</name>
+    </author>
+    <author>
+      <name>Dhionis Sako</name>
+    </author>
+    <author>
+      <name>F. Dante Tresoldi</name>
+    </author>
+    <author>
+      <name>Fabian Jenelten</name>
+    </author>
+    <author>
+      <name>Marco Hutter</name>
+    </author>
+    <arxiv:doi>10.1109/LRA.2019.2899750</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/LRA.2019.2899750" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.03415v1</id>
+    <title>Fast Kinodynamic Bipedal Locomotion Planning with Moving Obstacles</title>
+    <updated>2018-07-09T22:51:10Z</updated>
+    <link href="https://arxiv.org/abs/1807.03415v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.03415v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a sampling-based kinodynamic planning framework for a bipedal robot in complex environments. Unlike other footstep planner which typically plan footstep locations and the biped dynamics in separate steps, we handle both simultaneously. Three advantages of this approach are (1) the ability to differentiate alternate routes while selecting footstep locations based on the temporal duration of the route as determined by the Linear Inverted Pendulum Model dynamics, (2) the ability to perform collision checking through time so that collisions with moving obstacles are prevented without avoiding their entire trajectory, and (3) the ability to specify a minimum forward velocity for the biped. To generate a dynamically consistent description of the walking behavior, we exploit the Phase Space Planner. To plan a collision free route toward the goal, we adapt planning strategies from non-holonomic wheeled robots to gather a sequence of inputs for the PSP. This allows us to efficiently approximate dynamic and kinematic constraints on bipedal motion, to apply a sampling based planning algorithms, and to use the Dubin's path as the steering method to connect two points in the configuration space. The results of the algorithm are sent to a Whole Body Controller to generate full body dynamic walking behavior.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-09T22:51:10Z</published>
+    <arxiv:comment>8 pages, 6 figures, Accepted in IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2018</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Junhyeok Ahn</name>
+    </author>
+    <author>
+      <name>Orion Campbell</name>
+    </author>
+    <author>
+      <name>Donghyun Kim</name>
+    </author>
+    <author>
+      <name>Luis Sentis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.05991v2</id>
+    <title>Stabilization of Control-Affine Systems by Local Approximations of Trajectories</title>
+    <updated>2018-06-09T12:58:36Z</updated>
+    <link href="https://arxiv.org/abs/1805.05991v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.05991v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study convergence and stability properties of control-affine systems. Our considerations are motivated by the problem of stabilizing a control-affine system by means of output feedback for states in which the output function attains an extreme value. Following a recently introduced approach to extremum seeking control, we obtain access to the ascent and descent directions of the output function by approximating Lie brackets of suitably defined vector fields. This approximation is based on convergence properties of trajectories of control-affine systems under certain sequences of open-loop controls. We show that a suitable notion of convergence for the sequences of open-loop controls ensures local uniform convergence of the corresponding sequences of flows. We also show how boundedness properties of the control vector fields influence the quality of the approximation. Our convergence results are sufficiently strong to derive conditions under which the proposed output feedback control law induces exponential stability. We also apply this control law to the problem of purely distance-based formation control for nonholonomic multi-agent systems.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-15T18:39:31Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Raik Suttner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.08566v1</id>
+    <title>Definite Sums of Hypergeometric Terms and Limits of P-Recursive Sequences</title>
+    <updated>2017-10-24T01:18:29Z</updated>
+    <link href="https://arxiv.org/abs/1710.08566v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.08566v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ubiquity of the class of D-finite functions and P-recursive sequences in symbolic computation is widely recognized. In this thesis, the presented work consists of two parts related to this class.
+  In the first part, we generalize the reduction-based creative telescoping algorithms to the hypergeometric setting, which allows to deal with definite sums of hypergeometric terms more quickly. We first modify the Abramov-Petkovsek reduction, and then design a new algorithm to compute minimal telescopers for bivariate hypergeometric terms based on the modified reduction. This new algorithm can avoid the costly computation of certificates, and outperforms the classical Zeilberger algorithm no matter whether certificates are computed or not according to the computational experiments. Moreover, we also derive order bounds for minimal telescopers. These bounds are sometimes better, and never worse than the known ones.
+  In the second part of the thesis, we study the class of D-finite numbers. It consists of the limits of convergent P-recursive sequences. Typically, this class contains many well-known mathematical constants in addition to the algebraic numbers. Our definition of the class of D-finite numbers depends on two subrings of the field of complex numbers. We investigate how different choices of these two subrings affect the class. Moreover, we show that D-finite numbers over the Gaussian rational field are essentially the same as the values of D-finite functions at non-singular algebraic number arguments (so-called the regular holonomic constants). This result makes it easier to recognize certain numbers as belonging to this class.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-24T01:18:29Z</published>
+    <arxiv:comment>PhD thesis</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Hui Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.07445v1</id>
+    <title>Univariate Contraction and Multivariate Desingularization of Ore Ideals</title>
+    <updated>2017-10-20T08:03:55Z</updated>
+    <link href="https://arxiv.org/abs/1710.07445v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.07445v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ore operators with polynomial coefficients form a common algebraic abstraction for representing D-finite functions. They form the Ore ring $K(x)[D_x]$, where $K$ is the constant field. Suppose $K$ is the quotient field of some principal ideal domain $R$. The ring $R[x][D_x]$ consists of elements in $K(x)[D_x]$ without "denominator".
+  Given $L \in K(x)[D_x]$, it generates a left ideal $I$ in $K(x)[D_x]$. We call $I \cap R[x][D_x]$ the univariate contraction of $I$.
+  When $L$ is a linear ordinary differential or difference operator, we design a contraction algorithm for $L$ by using desingularized operators as proposed by Chen, Jaroschek, Kauers and Singer. When $L$ is an ordinary differential operator and $R = K$, our algorithm is more elementary than known algorithms. In other cases, our results are new.
+  We propose the notion of completely desingularized operators, study their properties, and design an algorithm for computing them. Completely desingularized operators have interesting applications such as certifying integer sequences and checking special cases of a conjecture of Krattenthaler.
+  A D-finite system is a finite set of linear homogeneous partial differential equations in several variables, whose solution space is of finite dimension. For such systems, we give the notion of a singularity in terms of the polynomials appearing in them. We show that a point is a singularity of the system unless it admits a basis of power series solutions in which the starting monomials are as small as possible with respect to some term order. Then a singularity is apparent if the system admits a full basis of power series solutions, the starting terms of which are not as small as possible. We prove that apparent singularities in the multivariate case can be removed like in the univariate case by adding suitable additional solutions to the original system.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-20T08:03:55Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.05051v1</id>
+    <title>Analytic Combinatorics in Several Variables: Effective Asymptotics and Lattice Path Enumeration</title>
+    <updated>2017-09-15T04:09:09Z</updated>
+    <link href="https://arxiv.org/abs/1709.05051v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.05051v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The field of analytic combinatorics, which studies the asymptotic behaviour of sequences through analytic properties of their generating functions, has led to the development of deep and powerful tools with applications across mathematics and the natural sciences. In addition to the now classical univariate theory, recent work in the study of analytic combinatorics in several variables (ACSV) has shown how to derive asymptotics for the coefficients of certain D-finite functions represented by diagonals of multivariate rational functions. We give a pedagogical introduction to the methods of ACSV from a computer algebra viewpoint, developing rigorous algorithms and giving the first complexity results in this area under conditions which are broadly satisfied. Furthermore, we give several new applications of ACSV to the enumeration of lattice walks restricted to certain regions. In addition to proving several open conjectures on the asymptotics of such walks, a detailed study of lattice walk models with weighted steps is undertaken.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-15T04:09:09Z</published>
+    <arxiv:comment>PhD thesis, University of Waterloo and ENS Lyon - 259 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Stephen Melczer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.03101v1</id>
+    <title>Robust MPC for tracking of nonholonomic robots with additive disturbances</title>
+    <updated>2017-03-09T01:39:27Z</updated>
+    <link href="https://arxiv.org/abs/1703.03101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.03101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, two robust model predictive control (MPC) schemes are proposed for tracking control of nonholonomic systems with bounded disturbances: tube-MPC and nominal robust MPC (NRMPC). In tube-MPC, the control signal consists of a control action and a nonlinear feedback law based on the deviation of the actual states from the states of a nominal system. It renders the actual trajectory within a tube centered along the optimal trajectory of the nominal system. Recursive feasibility and input-to-state stability are established and the constraints are ensured by tightening the input domain and the terminal region. While in NRMPC, an optimal control sequence is obtained by solving an optimization problem based on the current state, and the first portion of this sequence is applied to the real system in an open-loop manner during each sampling period. The state of nominal system model is updated by the actual state at each step, which provides additional a feedback. By introducing a robust state constraint and tightening the terminal region, recursive feasibility and input-to-state stability are guaranteed. Simulation results demonstrate the effectiveness of both strategies proposed.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-09T01:39:27Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Zhongqi Sun</name>
+    </author>
+    <author>
+      <name>Li Dai</name>
+    </author>
+    <author>
+      <name>Kun Liu</name>
+    </author>
+    <author>
+      <name>Yuanqing Xia</name>
+    </author>
+    <author>
+      <name>Karl Henrik Johansson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.04529v3</id>
+    <title>Semi-Baxter and strong-Baxter: two relatives of the Baxter sequence</title>
+    <updated>2018-01-11T09:25:05Z</updated>
+    <link href="https://arxiv.org/abs/1702.04529v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.04529v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we enumerate two families of pattern-avoiding permutations: those avoiding the vincular pattern $2-41-3$, which we call semi-Baxter permutations, and those avoiding the vincular patterns $2-41-3$, $3-14-2$ and $3-41-2$, which we call strong-Baxter permutations. We call semi-Baxter numbers and strong-Baxter numbers the associated enumeration sequences. We prove that the semi-Baxter numbers enumerate in addition plane permutations (avoiding $2-14-3$). The problem of counting these permutations was open and has given rise to several conjectures, which we also prove in this paper.
+  For each family (that of semi-Baxter -- or equivalently, plane -- and that of strong-Baxter permutations), we describe a generating tree, which translates into a functional equation for the generating function. For semi-Baxter permutations, it is solved using (a variant of) the kernel method: this gives an expression for the generating function while also proving its D-finiteness. From the obtained generating function, we derive closed formulas for the semi-Baxter numbers, a recurrence that they satisfy, as well as their asymptotic behavior. For strong-Baxter permutations, we show that their generating function is (a slight modification of) that of a family of walks in the quarter plane, which is known to be non D-finite.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-15T10:07:22Z</published>
+    <arxiv:comment>Version 3 incorporates changes suggested by a referee. Most important changes are that the paths sections have been removed and that the proof of the asymptotic equivalent has been simplified</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mathilde Bouvel</name>
+    </author>
+    <author>
+      <name>Veronica Guerrini</name>
+    </author>
+    <author>
+      <name>Andrew Rechnitzer</name>
+    </author>
+    <author>
+      <name>Simone Rinaldi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1611.05901v3</id>
+    <title>D-finite Numbers</title>
+    <updated>2018-05-26T15:13:04Z</updated>
+    <link href="https://arxiv.org/abs/1611.05901v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1611.05901v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>D-finite functions and P-recursive sequences are defined in terms of linear differential and recurrence equations with polynomial coefficients. In this paper, we introduce a class of numbers closely related to D-finite functions and P-recursive sequences. It consists of the limits of convergent P-recursive sequences. Typically, this class contains many well-known mathematical constants in addition to the algebraic numbers. Our definition of the class of D-finite numbers depends on two subrings of the field of complex numbers. We investigate how different choices of these two subrings affect the class. Moreover, we show that D-finite numbers are essentially limits of D-finite functions at the point one, and evaluating D-finite functions at non-singular algebraic points typically yields D-finite numbers. This result makes it easier to recognize certain numbers to be D-finite.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-11-17T21:20:58Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Hui Huang</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <arxiv:doi>10.1142/S1793042118501099</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S1793042118501099" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.01165v1</id>
+    <title>Quasi-classical generalized CRF structures</title>
+    <updated>2016-04-05T08:15:06Z</updated>
+    <link href="https://arxiv.org/abs/1604.01165v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.01165v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an earlier paper, we studied manifolds $M$ endowed with a generalized F structure $Φ\in End(TM\oplus T^*M)$, skew-symmetric with respect to the pairing metric, such that $Φ^3+Φ=0$. Furthermore, if $Φ$ is integrable (in some well-defined sense), $Φ$ is a generalized CRF structure. In the present paper we study quasi-classical generalized F and CRF structures, which may be seen as a generalization of the holomorphic Poisson structures (it is well known that the latter may also be defined via generalized geometry). The structures that we study are equivalent to a pair of tensor fields $(A\in End(TM),π\in\wedge^2TM)$ where $A^3+A=0$ and some relations between $A$ and $π$ hold. We establish the integrability conditions in terms of $(A,π)$. They include the facts that $A$ is a classical CRF structure, $π$ is a Poisson bivector field and $im\,A$ is a (non)holonomic Poisson submanifold of $(M,π)$. We discuss the case where either $ker\,A$ or $im\,A$ is tangent to a foliation and, in particular, the case of almost contact manifolds. Finally, we show that the dual bundle of $im\,A$ inherits a Lie algebroid structure and we briefly discuss the Poisson cohomology of $π$, including an associated spectral sequence and a Dolbeault type grading.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-05T08:15:06Z</published>
+    <arxiv:comment>LaTeX, 22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Izu Vaisman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.02527v3</id>
+    <title>Asymptotics of lattice walks via analytic combinatorics in several variables</title>
+    <updated>2016-02-26T21:17:19Z</updated>
+    <link href="https://arxiv.org/abs/1511.02527v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.02527v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the enumeration of walks on the two dimensional non-negative integer lattice with short steps. Up to isomorphism there are 79 unique two dimensional models to consider, and previous work in this area has used the kernel method, along with a rigorous computer algebra approach, to show that 23 of the 79 models admit D-finite generating functions. In 2009, Bostan and Kauers used Padé-Hermite approximants to guess differential equations which these 23 generating functions satisfy, in the process guessing asymptotics of their coefficient sequences. In this article we provide, for the first time, a complete rigorous verification of these guesses. Our technique is to use the kernel method to express 19 of the 23 generating functions as diagonals of tri-variate rational functions and apply the methods of analytic combinatorics in several variables (the remaining 4 models have algebraic generating functions and can thus be handled by univariate techniques). This approach also shows the link between combinatorial properties of the models and features of its asymptotics such as asymptotic and polynomial growth factors. In addition, we give expressions for the number of walks returning to the x-axis, the y-axis, and the origin, proving recently conjectured asymptotics of Bostan, Chyzak, van Hoeij, Kauers, and Pech.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-08T21:00:05Z</published>
+    <arxiv:comment>10 pages, 3 tables, as accepted to proceedings of FPSAC 2016 (without conference formatting)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Stephen Melczer</name>
+    </author>
+    <author>
+      <name>Mark C. Wilson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.02608v1</id>
+    <title>Efficient Path Interpolation and Speed Profile Computation for Nonholonomic Mobile Robots</title>
+    <updated>2015-08-11T14:24:40Z</updated>
+    <link href="https://arxiv.org/abs/1508.02608v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.02608v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper studies path synthesis for nonholonomic mobile robots moving in two-dimensional space. We first address the problem of interpolating paths expressed as sequences of straight line segments, such as those produced by some planning algorithms, into smooth curves that can be followed without stopping. Our solution has the advantage of being simpler than other existing approaches, and has a low computational cost that allows a real-time implementation. It produces discretized paths on which curvature and variation of curvature are bounded at all points, and preserves obstacle clearance. Then, we consider the problem of computing a time-optimal speed profile for such paths. We introduce an algorithm that solves this problem in linear time, and that is able to take into account a broader class of physical constraints than other solutions. Our contributions have been implemented and evaluated in the framework of the Eurobot contest.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-11T14:24:40Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Stéphane Lens</name>
+    </author>
+    <author>
+      <name>Bernard Boigelot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.2035v1</id>
+    <title>The Generating Functions Enumerating 12..d-Avoiding Words with r occurrences of each of 1,2, ... , n are D-finite for all d and all r</title>
+    <updated>2014-12-05T15:49:19Z</updated>
+    <link href="https://arxiv.org/abs/1412.2035v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.2035v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, dedicated with admiration and gratitude to guru Neil Sloane on his 75-th birthday, we observe that the generating functions for multi-set permutations that do not contain an increasing subsequence of length d, and where every letter appears the same number of times, say r, are always D-finite, (for every d and every r), and we actually crank out the first few terms of quite a few of them, many of whom are not yet in the OEIS. We also state a conjectured asymptotic formula for these sequences, that reduces to Amitai Regev's famous formula when r=1, and pledge a 100 dollar donation to the OEIS in honor of the first one to prove our conjecture. We pledge another 100 dollars for extending Ira Gessel's spectacular Bessel determinant, from the r=1 case to general r.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-05T15:49:19Z</published>
+    <arxiv:comment>4 pages. Exclusively published in the Personal Journal of Shalosh B. Ekhad and Doron Zeilberger, Dec. 5, 2014 and this arxiv.org</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1205.3300v3</id>
+    <title>Non-D-finite excursions in the quarter plane</title>
+    <updated>2013-12-07T12:48:04Z</updated>
+    <link href="https://arxiv.org/abs/1205.3300v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1205.3300v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of excursions (finite paths starting and ending at the origin) having a given number of steps and obeying various geometric constraints is a classical topic of combinatorics and probability theory. We prove that the sequence $(e^{\mathfrak{S}}_n)_{n\geq 0}$ of numbers of excursions in the quarter plane corresponding to a nonsingular step set $\mathfrak{S} \subseteq \{0,\pm 1 \}^2$ with infinite group does not satisfy any nontrivial linear recurrence with polynomial coefficients. Accordingly, in those cases, the trivariate generating function of the numbers of walks with given length and prescribed ending point is not D-finite. Moreover, we display the asymptotics of $e^{\mathfrak{S}}_n$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-05-15T09:22:56Z</published>
+    <arxiv:comment>17 pages, 2 figures and 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Combinatorial Theory, Series A 121 (2014) 45-63</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Kilian Raschel</name>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1103.2285v1</id>
+    <title>Asymptotics for a Variant of the Mittag-Leffler Function</title>
+    <updated>2011-03-11T14:53:11Z</updated>
+    <link href="https://arxiv.org/abs/1103.2285v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1103.2285v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We generalize the Mittag-Leffler function by attaching an exponent to its Taylor coefficients. The main result is an asymptotic formula valid in sectors of the complex plane, which extends work by Le Roy [Bull. des sciences math. 24, 1900] and Evgrafov [Asimptoticheskie otsenki i tselye funktsii, 1979]. It is established by Plana's summation formula in conjunction with the saddle point method. As an application, we (re-)prove a non-holonomicity result about powers of the factorial sequence.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-03-11T14:53:11Z</published>
+    <arxiv:primary_category term="math.CV"/>
+    <author>
+      <name>Stefan Gerhold</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0901.4665v4</id>
+    <title>Moment inversion problem for piecewise D-finite functions</title>
+    <updated>2009-07-01T16:13:57Z</updated>
+    <link href="https://arxiv.org/abs/0901.4665v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0901.4665v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider the problem of exact reconstruction of univariate functions with jump discontinuities at unknown positions from their moments. These functions are assumed to satisfy an a priori unknown linear homogeneous differential equation with polynomial coefficients on each continuity interval. Therefore, they may be specified by a finite amount of information. This reconstruction problem has practical importance in Signal Processing and other applications.
+  It is somewhat of a ``folklore'' that the sequence of the moments of such ``piecewise D-finite''functions satisfies a linear recurrence relation of bounded order and degree. We derive this recurrence relation explicitly. It turns out that the coefficients of the differential operator which annihilates every piece of the function, as well as the locations of the discontinuities, appear in this recurrence in a precisely controlled manner. This leads to the formulation of a generic algorithm for reconstructing a piecewise D-finite function from its moments. We investigate the conditions for solvability of the resulting linear systems in the general case, as well as analyze a few particular examples. We provide results of numerical simulations for several types of signals, which test the sensitivity of the proposed algorithm to noise.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-01-29T13:02:10Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>Inverse Problems 25 (2009) 105001</arxiv:journal_ref>
+    <author>
+      <name>Dmitry Batenkov</name>
+    </author>
+    <arxiv:doi>10.1088/0266-5611/25/10/105001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0266-5611/25/10/105001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0806.0666v4</id>
+    <title>(2+2)-free posets, ascent sequences and pattern avoiding permutations</title>
+    <updated>2009-11-26T14:08:14Z</updated>
+    <link href="https://arxiv.org/abs/0806.0666v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0806.0666v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We present bijections between four classes of combinatorial objects. Two of them, the class of unlabeled (2+2)-free posets and a certain class of involutions (or chord diagrams), already appeared in the literature, but were apparently not known to be equinumerous. We present a direct bijection between them. The third class is a family of permutations defined in terms of a new type of pattern. An attractive property of these patterns is that, like classical patterns, they are closed under the action of $D_8$, the symmetry group of the square. The fourth class is formed by certain integer sequences, called ascent sequences, which have a simple recursive structure and are shown to encode (2+2)-free posets and permutations. Our bijections preserve numerous statistics.
+  We determine the generating function of these classes of objects, thus recovering a non-D-finite series obtained by Zagier for the class of chord diagrams. Finally, we characterize the ascent sequences that correspond to permutations avoiding the barred pattern $3{\bar 1}52{\bar 4}$ and use this to enumerate those permutations, thereby settling a conjecture of Pudwell.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-06-04T00:27:40Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mireille Bousquet-Mélou</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcta.2009.12.007</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcta.2009.12.007" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0705.0032v1</id>
+    <title>Nonholonomic Algebroids, Finsler Geometry, and Lagrange-Hamilton Spaces</title>
+    <updated>2007-04-30T22:29:38Z</updated>
+    <link href="https://arxiv.org/abs/0705.0032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0705.0032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We elaborate an unified geometric approach to classical mechanics, Riemann-Finsler spaces and gravity theories on Lie algebroids provided with nonlinear connection (N-connection) structure. There are investigated the conditions when the fundamental geometric objects like the anchor, metric and linear connection, almost sympletic and related almost complex structures may be canonically defined by a N-connection induced from a regular Lagrangian (or Hamiltonian), in mechanical models, or by generic off-diagonal metric terms and nonholonomic frames, in gravity theories. Such geometric constructions are modelled on nonholonomic manifolds provided with nonintegrable distributions and related chains of exact sequences of submanifolds defining N-connections. We investigate the main properties of the Lagrange, Hamilton, Finsler-Riemann and Einstein-Cartan algebroids and construct and analyze exact solutions describing such objects.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-04-30T22:29:38Z</published>
+    <arxiv:comment>75 pages, latex2e, 11pt</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Mathematical Sciences (Springer Open) 2012, 6: 18</arxiv:journal_ref>
+    <author>
+      <name>Sergiu I. Vacaru</name>
+    </author>
+    <arxiv:doi>10.1186/2251-7456-6-18</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1186/2251-7456-6-18" title="doi"/>
+  </entry>
+</feed>

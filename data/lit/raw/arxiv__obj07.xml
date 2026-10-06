@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/nMaXt/tK8LFrTO7SwLiZpBjJrjM</id>
+  <title>arXiv Query: search_query=abs:words AND abs:consecutive AND abs:"patterns"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:09:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:words+AND+(abs:consecutive+AND+abs:%22patterns%22)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>38</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1706.00993v1</id>
+    <title>Block patterns in generalized Euler Permutations</title>
+    <updated>2017-06-03T19:23:44Z</updated>
+    <link href="https://arxiv.org/abs/1706.00993v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1706.00993v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Goulden and Jackson introduced a very powerful method to study the distributions of certain consecutive patterns in permutations, words, and other combinatorial objects which is now called the cluster method. There are a number of natural classes of combinatorial objects which start with either permutations or words and add additional restrictions. These include up-down permutations, generalized Euler permutations, words with no consecutive repeated letters, Young tableaux, and non-backtracking random walks. We develop an extension of the cluster method which we call the {\em generalized cluster method} to study the distribution of certain consecutive patterns in such restricted combinatorial objects. In this paper, we focus on block patterns in generalized Euler permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-06-03T19:23:44Z</published>
+    <arxiv:comment>54 pages, 30 figuers</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ran Pan</name>
+    </author>
+    <author>
+      <name>Jeffrey Brian Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.5615v1</id>
+    <title>Generalized descent patterns in permutations and associated Hopf algebras</title>
+    <updated>2009-11-30T11:21:41Z</updated>
+    <link href="https://arxiv.org/abs/0911.5615v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.5615v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Descents in permutations or words are defined from the relative position of two consecutive letters. We investigate a statistic involving patterns of k consecutive letters, and show that it leads to Hopf algebras generalizing noncommutative symmetric functions and quasi-symmetric functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-30T11:21:41Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>European Journal of Combinatorics 32 (2011), 618-627</arxiv:journal_ref>
+    <author>
+      <name>J. -C. Novelli</name>
+    </author>
+    <author>
+      <name>C. Reutenauer</name>
+    </author>
+    <author>
+      <name>J. -Y. Thibon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.06077v2</id>
+    <title>Increasing Consecutive Patterns in Words</title>
+    <updated>2018-05-22T15:46:45Z</updated>
+    <link href="https://arxiv.org/abs/1805.06077v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.06077v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show how to enumerate words in $1^{m_1} \dots n^{m_n}$ that avoid the increasing consecutive pattern $12 \dots r$ for any $r \geq 2$. Our approach yields an $O(n^{s+1})$ algorithm to enumerate words in $1^s \dots n^s$, avoiding the consecutive pattern $1\dots r$, for any $s$, and any $r$. This enables us to supply many more terms to quite a few OEIS sequences, and create new ones. We also treat the more general case of counting words with a specified number of the pattern of interest (the avoiding case corresponding to zero appearances). This article is accompanied by three Maple packages implementing our algorithms.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-16T00:48:42Z</published>
+    <arxiv:comment>After the first version of the current paper was posted, Justin Troyka pointed out that our Theorem 1 is not new and it goes back to Ira Gessel. Thus we have this second version</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mingjia Yang</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.06154v2</id>
+    <title>Avoiding vincular patterns on alternating words</title>
+    <updated>2016-03-01T01:15:48Z</updated>
+    <link href="https://arxiv.org/abs/1507.06154v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.06154v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A word $w=w_1w_2\cdots w_n$ is alternating if either $w_1&lt;w_2&gt;w_3&lt;w_4&gt;\cdots$ (when the word is up-down) or $w_1&gt;w_2&lt;w_3&gt;w_4&lt;\cdots$ (when the word is down-up). The study of alternating words avoiding classical permutation patterns was initiated by the authors in~\cite{GKZ}, where, in particular, it was shown that 123-avoiding up-down words of even length are counted by the Narayana numbers.
+  However, not much was understood on the structure of 123-avoiding up-down words. In this paper, we fill in this gap by introducing the notion of a cut-pair that allows us to subdivide the set of words in question into equivalence classes. We provide a combinatorial argument to show that the number of equivalence classes is given by the Catalan numbers, which induces an alternative (combinatorial) proof of the corresponding result in~\cite{GKZ}.
+  Further, we extend the enumerative results in~\cite{GKZ} to the case of alternating words avoiding a vincular pattern of length 3. We show that it is sufficient to enumerate up-down words of even length avoiding the consecutive pattern $\underline{132}$ and up-down words of odd length avoiding the consecutive pattern $\underline{312}$ to answer all of our enumerative questions. The former of the two key cases is enumerated by the Stirling numbers of the second kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-22T12:29:05Z</published>
+    <arxiv:comment>25 pages; To appear in Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alice L. L. Gao</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.06270v4</id>
+    <title>Pattern statistics in faro words and permutations</title>
+    <updated>2021-05-17T20:55:37Z</updated>
+    <link href="https://arxiv.org/abs/2010.06270v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.06270v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the distribution and the popularity of some patterns in $k$-ary faro words, i.e. words over the alphabet $\{1, 2, \ldots, k\}$ obtained by interlacing the letters of two nondecreasing words of lengths differing by at most one. We present a bijection between these words and dispersed Dyck paths (i.e. Motzkin paths with all level steps on the $x$-axis) with a given number of peaks. We show how the bijection maps statistics of consecutive patterns of faro words into linear combinations of other pattern statistics on paths. Then, we deduce enumerative results by providing multivariate generating functions for the distribution and the popularity of patterns of length at most three. Finally, we consider some interesting subclasses of faro words that are permutations, involutions, derangements, or subexcedent words.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-13T10:28:42Z</published>
+    <arxiv:comment>25 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jean-Luc Baril</name>
+    </author>
+    <author>
+      <name>Alexander Burstein</name>
+    </author>
+    <author>
+      <name>Sergey Kirgizov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1601.06880v1</id>
+    <title>Bounds on Asymptotic Rate of Capacitive Crosstalk Avoidance Codes for On-chip Buses</title>
+    <updated>2016-01-26T03:46:11Z</updated>
+    <link href="https://arxiv.org/abs/1601.06880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.06880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In order to prevent the capacitive crosstalk in on-chip buses, several types of capacitive crosstalk avoidance codes have been devised. These codes are designed to prohibit transition patterns prone to the capacity crosstalk from any consecutive two words transmitted to on-chip buses. This paper provides a rigorous analysis on the asymptotic rate of (p,q)-transition free word sequences under the assumption that coding is based on a pair of a stateful encoder and a stateless decoder. The symbols p and q represent k-bit transition patterns that should not be appeared in any consecutive two words at the same adjacent k-bit positions. It is proved that the maximum rate of the sequences equals to the subgraph domatic number of (p,q)-transition free graph. Based on the theoretical results on the subgraph domatic partition problem, a pair of lower and upper bounds on the asymptotic rate is derived. We also present that the asymptotic rate 0.8325 is achievable for the (10,01)-transition free word sequences.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-26T03:46:11Z</published>
+    <arxiv:comment>10 pages, 2 figures, submitted to ISIT 2016</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Tadashi Wadayama</name>
+    </author>
+    <author>
+      <name>Taisuke Izumi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1110.0844v4</id>
+    <title>Pattern avoidance in labelled trees</title>
+    <updated>2012-01-13T18:03:17Z</updated>
+    <link href="https://arxiv.org/abs/1110.0844v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1110.0844v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We discuss a new notion of pattern avoidance motivated by the operad theory: pattern avoidance in planar labelled trees. It is a generalisation of various types of consecutive pattern avoidance studied before: consecutive patterns in words, permutations, coloured permutations etc. The notion of Wilf equivalence for patterns in permutations admits a straightforward generalisation for (sets of) tree patterns; we describe classes for trees with small numbers of leaves, and give several bijections between trees avoiding pattern sets from the same class. We also explain a few general results for tree pattern avoidance, both for the exact and the asymptotic enumeration.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-10-04T20:40:17Z</published>
+    <arxiv:comment>27 pages, corrected various misprints, added an appendix explaining the operadic context</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Séminaire Lotharingien de Combinatoire, B67b (2012), 27 pp</arxiv:journal_ref>
+    <author>
+      <name>Vladimir Dotsenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1002.2761v1</id>
+    <title>Anick-type resolutions and consecutive pattern avoidance</title>
+    <updated>2010-02-15T14:59:04Z</updated>
+    <link href="https://arxiv.org/abs/1002.2761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1002.2761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  For permutations avoiding consecutive patterns from a given set, we present a combinatorial formula for the multiplicative inverse of the corresponding exponential generating function. The formula comes from homological algebra considerations in the same sense as the corresponding inversion formula for avoiding word patterns comes from the well known Anick's resolution.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.KT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-02-15T14:59:04Z</published>
+    <arxiv:comment>16 pages. Preliminary version, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Vladimir Dotsenko</name>
+    </author>
+    <author>
+      <name>Anton Khoroshkin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/chao-dyn/9302005v1</id>
+    <title>Cycles and Circles in Roundoff Errors</title>
+    <updated>1993-02-23T00:00:00Z</updated>
+    <link href="https://arxiv.org/abs/chao-dyn/9302005v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/chao-dyn/9302005v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  When a series of measurements is performed with increasingly coarse (or increasingly fine) precision, consecutive observations seem to be erratically distributed at first, and then organize themselves into cycles and patterns. The patterns, which arise because of roundoff errors, are related to a notion in number theory, the so- called Farey sequence.
+  Key words: roundoff-error, number theory, Farey sequence.</summary>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1993-02-23T00:00:00Z</published>
+    <arxiv:comment>CYCLER Paper 93feb007 ascii with figures available from author</arxiv:comment>
+    <arxiv:primary_category term="nlin.CD"/>
+    <author>
+      <name>George G. Szpiro</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.47.4560</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.47.4560" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2108.10309v2</id>
+    <title>A lifting of the Goulden-Jackson cluster method to the Malvenuto-Reutenauer algebra</title>
+    <updated>2023-01-10T23:46:44Z</updated>
+    <link href="https://arxiv.org/abs/2108.10309v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.10309v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Goulden-Jackson cluster method is a powerful tool for counting words by occurrences of prescribed subwords, and was adapted by Elizalde and Noy for counting permutations by occurrences of prescribed consecutive patterns. In this paper, we lift the cluster method for permutations to the Malvenuto-Reutenauer algebra. Upon applying standard homomorphisms, our result specializes to both the cluster method for permutations as well as a q-analogue which keeps track of the inversion number statistic. We construct additional homomorphisms using the theory of shuffle-compatibility, leading to further specializations which keep track of various "inverse statistics", including the inverse descent number, inverse peak number, and inverse left peak number. This approach is then used to derive formulas for counting permutations by occurrences of two families of consecutive patterns -- monotone patterns and transpositional patterns -- refined by these statistics.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-23T17:55:08Z</published>
+    <arxiv:comment>41 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Algebr. Comb. 5(6): 1391-1425, 2022</arxiv:journal_ref>
+    <author>
+      <name>Yan Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.23573v4</id>
+    <title>An Erdős--Szekeres type result for words with repeats</title>
+    <updated>2026-05-19T14:53:53Z</updated>
+    <link href="https://arxiv.org/abs/2510.23573v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.23573v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove an Erdős--Szekeres type result for finite words over $\mathbb{N}$ with repeated values. Specifically, we define a \emph{repeat} in a word to be an occurrence of a value which is not its first occurrence. We define an occurrence of a \emph{pattern} $π$ in a word $w$ to be a (not necessarily consecutive) subword of $w$ that is order isomorphic to $π$. In this note, we show that every word with $kn^6+1$ repeats contains one of the following patterns: $0^{k+2}$, $0011\cdots nn$, $nn\cdots1100$, $012 \cdots n012 \cdots n$, $012 \cdots nn\cdots 210$, $n\cdots 210012\cdots n$, $n\cdots 210n\cdots 210$. Moreover, when $k=1$, we show that this is best possible by constructing a word with $n^6$ repeats that does not contain any of these patterns.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-27T17:42:16Z</published>
+    <arxiv:comment>11 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 28:1, Permutation Patterns 2025, Special issues (May 20, 2026) dmtcs:16801</arxiv:journal_ref>
+    <author>
+      <name>Kyle Celano</name>
+    </author>
+    <author>
+      <name>Abigail Ollson</name>
+    </author>
+    <author>
+      <name>Niraj Velankar</name>
+    </author>
+    <author>
+      <name>Jun Yan</name>
+    </author>
+    <arxiv:doi>10.46298/dmtcs.16801</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.46298/dmtcs.16801" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.12741v1</id>
+    <title>Descent distribution on Catalan words avoiding ordered pairs of Relations</title>
+    <updated>2023-02-24T16:53:17Z</updated>
+    <link href="https://arxiv.org/abs/2302.12741v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.12741v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work is a continuation of some recent articles presenting enumerative results for Catalan words avoiding one or a pair of consecutive or classical patterns of length $3$. More precisely, we provide systematically the bivariate generating function for the number of Catalan words avoiding a given pair of relations with respect to the length and the number of descents. We also present several constructive bijections preserving the number of descents. As a byproduct, we deduce the generating function for the total number of descents on all Catalan words of a given length and avoiding a pair of ordered relations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-24T16:53:17Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jean-Luc Baril</name>
+    </author>
+    <author>
+      <name>José Luis Ramírez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.4994v1</id>
+    <title>Representing Graphs via Pattern Avoiding Words</title>
+    <updated>2014-12-16T13:25:46Z</updated>
+    <link href="https://arxiv.org/abs/1412.4994v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.4994v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The notion of a word-representable graph has been studied in a series of papers in the literature. A graph $G=(V,E)$ is word-representable if there exists a word $w$ over the alphabet $V$ such that letters $x$ and $y$ alternate in $w$ if and only if $xy$ is an edge in $E$. If $V =\{1, \ldots, n\}$, this is equivalent to saying that $G$ is word-representable if for all $x,y \in \{1, \ldots, n\}$, $xy \in E$ if and only if the subword $w_{\{x,y\}}$ of $w$ consisting of all occurrences of $x$ or $y$ in $w$ has no consecutive occurrence of the pattern 11.
+  In this paper, we introduce the study of $u$-representable graphs for any word $u \in \{1,2\}^*$. A graph $G$ is $u$-representable if and only if there is a labeled version of $G$, $G=(\{1, \ldots, n\}, E)$, and a word $w \in \{1, \ldots, n\}^*$ such that for all $x,y \in \{1, \ldots, n\}$, $xy \in E$ if and only if $w_{\{x,y\}}$ has no consecutive occurrence of the pattern $u$. Thus, word-representable graphs are just $11$-representable graphs. We show that for any $k \geq 3$, every finite graph $G$ is $1^k$-representable. This contrasts with the fact that not all graphs are 11-representable graphs.
+  The main focus of the paper is the study of $12$-representable graphs. In particular, we classify the $12$-representable trees. We show that any $12$-representable graph is a comparability graph and the class of $12$-representable graphs include the classes of co-interval graphs and permutation graphs. We also state a number of facts on $12$-representation of induced subgraphs of a grid graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-16T13:25:46Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Miles Jones</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Artem Pyatkin</name>
+    </author>
+    <author>
+      <name>Jeffrey Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1803.01055v2</id>
+    <title>On k-11-representable graphs</title>
+    <updated>2018-09-05T09:46:29Z</updated>
+    <link href="https://arxiv.org/abs/1803.01055v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.01055v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Distinct letters $x$ and $y$ alternate in a word $w$ if after deleting in $w$ all letters but the copies of $x$ and $y$ we either obtain a word of the form $xyxy\cdots$ (of even or odd length) or a word of the form $yxyx\cdots$ (of even or odd length). A simple graph $G=(V,E)$ is word-representable if there exists a word $w$ over the alphabet $V$ such that letters $x$ and $y$ alternate in $w$ if and only if $xy$ is an edge in $E$. Thus, edges of $G$ are defined by avoiding the consecutive pattern 11 in a word representing $G$, that is, by avoiding $xx$ and $yy$.
+  In 2017, Jeff Remmel has introduced the notion of a $k$-$11$-representable graph for a non-negative integer $k$, which generalizes the notion of a word-representable graph. Under this representation, edges of $G$ are defined by containing at most $k$ occurrences of the consecutive pattern $11$ in a word representing $G$. Thus, word-representable graphs are precisely $0$-$11$-representable graphs. Our key result in this paper is showing that any graph is $2$-$11$-representable by a concatenation of permutations, which is rather surprising taking into account that concatenation of permutations has limited power in the case of $0$-$11$-representation. Also, we show that the class of word-representable graphs, studied intensively in the literature, is contained strictly in the class of $1$-$11$-representable graphs. Another result that we prove is the fact that the class of interval graphs is precisely the class of $1$-$11$-representable graphs that can be represented by uniform words containing two copies of each letter. This result can be compared with the known fact that the class of circle graphs is precisely the class of $0$-$11$-representable graphs that can be represented by uniform words containing two copies of each letter.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-02T21:50:21Z</published>
+    <arxiv:comment>A key result on 2-11-representability of any graph was added</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gi-Sang Cheon</name>
+    </author>
+    <author>
+      <name>Jinha Kim</name>
+    </author>
+    <author>
+      <name>Minki Kim</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Artem Pyatkin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.02208v1</id>
+    <title>Unsupervised Discovery of Linguistic Structure Including Two-level Acoustic Patterns Using Three Cascaded Stages of Iterative Optimization</title>
+    <updated>2015-09-07T22:23:01Z</updated>
+    <link href="https://arxiv.org/abs/1509.02208v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.02208v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Techniques for unsupervised discovery of acoustic patterns are getting increasingly attractive, because huge quantities of speech data are becoming available but manual annotations remain hard to acquire. In this paper, we propose an approach for unsupervised discovery of linguistic structure for the target spoken language given raw speech data. This linguistic structure includes two-level (subword-like and word-like) acoustic patterns, the lexicon of word-like patterns in terms of subword-like patterns and the N-gram language model based on word-like patterns. All patterns, models, and parameters can be automatically learned from the unlabelled speech corpus. This is achieved by an initialization step followed by three cascaded stages for acoustic, linguistic, and lexical iterative optimization. The lexicon of word-like patterns defines allowed consecutive sequence of HMMs for subword-like patterns. In each iteration, model training and decoding produces updated labels from which the lexicon and HMMs can be further updated. In this way, model parameters and decoded labels are respectively optimized in each iteration, and the knowledge about the linguistic structure is learned gradually layer after layer. The proposed approach was tested in preliminary experiments on a corpus of Mandarin broadcast news, including a task of spoken term detection with performance compared to a parallel test using models trained in a supervised way. Results show that the proposed system not only yields reasonable performance on its own, but is also complimentary to existing large vocabulary ASR systems.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-07T22:23:01Z</published>
+    <arxiv:comment>Accepted by ICASSP 2013</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Cheng-Tao Chung</name>
+    </author>
+    <author>
+      <name>Chun-an Chan</name>
+    </author>
+    <author>
+      <name>Lin-shan Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.10661v1</id>
+    <title>Enumeration of consecutive patterns in flattened Catalan words</title>
+    <updated>2025-02-15T03:58:26Z</updated>
+    <link href="https://arxiv.org/abs/2502.10661v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.10661v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A Catalan word $w$ is said to be flattened if the subsequence of $w$ obtained by taking the first letter of each weakly increasing run is nondecreasing. Let $\mathcal{F}_n$ denote the set of flattened Catalan words of length $n$, which has cardinality $\frac{3^{n-1}+1}{2}$ for all $n \geq 1$. In this paper, we consider the distribution of several consecutive patterns on $\mathcal{F}_n$. Indeed, we find explicit formulas for the generating functions of the joint distribution on $\mathcal{F}_n$ of several trios of patterns, along with an auxiliary parameter. As special cases of these formulas, we obtain the generating function for the distribution of all consecutive patterns of length two or three. The following equivalences with regard to being identically distributed on $\mathcal{F}_n$ arise when comparing the various generating functions and may be explained bijectively: $112\approx122$ and $211\approx221\approx231$. In addition, explicit expressions are found for the total number of occurrences on $\mathcal{F}_n$ of each pattern of length two or three as well as for the number of avoiders of each pattern. These results can be obtained as special cases of our more general formulas for the generating functions, but may be explained combinatorially as well, the arguments of which are featured herein.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-15T03:58:26Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mark Shattuck</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.09480v2</id>
+    <title>Enumeration in the lattice of $q$-decreasing words</title>
+    <updated>2026-06-18T08:20:43Z</updated>
+    <link href="https://arxiv.org/abs/2511.09480v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.09480v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that the poset of $q$-decreasing words equipped with the componentwise order forms a lattice. We enumerate the join-irreducible elements for arbitrary $q&gt;0$, and for any positive rational number $q$, we determine the number of coverings, intervals and meet-irreducible elements. The latter present the same structure as words over an alphabet of $2\lceil q\rceil+1$ letters avoiding $\lceil q\rceil^2+2\lceil q\rceil-1$ consecutive patterns of length 2. Furthermore, we analyze the asymptotic behavior of several of these quantities.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-12T16:51:44Z</published>
+    <arxiv:comment>22 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jean-Luc Baril</name>
+    </author>
+    <author>
+      <name>Nathanaël Hassler</name>
+    </author>
+    <author>
+      <name>Sergey Kirgizov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.04112v2</id>
+    <title>Molding CNNs for text: non-linear, non-consecutive convolutions</title>
+    <updated>2015-08-18T02:52:40Z</updated>
+    <link href="https://arxiv.org/abs/1508.04112v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.04112v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The success of deep learning often derives from well-chosen operational building blocks. In this work, we revise the temporal convolution operation in CNNs to better adapt it to text processing. Instead of concatenating word representations, we appeal to tensor algebra and use low-rank n-gram tensors to directly exploit interactions between words already at the convolution stage. Moreover, we extend the n-gram convolution to non-consecutive words to recognize patterns with intervening words. Through a combination of low-rank tensors, and pattern weighting, we can efficiently evaluate the resulting convolution operation via dynamic programming. We test the resulting architecture on standard sentiment classification and news categorization tasks. Our model achieves state-of-the-art performance both in terms of accuracy and training speed. For instance, we obtain 51.2% accuracy on the fine-grained sentiment classification task.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-17T19:02:45Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Tao Lei</name>
+    </author>
+    <author>
+      <name>Regina Barzilay</name>
+    </author>
+    <author>
+      <name>Tommi Jaakkola</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1202.3752v1</id>
+    <title>Multidimensional counting grids: Inferring word order from disordered bags of words</title>
+    <updated>2012-02-14T16:41:17Z</updated>
+    <link href="https://arxiv.org/abs/1202.3752v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.3752v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Models of bags of words typically assume topic mixing so that the words in a single bag come from a limited number of topics. We show here that many sets of bag of words exhibit a very different pattern of variation than the patterns that are efficiently captured by topic mixing. In many cases, from one bag of words to the next, the words disappear and new ones appear as if the theme slowly and smoothly shifted across documents (providing that the documents are somehow ordered). Examples of latent structure that describe such ordering are easily imagined. For example, the advancement of the date of the news stories is reflected in a smooth change over the theme of the day as certain evolving news stories fall out of favor and new events create new stories. Overlaps among the stories of consecutive days can be modeled by using windows over linearly arranged tight distributions over words. We show here that such strategy can be extended to multiple dimensions and cases where the ordering of data is not readily obvious. We demonstrate that this way of modeling covariation in word occurrences outperforms standard topic models in classification and prediction tasks in applications in biology, text modeling and computer vision.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-14T16:41:17Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Nebojsa Jojic</name>
+    </author>
+    <author>
+      <name>Alessandro Perina</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0909.2274v1</id>
+    <title>The number of permutations realized by a shift</title>
+    <updated>2009-09-11T21:10:53Z</updated>
+    <link href="https://arxiv.org/abs/0909.2274v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0909.2274v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  A permutation p is realized by the shift on N symbols if there is an infinite word on an N-letter alphabet whose successive left shifts by one position are lexicographically in the same relative order as p. The set of realized permutations is closed under consecutive pattern containment. Permutations that cannot be realized are called forbidden patterns. It was shown in [Amigo, Elizalde, Kennel, J. Combin. Theory Ser. A 115 (2008) 485-504] that the shortest forbidden patterns of the shift on N symbols have length N+2. In this paper we give a characterization of the set of permutations that are realized by the shift on N symbols, and we enumerate them according to their length.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-09-11T21:10:53Z</published>
+    <arxiv:comment>19 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>S. Elizalde, SIAM J. Discrete Math. 23 (2009), 765-786</arxiv:journal_ref>
+    <author>
+      <name>Sergi Elizalde</name>
+    </author>
+    <arxiv:doi>10.1137/080726689</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1137/080726689" title="doi"/>
+  </entry>
+</feed>

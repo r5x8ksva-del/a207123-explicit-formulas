@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rLcd3WkJ3OYJ4X5VyhiU12ayw9s</id>
+  <title>arXiv Query: search_query=au:Fried AND (ti:conjectures OR ti:OEIS OR abs:"Integer Sequences")&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:27:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Fried+AND+(ti:conjectures+OR+(ti:OEIS+OR+abs:%22Integer+Sequences%22))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24832v1</id>
+    <title>Further proofs of conjectures from the OEIS</title>
+    <updated>2026-07-23T14:00:41Z</updated>
+    <link href="https://arxiv.org/abs/2607.24832v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24832v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the fourth work in a series devoted to proving conjectures recorded in the On-Line Encyclopedia of Integer Sequences (OEIS). The problems considered here concern elementary and multiplicative number theory, Fibonacci numbers, decimal concatenation, Diophantine and Pell equations, binary representations and bitwise operations, lattice paths, parity patterns, recurrences, and formal power series. Several of the results give complete characterizations of the relevant sequences; others establish exact identities, recurrences, generating functions, asymptotic estimates, integrality properties, or nonoccurrence results. The proofs use combinatorial bijections, congruences, Möbius inversion, valuations, Fibonacci identities, Pell-type arguments, Lucas' theorem, Riordan arrays, Lagrange inversion, and generating-function methods.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T14:00:41Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.09913v1</id>
+    <title>Proofs of several OEIS conjectures on determinants and permanents</title>
+    <updated>2026-06-06T13:17:53Z</updated>
+    <link href="https://arxiv.org/abs/2606.09913v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.09913v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove several conjectures recorded in the On-Line Encyclopedia of Integer Sequences. The conjectures considered here concern determinants and permanents of special matrices, such as Toeplitz matrices, cross matrices, Kronecker powers of matrices, and matrices whose entries are defined by powers of differences. As tools we use row and column operations, block determinant formulas, Cauchy determinants, Sylvester's determinant theorem, and $LU$-factorizations. We also obtain closed-form formulas for several related integer sequences for which no such formulas were conjectured.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-06T13:17:53Z</published>
+    <arxiv:comment>34 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.08904v2</id>
+    <title>Hurwitz space components; and the Coleman-Oort Conjecture</title>
+    <updated>2026-08-10T21:08:01Z</updated>
+    <link href="https://arxiv.org/abs/2509.08904v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.08904v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hurwitz spaces are moduli of isotopy classes of covers. A specific space is formed from a finite group G and C, r of its conjugacy classes and an equivalence relation \dagger. Components, interpret as a braid orbits on Nielsen classes.
+  Fried-Völklein 1991 related absolute (corresponding to a permutation representation, T, of G) and inner equivalence classes. It noted two situations producing multiple components:
+  #1. The action of a normalizer subgroup from $T$ on components; and
+  #2. distinct components from the Schur multiplier of $G$ (the Fried-Serre lift invariant).
+  Here we consider components of type #1 and #2 under one umbrella using a definition in G.~González-Díez and W.J. Harvey, 1992 to generalize this paper and A. Ghigi and C. Tamborini, 2025.
+  Our applications use Modular Towers to generalize Serre's Open Image Theorem. That distinguishes two types of decomposition groups -- designated GL_2 and CM -- that occur on towers of modular curves. Our generalization -- with mild constraints -- for any pair (G,C), generalizes modular curve towers to Modular Towers uses arithmetic properties of Jacobian varieties, the lift invariant, the shift-incidence pairing on cusps of reduced Hurwitz spaces to connect Hilbert's Irreducibility theorem to the Coleman-Oort conjecture.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-10T18:05:58Z</published>
+    <arxiv:comment>80 pages, 1 figure; 2nd Version</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Michael D. Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.14196v1</id>
+    <title>Even-up words and their variants</title>
+    <updated>2025-05-20T10:52:21Z</updated>
+    <link href="https://arxiv.org/abs/2505.14196v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.14196v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by OEIS sequence A377912, which consists of the nonnegative integers in which every even digit (except possibly the last) is immediately followed by a strictly larger digit, we define even-up and odd-up words over an alphabet of size~$k$ via similar constraints. We introduce and analyze weak and cyclic variants of these words, deriving explicit generating functions for all eight resulting classes. We then study Catalan words under analogous restrictions. Our results provide new combinatorial interpretations for many integer sequences, including the Motzkin numbers, the Riordan numbers, and the generalized Catalan numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T10:52:21Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07237v3</id>
+    <title>Proofs of some Conjectures from the OEIS</title>
+    <updated>2024-10-26T08:53:20Z</updated>
+    <link href="https://arxiv.org/abs/2410.07237v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07237v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we resolve several conjectures stated in the On-Line Encyclopedia of Integer sequences.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-06T20:43:20Z</published>
+    <arxiv:comment>17 pages, extended version</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.00644v1</id>
+    <title>Equivalent conditions for the $n$th element of the Beatty sequence $B_{\sqrt{2}}$ being even</title>
+    <updated>2022-12-28T08:40:50Z</updated>
+    <link href="https://arxiv.org/abs/2301.00644v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.00644v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide equivalent conditions for the $n$th element of the Beatty sequence $B_{\sqrt{2}}$ being even. In particular, we show that the integer sequences A090892 and A120752 in the OEIS are essentially identical.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-28T08:40:50Z</published>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.03788v4</id>
+    <title>On a conjecture of McNeil</title>
+    <updated>2023-11-28T14:54:55Z</updated>
+    <link href="https://arxiv.org/abs/2208.03788v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.03788v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Suppose that the $n^2$ vertices of the grid graph $P_n^2$ are labeled, such that the set of their labels is $\{1,2,\ldots,n^2\}$. The labeling induces a walk on $P_n^2$, beginning with the vertex whose label is $1$, proceeding to the vertex whose label is $2$, etc., until all vertices are visited. The question of the maximal possible length of such a walk, denoted by $M(P_n^2)$, when the distance between consecutive vertices is the Manhattan distance, was studied by McNeil, who, based on empirical evidence, conjectured that $M(P_n^2)=n^3-3$, if $n$ is even, and $n^3-n-1$, otherwise. In this work we study the more general case of $P_m\times P_n$ and capture $M(P_m\times P_n)$, up to an additive factor of $1$. This holds, in particular, for the values conjectured by McNeil.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-07T18:40:13Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0611594v1</id>
+    <title>The Main Conjecture of Modular Towers and its higher rank generalization</title>
+    <updated>2006-11-20T02:46:59Z</updated>
+    <link href="https://arxiv.org/abs/math/0611594v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0611594v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The genus of projective curves discretely separates decidedly different two variable algebraic relations. So, we can focus on the connected moduli M_g of genus g curves. Yet, modern applications require a data variable (function) on such curves. The resulting spaces are versions, depending on our need from this data variable, of Hurwitz spaces. A Nielsen class is a set defined by r \ge 3 conjugacy classes C in the data variable monodromy G. It gives a striking genus analog.
+  Using Frattini covers of G, every Nielsen class produces a projective system of related Nielsen classes for any prime p dividing |G|. A nonempty (infinite) projective system of braid orbits in these Nielsen classes is an infinite (G,C) component (tree) branch. These correspond to projective systems of irreducible (dim r-3) components from {H(G_{p,k}(G),C)}_{k=0}^{\infty}, the (G,C,p) Modular Tower (MT). The classical modular curve towers {Y_1(p^{k+1})}_{k=0}^\infty (simplest case: G is dihedral, r=4, C are involution classes) are an avatar.
+  The (weak) Main Conjecture says, if G is p-perfect, there are no rational points at high levels of a component branch. When r=4, MT levels (minus their cusps) are upper half plane quotients covering the j-line. Our topics.
+  * Identifying component branches on a MT from g-p', p and Weigel cusp branches using the MT generalization of spin structures.
+  * Listing cusp branch properties that imply the (weak) Main Conjecture and extracting the small list of towers that could possibly fail the conjecture. * Formulating a (strong) Main Conjecture for higher rank MTs (with examples): almost all primes produce a modular curve-like system.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-11-20T02:46:59Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>in Groupes de Galois arithmetiques et (Luminy 2004; eds. D. Bertrand and P. Dèbes), Sem. et Congres, Vol. 13 (2006), 165--230</arxiv:journal_ref>
+    <author>
+      <name>Michael D. Fried</name>
+    </author>
+  </entry>
+</feed>

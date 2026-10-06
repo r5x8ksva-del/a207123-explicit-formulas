@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/SzIvM/GaNXXxxEK1xhHIXMopGUA</id>
+  <title>arXiv Query: search_query=abs:holonomic AND abs:Stirling&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:holonomic+AND+abs:Stirling&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0904.2761v1</id>
+    <title>A Non-Holonomic Systems Approach to Special Function Identities</title>
+    <updated>2009-04-17T18:36:10Z</updated>
+    <link href="https://arxiv.org/abs/0904.2761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0904.2761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We extend Zeilberger's approach to special function identities to cases that are not holonomic. The method of creative telescoping is thus applied to definite sums or integrals involving Stirling or Bernoulli numbers, incomplete Gamma function or polylogarithms, which are not covered by the holonomic framework. The basic idea is to take into account the dimension of appropriate ideals in Ore algebras. This unifies several earlier extensions and provides algorithms for summation and integration in classes that had not been accessible to computer algebra before.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-04-17T18:36:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1145/1576702.1576720</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/1576702.1576720" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26110v1</id>
+    <title>Unified Nilpotent Operational Framework: Foundations, Algebraic Exactness, and Complexity</title>
+    <updated>2026-05-17T12:02:53Z</updated>
+    <link href="https://arxiv.org/abs/2606.26110v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26110v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A unified algebraic framework is developed to study nilpotency as a structural mechanism for exactness in operational, combinatorial, and computational problems. The central object is the Nilpotent Operational System (SON), formalized as a tuple (R, N, m, M_R), where R is a C-algebra, N satisfies N^{m+1}=0, and M_R(m) is the arithmetic cost of a product in R. The basic result is the Exact Termination Lemma: every formal series evaluated at N collapses to an exact finite sum of m+1 terms. Three complexity regimes are obtained: truncated series (quasi-linear bound via Newton iteration), nilpotent operators (linear bound via Horner evaluation), and incidence algebras (quasi-quadratic bound). Applications include classical and free cumulants, Appell sequences, orthogonal polynomials, Stirling numbers, Möbius inversion, Witt vectors, and local holonomic functions. In all cases except Stirling numbers, strict complexity improvements over classical algorithms are obtained. For classical cumulants, equivalence with polynomial multiplication is achieved: L(C_n)=Theta(M(n)). For free cumulants, the complete equivalence T_{FC}(n)=Theta(M(n)) is established via the Voiculescu functional equation and compositional reversal.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-17T12:02:53Z</published>
+    <arxiv:comment>50 pages, 10 tables. Companion paper: Zenodo DOI 10.5281/zenodo.19807166</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Ramon Moya</name>
+    </author>
+    <arxiv:doi>10.5281/zenodo.19775678</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.19775678" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8QFMTef36Xk2DAFI/CzkUfNuZ68</id>
+  <title>arXiv Query: search_query=abs:"Stirling-like" OR abs:"Stirling like"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-06T23:24:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Stirling-like%22+OR+abs:%22Stirling+like%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.37592v2</id>
+    <title>Quantum Statistical Thermal Engine at the BCS-BEC crossover</title>
+    <updated>2026-10-01T14:02:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.37592v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.37592v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a quantum heat engine based on a two-component Fermi gas with s-wave contact interaction, operating across the BCS-BEC crossover. The work is extracted from the statistical properties of the gas, which are controlled by the interaction, rather than relying solely on compression and expansion stages. Using the functional renormalization group formalism, we obtain the equation of state in a non-perturbative form along the crossover, encompassing the superfluid-normal phase transition. The cycle combines isentropic density strokes, isochoric thermalization, and isothermal interaction sweeps. This construction makes it possible to integrate features of both Otto and Carnot cycles, in which the system simultaneously saturates both efficiency limits without the net work vanishing. In the absence of density variations, the cycle reduces to a statistical Stirling-like engine, in which the work generated arises exclusively from the interaction, achieving efficiencies up to $38\%$. A pronounced asymmetry emerges through the crossover, giving rise to distinct operating regimes depending on the trajectory followed in the phase diagram. Consequently, the same architecture can be tuned to function as an engine, refrigerator, accelerator, or heater. These findings highlight pairing correlations as a versatile thermodynamic resource for quantum heat machines.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T13:46:26Z</published>
+    <arxiv:comment>14 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Santiago Henríquez Lira</name>
+    </author>
+    <author>
+      <name>Felipe Isaule</name>
+    </author>
+    <author>
+      <name>Martín HvE Groves</name>
+    </author>
+    <author>
+      <name>Francisco J. Peña</name>
+    </author>
+    <author>
+      <name>Patricio Vargas</name>
+    </author>
+    <author>
+      <name>Thomás Fogarty</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.29838v1</id>
+    <title>Poisson-shot-noise hybrid machines: efficiency and quasistatic divergence</title>
+    <updated>2026-06-29T06:27:10Z</updated>
+    <link href="https://arxiv.org/abs/2606.29838v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.29838v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study stochastic models of a microscopic active heat engine, comprised of an overdamped Brownian particle trapped in a harmonic potential, and in simultaneous contact with thermal (passive) and athermal (active) baths. The interaction with the active bath is modeled as a stochastic force described by Poisson shot-noise (PSN) having a specified amplitude distribution. With analytical calculations and numerical simulations, we study the thermodynamic performance of the machine to quasistatic cyclic protocols analogous to those running two-stroke and Stirling-like engines. For specific parameter ranges, the thermodynamic behavior is that of a $\textit{hybrid machine}$, simultaneously operating as a heat engine with respect to the passive/active baths and as a refrigerator with respect to the passive/active baths. Focusing on the parameter region where the overall performance is such of an engine, we show that the average total extracted work per cycle divided by average total heat intake from the cold baths per cycle may surpass the Carnot efficiency associated with the temperature of the passive baths. Applying the second law for active heat engines, we focus on a bona fide efficiency (bounded by Carnot's efficiency) that incorporates an information-theoretic metric $\mathcal{I}-$ which we call $\textit{quasistatic divergence}-$ quantifying how distinguishable are the engine's statistics in the quasistatic limit with respect to a continually changing equilibrium distribution. We analyze, with theory and numerical simulations, how the PSN shot rate and the degree of non-Gaussianity in the particle position distribution influence the efficiency of the engine, and explore the correlation between non-Gaussianity and efficiency. Our findings reveal optimal PSN shot rates maximizing the engine's efficiency and an intriguing non-bijective relation between efficiency and kurtosis</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-29T06:27:10Z</published>
+    <arxiv:comment>21 pages, 11 figures, 6 Appendices</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Rita Majumdar</name>
+    </author>
+    <author>
+      <name>Costantino Di Bello</name>
+    </author>
+    <author>
+      <name>Ralf Metzler</name>
+    </author>
+    <author>
+      <name>Rahul Marathe</name>
+    </author>
+    <author>
+      <name>Édgar Roldán</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.20616v1</id>
+    <title>A stochastic Stirling engine powered by an active particle</title>
+    <updated>2025-05-27T01:34:25Z</updated>
+    <link href="https://arxiv.org/abs/2505.20616v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.20616v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate a model of a stochastic engine operating cyclically at constant bath temperature, which consists of an overdamped Brownian harmonic oscillator that plays the role of working substance and is elastically coupled to an active particle. Stirling-like cycles are implemented by time-periodic changes of the active particle speed and the potential confining the oscillator. By analyzing its quasistatic and finite-time performance, we distinguish two regimes, which are determined by the relative magnitudes of the persistence time of active particle, the characteristic time of the elastic interaction, and the viscous relaxation time of the working substance. In the quasistatic limit, we derive analytic expressions for the average output work, the mean absorbed heat, and the efficiency, which explicitly involve the ratios of such three time-scales. For sufficiently large finite cycles, the different quantities characterizing the engine performance converge to their quasistatic values. For shorter cycles, the efficiencies are systematically lower, but with positive mean output powers that exhibit a maximum as a function of the cycle duration if the corresponding quasistatic mean work is positive. For sufficiently short cycles or if the quasistatic work is zero, the engine behaves at finite-time as a heat pump with negative power and efficiency.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-27T01:34:25Z</published>
+    <arxiv:comment>6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Stat. Mech. (2025) 093204</arxiv:journal_ref>
+    <author>
+      <name>Erick Efrain Cote-Valencia</name>
+    </author>
+    <author>
+      <name>Juan Ruben Gomez-Solano</name>
+    </author>
+    <arxiv:doi>10.1088/1742-5468/adff68</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-5468/adff68" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.08797v2</id>
+    <title>Maximum power Stirling-like heat engine with a harmonically confined Brownian particle</title>
+    <updated>2025-01-13T10:14:12Z</updated>
+    <link href="https://arxiv.org/abs/2412.08797v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.08797v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heat engines transform thermal energy into useful work, operating in a cyclic manner. For centuries, they have played a key role in industrial and technological development. Historically, only gases and liquids have been used as working substances, but the technical advances achieved over the past decades allow for expanding the experimental possibilities and designing engines operating with a single particle. In this case, the system of interest cannot be addressed at a macroscopic level and their study is framed in the field of stochastic thermodynamics. In the present work, we study mesoscopic heat engines built with a Brownian particle submitted to harmonic confinement and immersed in a fluid acting as a thermal bath. We design a Stirling-like heat engine, composed of two isothermal and two isochoric branches, by controlling both the stiffness of the harmonic trap and the temperature of the bath. Specifically, we focus on the irreversible, non quasi-static, case -- whose finite duration enables the engine to deliver a non-zero output power. This is a crucial aspect, which enables the optimisation of the thermodynamic cycle by maximising the delivered power -- thereby addressing a key goal at the practical level. The optimal driving protocols are obtained by using both variational calculus and optimal control theory tools. Also, we numerically explore the dependence of the maximum output power and the corresponding efficiency on the system parameters.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-11T22:03:20Z</published>
+    <arxiv:comment>Accepted in Entropy. Acknowledgements and data availability added</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Entropy 27, 72 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Irene Prieto-Rodríguez</name>
+    </author>
+    <author>
+      <name>Antonio Prados</name>
+    </author>
+    <author>
+      <name>Carlos A. Plata</name>
+    </author>
+    <arxiv:doi>10.3390/e27010072</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/e27010072" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.04709v1</id>
+    <title>Carnot, Stirling, Ericsson stochastic heat engines: Efficiency at maximum power</title>
+    <updated>2022-11-09T07:03:49Z</updated>
+    <link href="https://arxiv.org/abs/2211.04709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.04709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work obtains the efficiency at maximum power for a stochastic heat engine performing Carnot-like, Stirling-like and Ericsson-like cycles. For the mesoscopic engine a Brownian particle trapped by an optical tweezers is considered. The dynamics of this stochastic engine is described as an overdamped Langevin equation with a harmonic potential, whereas is in contact with two thermal baths at different temperatures, namely, hot ($T_h$) and cold ($T_c$). The harmonic oscillator Langevin equation is transformed into a macroscopic equation associated with the mean value $\langle x^2(t)\rangle$ using the original Langevin approach. At equilibrium stationary state this quantity satisfies a state-like equation from which the thermodynamic properties are calculated. To obtained the efficiency at maximum power it is considered the finite-time cycle processes under the framework of low dissipation approach.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-09T07:03:49Z</published>
+    <arxiv:comment>2 3pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>O. Contreras-Vergara</name>
+    </author>
+    <author>
+      <name>N. Sánchez-Salas</name>
+    </author>
+    <author>
+      <name>G. Valencia-Ortega</name>
+    </author>
+    <author>
+      <name>J. I. Jiménez-Aquino</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.108.014123</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.108.014123" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.13886v2</id>
+    <title>A Brownian cyclic engine operating in a viscoelastic active suspension</title>
+    <updated>2022-11-06T16:15:10Z</updated>
+    <link href="https://arxiv.org/abs/2207.13886v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.13886v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate a model for a Stirling-like engine consisting of a passive Brownian particle confined by a harmonic potential and interacting with a suspension of active Brownian particles that self-propel in a viscous solvent, which cyclically operates under isothermal conditions by means of temporal variations of the trap stiffness and the self-propulsion speed of the active particles. We derive an effective stochastic equation of motion of the trapped Brownian particle, which includes a friction memory kernel as well as thermal and active fluctuating forces due to its coupling with the active suspension, from which we analytically compute the efficiency of the engine in the quasi-static limit. We find that, on average, the engine is capable to produce mechanical work with an efficiency that depends on the interplay between the different time-scales of the system, where the general effect of the ensuing viscoelasticity of the active suspension is to reduce the quasi-static efficiency of the Brownian engine, as compared to the case of a system with instantaneous friction. Nevertheless, there are regions in the parameters space of the system where such memory effects are negligible in the performance of the engine, thus effectively behaving as in contact with an inert viscous bath working at two different temperatures related to the propulsion speed of the active particles.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-28T05:28:56Z</published>
+    <arxiv:comment>17 pages, 6 figures, submitted</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <arxiv:journal_ref>Physica A 609, 12834 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Carlos Antonio Guevara-Valadez</name>
+    </author>
+    <author>
+      <name>Rahul Marathe</name>
+    </author>
+    <author>
+      <name>Juan Ruben Gomez-Solano</name>
+    </author>
+    <arxiv:doi>10.1016/j.physa.2022.128342</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physa.2022.128342" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.07573v2</id>
+    <title>Thermodynamic engine powered by anisotropic fluctuations</title>
+    <updated>2022-03-23T15:50:06Z</updated>
+    <link href="https://arxiv.org/abs/2203.07573v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.07573v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The purpose of this work is to present the concept of an autonomous Stirling-like engine powered by anisotropy of thermodynamic fluctuations. Specifically, simultaneous contact of a thermodynamic system with two heat baths along coupled degrees of freedom generates torque and circulatory currents -- an arrangement referred to as a Brownian gyrator. The embodiment that constitutes the engine includes an inertial wheel to sustain rotary motion and average out the generated fluctuating torque, ultimately delivering power to an external load. We detail an electrical model for such an engine that consists of two resistors in different temperatures and three reactive elements in the form of variable capacitors. The resistors generate Johnson-Nyquist current fluctuations that power the engine, while the capacitors generate driving forces via a coupling of their dielectric material with the inertial wheel. A proof-of-concept is established via stability analysis to ensure the existence of a stable periodic orbit generating sustained power output. We conclude by drawing a connection to the dynamics of a damped pendulum with constant torque and to those of a macroscopic Stirling engine. The sought insights aim at nano-engines and biological processes that are similarly powered by anisotropy in temperature and chemical potentials.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-15T00:46:34Z</published>
+    <arxiv:comment>6 pages, 6 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Olga Movilla Miangolarra</name>
+    </author>
+    <author>
+      <name>Amirhossein Taghvaei</name>
+    </author>
+    <author>
+      <name>Yongxin Chen</name>
+    </author>
+    <author>
+      <name>Tryphon T. Georgiou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.1696v1</id>
+    <title>First Observations on Prefab Posets Whitney Numbers</title>
+    <updated>2008-02-12T19:47:18Z</updated>
+    <link href="https://arxiv.org/abs/0802.1696v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.1696v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce a natural partial order in structurally natural finite subsets of the cobweb prefabs sets recently constructed by the present author. Whitney numbers of the second kind of the corresponding subposet which constitute Stirling like numbers triangular array are then calculated and the explicit formula for them is provided. Next, in the second construction we endow the set sums of prefabiants with such an another partial order that their Bell like numbers include Fibonacci triad sequences introduced recently by the present author in order to extend famous relation between binomial Newton coefficients and Fibonacci numbers onto the infinity of their relatives among whom there are also the Fibonacci triad sequences and binomial like coefficients (incidence coefficients included). The first partial order is F sequence independent while the second partial order is F sequence dependent where F is the so called admissible sequence determining cobweb poset by construction. An F determined cobweb posets Hasse diagram becomes Fibonacci tree sheathed with specific cobweb if the sequence F is chosen to be just the Fibonacci sequence. From the stand-point of linear algebra of formal series these are generating functions which stay for the so called extended coherent states of quantum physics. This information is delivered in the last section.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-12T19:47:18Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Applied Clifford Algebras Volume 18, Number 1 / February, 2008, 57-73</arxiv:journal_ref>
+    <author>
+      <name>A. Krzysztof Kwaśniewski</name>
+    </author>
+    <arxiv:doi>10.1007/s00006-007-0054-7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00006-007-0054-7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.1382v1</id>
+    <title>New type Stirling like numbers - an email style letter</title>
+    <updated>2008-02-11T06:50:05Z</updated>
+    <link href="https://arxiv.org/abs/0802.1382v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.1382v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The notion of the Fibonacci cobweb poset from [1] has been naturally extended to any admissible sequence $F$ in [2] where it was also recognized that the celebrated prefab notion of Bender and Goldman [3] - (see also [4,5]) - admits such an extension so as to encompass the new type combinatorial objects from [2] as leading examples. Recently the present author had introduced also [6] two natural partial orders in there: one $\leq$ in grading-natural subsets of cobweb`s prefabs sets [2] and in the second proposal one endows the set sums of the so called "prefabiants" with such another partial order that one arrives at Bell-like numbers including Fibonacci triad sequences introduced by the present author in [7]. Here we quote the basic observations concerning the new type Stirling like numbers as they appear in [6]. For more on notation, Stirling like numbers of the first kind and for proofs - see [6].</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-11T06:50:05Z</published>
+    <arxiv:comment>3 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Bulletin of the ICA Vol. 49 (2007), pp. 99-102</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0510027v1</id>
+    <title>Prefab posets` Whitney numbers</title>
+    <updated>2005-10-03T04:00:33Z</updated>
+    <link href="https://arxiv.org/abs/math/0510027v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0510027v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce a natural partial order in structurally natural finite subsets the cobweb prefabs sets recently constructed by the present author. Whitney numbers of the second kind of the corresponding subposet which constitute Stirling-like numbers` triangular array are then calculated and the explicit formula for them is provided. Next - in the second construction - we endow the set sums of prefabiants with such an another partial order that their their bell like numbers include fibonacci triad sequences introduced recently by the present author in order to extend famous relation between binomial newton coefficients and fibonacci numbers onto the infinity of their relatives among which there are also the fibonacci triad sequences and binomial-like coefficients (incidence coefficients included).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-10-03T04:00:33Z</published>
+    <arxiv:comment>8 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Bull. Soc. Sci. Lett. Lodz, vol 60, (2005). 25-33</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+</feed>

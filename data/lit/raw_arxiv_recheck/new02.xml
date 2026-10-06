@@ -1,0 +1,1930 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/q5dtw0skfgvnpluG8KkiR9lhTiU</id>
+  <title>arXiv Query: search_query=abs:OEIS AND (abs:conjecture OR abs:conjectures OR abs:conjectured)&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-06T23:24:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:OEIS+AND+(abs:conjecture+OR+(abs:conjectures+OR+abs:conjectured))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>96</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.05776v1</id>
+    <title>On three conjectures of Kimberling concerning the array $\lfloor k\varphi^n\rfloor$</title>
+    <updated>2026-10-05T04:19:31Z</updated>
+    <link href="https://arxiv.org/abs/2610.05776v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.05776v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $\varphi$ be the golden ratio and let $R_n=\{\lfloor k\varphi^n\rfloor : k\ge 1\}$ be the $n$-th row of the array $T(n,k)=\lfloor k\varphi^n\rfloor$ (OEIS A128440). In 2022 Kimberling conjectured that the rows $R_{2n-1}$ and $R_{2n}$ are disjoint, and that after the two rows are merged and each entry is replaced by its rank, they become the lower and upper Wythoff sequences. He also conjectured (OEIS A358359) that if $a(N)$ is the number of rows containing $N$, then every positive integer occurs infinitely often among the values of $a$. We show that the first two conjectures follow quickly from the Skolem-Bang theorem, which also yields the exact rule for when two rows are disjoint: $R_i\cap R_j=\emptyset$ ($i&lt;j$) if and only if $j-i$ is odd and divides $i$. We then prove the third conjecture. The main tools are an explicit determination of the rows containing an odd-indexed Lucas number, which extends a result of Noppakaew, Kanwarunyu and Wanitchatchawan, and a "Lucas shift" lemma: if $N+1$ is not of the form $L_{2e}$ with $e\ge1$, then adding a sufficiently large even-indexed Lucas number to $N$ does not change the set of rows containing it. We also show that each value of $a$ is taken on a set of positive natural density, and we report computations up to $10^8$ suggesting that the least $N$ lying in exactly $v\ge 2$ rows is the Lucas number $L_{4v-5}$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-05T04:19:31Z</published>
+    <arxiv:comment>7 pages. Also deposited at Zenodo, doi:10.5281/zenodo.23124803</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alex Ashburn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.31189v1</id>
+    <title>Differential Recursions, Projective Discriminants, and Algebraic Generating Functions</title>
+    <updated>2026-09-25T12:20:57Z</updated>
+    <link href="https://arxiv.org/abs/2609.31189v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.31189v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two hierarchies of bivariate generating functions defined by differential recursions: a self-dual hierarchy and a reduced-symmetry hierarchy. Their rational coefficient functions produce palindromic and anti-palindromic triangles, including OEIS A336110 and A140136. For general differential order $p$, the reduced hierarchy decomposes into $p-1$ Horn-type companions. An explicit differential intertwiner of order $p-3$ relates the last companion to the normalized self-dual generating function. The companions share a principal symbol and a rationally parametrized characteristic curve with a projective $S_3$ action. At $p=2$ this construction yields the Narayana quadratic. At $p=3$ the symmetry lifts to $S_4$: two algebraic sectors are edge resolvents of one quartic root configuration, and the nonsymmetric Gross--Witten--Wadia generating function has degree four. For $p=4$ and $p=5$ we derive algebraic equations of degrees six and eight, respectively, and find Galois groups $S_6$ and $S_8$ at generic specializations. At $p=6$ we verify a degree-ten specialization with Galois group $S_{10}$. Their discriminants exhibit a universal cubic characteristic factor and a squared lower-order factor. A boundary factorization explains the observed algebraic degrees and discriminant monomials. We formulate conjectures on algebraicity and Galois groups in the reduced hierarchy and identify a possible mechanism for transcendence in the higher self-dual hierarchy.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T12:20:57Z</published>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>S. Voloshyn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.28512v1</id>
+    <title>Counterexamples to a conjecture of Kamenetsky on OEIS A173419</title>
+    <updated>2026-09-21T15:13:40Z</updated>
+    <link href="https://arxiv.org/abs/2609.28512v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.28512v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Define a(n) as the number corresponding to the shortest computation using only addition, subtraction, or multiplication, as A173419 states on the related OEIS page. In a comment to the sequence, D. Kamenetsky conjectured that a(p) $\ge$ a(p -1) for every prime. We show that the conjecture is false through four counterexamples below 5000 that satisfy the condition a(p) &lt; a(p -1). They are exactly 3359, 3623, 4909, and 4943. </summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T15:13:40Z</published>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Rosario Patanè</name>
+      <arxiv:affiliation>SAMOVAR</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07325v1</id>
+    <title>Real-rooted Eulerian polynomials from permutations, words, and paths</title>
+    <updated>2026-09-07T10:40:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.07325v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07325v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study six Eulerian-type polynomial families. We prove that the
+  descent polynomials of derangements are real-rooted, settling the
+  derangement part of a conjecture of S.~Fu, Z.~Lin, and J.~Zeng. The proof
+  uses a compatible-pair recursion and finite-symbol stability. We also
+  resolve the real-rootedness conjecture in OEIS
+  \oeis{A335340}, strengthen the known rowwise real-rootedness of an even-top
+  descent family to consecutive strict interlacing, and prove real-rootedness,
+  consecutive interlacing, and real-rooted gamma-polynomials for U.~Shankar's
+  super-Eulerian polynomials. A differential recurrence gives consecutive
+  weak interlacing for ternary words counted by increasing runs.
+  Finally, we prove stability of the peak-value refinement and consecutive
+  interleaving of its positive weighted diagonals, settling a conjecture of
+  P.~Alexandersson and O.~Nabawanda.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T10:40:35Z</published>
+    <arxiv:comment>17 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07238v1</id>
+    <title>A Proof of Bala's Congruence Conjectures for A158690</title>
+    <updated>2026-09-07T08:56:48Z</updated>
+    <link href="https://arxiv.org/abs/2609.07238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $a(n)$ be the sequence A158690 in the On-Line Encyclopedia of Integer Sequences (OEIS), defined by the exponential generating function $\sum_{n\ge0} a(n)t^n/n! = 1+\sum_{m\ge1}\prod_{j=1}^m(1-e^{-(2j-1)t})$. We prove two congruence conjectures of Peter Bala. The first states that, for every integer $k\ge1$, the sequence $a(n)$ modulo $k$ is eventually periodic with period dividing $\varphi(k)$. We prove the stronger statement that the Carmichael function $λ(k)$ is an eventual period. The second conjecture asserts the shifted Gauss congruences $a(np^r+i)\equiv a(np^{r-1}+i)\pmod{p^r}$ for every $i\ge0$, every prime $p$, and all $n,r\ge1$. Both results follow from a general theorem for exponential generating functions of the form $G(e^t-1)$ with $G\in\mathbb Z[[y]]$, together with the standard power-sum formula for Stirling numbers of the second kind.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T08:56:48Z</published>
+    <arxiv:comment>7 pages. Includes a Lean 4/Mathlib formalization</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ahaan Kallat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01690v1</id>
+    <title>Iterated-sumset spectra: The complete exponent law and its rank geometry</title>
+    <updated>2026-09-01T15:47:23Z</updated>
+    <link href="https://arxiv.org/abs/2609.01690v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01690v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For integers $h,k\geq 1$, let $hA$ be the $h$-fold sumset of $A$ and put $\mathcal{R}(h,k)=\{|hA|:A\subset\mathbb{Z}, |A|=k\}$. Previously, the fixed-cardinality exponent law was known only for $k\leq 3$; every fixed $k\geq 4$ remained open. We settle the problem in full by determining the complete fixed-cardinality exponent law: $|\mathcal{R}(h,k)|=\begin{cases}1,&amp;k\leq 2,\\ h,&amp;k=3,\\ h^{k-1+o_k(1)},&amp;k\geq 4\end{cases}$. Here $o_k(1)\to 0$ as $h\to\infty$ with $k$ fixed. More sharply, for fixed $k\geq 4$, an interval of length $Θ_k(h^{k-1})$ contains at least $h^{k-1-o_k(1)}$ attainable values. At $k=4$ we prove $|\mathcal{R}(h,4)|=Θ(h^3)$ with positive lower density in its ambient interval, disproving Nathanson's proposed $o(h^3)$ and $O(h^2)$ bounds. One bounded addition-table geometry drives these results, coupling Hilbert-energy amplification to optimal finite-observation compression. Every ordered real $k$-set ($k\geq 2$) has an integer model in $[0,O_k(h^{k-2})]$ preserving every sum equality and strict comparison through degree $h$; the exponent $k-2$ is sharp. The universal label-realization length is therefore $Θ_k(h^{k-2})$, one power sharper than Nathanson's $O_k(h^{k-1})$ bound. For $h\geq 2$ and $k\geq 3$, minimum active rank equals realization-frequency codimension, exponent-shape codimension, and sampling-rarity exponent; a full-exponent family has maximal-rank witnesses with Cohen-Macaulay toric coordinate rings. At rank zero, for $h\geq 2$, it proves the conjectural OEIS A227589 formula $\binom{h+2}{2}+\mathbf{1}_{\{2\nmid h\}}$ for the least normalized diameter of a four-point $B_h$-set. It also gives exact fixed-$(h,k)$ popularity laws for $k$-subsets of $\{1,\ldots,q\}$ as $q\to\infty$, resolving Nathanson's Problems 9 and 10.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T15:47:23Z</published>
+    <arxiv:comment>106 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Henry Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.29555v1</id>
+    <title>Truncations of the ring of number-theoretic functions, revisited</title>
+    <updated>2026-08-30T04:54:56Z</updated>
+    <link href="https://arxiv.org/abs/2608.29555v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.29555v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $K$ be a field containing $\mathbb{Q}$, let $Γ$ be the ring of all functions from the positive integers to $K$ under Dirichlet convolution, and let $Γ_n$ be its truncation to functions supported on $[1,n]$. In [Snellman, Homology Homotopy Appl. 2 (2000), 17-27; arXiv:math/9904143] it was shown that $Γ_n$ is a polynomial ring modulo a monomial ideal $I_n$ which is stable after reversing the order of the variables, and the Poincare-Betti series of $Γ_n$ was computed in terms of the numbers $C_{n,v}$ of minimal generators of $I_n$ of least support $v$.
+  We prove that $C_{n,v} = Φ(n,p_v)$, Legendre's sifting function: the number of integers in $[1,n]$ free of prime factors $\le p_v$. This identifies an invariant of a minimal free resolution with a classical object of sieve theory. As consequences we obtain: a proof of Conjecture 4.6 of the 2000 paper, which was left open there; the average order $C_n \sim π(n)^2/2$ of the total number of minimal generators, showing that the lower bound $C_n \ge \binom{π(n)+1}{2}$ of that paper is asymptotically sharp, together with the exact order
+  $C_n - \binom{π(n)+1}{2} \sim \frac{16}{3} n^{3/2} / \log^3 n$
+  of the error; and the identification of $C_n$ with the OEIS sequence A182843. We also record errata for the 2000 paper: one stated result is false, and two proofs are incomplete. Corrected statements and complete proofs are given.</summary>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-30T04:54:56Z</published>
+    <arxiv:comment>23 pages, 2 figures. Written with substantial assistance from a large language model (Claude, Anthropic); see the "Disclosure of AI assistance" section. The author takes full responsibility for the results</arxiv:comment>
+    <arxiv:primary_category term="math.AC"/>
+    <author>
+      <name>Jan Snellman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22053v2</id>
+    <title>An application of Jacobi's residue formula and proofs of some other conjectures on binomial coefficients</title>
+    <updated>2026-08-25T12:26:38Z</updated>
+    <link href="https://arxiv.org/abs/2608.22053v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22053v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove seven conjectures involving binomial coefficients. These conjectures appear in The On-Line Encyclopedia of Integer Sequences (OEIS). Among these is an application of Jacobi's residue formula. We also apply MacMahon's master theorem to give a new and independently obtained proof of a recently established result.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-22T17:37:47Z</published>
+    <arxiv:comment>27 pages; v2: added a reference and updated a remark</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Rohun Easwar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11941v2</id>
+    <title>OEIS Open: How many conjectures can language models turn into theorems?</title>
+    <updated>2026-08-13T09:23:24Z</updated>
+    <link href="https://arxiv.org/abs/2608.11941v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11941v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct OEIS Open, a benchmark based on 492 open mathematical conjectures from the OEIS, formalized in Lean by Tsoukalas et al. Whereas these conjectures had previously been attempted only with a bespoke agent, our open-source evaluation code runs any generic language model (LM) against them, and is secure against LM cheating attempts. We find that LMs equipped with a minimal set of tools resolve 147 of these conjectures with a budget of \$50 per attempt, scoring 30% on OEIS Open. OEIS Open Lite is a random subset of 100 conjectures for cheaper evaluation. When evaluated with a budget of \$200 per attempt, the best current LM scores 44% on OEIS Open Lite. Giving LMs access to the mathematics literature via 476,000 papers from arXiv did not increase performance on OEIS Open Lite, and nor did using more sophisticated agent loops. The conjectures covered in this work are of uncertain mathematical significance, and most have likely received little previous attention. Nevertheless, our results show that LMs can resolve open research conjectures autonomously and at modest cost.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T11:28:36Z</published>
+    <arxiv:comment>26 pages, 6 figures. Code: https://github.com/epoch-research/LeanOpenProblems, results: https://github.com/epoch-research/LeanOpenProblems-results</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Tom Adamczewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26613v1</id>
+    <title>On a Question of Lehmer concerning the Comtet Numbers</title>
+    <updated>2026-07-29T08:38:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.26613v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26613v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Comtet numbers $b(n,k)$ and $B(n,k)$ of the first and second kind arise from the powers of $(1+x)\log(1+x)$ and of its compositional inverse, respectively. By interpreting both families as special values of weighted Stirling polynomials, we answer Lehmer's question of whether $B(n,k)$ satisfies a recurrence with a fixed number of terms by proving the four-term recurrence $kB(n+1,k+1)=B(n,k-1)-(n-k)B(n,k)-B(n+1,k)$. The corresponding relation for the unsigned array was conjectured by M. Kurkov, but not proved, in OEIS A354794. We further derive explicit formulas, convolution identities, and differential-difference relations for the Touchard-type polynomials attached to the two families.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T08:38:59Z</published>
+    <arxiv:comment>34 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sangtae Jeong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25011v1</id>
+    <title>A Kernel-Certified Verification of the Erdős-Mollin-Walsh Conjecture below $10^{14}$</title>
+    <updated>2026-07-29T03:53:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.25011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Erdős problem 364 asks whether three consecutive powerful numbers exist, where $n$ is powerful if $p \mid n$ implies $p^2 \mid n$. Erdős (1976) and, independently, Mollin and Walsh (1986) conjectured that none do; the $abc$ conjecture implies at most finitely many. The conjecture remains open. We present the first verification of the conjecture at any finite bound that is checked end to end by a proof kernel: machine-checked theorems in Lean 4 establishing that no triple of consecutive powerful numbers exists below $10^{12}$ and below $10^{14}$, with the axiom footprint of both theorems being exactly {propext, Classical.choice, Quot.sound} -- no sorry, no native_decide, no trusted external computation. The statements are phrased in the byte-identical vocabulary of the google-deepmind/formal-conjectures formalization of the problem, and we prove abstractly that the open conjecture implies each bounded form, pinning the statement correspondence. The proof reduces the search to odd numbers via a mod-4 argument, represents every odd powerful number as $a^2 b^3$ with $a, b$ odd and $b$ squarefree, enumerates all odd powerful numbers by a fueled, kernel-reducible generator whose completeness is proved once and instantiated across 3,524 per-interval Boolean certificates, and eliminates the seven surviving distance-2 pairs (the members of OEIS A076445 below $10^{14}$) by explicit non-powerfulness witnesses. Every certificate's expected values are computed independently by a Python engine, so each kernel-checked equality doubles as a cross-implementation agreement. Total certified kernel time is roughly 46 CPU-hours. Larger uncertified computations exist (exhaustive to $10^{22}$; conditionally to about $7.38 \times 10^{28}$); our contribution is not a computational record but the elimination of trusted enumeration code from the evidence chain.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T03:53:11Z</published>
+    <arxiv:comment>13 pages. Lean 4 sources, certificates, and CI at https://github.com/ibrahimmian36/Optio</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Ibrahim Mian</name>
+    </author>
+    <author>
+      <name>Shayaan Siddique</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.22202v1</id>
+    <title>Mersenne Representation, the Conolly Sequence, and Soliton Profiles over Finite Fields</title>
+    <updated>2026-07-24T11:16:33Z</updated>
+    <link href="https://arxiv.org/abs/2607.22202v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.22202v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the Mersenne representation of nonnegative integers and its decomposition into the binary and nonbinary sides. The nonbinary values form A055938, and their successor structure gives a direct proof of the relation between A055938 and A080578 that is recorded as conjectural in the OEIS entry for A080578. The binary-side counting function is identified with a shifted Conolly sequence.
+  We then develop the parent map, truncation blocks, truncation remainders, and the Mersenne tau function associated with this representation. The parent map is conjugate to deletion of the lowest digit. Differences of the Mersenne tau rows recover the parent iterates and the counting function, and they give formulas for digit reconstruction and for a diagonal tau defect.
+  Finally, we revisit a known finite-depth one-soliton family of the finite-field BBS. The Mersenne combinatorics is used directly to reconstruct a global integer-valued traveling-wave profile and to prove an integer window-counting theorem. Reduction modulo 3 yields the corresponding finite-field traveling-wave solutions. We also construct an integer-valued traveling-wave tau function whose front values are given by the Mersenne tau rows. The resulting construction shows how the combinatorics of a number representation can enter directly into the reconstruction of solutions of an integrable system.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-24T11:16:33Z</published>
+    <arxiv:comment>34 pages, 2 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Fumitaka Yura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24832v1</id>
+    <title>Further proofs of conjectures from the OEIS</title>
+    <updated>2026-07-23T14:00:41Z</updated>
+    <link href="https://arxiv.org/abs/2607.24832v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24832v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the fourth work in a series devoted to proving conjectures recorded in the On-Line Encyclopedia of Integer Sequences (OEIS). The problems considered here concern elementary and multiplicative number theory, Fibonacci numbers, decimal concatenation, Diophantine and Pell equations, binary representations and bitwise operations, lattice paths, parity patterns, recurrences, and formal power series. Several of the results give complete characterizations of the relevant sequences; others establish exact identities, recurrences, generating functions, asymptotic estimates, integrality properties, or nonoccurrence results. The proofs use combinatorial bijections, congruences, Möbius inversion, valuations, Fibonacci identities, Pell-type arguments, Lucas' theorem, Riordan arrays, Lagrange inversion, and generating-function methods.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-23T14:00:41Z</published>
+    <arxiv:comment>57 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Sela Fried</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.18313v1</id>
+    <title>A Proof of Bala's Congruence Conjecture for A028342</title>
+    <updated>2026-07-17T18:06:22Z</updated>
+    <link href="https://arxiv.org/abs/2607.18313v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.18313v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $a(n)$ be the sequence A028342 in the On-Line Encyclopedia of Integer Sequences (OEIS), defined by the exponential generating function $\sum_{n\ge0} a(n)x^n/n! = \prod_{i\ge1}(1-x^i)^{-1/i}$. Equivalently, $a(n)$ counts permutations of an $n$-element labeled set in which every cycle is assigned one divisor of its length, where a cycle of length $m$ has $d(m)$ choices, $d(m)$ being the number of positive divisors of $m$. We prove a family of congruences for $a$, conjectured by Peter Bala. They state that $k \mid a(n+k)+a(n)$ for odd $k$, that $k \mid a(n+k)-a(n)$ for $k\equiv 0,2,6 \pmod 8$, and that $k \mid 2(a(n+k)-a(n))$ for $k\equiv 4\pmod 8$. The proof first establishes a product congruence $a(n+k)\equiv a(n)a(k)\pmod k$, and then computes $a(p^r)\bmod p^r$ for each prime power by counting the colored permutations fixed by a subgroup of order $p$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-17T18:06:22Z</published>
+    <arxiv:comment>12 pages. Includes a Lean 4/Mathlib formalization</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ahaan Kallat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.12026v1</id>
+    <title>Learning the Graphical Nature of Symmetries</title>
+    <updated>2026-07-13T18:00:02Z</updated>
+    <link href="https://arxiv.org/abs/2607.12026v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.12026v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Finite groups are rigid algebraic objects, whose Cayley graphs expose a rich network geometry through which group-theoretic structure can be measured, compared, and learned. In this paper, a dataset of $131{,}406$ Cayley graphs is constructed, covering all groups of order at most $767$ except order $512$, recording exact algebraic labels for group properties together with a broad collection of graph, cycle, distance, and spectral statistics. This census aims to provide novel benchmarks for studying how finite-group properties are reflected in Cayley graph observables. It also yields new enumerative contributions: alongside recovering known OEIS sequences for standard group classes, new sequences for monolithic groups and for groups generated by at most three, four, and five elements are contributed to the OEIS. The accompanying network analysis identifies several empirical regularities and formulates testable conjectures, including relationships involving square clustering, Cayley graph diameter, average graph disorder, and spectral eigengaps of nilpotent groups. Finally, a comparison between classical models, an MLP, and graph neural network architectures is performed for predicting algebraic group properties directly from Cayley graph data. The results show that engineered graph statistics are highly informative, while GNNs, especially GIN and in some fixed-order settings GCN, can recover substantial structural signal directly from the graph. Such that graph-aware architectures show phases of optimality on these group-theoretic graph representations.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-13T18:00:02Z</published>
+    <arxiv:comment>32 pages; 18 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Rashid Barket</name>
+    </author>
+    <author>
+      <name>Enrico Grimaldi</name>
+    </author>
+    <author>
+      <name>Yacoub Hendi</name>
+    </author>
+    <author>
+      <name>Edward Hirst</name>
+    </author>
+    <author>
+      <name>Adam Onus</name>
+    </author>
+    <author>
+      <name>Harmeet Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.30232v1</id>
+    <title>Structured Solutions of Prime-Base Binomial Congruences</title>
+    <updated>2026-06-29T12:44:33Z</updated>
+    <link href="https://arxiv.org/abs/2606.30232v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.30232v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the congruence $\binom{qn}{n} \equiv q^n \pmod n$ for a prime base $q$. Motivated by the OEIS sequence \seqnum{A080469} and the conjectural existence of infinitely many ternary solutions of the form $n=3^t p$, we analyze the more general family $n=q^t p$, where $p\neq q$ is prime. Our main result shows that, in this family, the congruence is equivalent to two independent conditions: a congruence modulo $p$ and an inequality in the sum of the digits. This reduces the search for such solutions to factoring an explicit integer and applying a base-$q$ digit-sum filter. We use this criterion to produce new large solutions for $q\in\{2,3,5,7,11\}$. We also prove that square solutions $n=p^2$ are exactly governed by Wieferich primes in base $q$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-29T12:44:33Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Gabriel Araújo Guedes</name>
+    </author>
+    <author>
+      <name>Ricardo Nunes Machado Junior</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26035v1</id>
+    <title>Every Nonnegative Integer Is a Sum of a Triangular, a Pentagonal, and a Heptagonal Number</title>
+    <updated>2026-06-24T17:11:12Z</updated>
+    <link href="https://arxiv.org/abs/2606.26035v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26035v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, it is proved that any nonnegative integer can be written in the following form $$ x(x+1)/2 + y(3y+1)/2 + z(5z+1)/2, \qquad x,y,z \in \mathbb{N}. $$ This settles the conjecture recorded as OEIS A287616. All parts of the proof have been formalized in Lean 4, with the exception of two results: one externally cited theorem and one statement verified by symbolic computation. Both the natural-language proof and the Lean formalization were generated by the MechMath Agent Team developed by the authors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T17:11:12Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Yichuan Cao</name>
+    </author>
+    <author>
+      <name>Dakai Guo</name>
+    </author>
+    <author>
+      <name>Ruichen Qiu</name>
+    </author>
+    <author>
+      <name>Ruyong Feng</name>
+    </author>
+    <author>
+      <name>Xiao-Shan Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22997v1</id>
+    <title>A Greatest Common Divisor Criterion of Certain Binomial Coefficients</title>
+    <updated>2026-06-22T08:14:01Z</updated>
+    <link href="https://arxiv.org/abs/2606.22997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The binomial greatest common divisor (gcd) criterion recorded as OEIS A080170 is proven. The criterion also appears as conjecture (17) in Ralf Stephan's list of OEIS conjectures. For $k\geq 2$, put \[
+  D(k)=\gcd_{2\leq q\leq k+1}\binom{qk}{k},
+  \qquad n=k+1. \] If $P$ is the largest prime-power component $p^a$ exactly dividing $n$, then the criterion asserts \[
+  D(k)=1 \quad\Longleftrightarrow\quad \frac{n}{P}&gt;P. \] The proof is formalized in Lean and the Lean artifact is accepted as part of the Formal Conjectures project. Both the natural-language proof and the Lean formalization are generated by the MechMath Agent Team, an AI agent developed by the authors.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-22T08:14:01Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Dakai Guo</name>
+    </author>
+    <author>
+      <name>Ruichen Qiu</name>
+    </author>
+    <author>
+      <name>Yichuan Cao</name>
+    </author>
+    <author>
+      <name>Ruyong Feng</name>
+    </author>
+    <author>
+      <name>Xiao-Shan Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.09321v2</id>
+    <title>Proof of Conjecture 19 of Ballantine, Beck, Merca, and Sagan on Elementary Symmetric Partitions</title>
+    <updated>2026-06-10T08:28:21Z</updated>
+    <link href="https://arxiv.org/abs/2606.09321v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.09321v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ballantine, Beck, Merca, and Sagan conjectured four identities, collectively Conjecture 19, relating the image of the map pre_k on integer partitions to four OEIS sequences. We prove parts (i) and (iii) unconditionally, prove part (iv) unconditionally using the injectivity of pre_2 on partitions of n (Conjecture 1 of the same paper, proved by Li in arXiv:2508.00971), and show that this injectivity is in fact equivalent to part (iv). For part (ii) we prove the partition-theoretic half unconditionally and reduce the remaining content to a 2006 conjecture of Dean Hickerson on the OEIS concerning Huffman coding. We also correct a sign error in the published statement of part (iii): the correct identity is chi(ImP_3(n)) = A213213(n) - 1, not 1 + A213213(n) as stated.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T10:35:57Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Arnav Garg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.04016v1</id>
+    <title>Witness-split + window-cardinality refinement for $r_3(N)$: Architecture, empirical results, and a structural hard pocket</title>
+    <updated>2026-05-31T17:48:17Z</updated>
+    <link href="https://arxiv.org/abs/2606.04016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.04016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a reproducible computational framework for upper-bound searches on r_3(N), the maximum size of a 3-term-arithmetic-progression-free subset of [1,N]. The framework combines a verified lower-bound witness, endpoint forcing, depth-d witness-variable splitting, OEIS A003002 window-cardinality pruning, and recursive refinement of timed-out subproblems. Applied to the frontier case N = 212, K = 44, it found no feasible 44-set across millions of CP-SAT subproblems, supporting but not proving the conjectural value r_3(212) = 43. A 300-second recap leaves 45 resistant chunks; one-hour HiGHS MIP closes none of them; the full eight-hour HiGHS audit closes 25/45 and leaves 20/45 with dual bounds still pinned at 0.0. A CDCL/SAT re-attack on those LP-paradigm-resistant chunks closes 18 via conflict-driven clause learning; all eighteen carry independently verified DRAT proofs. The remaining two chunks (T1c) resist every tested paradigm under generous wall caps. We release the witness, solver scripts, result logs, tiered benchmark instances, verified DRAT/LRAT proofs, and a Lean formal-proof-search encoding of T1c, and frame the unit-gap problem r_3(212) in {43,44} as a target for stronger additive-combinatorial bounds, custom branch-and-bound, or formal proof-search systems.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-31T17:48:17Z</published>
+    <arxiv:comment>19 pages, 1 figure, ancillary files include tiered JSONL benchmarks and Lean encodings. Full proof artifacts and campaign data are available at Zenodo DOI 10.5281/zenodo.20463334</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Mehmet Ergezer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.22763v2</id>
+    <title>Advancing Mathematics Research with AI-Driven Formal Proof Search</title>
+    <updated>2026-06-08T12:23:48Z</updated>
+    <link href="https://arxiv.org/abs/2605.22763v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.22763v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) increasingly excel at mathematical reasoning, but their unreliability limits their utility in mathematics research. A mitigation is using LLMs to generate formal proofs in languages like Lean. We perform the first large-scale evaluation of this method's ability to solve open problems. Our most capable agent autonomously resolved 9 of 353 open Erdős problems at the per-problem cost of a few hundred dollars, proved 44/492 OEIS conjectures, and is being deployed in combinatorics, optimization, graph theory, algebraic geometry, and quantum optics research. A basic agent alternating LLM-based generation with Lean-based verification replicated the Erdős successes but proved costlier on the hardest problems. These findings demonstrate the power of AI-aided formal proof search and shed light on the agent designs that enable it.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T17:24:57Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>George Tsoukalas</name>
+    </author>
+    <author>
+      <name>Anton Kovsharov</name>
+    </author>
+    <author>
+      <name>Sergey Shirobokov</name>
+    </author>
+    <author>
+      <name>Anja Surina</name>
+    </author>
+    <author>
+      <name>Moritz Firsching</name>
+    </author>
+    <author>
+      <name>Gergely Bérczi</name>
+    </author>
+    <author>
+      <name>Francisco J. R. Ruiz</name>
+    </author>
+    <author>
+      <name>Arun Suggala</name>
+    </author>
+    <author>
+      <name>Adam Zsolt Wagner</name>
+    </author>
+    <author>
+      <name>Eric Wieser</name>
+    </author>
+    <author>
+      <name>Lei Yu</name>
+    </author>
+    <author>
+      <name>Aja Huang</name>
+    </author>
+    <author>
+      <name>Miklós Z. Horváth</name>
+    </author>
+    <author>
+      <name>Andrew Ferraiuolo</name>
+    </author>
+    <author>
+      <name>Henryk Michalewski</name>
+    </author>
+    <author>
+      <name>Edward Lockhart</name>
+    </author>
+    <author>
+      <name>Codrut Grosu</name>
+    </author>
+    <author>
+      <name>Thomas Hubert</name>
+    </author>
+    <author>
+      <name>Matej Balog</name>
+    </author>
+    <author>
+      <name>Pushmeet Kohli</name>
+    </author>
+    <author>
+      <name>Swarat Chaudhuri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.21529v6</id>
+    <title>A Matrix-Theoretic Exact Formula for Counting Primes in Intervals Between Consecutive Odd Squares</title>
+    <updated>2026-09-22T15:57:52Z</updated>
+    <link href="https://arxiv.org/abs/2605.21529v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.21529v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Matrix $B=(b_{ij})$ with $b_{ij}=(2j+1)(2j+2i-1)$ was introduced in \cite{Shi2024} as an additive sieve for odd primes. In this paper we introduce the minimal-anchor function $\pmin(d)$, the least odd prime $p$ such that $p+d$ is prime (sequence A020483 of the OEIS at index $d/2$), whose finiteness for all even $d$ is exactly the weak Polignac (Maillet) conjecture, i.e.\ the statement that every row of $B$ contains a semiprime. We prove that for each fixed $z$ the set $\{d\ \text{even}:\pmin(d)\le z\}$ has density zero, with the asymptotic $(π(z)-1)X/\log X$; consequently no fixed finite set of anchor primes can cover a positive proportion of the rows. Density-one coverage of the rows nevertheless holds, by a classical theorem of Lavrik which we restate in the matrix-$B$ framework: almost every row contains the number of semiprimes predicted by the Hardy--Littlewood conjecture. We formulate quantitative conjectures on $\pmin$ and support them with numerical data. Every-row coverage (= weak Polignac) is explicitly left open. We prove unconditional lower bounds for $\pmin$: for every $ψ\to0$, $\pmin(d)&gt;ψ(d)\log d\log\log d$ for almost all even $d$, which is the conjectured typical order; and $\max_{d\le X}\pmin(d)\ge(\frac12+o(1))\log X\log\log X$. The same counting gives the corresponding lower bounds for the least prime in a Goldbach partition.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-19T17:23:39Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Wujie Shi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16553v1</id>
+    <title>An explicit algebraic generating function for OEIS A348410</title>
+    <updated>2026-05-15T18:53:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.16553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A348410, P. Bala recorded in February 2022 two equivalent closed forms, $a(n) = [x^{n}] ((1-x)(1-x^2))^{-n}$ and a single-index binomial sum. R. J. Mathar (October 2021) and V. Kotesovec (November 2021) each contributed a conjectured P-recursive recurrence -- Mathar's of order $4$, Kotesovec's of order $2$. We apply Lagrange-Bürmann inversion to Bala's $[x^n]$ form to derive the parametric expression $A(t) = (1 - y^2)/(1 - y - 4 y^2)$, where $y = y(t)$ is implicit by $y(1-y)^2(1+y) = t$. Eliminating $y$ via resultant gives the explicit algebraic equation $P(t, A) = 0$ of degree $4$ in $A$ and degree $2$ in $t$. As an immediate corollary (Stanley's classical algebraic-implies-D-finite theorem), $A(t)$ is D-finite. Mathar's and Kotesovec's specific recurrences are not directly proven here; we only verify Kotesovec's order-$2$ recurrence numerically for $n = 3, \ldots, 1000$ and observe that an explicit ODE-and-recurrence extraction from $P(t, A) = 0$ via the standard Bostan-Chyzak-Salvy algebraic-to-holonomic procedure would close both conjectures. The supplementary archive contains a SymPy script which derives $P(t, A)$ and checks the numerical evidence.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T18:53:57Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.15500v1</id>
+    <title>Three short proofs of Mathar's 2014 conjecture for OEIS A002627</title>
+    <updated>2026-05-15T00:36:49Z</updated>
+    <link href="https://arxiv.org/abs/2605.15500v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.15500v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A002627, defined by the inhomogeneous first-order recurrence $a(n) = n\,a(n-1) + 1$ with $a(0) = 0$, R.~J.~Mathar recorded in February 2014 the conjectured second-order homogeneous recurrence \[ a(n) - (n+1)\,a(n-1) + (n-1)\,a(n-2) = 0, \qquad n \ge 2, \] which has remained marked as a conjecture on the OEIS for over a decade. We give three short proofs. The first is two lines: subtract the defining recurrence at adjacent indices and the constant cancels (we call this homogenisation). The second reads off the same relation from the exponential generating function $F(x) = (e^x-1)/(1-x)$. The third is a Pascal-rule telescoping on the binomial-sum form $a(m) = \sum_{k=0}^{m-1} k!\binom{m}{k}$. All three derivations are elementary, requiring nothing beyond undergraduate techniques. We remark that the same homogenisation trick clears an entire class of ``Conjecture: \dots'' entries on the OEIS, namely sequences satisfying $a(n) = p(n)\,a(n-1) + q(n)$ with simple $q$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-15T00:36:49Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14213v1</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the reversible-binary-string sequence A032123</title>
+    <updated>2026-05-14T00:14:56Z</updated>
+    <link href="https://arxiv.org/abs/2605.14213v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14213v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A032123, the number of length-$2n$ black-and-white strings with $n$ black beads, considered up to reversal, R. J. Mathar contributed in November 2013 the conjectured order-5 P-recursive recurrence \[ \begin{aligned} &amp;n(n-1)\,a(n) - 2(n-1)(3n-4)\,a(n-1) + 4(2n^{2}-14n+19)\,a(n-2) &amp;\qquad + 8(n^{2}+5n-19)\,a(n-3) - 16(n-3)(3n-10)\,a(n-4) &amp;\qquad + 32(n-4)(2n-9)\,a(n-5) \;=\; 0, \qquad n \ge 6. \end{aligned} \] We give a short proof. Burnside's lemma applied to the reversal action gives the closed form $a(n) = \tfrac{1}{2}\bigl(\binom{2n}{n} + [n \text{ even}]\binom{n}{n/2}\bigr)$; the two summands satisfy elementary recurrences of order $1$ and $2$ respectively; and Mathar's order-5 operator, applied to each summand separately, reduces to a polynomial identity that simplifies to zero after a brief calculation. The supplementary archive includes a SymPy script which verifies the polynomial identities symbolically and checks Mathar's recurrence numerically for $n = 6, \ldots, 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-14T00:14:56Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.12839v2</id>
+    <title>A short proof of Mathar's 2021 recurrence conjecture for the Lehmer-Comtet diagonal A045406</title>
+    <updated>2026-09-10T18:06:22Z</updated>
+    <link href="https://arxiv.org/abs/2605.12839v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.12839v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For OEIS sequence A045406, the column-2 diagonal of the Lehmer-Comtet triangle A008296, R. J. Mathar contributed in September 2021 the conjectured order-2 P-recursive recurrence \[ a(n) + (2n-7)\,a(n-1) + (n-4)^{2}\,a(n-2) \;=\; 0,\qquad n \ge 5. \] We give a short proof. Detlefs's harmonic-number closed form $a(n) = (-1)^n (2 H_{n-3} - 3)(n-3)!$ for $n \ge 3$ collapses the left-hand side, after factoring out $(-1)^n (n-5)! (n-4)$, to a polynomial identity in $n$ with coefficient $H_{n-4}$. The $H_{n-4}$-coefficient simplifies to $(n-3) - (2n-7) + (n-4) = 0$ (using $H_{n-3} = H_{n-4} + 1/(n-3)$ and $H_{n-5} = H_{n-4} - 1/(n-4)$); the constant remainder is $0$ for the same reason. The supplementary archive contains a SymPy script verifying both pieces symbolically, the e.g.f.\ expansion against the harmonic closed form, and Mathar's recurrence numerically for $n = 5, \ldots, 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T00:18:48Z</published>
+    <arxiv:comment>Duplicates arXiv:2605.11351 (same author, one day earlier). Both prove one theorem: with v(m)=m!(2H_m-3), A045406(n)=(-1)^n v(n-3) and A001711(n)=v(n+3)/4, so both stated recurrences are the single identity v(m)-(2m-1)v(m-1)+(m-1)^2 v(m-2)=0; the printed terms agree up to the factor 4 after alignment. Withdrawing the later paper; 2605.11351 stands</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11351v1</id>
+    <title>A short proof of Mathar's 2020 recurrence conjecture for the generalized-Stirling sequence A001711</title>
+    <updated>2026-05-12T00:13:31Z</updated>
+    <link href="https://arxiv.org/abs/2605.11351v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11351v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A001711, contributed by N. J. A. Sloane long before the on-line era and identified there as the diagonal $T(n+4, 4)$ of a generalized-Stirling triangle, R. J. Mathar contributed in February 2020 the conjectured order-2 P-recursive recurrence \[ a(n) - (2n+5)\,a(n-1) + (n+2)^{2}\,a(n-2) \;=\; 0,\qquad n \ge 2. \] We give a one-page proof. Detlefs's harmonic-number closed form $a(n) = \tfrac{1}{4}(n+3)!\,(2 H_{n+3} - 3)$ collapses the left-hand side, after dividing through by $(n+1)!/4$, to a polynomial identity of $n$ with coefficient $H_{n+2}$. The harmonic-number coefficient simplifies to $(n+3) - (2n+5) + (n+2) = 0$ (using $H_{n+3} = H_{n+2} + \tfrac{1}{n+3}$ and $H_{n+1} = H_{n+2} - \tfrac{1}{n+2}$); the constant remainder is $-3 \cdot 0 = 0$ for the same reason. The supplementary archive contains a SymPy script verifying both pieces symbolically, the e.g.f.\ expansion against the harmonic closed form, and Mathar's recurrence numerically for $n = 2, \ldots, 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-12T00:13:31Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11137v2</id>
+    <title>The alternating compositions of weighted differential operators yield the weights' Wronskian with which constant?</title>
+    <updated>2026-07-16T14:57:45Z</updated>
+    <link href="https://arxiv.org/abs/2605.11137v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11137v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The alternated composition of $N=2p$ differential operators $w_j(x)\,\partial_x^p$ of strict order $p$ on the line $\mathbb{R}\ni x$ is again a differential operator of strict order $p$; its coefficient is the constant $\mathrm{const}(p)$, depending only on the arity $N$, times the Wronskian determinant of the originally taken coefficients $w_1,\dots,w_N$. The case $p=1$ of the Lie bracket for two vector fields fixes $\mathrm{const}(1)=1$, and $\mathrm{const}(2)=2$ is found easily by hand; $\mathrm{const}(3)=90$ can still be obtained symbolically. The problem is to determine $\mathrm{const}(p\geqslant4)$.
+  We compute $\mathrm{const}(p)$ exactly for all $p\leqslant14$ -- a 241-digit integer at $p=14$ -- and record the resulting integer sequence as OEIS A392714. We prove that $v_p(\mathrm{const}(p))\geqslant p-1$ for every prime $p$, matching the exact equality observed numerically throughout our range, and conjecture that this equality holds in general.
+  We show that $\log\mathrm{const}(p)$ grows like $αp^2\log p$, with the leading coefficient close to $2$, nearly saturating the bound $p^2\log p\,(1+O(1/\log p))\leqslant\log\mathrm{const}(p)\leqslant2p^2\log p\,(1+O(1/\log p))$ obtained by O. Zaboronski (private communication). A naturally arising reduced constant is found to decay to zero super-exponentially rather than grow, a direct consequence of this near-saturation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T18:42:49Z</published>
+    <arxiv:comment>22 pages, 3 figures, 3 appendices</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kian C. Shah</name>
+    </author>
+    <author>
+      <name>Arthemy V. Kiselev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.08444v1</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the Laguerre sequence~A025166</title>
+    <updated>2026-05-08T20:09:05Z</updated>
+    <link href="https://arxiv.org/abs/2605.08444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.08444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A025166, defined by $a(n) = -n!\,2^{n}\,L_{n}(1/2)$ where $L_{n}$ is the Laguerre polynomial of degree $n$, R.~J.~Mathar contributed in February 2013 the conjectured order-2 P-recursive recurrence \[ a(n) + (-4n+3)\, a(n-1) + 4(n-1)^{2}\, a(n-2) \;=\; 0, \qquad n \ge 2. \] We give a one-page proof. The exponential generating function $F(x) = -\exp\!\big(-x/(1-2x)\big)/(1-2x)$ satisfies the first-order linear ODE $(1-2x)^{2} F'(x) = (1-4x)\, F(x)$, and Mathar's recurrence then falls out by reading off the coefficient of $x^{n}/n!$. Both steps are short. The supplementary archive includes a SymPy script which checks the ODE identically and the recurrence numerically up to $n = 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-08T20:09:05Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.04369v1</id>
+    <title>A short proof of Mathar's 2016 recurrence conjecture for OEIS A176677</title>
+    <updated>2026-05-06T00:14:44Z</updated>
+    <link href="https://arxiv.org/abs/2605.04369v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.04369v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A176677, defined by the quadratic convolution recurrence $a(0) = a(1) = 1$ and $a(n+1) = \sum_{p=0}^n a(p) a(n-p) - 1$ for $n \ge 1$, R.~J.~Mathar contributed in March 2016 the conjectured order-4 P-recursive recurrence \[ (n+1)\,a(n) + 2(-3n+1)\,a(n-1) + (9n-13)\,a(n-2) - 4\,a(n-3) + 4(-n+4)\,a(n-4) = 0. \] We give a short proof. The convolution recurrence translates directly into the algebraic equation $z(1-z) G(z)^2 - (1-z) G(z) + (1 - z - z^2) = 0$ for the ordinary generating function $G(z)$, and Mathar's recurrence then drops out as the coefficient form of a 1st-order linear inhomogeneous ODE $q_0(z) G(z) + q_1(z) G'(z) = R(z)$ that we verify by polynomial division modulo the algebraic equation. The polynomial $q_1(z)$ admits the factorization $q_1(z) = -z(z-1)(2z-1)(2z^2 + 3z - 1)$, whose roots are exactly the singularities of $G$. Deutsch's combinatorial interpretation (Motzkin paths of length $n-1$ with two-coloured level-zero horizontal steps) is preserved.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-06T00:14:44Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.04006v1</id>
+    <title>Saddle-Point Asymptotics for Chromatic and Tutte Polynomial Evaluations of Complete Multipartite Graphs</title>
+    <updated>2026-05-05T17:28:40Z</updated>
+    <link href="https://arxiv.org/abs/2605.04006v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.04006v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a saddle-point theory for acyclic orientations and negative chromatic evaluations of complete multipartite graphs, with applications to OEIS A267383, A372326, A372084, A372395, and A370613. The main tool is an exact Gamma-type integral representation for acyclic orientation counts and its Gamma-weighted extension to the negative chromatic axis. We prove Kotesovec's fixed-column conjecture for A267383 for arbitrary fixed numbers of parts, give the corresponding fixed-p Tutte-axis asymptotics, develop an analytic-combinatorics-in-several-variables framework for chromatic evaluations of fixed graph blow-ups, and give unconditional fixed-base families reducible to balanced Turan graphs. In the product regimes we prove fixed part-size and finite-profile expansions, and for equal-size parts we obtain an all-order expansion throughout every fixed polynomial window, including explicit corrections through the cubic scale. Finally, we prove logarithmic asymptotics for the partition-sum sequences A372395 and A370613 via a quadratic-energy partition model, a growing-window comparison for the Stirling-transform factors, and a random-permutation far-tail bound.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-05T17:28:40Z</published>
+    <arxiv:comment>41 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Zhiyang Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.03170v2</id>
+    <title>A short proof of Mathar's 2013 recurrence conjecture for the Meixner sequence A214615</title>
+    <updated>2026-05-06T13:14:57Z</updated>
+    <link href="https://arxiv.org/abs/2605.03170v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.03170v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A214615, defined by $a(n) = M_{n}(1)$ where $M_{n}$ is the $n$-th Meixner polynomial satisfying $M_{n+1}(x) = x\,M_{n}(x) - n^{2}\,M_{n-1}(x)$, R.~J.~Mathar contributed on 6~March 2013 the conjectured order-2 P-recursive recurrence $a(n) - a(n-1) + (n-1)^{2}\,a(n-2) = 0$ for $n \ge 2$. We give a one-page proof. The exponential generating function $F(t) = \exp\!\bigl(\arctan t\bigr)/\sqrt{1+t^{2}}$ satisfies the first-order linear ODE $(1+t^{2})\,F'(t) = (1-t)\,F(t)$, and Mathar's recurrence then falls out by reading off the coefficient of $t^{n}/n!$. Both steps are short. The supplementary archive includes a SymPy script that checks the ODE identically and the recurrence numerically up to $n = 500$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-04T21:29:07Z</published>
+    <arxiv:comment>v2: corrected author contact email address (no math content changes)</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23206v2</id>
+    <title>A Proof of Bala's General-$m$ Representation of the Harmonic Numbers</title>
+    <updated>2026-04-30T21:55:51Z</updated>
+    <link href="https://arxiv.org/abs/2604.23206v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23206v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For every nonzero integer $m$ and every integer $n \ge 1$, the $n$\textsuperscript{th} harmonic number $H_n = 1 + \tfrac12 + \dots + \tfrac1n$ satisfies the identity \[ H_n \;=\; \frac{1}{m}\,\sum_{k=1}^{n} \frac{(-1)^{k+1}}{k}\, \binom{m k}{k}\binom{n + (m-1)k}{n - k}. \] The cases $m = 1$ and $m = 2$ are classical; for general nonzero integer $m$ the identity was conjectured by P.~Bala in the OEIS entry A001008 in 2022 and remained open. We prove it here, working throughout in $\QQ[[x]]$. The proof reduces, via a substitution $u = x/(1-x)^m$, to two formal-power-series identities: a Lagrange--Bürmann evaluation of $\sum_{k\ge1} \binom{mk}{k} u^k / k$, and the fixed-point fact that under that substitution the unique solution $v(u)$ of $v = u(1-v)^{m}$ is $v = x$. The argument extends verbatim to arbitrary complex $m \ne 0$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-25T08:33:07Z</published>
+    <arxiv:comment>13 pages, v2: added Appendices A (verify_bala.py) and B (check_proof.py) inlining the verification code in full; Section 7 updated to cross-reference. Math content of Sections 1--6 unchanged</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09939v2</id>
+    <title>The Hofstadter consecutive-sum sequence omits infinitely many positive integers</title>
+    <updated>2026-03-23T09:24:17Z</updated>
+    <link href="https://arxiv.org/abs/2603.09939v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09939v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(a_n)_{n\ge 1}$ be the greedy self-generating sequence defined by $a_1=1$, $a_2=2$, and, for $k\ge 3$, by taking $a_k$ to be the least integer greater than $a_{k-1}$ that can be written as a sum of at least two consecutive earlier terms. Hofstadter asked about the asymptotic behavior of this sequence. In this paper we prove that $$ n+Ω(\log\log n)\le a_n \ll n^{4175/2506+o(1)}. $$ In particular, $(a_n)_{n\ge1}$ omits infinitely many positive integers, thereby settling a conjecture from the OEIS entry A005243.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T17:32:24Z</published>
+    <arxiv:comment>16 pages, 1 figure. This is the submitted version</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Quanyu Tang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.22413v3</id>
+    <title>The Riemann Hypothesis through the looking of partitions</title>
+    <updated>2026-09-01T02:33:11Z</updated>
+    <link href="https://arxiv.org/abs/2601.22413v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.22413v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An equivalence of the Riemann Hypothesis due to Espinosa reveals a direct bridge to the theory of integer partitions. Building on this formulation, we analyze the asymptotic behavior of a family of combinatorial sums \(A_r(n)\), called Espinosa's branches, expressed in terms of monomial symmetric polynomials. In this work, we propose that the Riemann Hypothesis splits into the successive realization of each Espinosa branch by a concrete subset of divisors. In this direction, we rigorously establish the first step: the branch $r=1$ is fully realized. For the higher branches, we define the asymptotic proportions $ρ_r=\lim_{n\to\infty} A_r(n)/(n\log\log n)$ and we compute exactly the contribution of the hook-shaped family of partitions $[r,1^l]$, denoted by $\tildeρ_r$, which accounts for $91.85\%$ of the total classical constant $e^γ\approx 1.781072417990\ldots$ The remaining proportion, coming from all other partitions, satisfies $\lim_{r\to\infty} ρ_r/(ρ_r-\tildeρ_r) = 1$. Assuming the Alaoglu-Erdös conjecture, we use the list of 10,000 existing colossally abundant numbers (OEIS A004490, A073751) to yield explicit cutoff divisors realizing the first seven Espinosa branches. We present computational evidence showing how these first realizations appear, supporting the proposed divisor-realization framework.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T23:50:56Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Carlos Segovia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16626v1</id>
+    <title>On generalized eigenvalues of MAX matrices to MIN matrices and of LCM matrices to GCD matrices</title>
+    <updated>2026-01-23T10:30:56Z</updated>
+    <link href="https://arxiv.org/abs/2601.16626v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16626v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine, for any n $\ge$ 1, the generalized eigenvalues of an n x n MAX matrix to the corresponding MIN matrix. We also show that a similar result holds for the generalized eigenvalues of an nxn LCM matrix to the corresponding GCD matrix when n $\le$ 4, but breaks down for n &gt; 4. In addition, we prove Cauchy's interlacing theorem for generalized eigenvalues, and we conjecture an unexpected connection between the OEIS sequence A004754 and the appearance of -1 as a generalized eigenvalue in the LCM-GCD setting.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-23T10:30:56Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, 2025</arxiv:journal_ref>
+    <author>
+      <name>Jorma K. Merikoski</name>
+      <arxiv:affiliation>CMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pentti Haukkanen</name>
+      <arxiv:affiliation>CMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Antonio Sasaki</name>
+      <arxiv:affiliation>CMA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Timo Tossavainen</name>
+      <arxiv:affiliation>LUT</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26936v1</id>
+    <title>Comparing the numbers of subforests and subgraph-degree-tuples</title>
+    <updated>2025-10-30T18:49:00Z</updated>
+    <link href="https://arxiv.org/abs/2510.26936v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.26936v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We enumerate the row-column-sums of all square tridiagonal $(0,1)$-matrices and prove that their count coincides with OEIS A022026 $-$ the number of acyclic subgraphs of the complete $2\times n$ grid graph. We then extend this correspondence in two independent directions: 1. admitting larger sets of matrix entries, and 2. relaxing the tridiagonal support to broader prescribed sparsity patterns. The latter leads us to conjecture that, for any bipartite graph $G$, the number of its acyclic subgraphs equals the number of degree sequences realized by subgraphs of $G$. Moreover, for any non-bipartite graph, the former should be strictly smaller than the latter. We discuss several general approaches and prove these hypotheses for cactus graphs and generalized book graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-30T18:49:00Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergei Shteiner</name>
+    </author>
+    <author>
+      <name>Pavel Shteyner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.22078v1</id>
+    <title>Some 2-adic integers related to the odd part of 2^e!</title>
+    <updated>2025-10-24T23:43:54Z</updated>
+    <link href="https://arxiv.org/abs/2510.22078v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.22078v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The odd part of 2^e! as e approaches infinity leads to a 2-adic integer z. The bits of z were publicized in OEIS-A359349, where two conjectures were made, relevant to computing z. We prove both of those conjectures. A second 2-adic integer, the limit of ((2^e-1)!!-1)/2^e, plays a key role in one proof.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-24T23:43:54Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Donald M. Davis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.26138v3</id>
+    <title>Conjectures About Cyclic Numbers: Resolutions and Counterexamples</title>
+    <updated>2025-11-06T14:49:46Z</updated>
+    <link href="https://arxiv.org/abs/2509.26138v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.26138v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We settle 22 conjectures of Cohen about cyclic numbers (positive integers $n$ with $\gcd(n,\varphi(n))=1$), proving 16 and disproving 6, and we completely resolve a related OEIS problem about sequences whose running averages are Fibonacci numbers. Highlights include: asymptotics for cyclics between consecutive squares with a second-order term (Conj.~9), Legendre- and $k$-fold Oppermann-type results in short quadratic intervals (Conj.~6, Conj.~20, and twin cyclics between cubes, Conj.~32), gap and growth analogs (Visser, Rosser, Ishikawa, and a sum-3-versus-sum-2 inequality; Conj.~47,~52,~54,~56), limiting ratios (Vrba and Hassani; Conj.~60,~61), and structure results for Sophie Germain cyclics (Conj.~36,~37). We also resolve two Firoozbakht-type conjectures for cyclics (Conj.~41--42). On the negative side we exhibit counterexamples to the Panaitopol, Dusart, and Carneiro analogs (Conj.~59,~53,~50--51). Finally, for the lexicographically least sequence of pairwise distinct positive integers whose running averages are Fibonacci numbers (\seqnum{A248982}), we give explicit closed forms for all $n$ and prove Fried's Conjecture~2 asserting the disjointness of the parity-defined value sets (equivalently, $F_{n+2}+2nF_{n+1}$ is never a Fibonacci number). Proofs in this paper were assisted by GPT-5.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-30T11:57:38Z</published>
+    <arxiv:comment>Proofs in this paper were AI-generated and I just found out some of them were incorrect. Therefore, I would like to withdraw it</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Duc Hieu Le</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.02690v2</id>
+    <title>An effective analytic recurrence for prime numbers</title>
+    <updated>2025-10-12T09:23:36Z</updated>
+    <link href="https://arxiv.org/abs/2508.02690v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.02690v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Golomb--Keller formula expresses the next prime $p_{n+1}$ as a recurrence relation in terms of the first $n$ primes $p_1, \ldots, p_n$ using the Riemann zeta function and an Euler product, but requires taking a limit as $s \to \infty$, rendering it non-constructive. We transform this asymptotic formula into an effective recurrence by proving that a finite parameter $s \leq p_n$ suffices when combined with the ceiling function, establishing a constructive method valid for all $n \geq 1$.
+  The minimal integer parameter $s_n$ (OEIS A389650) reveals deep connections to prime constellations. We prove $\liminf_{n\to\infty} σ_n = 0$ unconditionally, where $σ_n = s_n/p_n$. The limit superior $C = \limsup σ_n$ satisfies $\log ψ\lesssim C \leq 0.4332$, where $ψ\approx 1.46557$ is the supergolden ratio. The lower bound is conditional on the twin prime conjecture; the upper bound is unconditional. The constant $C$ relates to the densest admissible prime constellation, connecting to the Hardy--Littlewood conjectures.
+  The method extends to Dirichlet L-functions, yielding other effective formulas for calculating $p_{n+1}$ but also for predicting residues of $p_{n+1}$ modulo any integer with reduced precision requirements.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T19:23:15Z</published>
+    <arxiv:comment>22 pages, 3 figures, 1 table. Major revision: (1) Main conjecture now proven using Nagura's theorem; (2) Complete asymptotic analysis with bounds on limsup; (3) Connection to supergolden ratio via twin prime conjecture; (4) Extended data to n=200 with empirical analysis</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Benoit Cloitre</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19269v1</id>
+    <title>Enumeration of Corona for Lozenge Tilings</title>
+    <updated>2025-04-27T14:57:46Z</updated>
+    <link href="https://arxiv.org/abs/2504.19269v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19269v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knecht considers the enumeration of coronas. This is a counting problem for two specific types of lozenge tilings. Their exact closed formulas are conjectured in [A380346] and [A380416] on the OEIS. We prove this conjecture by using the weighted adjacency matrix. Furthermore, we extend this result to a more general setting.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-27T14:57:46Z</published>
+    <arxiv:comment>13 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, 2025</arxiv:journal_ref>
+    <author>
+      <name>Craig Knecht</name>
+    </author>
+    <author>
+      <name>Feihu Liu</name>
+    </author>
+    <author>
+      <name>Guoce Xin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.00116v1</id>
+    <title>Elementary Proof of the Completeness of OEIS A051221 Below 2000</title>
+    <updated>2025-03-31T18:04:54Z</updated>
+    <link href="https://arxiv.org/abs/2504.00116v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.00116v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The OEIS sequence A051221 consists of nonnegative integers of the form 10^x - y^2. The known values are those less than or equal to 2000 with x &lt;= 7, and it is conjectured that no new values in this range appear for x &gt;= 8. In this paper, we give an elementary proof that this is indeed the case by using Pell-type equations.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-31T18:04:54Z</published>
+    <arxiv:comment>5 pages, no figures. Related OEIS sequence: A051221. Colab notebook available at https://colab.research.google.com/drive/1c77O20BIBMl_UMuH4MmnhKy0POM9LBc-? usp=sharing</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Seiichi Azuma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.12277v4</id>
+    <title>On a conjecture of Erdős and Graham about the Sylvester's sequence</title>
+    <updated>2025-03-21T07:13:31Z</updated>
+    <link href="https://arxiv.org/abs/2503.12277v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.12277v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $\{u_n\}_{n=1}^{\infty}$ be the Sylvester's sequence (sequence A000058 in the OEIS), and let $ a_1 &lt; a_2 &lt; \cdots $ be any other positive integer sequence satisfying $ \sum_{i=1}^\infty \frac{1}{a_i} = 1 $. In this paper, we solve a conjecture of Erdős and Graham, which asks whether $$ \liminf_{n\to\infty} a_n^{\frac{1}{2^n}} &lt; \lim_{n\to\infty} u_n^{\frac{1}{2^n}} = c_0 = 1.264085\ldots. $$ We prove this conjecture using a constructive approach. Furthermore, assuming that the unproven claim of Erdős and Graham that "all rationals have eventually greedy best Egyptian underapproximations" holds, we establish a generalization of this conjecture using a non-constructive approach. [This paper solves Problem 315 on Bloom's website "Erdős problems".]</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-15T22:22:47Z</published>
+    <arxiv:comment>23 pages; v2 generalizes the previous results; v3 fixes some typographical errors and adds several remarks; v4 corrects the definition of underapproximation and adds a final section proposing several open problems</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Acta Math. Hungar. 177 (2025), 41--63</arxiv:journal_ref>
+    <author>
+      <name>Zheng Li</name>
+    </author>
+    <author>
+      <name>Quanyu Tang</name>
+    </author>
+    <arxiv:doi>10.1007/s10474-025-01566-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10474-025-01566-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.11734v2</id>
+    <title>On the records and zeros of a deterministic random walk</title>
+    <updated>2025-03-28T14:37:48Z</updated>
+    <link href="https://arxiv.org/abs/2503.11734v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.11734v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We settle two questions on sequence A120243 in the OEIS that were raised by Clark Kimberling and partly solve a conjecture of Van de Lune and Arias de Reyna. We extend Kimberling's questions to the framework of deterministic random walks, automatic sequences, and linear recurrences. Our results indicate that there may be a deeper connection between these structures. In particular, we conjecture that the records of deterministic random walks are $ξ$-Ostrowski automatic for a quadratic rotation number $ξ$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-14T12:45:27Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Henk Bruin</name>
+    </author>
+    <author>
+      <name>Robbert Fokkink</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.01389v1</id>
+    <title>Learning Conjecturing from Scratch</title>
+    <updated>2025-03-03T10:39:38Z</updated>
+    <link href="https://arxiv.org/abs/2503.01389v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.01389v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a self-learning approach for conjecturing of induction predicates on a dataset of 16197 problems derived from the OEIS. These problems are hard for today's SMT and ATP systems because they require a combination of inductive and arithmetical reasoning.
+  Starting from scratch, our approach consists of a feedback loop that iterates between (i) training a neural translator to learn the correspondence between the problems solved so far and the induction predicates useful for them, (ii) using the trained neural system to generate many new induction predicates for the problems, (iii) fast runs of the z3 prover attempting to prove the problems using the generated predicates, (iv) using heuristics such as predicate size and solution speed on the proved problems to choose the best predicates for the next iteration of training.
+  The algorithm discovers on its own many interesting induction predicates, ultimately solving 5565 problems, compared to 2265 problems solved by CVC5, Vampire or Z3 in 60 seconds.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-03T10:39:38Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Thibault Gauthier</name>
+    </author>
+    <author>
+      <name>Josef Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.18663v3</id>
+    <title>CayleyPy RL: Pathfinding and Reinforcement Learning on Cayley Graphs</title>
+    <updated>2026-05-15T19:36:26Z</updated>
+    <link href="https://arxiv.org/abs/2502.18663v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.18663v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper is the second in a series of studies on developing efficient artificial intelligence-based approaches to pathfinding on extremely large graphs (e.g. $10^{70}$ nodes) with a focus on Cayley graphs and mathematical applications. The open-source CayleyPy project is a central component of our research. The present paper proposes a novel combination of a reinforcement learning approach with a more direct diffusion distance approach from the first paper. Our analysis includes benchmarking various choices for the key building blocks of the approach: architectures of the neural network, generators for the random walks and beam search pathfinding. We compared these methods against the classical computer algebra system GAP, demonstrating that they "overcome the GAP" for the considered examples. As a particular mathematical application we examine the Cayley graph of the symmetric group with cyclic shift and transposition generators. We provide strong support for the OEIS-A186783 conjecture that the diameter is equal to n(n-1)/2 by machine learning and mathematical methods. We identify the conjectured longest element and generate its decomposition of the desired length. We prove a diameter lower bound of n(n-1)/2-n/2 and an upper bound of n(n-1)/2+ 3n by presenting the algorithm with given complexity. We also present several conjectures motivated by numerical experiments, including observations on the central limit phenomenon (with growth approximated by a Gumbel distribution), the uniform distribution for the spectrum of the graph, and a numerical study of sorting networks. To stimulate crowdsourcing activity, we create challenges on the Kaggle platform and invite contributions to improve and benchmark approaches on Cayley graph pathfinding and other tasks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-25T21:53:41Z</published>
+    <arxiv:comment>32+16 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>A. Chervov</name>
+    </author>
+    <author>
+      <name>M. Obozov</name>
+    </author>
+    <author>
+      <name>A. Soibelman</name>
+    </author>
+    <author>
+      <name>S. Lytkin</name>
+    </author>
+    <author>
+      <name>I. Kiselev</name>
+    </author>
+    <author>
+      <name>S. Fironov</name>
+    </author>
+    <author>
+      <name>A. Lukyanenko</name>
+    </author>
+    <author>
+      <name>A. Dolgorukova</name>
+    </author>
+    <author>
+      <name>A. Ogurtsov</name>
+    </author>
+    <author>
+      <name>F. Petrov</name>
+    </author>
+    <author>
+      <name>S. Krymskii</name>
+    </author>
+    <author>
+      <name>M. Evseev</name>
+    </author>
+    <author>
+      <name>L. Grunvald</name>
+    </author>
+    <author>
+      <name>D. Gorodkov</name>
+    </author>
+    <author>
+      <name>G. Antiufeev</name>
+    </author>
+    <author>
+      <name>G. Verbii</name>
+    </author>
+    <author>
+      <name>V. Zamkovoy</name>
+    </author>
+    <author>
+      <name>L. Cheldieva</name>
+    </author>
+    <author>
+      <name>I. Koltsov</name>
+    </author>
+    <author>
+      <name>A. Sychev</name>
+    </author>
+    <author>
+      <name>A. Eliseev</name>
+    </author>
+    <author>
+      <name>S. Nikolenko</name>
+    </author>
+    <author>
+      <name>N. Narynbaev</name>
+    </author>
+    <author>
+      <name>R. Turtayev</name>
+    </author>
+    <author>
+      <name>N. Rokotyan</name>
+    </author>
+    <author>
+      <name>S. Kovalev</name>
+    </author>
+    <author>
+      <name>A. Rozanov</name>
+    </author>
+    <author>
+      <name>V. Nelin</name>
+    </author>
+    <author>
+      <name>S. Ermilov</name>
+    </author>
+    <author>
+      <name>L. Shishina</name>
+    </author>
+    <author>
+      <name>D. Mamayeva</name>
+    </author>
+    <author>
+      <name>A. Korolkova</name>
+    </author>
+    <author>
+      <name>K. Khoruzhii</name>
+    </author>
+    <author>
+      <name>A. Romanov</name>
+    </author>
+    <arxiv:doi>10.4310/ATMP.260413005111</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/ATMP.260413005111" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.12615v5</id>
+    <title>Generalized Hofstadter functions $G, H$ and beyond: numeration systems and discrepancy</title>
+    <updated>2025-04-11T12:30:43Z</updated>
+    <link href="https://arxiv.org/abs/2502.12615v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.12615v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hofstadter's $G$ function is recursively defined via $G(0)=0$ and then $G(n)=n-G(G(n-1))$. Following Hofstadter, a family $(F_k)$ of similar functions is obtained by varying the number $k$ of nested recursive calls in this equation. We study here some Fibonacci-like sequences that are deeply connected with these functions $F_k$. In particular, the Zeckendorf theorem can be adapted to provide digital expansions via sums of terms of these sequences. On these digital expansions, the functions $F_k$ are acting as right shifts of the digits. These Fibonacci-like sequences can be expressed in terms of zeros of the polynomial $X^k{-}X^{k-1}{-}1$. Considering now the discrepancy of each function $F_k$, i.e., the maximal distance between $F_k$ and its linear equivalent, we retrieve the fact that this discrepancy is finite exactly when $k \le 4$. Thanks to that, we solve two twenty-year-old OEIS conjectures stating how close the functions $F_3$ and $F_4$ are from the integer parts of their linear equivalents. Moreover we establish that $F_k$ can coincide exactly with such an integer part only when $k\le 2$, while $F_k$ is almost additive exactly when $k \le 4$. Finally, a nice fractal shape a la Rauzy has been encountered when investigating the discrepancy of $F_3$. Almost all this article has been formalized and verified in the Coq/Rocq proof assistant.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.FL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-18T07:56:53Z</published>
+    <arxiv:comment>(v2: add missing files for latex compilation)(v3: add reference to Dilcher 1993 as important previous work; improved results e.g. split positive and negative discrepancies)(v4: same text, force upload of correct title to arxiv metadata)(v5: much better approximations of $Δ_3$ and $Δ_4$, a middle proof via Lagrange instead of Vandermonde)</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Pierre Letouzey</name>
+      <arxiv:affiliation>IRIF, PICUBE</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.18744v1</id>
+    <title>Ehrhart Polynomials of Order Polytopes: Interpreting Combinatorial Sequences on the OEIS</title>
+    <updated>2024-12-25T02:27:13Z</updated>
+    <link href="https://arxiv.org/abs/2412.18744v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.18744v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we provide an overview of Ehrhart polynomials associated with order polytopes of finite posets, a concept first introduced by Stanley. We focus on their combinatorial interpretations for many sequences listed on the OEIS. We begin by exploring the Ehrhart series of order polytopes resulting from various poset operations, specifically the ordinal sum and direct sum. We then concentrate on the poset $P_λ$ associated with the Ferrers diagram of a partition $λ= (λ_1, λ_2, \ldots, λ_t)$. When $λ= (k, k-1, \ldots, 1)$, the Ehrhart polynomial is a shifted Hankel determinant of the well-known Catalan numbers; when $λ= (k, k, \ldots, k)$, the Ehrhart polynomial is solved by Stanley's hook content formula and is used to prove conjectures for the sequence [A140934] on the OEIS. When solving these problems, we rediscover Kreweras' determinant formula for the Ehrhart polynomial $\mathrm{ehr}(\mathcal{O}(P_λ), n)$ through the application of the Lindström-Gessel-Viennot lemma on non-intersecting lattice paths.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-25T02:27:13Z</published>
+    <arxiv:comment>31 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Feihu Liu</name>
+    </author>
+    <author>
+      <name>Guoce Xin</name>
+    </author>
+    <author>
+      <name>Chen Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.08193v2</id>
+    <title>Integers that are not the sum of positive powers</title>
+    <updated>2025-03-31T14:16:55Z</updated>
+    <link href="https://arxiv.org/abs/2404.08193v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.08193v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generalized Waring problem asks exactly which positive integers cannot be expressed as the sum of $j$ positive $k$-th powers? Using computational techniques, this paper refines an approach introduced by Zenkin, establishes results for the individual cases $5 \le k \le 9$, and resolves conjectures of Zenkin and the OEIS. This paper further establishes theoretical results regarding the properties of the sets of integers that are not the sum of $j$ positive $k$-th powers. The notion of Waring's problem is further extended to the finite sets of non-representable numbers where $G(1,k) &lt; j &lt; g(1,k)$. Improved computational techniques and results from Waring's problem are used throughout to catalog the sets of such integers, which are then considered in a general setting.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-12T01:52:13Z</published>
+    <arxiv:comment>20 pages, updated version to include improvements in the computational technique and the reduction of upper bounds on $G(1,k)$. The main results are also restated in a general format</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Brennan Benfield</name>
+    </author>
+    <author>
+      <name>Oliver Lippard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.08190v1</id>
+    <title>End behavior of Ramanujan's taxicab numbers</title>
+    <updated>2024-04-12T01:43:23Z</updated>
+    <link href="https://arxiv.org/abs/2404.08190v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.08190v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalized taxicab numbers are the smallest positive integers that are the sum of exactly $j$, positive $k$-th powers in exactly $m$ distinct ways. This paper is considers for which values of $m$ does a smallest such integer exist as $j$ gets large. There appear to be only two possible outcomes, leading to curious results like there is no positive integer that can be expressed as the sum of exactly $10$ positive squares in exactly $3$ ways. This paper resolves a number of conjectures found in the OEIS by considering generalized Taxicab numbers in the setting of the theory of partitions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-12T01:43:23Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Brennan Benfield</name>
+    </author>
+    <author>
+      <name>Oliver Lippard</name>
+    </author>
+    <author>
+      <name>Arindam Roy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.09827v2</id>
+    <title>A counterexample to the Pellian equation conjecture of Mordell</title>
+    <updated>2024-06-11T20:54:46Z</updated>
+    <link href="https://arxiv.org/abs/2402.09827v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.09827v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $d\geq 2$ be a squarefree integer, let $ω\in\{\sqrt{d},\frac{1+\sqrt{d}}{2}\}$ be such that $\mathbb{Z}[ω]$ is the ring of algebraic integers of the real quadratic number field $\mathbb{Q}(\sqrt{d})$, let $\varepsilon&gt;1$ be the fundamental unit of $\mathbb{Z}[ω]$ and let $x$ and $y$ be the unique nonnegative integers with $\varepsilon=x+yω$. In this note, we extend and study the list of known squarefree integers $d\geq 2$, for which $y$ is divisible by $d$ (cf. OEIS A135735). As a byproduct, we present a counterexample to a conjecture of L. J. Mordell.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-15T09:45:41Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Andreas Reinhart</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.16334v2</id>
+    <title>Right-angled triangles with almost prime hypotenuse</title>
+    <updated>2024-06-13T12:35:22Z</updated>
+    <link href="https://arxiv.org/abs/2401.16334v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.16334v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The sequence OEIS A281505 consists of distinct odd legs in right triangles with integer sides and prime hypotenuse. In this paper, we count the closely related quantity of even legs with almost prime hypotenuse. More precisely, we obtain the correct order of magnitude upper and lower bounds for the set of distinct even legs with 5-almost prime hypotenuse. This is a strong version of the appropriate analogy to a conjecture of Chow and Pomerance (stated there for prime hypotenuse).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-29T17:41:00Z</published>
+    <arxiv:comment>15 pages. Referee comments incorporated. To appear in Research in Number Theory</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Cihan Sabuncu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.03011v2</id>
+    <title>Full Grid Lattice Polygons with Maximal Sum of Squares of Edge-Lengths</title>
+    <updated>2024-05-20T09:40:43Z</updated>
+    <link href="https://arxiv.org/abs/2311.03011v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.03011v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a subset [1,2,...,n]x[1,2,...,n] of the plane integer lattice. Take any non self-intersecting n^2-gon built on it (straight angles are allowed). The square of a side length is a positive integer. It is thus natural to ask how large the sum of square lengths of such an n^2-gon can be. This maximal value is a new integer sequence, labeled by A358212 in OEIS. In this note we give the lower bound and conjecture that this in fact is the correct answer. We further investigate proper n^2-gons (straight angles are not allowed) and present analogous results. Both sequences (conjecturally) have a different growth size.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-06T10:29:05Z</published>
+    <arxiv:comment>10 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Oliver Mantas Ališauskas</name>
+    </author>
+    <author>
+      <name>Giedrius Alkauskas</name>
+    </author>
+    <author>
+      <name>Valdas Dičiūnas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.00487v1</id>
+    <title>Hardinian Arrays</title>
+    <updated>2023-09-01T14:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2309.00487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.00487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2014, R.H. Hardin contributed a family of sequences about king-moves on an array to the On-Line Encyclopedia of Integer Sequences (OEIS). The sequences were recently noticed in an automated search of the OEIS by Kauers and Koutschan, who conjectured a recurrence for one of them. We prove their conjecture as well as some older conjectures stated in the OEIS entries. We also have some new conjectures for the asymptotics of Hardin's sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-01T14:26:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.12094v1</id>
+    <title>On the Ternary Purely Exponential Diophantine Equation $(ak)^x+(bk)^y=((a+b)k)^z$ with Prime Powers $a$ and $b$</title>
+    <updated>2023-08-23T12:28:12Z</updated>
+    <link href="https://arxiv.org/abs/2308.12094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.12094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $k$ be a positive integer, and let $a,b$ be coprime positive integers with $\min\{a,b\}&gt;1$. In this paper, using a combination of some elementary number theory techniques with classical results on the Nagell-Ljunggren equation, the Catalan equation and some new properties of the Lucas sequence (\seqnum{A000204} in OEIS), we prove that if $k&gt;1$ and $a,b$ are both prime powers with $\min\{a,b\}&gt;2$, then the equation $(ak)^x+(bk)^y=((a+b)k)^z$ has only one positive integer solution $(x,y,z)=(1,1,1)$. The above result partially proves that Conjecture 1 presented in (Acta Arith. 2018, 184 (1): 37-49) is true.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-23T12:28:12Z</published>
+    <arxiv:comment>18 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>published in Journal of Integer Sequences, 2023</arxiv:journal_ref>
+    <author>
+      <name>Maohua Le</name>
+    </author>
+    <author>
+      <name>Gökhan Soydan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.09344v2</id>
+    <title>On a conjecture on pattern-avoiding machines</title>
+    <updated>2023-09-12T18:42:06Z</updated>
+    <link href="https://arxiv.org/abs/2308.09344v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.09344v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $s$ be West's stack-sorting map, and let $s_{T}$ be the generalized stack-sorting map, where instead of being required to increase, the stack avoids subpermutations that are order-isomorphic to any permutation in the set $T$. In 2020, Cerbai, Claesson, and Ferrari introduced the $σ$-machine $s \circ s_σ$ as a generalization of West's $2$-stack-sorting-map $s \circ s$. As a further generalization, in 2021, Baril, Cerbai, Khalil, and Vajnovski introduced the $(σ, τ)$-machine $s \circ s_{σ, τ}$ and enumerated $|\Sort_{n}(σ,τ)|$ -- the number of permutations in $S_n$ that are mapped to the identity by the $(σ, τ)$-machine -- for six pairs of length $3$ permutations $(σ, τ)$. In this work, we settle a conjecture by Baril, Cerbai, Khalil, and Vajnovski on the only remaining pair of length $3$ patterns $(σ, τ) = (132, 321)$ for which $|\Sort_{n}(σ, τ)|$ appears in the OEIS. In addition, we enumerate $|\Sort_n(123, 321)|$, which does not appear in the OEIS, but has a simple closed form.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-18T07:06:51Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Christopher Bao</name>
+    </author>
+    <author>
+      <name>Giulio Cerbai</name>
+    </author>
+    <author>
+      <name>Yunseo Choi</name>
+    </author>
+    <author>
+      <name>Katelyn Gan</name>
+    </author>
+    <author>
+      <name>Owen Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.02986v1</id>
+    <title>A Mathematical Benchmark for Inductive Theorem Provers</title>
+    <updated>2023-04-06T10:41:51Z</updated>
+    <link href="https://arxiv.org/abs/2304.02986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.02986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a benchmark of 29687 problems derived from the On-Line Encyclopedia of Integer Sequences (OEIS). Each problem expresses the equivalence of two syntactically different programs generating the same OEIS sequence. Such programs were conjectured by a learning-guided synthesis system using a language with looping operators. The operators implement recursion, and thus many of the proofs require induction on natural numbers. The benchmark contains problems of varying difficulty from a wide area of mathematical domains. We believe that these characteristics will make it an effective judge for the progress of inductive theorem provers in this domain for years to come.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-06T10:41:51Z</published>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Thibault Gauthier</name>
+    </author>
+    <author>
+      <name>Chad E. Brown</name>
+    </author>
+    <author>
+      <name>Mikolas Janota</name>
+    </author>
+    <author>
+      <name>Josef Urban</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.14482v2</id>
+    <title>The gerrymander sequence, or A348456</title>
+    <updated>2022-12-22T01:43:03Z</updated>
+    <link href="https://arxiv.org/abs/2211.14482v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.14482v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently Kauers, Koutschan and Spahn announced a significant increase in the length of the so-called {\em gerrymander sequence}, given as A348456 in the OEIS, extending the sequence from 3 terms to 7 terms. We give a further extension to 11 terms, but more significantly prove that the coefficients grow as $λ^{4L^2},$ where $λ\approx 1.7445498, $ and is equal to the corresponding quantity for self-avoiding walks crossing a square (WCAS), or self-avoiding polygons crossing a square (PCAS). These are, respectively, OEIS sequences A007764 and A333323. Thus we have established a close connection between these previously separate problems.
+  We have also related the sub-dominant behaviour to that of WCAS and PCAS, allowing us to conjecture that the coefficients of the gerrymander sequence A348456 grow as $λ^{4L^2+dL+e} \cdot L^g,$ where $d=-8.08708 \pm 0.0002,$ $e \approx 7.69$ and $g = 0.75 \pm 0.01,$ with $g$ almost certainly $3/4$ exactly.
+  We also have generated 26 terms in the related gerrymander polynomial (defined below), and have been able to predict the asymptotic behaviour with a satisfying degree of precision. Indeed, it behaves exactly as $L$ times the corresponding coefficient of the generalised gerrymander sequence.
+  The improved algorithm we give for counting these sequences is a variation of that which we recently developed for extending a number of sequences for SAWs and SAPs crossing a domain of the square or hexagonal lattices. It makes use of a minimal perfect hash function and in-place memory updating of the arrays for the counts of the number of paths.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-26T05:00:59Z</published>
+    <arxiv:comment>26 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Applied Mathematics 148 (2023) 102520</arxiv:journal_ref>
+    <author>
+      <name>Anthony J Guttmann</name>
+    </author>
+    <author>
+      <name>Iwan Jensen</name>
+    </author>
+    <arxiv:doi>10.1016/j.aam.2023.102520</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aam.2023.102520" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.01135v1</id>
+    <title>Dyck Numbers, II. Triplets and Rooted Trees in OEIS A036991</title>
+    <updated>2022-11-02T14:13:21Z</updated>
+    <link href="https://arxiv.org/abs/2211.01135v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.01135v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dyck paths are among the most heavily studied Catalan families. This paper is a continuation of [2]. In the paper we are dealing with the numbering of Dyck paths, the terms of the OEIS sequence A036991 or Dyck numbers. We consider triplets of terms of the form (t-4, t-2, t) (t is the senior term); triplets cover 80% of A036991. Triplets include all Mersenne numbers, with each Mersenne number being a senior term in some triplet. Triples are distributed over A036991 ranges; both the length of the ranges and the number of triplets in the range are counted by the terms of the OEIS sequence A001405. In addition to triplets, there are many lone terms in the ranges, which are counted by the terms of the OEIS sequence A116385. Each lone term (there are an infinite number of them) is the root of an infinite ternary tree of triplets. As a result, the sequence A036991 is a forest of such directed trees. We test the twin prime conjecture on infinite ternary trees of A036991. We consider the infinity theorem for pairs of prime numbers that differ by no more than 4.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-02T14:13:21Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Gennady Eremin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.12256v1</id>
+    <title>On the Cryptomorphism between Davis' Subset Lattices, Atomic Lattices, and Closure Systems under T1 Separation Axiom</title>
+    <updated>2022-09-25T16:25:09Z</updated>
+    <link href="https://arxiv.org/abs/2209.12256v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.12256v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we count set closure systems (also known as Moore families) for the case when all single element sets are closed. In particular, we give the numbers of such strict (empty set included) and non-strict families for the base set of size $n=6$. We also provide the number of such inequivalent Moore families with respect to all permutations of the base set up to $n=6$. The search in OEIS and existing literature revealed the coincidence of the found numbers with the entry for D.\ M.~Davis' set union lattice (\seqnum{A235604}, up to $n=5$) and $|\mathcal L_n|$, the number of atomic lattices on $n$ atoms, obtained by S.\ Mapes (up to $n=6$), respectively. Thus we study all those cases, establish one-to-one correspondences between them via Galois adjunctions and Formal Concept Analysis, and provide the reader with two of our enumerative algorithms as well as with the results of these algorithms used for additional tests. Other results include the largest size of intersection free families for $n=6$ plus our conjecture for $n=7$, an upper bound for the number of atomic lattices $\mathcal L_n$, and some structural properties of $\mathcal L_n$ based on the theory of extremal lattices.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-25T16:25:09Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Dmitry I. Ignatov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.12137v1</id>
+    <title>Burstein's permutation conjecture, Hong and Li's inversion sequence conjecture, and restricted Eulerian distributions</title>
+    <updated>2022-09-25T03:46:20Z</updated>
+    <link href="https://arxiv.org/abs/2209.12137v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.12137v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Hong and Li launched a systematic study of length-four pattern avoidance in inversion sequences, and in particular, they conjectured that the number of $0021$-avoiding inversion sequences can be enumerated by the OEIS entry A218225. Meanwhile, Burstein suggested that the same sequence might also count three sets of pattern restricted permutations. The objective of this paper is not only a confirmation of Hong and Li's conjecture and Burstein's first conjecture, but also two more delicate generating function identities with the $\mathsf{ides}$ statistic concerned in the restricted permutation case, and the $\mathsf{asc}$ statistic concerned in the restricted inversion sequence case, which yield a new equidistribution result.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-25T03:46:20Z</published>
+    <arxiv:comment>19 pages, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shane Chern</name>
+    </author>
+    <author>
+      <name>Shishuo Fu</name>
+    </author>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.08506v5</id>
+    <title>On $d$-permutations and Pattern Avoidance Classes</title>
+    <updated>2024-04-24T01:58:11Z</updated>
+    <link href="https://arxiv.org/abs/2208.08506v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.08506v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multidimensional permutations, or $d$-permutations, are represented by their diagrams on $[n]^d$ such that there exists exactly one point per hyperplane $x_i$ that satisfies $x_i= j$ for $i \in [d]$ and $j \in [n]$. Bonichon and Morel previously enumerated $3$-permutations avoiding small patterns, and we extend their results by first proving four conjectures, which exhaustively enumerate $3$-permutations avoiding any two fixed patterns of size $3$. We further provide a enumerative result relating $3$-permutation avoidance classes with their respective recurrence relations. In particular, we show a recurrence relation for $3$-permutations avoiding the patterns $132$ and $213$, which contributes a new sequence to the OEIS database. We then extend our results to completely enumerate $3$-permutations avoiding three patterns of size $3$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-17T19:55:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Nathan Sun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.10163v4</id>
+    <title>On some open problems concerning perfect powers</title>
+    <updated>2024-01-26T00:51:06Z</updated>
+    <link href="https://arxiv.org/abs/2205.10163v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.10163v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The starting point of our paper is Kashihara's open problem number $30$, concerning the sequence $A001292$ of the OEIS, asking how many terms are powers of integers. We confirm his last conjecture up to the $100128$-th term and provide a general theorem that rules out $4/9$ of the candidates. Moreover, we formulate a new, provocative, conjecture involving the OEIS sequence $A352991$ (which includes all the terms of $A001292$). Our risky conjecture states that all the perfect powers belonging to the sequence $A352991$ are perfect squares and they cannot be written as higher order perfect powers if the given term of $A352991$ is not equal to one. This challenging conjecture has been checked for any integer smaller than $10111121314151617181920212223456789$ and no counterexample has been found so far.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-19T00:38:52Z</published>
+    <arxiv:comment>8 pages; typos fixed, minor style improvements, and Cross-referencing added</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Marco Ripà</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.06004v3</id>
+    <title>Paths through equally spaced points on a circle</title>
+    <updated>2022-09-13T07:34:32Z</updated>
+    <link href="https://arxiv.org/abs/2205.06004v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.06004v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider $n$ points evenly spaced on a circle, and a path of $n-1$ chords that uses each point once. There are $m=\lfloor n/2\rfloor$ possible chord lengths, so the path defines a multiset of $n-1$ elements drawn from $\{1,2,\ldots,m\}$. The first problem we consider is to characterize the multisets which are realized by some path. Buratti conjectured that all multisets can be realized when $n$ is prime, and a generalized conjecture for all $n$ was proposed by Horak and Rosa. Previously the conjecture was proved for $n \leq 19$ and $n=23$; we extend this to $n\leq 37$ (OEIS sequence A352568). The second problem is to determine the number of distinct (euclidean) path lengths that can be realized. For this there is no conjecture; we extend current knowledge from $n\leq 16$ to $n\leq 37$ (OEIS sequence A030077). When $n$ is prime, twice a prime, or a power of 2, we prove that two paths have the same length only if they have the same multiset of chord lengths.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-12T10:29:44Z</published>
+    <arxiv:comment>Additional citations, accepted by Journal of Integer Sequences</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Brendan D. McKay</name>
+    </author>
+    <author>
+      <name>Tim Peters</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.03381v1</id>
+    <title>On a variant of the happy numbers and their generalizations</title>
+    <updated>2022-02-25T18:24:39Z</updated>
+    <link href="https://arxiv.org/abs/2203.03381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.03381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper investigates a variant of the famous "happy numbers" sequence, given by A351327 on the oeis. First of all we'll define this integer sequence, and then we'll show some important results about it; in particular we conjectured that if $k$ is a term of the sequence, then it converges to 1 in a number of steps less or equal to 3. Furthermore it will be possible to find some codes written in Wolfram language in order to compute large terms of the sequence and to support our hypothesis. At the end we'll explore some new conjectures and generalizations about this kind of integer sequence.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-25T18:24:39Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Luca Onnis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.02376v1</id>
+    <title>Proving some conjectures on Kekulé numbers for certain benzenoids by using Chebyshev polynomials</title>
+    <updated>2022-01-07T09:21:07Z</updated>
+    <link href="https://arxiv.org/abs/2201.02376v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.02376v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In chemistry, Cyvin-Gutman enumerates Kekulé numbers for certain benzenoids and record it as $A050446$ on OEIS. This number is exactly the two variable array $T(n,m)$ defined by the recursion $T(n, m) = T(n, m-1) + \sum^{\lfloor\frac{n-1}{2}\rfloor}_{k=0} T(2k, m-1)T(n-1-2k, m)$, where $T(n,0)=T(0,m)=1$ for all nonnegative integers $m,n$. Interestingly, this number also appeared in the context of weighted graphs, graph polytopes, magic labellings, and unit primitive matrices, studied by different authors. Several interesting conjectures were made on the OEIS. These conjectures are related to both the row and column generating function of $T(n,m)$. In this paper, give explicit formula of the column generating function, which is also the generating function $F(n,x)$ studied by Bóna, Ju, and Yoshida. We also get trig function representations by using Chebyshev polynomials of the second kind. This allows us to prove all these conjectures.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-07T09:21:07Z</published>
+    <arxiv:comment>28 pages,3 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Guoce Xin</name>
+    </author>
+    <author>
+      <name>Yueming Zhong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.10238v4</id>
+    <title>Distribution of Square Prime Numbers</title>
+    <updated>2024-12-10T17:31:06Z</updated>
+    <link href="https://arxiv.org/abs/2109.10238v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.10238v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For $a \neq 1$ and $p$ prime, we define numbers of the form $pa^2$ to be Square-Prime (SP) Numbers. For example, 75 = 3 $\cdot$ 25; 108 = 3 $\cdot$ 36; 45 = 5 $\cdot$ 9. These numbers are listed in the OEIS as A228056. We study the properties of these numbers, their distribution/density and also develop a few claims on their distribution/density. We rely on computer programs to verify some conjectures up to large numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-16T14:58:54Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Missouri J. Math. Sci. 34(1): 121-126 (May 2022)</arxiv:journal_ref>
+    <author>
+      <name>Raghavendra N. Bhat</name>
+    </author>
+    <arxiv:doi>10.35834/2022/3401121</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.35834/2022/3401121" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.16720v3</id>
+    <title>How to hunt wild constants</title>
+    <updated>2022-02-03T00:06:00Z</updated>
+    <link href="https://arxiv.org/abs/2103.16720v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.16720v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There are now several comprehensive web applications, stand-alone computer programs and computer algebra functions that, given a floating point number such as 6.518670730718491, can return concise nonfloat constants such as 3 arctan 2 + ln 9 + 1, that closely approximate the float. Examples include AskConstants, Inverse Symbolic Calculator, the Maple identify function, MESearch, OEIS, RIES, and WolframAlpha. Usefully often such a result is the exact limit as the float is computed with increasing precision. Therefore these program results are candidates for proving an exact result that you could not otherwise compute or conjecture without the program. Moreover, candidates that are not the exact limit can be provable bounds, or convey qualitative insight, or suggest series that they truncate, or provide sufficiently close efficient approximations for subsequent computation. This article describes some of these programs, how they work, and how best to use each of them. Almost everyone who uses or should use mathematical software can benefit from acquaintance with several such programs, because these programs differ in the sets of constants that they can return.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-30T23:19:16Z</published>
+    <arxiv:comment>39 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>David R. Stoutemyer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.14991v3</id>
+    <title>Symmetric Fibonaccian distributive lattices and representations of the special linear Lie algebras</title>
+    <updated>2022-05-15T21:29:26Z</updated>
+    <link href="https://arxiv.org/abs/2012.14991v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.14991v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a family of rank symmetric diamond-colored distributive lattices that are naturally related to the Fibonacci sequence and certain of its generalizations. These lattices re-interpret and unify descriptions of some un- or differently-colored lattices found variously in the literature. We demonstrate that our symmetric Fibonaccian lattices naturally realize certain (often reducible) representations of the special linear Lie algebras, with weight basis vectors realized as lattice elements and Lie algebra generators acting along the covering digraph edges of each lattice. We present evidence that each such weight basis possesses certain distinctive extremal properties. We provide new descriptions of the lattice cardinalities and rank generating functions and offer several conjectures/open problems. Throughout, we make connections with integer sequences from the OEIS.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-30T00:51:57Z</published>
+    <arxiv:comment>v3: 21 pages, corrects an oeis reference and updates bibliographic info</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Involve 16 (2023) 201-226</arxiv:journal_ref>
+    <author>
+      <name>Robert G. Donnelly</name>
+    </author>
+    <author>
+      <name>Molly W. Dunkum</name>
+    </author>
+    <author>
+      <name>Sasha V. Malone</name>
+    </author>
+    <author>
+      <name>Alexandra Nance</name>
+    </author>
+    <arxiv:doi>10.2140/involve.2023.16.201</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/involve.2023.16.201" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.04546v1</id>
+    <title>New Results on Pattern-Replacement Equivalences: Generalizing a Classical Theorem and Revising a Recent Conjecture</title>
+    <updated>2020-09-09T20:03:19Z</updated>
+    <link href="https://arxiv.org/abs/2009.04546v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.04546v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study pattern-replacement equivalence relations on the set $S_n$ of permutations of length $n$. Each equivalence relation is determined by a set of patterns, and equivalent permutations are connected by pattern-replacements in a manner similar to that of the Knuth relation.
+  One of our main results generalizes the celebrated Erdos-Szekeres Theorem for permutation pattern-avoidance to a new result for permutation pattern-replacement. In particular, we show that under the $\{123 \cdots k, k \cdots 321\}$-equivalence, all permutations in $S_n$ are equivalent up to parity when $n \ge Ω(k^2)$.
+  Additionally, we extend the work of Kuszmaul and Zhou on an infinite family of pattern-replacement equivalences known as the rotational equivalences. Kuszmaul and Zhou proved that the rotational equivalences always yield either one or two nontrivial equivalence classes in $S_n$, and conjectured that the number of nontrivial classes depended only on the patterns involved in the rotational equivalence (rather than on $n$). We present a counterexample to their conjecture, and prove a new theorem fully classifying (for large $n$) when there is one nontrivial equivalence class and when there are two nontrivial equivalence classes.
+  Finally, we computationally analyze the pattern-replacement equivalences given by sets of pairs of patterns of length four. We then focus on three cases, in which the number of nontrivial equivalence classes matches an OEIS sequence. For two of these we present full proofs of the enumeration and for the third we suggest a potential future method of proof.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-09T20:03:19Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Michael Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.10205v2</id>
+    <title>Counting Standard Young Tableaux With Restricted Runs</title>
+    <updated>2020-08-08T19:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2006.10205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.10205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of Young Tableaux whose shape is a k by n rectangle is famously (nk)! 0! ... (k-1)!/((n+k-1)!(n+k-2)!... n!) implying that for each specific k, that sequence satisfies a linear recurrence equation with polynomial coefficients of the first order. But what about counting Young tableaux where certain "run lengths" are forbidden? Then things seem to get much more complicated. We conclude with four conjectures and pledge donations to the OEIS in honor of the first provers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-17T23:55:55Z</published>
+    <arxiv:comment>8 pages. Accompanied by Maple packages and C programs available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/cyt.html This version adds a footnote, and pledges donations to the OEIS in honor of the first provers</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.07342v1</id>
+    <title>An Upper Bound for Sorting $R_n$ with LRE</title>
+    <updated>2020-02-18T02:44:05Z</updated>
+    <link href="https://arxiv.org/abs/2002.07342v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07342v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A permutation $π$ over alphabet $Σ= {1,2,3,\ldots,n}$, is a sequence where every element $x$ in $Σ$ occurs exactly once. $S_n$ is the symmetric group consisting of all permutations of length $n$ defined over $Σ$. $I_n$ = $(1, 2, 3,\ldots, n)$ and $R_n =(n, n-1, n-2,\ldots, 2, 1)$ are identity (i.e. sorted) and reverse permutations respectively. An operation, that we call as an $LRE$ operation, has been defined in OEIS with identity A186752. This operation is constituted by three generators: left-rotation, right-rotation and transposition(1,2). We call transposition(1,2) that swaps the two leftmost elements as $Exchange$. The minimum number of moves required to transform $R_n$ into $I_n$ with $LRE$ operation are known for $n \leq 11$ as listed in OEIS with sequence number A186752. For this problem no upper bound is known. OEIS sequence A186783 gives the conjectured diameter of the symmetric group $S_n$ when generated by $LRE$ operations \cite{oeis}. The contributions of this article are: (a) The first non-trivial upper bound for the number of moves required to sort $R_n$ with $LRE$; (b) a tighter upper bound for the number of moves required to sort $R_n$ with $LRE$; and (c) the minimum number of moves required to sort $R_{10}$ and $R_{11}$ have been computed. Here we are computing an upper bound of the diameter of Cayley graph generated by $LRE$ operation. Cayley graphs are employed in computer interconnection networks to model efficient parallel architectures. The diameter of the network corresponds to the maximum delay in the network.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-18T02:44:05Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Sai Satwik Kuppili</name>
+    </author>
+    <author>
+      <name>Bhadrachalam Chitturi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.03674v3</id>
+    <title>Inversion sequences avoiding pairs of patterns</title>
+    <updated>2020-06-07T07:53:07Z</updated>
+    <link href="https://arxiv.org/abs/1912.03674v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.03674v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The enumeration of inversion sequences avoiding a single pattern was initiated by Corteel--Martinez--Savage--Weselcouch and Mansour--Shattuck independently. Their work has sparked various investigations of generalized patterns in inversion sequences, including patterns of relation triples by Martinez and Savage, consecutive patterns by Auli and Elizalde, and vincular patterns by Lin and Yan. In this paper, we carried out the systematic study of inversion sequences avoiding two patterns of length $3$. Our enumerative results establish further connections to the OEIS sequences and some classical combinatorial objects, such as restricted permutations, weighted ordered trees and set partitions. Since patterns of relation triples are some special multiple patterns of length $3$, our results complement the work by Martinez and Savage. In particular, one of their conjectures regarding the enumeration of $(021,120)$-avoiding inversion sequences is solved.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-08T13:08:27Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Mathematics &amp; Theoretical Computer Science, vol. 22 no. 1, Combinatorics (June 29, 2020) dmtcs:5964</arxiv:journal_ref>
+    <author>
+      <name>Chunyan Yan</name>
+    </author>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+    <arxiv:doi>10.23638/DMTCS-22-1-23</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.23638/DMTCS-22-1-23" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.10288v1</id>
+    <title>On sequences associated to the invariant theory of rank two simple Lie algebras</title>
+    <updated>2019-11-23T00:11:51Z</updated>
+    <link href="https://arxiv.org/abs/1911.10288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.10288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two families of sequences, listed in the On-Line Encyclopedia of Integer Sequences (OEIS), which are associated to invariant theory of Lie algebras. For the first family, we prove combinatorially that the sequences A059710 and A108307 are related by a binomial transform. Based on this, we present two independent proofs of a recurrence equation for A059710, which was conjectured by Mihailovs. Besides, we also give a direct proof of Mihailovs' conjecture by the method of algebraic residues. As a consequence, closed formulae for the generating function of sequence A059710 are obtained in terms of classical Gaussian hypergeometric functions. Moreover, we show that sequences in the second family are also related by binomial transforms.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-23T00:11:51Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Jordan Tirrell</name>
+    </author>
+    <author>
+      <name>Bruce W. Westbury</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.08946v1</id>
+    <title>On partially ordered patterns of length 4 and 5 in permutations</title>
+    <updated>2019-03-21T12:22:35Z</updated>
+    <link href="https://arxiv.org/abs/1903.08946v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.08946v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Partially ordered patterns (POPs) generalize the notion of classical patterns studied widely in the literature in the context of permutations, words, compositions and partitions. In an occurrence of a POP, the relative order of some of the elements is not important. Thus, any POP of length $k$ is defined by a partially ordered set on $k$ elements, and classical patterns correspond to $k$-element chains. The notion of a POP provides a convenient language to deal with larger sets of permutation patterns.
+  This paper contributes to a long line of research on classical permutation patterns of length 4 and 5, and beyond, by conducting a systematic search of connections between sequences in the Online Encyclopedia of Integer Sequences (OEIS) and permutations avoiding POPs of length 4 and 5. As the result, we (i) obtain 13 new enumerative results for classical patterns of length 4 and 5, and a number of results for patterns of arbitrary length, (ii) collect under one roof many sporadic results in the literature related to avoidance of patterns of length 4 and 5, and (iii) conjecture 6 connections to the OEIS. Among the most intriguing bijective questions we state, 7 are related to explaining Wilf-equivalence of various sets of patterns, e.g.\ 5 or 8 patterns of length 4, and 2 or 6 patterns of length~5.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-21T12:22:35Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alice L. L. Gao</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.03409v1</id>
+    <title>On the Domination Number of Permutation Graphs and an Application to Strong Fixed Points</title>
+    <updated>2018-10-08T12:43:58Z</updated>
+    <link href="https://arxiv.org/abs/1810.03409v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.03409v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A permutation graph $G_π$ is a simple graph with vertices corresponding to the elements of $π$ and an edge between $i$ and $j$ when $i$ and $j$ are inverted in $π$. A set of vertices $D$ is said to dominate a graph $G$ when every vertex in $G$ is either an element of $D$, or adjacent to an element of $D$. The domination number $γ(G)$ is defined as the cardinality of a minimum dominating set of $G$. A strong fixed point of a permutation $π$ of order $n$ is an element $k$ such that $π^{-1}(j)&lt;π^{-1}(k)$ for all $j&lt;k$, and $π^{-1}(i)&gt;π^{-1}(k)$ for all $i&gt;k$. In this article, we count the number of connected permutation graphs on $n$ vertices with domination number $1$ and domination number $\frac{n}{2}$. We further show that for a natural number $k\leq \frac{n}{2}$, there exists a connected permutation graph on $n$ vertices with domination number $k$. We find a closed expression for the number of permutation graphs dominated by a set with two elements, and we find a closed expression for the number of permutation graphs efficiently dominated by any set of vertices. We conclude by providing an application of these results to strong fixed points, proving some conjectures posed on the OEIS.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-08T12:43:58Z</published>
+    <arxiv:comment>Supported by DMS-1560019</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Applied Mathematics, 2020</arxiv:journal_ref>
+    <author>
+      <name>Theresa Baren</name>
+    </author>
+    <author>
+      <name>Michael Cory</name>
+    </author>
+    <author>
+      <name>Mia Friedberg</name>
+    </author>
+    <author>
+      <name>Peter Gardner</name>
+    </author>
+    <author>
+      <name>James Hammer</name>
+    </author>
+    <author>
+      <name>Joshua Harrington</name>
+    </author>
+    <author>
+      <name>Daniel McGinnis</name>
+    </author>
+    <author>
+      <name>Riley Waechter</name>
+    </author>
+    <author>
+      <name>Tony W. H. Wong</name>
+    </author>
+    <arxiv:doi>10.1016/j.dam.2020.08.021</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.dam.2020.08.021" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.10072v3</id>
+    <title>On the Intriguing Problem of Counting (n+1,n+2)-Core Partitions into Odd Parts</title>
+    <updated>2018-03-02T14:23:59Z</updated>
+    <link href="https://arxiv.org/abs/1712.10072v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.10072v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tewodros Amdeberhan and Armin Straub initiated the study of enumerating subfamilies of the set of (s,t)-core partitions. While the enumeration of (n+1,n+2)-core partitions into distinct parts is relatively easy (in fact it equals the Fibonacci number F_{n+2}), the enumeration of (n+1,n+2)-core partitions into odd parts remains elusive.
+  Straub computed the first eleven terms of that sequence, and asked for a "formula," or at least a fast way, to compute many terms. While we are unable to find a "fast" algorithm, we did manage to find a "faster" algorithm, which enabled us to compute 23 terms of this intriguing sequence. We strongly believe that this sequence has an algebraic generating function, since a "sister sequence" (see the article), is OEIS sequence A047749 that does have an algebraic generating function. One of us (DZ) is pledging a donation of 100 dollars to the OEIS, in honor of the first person to generate sufficiently many terms to conjecture (and prove non-rigorously) an algebraic equation for the generating function of this sequence, and another 100 dollars for a rigorous proof of that conjecture.
+  Finally, we also develop algorithms that find explicit generating functions for other, more tractable, families of (n+1,n+2)-core partitions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-28T22:31:43Z</published>
+    <arxiv:comment>12 pages, accompanied by Maple package. This version announces that our questions were all answered by Paul Johnson, and a donation to the OEIS, in his honor, has been made</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Anthony Zaleski</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.04654v2</id>
+    <title>Automated Proofs of Many Conjectured Recurrences in the OEIS made by R.J. Mathar</title>
+    <updated>2017-10-23T15:10:04Z</updated>
+    <link href="https://arxiv.org/abs/1707.04654v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.04654v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The On-Line Encyclopedia Of Integer Sequences , that wonderful resource that most combinatorialists, and many other mathematicians and scientists, use at least once a day, is a treasure trove of mathematical information, and, one of its charms is that it contains many intriguing conjectures. But one should be on one's guard, because some of the conjectures are either already theorems, or can be routinely proved. In this case study we demonstrate, and actually fully implement (in an accompanying Maple package), how to turn many conjectures made in the OEIS by R.J. Mathar, regarding linear recurrences satisfies by a certain class of sequences, into fully rigorously-proved theorems, but we argue, that one should not emulate us, and while it is nice to have one example, of an algorithm to actually construct proofs (that are known to exist by a priori theoretical reasons), life is too short to do it in all cases, and hence we propose a new category for the OEIS, that of "provable conjecture", as opposed to "proved conjecture" (alias theorem).</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-14T22:12:18Z</published>
+    <arxiv:comment>7 pages; Accompanied my a Maple package and sample input and output files available from http://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/mathar.html</arxiv:comment>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Mingjia Yang</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.04177v2</id>
+    <title>Enumeration of Carlitz Multipermutations</title>
+    <updated>2017-02-16T22:13:31Z</updated>
+    <link href="https://arxiv.org/abs/1702.04177v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.04177v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A multipermutation with $k$ copies each of $1\ldots n$ is Carlitz if neighbours are different. We enumerate these objects for $k=2,3,4$ and derive recurrences. In particular, we prove and improve a conjectured recurrence for $k=3$, stated in OEIS, the Online Encyclopedia of Integer Sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-14T12:28:12Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Henrik Eriksson</name>
+    </author>
+    <author>
+      <name>Alexis Martin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.08245v1</id>
+    <title>An Exploration of Sequence A000975</title>
+    <updated>2016-08-29T20:50:50Z</updated>
+    <link href="https://arxiv.org/abs/1608.08245v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.08245v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sequence A000975 in the Online Encyclopedia of Integer Sequences (OEIS) starts out 1, 2, 5, 10, 21, 42, 85, ... . As of July 1, 2016, the description in the OEIS lists several characterizations of this sequence and numerous examples of instances where this sequence occurs. It also presents a "not yet proved" result, a conjecture, and an unanswered question concerning this sequence. In this paper we show that all of these proposed results are in fact true.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-29T20:50:50Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Fibonacci Quarterly 55.5 (December 2017), pp.174-185; http://www.fq.math.ca/55-5.html</arxiv:journal_ref>
+    <author>
+      <name>Paul K. Stockmeyer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.04148v3</id>
+    <title>Efficient Counting of Degree Sequences</title>
+    <updated>2017-02-14T17:12:30Z</updated>
+    <link href="https://arxiv.org/abs/1604.04148v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.04148v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Novel dynamic programming algorithms to count the set $D(n)$ of zero-free degree sequences of length $n$, the set $D_c(n)$ of degree sequences of connected graphs on $n$ vertices and the set $D_b(n)$ of degree sequences of biconnected graphs on $n$ vertices exactly are presented. They are all based on a recurrence of Barnes and Savage and shown to run in polynomial time and are asymptotically much faster than the previous best known algorithms for these problems. These appear to be the first polynomial time algorithms to compute $|D(n)|$, $|D_c(n)|$ and $|D_b(n)|$ to the author's knowledge and have enabled us to tabulate them up to $n=118$, the majority of which were unknown. The available numerical results of $|D(n)|$ tend to give more supporting evidence of a conjecture of Gordon F. Royle about the limit of $|D(n)|/|D(n-1)|$. The OEIS entries that can be computed by algorithms in this paper are A004251, A007721, A007722 and A095268.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-14T13:33:36Z</published>
+    <arxiv:comment>20 pages, 1 figure, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kai Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.06796v1</id>
+    <title>Counting distinct dimer hex tilings</title>
+    <updated>2016-02-22T14:52:41Z</updated>
+    <link href="https://arxiv.org/abs/1602.06796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.06796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The combinatorics of tilings of a hexagon of integer side-length $n$ by 120 degree - 60 degree diamonds of side-length 1 has a long history, both directly (as a problem of interest in thermodynamic models) and indirectly (through the equivalence to plane partitions). Formulae as products of factorials have been conjectured and, one by one, proven for the number of such tilings under each of the symmetries of the hexagon. However, when this note was written the entry for the number of distinct such tilings in the Online Encyclopedia of Integer Sequences (OEIS) consisted of little more than a table for $0 \le n \le 4$ and a brief discussion of those values. The aim of this note is to pull together the relevant facts.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-22T14:52:41Z</published>
+    <arxiv:comment>4 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Peter Taylor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.08216v4</id>
+    <title>Fast Algorithms for Finding Pattern Avoiders and Counting Pattern Occurrences in Permutations</title>
+    <updated>2017-03-17T02:21:24Z</updated>
+    <link href="https://arxiv.org/abs/1509.08216v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.08216v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a set $Π$ of permutation patterns of length at most $k$, we present an algorithm for building $S_{\le n}(Π)$, the set of permutations of length at most $n$ avoiding the patterns in $Π$, in time $O(|S_{\le n - 1}(Π)| \cdot k + |S_{n}(Π)|)$. Additionally, we present an $O(n!k)$-time algorithm for counting the number of copies of patterns from $Π$ in each permutation in $S_n$. Surprisingly, when $|Π| = 1$, this runtime can be improved to $O(n!)$, spending only constant time per permutation. Whereas the previous best algorithms, based on generate-and-check, take exponential time per permutation analyzed, all of our algorithms take time at most polynomial per outputted permutation.
+  If we want to solve only the enumerative variant of each problem, computing $|S_{\le n}(Π)|$ or tallying permutations according to $Π$-patterns, rather than to store information about every permutation, then all of our algorithms can be implemented in $O(n^{k+1}k)$ space.
+  Using our algorithms, we generated $|S_5(Π)|, \ldots, |S_{16}(Π)|$ for each $Π\subseteq S_4$ with $|Π| &gt; 4$, and analyzed OEIS matches. We obtained a number of potentially novel pattern-avoidance conjectures.
+  Our algorithms extend to considering permutations in any set closed under standardization of subsequences. Our algorithms also partially adapt to considering vincular patterns.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-28T07:08:27Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>William Kuszmaul</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.07637v2</id>
+    <title>Explicit Expressions for the Variance and Higher Moments of the Size of a Simultaneous Core Partition and its Limiting Distribution</title>
+    <updated>2015-09-01T23:50:41Z</updated>
+    <link href="https://arxiv.org/abs/1508.07637v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.07637v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Jaclyn Anderson proved that if s and t are relatively prime positive integers, then there are exactly (s+t-1)!/(s!t!) partitions whose set of hook-lengths is disjoint from the set {s,t}. Drew Armstrong conjectured (and Paul Johnson, and a bit later, Victor Wang, proved) a beautiful expression for the average size, namely (s-1)(t-1)(s+t+1)/24 .
+  In the present article, we go far beyond the average, and state absolutely certain expressions (but "officially" still conjectures) for the variance (showing in particular that it is rather large, and there is no "concentration about the mean"), and the third through the sixth moments. For the special case of (s,s+1)-core partitions, we go all the way to the 9th moment.
+  We pose two challenges, and will be glad to donate 100 dollars each, to the OEIS foundation in honor of the first provers, regarding a "soft" and "global", yet rigorous, justification of our empirical approach, and for proving an intriguing conjecture about the limiting distribution.
+  This version reports (thanks to Marko Thiel and Nathan Williams) that the second challenge mentioned above has been done by Paul Johnson (but not in two pages). A donation to the OEIS was made. The first challenge is still wide open.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-30T21:04:47Z</published>
+    <arxiv:comment>13 pages; accompanied by a Maple package, stCore, and outputs files that may be gotten from &lt;A HREF="http://www.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/stcore.html"&gt;this html url&lt;/A&gt;</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.08883v2</id>
+    <title>On a conjecture regarding primality of numbers constructed from prepending and appending identical digits</title>
+    <updated>2015-10-20T22:52:20Z</updated>
+    <link href="https://arxiv.org/abs/1503.08883v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.08883v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider the operation of adding the same number of identical digits to the left and to the right of a number n. In OEIS sequence A090287, it was conjectured that this operation will not produce a prime if and only if n is a palindrome with an even number of digits. We show that this conjecture is false by showing that this property also holds for n=231, n=420, and an infinite number of other values of n.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-31T01:37:30Z</published>
+    <arxiv:comment>Minor changes and added section on other bases</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Chai Wah Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.00212v4</id>
+    <title>New results on the stopping time behaviour of the Collatz 3x + 1 function</title>
+    <updated>2021-10-06T12:18:00Z</updated>
+    <link href="https://arxiv.org/abs/1504.00212v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.00212v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $σ_n=\lfloor1+n\cdot\log_23\rfloor$. For the Collatz 3x + 1 function exists for each $n\in\mathbb{N}$ a set of different residue classes $(\text{mod}\ 2^{σ_n})$ of starting numbers $s$ with finite stopping time $σ(s)=σ_n$. Let $z_n$ be the number of these residue classes for each $n\geq0$ as listed in the OEIS as A100982. It is conjectured that for each $n\geq4$ the value of $z_n$ is given by the formula \begin{align*} z_n=\frac{(m+n-2)!}{m!\cdot(n-2)!}-\sum_{i=2}^{n-1}\binom{\big\lfloor\frac{3(n-i)+δ}{2}\big\rfloor}{n-i}\cdot z_i, \end{align*} where $m=\big\lfloor(n-1)\cdot\log_23\big\rfloor-(n-1)$ and $δ\in\mathbb{Z}$ assumes different values within the sum at intervals of 5 or 6 terms. This allows us to create an iterative algorithm which generates $z_n$ for each $n&gt;6$.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-29T20:33:08Z</published>
+    <arxiv:comment>18 pages, 1 figure, algorithms/programs in PARI/GP</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Mike Winkler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.05658v3</id>
+    <title>An Extension of hibi's palindromic theorem</title>
+    <updated>2015-07-23T06:21:04Z</updated>
+    <link href="https://arxiv.org/abs/1503.05658v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.05658v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hibi showed that the polynomial in the numerator of the Ehrhart series of a reflexive polytope is palindromic. We proved that those in the numerator of the Ehrhart series of every graph polytope (defined later) of the bipartite graph is palindromic. From this, one of the conjectures (raised in the A205497 of OEIS \cite{[O]}) follows immediately.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-19T07:07:49Z</published>
+    <arxiv:comment>5 pages, no figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Daeseok Lee</name>
+    </author>
+    <author>
+      <name>Hyeong-Kwan Ju</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.6070v2</id>
+    <title>The asymptotic number of $12..d$-Avoiding Words with $r$ occurrences of each letter $1,2, ..., n$</title>
+    <updated>2014-12-22T18:06:35Z</updated>
+    <link href="https://arxiv.org/abs/1412.6070v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.6070v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Following Ekhad and Zeilberger (The Personal Journal of Shalosh B. Ekhad and Doron Zeilberger, Dec 5 2014; see also arXiv:1412.2035), we study the asymptotics for large $n$ of the number $A_{d,r}(n)$ of words of length $rn$ having $r$ letters $i$ for $i=1..n$, and having no increasing subsequence of length $d$. We prove an asymptotic formula conjectured by these authors, and we give explicitly the multiplicative constant appearing in the result, answering a question they asked. These two results should make the OEIS richer by 100+25=125 dollars.
+  In the case $r=1$ we recover Regev's result for permutations. Our proof goes as follows: expressing $A_{d,r}(n)$ as a sum over tableaux via the RSK correspondence, we show that the only tableaux contributing to the sum are "almost" rectangular (in the scale $\sqrt{n}$). This relies on asymptotic estimates for the Kotska numbers $K_{λ,r^n}$ when $λ$ has a fixed number of parts. Contrarily to the case $r=1$ where these numbers are given by the hook-length formula, we don't have closed form expressions here, so to get our asymptotic estimates we rely on more delicate computations, via the Jacobi-Trudi identity and saddle-point estimates.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-18T20:45:03Z</published>
+    <arxiv:comment>v2: we correct some typos (including an unfortunate exchange of r and n in the abstract), improve the exposition, and correct the saddle-point set-up to avoid problems with multiple singularities</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Guillaume Chapuy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.2035v1</id>
+    <title>The Generating Functions Enumerating 12..d-Avoiding Words with r occurrences of each of 1,2, ... , n are D-finite for all d and all r</title>
+    <updated>2014-12-05T15:49:19Z</updated>
+    <link href="https://arxiv.org/abs/1412.2035v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.2035v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, dedicated with admiration and gratitude to guru Neil Sloane on his 75-th birthday, we observe that the generating functions for multi-set permutations that do not contain an increasing subsequence of length d, and where every letter appears the same number of times, say r, are always D-finite, (for every d and every r), and we actually crank out the first few terms of quite a few of them, many of whom are not yet in the OEIS. We also state a conjectured asymptotic formula for these sequences, that reduces to Amitai Regev's famous formula when r=1, and pledge a 100 dollar donation to the OEIS in honor of the first one to prove our conjecture. We pledge another 100 dollars for extending Ira Gessel's spectacular Bessel determinant, from the r=1 case to general r.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-05T15:49:19Z</published>
+    <arxiv:comment>4 pages. Exclusively published in the Personal Journal of Shalosh B. Ekhad and Doron Zeilberger, Dec. 5, 2014 and this arxiv.org</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.1032v1</id>
+    <title>A case for Intranet-based 0nline portal for undergraduate Computer Science education</title>
+    <updated>2014-08-04T04:53:22Z</updated>
+    <link href="https://arxiv.org/abs/1408.1032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.1032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Our proposal for selective subjects especially those involving intensive problem-solving assignments and/or tutorials, such as Introduction to Algorithms and Data structures, Discrete Mathematics, Coding Theory, Number theory, Combinatorics and Graph Theory (CGT), Automata theory, is to supplement lectures with a moderated online forum against an intranet portal. By way of illustration we take the example of a restricted view of OEIS (http://oeis.org). The restriction can be w.r.t. sequences in OEIS that are directly relevant to say CGT. N.J.A.Sloane's OEIS is a collection of over 2,39,147 integer sequences and their properties. In particular OEIS contains definitions of many combinatorial structures, dense range of interpretations, generating functions and conjectured ones, cross references within OEIS and to outside resources, references to texts and technical articles, codes in Maple, Mathematica etc. For organizing courses such as the above mentioned, a first task is to partially create an OEIS-like instructor-moderated portal in a university intranet. During the course of lectures and tutorials students are invited to contribute to the portal and these may be augmented/approved by instructors suitably, to find a place in the portal. By this many concepts can be conveyed to the students in an interesting way with the desired results. In the arguments presented, examples related to CGT are given.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-04T04:53:22Z</published>
+    <arxiv:comment>V Annual International Conference on Computer Science Education: Innovation and Technology, 22-23 Sept. 2014, Singapore</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>K. Viswanathan Iyer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.5664v1</id>
+    <title>Automatic Proofs of Asymptotic ABNORMALITY (and much more!) of Natural Statistics Defined on Catalan-Counted Combinatorial Families</title>
+    <updated>2014-03-22T14:01:07Z</updated>
+    <link href="https://arxiv.org/abs/1403.5664v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.5664v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this case-study in computer-human collaboration, we develop, implement, and execute symbolic-computational algorithms for the automatic discovery and proof of explicit expressions for the expectation, variance, and higher moments of a large class of natural combinatorial statistics defined on Catalan-counted objects, enabling, inter-alia, to prove that they are not asymptotically normal. In particular, we reproduce in 0.12 seconds results of Miklos Bona, and derive far deeper results, way beyond the scope of humans, concerning higher moments of the random variable "number of occurrences of a pattern" in the set of 132-avoiding permutations for all patterns of length 2 and 3, and, more impressively, explicit expressions for the averages for all patterns of lengths up to 10. The ample output inspired us to make an intriguing conjecture concerning the number of so-called Bona classes, and we pledge to donate 100 dollars to the OEIS Foundation in honor of the prover (or disprover).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-22T14:01:07Z</published>
+    <arxiv:comment>14 pages. Accompanied by Maple packages, and numerous input and output files obtainable from this &lt;A HREF="http://www.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/abnormal.html"&gt;url&lt;/A&gt;. Exclusively published in the Personal Journal of Shalosh B. Ekhad and Doron Zeilberger, and this arxiv</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.1532v1</id>
+    <title>An Explicit Conjectured Determinant Evaluation Whose Proof Would Make Me Happy (and the OEIS richer)</title>
+    <updated>2014-01-07T22:29:27Z</updated>
+    <link href="https://arxiv.org/abs/1401.1532v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.1532v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>I conjecture a certain explicit determinant evaluation, whose proof would imply the solution of certain enumeration problem that I have been working on, and that I find interesting. I am pledging \$500 to the OEIS Foundation (in honor of the prover!) for a proof, and \$50 (in honor of the disprover)</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-07T22:29:27Z</published>
+    <arxiv:comment>2 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1111.3088v3</id>
+    <title>The number of bar{3}bar{1}542-avoiding permutations</title>
+    <updated>2011-12-29T02:58:18Z</updated>
+    <link href="https://arxiv.org/abs/1111.3088v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1111.3088v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We confirm a conjecture of Lara Pudwell and show that permutations of [n] that avoid the barred pattern bar{3}bar{1}542 are counted by OEIS sequence A047970. In fact, we show bijectively that the number of bar{3}bar{1}542 avoiders of length n with j+k left-to-right maxima, of which j initiate a descent in the permutation and k do not, is {n}-choose-{k} j! StirlingPartition{n-j-k}{j}, where StirlingPartition{n}{j} is the Stirling partition number.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-11-14T02:18:27Z</published>
+    <arxiv:comment>5 pages, 2 figures, minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>David Callan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1009.3985v1</id>
+    <title>Disquisitiones Arithmeticae and online sequence A108345</title>
+    <updated>2010-09-21T02:48:31Z</updated>
+    <link href="https://arxiv.org/abs/1009.3985v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1009.3985v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let g be the element that is the sum of x^(n^2) for n &gt;= 0 of A=Z/2[[x]], and let B consist of all n for which the coefficient of x^n in 1/g is 1. (The elements of B are the entries 0, 1, 2, 3, 5, 7, 8, 9, 13, ... in A108345; see The On-Line Encyclopedia of Integer Sequences (OEIS).) Cooper, Eichhorn, and O'Bryant [1] have shown that the (upper) density of B is at most 1/4, and it is conjectured that B has density 0. This note uses results of Gauss on sums of 3 squares to show that the subset of B consisting of all n not congruent to 15 mod 16 has density 0. The final section gives some computer calculations, made by Kevin O'Bryant, indicating that, pace [1], B has density 1/32.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-09-21T02:48:31Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Paul Monsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0805.2128v1</id>
+    <title>Eight Hateful Sequences</title>
+    <updated>2008-05-14T18:15:27Z</updated>
+    <link href="https://arxiv.org/abs/0805.2128v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0805.2128v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In his July 1974 Scientific American column, Martin Gardner mentioned the Handbook of Integer Sequences, which then contained 2372 sequences. Today the On-Line Encyclopedia of Integer Sequences (the OEIS) contains 140000 sequences. This paper discusses eight of them, suggested by the theme of the Eighth Gathering For Gardner: they are all infinite, and all 'ateful in one way or another. Each one is connected with an unsolved problem. The sequences are related to: hateful numbers, Angelini's 1995 puzzle, the persistence of a number, Alekseyev's 123 sequence, the curling number conjecture, Quet's prime-generating recurrence, the traveling salesman's problem, and the Riemann Hypothesis.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-05-14T18:15:27Z</published>
+    <arxiv:comment>5 pages; paper for 8th Gathering for [Martin] Gardner</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>N. J. A. Sloane</name>
+    </author>
+  </entry>
+</feed>

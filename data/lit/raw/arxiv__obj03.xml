@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zB1EzMc9vv2el0msdaaVD3XoHlo</id>
+  <title>arXiv Query: search_query=abs:"r-Stirling"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22r-Stirling%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>47</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2202.08421v1</id>
+    <title>Some identities involving degenerate r-Stirling numbers</title>
+    <updated>2022-02-17T02:53:48Z</updated>
+    <link href="https://arxiv.org/abs/2202.08421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.08421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, authors studied the unsigned degenerate r-Stirling number of the first kind and the degenerate r-Stirling number of the second kind, respectively of which are the degenerate versions of the unsigned r-Stirling numbers of the first kind and those of the r-Stirling numbers of the second kind. The aim of this paper is to derive some identities involving such special numbers from the inverse relations for them.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-17T02:53:48Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae san Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.11039v1</id>
+    <title>The $(l,r)$-Stirling numbers: a combinatorial approach</title>
+    <updated>2021-01-26T19:20:50Z</updated>
+    <link href="https://arxiv.org/abs/2101.11039v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.11039v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work deals with a new generalization of $r$-Stirling numbers using $l$-tuple of permutations and partitions called $(l,r)$-Stirling numbers of both kinds. We study various properties of these numbers using combinatorial interpretations and symmetric functions. Also, we give a limit representation of the multiple zeta function using $(l,r)$-Stirling of the first kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-26T19:20:50Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Hacène Belbachir</name>
+    </author>
+    <author>
+      <name>Yahia Djemmada</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.14805v1</id>
+    <title>Some identities on $λ$-analogues of $r$-stirling numbers of the second kind</title>
+    <updated>2022-05-30T02:03:18Z</updated>
+    <link href="https://arxiv.org/abs/2205.14805v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.14805v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, the $λ$-analogues of $r$-Stirling numbers of the first kind were studied by Kim-Kim. The aim of this paper is to introduce the $λ$-analogues of $r$-Stirling numbers of the second kind and to investigate some properties, recurrence relations and certain identities on those numbers. We also introduce the $λ$-analogues of Whitney-type $r$-Stirling numbers of the second and derive similar results to the case of the $λ$-analogues of r-Stirling numbers of the second kind. In addition, we consider the $λ$-analogues of Dowling polynomials and deduce a Dobinski-like formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-30T02:03:18Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+    <author>
+      <name>Hye Kyung Kim</name>
+    </author>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.09997v1</id>
+    <title>Some identities on degenerate r-stirling numbers via boson operators</title>
+    <updated>2022-07-20T16:00:02Z</updated>
+    <link href="https://arxiv.org/abs/2207.09997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.09997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Broder introduced the r-Stirling numbers of the first kind and of the second kind which enumerate restricted permutations and respectively restricted partitions, the restriction being that the first r elements must be in distinct cycles and respectively in distinct subsets. Kim-Kim-Lee-Park constructed the degenerate r-Stirling numbers of both kinds as degenerate versions of them. The aim of this paper is to derive some identities and recurrence relations for the degenerate r-Stirling numbers of the first kind and of the second kind via boson operators. In particular, we obtain the normal ordering of a degenerate integral power of the number operator multiplied by an integral power of the creation boson operator in terms of boson operators where the degenerate r-Stirling numbers of the second kind appear as the coefficients.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-20T16:00:02Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+    <arxiv:doi>10.1134/S1061920822040094</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1134/S1061920822040094" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.5958v1</id>
+    <title>The values of the high order Bernoulli polynomials at integers and the r-Stirling numbers</title>
+    <updated>2014-01-23T12:38:54Z</updated>
+    <link href="https://arxiv.org/abs/1401.5958v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.5958v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we exploit the r-Stirling numbers of both kinds in order to give explicit formulae for the values of the high order Bernoulli numbers and polynomials of both kinds at integers. We give also some identities linked the r-Stirling numbers and binomial coefficients.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-23T12:38:54Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Miloud Mihoubi</name>
+    </author>
+    <author>
+      <name>Meriem Tiachachat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.0345v2</id>
+    <title>Quadrant Marked Mesh Patterns and the r-Stirling Numbers</title>
+    <updated>2014-12-18T21:24:54Z</updated>
+    <link href="https://arxiv.org/abs/1412.0345v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.0345v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Marked mesh patterns are a very general type of permutation pattern. We examine a particular marked mesh pattern originally defined by Kitaev and Remmel, and show that its generating function is described by the $r$-Stirling numbers. We examine some ramifications of various properties of the $r$-Stirling numbers for this generating function, and find (seemingly new) formulas for the $r$-Stirling numbers in terms of the classical Stirling numbers and harmonic numbers. We also answer some questions posed by Kitaev and Remmel and show a connection to another mesh pattern introduced by Kitaev and Liese.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-01T04:29:38Z</published>
+    <arxiv:comment>20 pages v.2: Corrected an out-of-date reference</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Matt Davis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.12897v1</id>
+    <title>Restricted $r$-Stirling Numbers and their Combinatorial Applications</title>
+    <updated>2018-11-30T17:08:48Z</updated>
+    <link href="https://arxiv.org/abs/1811.12897v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.12897v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study set partitions with $r$ distinguished elements and block sizes found in an arbitrary index set $S$. The enumeration of these $(S,r)$-partitions leads to the introduction of $(S,r)$-Stirling numbers, an extremely wide-ranging generalization of the classical Stirling numbers and the $r$-Stirling numbers. We also introduce the associated $(S,r)$-Bell and $(S,r)$-factorial numbers. We study fundamental aspects of these numbers, including recurrence relations and determinantal expressions. For $S$ with some extra structure, we show that the inverse of the $(S,r)$-Stirling matrix encodes the Möbius functions of two families of posets. Through several examples, we demonstrate that for some $S$ the matrices and their inverses involve the enumeration sequences of several combinatorial objects. Further, we highlight how the $(S,r)$-Stirling numbers naturally arise in the enumeration of cliques and acyclic orientations of special graphs, underlining their ubiquity and importance. Finally, we introduce related $(S,r)$ generalizations of the poly-Bernoulli and poly-Cauchy numbers, uniting many past works on generalized combinatorial sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-30T17:08:48Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Miguel Méndez</name>
+    </author>
+    <author>
+      <name>José L. Ramírez</name>
+    </author>
+    <author>
+      <name>Tanay Wakhare</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.07787v1</id>
+    <title>$λ$-analogues of r-Stirling numbers of the first kind</title>
+    <updated>2018-05-20T16:15:56Z</updated>
+    <link href="https://arxiv.org/abs/1805.07787v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.07787v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study $λ$-analogues of the r-Stirling numbers of the first kind which have close connections with the r-Stirling numbers of the first kind and $λ$-Stirling numbers of the first kind. Specifically, we give the recurrence relations for these numbers and show their connections with the $λ$-Stirling numbers of the first kind and higher-order Daehee polynomials.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-20T16:15:56Z</published>
+    <arxiv:comment>12</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae san Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.20039v1</id>
+    <title>Restricted $r$-Stirling numbers of the second kind</title>
+    <updated>2026-07-22T11:28:55Z</updated>
+    <link href="https://arxiv.org/abs/2607.20039v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.20039v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce the $(r,d)$-Stirling numbers of the second kind, a new generalization of the $r$-Stirling numbers obtained by imposing a distance restriction: for any two elements $i$ and $j$ within the same subset, we require that $|i-j|&gt;d$. We establish recurrence relations, an explicit formula, ordinary and exponential generating functions, a reduction identity connecting these numbers to the standard $r$-Stirling numbers, and several combinatorial identities.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T11:28:55Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Abdelghani Mehdaoui</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.12607v1</id>
+    <title>Moment Generating Stirling Numbers of the first kind and Applications</title>
+    <updated>2023-10-19T09:33:53Z</updated>
+    <link href="https://arxiv.org/abs/2310.12607v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.12607v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we introduce and investigate moment generating Stirling numbers of the first kind, "`MSN1"'. They are inverses of MSN2's, which make the representation of the moments for a lot of statistical distributions in closed formulas possible. Both MSN1's and MSN2's are related to the r-Stirling numbers, and extend their properties to any real third parameter. If the third parameter is a nonnegative integer, r-Stirling numbers can be converted to MSN's and vice versa.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-19T09:33:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ludwig Frank</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.05064v5</id>
+    <title>A note on the hyper-sums of powers of integers, hyperharmonic polynomials and r-Stirling numbers of the first kind</title>
+    <updated>2022-01-06T17:00:39Z</updated>
+    <link href="https://arxiv.org/abs/2112.05064v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.05064v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Kargin et al. (arXiv:2008.00284 [math.NT]) obtained (among many other things) the following formula for the hyper-sums of powers of integers $S_k^{(m)}(n)$ \begin{equation*} S_k^{(m)}(n) = \frac{1}{m!} \sum_{i=0}^{m} (-1)^i \genfrac{[}{]}{0pt}{}{m+n+1}{i+n+1}_{n+1} S_{k+i}(n), \end{equation*} where $S_k^{(0)}(n) \equiv S_k(n)$ is the ordinary power sum $1^k + 2^k + \cdots + n^k$. In this note we point out that a formula equivalent to the preceding one was already established in a different form, namely, a form in which $\genfrac{[}{]}{0pt}{}{m+n+1}{i+n+1}_{n+1}$ is given explicitly as a polynomial in $n$ of degree $m-i$. We find out the connection between this polynomial and the so-called $r$-Stirling polynomials of the first kind. Furthermore, we determine the hyperharmonic polynomials and their successive derivatives in terms of the $r$-Stirling polynomials of the first kind, and show the relationship between the (exponential) complete Bell polynomials and the $r$-Stirling numbers of the first kind. Finally, we derive some identities involving the Bernoulli numbers and polynomials, the $r$-Stirling numbers of the first kind, the Stirling numbers of both kinds, and the harmonic numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-09T17:41:25Z</published>
+    <arxiv:comment>18 pages; title changed and some identities added</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>José L. Cereceda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.13323v1</id>
+    <title>Probabilistic degenerate r-Stirling numbers of the second and probabilistic degenerate r-Bell polynomials</title>
+    <updated>2024-05-22T03:41:16Z</updated>
+    <link href="https://arxiv.org/abs/2405.13323v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.13323v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Assume that Y is a random variable whose moment generating function exists in a neighborhood of the origin. We study the probabilistic degenerate r-Stirling numbers of the second kind associated with Y and the probabilistic degenerate r-Bell polynomials associated with Y. They are respectively probabilistic extensions of the degenerate r-Stirling numbers of the second and the degenerate r-Bell polynomials which are studied earlier. The aim of this paper is to obtain their properties, explicit expressions and related identities by means of generating functions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-22T03:41:16Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyunj Kim</name>
+    </author>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.2340v1</id>
+    <title>An explicit formula for Bernoulli polynomials in terms of $r$-Stirling numbers of the second kind</title>
+    <updated>2014-02-11T00:38:11Z</updated>
+    <link href="https://arxiv.org/abs/1402.2340v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.2340v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the paper, the authors establish an explicit formula for computing Bernoulli polynomials at non-negative integer points in terms of $r$-Stirling numbers of the second kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-11T00:38:11Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Rocky Mountain Journal of Mathematics 46 (2016), no. 6, 1919--1923</arxiv:journal_ref>
+    <author>
+      <name>Bai-Ni Guo</name>
+    </author>
+    <author>
+      <name>István Mező</name>
+    </author>
+    <author>
+      <name>Feng Qi</name>
+    </author>
+    <arxiv:doi>10.1216/RMJ-2016-46-6-1919</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1216/RMJ-2016-46-6-1919" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1611.02377v3</id>
+    <title>Bernoulli, poly-Bernoulli, and Cauchy polynomials in terms of Stirling and r-Stirling numbers</title>
+    <updated>2022-06-15T23:01:07Z</updated>
+    <link href="https://arxiv.org/abs/1611.02377v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1611.02377v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review and discuss some results on the representation of Bernoulli, poly-Bernoulli numbers, and Bernoulli and Cauchy polynomials in terms of Stirling numbers of the first or second kind, or in terms of r-Stirling numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-11-08T03:26:12Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Khristo N. Boyadzhiev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.07431v1</id>
+    <title>Some identities and properties on degenerate Stirling numbers</title>
+    <updated>2022-01-19T06:14:28Z</updated>
+    <link href="https://arxiv.org/abs/2201.07431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.07431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is by using generating functions to further study some identities and properties on the degenerate Stirling numbers of the second kind, the degenerate $r$-Stirling numbers of the second kind, the degenerate Stirling numbers of the first kind and the unsigned degenerate Stirling numbers of the first kind.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-19T06:14:28Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae san Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.25792v1</id>
+    <title>Double sums involving binomial coefficients and special numbers</title>
+    <updated>2025-10-28T21:17:56Z</updated>
+    <link href="https://arxiv.org/abs/2510.25792v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.25792v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we find an elementary approach for double sums where the inner sum is binomial but incomplete. We apply our core identity and its relatives to double sums involving famous numbers such as harmonic numbers, Fibonacci numbers, Stirling numbers and $r$-Stirling numbers of the second kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-28T21:17:56Z</published>
+    <arxiv:comment>33 pages, no figures or tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kunle Adegoke</name>
+    </author>
+    <author>
+      <name>Robert Frontczak</name>
+    </author>
+    <author>
+      <name>Karol Gryszka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.17168v1</id>
+    <title>Major Index on Catalan Combinatorics</title>
+    <updated>2024-07-24T11:20:04Z</updated>
+    <link href="https://arxiv.org/abs/2407.17168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.17168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the two statistics, the inversion number and the major index, on Catalan combinatorial objects such as $r$-Dyck paths, $r$-Stirling permutations, non-crossing partitions, Dyck tilings, and symmetric Dyck paths. We show that they are equidistributed with the inversion number or the major index on Dyck paths.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-24T11:20:04Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Keiichi Shigechi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.04771v1</id>
+    <title>A convolution for the complete and elementary symmetric functions</title>
+    <updated>2018-11-07T08:40:24Z</updated>
+    <link href="https://arxiv.org/abs/1811.04771v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.04771v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we give a convolution identity for the complete and elementary symmetric functions. This result can be used to proving and discovering some combinatorial identities involving $r$-Stirling numbers, $r$-Whitney numbers and $q$-binomial coefficients. As a corollary we derive a generalization of the quantum Vandermonde's convolution identity.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-07T08:40:24Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Aequationes Mathematicae 86 (2013) 217-229</arxiv:journal_ref>
+    <author>
+      <name>Mircea Merca</name>
+    </author>
+    <arxiv:doi>10.1007/s00010-012-0170-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00010-012-0170-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.07879v2</id>
+    <title>Line configurations and r-Stirling partitions</title>
+    <updated>2019-07-03T06:44:25Z</updated>
+    <link href="https://arxiv.org/abs/1804.07879v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.07879v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A set partition of $[n] := \{1, 2, \dots, n \}$ is called {\em $r$-Stirling} if the numbers $1, 2, \dots, r$ belong to distinct blocks. Haglund, Rhoades, and Shimozono constructed graded ring $R_{n,k}$ depending on two positive integers $k \leq n$ whose algebraic properties are governed by the combinatorics of ordered set partitions of $[n]$ with $k$ blocks. We introduce a variant $R_{n,k}^{(r)}$ of this quotient for ordered $r$-Stirling partitions which depends on three integers $r \leq k \leq n$. We describe the standard monomial basis of $R_{n,k}^{(r)}$ and use the combinatorial notion of the {\em coinversion code} of an ordered set partition to reprove and generalize some results of Haglund et.\ al.\ in a more direct way. Furthermore, we introduce a variety $X_{n,k}^{(r)}$ of line arrangements whose cohomology is presented as the integral form of $R_{n,k}^{(r)}$, generalizing results of Pawlowski and Rhoades.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-21T02:28:56Z</published>
+    <arxiv:comment>21 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Brendon Rhoades</name>
+    </author>
+    <author>
+      <name>Andrew Timothy Wilson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.15291v2</id>
+    <title>Recurrence relations of poly-Cauchy numbers by the $r$-Stirling transform</title>
+    <updated>2021-06-22T06:39:55Z</updated>
+    <link href="https://arxiv.org/abs/2103.15291v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.15291v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give some formulas of poly-Cauchy numbers by the $r$-Stirling transform. In the case of the classical or poly-Bernoulli numbers, the formulas are with Stirling numbers of the first kind. In our case of the classical or poly-Cauchy numbers, the formulas are with Stirling numbers of the second kind. We also discuss annihilation formulas for poly-Cauchy number with negative indices.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-29T02:51:44Z</published>
+    <arxiv:comment>Mediterr. J. Math.(2022)</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Takao Komatsu</name>
+    </author>
+  </entry>
+</feed>

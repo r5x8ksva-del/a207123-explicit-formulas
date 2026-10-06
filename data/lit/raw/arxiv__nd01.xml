@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/jbytws86qVZC4+VZL3teydFd8sA</id>
+  <title>arXiv Query: search_query=abs:Stirling AND abs:polynomial AND abs:diagonal&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:02:03Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Stirling+AND+(abs:polynomial+AND+abs:diagonal)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1310.5920v3</id>
+    <title>Diagonal recurrence relations for the Stirling numbers of the first kind</title>
+    <updated>2015-04-22T09:19:22Z</updated>
+    <link href="https://arxiv.org/abs/1310.5920v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1310.5920v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the paper, the author presents diagonal recurrence relations for the Stirling numbers of the first kind. As by-products, the author also recovers three explicit formulas for special values of the Bell polynomials of the second kind.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-10-19T08:45:34Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>Contributions to Discrete Mathematics 11 (2016), no. 1, 22--30</arxiv:journal_ref>
+    <author>
+      <name>Feng Qi</name>
+    </author>
+    <arxiv:doi>10.11575/cdm.v11i1.62389</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.11575/cdm.v11i1.62389" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0812.1193v2</id>
+    <title>Some Applications of the Fractional Poisson Probability Distribution</title>
+    <updated>2011-11-17T12:11:46Z</updated>
+    <link href="https://arxiv.org/abs/0812.1193v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0812.1193v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Physical and mathematical applications of fractional Poisson probability distribution have been presented. As a physical application, a new family of quantum coherent states has been introduced and studied. As mathematical applications, we have discovered and developed the fractional generalization of Bell polynomials, Bell numbers, and Stirling numbers. Appearance of fractional Bell polynomials is natural if one evaluates the diagonal matrix element of the evolution operator in the basis of newly introduced quantum coherent states. Fractional Stirling numbers of the second kind have been applied to evaluate skewness and kurtosis of the fractional Poisson probability distribution function. A new representation of Bernoulli numbers in terms of fractional Stirling numbers of the second kind has been obtained. A representation of Schlafli polynomials in terms of fractional Stirling numbers of the second kind has been found. A new representations of Mittag-Leffler function involving fractional Bell polynomials and fractional Stirling numbers of the second kind have been discovered. Fractional Stirling numbers of the first kind have been introduced and studied. Two new polynomial sequences associated with fractional Poisson probability distribution have been launched and explored. The relationship between new polynomials and the orthogonal Charlier polynomials has also been investigated. In the limit case when the fractional Poisson probability distribution becomes the Poisson probability distribution, all of the above listed developments and implementations turn into the well-known results of quantum optics, the theory of combinatorial numbers and the theory of orthogonal polynomials of discrete variable.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-12-05T18:05:02Z</published>
+    <arxiv:comment>61 pages, 7 tables, added Chapter 6 "New polynomials"</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>Nick Laskin</name>
+    </author>
+    <arxiv:doi>10.1063/1.3255535</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.3255535" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.0622v2</id>
+    <title>Jacobi-Stirling polynomials and $P$-partitions</title>
+    <updated>2012-06-22T12:32:35Z</updated>
+    <link href="https://arxiv.org/abs/1201.0622v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.0622v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the diagonal generating function of the Jacobi-Stirling numbers of the second kind $ \JS(n+k,n;z)$ by generalizing the analogous results for the Stirling and Legendre-Stirling numbers. More precisely, letting $\JS(n+k,n;z)=p_{k,0}(n)+p_{k,1}(n)z+...+p_{k,k}(n)z^k$, we show that $(1-t)^{3k-i+1}\sum_{n\geq0}p_{k,i}(n)t^n$ is a polynomial in $t$ with nonnegative integral coefficients and provide combinatorial interpretations of the coefficients by using Stanley's theory of $P$-partitions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-03T13:05:41Z</published>
+    <arxiv:comment>18 pages, 4 figures, 1 table, minor modifications, to appear in European Journal of Combinatorics, 2012</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ira M. Gessel</name>
+    </author>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+    <author>
+      <name>Jiang Zeng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.03111v1</id>
+    <title>Binomial expansions of Jacobi-Stirling numbers and real-rootedness of Jacobi-Stirling descent polynomials</title>
+    <updated>2026-10-02T10:29:30Z</updated>
+    <link href="https://arxiv.org/abs/2610.03111v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.03111v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we first expand fixed diagonals of the Jacobi-Stirling numbers in a binomial basis. For the second kind, the expansion coefficients are polynomials in $z+1$ with nonnegative integer coefficients. We give a recurrence and a signed-partition interpretation for these coefficients. The same holds for the differences between corresponding unsigned first-kind and second-kind coefficients. We then prove that every nonzero nonnegative linear combination of the descent polynomials over Jacobi-Stirling permutations with a fixed number of deleted barred letters has only simple negative zeros when that number is one, two, or three. The same holds when exactly one or two barred letters are retained. Thus we verify five infinite families in a conjecture of Gessel, Lin and Zeng. Finally, using insertion operators, we find that every descent polynomial over Jacobi-Stirling permutations with a fixed number of deleted barred letters is top heavy and has an increasing left half.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-02T10:29:30Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shi-Mei Ma</name>
+    </author>
+    <author>
+      <name>Ming-Xin Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.12587v1</id>
+    <title>Explicit M-Polynomial and Degree-Based Topological Indices of Generalized Hanoi Graphs</title>
+    <updated>2025-11-16T13:16:45Z</updated>
+    <link href="https://arxiv.org/abs/2511.12587v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.12587v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The M-polynomial, introduced by Deutsch and Klavžar in 2015, provides a unifying algebraic framework for the computation of numerous degree-based topological indices such as the Zagreb, Randic, harmonic, and forgotten indices. Despite its broad applications in chemical graph theory and network analysis, closed expressions of the M-polynomial remain unknown for many important graph families.
+  In this work we derive, for the first time, a complete explicit expression of the M-polynomial of the generalized Hanoi graphs $H_p^n$ for arbitrary positive $p$ and $n$. Our derivation relies on a detailed combinatorial analysis of the occupancy-based structure of $H_p^n$, refined using Stirling and $2$-associated Stirling numbers to enumerate all configurations with prescribed singleton and multiton counts. We obtain closed formulas for all diagonal and off-diagonal coefficients of the M-polynomial and show how these expressions yield exact values of the main degree-based topological indices. The correctness of the formulas is supported through numerical computation in small instances. These results provide a complete degree-based description of $H_p^n$ and make their structural complexity fully accessible through the M-polynomial framework.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-16T13:16:45Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Discrete Applied Mathematics 387 (2026), 181--198</arxiv:journal_ref>
+    <author>
+      <name>El-Mehdi Mehiri</name>
+    </author>
+    <arxiv:doi>10.1016/j.dam.2026.03.006</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.dam.2026.03.006" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16965v1</id>
+    <title>Uniform treatments of Bernoulli numbers, Stirling numbers, and their generating functions</title>
+    <updated>2025-04-23T09:54:51Z</updated>
+    <link href="https://arxiv.org/abs/2504.16965v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16965v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, by virtue of a determinantal formula for derivatives of the ratio between two differentiable functions, in view of the Faà di Bruno formula, and with the help of several identities and closed-form formulas for the partial Bell polynomials $\operatorname{B}_{n,k}$, the author establishes thirteen Maclaurin series expansions of the functions \begin{align*} &amp;\ln\frac{\operatorname{e}^x+1}{2}, &amp;&amp; \ln\frac{\operatorname{e}^x-1}{x}, &amp;&amp; \ln\cosh x, \\ &amp;\ln\frac{\sinh x}{x}, &amp;&amp; \biggl[\frac{\ln(1+x)}{x}\biggr]^r, &amp;&amp; \biggl(\frac{\operatorname{e}^x-1}{x}\biggr)^r \end{align*} for $r=\pm\frac{1}{2}$ and $r\in\mathbb{R}$ in terms of the Dirichlet eta function $η(1-2k)$, the Riemann zeta function $ζ(1-2k)$, and the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$. presents four determinantal expressions and three recursive relations for the Bernoulli numbers $B_{2n}$.  finds out three closed-form formulas for the Bernoulli numbers $B_{2n}$ and the generalized Bernoulli numbers $B_n^{(r)}$ in terms of the Stirling numbers of the second kind $S(n,k)$, and deduce two combinatorial identities for the Stirling numbers of the second kind $S(n,k)$. acquires two combinatorial identities, which can be regarded as diagonal recursive relations, involving the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$. recovers an integral representation and a closed-form formula, and establish an alternative explicit and closed-form formula, for the Bernoulli numbers of the second kind $b_n$ in terms of the Stirling numbers of the first kind $s(n,k)$. obtains three identities connecting the Stirling numbers of the first and second kinds $s(n,k)$ and $S(n,k)$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-23T09:54:51Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Feng Qi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.00479v4</id>
+    <title>Set partitions, tableaux, and subspace profiles under regular diagonal matrices</title>
+    <updated>2024-09-16T05:22:28Z</updated>
+    <link href="https://arxiv.org/abs/2112.00479v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.00479v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a family of univariate polynomials indexed by integer partitions. At prime powers, they count the number of subspaces in a finite vector space that transform under a regular diagonal matrix in a specified manner. This enumeration formula is a combinatorial solution to a problem introduced by Bender, Coley, Robbins and Rumsey. At $1$, they count set partitions with specified block sizes. At $0$, they count standard tableaux of specified shape. At $-1$, they count standard shifted tableaux of a specified shape. These polynomials are generated by a new statistic on set partitions (called the interlacing number) as well as a polynomial statistic on standard tableaux. They allow us to express $q$-Stirling numbers of the second kind as sums over standard tableaux and as sums over set partitions.
+  For partitions whose parts are at most two, these polynomials are the non-zero entries of the Catalan triangle associated to the $q$-Hermite orthogonal polynomial sequence. In particular, when all parts are equal to two, they coincide with the polynomials defined by Touchard that enumerate chord diagrams by the number of crossings.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-01T13:14:07Z</published>
+    <arxiv:comment>30 pages; accepted version, to appear in European Journal of Combinatorics, vol. 124, February 2025. 104060</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Amritanshu Prasad</name>
+    </author>
+    <author>
+      <name>Samrith Ram</name>
+    </author>
+    <arxiv:doi>10.1016/j.ejc.2024.104060</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ejc.2024.104060" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1309.4237v2</id>
+    <title>Positivity properties of Jacobi-Stirling numbers and generalized Ramanujan polynomials</title>
+    <updated>2013-10-17T08:13:00Z</updated>
+    <link href="https://arxiv.org/abs/1309.4237v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1309.4237v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalizing recent results of Egge and Mongelli, we show that each diagonal sequence of the Jacobi-Stirling numbers $\js(n,k;z)$ and $\JS(n,k;z)$ is a Pólya frequency sequence if and only if $z\in [-1, 1]$ and study the $z$-total positivity properties of these numbers. Moreover, the polynomial sequences $$\biggl\{\sum_{k=0}^n\JS(n,k;z)y^k\biggr\}_{n\geq 0}\quad \text{and} \quad \biggl\{\sum_{k=0}^n\js(n,k;z)y^k\biggr\}_{n\geq 0}$$ are proved to be strongly $\{z,y\}$-log-convex. In the same vein, we extend a recent result of Chen et al. about the Ramanujan polynomials to Chapoton's generalized Ramanujan polynomials. Finally, bridging the Ramanujan polynomials and a sequence arising from the Lambert $W$ function, we obtain a neat proof of the unimodality of the latter sequence, which was proved previously by Kalugin and Jeffrey.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-09-17T09:13:04Z</published>
+    <arxiv:comment>17 pages, 2 tables, the proof of Lemma 3.3 is corrected, final version to appear in Advances in Applied Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Zhicong Lin</name>
+    </author>
+    <author>
+      <name>Jiang Zeng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11351v1</id>
+    <title>A short proof of Mathar's 2020 recurrence conjecture for the generalized-Stirling sequence A001711</title>
+    <updated>2026-05-12T00:13:31Z</updated>
+    <link href="https://arxiv.org/abs/2605.11351v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11351v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the OEIS sequence A001711, contributed by N. J. A. Sloane long before the on-line era and identified there as the diagonal $T(n+4, 4)$ of a generalized-Stirling triangle, R. J. Mathar contributed in February 2020 the conjectured order-2 P-recursive recurrence \[ a(n) - (2n+5)\,a(n-1) + (n+2)^{2}\,a(n-2) \;=\; 0,\qquad n \ge 2. \] We give a one-page proof. Detlefs's harmonic-number closed form $a(n) = \tfrac{1}{4}(n+3)!\,(2 H_{n+3} - 3)$ collapses the left-hand side, after dividing through by $(n+1)!/4$, to a polynomial identity of $n$ with coefficient $H_{n+2}$. The harmonic-number coefficient simplifies to $(n+3) - (2n+5) + (n+2) = 0$ (using $H_{n+3} = H_{n+2} + \tfrac{1}{n+3}$ and $H_{n+1} = H_{n+2} - \tfrac{1}{n+2}$); the constant remainder is $-3 \cdot 0 = 0$ for the same reason. The supplementary archive contains a SymPy script verifying both pieces symbolically, the e.g.f.\ expansion against the harmonic closed form, and Mathar's recurrence numerically for $n = 2, \ldots, 5000$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-12T00:13:31Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tong Niu</name>
+    </author>
+  </entry>
+</feed>

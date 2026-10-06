@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/SAU9ysaPv5xcz4/50BO6bhZUYNs</id>
+  <title>arXiv Query: search_query=abs:"consecutive patterns" AND abs:arrays&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:31Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22consecutive+patterns%22+AND+abs:arrays&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1811.07448v1</id>
+    <title>Testing local properties of arrays</title>
+    <updated>2018-11-19T01:24:51Z</updated>
+    <link href="https://arxiv.org/abs/1811.07448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.07448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study testing of local properties in one-dimensional and multi-dimensional arrays. A property of $d$-dimensional arrays $f:[n]^d \to Σ$ is $k$-local if it can be defined by a family of $k \times \ldots \times k$ forbidden consecutive patterns. This definition captures numerous interesting properties. For example, monotonicity, Lipschitz continuity and submodularity are $2$-local; convexity is (usually) $3$-local; and many typical problems in computational biology and computer vision involve $o(n)$-local properties.
+  In this work, we present a generic approach to test all local properties of arrays over any finite (and not necessarily bounded size) alphabet. We show that any $k$-local property of $d$-dimensional arrays is testable by a simple canonical one-sided error non-adaptive $\varepsilon$-test, whose query complexity is $O(ε^{-1}k \log{\frac{εn}{k}})$ for $d = 1$ and $O(c_d ε^{-1/d} k \cdot n^{d-1})$ for $d &gt; 1$. The queries made by the canonical test constitute sphere-like structures of varying sizes, and are completely independent of the property and the alphabet $Σ$. The query complexity is optimal for a wide range of parameters: For $d=1$, this matches the query complexity of many previously investigated local properties, while for $d &gt; 1$ we design and analyze new constructions of $k$-local properties whose one-sided non-adaptive query complexity matches our upper bounds. For some previously studied properties, our method provides the first known sublinear upper bound on the query complexity.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-19T01:24:51Z</published>
+    <arxiv:comment>ITCS 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Omri Ben-Eliezer</name>
+    </author>
+  </entry>
+</feed>

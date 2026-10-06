@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/YtOwkq0cnNC6vpMO9HSCJdHHGZc</id>
+  <title>arXiv Query: search_query=(abs:"height sequences" OR abs:"height sequence") AND (abs:Stirling OR abs:patterns OR abs:enumeration)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:25:14Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:%22height+sequences%22+OR+abs:%22height+sequence%22)+AND+(abs:Stirling+OR+(abs:patterns+OR+abs:enumeration))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2410.19591v1</id>
+    <title>Beyond the Cascade: Juggling Vanilla Siteswap Patterns</title>
+    <updated>2024-10-25T14:34:42Z</updated>
+    <link href="https://arxiv.org/abs/2410.19591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.19591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Being widespread in human motor behavior, dynamic movements demonstrate higher efficiency and greater capacity to address a broader range of skill domains compared to their quasi-static counterparts. Among the frequently studied dynamic manipulation problems, robotic juggling tasks stand out due to their inherent ability to scale their difficulty levels to arbitrary extents, making them an excellent subject for investigation. In this study, we explore juggling patterns with mixed throw heights, following the vanilla siteswap juggling notation, which jugglers widely adopted to describe toss juggling patterns. This requires extending our previous analysis of the simpler cascade juggling task by a throw-height sequence planner and further constraints on the end effector trajectory. These are not necessary for cascade patterns but are vital to achieving patterns with mixed throw heights. Using a simulated environment, we demonstrate successful juggling of most common 3-9 ball siteswap patterns up to 9 ball height, transitions between these patterns, and random sequences covering all possible vanilla siteswap patterns with throws between 2 and 9 ball height. https://kai-ploeger.com/beyond-cascades</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-25T14:34:42Z</published>
+    <arxiv:comment>Published at IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Mario Gomez Andreu</name>
+    </author>
+    <author>
+      <name>Kai Ploeger</name>
+    </author>
+    <author>
+      <name>Jan Peters</name>
+    </author>
+  </entry>
+</feed>

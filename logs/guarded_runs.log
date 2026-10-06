@@ -50,3 +50,9 @@
 2026-10-06 19:31:13 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 0 | 10s | PEAK=44 MINHEAD=16112 MINAVAIL=5617 KILLED=0 REASON= QFAIL=0
 2026-10-06 19:31:22 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/red3/code/checks/check_rv3.py > logs/s6_red3_rv3.log | exit 1 | 91s | PEAK=44 MINHEAD=16022 MINAVAIL=5282 KILLED=0 REASON= QFAIL=0
 2026-10-06 19:40:27 UTC | py -3.14 verify_all.py > logs/verify_all_final.log | exit 0 | 274s | PEAK=433 MINHEAD=15590 MINAVAIL=5453 KILLED=0 REASON= QFAIL=0
+2026-10-06 21:19:42 UTC | py -3.14 verify_all.py c5b > logs/verify_c5b_2026-10-07_after_novelty.log | exit 0 | 5s | PEAK=36 MINHEAD=14906 MINAVAIL=5439 KILLED=0 REASON= QFAIL=0
+2026-10-06 21:25:45 UTC | py -3.14 verify_all.py c5b > logs/verify_c5b_2026-10-07_final.log | exit 0 | 4s | PEAK=36 MINHEAD=14643 MINAVAIL=5494 KILLED=0 REASON= QFAIL=0
+2026-10-06 21:52:18 UTC | py -3.14 code/review/main-t26ii/check_t26ii.py > logs/main_t26ii_check.log | exit 0 | 2s | PEAK=21 MINHEAD=14919 MINAVAIL=5266 KILLED=0 REASON= QFAIL=0
+2026-10-06 21:52:57 UTC | py -3.14 /c/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/7909e566-ae17-455c-a54b-66811b90cf72/scratchpad/rev/check_t26ii_broken.py > logs/main_t26ii_check_reverse.log | exit 1 | 2s | PEAK=22 MINHEAD=15019 MINAVAIL=5305 KILLED=0 REASON= QFAIL=0
+2026-10-06 21:58:56 UTC | py -3.14 verify_all.py > logs/verify_all_final.log | exit 0 | 269s | PEAK=437 MINHEAD=14418 MINAVAIL=5234 KILLED=0 REASON= QFAIL=0
+2026-10-06 22:47:04 UTC | py -3.14 verify_all.py > logs/verify_all_recheck_2026-10-07.log | exit 0 | 297s | PEAK=433 MINHEAD=13475 MINAVAIL=3824 KILLED=0 REASON= QFAIL=0

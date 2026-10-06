@@ -22,5 +22,5 @@ PASS r2-author-table [NUM] author table row (3/5,-1/2): I=0.90181302069506135393
 PASS r2-small-t [NUM] (21/100,-1/20): I - S = 3.814017765530373665580701E-62 (110 digits; agrees with author 3.8140177655303737080E-62 only to rel 1.1E-17, i.e. 17 digits: author's last 3 digits are a float-conversion artifact); reviewer closed-form prediction rel err 2.0E-48
 PASS r2-author-I-21 [NUM] author table: I(21/100,-1/2) = 0.76544566082619491152.. reproduced (0.7654456608261949115282)
 PASS r2-thm55-bound [NUM] C3A-21 explicit error bound |I - sum_{k<K} f_k x^k| <= (x^K/|t|) sup_{tau<=t}|rho_K| (sup on a log grid): (3/10,-1/2,K=6): |I-Y_K|=3.432E-04 <= bound 8.557E-04; (3/10,-1/2,K=9): |I-Y_K|=1.207E-05 <= bound 3.201E-05; (1/4,-1/3,K=12): |I-Y_K|=1.744E-07 <= bound 5.750E-07; (2/5,-2,K=7): |I-Y_K|=1.130E-04 <= bound 1.542E-04
-# elapsed 13.7s
+# elapsed 18.5s
 SUMMARY r2 pass=11 fail=0

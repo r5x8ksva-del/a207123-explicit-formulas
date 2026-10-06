@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Hyn8yOQrLBliEXcIPeYx9+sLhxw</id>
+  <title>arXiv Query: search_query=abs:"Neggers-Stanley"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:02:14Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Neggers-Stanley%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/0408312v2</id>
+    <title>Counterexamples to the Neggers-Stanley conjecture</title>
+    <updated>2004-09-23T09:24:44Z</updated>
+    <link href="https://arxiv.org/abs/math/0408312v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0408312v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The Neggers-Stanley conjecture (also known as the Poset conjecture) asserts that the polynomial counting the linear extensions of a partially ordered set on $\{1,2,...,p\}$ by their number of descents has real zeros only. We provide counterexamples to this conjecture.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-08-23T17:01:44Z</published>
+    <arxiv:comment>4 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electron. Res. Announc. Amer. Math. Soc. 10 (2004), 155--158 (electronic)</arxiv:journal_ref>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0303147v1</id>
+    <title>On operators on polynomials preserving real-rootedness and the Neggers-Stanley Conjecture</title>
+    <updated>2003-03-12T16:36:06Z</updated>
+    <link href="https://arxiv.org/abs/math/0303147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0303147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We refine a technique used in a paper by Schur on real-rooted polynomials. This amounts to an extension of a theorem of Wagner on Hadamard products of Toeplitz matrices. We also apply our results to polynomials for which the Neggers-Stanley Conjecture is known to hold. More precisely, we settle interlacing properties for $E$-polynomials of series-parallel posets and column-strict labelled Ferrers posets.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-03-12T16:36:06Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Algebraic Combin. 20 (2004), no. 2, 119--130</arxiv:journal_ref>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.10458v2</id>
+    <title>Order and Gorenstein properties for lattice path matroid polytopes</title>
+    <updated>2026-09-01T12:33:52Z</updated>
+    <link href="https://arxiv.org/abs/2303.10458v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.10458v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We characterize matroids whose polytopes are order polytopes as a special class of lattice path matroids, called snakes. This shows that snakes are exactly the objects lying in the intersection of the Neggers-Stanley conjecture and a conjecture of de Loera, Haws, and Köppe. We then characterize Gorenstein lattice path matroid polytopes, yielding a new class of matroids satisfying the latter conjecture. Finally, we also show that lattice path matroids are exactly the class of positroids in which the coarsest subdivision of the matroid base polytope into translates of order polytopes is a (finest) matroidal subdivision.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-18T16:51:27Z</published>
+    <arxiv:comment>19 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Carolina Benedetti</name>
+    </author>
+    <author>
+      <name>Kolja Knauer</name>
+    </author>
+    <author>
+      <name>Jerónimo Valencia-Porras</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0508112v1</id>
+    <title>A Refinement of the Eulerian Numbers, and the Joint Distribution of $π(1)$ and Des($π$) in $S_n$</title>
+    <updated>2005-08-05T20:19:40Z</updated>
+    <link href="https://arxiv.org/abs/math/0508112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0508112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Given a permutation $π$ chosen uniformly from $S_n$, we explore the joint distribution of $π(1)$ and the number of descents in $π$. We obtain a formula for the number of permutations with $\des(π)=d$ and $π(1)=k$, and use it to show that if $\des(π)$ is fixed at $d$, then the expected value of $π(1)$ is $d+1$. We go on to derive generating functions for the joint distribution, show that it is unimodal if viewed correctly, and show that when $d$ is small the distribution of $π(1)$ among the permutations with $d$ descents is approximately geometric. Applications to Stein's method and the Neggers-Stanley problem are presented.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-08-05T20:19:40Z</published>
+    <arxiv:comment>21 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mark Conger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.00127v3</id>
+    <title>Rook matroids and log-concavity of $P$-Eulerian polynomials</title>
+    <updated>2026-06-30T22:14:40Z</updated>
+    <link href="https://arxiv.org/abs/2410.00127v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.00127v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define and study rook matroids, the bases of which correspond to non-nesting rook placements on a skew Ferrers board. We show that rook matroids are a subclass of both transversal matroids and positroids; they also bear a subtle relationship to lattice path matroids that centers around not having the quaternary matroid $Q_{6}$ as a minor. The enumerative and distributional properties of non-nesting rook placements stand in contrast to those of usual rook placements: the non-nesting rook polynomial is not real-rooted in general, and is instead ultra-log-concave. We leverage this property together with a correspondence between rook placements and linear extensions of a poset to show that if $P$ is a naturally labeled width two poset, then the $P$-Eulerian polynomial $W_{P}$ is ultra-log-concave. This takes an important step towards resolving a log-concavity conjecture of Brenti (1989) and completes the story of the Neggers--Stanley conjecture for naturally labeled width two posets.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-30T18:09:30Z</published>
+    <arxiv:comment>v3: 35 pages, significantly rewritten. An error in the proof of Theorem 3.3 is corrected. Section 3 is shortened</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+    <author>
+      <name>Aryaman Jal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.12258v4</id>
+    <title>Reflexive polytopes arising from bipartite graphs with $γ$-positivity associated to interior polynomials</title>
+    <updated>2020-05-14T17:24:44Z</updated>
+    <link href="https://arxiv.org/abs/1810.12258v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.12258v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce polytopes ${\mathcal B}_G$ arising from root systems $B_n$ and finite graphs $G$, and study their combinatorial and algebraic properties. In particular, it is shown that ${\mathcal B}_G$ is reflexive if and only if $G$ is bipartite. Moreover, in the case, ${\mathcal B}_G$ has a regular unimodular triangulation. This implies that the $h^*$-polynomial of ${\mathcal B}_G$ is palindromic and unimodal when $G$ is bipartite. Furthermore, we discuss stronger properties, namely the $γ$-positivity and the real-rootedness of the $h^*$-polynomials. In fact, if $G$ is bipartite, then the $h^*$-polynomial of ${\mathcal B}_G$ is $γ$-positive and its $γ$-polynomial is given by an interior polynomial (a version of the Tutte polynomial for a hypergraph). The $h^*$-polynomial is real-rooted if and only if the corresponding interior polynomial is real-rooted. From a counterexample to Neggers--Stanley conjecture, we construct a bipartite graph $G$ whose $h^*$-polynomial is not real-rooted but $γ$-positive, and coincides with the $h$-polynomial of a flag triangulation of a sphere.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-29T17:11:15Z</published>
+    <arxiv:comment>20 pages, 5 figures, many explanations are added, References are added and updated</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Selecta Mathematica. New Series 26 (2020), 59</arxiv:journal_ref>
+    <author>
+      <name>Hidefumi Ohsugi</name>
+    </author>
+    <author>
+      <name>Akiyoshi Tsuchiya</name>
+    </author>
+    <arxiv:doi>10.1007/s00029-020-00588-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00029-020-00588-0" title="doi"/>
+  </entry>
+</feed>

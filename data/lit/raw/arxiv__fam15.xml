@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Vt/xwC2cMYvbYhxn7zN6Kh8ckm8</id>
+  <title>arXiv Query: search_query=abs:Hardin AND abs:arrays AND abs:binary&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:09:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Hardin+AND+(abs:arrays+AND+abs:binary)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07435v2</id>
+    <title>The (Symbolic and Numeric) Computational Challenges of Counting 0-1 Balanced Matrices</title>
+    <updated>2025-02-06T16:13:47Z</updated>
+    <link href="https://arxiv.org/abs/2410.07435v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07435v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A chessboard has the property that every row and every column has as many white squares as black squares. In this mostly methodological note, we address the problem of counting such rectangular arrays with a fixed (numeric) number of rows, but an arbitrary (symbolic) number of columns. We first address the ``vanilla" problem where there are no restrictions, and then go on to discuss the still-more-challenging problem of counting such binary arrays that are not permitted to contain a specified (finite) set of horizontal patterns, and a specified set of vertical patterns. While we can rigorously prove that each such sequence satisfies some linear recurrence equation with polynomial coefficients, actually finding these recurrences poses major {\it symbolic}-computational challenges, that we can only meet in some small cases. In fact, just generating as many as possible terms of these sequences is a big {\it numeric}-computational challenge. This was tackled by computer whiz Ron H. Hardin, who contributed several such sequences, and computed quite a few terms of each. We extend Hardin's sequences quite considerably. We also talk about the much easier problem of counting such restricted arrays without balance conditions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T21:08:04Z</published>
+    <arxiv:comment>Expanded computations and added references</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FORtTmxEuEh3DG0XZQqHIHbd0eo</id>
+  <title>arXiv Query: search_query=abs:Stirling-like&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:09:36Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Stirling-like&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>56</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2205.14805v1</id>
+    <title>Some identities on $λ$-analogues of $r$-stirling numbers of the second kind</title>
+    <updated>2022-05-30T02:03:18Z</updated>
+    <link href="https://arxiv.org/abs/2205.14805v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.14805v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, the $λ$-analogues of $r$-Stirling numbers of the first kind were studied by Kim-Kim. The aim of this paper is to introduce the $λ$-analogues of $r$-Stirling numbers of the second kind and to investigate some properties, recurrence relations and certain identities on those numbers. We also introduce the $λ$-analogues of Whitney-type $r$-Stirling numbers of the second and derive similar results to the case of the $λ$-analogues of r-Stirling numbers of the second kind. In addition, we consider the $λ$-analogues of Dowling polynomials and deduce a Dobinski-like formula.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-30T02:03:18Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+    <author>
+      <name>Hye Kyung Kim</name>
+    </author>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1212.0957v1</id>
+    <title>Generalized Stirling transform</title>
+    <updated>2012-12-05T08:06:28Z</updated>
+    <link href="https://arxiv.org/abs/1212.0957v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1212.0957v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, algorithms are developed for computing the Stirling transform and the inverse Stirling transform; specifically, we investigate a class of sequences satisfying a two-term recurrence. We derive a general identity which generalizes the usual Stirling transform and investigate the corresponding generating functions also. In addition, some interesting consequences of these results related to classical sequences like Fibonacci, Bernoulli and the numbers of derangements have been derived.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-12-05T08:06:28Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Mourad Rahmani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.23473v1</id>
+    <title>Heterogeneous Stirling numbers and heterogeneous Bell polynomials</title>
+    <updated>2025-03-30T15:13:10Z</updated>
+    <link href="https://arxiv.org/abs/2503.23473v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.23473v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces a novel generalization of Stirling and Lah numbers, termed ``heterogeneous Stirling numbers," which smoothly interpolate between these classical combinatorial sequences. Specifically, we define heterogeneous Stirling numbers of the second and first kinds, demonstrating their convergence to standard Stirling numbers for lambda=0 and to (signed) Lah numbers for lambda =1. We derive fundamental properties, including generating functions, explicit formulas, and recurrence relations. Furthermore, we extend these concepts to heterogeneous Bell polynomials, obtaining analogous results such as generating function, combinatorial identity and Dobinski-like formula. Finally, we introduce and analyse heterogeneous r-Stirling numbers of the second kind and their associated r-Bell polynomials.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-30T15:13:10Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.02595v1</id>
+    <title>Normal ordering of degenerate integral powers of number operator and its applications</title>
+    <updated>2022-04-06T06:10:53Z</updated>
+    <link href="https://arxiv.org/abs/2204.02595v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.02595v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The normal ordering of an integral power of the number operator in terms of boson operators is expressed with the help of the Stirling numbers of the second kind. As a `degenerate version' of this, we consider the normal ordering of a degenerate integral power of the number operator in terms of boson operators, which is represented by means of the degenerate Stirling numbers of the second kind. As an application of this normal ordering, we derive two equations defining the degenerate Stirling numbers of the second kind and a Dobinski-like formula for the degenerate Bell polynomials.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-06T06:10:53Z</published>
+    <arxiv:comment>7 pages. arXiv admin note: text overlap with arXiv:2204.01252</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae san Kim</name>
+    </author>
+    <author>
+      <name>Hye Kyung Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.09964v1</id>
+    <title>Probabilistic heterogeneous Stirling numbers and Bell polynomials</title>
+    <updated>2026-01-15T01:01:31Z</updated>
+    <link href="https://arxiv.org/abs/2601.09964v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.09964v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let Y be a random variable satisfying specific moment conditions. This paper introduces and investigates probabilistic heterogeneous Stirling numbers of the second kind and probabilistic heterogeneous Bell polynomials. These structures unify several classical and probabilistic families, including those of Stirling, Lah, Bell and Lah-Bell. By integrating the heterogeneous framework of Kim and Kim with probabilistic extensions, we derive explicit formulas, Dobiński-like identities, and recurrence relations. We further establish connections to partial Bell polynomials and provide applications for Poisson and Bernoulli distributions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-15T01:01:31Z</published>
+    <arxiv:comment>16</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae San Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.04971v3</id>
+    <title>A circular proof system for the hybrid mu-calculus</title>
+    <updated>2020-06-10T10:57:22Z</updated>
+    <link href="https://arxiv.org/abs/2001.04971v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.04971v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a circular and cut-free proof system for the hybrid mu-calculus and prove its soundness and completeness. The system uses names for fixpoint unfoldings, like the circular proof system for the mu-calculus previously developed by Stirling.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-14T18:58:13Z</published>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Sebastian Enqvist</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.1382v1</id>
+    <title>New type Stirling like numbers - an email style letter</title>
+    <updated>2008-02-11T06:50:05Z</updated>
+    <link href="https://arxiv.org/abs/0802.1382v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.1382v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The notion of the Fibonacci cobweb poset from [1] has been naturally extended to any admissible sequence $F$ in [2] where it was also recognized that the celebrated prefab notion of Bender and Goldman [3] - (see also [4,5]) - admits such an extension so as to encompass the new type combinatorial objects from [2] as leading examples. Recently the present author had introduced also [6] two natural partial orders in there: one $\leq$ in grading-natural subsets of cobweb`s prefabs sets [2] and in the second proposal one endows the set sums of the so called "prefabiants" with such another partial order that one arrives at Bell-like numbers including Fibonacci triad sequences introduced by the present author in [7]. Here we quote the basic observations concerning the new type Stirling like numbers as they appear in [6]. For more on notation, Stirling like numbers of the first kind and for proofs - see [6].</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-11T06:50:05Z</published>
+    <arxiv:comment>3 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Bulletin of the ICA Vol. 49 (2007), pp. 99-102</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0803.1416v2</id>
+    <title>New formulas for Stirling-like numbers and Dobinski-like formulas</title>
+    <updated>2009-01-19T21:05:59Z</updated>
+    <link href="https://arxiv.org/abs/0803.1416v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0803.1416v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Extensions of the $Stirling$ numbers of the second kind and $Dobinski$ -like formulas are proposed in a series of exercises for graduates. Some of these new formulas recently discovered by me are to be found in the source paper $ [1]$. These extensions naturally encompass the well known $q$- extensions. The indicatory references are to point at a part of the vast domain of the foundations of computer science in arxiv affiliation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-03-10T13:49:39Z</published>
+    <arxiv:comment>9 pages, presented at the Gian-Carlo Rota Polish Seminar, http://ii.uwb.edu.pl/akk/sem/sem_rota.htm</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proc. Jangjeon Math. Soc. Vol. 11 No 2, (2008),137-144</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.07843v1</id>
+    <title>Degenerate r-Whitney numbers and degenerate r-Dowling polynomials via Boson operators</title>
+    <updated>2022-04-16T16:56:28Z</updated>
+    <link href="https://arxiv.org/abs/2204.07843v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.07843v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dowling showed that the Whitney numbers of the first kind and of the second kind satisfy Stirling number-like relations. Recently, Kim-Kim introduced the degenerate r-Whitney numbers of the first kind and of the second kind, as degenerate versions and further generalizations of the Whitney numbers of both kinds. The normal ordering of an integral power of the number operator in terms of boson operators is expressed with the help of the Stirling numbers of the second kind. In this paper, it is noted that the normal ordering of a certain quantity involving the number operator is expressed in terms of the degenerate r-Whitney numbers of the second kind. We derive some properties, recurrence relations, orthogonality relations and several identities on those numbers from such normal ordering. In addition, we consider the degenerate r-Dowling polynomials as a natural extension of the degenerate r-Whitney numbers of the second kind and investigate their properties.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-16T16:56:28Z</published>
+    <arxiv:comment>16 pqges</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Taekyun Kim</name>
+    </author>
+    <author>
+      <name>Dae san Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12011v1</id>
+    <title>$m$-Bell and $m$-Stirling numbers: Iterated binomial transforms, hyper-Bessel functions, and moments of the Conway--Maxwell--Poisson distribution</title>
+    <updated>2026-08-12T12:46:29Z</updated>
+    <link href="https://arxiv.org/abs/2608.12011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a natural generalization of the Bell numbers: the $m$-Bell numbers $B^{(m)}_{n}$, characterized by the property that $m$ applications of the binomial transform reproduce the original sequence shifted $m$ places to the left. Their exponential generating functions satisfy $m$-th order ordinary differential equations whose solutions are hypergeometric (hyper-Bessel) functions, specializing to the exponential function when $m=1$ (classical Bell numbers) and to modified Bessel functions when $m=2$ (yielding "Bessel-Bell" numbers). Mirroring the Bell-Stirling correspondence, we construct $m$-Stirling triangular arrays from the two-term recurrence $S_m (n+1,k) = m \left\lfloor k/m \right\rfloor S_m(n,k)+S_m(n,k-1)$ and prove an elementary shift identity from which the central structure theorem follows: the row sums of the $m$-Stirling triangle reproduce $B^{(m)}_{n}$, and, more finely, the residue-class row sums are precisely the $m$ primitive $m$-Bell sequences. The $m$-Stirling numbers come in dual pairs (with first-kind partners, generalized falling factorials, and Lah-type companions), serve as conversion operators between polynomial bases, admit Dobiński-like formulas, and count congruence-constrained partitions in an urn model as well as restricted permutation insertion histories. Finally, we show that the $m$-Bell numbers govern the moments of the Conway-Maxwell-Poisson distribution with integer dispersion parameter $ν=m$: the scaled moments are combinations of fixed hyper-Bessel carrier ratios whose integer coefficients are precisely the primitive $m$-Bell sequences, recovering for $m=1$ the classical fact that the moments of the Poisson distribution are the Bell numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T12:46:29Z</published>
+    <arxiv:comment>40 pages, 2 figures, computational results and other supporting information available on https://github.com/venpopov/generalization-bell-numbers</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Vencislav Popov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.15307v1</id>
+    <title>Matrix products of binomial coefficients and unsigned Stirling numbers</title>
+    <updated>2020-12-30T20:02:10Z</updated>
+    <link href="https://arxiv.org/abs/2012.15307v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.15307v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study sums of the form $\sum_{k=m}^n a_{nk} b_{km}$, where $a_{nk}$ and $b_{km}$ are binomial coefficients or unsigned Stirling numbers. In a few cases they can be written in closed form. Failing that, the sums still share many common features: combinatorial interpretations, Pascal-like recurrences, inverse relations with their signed versions, and interpretations as coefficients of change between polynomial bases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-30T20:02:10Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proceedings of the 3rd Croatian Combinatorial Days, June 2021</arxiv:journal_ref>
+    <author>
+      <name>Marin Knežević</name>
+    </author>
+    <author>
+      <name>Vedran Krčadinac</name>
+    </author>
+    <author>
+      <name>Lucija Relić</name>
+    </author>
+    <arxiv:doi>10.5592/CO/CCD.2020.04</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5592/CO/CCD.2020.04" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.14799v1</id>
+    <title>Double sums associated with binomial transforms</title>
+    <updated>2025-11-17T07:05:51Z</updated>
+    <link href="https://arxiv.org/abs/2511.14799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.14799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we continue our investigation of double sums where the inner sum is binomial but incomplete. We prove many new results for these types of double sums associated with binomial transform pairs. As applications we deduce new identities for double sums involving special numbers like Bernoulli numbers, Fibonacci numbers, harmonic numbers, Catalan numbers and Stirling numbers of the second kind. We also consider families of polynomials like Fibonacci polynomials, Chebyshev polynomials, Bernoulli polynomials, and others. Finally, we state new double sums involving hyperbolic functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T07:05:51Z</published>
+    <arxiv:comment>34 pages, no figures or tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Kunle Adegoke</name>
+    </author>
+    <author>
+      <name>Robert Frontczak</name>
+    </author>
+    <author>
+      <name>Karol Gryszka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0904.2340v2</id>
+    <title>Explicit fairness in testing semantics</title>
+    <updated>2009-06-22T11:30:11Z</updated>
+    <link href="https://arxiv.org/abs/0904.2340v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0904.2340v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper we investigate fair computations in the pi-calculus. Following Costa and Stirling's approach for CCS-like languages, we consider a method to label process actions in order to filter out unfair computations. We contrast the existing fair-testing notion with those that naturally arise by imposing weak and strong fairness. This comparison provides insight about the expressiveness of the various `fair' testing semantics and about their discriminating power.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-04-15T15:55:56Z</published>
+    <arxiv:comment>27 pages, 1 figure, appeared in LMCS</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <arxiv:journal_ref>Logical Methods in Computer Science, Volume 5, Issue 2 (June 22, 2009) lmcs:1134</arxiv:journal_ref>
+    <author>
+      <name>D. Cacciagrano</name>
+    </author>
+    <author>
+      <name>F. Corradini</name>
+    </author>
+    <author>
+      <name>C. Palamidessi</name>
+    </author>
+    <arxiv:doi>10.2168/LMCS-5(2:15)2009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2168/LMCS-5(2:15)2009" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.16448v1</id>
+    <title>Multinomial random combinatorial structures and $r$-versions of Stirling, Eulerian and Lah numbers</title>
+    <updated>2024-03-25T06:19:47Z</updated>
+    <link href="https://arxiv.org/abs/2403.16448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.16448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce multinomial and $r$-variants of several classic objects of combinatorial probability, such as the random recursive and Hoppe trees, random set partitions and compositions, the Chinese restaurant process, Feller's coupling, and some others. Just as various classic combinatorial numbers - like Stirling, Eulerian and Lah numbers - emerge as essential ingredients defining the distributions of the mentioned processes, the so-called $r$-versions of these numbers appear in exact distributional formulas for the multinomial and $r$-counterparts. This approach allows us to offer a concise probabilistic interpretation for various identities involving $r$-versions of these combinatorial numbers, which were either unavailable or meaningful only for specific values of the parameter $r$. We analyze the derived distributions for fixed-size structures and establish distributional limit theorems as the size tends to infinity. Utilizing the aforementioned generalized Stirling numbers of both kinds, we define and analyze $(r,s)$-Lah distributions, which have arisen in the existing literature on combinatorial probability in various contexts.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-25T06:19:47Z</published>
+    <arxiv:comment>53 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Alexander Iksanov</name>
+    </author>
+    <author>
+      <name>Zakhar Kabluchko</name>
+    </author>
+    <author>
+      <name>Alexander Marynych</name>
+    </author>
+    <author>
+      <name>Vitali Wachtel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.15992v1</id>
+    <title>A stochastic heat engine driven using a nonlinear protocol</title>
+    <updated>2025-09-19T14:05:27Z</updated>
+    <link href="https://arxiv.org/abs/2509.15992v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.15992v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A colloidal particle confined in a time-dependent optical trap can function as a microscopic heat engine, with optimization strategies playing a crucial role in enhancing its performance. In this study, we numerically investigate a Stirling heat engine operating in both passive and active environments using a protocol inspired by the Engineered Swift Equilibration (ESE) method. This approach differs from the standard process and focuses on enhancing engine efficiency, particularly at short time scales. We analyze various fluctuating parameters throughout the cycle to validate the robustness of the engine, and demonstrate a significant enhancement in performance compared to conventional Stirling engines. Most crucially, we observe that the nonlinear protocol can even transform a heat-pump-like operation into a genuine heat engine under strong activity, thereby surpassing bounds imposed on efficiency by high-temperature and quasi-static conditions. Finally, the proposed protocol is designed with experimental feasibility in mind, making it a promising framework for the practical realization of efficient microscopic heat engines.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-19T14:05:27Z</published>
+    <arxiv:comment>8 pages, 8 figures, comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Amrutayani Panda</name>
+    </author>
+    <author>
+      <name>Biswajit Das</name>
+    </author>
+    <author>
+      <name>Shuvojit Paul</name>
+    </author>
+    <author>
+      <name>Arnab Saha</name>
+    </author>
+    <author>
+      <name>Ayan Banerjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.09726v3</id>
+    <title>Stirling numbers with level $2$ and poly-Bernoulli numbers with level $2$</title>
+    <updated>2021-06-09T12:19:40Z</updated>
+    <link href="https://arxiv.org/abs/2104.09726v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.09726v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce poly-Bernoulli numbers with level $2$, related to the Stirling numbers of the second kind with level $2$, and study several properties of poly-Bernoulli numbers with level $2$ from their expressions, relations, and congruences. Poly-Bernoulli numbers with level $2$ have strong connections with poly-Cauchy numbers with level $2$. In a special case, we can determine the denominators of Bernoulli numbers with level $2$ by showing a von Staudt-Clausen like theorem.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-20T02:41:39Z</published>
+    <arxiv:comment>Publ.Math.Debrecen 100 (2022)</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Takao Komatsu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0510027v1</id>
+    <title>Prefab posets` Whitney numbers</title>
+    <updated>2005-10-03T04:00:33Z</updated>
+    <link href="https://arxiv.org/abs/math/0510027v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0510027v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce a natural partial order in structurally natural finite subsets the cobweb prefabs sets recently constructed by the present author. Whitney numbers of the second kind of the corresponding subposet which constitute Stirling-like numbers` triangular array are then calculated and the explicit formula for them is provided. Next - in the second construction - we endow the set sums of prefabiants with such an another partial order that their their bell like numbers include fibonacci triad sequences introduced recently by the present author in order to extend famous relation between binomial newton coefficients and fibonacci numbers onto the infinity of their relatives among which there are also the fibonacci triad sequences and binomial-like coefficients (incidence coefficients included).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-10-03T04:00:33Z</published>
+    <arxiv:comment>8 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Bull. Soc. Sci. Lett. Lodz, vol 60, (2005). 25-33</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.04709v1</id>
+    <title>Carnot, Stirling, Ericsson stochastic heat engines: Efficiency at maximum power</title>
+    <updated>2022-11-09T07:03:49Z</updated>
+    <link href="https://arxiv.org/abs/2211.04709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.04709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work obtains the efficiency at maximum power for a stochastic heat engine performing Carnot-like, Stirling-like and Ericsson-like cycles. For the mesoscopic engine a Brownian particle trapped by an optical tweezers is considered. The dynamics of this stochastic engine is described as an overdamped Langevin equation with a harmonic potential, whereas is in contact with two thermal baths at different temperatures, namely, hot ($T_h$) and cold ($T_c$). The harmonic oscillator Langevin equation is transformed into a macroscopic equation associated with the mean value $\langle x^2(t)\rangle$ using the original Langevin approach. At equilibrium stationary state this quantity satisfies a state-like equation from which the thermodynamic properties are calculated. To obtained the efficiency at maximum power it is considered the finite-time cycle processes under the framework of low dissipation approach.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-09T07:03:49Z</published>
+    <arxiv:comment>2 3pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>O. Contreras-Vergara</name>
+    </author>
+    <author>
+      <name>N. Sánchez-Salas</name>
+    </author>
+    <author>
+      <name>G. Valencia-Ortega</name>
+    </author>
+    <author>
+      <name>J. I. Jiménez-Aquino</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.108.014123</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.108.014123" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.07573v2</id>
+    <title>Thermodynamic engine powered by anisotropic fluctuations</title>
+    <updated>2022-03-23T15:50:06Z</updated>
+    <link href="https://arxiv.org/abs/2203.07573v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.07573v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The purpose of this work is to present the concept of an autonomous Stirling-like engine powered by anisotropy of thermodynamic fluctuations. Specifically, simultaneous contact of a thermodynamic system with two heat baths along coupled degrees of freedom generates torque and circulatory currents -- an arrangement referred to as a Brownian gyrator. The embodiment that constitutes the engine includes an inertial wheel to sustain rotary motion and average out the generated fluctuating torque, ultimately delivering power to an external load. We detail an electrical model for such an engine that consists of two resistors in different temperatures and three reactive elements in the form of variable capacitors. The resistors generate Johnson-Nyquist current fluctuations that power the engine, while the capacitors generate driving forces via a coupling of their dielectric material with the inertial wheel. A proof-of-concept is established via stability analysis to ensure the existence of a stable periodic orbit generating sustained power output. We conclude by drawing a connection to the dynamics of a damped pendulum with constant torque and to those of a macroscopic Stirling engine. The sought insights aim at nano-engines and biological processes that are similarly powered by anisotropy in temperature and chemical potentials.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-15T00:46:34Z</published>
+    <arxiv:comment>6 pages, 6 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Olga Movilla Miangolarra</name>
+    </author>
+    <author>
+      <name>Amirhossein Taghvaei</name>
+    </author>
+    <author>
+      <name>Yongxin Chen</name>
+    </author>
+    <author>
+      <name>Tryphon T. Georgiou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0411002v5</id>
+    <title>On umbral extensions of Stirling numbers and Dobinski-like formulas</title>
+    <updated>2005-10-20T02:12:47Z</updated>
+    <link href="https://arxiv.org/abs/math/0411002v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0411002v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Umbral extensions of the stirling numbers of the second kind are considered and the resulting dobinski-like various formulas including new ones are presented. These extensions naturally encompass the two well known q-extensions. The further consecutive umbral extensions q-stirling numbers are therefore realized here in a two-fold way. The fact that the umbral q-extended dobinski formula may also be interpreted as the average of powers of random variable with the q-poisson distribution singles out the q-extensions which appear to be a kind of singular point in the domain of umbral extensions as expressed by corresponding two observations. Other relevant possibilities are tackled with the paper`s closing down questions and suggestions with respect to other already existing extensions while a brief limited survey of these other type extensions is being delivered. There the newton interpolation formula and divided differences appear helpful and inevitable along with umbra symbolic language in describing properties of general exponential polynomials of touchard and their possible generalizations. Exponential structures or algebraically equivalent prefabs with their exponential formula appear to be also naturally relevant.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-10-31T23:58:19Z</published>
+    <arxiv:comment>40 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. Stud. Contemp. Math., Vol 12, no. 1, (2006) 73-100</arxiv:journal_ref>
+    <author>
+      <name>A. K. Kwasniewski</name>
+    </author>
+  </entry>
+</feed>

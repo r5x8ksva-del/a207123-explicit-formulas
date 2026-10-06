@@ -6,13 +6,13 @@
             self-checks: Gamma reflection vs recursion rel 0 ; J two scales rel 1.4E-94 ; J quad est 1.8E-94 ; J:levels=5 h=2^-6/levels=5 h=2^-6
     precision: cancellation ~240 digits -> working 290 (+20 guard); target abs err 1e-289.7
     series: N = 166 terms (exact phi_n), Cauchy tail bound 1e-297.0, |A| = -2.59733E-3, max|term| = 7.30E-3  (0.0s)
-    integral: B0 = 2.5978228E-3  B5 = 2.5858307E-3  B = 2.5973341E-3 ; quad est |dB| <= 2.40E-306 ; levels=7 h=2^-8  (10.4s)
+    integral: B0 = 2.5978228E-3  B5 = 2.5858307E-3  B = 2.5973341E-3 ; quad est |dB| <= 2.40E-306 ; levels=7 h=2^-8  (12.4s)
     K_def    = -1.96150778888415938035998391179E-242
     K_closed = -1.96150778888415938035998391179E-242
     rel |K_def - K_closed|/|K| = 9.59E-58    (error budget of K_def / |K| <= 4.64E-56)
     diagnostics: Prym half rel dev 3.50E-58 ; x^5 half vs Gamma(1-lam) J rel dev 2.02E-57
     corollary: 1 < K/Gamma(-lam) = 1.57751499086E+0 < 2-x = 1.82 : True ; sign(K_def) = -, (-1)^ceil(lam) = -1 : True
-PASS x=9/50  rel_dev=9.59E-58  digits_used=310  (10.6s)
+PASS x=9/50  rel_dev=9.59E-58  digits_used=310  (12.6s)
 ====================================================================================================
 [2] x = 21/100 = 0.2100   lambda = 790000/9261 = 85.3039628550   frac(lambda) = 0.3040   ceil = 86
     closed: Gamma(-lam) = 3.532084579462180464427033E-129   J = 1.535897487116025412969843E+1   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.535091325536352093624564E+0
@@ -20,13 +20,13 @@ PASS x=9/50  rel_dev=9.59E-58  digits_used=310  (10.6s)
             self-checks: Gamma reflection vs recursion rel 0 ; J two scales rel 7.2E-94 ; J quad est 1.3E-94 ; J:levels=5 h=2^-6/levels=5 h=2^-6
     precision: cancellation ~126 digits -> working 176 (+20 guard); target abs err 1e-176.3
     series: N = 111 terms (exact phi_n), Cauchy tail bound 1e-179.1, |A| = -4.26029E-3, max|term| = 1.22E-2  (0.0s)
-    integral: B0 = 4.2620232E-3  B5 = 4.2322807E-3  B = 4.2602947E-3 ; quad est |dB| <= 3.56E-193 ; levels=6 h=2^-7  (1.7s)
+    integral: B0 = 4.2620232E-3  B5 = 4.2322807E-3  B = 4.2602947E-3 ; quad est |dB| <= 3.56E-193 ; levels=6 h=2^-7  (1.6s)
     K_def    = 5.42207239899310735557998649818E-129
     K_closed = 5.42207239899310735557998649818E-129
     rel |K_def - K_closed|/|K| = 3.27E-53    (error budget of K_def / |K| <= 1.48E-51)
     diagnostics: Prym half rel dev 6.20E-54 ; x^5 half vs Gamma(1-lam) J rel dev 8.22E-53
     corollary: 1 < K/Gamma(-lam) = 1.53509132554E+0 < 2-x = 1.79 : True ; sign(K_def) = +, (-1)^ceil(lam) = +1 : True
-PASS x=21/100  rel_dev=3.27E-53  digits_used=196  (1.9s)
+PASS x=21/100  rel_dev=3.27E-53  digits_used=196  (1.8s)
 ====================================================================================================
 [3] x = 23/100 = 0.2300   lambda = 770000/12167 = 63.2859373716   frac(lambda) = 0.2859   ceil = 64
     closed: Gamma(-lam) = 6.177267524690150119528131E-88   J = 1.249675200095493480599265E+1   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.509030199254897359452498E+0
@@ -34,13 +34,13 @@ PASS x=21/100  rel_dev=3.27E-53  digits_used=196  (1.9s)
             self-checks: Gamma reflection vs recursion rel 0 ; J two scales rel 1.6E-94 ; J quad est 8.0E-95 ; J:levels=5 h=2^-6/levels=5 h=2^-6
     precision: cancellation ~85 digits -> working 135 (+20 guard); target abs err 1e-135.0
     series: N = 91 terms (exact phi_n), Cauchy tail bound 1e-138.6, |A| = -5.71749E-3, max|term| = 1.67E-2  (0.0s)
-    integral: B0 = 5.7211437E-3  B5 = 5.6704349E-3  B = 5.7174940E-3 ; quad est |dB| <= 1.17E-140 ; levels=5 h=2^-6  (0.4s)
+    integral: B0 = 5.7211437E-3  B5 = 5.6704349E-3  B = 5.7174940E-3 ; quad est |dB| <= 1.17E-140 ; levels=5 h=2^-6  (0.5s)
     K_def    = 9.32168324363398382888659978827E-88
     K_closed = 9.32168324363398382888659978827E-88
     rel |K_def - K_closed|/|K| = 5.73E-54    (error budget of K_def / |K| <= 2.97E-52)
     diagnostics: Prym half rel dev 4.28E-55 ; x^5 half vs Gamma(1-lam) J rel dev 1.61E-53
     corollary: 1 < K/Gamma(-lam) = 1.50903019925E+0 < 2-x = 1.77 : True ; sign(K_def) = +, (-1)^ceil(lam) = +1 : True
-PASS x=23/100  rel_dev=5.73E-54  digits_used=155  (0.6s)
+PASS x=23/100  rel_dev=5.73E-54  digits_used=155  (0.7s)
 ====================================================================================================
 [4] x = 7/25 = 0.2800   lambda = 11250/343 = 32.7988338192   frac(lambda) = 0.7988   ceil = 33
     closed: Gamma(-lam) = -1.240485798874589076246389E-36   J = 7.976122783527926812878095E+0   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.450236178884584412733343E+0
@@ -124,7 +124,7 @@ PASS x=3/5  rel_dev=7.56E-54  digits_used=70  (0.3s)
     rel |K_def - K_closed|/|K| = 8.40E-55    (error budget of K_def / |K| <= 3.67E-52)
     diagnostics: Prym half rel dev 1.13E-70 ; x^5 half vs Gamma(1-lam) J rel dev 6.91E-54
     corollary: 1 < K/Gamma(-lam) = 1.13838232204E+0 < 2-x = 1.3 : True ; sign(K_def) = -, (-1)^ceil(lam) = -1 : True
-PASS x=7/10  rel_dev=8.40E-55  digits_used=70  (0.4s)
+PASS x=7/10  rel_dev=8.40E-55  digits_used=70  (0.3s)
 ====================================================================================================
 [10] x = 3/4 = 0.7500   lambda = 16/27 = 0.5925925926   frac(lambda) = 0.5926   ceil = 1
     closed: Gamma(-lam) = -3.673519470003907147927082E+0   J = 7.996346836574851658479046E-1   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.112448627389333851447362E+0
@@ -138,7 +138,7 @@ PASS x=7/10  rel_dev=8.40E-55  digits_used=70  (0.4s)
     rel |K_def - K_closed|/|K| = 1.45E-53    (error budget of K_def / |K| <= 9.31E-51)
     diagnostics: Prym half rel dev 2.37E-70 ; x^5 half vs Gamma(1-lam) J rel dev 1.43E-52
     corollary: 1 < K/Gamma(-lam) = 1.11244862739E+0 < 2-x = 1.25 : True ; sign(K_def) = -, (-1)^ceil(lam) = -1 : True
-PASS x=3/4  rel_dev=1.45E-53  digits_used=70  (0.4s)
+PASS x=3/4  rel_dev=1.45E-53  digits_used=70  (0.3s)
 ====================================================================================================
 [11] x = 4/5 = 0.8000   lambda = 25/64 = 0.3906250000   frac(lambda) = 0.3906   ceil = 1
     closed: Gamma(-lam) = -3.758260632711314587940175E+0   J = 6.862588948938482546098876E-1   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.087841138546412576590066E+0
@@ -182,4 +182,4 @@ PASS x=17/20  rel_dev=3.04E-54  digits_used=70  (0.3s)
     corollary: 1 < K/Gamma(-lam) = 1.04202442244E+0 < 2-x = 1.1 : True ; sign(K_def) = -, (-1)^ceil(lam) = -1 : True
 PASS x=9/10  rel_dev=4.67E-55  digits_used=70  (0.3s)
 ====================================================================================================
-SUMMARY t1: points=13 FAIL=0 worst rel dev=3.27E-53 elapsed 16.3s
+SUMMARY t1: points=13 FAIL=0 worst rel dev=3.27E-53 elapsed 18.3s

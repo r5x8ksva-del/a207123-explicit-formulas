@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Ke6xE+Ac8LX4SHKv7T+as4XMThk</id>
+  <title>arXiv Query: search_query=abs:Stirling AND (abs:"single sum" OR abs:"no closed form" OR abs:"closed form") AND abs:binomial&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:25:05Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Stirling+AND+((abs:%22single+sum%22+OR+(abs:%22no+closed+form%22+OR+abs:%22closed+form%22))+AND+abs:binomial)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>14</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2206.08837v1</id>
+    <title>Moment Generating Stirling Numbers and Applications</title>
+    <updated>2022-06-17T15:35:07Z</updated>
+    <link href="https://arxiv.org/abs/2206.08837v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.08837v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we investigate certain combinatorial numbers, the \textit{moment generating Stirling numbers}. They are a special case of Hsu's generalized Stirling numbers and satisfy many more properties and combinatorial identities than are known in the general case. As application, we provide the computation of the moments and central moments of the phase type distribution, the recurrence time in Markov chains, the geometric distribution, the negative binomial distribution and of a class of distributions generalizing the negative binomial distribution. All computations can be performed in closed form without recursion. We also present the relationship to the Markov renewal process.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-17T15:35:07Z</published>
+    <arxiv:comment>26 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ludwig Frank</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.09636v1</id>
+    <title>Three combinatorial sums involving central binomial coefficients</title>
+    <updated>2025-05-04T11:39:45Z</updated>
+    <link href="https://arxiv.org/abs/2505.09636v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.09636v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study three classes of combinatorial sums involving central binomial coefficients and harmonic numbers, odd harmonic numbers, and even indexed harmonic numbers, respectively. In each case we use summation by parts to derive recursive expressions for these sums. In addition, we offer an alternative approach to express one class of sums and some related sums in closed form in terms of Stirling numbers and r-Stirling numbers of the second kind.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-04T11:39:45Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Kunle Adegoke</name>
+    </author>
+    <author>
+      <name>Robert Frontczak</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.11960v1</id>
+    <title>New series with Cauchy and Stirling numbers, Part 2</title>
+    <updated>2021-03-17T11:53:23Z</updated>
+    <link href="https://arxiv.org/abs/2103.11960v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.11960v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We evaluate in closed form several series involving products of Cauchy numbers with other special numbers (harmonic, skew-harmonic, hyperharmonic, and central binomial). Similar results are obtained with series involving Stirling numbers of the first kind. We focus on several particular cases which give new closed forms for Euler sums of hyperharmonic numbers and products of hyperharmonic and harmonic numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-17T11:53:23Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Khristo N. Boyadzhiev</name>
+    </author>
+    <author>
+      <name>Levent Kargın</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.15307v1</id>
+    <title>Matrix products of binomial coefficients and unsigned Stirling numbers</title>
+    <updated>2020-12-30T20:02:10Z</updated>
+    <link href="https://arxiv.org/abs/2012.15307v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.15307v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study sums of the form $\sum_{k=m}^n a_{nk} b_{km}$, where $a_{nk}$ and $b_{km}$ are binomial coefficients or unsigned Stirling numbers. In a few cases they can be written in closed form. Failing that, the sums still share many common features: combinatorial interpretations, Pascal-like recurrences, inverse relations with their signed versions, and interpretations as coefficients of change between polynomial bases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-30T20:02:10Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proceedings of the 3rd Croatian Combinatorial Days, June 2021</arxiv:journal_ref>
+    <author>
+      <name>Marin Knežević</name>
+    </author>
+    <author>
+      <name>Vedran Krčadinac</name>
+    </author>
+    <author>
+      <name>Lucija Relić</name>
+    </author>
+    <arxiv:doi>10.5592/CO/CCD.2020.04</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5592/CO/CCD.2020.04" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1803.05943v1</id>
+    <title>Closed form expressions for Appell polynomials</title>
+    <updated>2018-03-15T18:45:27Z</updated>
+    <link href="https://arxiv.org/abs/1803.05943v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.05943v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that any Appell sequence can be written in closed form as a forward difference transformation of the identity. Such transformations are actually multipliers in the abelian group of the Appell polynomials endowed with the operation of binomial convolution. As a consequence, we obtain explicit expressions for higher order convolution identities referring to various kinds of Appell polynomials in terms of the Stirling numbers. Applications of the preceding results to generalized Bernoulli and Apostol-Euler polynomials of real order are discussed in detail.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-15T18:45:27Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>José A. Adell</name>
+    </author>
+    <author>
+      <name>Alberto Lekuona</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.19844v2</id>
+    <title>Binomial probabilities at a fixed distance from the mode: size-biasing and the complete asymptotic expansion</title>
+    <updated>2026-07-31T17:00:38Z</updated>
+    <link href="https://arxiv.org/abs/2607.19844v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.19844v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study binomial probabilities at a fixed integer distance from the upper mode, in the
+  regime where the fractional part of the mean remains visible. The complete asymptotic
+  expansion is obtained to all orders, uniformly for the success probability in compact
+  subintervals of $(0,1)$ and for bounded shifts from the mode.
+  The main point is structural. A logarithmic tail in the standard local expansion is exactly
+  the binomial size-bias factor, and removing it leaves a pure Appell expansion. A second,
+  symmetric normalisation is governed by an even Appell sequence and recovers the classical
+  Stirling prefactor. The resulting coefficients explain the exact binomial mode rule, recover
+  the central-binomial expansions as a special case, and give closed forms for averaged
+  oscillating coefficients.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T07:30:15Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Neven Elezović</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.10224v2</id>
+    <title>Triangular Recurrences, Generalized Eulerian Numbers, and Related Number Triangles</title>
+    <updated>2023-01-26T22:07:39Z</updated>
+    <link href="https://arxiv.org/abs/2207.10224v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.10224v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many combinatorial and other number triangles are solutions of recurrences of the Graham-Knuth-Patashnik (GKP) type. Such triangles and their defining recurrences are investigated analytically. They are acted on by a transformation group generated by two involutions: a left-right reflection and an upper binomial transformation, acting row-wise. The group also acts on the bivariate exponential generating function (EGF) of the triangle. By the method of characteristics, the EGF of any GKP triangle has an implicit representation in terms of the Gauss hypergeometric function. There are several parametric cases when this EGF can be obtained in closed form. One is when the triangle elements are the generalized Stirling numbers of Hsu and Shiue. Another is when they are generalized Eulerian numbers of a newly defined kind. These numbers are related to the Hsu-Shiue ones by an upper binomial transformation, and can be viewed as coefficients of connection between polynomial bases, in a manner that generalizes the classical Worpitzky identity. Many identities involving these generalized Eulerian numbers and related generalized Narayana numbers are derived, including closed-form evaluations in combinatorially significant cases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-20T22:50:14Z</published>
+    <arxiv:comment>62 pages, final version, accepted by Advances in Applied Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. in Appl. Math. 146 (2023), Paper No. 102485, 62 pp</arxiv:journal_ref>
+    <author>
+      <name>Robert S. Maier</name>
+    </author>
+    <arxiv:doi>10.1016/j.aam.2023.102485</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aam.2023.102485" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.10686v8</id>
+    <title>Maclaurin's series expansions for positive integer powers of inverse (hyperbolic) sine and related functions, specific values of partial Bell polynomials, and two applications</title>
+    <updated>2021-11-11T14:24:41Z</updated>
+    <link href="https://arxiv.org/abs/2101.10686v8" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.10686v8" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the paper, the authors establish Maclaurin's series expansions and series identities for positive integer powers of the inverse sine function, for positive integer powers of the inverse hyperbolic sine function, for the composite of incomplete gamma functions with the inverse hyperbolic sine function, for positive integer powers of the inverse tangent function, and for positive integer powers of the inverse hyperbolic tangent function, in terms of the first kind Stirling numbers and binomial coefficients, apply the newly established Maclaurin's series expansion for positive integer powers of the inverse sine function to derive a closed-form formula for specific values of partial Bell polynomials and to derive a series representation of the generalized logsine function, and deduce several combinatorial identities involving the first kind Stirling numbers. Some of these results simplify and unify some known ones. All of these newly established Maclaurin's series expansions of positive integer powers of the inverse (hyperbolic) sine and tangent functions can be used to derive infinite series representations of the circular constant Pi and of positive integer powers of Pi.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-26T10:24:49Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Series expansions of powers of arcsine, closed forms for special values of Bell polynomials, and series representations of generalized logsine functions, AIMS Mathematics, vol. 6 (2021), no. 7, 7494--7517</arxiv:journal_ref>
+    <author>
+      <name>Bai-Ni Guo</name>
+    </author>
+    <author>
+      <name>Dongkyu Lim</name>
+    </author>
+    <author>
+      <name>Feng Qi</name>
+    </author>
+    <arxiv:doi>10.2298/AADM210401017G</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2298/AADM210401017G" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.04663v3</id>
+    <title>A note on "exotic integrals"</title>
+    <updated>2022-05-11T12:46:55Z</updated>
+    <link href="https://arxiv.org/abs/2204.04663v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.04663v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider Bernoulli measures $μ_p$ on the interval $[0,1]$. For the standard Lebesgue measure the digits $0$ and $1$ in the binary representation of real numbers appear with an equal probability $1/2$. For the Bernoulli measures, the digits $0$ and $1$ appear with probabilities $p$ and $1-p$, respectively. We provide explicit expressions for various $μ_p$-integrals. In particular, integrals of polynomials are expressed in terms of the determinants of special Hessenberg matrices, which, in turn, are constructed from the Pascal matrices of binomial coefficients. This allows us to find closed-form expressions for the Fourier coefficients of $μ_p$ in the Legendre polynomial basis. At the same time, the trigonometric Fourier coefficients are values of some special entire function, which admits an explicit infinite product expansion and satisfies interesting properties, including connections with the Stirling numbers and the polylogarithm.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-10T11:39:09Z</published>
+    <arxiv:comment>In September 2021, I submitted the article to a journal where Prof. Strichartz was one of the editors. Unfortunately, he passed away in December 2021. Yesterday, in April 2022, the main editor of the journal decided to withdraw my submission because no one is able to support it at the moment. Update: new interesting formulas and connections with the polylogarithm added to version 2 and 3</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Anton A. Kutsenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26846v5</id>
+    <title>Signed Generalized Stirling Polynomials, Nested Sums, and Hyperbolic Secant Integral Identities</title>
+    <updated>2026-10-05T17:52:50Z</updated>
+    <link href="https://arxiv.org/abs/2605.26846v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26846v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study signed generalized Stirling polynomials $P_k(m,x)$ arising in closed forms for Malmsten-type hyperbolic secant integrals. Their product structure is used to prove recurrences, gamma--polygamma formulas for $P_{m-s}(m,x)$, a central vanishing identity, a finite approximation to $\cosh πx$, and a limit formula for $π$. We identify these polynomials as signed residues of the equal-period Barnes multiple zeta function, derive their reflection formula, and obtain finite parity-cancellation and Stirling cycle-number identities. We also compare the centered polynomials with a classical Meixner--Pollaczek orthogonal family. We evaluate finite nested sums built from the sequence $χ_n$. Fixing the lower bounds turns these sums into coefficient-counting problems: common lower bounds give binomial coefficients and staircase bounds give Catalan numbers. Combining these counts with known formulas for $χ_j$ yields explicit hyperbolic-secant integral evaluations involving Catalan's constant, zeta values, and polygamma values. A Wolfram Language package accompanies the formulas.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T11:00:23Z</published>
+    <arxiv:comment>34 pages; added consequences of Yakubovich's integral evaluations</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Abdulhafeez A. Abdulsalam</name>
+    </author>
+    <author>
+      <name>Michael J. Schlosser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.21643v1</id>
+    <title>Partial Deranged Bell Numbers and Their Combinatorial Properties</title>
+    <updated>2025-07-29T09:58:46Z</updated>
+    <link href="https://arxiv.org/abs/2507.21643v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.21643v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a novel generalization of deranged Bell numbers by defining the partial deranged Bell numbers $w_{n,r}$, which count the number of set partitions of $\left[ n\right] $ with exactly $r$ fixed blocks, while the remaining blocks are deranged. This construction provides a unified framework that connects partial derangements, Stirling numbers, and ordered Bell numbers. We investigate their combinatorial properties, including explicit formulas, generating functions, and recurrence relations. Moreover, we demonstrate that these numbers are expressible in terms of classical sequences such as deranged Bell numbers and ordered Bell numbers, and reveal their relationship to complementary Bell numbers, offering insights relevant to Wilf's conjecture. Notably, we derive the identity \[ \tildeφ_{n}=\Tilde{w}_{n,0}-\Tilde{w}_{n,1}=\tilde{w}_{n-1,0}-2\tilde {w}_{n-1,2}, \] which illustrates their structural connection to complementary Bell numbers. We also introduce a polynomial expansion for these numbers and explore their connections with exponential polynomials, geometric polynomials, and Bernoulli numbers. These relationships facilitate the derivation of closed-form expressions for certain finite summations involving Stirling numbers of the second kind, Bernoulli numbers, and binomial coefficients, articulated through partial derangement numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-29T09:58:46Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Yahia Djemmada</name>
+    </author>
+    <author>
+      <name>Levent Kargın</name>
+    </author>
+    <author>
+      <name>Mümün Can</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.10332v4</id>
+    <title>Boson Operator Ordering Identities from Generalized Stirling and Eulerian Numbers</title>
+    <updated>2024-02-09T10:17:18Z</updated>
+    <link href="https://arxiv.org/abs/2308.10332v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.10332v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ordering identities in the Weyl-Heisenberg algebra generated by single-mode boson operators are investigated. A boson string composed of creation and annihilation operators can be expanded as a linear combination of other such strings, the simplest example being a normal ordering. The case when each string contains only one annihilation operator is already combinatorially nontrivial. Two kinds of expansion are derived: (i) that of a power of a string $Ω$ in lower powers of another string $Ω'$, and (ii) that of a power of $Ω$ in twisted versions of the same power of $Ω'$. The expansion coefficients are shown to be, respectively, generalized Stirling numbers of Hsu and Shiue, and certain generalized Eulerian numbers. Many examples are given. These combinatorial numbers are binomial transforms of each other, and their theory is developed, emphasizing schemes for computing them: summation formulas, Graham-Knuth-Patashnik (GKP) triangular recurrences, terminating hypergeometric series, and closed-form expressions. The results on the first type of expansion subsume a number of previous results on the normal ordering of boson strings.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-20T18:14:40Z</published>
+    <arxiv:comment>35 pages, final version, to appear in Advances in Applied Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. in Appl. Math. 156 (2024), Paper No. 102678, 34 pp</arxiv:journal_ref>
+    <author>
+      <name>Robert S. Maier</name>
+    </author>
+    <arxiv:doi>10.1016/j.aam.2024.102678</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aam.2024.102678" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.10990v2</id>
+    <title>Polynomial Moments with a weighted Zeta Square measure on the critical line</title>
+    <updated>2023-09-26T17:53:45Z</updated>
+    <link href="https://arxiv.org/abs/2209.10990v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.10990v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove closed-form identities for the sequence of moments $\int t^{2n}|Γ(s)ζ(s)|^2dt$ on the whole critical line $s=1/2+it$. They are finite sums involving binomial coefficients, Bernoulli numbers, Stirling numbers and $π$, especially featuring the numbers $ζ(n)B_n/n$ unveiled by Bettin and Conrey. Their main power series identity, together with our previous work, allows for a short proof of an auxiliary result: the computation of the $k$-th derivatives at $1$ of the "exponential auto-correlation" function studied in \cite{DH21a}. We also provide an elementary and self-contained proof of this secondary result. The starting point of our work is a remarkable identity proven by Ramanujan in 1915. %today interpreted as a Mellin-Plancherel isometry involving the $Γ$ and $ζ$ functions. The sequence of moments studied here, not to be confused with the moments of the Riemann zeta function, entirely characterizes $|ζ|$ on the critical line. They arise in some generalizations of the Nyman-Beurling criterion, but might be of independent interest for %various other applications, as well as for the numerous connections concerning the above mentioned numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-22T13:22:59Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Sébastien Darses</name>
+    </author>
+    <author>
+      <name>Erwan Hillion</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.07120v1</id>
+    <title>Chromatic Feature Vectors for 2-Trees: Exact Formulas for Partition Enumeration with Network Applications</title>
+    <updated>2025-12-08T03:01:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.07120v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.07120v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish closed-form enumeration formulas for chromatic feature vectors of 2-trees under the bichromatic triangle constraint. These efficiently computable structural features derive from constrained graph colorings where each triangle uses exactly two colors, forbidding monochromatic and rainbow triangles, a constraint arising in distributed systems where components avoid complete concentration or isolation. For theta graphs Theta_n, we prove r_k(Theta_n) = S(n-2, k-1) for k &gt;= 3 (Stirling numbers of the second kind) and r_2(Theta_n) = 2^(n-2) + 1, computable in O(n) time. For fan graphs Phi_n, we establish r_2(Phi_n) = F_{n+1} (Fibonacci numbers) and derive explicit formulas r_k(Phi_n) = sum_{t=k-1}^{n-1} a_{n-1,t} * S(t, k-1) with efficiently computable binomial coefficients, achieving O(n^2) computation per component. Unlike classical chromatic polynomials, which assign identical features to all n-vertex 2-trees, bichromatic constraints provide informative structural features. While not complete graph invariants, these features capture meaningful structural properties through connections to Fibonacci polynomials, Bell numbers, and independent set enumeration. Applications include Byzantine fault tolerance in hierarchical networks, VM allocation in cloud computing, and secret-sharing protocols in distributed cryptography.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-08T03:01:50Z</published>
+    <arxiv:comment>18 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>J. Allagan</name>
+    </author>
+    <author>
+      <name>G. Morgan</name>
+    </author>
+    <author>
+      <name>S. Langley</name>
+    </author>
+    <author>
+      <name>R. Lopez-Bonilla</name>
+    </author>
+    <author>
+      <name>V. Deriglazov</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FEZsW97FdZyroOIJM1GtclCLaks</id>
+  <title>arXiv Query: search_query=abs:"binary matrices" AND abs:avoiding AND abs:patterns&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:28Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22binary+matrices%22+AND+(abs:avoiding+AND+abs:patterns)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2111.03159v2</id>
+    <title>Weak ascent sequences and related combinatorial structures</title>
+    <updated>2022-10-10T07:21:52Z</updated>
+    <link href="https://arxiv.org/abs/2111.03159v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.03159v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we introduce {\em weak ascent sequences}, a class of number sequences that properly contains ascent sequences. We show how these sequences uniquely encode each of the following objects: permutations avoiding a particular length-4 bivincular pattern; upper-triangular binary matrices that satisfy a column-adjacency rule; factorial posets that are weakly (3+1)-free. We also show how weak ascent sequences are related to a class of pattern avoiding inversion sequences that has been a topic of recent research by Auli and Elizalde. Finally, we consider the problem of enumerating these new sequences and give a closed form expression for the number of weak ascent sequences having a prescribed length and number of weak ascents.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-04T21:04:00Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Beáta Bényi</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Mark Dukes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4286v1</id>
+    <title>(a,b)-rectangle patterns in permutations and words</title>
+    <updated>2013-04-15T22:58:42Z</updated>
+    <link href="https://arxiv.org/abs/1304.4286v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4286v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce the notion of a $(a,b)$-rectangle pattern on permutations that not only generalizes the notion of successive elements (bonds) in permutations, but is also related to mesh patterns introduced recently by Brändén and Claesson. We call the $(k,k)$-rectangle pattern the $k$-box pattern. To provide an enumeration result on the maximum number of occurrences of the 1-box pattern, we establish an enumerative result on pattern-avoiding signed permutations.
+  Further, we extend the notion of $(k,\ell)$-rectangle patterns to words and binary matrices, and provide distribution of $(1,\ell)$-rectangle patterns on words; explicit formulas are given for up to 7 letter alphabets where $\ell \in \{1,2\}$, while obtaining distributions for larger alphabets depends on inverting a matrix we provide. We also provide similar results for the distribution of bonds over words. As a corollary to our studies we confirm a conjecture of Mathar on the number of "stable LEGO walls" of width 7 as well as prove three conjectures due to Hardin and a conjecture due to Barker. We also enumerate two sequences published by Hardin in the On-Line Encyclopedia of Integer Sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T22:58:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Jeffrey Remmel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.05878v1</id>
+    <title>Variable dimension non-overlapping matrices</title>
+    <updated>2020-06-10T15:04:16Z</updated>
+    <link href="https://arxiv.org/abs/2006.05878v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.05878v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Since some years, non-overlapping sets of strings (also called cross-bifix-free sets) have had an increasing interest in the frame of the researches about Theory of Codes. Recently some non-overlapping sets of strings with variable length were introduced. Moreover, the notion of non-overlapping strings has been naturally extended to the two dimensional case leading to several definitions of non-overlapping sets of matrices (or pictures). Starting from these results, in this paper we introduce non-overlapping sets of binary matrices having variable dimension. Indeed, we use non-overlapping variable length strings as rows of the matrices and imposing the avoidance of two consecutive patterns of length k, we get the desired sets of non-ovelapping matrices with variable dimension.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-10T15:04:16Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Elena Barcucci</name>
+    </author>
+    <author>
+      <name>Antonio Bernini</name>
+    </author>
+    <author>
+      <name>Renzo Pinzani</name>
+    </author>
+  </entry>
+</feed>

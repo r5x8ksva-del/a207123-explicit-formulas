@@ -1,0 +1,248 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  
+  <head>
+  
+  <link rel="stylesheet" href="/styles.css?v=20260826">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="OEIS,integer sequences,Sloane" />
+  
+  
+  
+  <title>A202097 - OEIS</title>
+  <link rel="search" type="application/opensearchdescription+xml" title="OEIS" href="/oeis.xml">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260826">
+  <link rel="icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=20260826">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260826">
+  <script>
+  var myURL = "\/A202097\/internal"
+  function redir() {
+      var host = document.location.hostname;
+      if(host != "oeis.org" && host != "127.0.0.1" && !/^([0-9.]+)$/.test(host) && host != "localhost" && host != "localhost.localdomain") {
+          document.location = "https"+":"+"//"+"oeis"+".org/" + myURL;
+      }
+  }
+  function sf() {
+      if(document.location.pathname == "/" && document.f) document.f.q.focus();
+  }
+  </script>
+  </head>
+  <body bgcolor=#ffffff onload="redir();sf()"><a href="https://oeis.org/cdn-cgi/content?id=Uq.t108vr8U.8oWJnBhMfjVwuZX3PRDubQRwcjE7AKk-1791320426.876785-1.2.1.1-lZtLwdumovJvJgFVYugA5cB.1oxouMEy9mEFOTQhj6yy6QcKQHJlmrNsFJpyGL3_" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+    <div class=loginbar>
+      <div class=login>
+      
+        <a href="/login?redirect=%2FA202097%2Finternal" rel="nofollow">login</a>
+      
+      </div>
+    </div>
+
+    <div class=center><div class=top>
+    <center>
+    <div class=donors>
+    The OEIS is supported by <a href="http://oeisf.org/#DONATE">the many generous donors to the OEIS Foundation</a>.
+    </div>
+
+    <div class=banner>
+    <a href="/"><picture>
+    <source media="(min-width: 830px)" srcset="/oeis-banner-wide.png 1x, /oeis-banner-wide@2x.png 2x" width="918" height="129">
+    <img class=banner border="0" width="540" height="129" src="/oeis-banner.png" srcset="/oeis-banner.png 1x, /oeis-banner@2x.png 2x" alt="A202097 - OEIS">
+    </picture></a>
+    </div>
+
+    
+    
+    
+    <div class="motdbox" style="justify-content: center;">
+        <div class="400k">
+         <p>Nominations for sequence A400000 are open, see <a href="https://oeis.org/wiki/Nominations_for_Sequence_A400000">here</a>.</p>
+        </div>
+        
+    </div>
+    
+    </center>
+    </div></div>
+
+    <div class=center><div class=pagebody>
+      
+    
+    <div class=searchbarcenter>
+        <form name=f action="/search" method="GET">
+            <div class=searchbargreet>
+                <div class=searchbar>
+                    <div class=searchq>
+                        <input class=searchbox maxLength=1024 name=q value="" title="Search Query">
+                        
+                        
+                        
+                        
+                    </div>
+                    <div class=searchsubmit>
+                        <input type=submit value="Search" name=go>
+                    </div>
+                    <div class=hints>
+                        <span class=hints><a href="/hints.html">Hints</a></span>
+                    </div>
+                </div>
+                <div class=searchgreet>
+                    (Greetings from <a href="/welcome">The On-Line Encyclopedia of Integer Sequences</a>!)
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class=sequence>
+        <div class=space1></div>
+        <div class=line></div>
+        
+        <div class=seqhead>
+            <div class=seqnumname>
+                <div class=seqnum>
+                    
+                        <a href="/A202097">A202097</a>
+                    
+                </div>
+                <div class=seqname>
+                    Number of (n+2) X 7 binary arrays avoiding patterns 001 and 011 in rows and columns.
+                    
+                </div>
+            </div>
+            <div class=scorerefs>
+                        
+                        2
+            </div>
+        </div>
+        
+            <div>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%I #22 Jun 28 2026 16:34:11
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%S 3000,22500,105000,490000,1715000,6002500,17287200,49787136,124467840,
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%T 311169600,698544000,1568160000,3234330000,6670805625,12847477500,
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%U 24743290000,45032787800,81959673796,142244061960,246869859600,411449766000,685749610000,1103691680000,1776355840000,2773290240000
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%N Number of (n&#43;2) X 7 binary arrays avoiding patterns 001 and 011 in rows and columns.
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%C Part of a family of width-w binary arrays avoiding 001 and 011 (w=3..9: A202093-A202099) with common formula a(n) = C(alpha&#43;E,E)*C(alpha&#43;O,O)*C(beta&#43;E,E)*C(beta&#43;O,O) where E=ceil(w/2), O=floor(w/2), alpha=floor((n&#43;3)/2), beta=floor((n&#43;2)/2). - _Christian Krause_, Jun 28 2026
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%H R. H. Hardin, &lt;a href=&#34;/A202097/b202097.txt&#34;&gt;Table of n, a(n) for n = 1..210&lt;/a&gt;
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%H &lt;a href=&#34;/index/Rec#order_28&#34;&gt;Index entries for linear recurrences with constant coefficients&lt;/a&gt;, signature (2, 12, -26, -65, 156, 208, -572, -429, 1430, 572, -2574, -429, 3432, 0, -3432, 429, 2574, -572, -1430, 429, 572, -208, -156, 65, 26, -12, -2, 1).
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F a(n) = 2*a(n-1) &#43;12*a(n-2) -26*a(n-3) -65*a(n-4) &#43;156*a(n-5) &#43;208*a(n-6) -572*a(n-7) -429*a(n-8) &#43;1430*a(n-9) &#43;572*a(n-10) -2574*a(n-11) -429*a(n-12) &#43;3432*a(n-13) -3432*a(n-15) &#43;429*a(n-16) &#43;2574*a(n-17) -572*a(n-18) -1430*a(n-19) &#43;429*a(n-20) &#43;572*a(n-21) -208*a(n-22) -156*a(n-23) &#43;65*a(n-24) &#43;26*a(n-25) -12*a(n-26) -2*a(n-27) &#43;a(n-28). - Proved by _Christian Krause_, Jun 28 2026
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F From _Christian Krause_, Jun 28 2026: (Start)
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F a(n) = (n&#43;4)^4 * (n&#43;6)^4 * (n&#43;8)^4 * (n&#43;10)^2 / 339738624 for n even.
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F a(n) = (n&#43;3)^2 * (n&#43;5)^4 * (n&#43;7)^4 * (n&#43;9)^3 * (n&#43;11) / 339738624 for n odd. (End)
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F From _Amiram Eldar_, Jun 28 2026: (Start)
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F Sum_{n&gt;=1} 1/a(n) = 112*Pi^4 &#43; 33110*Pi^2/3 - 240*zeta(3) - 430375889/3600.
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%F Sum_{n&gt;=1} (-1)^(n&#43;1)/a(n) = 123627329/3600 &#43; 1680*zeta(3) - 176*Pi^4/5 - 10010*Pi^2/3. (End)
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%e Some solutions for n=2:
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%e ..1..1..1..1..0..0..0....1..1..1..1..0..0..0....1..1..1..1..1..1..1
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%e ..1..1..0..1..0..1..0....1..1..1..1..1..0..0....1..1..0..1..0..1..0
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%e ..0..1..0..1..0..0..0....1..1..1..1..0..0..0....1..0..1..0..1..0..1
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%e ..1..0..0..0..0..0..0....1..1..0..0..0..0..0....1..1..0..1..0..0..0
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%t a[n_] := If[EvenQ[n], (n&#43;4)^4 * (n&#43;6)^4 * (n&#43;8)^4 * (n&#43;10)^2, (n&#43;3)^2 * (n&#43;5)^4 * (n&#43;7)^4 * (n&#43;9)^3 * (n&#43;11)] / 339738624; Array[a, 25] (* _Amiram Eldar_, Jun 28 2026 *)
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%Y Column 5 of A202100.
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%Y Cf. A202093.
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%K nonn,easy
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%O 1,1
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt>%A _R. H. Hardin_, Dec 11 2011
+</tt></p>
+            
+            <p style="text-indent: -2em; margin-left: 2em; margin-top: 0; margin-bottom: 0;"><tt></tt></p>
+            
+            </div>
+        
+        <div class=space10></div>
+    </div>
+
+    </div></div>
+
+    <p>
+
+    <div class=footerpad></div>
+    <div class=footer>
+    <center>
+    <div class=bottom>
+    <div class=linksbar>
+      <a href="/">Lookup</a>
+      <a href="/wiki/Welcome"><font color="red">Welcome</font></a>
+      <a href="/wiki/Main_Page"><font color="red">Wiki</font></a>
+      <a href="/account">Register</a>
+      
+      <a href="/play.html">Music</a>
+      <a href="/plot2.html">Plot 2</a>
+      <a href="/demo1.html">Demos</a>
+      <a href="/wiki/Index_to_OEIS">Index</a>
+      <a href="/webcam">WebCam</a>
+      <a href="/Submit.html">Contribute</a>
+      <a href="/eishelp2.html">Format</a>
+      <a href="/wiki/Style_Sheet">Style Sheet</a>
+      <a href="/transforms.html">Transforms</a>
+      <a href="/ol.html">Superseeker</a>
+      <a href="/recent">Recents</a>
+    </div>
+    <div class=linksbar>
+      <a href="/community.html">The OEIS Community</a>
+    </div>
+    <div class=linksbar>
+      Maintained by <a href="http://oeisf.org">The OEIS Foundation Inc.</a>
+    </div>
+
+    <div class=dbinfo>Last modified October  6 16:59 EDT 2026.  Contains 400028 sequences.</div>
+    <div class=legal>
+    <a href="/wiki/Legal_Documents">License Agreements, Terms of Use, Privacy Policy</a>
+    </div>
+
+    </div>
+    </center>
+    </div>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a467987bfe9b9a1a',t:'MTc5MTMyMDQyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

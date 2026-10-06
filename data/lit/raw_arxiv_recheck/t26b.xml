@@ -1,0 +1,627 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8KcZQAXWLSNFI6BCpmKuoGAS1LU</id>
+  <title>arXiv Query: search_query=(abs:residue OR abs:residues) AND abs:norm AND (abs:"generating function" OR abs:sum)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:25:07Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:residue+OR+abs:residues)+AND+(abs:norm+AND+(abs:%22generating+function%22+OR+abs:sum))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>79</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2207.08251v3</id>
+    <title>Maximum norm a posteriori error estimates for convection-diffusion problems</title>
+    <updated>2023-01-04T16:53:29Z</updated>
+    <link href="https://arxiv.org/abs/2207.08251v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.08251v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove residual-type a posteriori error estimates in the maximum norm for a linear scalar elliptic convection-diffusion problem that may be singularly perturbed. Similar error analysis in the energy norm by Verfürth indicates that a dual norm of the {convective derivative of the} error must be added to the natural energy norm in order for the natural residual estimator to be reliable and efficient. We show that the situation is similar for the maximum norm. In particular, we define a mesh-dependent weighted seminorm of the convective error which functions as a maximum-norm counterpart to the dual norm used in the energy norm setting. The total error is then defined as the sum of this seminorm, the maximum norm of the error, and data oscillation. The natural maximum norm residual error estimator is shown to be equivalent to this total error notion, with constant independent of singular perturbation parameters. These estimates are proved under the assumption that certain natural estimates hold for the Green's function for the problem at hand. Numerical experiments confirm that our estimators effectively capture the maximum-norm error behavior for singularly perturbed problems, and can effectively drive adaptive refinement in order to capture layer phenomena.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-17T18:26:17Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Alan Demlow</name>
+    </author>
+    <author>
+      <name>Sebastian Franz</name>
+    </author>
+    <author>
+      <name>Natalia Kopteva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.08718v4</id>
+    <title>Learning Nash Equilibrium for General-Sum Markov Games from Batch Data</title>
+    <updated>2017-03-06T11:02:10Z</updated>
+    <link href="https://arxiv.org/abs/1606.08718v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.08718v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper addresses the problem of learning a Nash equilibrium in $γ$-discounted multiplayer general-sum Markov Games (MG). A key component of this model is the possibility for the players to either collaborate or team apart to increase their rewards. Building an artificial player for general-sum MGs implies to learn more complex strategies which are impossible to obtain by using techniques developed for two-player zero-sum MGs. In this paper, we introduce a new definition of $ε$-Nash equilibrium in MGs which grasps the strategy's quality for multiplayer games. We prove that minimizing the norm of two Bellman-like residuals implies the convergence to such an $ε$-Nash equilibrium. Then, we show that minimizing an empirical estimate of the $L_p$ norm of these Bellman-like residuals allows learning for general-sum games within the batch setting. Finally, we introduce a neural network architecture named NashNetwork that successfully learns a Nash equilibrium in a generic multiplayer general-sum turn-based MG.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-28T14:14:14Z</published>
+    <arxiv:comment>20th International Conference on Artificial Intelligence and Statistics (AISTATS) 2017, Fort Lauderdale, Florida, USA. JMLR: W&amp;CP volume 54</arxiv:comment>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Julien Pérolat</name>
+    </author>
+    <author>
+      <name>Florian Strub</name>
+    </author>
+    <author>
+      <name>Bilal Piot</name>
+    </author>
+    <author>
+      <name>Olivier Pietquin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.08177v2</id>
+    <title>Profile decomposition in Sobolev spaces and decomposition of integral functionals II: homogeneous case</title>
+    <updated>2022-02-13T10:00:23Z</updated>
+    <link href="https://arxiv.org/abs/2109.08177v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.08177v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The present paper is devoted to a theory of profile decomposition for bounded sequences in \emph{homogeneous} Sobolev spaces, and it enables us to analyze the lack of compactness of bounded sequences. For every bounded sequence in homogeneous Sobolev spaces, the sequence is asymptotically decomposed into the sum of profiles with dilations and translations and a double suffixed residual term. One gets an energy decomposition in the homogeneous Sobolev norm. The residual term becomes arbitrarily small in the critical Lebesgue or Sobolev spaces of lower order, and then, the results of decomposition of integral functionals are obtained, which are important strict decompositions in the critical Lebesgue or Sobolev spaces where the residual term is vanishing.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-16T18:18:48Z</published>
+    <arxiv:comment>version 2, 35 pages. arXiv admin note: text overlap with arXiv:2109.08176</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Mizuho Okumura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.08176v3</id>
+    <title>Profile decomposition in Sobolev spaces and decomposition of integral functionals I: inhomogeneous case</title>
+    <updated>2022-02-15T12:32:14Z</updated>
+    <link href="https://arxiv.org/abs/2109.08176v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.08176v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The present paper is devoted to analysis of the lack of compactness of bounded sequences in \emph{inhomogeneous} Sobolev spaces, where bounded sequences might fail to be compact due to an isometric group action, that is, \emph{translation}. It will be proved that every bounded sequence $(u_n)$ has (possibly infinitely many) \emph{profiles}, and then the sequence is asymptotically decomposed into a sum of translated profiles and a double-suffixed residual term, where the residual term becomes arbitrarily small in appropriate Lebesgue or Sobolev spaces of lower order. To this end, functional analytic frameworks are established in an abstract way by making use of a group action $G$, in order to characterize profiles by $(u_n)$ and $G$. One also finds that a decomposition of the Sobolev norm into profiles is bounded by the supremum of the norm of $u_n$. Moreover, the profile decomposition leads to results of decomposition of integral functionals of subcritical order. It is noteworthy that the space where the decomposition of integral functionals holds is the same as that where the residual term is vanishing.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-16T18:18:09Z</published>
+    <arxiv:comment>version 3, 42 pages</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Mizuho Okumura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.01378v1</id>
+    <title>A Koopman Set-Membership Approach for Nonlinear Data-Driven Control with Stability Guarantees</title>
+    <updated>2026-05-31T18:08:20Z</updated>
+    <link href="https://arxiv.org/abs/2606.01378v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.01378v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proposes a data-driven controller design method for unknown nonlinear systems based on a Koopman bilinear realization. Using Koopman operator theory, the nonlinear system can be represented as a bilinear discrete-time system with a residual error term. The residual error is proportionally bounded by the norm of the lifted state and input, while the system matrices of the bilinear model are unknown. Assuming that bounds on the residual error are available, the unknown system matrices are characterized via a set-membership representation using the collected input-state data pairs of the nonlinear system. A data-driven controller design method is proposed to ensure stability for all bilinear systems within this set-membership description and for all admissible residual errors. More specifically, we design a rational state-feedback controller that stabilizes the bilinear model with residual error and, consequently, the original nonlinear system, by solving a sum-of-squares (SOS) program. The effectiveness of the proposed approach is demonstrated through numerical examples.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-31T18:08:20Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yifan Xie</name>
+    </author>
+    <author>
+      <name>Zuxun Xiong</name>
+    </author>
+    <author>
+      <name>Julian Berberich</name>
+    </author>
+    <author>
+      <name>Antonis Papachristodoulou</name>
+    </author>
+    <author>
+      <name>Frank Allgöwer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.7066v1</id>
+    <title>A General Reciprocity Law for Symbols on Arbitrary Vector Spaces</title>
+    <updated>2013-05-30T11:18:54Z</updated>
+    <link href="https://arxiv.org/abs/1305.7066v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.7066v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this work is to offer a general theory of reciprocity laws for symbols on arbitrary vector spaces, and to show that classical explicit reciprocity laws are particular cases of this theory (sum of valuations on a complete curve, Residue Theorem, Weil Reciprocity Law and the Reciprocity Law for the Hilbert Norm Residue Symbol). Moreover, several reciprocity laws introduced over the past few years by D. V. Osipov, A. N. Parshin, I. Horozov, I. Horozov - M. Kerr and the author -together with D. Hernández Serrano-, can also be deduced from this general expression.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-30T11:18:54Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Journal of Algebra and its Applications (2018)</arxiv:journal_ref>
+    <author>
+      <name>Fernando Pablos Romo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.00277v1</id>
+    <title>Self-Interference in Full-Duplex Multi-User MIMO Channels</title>
+    <updated>2017-01-01T18:36:34Z</updated>
+    <link href="https://arxiv.org/abs/1701.00277v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.00277v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a multi-user multiple-input multiple-output (MIMO) setup where full-duplex (FD) multi-antenna nodes apply linear beamformers to simultaneously transmit and receive multiple streams over Rician fading channels. The exact first and second positive moments of the residual self-interference (SI), involving the squared norm of a sum of non-identically distributed random variables, are derived in closed-form. The method of moments is hence invoked to provide a Gamma approximation for the residual SI distribution. The proposed theorem holds under arbitrary linear precoder/decoder design, number of antennas and streams, and SI cancellation capability.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-01T18:36:34Z</published>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Arman Shojaeifard</name>
+    </author>
+    <author>
+      <name>Kai-Kit Wong</name>
+    </author>
+    <author>
+      <name>Marco Di Renzo</name>
+    </author>
+    <author>
+      <name>Gan Zheng</name>
+    </author>
+    <author>
+      <name>Khairi Ashour Hamdi</name>
+    </author>
+    <author>
+      <name>Jie Tang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.02987v2</id>
+    <title>Variance Reduced Halpern Iteration for Finite-Sum Monotone Inclusions</title>
+    <updated>2023-10-26T17:47:10Z</updated>
+    <link href="https://arxiv.org/abs/2310.02987v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.02987v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Machine learning approaches relying on such criteria as adversarial robustness or multi-agent settings have raised the need for solving game-theoretic equilibrium problems. Of particular relevance to these applications are methods targeting finite-sum structure, which generically arises in empirical variants of learning problems in these contexts. Further, methods with computable approximation errors are highly desirable, as they provide verifiable exit criteria. Motivated by these applications, we study finite-sum monotone inclusion problems, which model broad classes of equilibrium problems. Our main contributions are variants of the classical Halpern iteration that employ variance reduction to obtain improved complexity guarantees in which $n$ component operators in the finite sum are ``on average'' either cocoercive or Lipschitz continuous and monotone, with parameter $L$. The resulting oracle complexity of our methods, which provide guarantees for the last iterate and for a (computable) operator norm residual, is $\widetilde{\mathcal{O}}( n + \sqrt{n}L\varepsilon^{-1})$, which improves upon existing methods by a factor up to $\sqrt{n}$. This constitutes the first variance reduction-type result for general finite-sum monotone inclusions and for more specific problems such as convex-concave optimization when operator norm residual is the optimality measure. We further argue that, up to poly-logarithmic factors, this complexity is unimprovable in the monotone Lipschitz setting; i.e., the provided result is near-optimal.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-04T17:24:45Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xufeng Cai</name>
+    </author>
+    <author>
+      <name>Ahmet Alacaoglu</name>
+    </author>
+    <author>
+      <name>Jelena Diakonikolas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21319v1</id>
+    <title>Variationally correct operator learning: Reduced basis neural operator with a posteriori error estimation</title>
+    <updated>2025-12-24T18:37:59Z</updated>
+    <link href="https://arxiv.org/abs/2512.21319v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21319v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Minimizing PDE-residual losses is a common strategy to promote physical consistency in neural operators. However, standard formulations often lack variational correctness, meaning that small residuals do not guarantee small solution errors due to the use of non-compliant norms or ad hoc penalty terms for boundary conditions. This work develops a variationally correct operator learning framework by constructing first-order system least-squares (FOSLS) objectives whose values are provably equivalent to the solution error in PDE-induced norms. We demonstrate this framework on stationary diffusion and linear elasticity, incorporating mixed Dirichlet-Neumann boundary conditions via variational lifts to preserve norm equivalence without inconsistent penalties. To ensure the function space conformity required by the FOSLS loss, we propose a Reduced Basis Neural Operator (RBNO). The RBNO predicts coefficients for a pre-computed, conforming reduced basis, thereby ensuring variational stability by design while enabling efficient training. We provide a rigorous convergence analysis that bounds the total error by the sum of finite element discretization bias, reduced basis truncation error, neural network approximation error, and statistical estimation errors arising from finite sampling and optimization. Numerical benchmarks validate these theoretical bounds and demonstrate that the proposed approach achieves superior accuracy in PDE-compliant norms compared to standard baselines, while the residual loss serves as a reliable, computable a posteriori error estimator.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-24T18:37:59Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Yuan Qiu</name>
+    </author>
+    <author>
+      <name>Wolfgang Dahmen</name>
+    </author>
+    <author>
+      <name>Peng Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.10987v5</id>
+    <title>Nuclear Norm Regularized Estimation of Panel Regression Models</title>
+    <updated>2026-02-09T17:10:20Z</updated>
+    <link href="https://arxiv.org/abs/1810.10987v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.10987v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we investigate panel regression models with interactive fixed effects. We propose two new estimation methods that are based on minimizing convex objective functions. The first method minimizes the sum of squared residuals with a nuclear (trace) norm regularization. The second method minimizes the nuclear norm of the residuals. We establish the consistency of the two resulting estimators. Those estimators have a very important computational advantage compared to the existing least squares (LS) estimator, in that they are defined as minimizers of a convex objective function. In addition, the nuclear norm penalization helps to resolve a potential identification problem for interactive fixed effect models, in particular when the regressors are low-rank and the number of the factors is unknown. We also show how to construct estimators that are asymptotically equivalent to the least squares (LS) estimator in Bai (2009) and Moon and Weidner (2017) by using our nuclear norm regularized or minimized estimators as initial values for a finite number of LS minimizing iteration steps. This iteration avoids any non-convex minimization, while the original LS estimation problem is generally non-convex, and can have multiple local minima.</summary>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-25T17:21:30Z</published>
+    <arxiv:primary_category term="econ.EM"/>
+    <author>
+      <name>Hyungsik Roger Moon</name>
+    </author>
+    <author>
+      <name>Martin Weidner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.00027v2</id>
+    <title>Robust A Posteriori Error Estimation for Finite Element Approximation to H(curl) Problem</title>
+    <updated>2016-06-07T22:02:18Z</updated>
+    <link href="https://arxiv.org/abs/1510.00027v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.00027v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce a novel a posteriori error estimator for the conforming finite element approximation to the H(curl) problem with inhomogeneous media and with the right-hand side only in L^2. The estimator is of the recovery type. Independent with the current approximation to the primary variable (the electric field), an auxiliary variable (the magnetizing field) is recovered in parallel by solving a similar H(curl) problem. An alternate way of recovery is presented as well by localizing the error flux. The estimator is then defined as the sum of the modified element residual and the residual of the constitutive equation defining the auxiliary variable. It is proved that the estimator is approximately equal to the true error in the energy norm without the quasi-monotonicity assumption. Finally, we present numerical results for two H(curl) interface problems.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-30T20:31:38Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>Comput.Meth.Appl.Mech.Eng. 309 (2016) 182-201</arxiv:journal_ref>
+    <author>
+      <name>Zhiqiang Cai</name>
+    </author>
+    <author>
+      <name>Shuhao Cao</name>
+    </author>
+    <author>
+      <name>Rob Falgout</name>
+    </author>
+    <arxiv:doi>10.1016/j.cma.2016.06.007</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cma.2016.06.007" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18380v1</id>
+    <title>Direction-Adaptive Plane-Wave Discontinuous Galerkin Methods for the Helmholtz Equation</title>
+    <updated>2026-08-18T23:20:44Z</updated>
+    <link href="https://arxiv.org/abs/2608.18380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider plane-wave discontinuous Galerkin (PWDG) approximations of the Helmholtz equation with adaptive local propagation directions. The directions are chosen by minimizing a weighted residual on the mesh skeleton. We study two formulations: in Part A the PWDG system is solved for the coefficients at fixed directions, while in Part B the same residual is minimized jointly over coefficients and directions, with the coefficients eliminated by variable projection. Complex angles unify propagating and evanescent Trefftz waves. The discrete system is normalized in the Trefftz-DG norm, and a local Cauchy-trace Gramian is used to remove numerically dependent directions. On straight edges the residual integrals are exact. For all-Dirichlet problems, the residual equals the squared DG error and provides local adaptive indicators. We prove local quadratic growth of the reduced direction functional near an identifiable zero-residual solution of fixed rank. Numerically, an exact circular DtN test shows that the dominant phase direction of a Hankel wave can be recovered accurately even when a small plane-wave fan gives a larger field error. We also separate the effects of the coefficient basis, trace cutoff, and trace-spectrum arithmetic on the high-$p$ DtN floor. Finally, for finite sums of plane waves, residual-based ENRICH--MOVE continuation recovers all directions to roundoff for $M=1,\ldots,19$. At $M=20$ the automatic birth step enters a false basin, whereas a nearby birth again reaches roundoff. The results indicate that direction adaptation is most effective for solutions of low directional complexity.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T23:20:44Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Shelvean Kapita</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0707.2135v1</id>
+    <title>Nonconforming h-p spectral element methods for elliptic problems</title>
+    <updated>2007-07-14T09:07:54Z</updated>
+    <link href="https://arxiv.org/abs/0707.2135v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0707.2135v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper we show that we can use a modified version of the h-p spectral element method proposed in \cite{duttora1,duttom,duttora2,tomarth} to solve elliptic problems with general boundary conditions to exponential accuracy on polygonal domains using nonconforming spectral element functions. A geometrical mesh is used in a neighbourhood of the corners. With this mesh we seek a solution which minimizes the sum of a weighted squared norm of the residuals in the partial differential equation and the squared norm of the residuals in the boundary conditions in fractional Sobolev spaces and enforce continuity by adding a term which measures the jump in the function and its derivatives at inter-element boundaries, in fractional Sobolev norms, to the functional being minimized. In the neighbourhood of the corners, modified polar coordinates are used and a global coordinate system elsewhere. A stability estimate is derived for the functional which is minimized based on the regularity estimate in \cite{babguo1}. We examine how to parallelize the method and show that the set of common boundary values consists of the values of the function at the corners of the polygonal domain. The method is faster than that proposed in \cite{duttora1,duttom,tomarth} and the h-p finite element method and stronger error estimates are obtained.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-07-14T09:07:54Z</published>
+    <arxiv:comment>37 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>P K Dutt</name>
+    </author>
+    <author>
+      <name>N Kishore Kumar</name>
+    </author>
+    <author>
+      <name>C S Upadhyay</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.01578v2</id>
+    <title>Scalar products and norm of Bethe vectors in $\mathfrak{o}_{2n+1}$ invariant integrable models</title>
+    <updated>2025-05-13T06:22:46Z</updated>
+    <link href="https://arxiv.org/abs/2503.01578v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.01578v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute scalar products of off-shell Bethe vectors in models with $o_{2n+1}$ symmetry. The scalar products are expressed as a sum over partitions of the Bethe parameter sets, the building blocks being the so-called highest coefficients. We prove some recurrence relations and a residue theorem for these highest coefficients, and prove that they are consistent with the reduction to $gl_n$ invariant models. We also express the norm of on-shell Bethe vectors as a Gaudin determinant.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-03T14:18:06Z</published>
+    <arxiv:comment>38 pages; introduction improved nd conclusion added; more explanations on the gl(n) reduction</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>SciPost Phys. 19, 023 (2025)</arxiv:journal_ref>
+    <author>
+      <name>A. Liashyk</name>
+    </author>
+    <author>
+      <name>S. Pakuliak</name>
+    </author>
+    <author>
+      <name>E. Ragoucy</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.19.1.023</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.19.1.023" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.08491v1</id>
+    <title>Construction and heat kernel estimates of general stable-like Markov processes</title>
+    <updated>2020-05-18T07:13:40Z</updated>
+    <link href="https://arxiv.org/abs/2005.08491v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.08491v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A stable-like process is a Feller process $(X_t)_{t\geq 0}$ taking values in $\mathbb{R}^d$ and whose generator behaves, locally, like an $α$-stable Lévy process, but the index $α$ and all other characteristics may depend on the state space. More precisely, the jump measure need not to be symmetric and it strongly depends on the current state of the process; moreover, we do not require the gradient term to be dominated by the pure jump part. Our approach is to understand the above phenomena as suitable microstructural perturbations.
+  We show that the corresponding martingale problem is well-posed, and its solution is a strong Feller process which admits a transition density. For the transition density we obtain a representation as a sum of an explicitly given principal term -- this is essentially the density of an $α$-stable random variable whose parameters depend on the current state $x$ -- and a residual term; the $L^\infty\otimes L^1$-norm of the residual term is negligible and so is, under an additional structural assumption, the $L^\infty\otimes L^\infty$-norm. Concrete examples illustrate the relation between the assumptions and possible transition density estimates.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-18T07:13:40Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>V. Knopova</name>
+    </author>
+    <author>
+      <name>A. Kulik</name>
+    </author>
+    <author>
+      <name>R. Schilling</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.10221v2</id>
+    <title>On $τ$-preconditioners for a quasi-compact difference scheme to Riesz fractional diffusion equations with variable coefficients</title>
+    <updated>2026-08-04T14:51:20Z</updated>
+    <link href="https://arxiv.org/abs/2404.10221v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.10221v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the present study, we consider the preconditioned generalized minimal residual (GMRES) method for the asymmetric linear systems arising from the $d$-dimensional Riesz space fractional diffusion equations (RSFDEs). The Crank-Nicolson scheme and a quasi-compact finite difference method are used to discretize the temporal derivative and Riesz space fractional derivatives in such RSFDEs, respectively. For the $d$-dimensional discretized RSFDEs, the corresponding coefficient matrix is the sum of a product of a $d$-level block tridiagonal matrix multiplying a diagonal matrix and a $d$-level Toeplitz matrix. We develop a sine transform based preconditioner (namely $τ$ preconditioner) to accelerate the convergence of the GMRES method. Theoretical analysis shows that the upper bound of relative residual norm of the GMRES method with the proposed preconditioner is mesh-independent, which leads to a linear convergence rate. Numerical results are presented to confirm the theoretical results regarding the preconditioned matrix and to illustrate the efficiency of the proposed preconditioner.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-16T02:02:33Z</published>
+    <arxiv:comment>23 pages, 3 figures, we improve some contexts and simplify some mathematical equations</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Zi-Hang She</name>
+    </author>
+    <author>
+      <name>Xue Zhang</name>
+    </author>
+    <author>
+      <name>Xian-Ming Gu</name>
+    </author>
+    <author>
+      <name>Stefano Serra-Capizzano</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0707.3711v1</id>
+    <title>Elliptic Gauss Sums and Hecke L-values at s=1</title>
+    <updated>2007-07-25T12:27:23Z</updated>
+    <link href="https://arxiv.org/abs/0707.3711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0707.3711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The rationality of the elliptic Gauss sum coefficient is shown. The following is a specific case of our argument.
+  Let f(u)=sl((1-i)\varpi u), where sl() is the Gauss' lemniscatic sine and \varpi=2.62205... is the real period of the elliptic curve y^2=x^3-x, so that f(u) is an elliptic function relative to the period lattice Z[i].
+  Let πbe a primary prime of Z[i] such that norm(π)\equiv 13\mod 16. Let S be the quarter set mod πconsisting of quartic residues.
+  Let us define G(π):=\sum_{ν\in S} f(ν/π) and \tildeπ:=\prod_{ν\in S} f(ν/π).
+  The former G(π) is a typical example of elliptic Gauss sum; the latter is regarded as a canonical 4-th root of -π: (\tildeπ)^4=-π. Then we have
+  Theorem: G(π)/(\tildeπ)^3 is a rational odd integer.
+  G(π) appears naturally in the central value of Hecke L associated to the quartic residue character mod π, and our proof is based on the functional equation of L and an explicit formula of the root number. In fact, the latter is nothing but the Cassels-Matthews formula on the quartic Gauss sum.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-07-25T12:27:23Z</published>
+    <arxiv:comment>39 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Tetsuya Asai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.04629v2</id>
+    <title>A Hamiltonian-Level Certificate for Network-Free Distributed Quantum Simulation:Exact Tensor-Separability Criterion and Approximate Residual Bounds</title>
+    <updated>2026-10-03T11:01:17Z</updated>
+    <link href="https://arxiv.org/abs/1901.04629v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.04629v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Circuit cutting allows quantum circuits to be evaluated on smaller devices at the cost of additional sampling and classical reconstruction. For Hamiltonian-simulation circuits, the target unitary $\exp[it\mathbf H]$ connects this decomposition problem to the structure of the generator. We develop a Hamiltonian-level certificate that assesses exact separability and the accuracy of independent module evolution before a gate decomposition is chosen. For a time-independent Hamiltonian and a fixed module partition, the Hilbert--Schmidt projection onto sums of module-local terms isolates a cross-module residual $H_{ns}$. Its vanishing is necessary and sufficient for product evolution at all times; for Pauli-list inputs, this condition is checked in one pass over the combined coefficients. When $H_{ns}\ne0$, the projected evolution has operator-norm error at most $|t| ||H_{ns}||_{op}$. Across a bipartition, an explicit first-order algebraic correction has the same operator-Schmidt rank as $H_{ns}$ and leaves a second-order residual. The same Hamiltonian residual connects this approximation to short-time entanglement, determining the leading state-space and operator-space entangling powers and, through its Schmidt spectrum, the leading Choi tripartite-information terms. Numerical experiments test these relations and demonstrate block-factorised simulation up to $20$ qubits.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-15T01:35:20Z</published>
+    <arxiv:comment>34 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Kan He</name>
+    </author>
+    <author>
+      <name>Shusen Liu</name>
+    </author>
+    <author>
+      <name>Jinchuan Hou</name>
+    </author>
+    <author>
+      <name>Pascal Jahan Elahi</name>
+    </author>
+    <author>
+      <name>Yifei Huang</name>
+    </author>
+    <author>
+      <name>Xinyuan Yu</name>
+    </author>
+    <author>
+      <name>Ugo Varetto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.13364v2</id>
+    <title>Low-Rank Matrix Recovery with Scaled Subgradient Methods: Fast and Robust Convergence Without the Condition Number</title>
+    <updated>2021-04-22T15:09:42Z</updated>
+    <link href="https://arxiv.org/abs/2010.13364v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.13364v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many problems in data science can be treated as estimating a low-rank matrix from highly incomplete, sometimes even corrupted, observations. One popular approach is to resort to matrix factorization, where the low-rank matrix factors are optimized via first-order methods over a smooth loss function, such as the residual sum of squares. While tremendous progresses have been made in recent years, the natural smooth formulation suffers from two sources of ill-conditioning, where the iteration complexity of gradient descent scales poorly both with the dimension as well as the condition number of the low-rank matrix. Moreover, the smooth formulation is not robust to corruptions. In this paper, we propose scaled subgradient methods to minimize a family of nonsmooth and nonconvex formulations -- in particular, the residual sum of absolute errors -- which is guaranteed to converge at a fast rate that is almost dimension-free and independent of the condition number, even in the presence of corruptions. We illustrate the effectiveness of our approach when the observation operator satisfies certain mixed-norm restricted isometry properties, and derive state-of-the-art performance guarantees for a variety of problems such as robust low-rank matrix sensing and quadratic sampling.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-26T06:21:14Z</published>
+    <arxiv:comment>Accepted to IEEE Transaction on Signal Processing</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tian Tong</name>
+    </author>
+    <author>
+      <name>Cong Ma</name>
+    </author>
+    <author>
+      <name>Yuejie Chi</name>
+    </author>
+    <arxiv:doi>10.1109/TSP.2021.3071560</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TSP.2021.3071560" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.00075v2</id>
+    <title>Soliton resolution along a sequence of times with dispersive error for type II singular solutions to focusing energy critical wave equation</title>
+    <updated>2016-01-11T02:47:28Z</updated>
+    <link href="https://arxiv.org/abs/1510.00075v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.00075v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the soliton resolution conjecture for Type II singular solutions $\overrightarrow{u}(t)$ to the focusing energy critical wave equation in $R^d\times [0,T_+)$, with $3\leq d\leq 5$. Suppose that $u$ has a singularity at $(x,t)=(0,T_+)$, we show that along a sequence of times $t_n\uparrow T_+$ and in a neighborhood of $(0,T_+)$, $\overrightarrow{u}(t_n)$ can be decomposed as the sum of a regular part in the energy space, a finite combination of modulated solitons (translation, scaling and Lorentz transform of steady states) and a residue term which goes to zero in the Strichartz norm. In addition, the residue term is asymptotically radial and can concentrate energy only in a thin annulus near $|x|=T_+-t_n$. Our main tools include a Morawetz estimate, similar to the one used for wave maps, and the use of a virial identity to eliminate dispersive energy in $|x|&lt;λ(T_+ -t_n)$ for any $λ\in (0,1)$.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-30T23:32:38Z</published>
+    <arxiv:comment>1. A typo in Lemma 3.1 is corrected; 2. The dimension is updated to $3\leq d\leq 5$. The exclusion of $d=6$ is due to technical issues with the profile decomposition in this dimension. We thank Thomas Duyckaerts for pointing this out. See also arXiv:1601.01871, where the result is significantly strengthened. Only arXiv:1601.01871 will be submitted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hao Jia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.13669v2</id>
+    <title>An Investigation Into Several Explicit Versions of Burgess' Bound</title>
+    <updated>2019-12-01T23:00:15Z</updated>
+    <link href="https://arxiv.org/abs/1910.13669v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.13669v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $χ$ be a Dirichlet character modulo $p$, a prime. In applications, one often needs estimates for short sums involving $χ$. One such estimate is the family of bounds known as \emph{Burgess' bound}. In this paper, we explore several minor adjustments one can make to the work of Enrique Treviño on explicit versions of Burgess' bound. For an application, we investigate the problem of the existence of a $k$th power non-residue modulo $p$ which is less than $p^α$ for several fixed $α$. We also provide a quick improvement to the conductor bounds for norm-Euclidean cyclic fields.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-30T04:54:05Z</published>
+    <arxiv:comment>14 pages, version 2</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Forrest J. Francis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.14346v1</id>
+    <title>Représentations des quaternions de norme 1</title>
+    <updated>2025-02-20T08:00:25Z</updated>
+    <link href="https://arxiv.org/abs/2502.14346v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.14346v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let F be a local field with finite residue field of characteristic p, D the quaternion division algebra with centre F, and R an algebraically closed field of any characteristic. We classify the smooth irreducible R-representations V of the group D^1 of elements of D* with reduced norm 1. Such a V occurs in the restriction of a smooth irreducible R-representation V* of D*. When the dimension of V*is &gt;1, following our previous work in the case of SL_2(F), we show that the restriction of V* to D^1 is irreducible or the sum of two irreducible representations. When the characteristic of R is not p, that restriction is the sum of two irreducible equivalent representations if and only if the representation of GL_2(F) image of V* by the Jacquet-Langlands correspondence restricts to SL_2(F) as a sum of four inequivalent irreducible representations (this is never the case if the characteristic of R is not 2).</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-20T08:00:25Z</published>
+    <arxiv:comment>14 pages, in French language</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>Guy Henniart</name>
+    </author>
+    <author>
+      <name>Marie-France Vignéras</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.09228v3</id>
+    <title>Tight Last-Iterate Convergence of the Extragradient and the Optimistic Gradient Descent-Ascent Algorithm for Constrained Monotone Variational Inequalities</title>
+    <updated>2022-05-16T17:07:49Z</updated>
+    <link href="https://arxiv.org/abs/2204.09228v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.09228v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The monotone variational inequality is a central problem in mathematical programming that unifies and generalizes many important settings such as smooth convex optimization, two-player zero-sum games, convex-concave saddle point problems, etc. The extragradient algorithm by Korpelevich [1976] and the optimistic gradient descent-ascent algorithm by Popov [1980] are arguably the two most classical and popular methods for solving monotone variational inequalities. Despite their long histories, the following major problem remains open. What is the last-iterate convergence rate of the extragradient algorithm or the optimistic gradient descent-ascent algorithm for monotone and Lipschitz variational inequalities with constraints? We resolve this open problem by showing that both the extragradient algorithm and the optimistic gradient descent-ascent algorithm have a tight $O\left(\frac{1}{\sqrt{T}}\right)$ last-iterate convergence rate for arbitrary convex feasible sets, which matches the lower bound by Golowich et al. [2020a,b]. Our rate is measured in terms of the standard gap function. At the core of our results lies a non-standard performance measure -- the tangent residual, which can be viewed as an adaptation of the norm of the operator that takes the local constraints into account. We use the tangent residual (or a slight variation of the tangent residual) as the the potential function in our analysis of the extragradient algorithm (or the optimistic gradient descent-ascent algorithm) and prove that it is non-increasing between two consecutive iterates.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-20T05:12:11Z</published>
+    <arxiv:comment>We are including the OGDA result for unconstrained and constrained settings in this version. We further simplified the proof for EG and OGDA algorithm</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Yang Cai</name>
+    </author>
+    <author>
+      <name>Argyris Oikonomou</name>
+    </author>
+    <author>
+      <name>Weiqiang Zheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.21172v1</id>
+    <title>A Unified Matrix Factorization Framework for Classical and Robust Clustering</title>
+    <updated>2025-10-24T05:51:48Z</updated>
+    <link href="https://arxiv.org/abs/2510.21172v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.21172v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a unified matrix factorization framework for classical and robust clustering. We begin by revisiting the well-known equivalence between crisp k-means clustering and matrix factorization, following and rigorously rederiving an unpublished formulation by Bauckhage. Extending this framework, we derive an analogous matrix factorization interpretation for fuzzy c-means clustering, which to the best of our knowledge has not been previously formalized. These reformulations allow both clustering paradigms to be expressed as optimization problems over factor matrices, thereby enabling principled extensions to robust variants. To address sensitivity to outliers, we propose robust formulations for both crisp and fuzzy clustering by replacing the Frobenius norm with the l1,2-norm, which penalizes the sum of Euclidean norms across residual columns. We develop alternating minimization algorithms for the standard formulations and IRLS-based algorithms for the robust counterparts. All algorithms are theoretically proven to converge to a local minimum.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-24T05:51:48Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Angshul Majumdar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.09261v4</id>
+    <title>Fibre-Product Stability, Kummer Gluing, and Composita for Universal Koszulity</title>
+    <updated>2026-08-26T17:43:35Z</updated>
+    <link href="https://arxiv.org/abs/2602.09261v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.09261v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study universal Koszulity under algebraic gluing and field composita. For quadratic fibre products, orthogonally split pullbacks reduce to direct sums, while Stanley--Reisner pullbacks arise from graph gluing preserving universal Koszulity under a dominating-clique hypothesis. For composita, Kummer theory and the norm-residue theorem yield a graph criterion from restriction images and degree-two cup-product relations, verified for iterated Laurent-series fields with nonzero mixed symbols. In a nonabelian RAAG family, every finite \(p\)-extension has explicitly determined universally Koszul cohomology, with \[ G_L(p)\cong F_{1+q(d-1)}\times\mathbb Z_p^s.\]</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-09T22:56:53Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Marina Palaisti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.24567v1</id>
+    <title>A correction adaptive two-grid finite element method for nonselfadjoint or indefinite elliptic problems</title>
+    <updated>2026-04-27T14:56:51Z</updated>
+    <link href="https://arxiv.org/abs/2604.24567v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.24567v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose, analyze, and numerically validate a correction adaptive two-grid finite element method (CAT-GFEM) for nonselfadjoint or indefinite elliptic problems. In contrast to the adaptive two-grid finite element method (ATGFEM) of Li and Zhang [SIAM J. Sci. Comput., 43 (2021), pp. A908-A928], which is restricted to symmetric positive-definite problems, the proposed method introduces an additional correction step that solves a small-scale discrete residual problem on the coarse mesh. This step entails negligible additional computational cost and allows us to show that the L2-norm error of the corrected discrete solution is a higher-order of the energy-norm error of the discrete solution. Using this result, we prove a contraction property for a suitable sum of quasi-errors on two successive adaptive meshes and establish convergence of the method. Numerical experiments illustrate the improved effectiveness and robustness of our method in comparison with ATGFEM.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-27T14:56:51Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Fei Li</name>
+    </author>
+    <author>
+      <name>Qingguo Hong</name>
+    </author>
+    <author>
+      <name>Ming Tang</name>
+    </author>
+    <author>
+      <name>Liuqiang Zhong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26048v1</id>
+    <title>Isotropic Decompositions via Inverse Eigenvectors</title>
+    <updated>2026-07-28T17:56:12Z</updated>
+    <link href="https://arxiv.org/abs/2607.26048v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26048v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a residue-theoretic framework for studying inverse eigenvectors of a square matrix, defined by the nonlinear equation $Mα=α^{-1}$. Our main result is an inverse analogue of the spectral theorem: under natural transversality and properness assumptions, the identity operator admits an explicit decomposition into rank-one tensors associated with the inverse eigenvectors. The proof is based on residues of rational differential forms in several complex variables. For real correlation matrices whose off-diagonal entries have modulus strictly less than one, we remove the properness assumption and show that the coefficients in the decomposition are positive and sum to~$1$. Consequently, the inverse eigenvectors support an explicit centered discrete isotropic probability measure and form a weighted tight frame. We extend the construction to arbitrary real Gram matrices, diagonal inverse eigenvectors, and weighted inverse-eigenvector equations. Simple trace and arithmetic--geometric mean arguments yield inverse eigenvectors with controlled Euclidean norm and coordinate product. These estimates lead to short proofs of the strong real polarization inequality and the $n$th real linear polarization inequality, together with weighted and matrix-valued generalizations and further geometric and analytic applications.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T17:56:12Z</published>
+    <arxiv:comment>24 pages. First, preliminary version</arxiv:comment>
+    <arxiv:primary_category term="math.MG"/>
+    <author>
+      <name>Gergely Ambrus</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.08077v6</id>
+    <title>Functional error estimators for the adaptive discretization of inverse problems</title>
+    <updated>2017-02-10T15:59:36Z</updated>
+    <link href="https://arxiv.org/abs/1507.08077v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.08077v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>So-called functional error estimators provide a valuable tool for reliably estimating the discretization error for a sum of two convex functions. We apply this concept to Tikhonov regularization for the solution of inverse problems for partial differential equations, not only for quadratic Hilbert space regularization terms but also for nonsmooth Banach space penalties. Examples include the measure-space norm (i.e., sparsity regularization) or the indicator function of an $L^\infty$ ball (i.e., Ivanov regularization). The error estimators can be written in terms of residuals in the optimality system that can then be estimated by conventional techniques, thus leading to explicit estimators. This is illustrated by means of an elliptic inverse source problem with the above-mentioned penalties, and numerical results are provided for the case of sparsity regularization.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-29T09:32:33Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>Inverse Problems 32 (2016), 104004</arxiv:journal_ref>
+    <author>
+      <name>Christian Clason</name>
+    </author>
+    <author>
+      <name>Barbara Kaltenbacher</name>
+    </author>
+    <author>
+      <name>Daniel Wachsmuth</name>
+    </author>
+    <arxiv:doi>10.1088/0266-5611/32/10/104004</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0266-5611/32/10/104004" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.00490v1</id>
+    <title>Incremental stability in $p=1$ and $p=\infty$: classification and synthesis</title>
+    <updated>2026-04-01T05:17:12Z</updated>
+    <link href="https://arxiv.org/abs/2604.00490v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.00490v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>All Lipschitz dynamics with the weak infinitesimal contraction (WIC) property can be expressed as a Lipschitz nonlinear system in proportional negative feedback -- this statement, a ``structure theorem,'' is true in the $p=1$ and $p=\infty$ norms. Equivalently, a Lipschitz vector field is WIC if and only if it can be written as a scalar decay plus a Lipschitz-bounded residual. We put this theorem to use using neural networks to approximate Lipschitz functions. This results in a map from unconstrained parameters to the set of WIC vector fields, enabling standard gradient-based training with no projections or penalty terms. Because the induced $1$- and $\infty$-norms of a matrix reduce to row or column sums, Lipschitz certification costs only $O(d^2)$ operations -- the same order as a forward pass and appreciably cheaper than eigenvalue or semidefinite methods for the $2$-norm. Numerical experiments on a planar flow-fitting task and a four-node opinion network demonstrate that the parameterization (re-)constructs contracting dynamics from trajectory data. In a discussion of the expressiveness of non-Euclidean contraction, we prove that the set of $2\times 2$ systems that contract in a weighted $1$- or $\infty$-norm is characterized by an eigenvalue cone, a strict subset of the Hurwitz region that quantifies the cost of moving away from the Euclidean norm.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-01T05:17:12Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Simon Kuang</name>
+    </author>
+    <author>
+      <name>Xinfan Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.04093v2</id>
+    <title>Sharp Oracle Inequalities for Square Root Regularization</title>
+    <updated>2016-06-27T15:30:22Z</updated>
+    <link href="https://arxiv.org/abs/1509.04093v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.04093v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a set of regularization methods for high-dimensional linear regression models. These penalized estimators have the square root of the residual sum of squared errors as loss function, and any weakly decomposable norm as penalty function. This fit measure is chosen because of its property that the estimator does not depend on the unknown standard deviation of the noise. On the other hand, a generalized weakly decomposable norm penalty is very useful in being able to deal with different underlying sparsity structures. We can choose a different sparsity inducing norm depending on how we want to interpret the unknown parameter vector $β$. Structured sparsity norms, as defined in Micchelli et al. [18], are special cases of weakly decomposable norms, therefore we also include the square root LASSO (Belloni et al. [3]), the group square root LASSO (Bunea et al. [10]) and a new method called the square root SLOPE (in a similar fashion to the SLOPE from Bogdan et al. [6]). For this collection of estimators our results provide sharp oracle inequalities with the Karush-Kuhn-Tucker conditions. We discuss some examples of estimators. Based on a simulation we illustrate some advantages of the square root SLOPE.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-14T13:48:24Z</published>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Benjamin Stucky</name>
+    </author>
+    <author>
+      <name>Sara van de Geer</name>
+    </author>
+  </entry>
+</feed>

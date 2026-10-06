@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/D4BWSW7p7OsaLKUYGVrKF7DGta4</id>
+  <title>arXiv Query: search_query=abs:Stirling AND abs:"creative telescoping"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Stirling+AND+abs:%22creative+telescoping%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0904.2761v1</id>
+    <title>A Non-Holonomic Systems Approach to Special Function Identities</title>
+    <updated>2009-04-17T18:36:10Z</updated>
+    <link href="https://arxiv.org/abs/0904.2761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0904.2761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We extend Zeilberger's approach to special function identities to cases that are not holonomic. The method of creative telescoping is thus applied to definite sums or integrals involving Stirling or Bernoulli numbers, incomplete Gamma function or polylogarithms, which are not covered by the holonomic framework. The basic idea is to take into account the dimension of appropriate ideals in Ore algebras. This unifies several earlier extensions and provides algorithms for summation and integration in classes that had not been accessible to computer algebra before.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-04-17T18:36:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1145/1576702.1576720</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/1576702.1576720" title="doi"/>
+  </entry>
+</feed>

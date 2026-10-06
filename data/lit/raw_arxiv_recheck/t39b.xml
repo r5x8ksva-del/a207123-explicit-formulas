@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Uh4XESgl01Ax4Xs+6zgXnz5XPOc</id>
+  <title>arXiv Query: search_query=(abs:annihilator OR abs:"annihilating ideal") AND (abs:bivariate OR abs:"two-dimensional" OR abs:"two variables") AND abs:recurrence&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:24:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(abs:annihilator+OR+abs:%22annihilating+ideal%22)+AND+((abs:bivariate+OR+(abs:%22two-dimensional%22+OR+abs:%22two+variables%22))+AND+abs:recurrence)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2105.02452v1</id>
+    <title>Annihilation and recurrence of vortex-antivortex pairs in two-component Bose-Einstein condensates</title>
+    <updated>2021-05-06T06:03:46Z</updated>
+    <link href="https://arxiv.org/abs/2105.02452v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.02452v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The annihilation of vortex-antivortex pairs is a key event in two-dimensional Bose-Einstein condensates (BECs). It is known that dissipation or a catalyst vortex is required for the annihilation of the pairs in one-component BECs. We numerically confirmed in two-component BECs that the pairs can be annihilated even without any dissipation or catalyst vortices when the intercomponent interaction is strong. In addition, the pair is recreated alternately in two components under certain conditions, which we call the recurrence.</summary>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-06T06:03:46Z</published>
+    <arxiv:comment>9 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.quant-gas"/>
+    <arxiv:journal_ref>Phys. Rev. A 103, 053313 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Junsik Han</name>
+    </author>
+    <author>
+      <name>Makoto Tsubota</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.103.053313</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.103.053313" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1105.0937v2</id>
+    <title>On negative eigenvalues of low-dimensional Schrödinger operators</title>
+    <updated>2011-05-15T03:42:50Z</updated>
+    <link href="https://arxiv.org/abs/1105.0937v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1105.0937v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The paper concerns upper and lower estimates for the number of negative eigenvalues of one- and two-dimensional Schrödinger operators and more general operators with the spectral dimensions $d\leq 2$. The classical Cwikel-Lieb-Rosenblum (CLR) upper estimates require the corresponding Markov process to be transient, and therefore the dimension to be greater than two. We obtain CLR estimates in low dimensions by transforming the underlying recurrent process into a transient one using partial annihilation. As a result, the estimates for the number of negative eigenvalues are not translation invariant and contain Bargmann type terms. We show that a classical form of CLR estimates can not be valid for operators with recurrent underlying Markov processes. We provide estimates from below which prove that the obtained results are sharp. Lieb-Thirring estimates for the low-dimensional Schrödinger operators are also studied.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-05-04T20:35:49Z</published>
+    <arxiv:comment>Added references</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>S. Molchanov</name>
+    </author>
+    <author>
+      <name>B. Vainberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.3135v2</id>
+    <title>Bargmann type estimates of the counting function for general Schrödinger operators</title>
+    <updated>2012-02-24T22:42:15Z</updated>
+    <link href="https://arxiv.org/abs/1201.3135v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.3135v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The paper concerns upper and lower estimates for the number of negative eigenvalues of one- and two-dimensional Schrödinger operators and more general operators with the spectral dimensions $d\leq 2$. The classical Cwikel-Lieb-Rosenblum (CLR) upper estimates require the corresponding Markov process to be transient, and therefore the dimension to be greater than two. We obtain CLR estimates in low dimensions by transforming the underlying recurrent process into a transient one using partial annihilation. As a result, the estimates for the number of negative eigenvalues are not translation invariant and contain Bargmann type terms. The general theorems are illustrated by analysis of several classes of the Schrödinger type operators (on the Riemannian manifolds, lattices, fractals, etc.). We provide estimates from below which prove that the results obtained are sharp. Lieb-Thirring estimates for the low-dimensional Schrödinger operators are also studied.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-15T23:06:47Z</published>
+    <arxiv:comment>Some changes in section 5 on 2-D operators. arXiv admin note: substantial text overlap with arXiv:1105.0937</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Journal of Mathematical Sciences, 184, No 4 (2012)</arxiv:journal_ref>
+    <author>
+      <name>S. Molchanov</name>
+    </author>
+    <author>
+      <name>B. Vainberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21432v1</id>
+    <title>Soliton-like Waves in a Two-Dimensional Recurrent Spiking Neural Network with Weighted Spike-Timing-Dependent Plasticity</title>
+    <updated>2026-06-19T13:47:27Z</updated>
+    <link href="https://arxiv.org/abs/2606.21432v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21432v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct a minimal but biologically plausible spiking neuron model operating in discrete time, combining multiplicative spike-timing-dependent plasticity (WSTDP), divisive normalization of synaptic integration, homeostatic threshold adaptation, and a one-step refractory period. We show that this normalization admits a biologically plausible dendritic implementation in which each binary junction operates using only locally available information.
+  Assembling excitatory-inhibitory pairs of such neurons into a two-dimensional recurrent network and applying periodic localized stimulation, we find that the network spontaneously gives rise to stable, self-propagating wave packets with the properties of dissipative solitons: they maintain a stable spatial profile, propagate at constant speed, and annihilate upon frontal collision. Their emergence requires a geometric asymmetry between excitatory and inhibitory connection radii, and initial inhibitory synapses stronger than excitatory ones. WSTDP engraves the direction of propagation into the synaptic weight profile, so that the network learns by itself to sustain propagation in one direction while suppressing the reverse. When two sources are active simultaneously, the resulting waves annihilate upon collision, defining a semi-persistent boundary whose position encodes the relative phase and frequency of the two sources.
+  These results provide a minimal computational framework for studying the emergence of cortical traveling waves, activity zone delimitation, and spatial memory from local plasticity rules alone.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T13:47:27Z</published>
+    <arxiv:comment>21 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Ch. Meessen</name>
+    </author>
+  </entry>
+</feed>

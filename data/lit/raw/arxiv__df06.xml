@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/lqDUTicfLdZy4eULCvwsK4awYYA</id>
+  <title>arXiv Query: search_query=au:Chyzak AND au:Salvy&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:01:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Chyzak+AND+au:Salvy&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0904.2761v1</id>
+    <title>A Non-Holonomic Systems Approach to Special Function Identities</title>
+    <updated>2009-04-17T18:36:10Z</updated>
+    <link href="https://arxiv.org/abs/0904.2761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0904.2761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We extend Zeilberger's approach to special function identities to cases that are not holonomic. The method of creative telescoping is thus applied to definite sums or integrals involving Stirling or Bernoulli numbers, incomplete Gamma function or polylogarithms, which are not covered by the holonomic framework. The basic idea is to take into account the dimension of appropriate ideals in Ore algebras. This unifies several earlier extensions and provides algorithms for summation and integration in classes that had not been accessible to computer algebra before.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-04-17T18:36:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1145/1576702.1576720</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/1576702.1576720" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0310132v3</id>
+    <title>Effective Scalar Products for D-finite Symmetric Functions</title>
+    <updated>2012-11-13T07:04:27Z</updated>
+    <link href="https://arxiv.org/abs/math/0310132v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0310132v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many combinatorial generating functions can be expressed as combinations of symmetric functions, or extracted as sub-series and specializations from such combinations. Gessel has outlined a large class of symmetric functions for which the resulting generating functions are D-finite. We extend Gessel's work by providing algorithms that compute differential equations these generating functions satisfy in the case they are given as a scalar product of symmetric functions in Gessel's class. Examples of applications to k-regular graphs and Young tableaux with repeated entries are given. Asymptotic estimates are a natural application of our method, which we illustrate on the same model of Young tableaux. We also derive a seemingly new formula for the Kronecker product of the sum of Schur functions with itself.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-10-09T10:22:57Z</published>
+    <arxiv:comment>51 pages, full paper version of FPSAC 02 extended abstract; v2: corrections from original submission, improved clarity; now formatted for journal + bibliography</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Combinatorial Theory Series A, Volume 112 , Issue 1 (October 2005), Pages: 1 - 43</arxiv:journal_ref>
+    <author>
+      <name>Frédéric Chyzak</name>
+    </author>
+    <author>
+      <name>Marni Mishna</name>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcta.2005.01.001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcta.2005.01.001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0605068v1</id>
+    <title>Low Complexity Algorithms for Linear Recurrences</title>
+    <updated>2006-05-16T10:03:04Z</updated>
+    <link href="https://arxiv.org/abs/cs/0605068v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0605068v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider two kinds of problems: the computation of polynomial and rational solutions of linear recurrences with coefficients that are polynomials with integer coefficients; indefinite and definite summation of sequences that are hypergeometric over the rational numbers. The algorithms for these tasks all involve as an intermediate quantity an integer $N$ (dispersion or root of an indicial polynomial) that is potentially exponential in the bit size of their input. Previous algorithms have a bit complexity that is at least quadratic in $N$. We revisit them and propose variants that exploit the structure of solutions and avoid expanding polynomials of degree $N$. We give two algorithms: a probabilistic one that detects the existence or absence of nonzero polynomial and rational solutions in $O(\sqrt{N}\log^{2}N)$ bit operations; a deterministic one that computes a compact representation of the solution in $O(N\log^{3}N)$ bit operations. Similar speed-ups are obtained in indefinite and definite hypergeometric summation. We describe the results of an implementation.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-05-16T10:03:04Z</published>
+    <arxiv:comment>This is the author's version of the work. It is posted here by permission of ACM for your personal use. Not for redistribution</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>ISSAC'06, pages 31--38, ACM Press, 2006</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Cluzeau</name>
+      <arxiv:affiliation>INRIA Sophia Antipolis</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1145/1145768.1145781</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/1145768.1145781" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.03445v1</id>
+    <title>Generalized Hermite Reduction, Creative Telescoping and Definite Integration of D-Finite Functions</title>
+    <updated>2018-05-09T10:14:50Z</updated>
+    <link href="https://arxiv.org/abs/1805.03445v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.03445v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hermite reduction is a classical algorithmic tool in symbolic integration. It is used to decompose a given rational function as a sum of a function with simple poles and the derivative of another rational function. We extend Hermite reduction to arbitrary linear differential operators instead of the pure derivative, and develop efficient algorithms for this reduction. We then apply the generalized Hermite reduction to the computation of linear operators satisfied by single definite integrals of D-finite functions of several continuous or discrete parameters. The resulting algorithm is a generalization of reduction-based methods for creative telescoping.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-09T10:14:50Z</published>
+    <arxiv:comment>Accepted for publication in the proceedings of the conference ISSAC'18 (Jul 16-19, 2018)</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of ISSAC 2018 (New York, NY, USA)</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+    </author>
+    <author>
+      <name>Pierre Lairez</name>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+    </author>
+    <arxiv:doi>10.1145/3208976.3208992</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3208976.3208992" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0703121v2</id>
+    <title>Differential Equations for Algebraic Functions</title>
+    <updated>2007-09-14T13:44:07Z</updated>
+    <link href="https://arxiv.org/abs/cs/0703121v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0703121v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  It is classical that univariate algebraic functions satisfy linear differential equations with polynomial coefficients. Linear recurrences follow for the coefficients of their power series expansions. We show that the linear differential equation of minimal order has coefficients whose degree is cubic in the degree of the function. We also show that there exists a linear differential equation of order linear in the degree whose coefficients are only of quadratic degree. Furthermore, we prove the existence of recurrences of order and degree close to optimal. We study the complexity of computing these differential equations and recurrences. We deduce a fast algorithm for the expansion of algebraic series.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-03-23T19:20:35Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>ISSAC'07, pages 25--32, ACM Press, 2007.</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Grégoire Lecerf</name>
+      <arxiv:affiliation>LM-Versailles</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Éric Schost</name>
+    </author>
+    <arxiv:doi>10.1145/1277548.1277553</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/1277548.1277553" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0604101v1</id>
+    <title>Fast computation of power series solutions of systems of differential equations</title>
+    <updated>2006-04-25T15:25:35Z</updated>
+    <link href="https://arxiv.org/abs/cs/0604101v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0604101v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We propose new algorithms for the computation of the first N terms of a vector (resp. a basis) of power series solutions of a linear system of differential equations at an ordinary point, using a number of arithmetic operations which is quasi-linear with respect to N. Similar results are also given in the non-linear case. This extends previous results obtained by Brent and Kung for scalar differential equations of order one and two.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-04-25T15:25:35Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Dans 2007 ACM-SIAM Symposium on Discrete Algorithms (2007) 1012--1021</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>François Ollivier</name>
+      <arxiv:affiliation>LIX</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Éric Schost</name>
+      <arxiv:affiliation>LIX</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Alexandre Sedoglavic</name>
+      <arxiv:affiliation>LIFL</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1205.0879v1</id>
+    <title>Fast Computation of Common Left Multiples of Linear Ordinary Differential Operators</title>
+    <updated>2012-05-04T08:35:52Z</updated>
+    <link href="https://arxiv.org/abs/1205.0879v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1205.0879v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study tight bounds and fast algorithms for LCLMs of several linear differential operators with polynomial coefficients. We analyze the arithmetic complexity of existing algorithms for LCLMs, as well as the size of their outputs. We propose a new algorithm that recasts the LCLM computation in a linear algebra problem on a polynomial matrix. This algorithm yields sharp bounds on the coefficient degrees of the LCLM, improving by one order of magnitude the best bounds obtained using previous algorithms. The complexity of the new algorithm is almost optimal, in the sense that it nearly matches the arithmetic size of the output.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-05-04T08:35:52Z</published>
+    <arxiv:comment>The final version will appear in Proceedings of ISSAC 2012</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings ISSAC'12, pages 99-106, 2012</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Frédéric Chyzak</name>
+    </author>
+    <author>
+      <name>Ziming Li</name>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+    </author>
+    <arxiv:doi>10.1145/2442829.2442847</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/2442829.2442847" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1109.2809v2</id>
+    <title>On Kahan's Rules for Determining Branch Cuts</title>
+    <updated>2011-11-29T12:29:56Z</updated>
+    <link href="https://arxiv.org/abs/1109.2809v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1109.2809v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In computer algebra there are different ways of approaching the mathematical concept of functions, one of which is by defining them as solutions of differential equations. We compare different such approaches and discuss the occurring problems. The main focus is on the question of determining possible branch cuts. We explore the extent to which the treatment of branch cuts can be rendered (more) algorithmic, by adapting Kahan's rules to the differential equation setting.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-09-13T14:52:47Z</published>
+    <arxiv:comment>SYNASC 2011. 13th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing. (2011)</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Frédéric Chyzak</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>James Davenport</name>
+      <arxiv:affiliation>RISC</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+      <arxiv:affiliation>RISC</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bruno Salvy</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1109/SYNASC.2011.51</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/SYNASC.2011.51" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/V1Lzc8wEJNY2NN63zOu4eJZaefI</id>
+  <title>arXiv Query: search_query=abs:multichains AND abs:"zeta polynomial"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:multichains+AND+abs:%22zeta+polynomial%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0908.2641v4</id>
+    <title>Chain enumeration of $k$-divisible noncrossing partitions of classical types</title>
+    <updated>2011-08-29T14:29:59Z</updated>
+    <link href="https://arxiv.org/abs/0908.2641v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0908.2641v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give combinatorial proofs of the formulas for the number of multichains in the $k$-divisible noncrossing partitions of classical types with certain conditions on the rank and the block size due to Krattenthaler and M{ü}ller. We also prove Armstrong's conjecture on the zeta polynomial of the poset of $k$-divisible noncrossing partitions of type $A$ invariant under a $180^\circ$ rotation in the cyclic representation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-08-18T21:13:25Z</published>
+    <arxiv:comment>23 pages, 9 figures, final version</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Combin. Theory Ser. A 118 (2011) 879-898</arxiv:journal_ref>
+    <author>
+      <name>Jang Soo Kim</name>
+    </author>
+  </entry>
+</feed>

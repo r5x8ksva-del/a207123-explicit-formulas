@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1E2OqZmDqnAWZC8BYjyf3FMn5bA</id>
+  <title>arXiv Query: search_query=abs:"Ore algebra" AND (abs:quadrant OR abs:saturation OR abs:contraction)&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:24:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Ore+algebra%22+AND+(abs:quadrant+OR+(abs:saturation+OR+abs:contraction))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1511.07922v8</id>
+    <title>Contraction of Ore Ideals with Applications</title>
+    <updated>2016-01-29T03:02:20Z</updated>
+    <link href="https://arxiv.org/abs/1511.07922v8" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.07922v8" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ore operators form a common algebraic abstraction of linear ordinary differential and recurrence equations. Given an Ore operator $L$ with polynomial coefficients in $x$, it generates a left ideal $I$ in the Ore algebra over the field $\mathbf{k}(x)$ of rational functions. We present an algorithm for computing a basis of the contraction ideal of $I$ in the Ore algebra over the ring $R[x]$ of polynomials, where $R$ may be either $\mathbf{k}$ or a domain with $\mathbf{k}$ as its fraction field. This algorithm is based on recent work on desingularization for Ore operators by Chen, Jaroschek, Kauers and Singer. Using a basis of the contraction ideal, we compute a completely desingularized operator for $L$ whose leading coefficient not only has minimal degree in $x$ but also has minimal content. Completely desingularized operators have interesting applications such as certifying integer sequences and checking special cases of a conjecture of Krattenthaler.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-25T00:15:50Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+</feed>

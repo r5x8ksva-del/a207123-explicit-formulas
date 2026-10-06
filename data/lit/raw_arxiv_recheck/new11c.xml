@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/tS9dt88Gsb8DjHWWhvLuj/vUZBE</id>
+  <title>arXiv Query: search_query=au:"Dougherty-Bliss"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-06T23:27:01Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Dougherty-Bliss%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>18</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.27583v1</id>
+    <title>Enumerating separable derangements</title>
+    <updated>2026-08-27T18:08:31Z</updated>
+    <link href="https://arxiv.org/abs/2608.27583v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.27583v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a polynomial-time algorithm to compute the number $b_n$ of separable derangements of $[n]$. This algorithm is based on a generating function technique which tracks permutations along with their occupied diagonals, where each permutation is counted once for every such diagonal. We provide bounds for the proportion of separable permutations which are derangements, show that $b_n$ and the large Schröder numbers have the same exponential growth constant $(3 + 2 \sqrt{2})$, and use the first 3000 terms to conjecture more explicit asymptotic behavior. This partially answers several questions about separable derangements recently posed by Vatter.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T18:08:31Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Alejandro B. Galván</name>
+    </author>
+    <author>
+      <name>Michaela A. Polley</name>
+    </author>
+    <author>
+      <name>David Shuster</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05439v1</id>
+    <title>In How Many Ways can a Rectangle be Rectangled?</title>
+    <updated>2026-06-03T21:01:55Z</updated>
+    <link href="https://arxiv.org/abs/2606.05439v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05439v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There are $2^{n-1}$ ways to tile a $1 \times n$ rectangle with rectangular tiles (of any length, of course they all must have width $1$), but in how many ways can you tile a $100 \times 100$ checkerboard with such tiles? Neither humankind, nor computer-kind, will (most probably) ever know the exact number. But it is possible to compute these numbers for $m \times n$ rectangular grids, if $m$ is not too big, while $n$ can be as big as one wishes. This was initially done in 1988 by David Klarner and Spyros Magliveras, and beautifully extended, around 2006, by, at-the-time, first-year LSU undergraduate Joshua Smith, in collaboration with his faculty mentor, Helena Verrill. Here we extend this to weighted-counting, also keeping track of the number of tiles (that ranges from $1$ to $mn$), and the number of participating grid-edges (that range from $2m+2n$ to $2mn+m+n$). This quickly leads to statistical analyses (mean, variance, and higher moments) of these quantities. While we admire the clever approaches of Klarner-Magliveras and Smith-Verrill, we use two alternative approaches to the original problem, that are more amenable for deriving these generalizations. At the same time, we illustrate the power and beauty of experimental-yet-rigorous enumerative combinatorics.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T21:01:55Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Pablo Blanco</name>
+    </author>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.15830v2</id>
+    <title>Necklaces, subset sums, and cyclic permutations</title>
+    <updated>2026-04-21T14:24:07Z</updated>
+    <link href="https://arxiv.org/abs/2603.15830v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.15830v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is a well known that, for odd $n$, the number of subsets of $\{1,2,\dots,n\}$ the sum of whose elements is divisible by $n$ equals the number of binary necklaces of length $n$. In this paper generalize this result in two directions.
+  On the one hand, we introduce a parameter $r$ so that requiring the subset sums to be congruent to $r$ modulo $n$ translates into imposing some periodicity conditions on the necklaces. On the other hand, we refine these relations by the size $k$ of the subset, showing that it matches the number of ones in the necklace. We describe the precise conditions on $n$, $k$ and $r$ for which the equalities hold. We also extend some of our formulas to $q$-ary necklaces.
+  The classical results correspond to the case $r=0$. When $r=1$, our identity is related to a conjecture of Baker et al. connecting subsets the sum of whose elements is congruent to $1$ modulo $n$ and unimodal permutations which consist of one cycle. We prove this conjecture using generating functions.
+  Finding bijective proofs of most of our identities remains an open problem.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-16T19:03:15Z</published>
+    <arxiv:comment>This version adds a new section generalizing some results to q-ary necklaces and multisubsets of [n] with each element repeated fewer than q times</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Sergi Elizalde</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.16153v2</id>
+    <title>Cutting 4 by $n$ grids into two congruent pieces</title>
+    <updated>2026-03-25T16:02:39Z</updated>
+    <link href="https://arxiv.org/abs/2510.16153v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.16153v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the March 2025 issue of Pour la Science, Jean-Paul Delahaye described a wonderful solution to the following problem: How many ways can you divide a 3 by 2n rectangle into two connected, congruent pieces? We show that this problem can be solved by the transfer matrix method, and demonstrate this by computing the generating function for the number of ways to divide a 4 by n rectangle into two connected, congruent parts.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-17T18:58:32Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.11043v1</id>
+    <title>Dyadically resolving trinomials for fast modular arithmetic</title>
+    <updated>2025-08-14T20:02:17Z</updated>
+    <link href="https://arxiv.org/abs/2508.11043v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.11043v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Residue number systems based on pairwise relatively prime moduli are a powerful tool for accelerating integer computations via the Chinese Remainder Theorem. We study a structured family of moduli of the form $2^n - 2^k + 1$, originally proposed for their efficient arithmetic and bit-level properties. These trinomial moduli support fast modular operations and exhibit scalable modular inverses.
+  We investigate the problem of constructing large sets of pairwise relatively prime trinomial moduli of fixed bit length. By analyzing the corresponding trinomials $x^n - x^k + 1$, we establish a sufficient condition for coprimality based on polynomial resultants. This leads to a graph-theoretic model where maximal sets correspond to cliques in a compatibility graph, and we use maximum clique-finding algorithms to construct large examples in practice. Using the theory of graph colorings, resultants, and properties of cyclotomic polynomials, we also prove upper bounds on the size of such sets as a function of $n$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-14T20:02:17Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Mits Kobayashi</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Eugene Zima</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07435v2</id>
+    <title>The (Symbolic and Numeric) Computational Challenges of Counting 0-1 Balanced Matrices</title>
+    <updated>2025-02-06T16:13:47Z</updated>
+    <link href="https://arxiv.org/abs/2410.07435v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07435v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A chessboard has the property that every row and every column has as many white squares as black squares. In this mostly methodological note, we address the problem of counting such rectangular arrays with a fixed (numeric) number of rows, but an arbitrary (symbolic) number of columns. We first address the ``vanilla" problem where there are no restrictions, and then go on to discuss the still-more-challenging problem of counting such binary arrays that are not permitted to contain a specified (finite) set of horizontal patterns, and a specified set of vertical patterns. While we can rigorously prove that each such sequence satisfies some linear recurrence equation with polynomial coefficients, actually finding these recurrences poses major {\it symbolic}-computational challenges, that we can only meet in some small cases. In fact, just generating as many as possible terms of these sequences is a big {\it numeric}-computational challenge. This was tackled by computer whiz Ron H. Hardin, who contributed several such sequences, and computed quite a few terms of each. We extend Hardin's sequences quite considerably. We also talk about the much easier problem of counting such restricted arrays without balance conditions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T21:08:04Z</published>
+    <arxiv:comment>Expanded computations and added references</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.03434v2</id>
+    <title>The Comma Sequence is Finite in Other Bases</title>
+    <updated>2024-09-25T22:23:15Z</updated>
+    <link href="https://arxiv.org/abs/2408.03434v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.03434v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The comma sequence (1, 12, 35, 94, ...) is the lexicographically earliest sequence such that the difference of consecutive terms equals the concatenation of the digits on either side of the comma separating them. The behavior of a "generalized comma sequence" depends on the base the numbers are written in, as well as the sequence's initial values. We provide a computational proof that all comma sequences in bases 3 through 633 are finite. Relying on a combinatorial conjecture, Angelini et al. estimated that the final element of a comma sequence in base b should be roughly exp(O(b)). We prove their conjecture, but provide evidence that the correct estimate is actually exp(O(b log b)).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-06T20:20:55Z</published>
+    <arxiv:comment>This version handles much larger bases by using a superior cycle-detection algorithm suggested by Luke Pebody</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Natalya Ter-Saakov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.01483v3</id>
+    <title>Creating Decidable Diophantine Equations</title>
+    <updated>2024-06-10T17:15:36Z</updated>
+    <link href="https://arxiv.org/abs/2404.01483v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.01483v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalizing an argument of Matiyasevich, we illustrate a method to generate infinitely many diophantine equations whose solutions can be completely described by linear recurrences. In particular, we provide an integer-coefficient polynomial $p(x, y, z)$ whose only integer roots are consecutive triples of Tribonacci numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-01T21:07:16Z</published>
+    <arxiv:comment>This version corrects a misstated date</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Charles Kenney</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.00487v1</id>
+    <title>Hardinian Arrays</title>
+    <updated>2023-09-01T14:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2309.00487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.00487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2014, R.H. Hardin contributed a family of sequences about king-moves on an array to the On-Line Encyclopedia of Integer Sequences (OEIS). The sequences were recently noticed in an automated search of the OEIS by Kauers and Koutschan, who conjectured a recurrence for one of them. We prove their conjecture as well as some older conjectures stated in the OEIS entries. We also have some new conjectures for the asymptotics of Hardin's sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-01T14:26:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.16069v4</id>
+    <title>Lots and Lots of Perrin-Type Primality Tests and Their Pseudo-Primes</title>
+    <updated>2024-04-11T11:27:20Z</updated>
+    <link href="https://arxiv.org/abs/2307.16069v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.16069v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use Experimental Mathematics and Symbolic Computation (with Maple), to search for lots and lots of Perrin- and Lucas- style primality tests, and try to sort the wheat from the chaff. More impressively, we find quite a few such primality tests for which we can explicitly construct infinite families of pseudo-primes, rather, like in the cases of Perrin pseudo-primes and the famous Carmichael primes, only proving the mere existence of infinitely many of them.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-29T20:22:33Z</published>
+    <arxiv:comment>9 pages. Accompanied by a Maple package and numerous output files from &lt;A HREF="https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/perrin.html"&gt;this url&lt;/A&gt; This version corrects minor typos</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>INTEGERS v. 23 (2023) #A95</arxiv:journal_ref>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.13520v1</id>
+    <title>Gosper's algorithm and Bell numbers</title>
+    <updated>2022-10-24T18:20:07Z</updated>
+    <link href="https://arxiv.org/abs/2210.13520v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.13520v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computers are good at evaluating finite sums in closed form, but there are finite sums which do not have closed forms. Summands which do not produce a closed form can often be ``fixed'' by multiplying them by a suitable polynomial. We provide an explicit description of a class of such polynomials for simple hypergeometric summands in terms of the Bell numbers.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-24T18:20:07Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.14852v1</id>
+    <title>The Meta-C-finite Ansatz</title>
+    <updated>2022-06-29T18:38:58Z</updated>
+    <link href="https://arxiv.org/abs/2206.14852v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.14852v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Fibonacci numbers satisfy the famous recurrence $F_n = F_{n - 1} + F_{n - 2}$. The theory of C-finite sequences ensures that the Fibonacci numbers whose indices are divisible by $m$, namely $F_{mn}$, satisfy a similar recurrence for every positive integer $m$, and these recurrences have an explicit, uniform representation. We will show that $a(mn)$ has a uniform recurrence over $m$ for any C-finite sequence $a(n)$ and use this to automatically derive some famous summation identities.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-29T18:38:58Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.13601v1</id>
+    <title>Exploring General Apéry Limits via the Zudilin-Straub t-transform</title>
+    <updated>2022-05-26T20:19:03Z</updated>
+    <link href="https://arxiv.org/abs/2205.13601v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.13601v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by a recent beautiful construction of Armin Straub and Wadim Zudilin, that 'tweaked' the sum of the $s^{th}$ powers of the $n$-th row of Pascal's triangle, getting instead of sequences of numbers, sequences of rational functions, we do the same for general binomial coefficients sums, getting a practically unlimited supply of Apéry limits. While getting what we call "major Apéry miracles", proving irrationality of the associated constants (i.e. the so-called Apéry limits) is very rare, we do get, every time, at least a "minor Apéry miracle" where an explicit constant, defined as an (extremely slowly-converging) limit of some explicit sequence, is expressed as an Apéry limit of some recurrence, with some initial conditions, thus enabling a very fast computation of that constant, with exponentially decaying error.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-26T20:19:03Z</published>
+    <arxiv:comment>10 pgs</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.05359v2</id>
+    <title>Experimenting with Apery Limits and WZ pairs</title>
+    <updated>2021-09-20T01:43:40Z</updated>
+    <link href="https://arxiv.org/abs/2109.05359v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.05359v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This article, dedicated with admiration in memory of Jon and Peter Borwein, illustrates by example, the power of experimental mathematics, so dear to them both, by experimenting with so-called Apery limits and WZ pairs. In particular we prove a weaker form of an intriguing conjecture of Marc Chamberland and Armin Straub (in an article dedicated to Jon Borwein), and generate lots of new Apery limits. We also rediscovered an infinite family of cubic irrationalities, that suggested very good effective irrationality measures (lower than Liouville's generic 3), and that seemed to go down to the optimal 2. It turned out this follows from known deep results in number theory, and a postscript by Paul Voutier outlines the proof. Nevertheless we believe that further experiments with our Maple packages will lead to new and interesting results.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-11T19:57:57Z</published>
+    <arxiv:comment>11 pages. Accompanied by three Maple packages and numerous output files available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/wzp.html ; In fond memory of Jon and Peter Borwein. This version contains a postscript by Paul Voutier</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.10170v1</id>
+    <title>Integral Recurrences from A to Z</title>
+    <updated>2021-02-19T21:50:24Z</updated>
+    <link href="https://arxiv.org/abs/2102.10170v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.10170v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>George Boros and Victor Moll's masterpiece "Irresistible Integrals" does well to include a suitably-titled appendix, "The Revolutionary WZ Method," which gives a brief overview of the celebrated Wilf--Zeilberger method of definite summation. Paradoxically, "Irresistible Integrals" does not contain the suitably-titled appendix, "The Revolutionary AZ Method," which would have been an excellent place to give a brief overview of the Almkvist--Zeilberger method of definite integration! This omission can be forgiven, but once realized it must be rectified. The remarkable AZ machinery deserves to be more widely known to the general public than it is. We will do our part by presenting a series of case studies that culminate in a -- fun but overkill -- integral-based proof that $e$ is irrational.</summary>
+    <category term="math.HO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-19T21:50:24Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.HO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.08308v1</id>
+    <title>Tweaking the Beukers Integrals In Search of More Miraculous Irrationality Proofs A La Apery</title>
+    <updated>2021-01-20T20:23:05Z</updated>
+    <link href="https://arxiv.org/abs/2101.08308v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.08308v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There are only aleph-zero rational numbers, while there are 2 to the power aleph-zero real numbers. Hence the probability that a randomly chosen real number would be rational is 0. Yet proving rigorously that any specific, natural, real constant, is irrational is usually very hard, witness that there are still no proofs of the irrationality of the Euler-Mascheroni constant, the Catalan constant, or Zeta(5).
+  Inspired by Frits Beukers' elegant rendition of Apery's seminal proofs of the irrationality of Zeta(2) and Zeta(3), and heavily using algorithmic proof theory, we systematically searched for other similar integrals, that lead to irrationality proofs. We found quite a few candidates for such proofs, including the square-root of Pi times Gamma(7/3)/Gamma(-1/6) and Gamma(19/6)/Gamma(8/3) divided by the square-root of Pi.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-20T20:23:05Z</published>
+    <arxiv:comment>21 pages, accompanied by three Maple packages available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/beukers.html</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.09061v1</id>
+    <title>Enumerating Restricted Dyck Paths with Context-Free Grammars</title>
+    <updated>2020-09-18T20:52:42Z</updated>
+    <link href="https://arxiv.org/abs/2009.09061v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.09061v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of Dyck paths of semilength $n$ is famously $C_n$, the $n$th Catalan number. This fact follows after noticing that every Dyck path can be uniquely parsed according to a context-free grammar. In a recent paper, Zeilberger showed that many restricted sets of Dyck paths satisfy different, more complicated grammars, and from this derived various generating function identities. We take this further, highlighting some combinatorial results about Dyck paths obtained via grammatical proof and generalizing some of Zeilberger's grammars to infinite families.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-18T20:52:42Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>AJ Bu</name>
+    </author>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.00090v3</id>
+    <title>Automatic Conjecturing and Proving of Exact Values of Some Infinite Families of Infinite Continued Fractions</title>
+    <updated>2020-05-26T14:35:42Z</updated>
+    <link href="https://arxiv.org/abs/2004.00090v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.00090v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by the recent pioneering work, dubbed "The Ramanujan Machine" by Raayoni et al. (arXiv:1907.00205), we (automatically) [rigorously] prove some of their conjectures regarding the exact values of some specific infinite continued fractions, and generalize them to evaluate infinite families (naturally generalizing theirs). Our work complements their beautiful approach, since we use symbolic rather than numeric computations, and we instruct the computer to not only discover such evaluations, but at the same time prove them rigorously.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-31T20:22:28Z</published>
+    <arxiv:comment>16 pages; relocated some equations to emphasize results and methodology</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+</feed>

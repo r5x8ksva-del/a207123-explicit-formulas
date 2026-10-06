@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/tOfBAscfHD1fCQuxnRt+8Qy0EaM</id>
+  <title>arXiv Query: search_query=abs:"two-dimensional" AND abs:recurrences AND abs:OEIS&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:43Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22two-dimensional%22+AND+(abs:recurrences+AND+abs:OEIS)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2110.13753v2</id>
+    <title>On some combinatorial sequences associated to invariant theory</title>
+    <updated>2022-04-20T12:23:43Z</updated>
+    <link href="https://arxiv.org/abs/2110.13753v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.13753v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the enumerative and analytic properties of some sequences constructed using tensor invariant theory. The octant sequences are constructed from the exceptional Lie group $G_2$ and the quadrant sequences from the special linear group $SL(3)$. In each case we show that the corresponding sequences are related by binomial transforms. The first three octant sequences and the first four quadrant sequences are listed in the On-Line Encyclopedia of Integer Sequences (OEIS). These sequences all have interpretations as enumerating two-dimensional lattice walks but for the octant sequences the boundary conditions are unconventional. These sequences are all P-recursive and we give the corresponding recurrence relations. In all cases the associated differential operators are of third order and have the remarkable property that they can be solved to give closed formulae for the ordinary generating functions in terms of classical Gaussian hypergeometric functions. Moreover, we show that the octant sequences and the quadrant sequences are related by the branching rules for the inclusion of $SL(3)$ in $G_2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-26T15:04:50Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1911.10288</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>European Journal of Combinatorics (2022)</arxiv:journal_ref>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Jordan Tirrell</name>
+    </author>
+    <author>
+      <name>Bruce W. Westbury</name>
+    </author>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+</feed>

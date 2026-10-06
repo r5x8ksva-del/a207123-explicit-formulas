@@ -1,0 +1,826 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/HE0M9CBqFDUMLzMK/Rk2zOMjpBE</id>
+  <title>arXiv Query: search_query=au:Kauers&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-10-06T23:24:39Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Kauers&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>93</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02220v1</id>
+    <title>Recurrences for permutations with long increasing subsequences</title>
+    <updated>2026-09-02T07:33:53Z</updated>
+    <link href="https://arxiv.org/abs/2609.02220v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02220v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove two simple bivariate recurrences for the number of permutations with a long increasing subsequence. The two recurrences imply D-finiteness of the sequence in a certain range. As a consequence, we also obtain a proof of a conjecture posed by Kauers and Koutschan in 2023.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T07:33:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Chen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.20299v1</id>
+    <title>On (3,1)-regular graphs with one more vertex than edges</title>
+    <updated>2026-07-22T15:47:54Z</updated>
+    <link href="https://arxiv.org/abs/2607.20299v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.20299v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sequence A339987 of the OEIS counts (3,1)-regular graphs having one more vertex than edges by half the number of vertices. A recurrence relation satisfied by this sequence was guessed by Kauers and Koutschan in 2023. We confirm it in three ways: first, by a representation as the diagonal of a triple sum and an elaborate variant of traditional creative telescoping that makes an a posteriori validation possible; second, by a residue representation and a direct calculation by reduction-based creative telescoping; third, by a combinatorial recurrence on graph families and a calculation by differential elimination. Each of those three approaches leads to a formally complete proof and involves a computer calculation in one way or another.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T15:47:54Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Frédéric Chyzak</name>
+    </author>
+    <author>
+      <name>Hui Huang</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.19255v1</id>
+    <title>Statistical Analysis of Hairpins and BasePairs in RNA Secondary Structures</title>
+    <updated>2026-02-22T16:11:22Z</updated>
+    <link href="https://arxiv.org/abs/2602.19255v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.19255v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We derive precise asymptotic expressions for the expectations, variances, covariance, and quite a few further mixed moments for the number of hairpins and the number of basepairs in RNA secondary structures, and give convincing evidence that the central-scaled distribution of the pair of random variables (hairpins, basepairs) tends in distribution to the bi-variate normal distribution with correlation $\sqrt{5 \sqrt{5} -11}/2= 0.2123322205\dots$</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-22T16:11:22Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>AJ Bu</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.11041v3</id>
+    <title>Exploiting the Structure in Tensor Decompositions for Matrix Multiplication</title>
+    <updated>2026-05-21T11:09:00Z</updated>
+    <link href="https://arxiv.org/abs/2602.11041v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.11041v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new algorithm for fast matrix multiplication using tensor decompositions which have special features. Thanks to these features we obtain exponents lower than what the rank of the tensor decomposition suggests. In particular for $6\times 6$ matrix multiplication we reduce the exponent of the recent algorithm by Moosbauer and Poole from $2.8075$ to $2.8019$, while retaining a reasonable leading coefficient.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-11T17:12:34Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+    <author>
+      <name>Isaac Wood</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06873v1</id>
+    <title>Symbolic Integration in Weierstrass-like Extensions</title>
+    <updated>2026-02-06T16:57:19Z</updated>
+    <link href="https://arxiv.org/abs/2602.06873v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06873v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper studies the integration problem in differential fields that may involve quantities reminiscent of the Weierstrass $\wp$ function, which are defined by a first-order nonlinear differential equation. We extend the classical notion of special polynomials to elements of Weierstrass-like extensions and present algorithms for reduction in such extensions. As an application of these results, we derive some new formulae for integrals of powers of $\wp$.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-06T16:57:19Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Wenqiao Li</name>
+    </author>
+    <author>
+      <name>Xiuyun Li</name>
+    </author>
+    <author>
+      <name>David Masser</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.19787v1</id>
+    <title>Exploring the Meta Flip Graph for Matrix Multiplication</title>
+    <updated>2025-10-22T17:22:09Z</updated>
+    <link href="https://arxiv.org/abs/2510.19787v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.19787v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Continuing recent investigations of bounding the tensor rank of matrix multiplication using flip graphs, we present here improved rank bounds for about thirty matrix formats.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-22T17:22:09Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Isaac Wood</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.01436v1</id>
+    <title>Symmetric Division of Linear Ordinary Differential Operators</title>
+    <updated>2025-10-01T20:19:28Z</updated>
+    <link href="https://arxiv.org/abs/2510.01436v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.01436v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The symmetric product of two ordinary linear differential operators $L_1,L_2$ is an operator whose solution set contains the product $f_1f_2$ of any solution $f_1$ of $L_1$ and any solution $f_2$ of~$L_2$. It is well known how to compute the symmetric product of two given operators $L_1,L_2$. In this paper we consider the corresponding division problem: given a symmetric product $L$ and one of its factors, what can we say about the other factors?</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-01T20:19:28Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.10245v1</id>
+    <title>The Challenge of Computing Geode Numbers</title>
+    <updated>2025-08-14T00:18:27Z</updated>
+    <link href="https://arxiv.org/abs/2508.10245v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.10245v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a fascinating recent American Mathematical Monthly article, Norman Wildberger and Dean Rubine introduced a new kind of combinatorial numbers, that they aptly named the ``Geode numbers''. While their definition is simple, these numbers are surprisingly hard to compute, in general. While the two-dimensional case has a nice closed-form expression, that make them easy to compute, already the three-dimensional case poses major computational challenges that we do meet, combining experimental mathematics and the holonomic ansatz. Alas, things get really complicated in four and higher dimensions, and we are unable to efficiently compute, for example, the $1000$-th term of the four-dimensional diagonal Geode sequence. A donation of $100$ US dollars to the OEIS, in honor of the first person to compute this number, is offered.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-14T00:18:27Z</published>
+    <arxiv:comment>6 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tewodros Amdeberhan</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07304v1</id>
+    <title>Bounds for D-Algebraic Closure Properties</title>
+    <updated>2025-05-12T07:48:41Z</updated>
+    <link href="https://arxiv.org/abs/2505.07304v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07304v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide bounds on the size of polynomial differential equations obtained by executing closure properties for D-algebraic functions. While it is easy to obtain bounds on the order of these equations, it requires some more work to derive bounds on their degree. Here we give bounds that apply under some technical condition about the defining differential equations.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-12T07:48:41Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Raphael Pages</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05896v1</id>
+    <title>Consequences of the Moosbauer-Poole Algorithms</title>
+    <updated>2025-05-09T09:02:34Z</updated>
+    <link href="https://arxiv.org/abs/2505.05896v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05896v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Moosbauer and Poole have recently shown that the multiplication of two $5\times 5$ matrices requires no more than 93 multiplications in the (possibly non-commutative) coefficient ring, and that the multiplication of two $6\times 6$ matrices requires no more than 153 multiplications. Taking these multiplication schemes as starting points, we found improved matrix multiplication schemes for various rectangular matrix formats using a flip graph search.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-09T09:02:34Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Isaac Wood</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05345v1</id>
+    <title>Creative Telescoping</title>
+    <updated>2025-05-08T15:33:10Z</updated>
+    <link href="https://arxiv.org/abs/2505.05345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>These notes on creative telescoping are based on a series of lectures at the Institut Henri Poincare in November and December 2023.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T15:33:10Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11787v2</id>
+    <title>A Shape Lemma for Ideals of Differential Operators</title>
+    <updated>2025-04-30T06:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2502.11787v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11787v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a version of the classical shape lemma for zero-dimensional ideals of a commutative multivariate polynomial ring to the noncommutative setting of zero-dimensional ideals in an algebra of differential operators.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T13:26:16Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.06264v1</id>
+    <title>Flip Graphs for Polynomial Multiplication</title>
+    <updated>2025-02-10T08:58:11Z</updated>
+    <link href="https://arxiv.org/abs/2502.06264v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.06264v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flip graphs were recently introduced in order to discover new matrix multiplication methods for matrix sizes. The technique applies to other tensors as well. In this paper, we explore how it performs for polynomial multiplication.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-10T08:58:11Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.03757v3</id>
+    <title>Non-minimality of minimal telescopers explained by residues</title>
+    <updated>2025-05-01T03:34:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.03757v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.03757v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Elaborating on an approach recently proposed by Mark van Hoeij, we continue to investigate why creative telescoping occasionally fails to find the minimal-order annihilating operator of a given definite sum or integral. We offer an explanation based on the consideration of residues.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T03:40:29Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Xiuyun Li</name>
+    </author>
+    <author>
+      <name>Rong-Hua Wang</name>
+    </author>
+    <author>
+      <name>Yisen Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.15848v2</id>
+    <title>Symmetries of Dependency Quantified Boolean Formulas</title>
+    <updated>2025-08-27T14:21:27Z</updated>
+    <link href="https://arxiv.org/abs/2410.15848v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.15848v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Symmetries have been exploited successfully within the realms of SAT and QBF to improve solver performance in practical applications and to devise more powerful proof systems. As a first step towards extending these advancements to the class of dependency quantified Boolean formulas (DQBFs), which generalize QBF by allowing more nuanced variable dependencies, this work develops a comprehensive theory to characterize symmetries for DQBFs. We also introduce the notion of symmetry breakers of DQBFs, along with a concrete construction, and discuss how to detect DQBF symmetries algorithmically using a graph-based approach. Moreover, we empirically study the presence of symmetries in benchmark formulas and their impact on solving times.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-21T10:21:58Z</published>
+    <arxiv:comment>34 pages, 4 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Clemens Hofstadler</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Martina Seidl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16334v1</id>
+    <title>The $O(1/n^{85})$ Asymptotic expansion of OEIS sequence A85</title>
+    <updated>2024-10-19T22:27:54Z</updated>
+    <link href="https://arxiv.org/abs/2410.16334v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16334v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>One of the most important sequences in enumerative combinatorics is OEIS sequence A85, the number of involutions of length n. In the Art of Computer Programming, vol. 3, Don Knuth derived the O(1/n) asymptotic formula for these numbers. In this modest tribute to our two heroes, Neil Sloane who just turned 85, and Don Knuth who was 85 a year ago, we go all the way to an $O(1/n^{85})$ asymptotic formula.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-19T22:27:54Z</published>
+    <arxiv:comment>4 pages. In honor of Neil Sloane and Don Knuth</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shalosh B. Ekhad</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.19223v1</id>
+    <title>On the Problem of Separating Variables in Multivariate Polynomial Ideals</title>
+    <updated>2024-05-29T16:03:48Z</updated>
+    <link href="https://arxiv.org/abs/2405.19223v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.19223v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a given ideal I in K[x_1,...,x_n,y_1,...,y_m] in a polynomial ring with n+m variables, we want to find all elements that can be written as f-g for some f in K[x_1,...,x_n] and some g in K[y_1,...,y_m], i.e., all elements of I that contain no term involving at the same time one of the x_1,...,x_n and one of the y_1,...,y_m. For principal ideals and for ideals of dimension zero, we give a algorithms that compute all these polynomials in a finite number of steps.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-29T16:03:48Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manfred Buchacher</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <arxiv:doi>10.1145/3666000.366968</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3666000.366968" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.04684v2</id>
+    <title>Parallel Summation in P-Recursive Extensions</title>
+    <updated>2024-06-07T08:09:36Z</updated>
+    <link href="https://arxiv.org/abs/2402.04684v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.04684v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose investigating a summation analog of the paradigm for parallel integration. We make some first steps towards an indefinite summation method applicable to summands that rationally depend on the summation index and a P-recursive sequence and its shifts. There is a distinction between so-called normal and so-called special polynomials. Under the assumption that the corresponding difference field has no unnatural constants, we are able to predict the normal polynomials appearing in the denominator of a potential closed form. We can also handle the numerator. Our method is incomplete so far as we cannot predict the special polynomials appearing in the denominator. However, we do have some structural results about special polynomials for the setting under consideration.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-07T09:19:01Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Ruyong Feng</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Xiuyun Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.05246v1</id>
+    <title>Reduction-based Creative Telescoping for P-recursive Sequences via Integral Bases</title>
+    <updated>2023-11-09T10:01:32Z</updated>
+    <link href="https://arxiv.org/abs/2311.05246v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.05246v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a way to split a given bivariate P-recursive sequence into a summable part and a non-summable part in such a way that the non-summable part is minimal in some sense. This decomposition gives rise to a new reduction-based creative telescoping algorithm based on the concept of integral bases.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-09T10:01:32Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Rong-Hua Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.00487v1</id>
+    <title>Hardinian Arrays</title>
+    <updated>2023-09-01T14:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2309.00487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.00487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2014, R.H. Hardin contributed a family of sequences about king-moves on an array to the On-Line Encyclopedia of Integer Sequences (OEIS). The sequences were recently noticed in an automated search of the OEIS by Kauers and Koutschan, who conjectured a recurrence for one of them. We prove their conjecture as well as some older conjectures stated in the OEIS entries. We also have some new conjectures for the asymptotics of Hardin's sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-01T14:26:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robert Dougherty-Bliss</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.00882v1</id>
+    <title>Some New Non-Commutative Matrix Multiplication Algorithms of Size $(n,m,6)$</title>
+    <updated>2023-06-01T16:41:55Z</updated>
+    <link href="https://arxiv.org/abs/2306.00882v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.00882v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For various $2\leq n,m \leq 6$, we propose some new algorithms for multiplying an $n\times m$ matrix with an $m \times 6$ matrix over a possibly noncommutative coefficient ring.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-01T16:41:55Z</published>
+    <arxiv:comment>9 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02793v2</id>
+    <title>Some D-finite and Some Possibly D-finite Sequences in the OEIS</title>
+    <updated>2023-04-24T20:28:25Z</updated>
+    <link href="https://arxiv.org/abs/2303.02793v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02793v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an automatic search, we found conjectural recurrences for some sequences in the OEIS that were not previously recognized as being D-finite. In some cases, we are able to prove the conjectured recurrence. In some cases, we are not able to prove the conjectured recurrence, but we can prove that a recurrence exists. In some remaining cases, we do not know where the recurrence might come from.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T23:00:22Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Integer Sequences, vol. 26, article 23.4.5, 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06396v2</id>
+    <title>Transcendence Certificates for D-finite Functions</title>
+    <updated>2023-09-19T12:14:17Z</updated>
+    <link href="https://arxiv.org/abs/2302.06396v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06396v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although in theory we can decide whether a given D-finite function is transcendental, transcendence proofs remain a challenge in practice. Typically, transcendence is certified by checking certain incomplete sufficient conditions. In this paper we propose an additional such condition which catches some cases on which other tests fail.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-13T14:36:20Z</published>
+    <arxiv:comment>9 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of International Symposium on Symbolic and Algebraic Computation 2023</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+    <arxiv:doi>10.1145/3597066.3597091</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3597066.3597091" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.04652v1</id>
+    <title>Hermite Reduction for D-finite Functions via Integral Bases</title>
+    <updated>2023-02-09T14:07:26Z</updated>
+    <link href="https://arxiv.org/abs/2302.04652v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.04652v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Trager's Hermite reduction solves the integration problem for algebraic functions via integral bases. A generalization of this algorithm to D-finite functions has so far been limited to the Fuchsian case. In the present paper, we remove this restriction and propose a reduction algorithm based on integral bases that is applicable to arbitrary D-finite functions.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-09T14:07:26Z</published>
+    <arxiv:comment>21 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.04070v1</id>
+    <title>Order bounds for $C^2$-finite sequences</title>
+    <updated>2023-02-08T14:17:44Z</updated>
+    <link href="https://arxiv.org/abs/2302.04070v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.04070v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A sequence is called $C$-finite if it satisfies a linear recurrence with constant coefficients. We study sequences which satisfy a linear recurrence with $C$-finite coefficients. Recently, it was shown that such $C^2$-finite sequences satisfy similar closure properties as $C$-finite sequences. In particular, they form a difference ring.
+  In this paper we present new techniques for performing these closure properties of $C^2$-finite sequences. These methods also allow us to derive order bounds which were not known before. Additionally, they provide more insight in the effectiveness of these computations.
+  The results are based on the exponent lattice of algebraic numbers. We present an iterative algorithm which can be used to compute bases of such lattices.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-08T14:17:44Z</published>
+    <arxiv:primary_category term="math.RA"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Philipp Nuspl</name>
+    </author>
+    <author>
+      <name>Veronika Pillwein</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.01175v1</id>
+    <title>Flip Graphs for Matrix Multiplication</title>
+    <updated>2022-12-02T13:58:57Z</updated>
+    <link href="https://arxiv.org/abs/2212.01175v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.01175v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new method for discovering matrix multiplication schemes based on random walks in a certain graph, which we call the flip graph. Using this method, we were able to reduce the number of multiplications for the matrix formats (4, 4, 5) and (5, 5, 5), both in characteristic two and for arbitrary ground fields.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-02T13:58:57Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.08175v2</id>
+    <title>The Orbit-Sum Method for Higher Order Equations</title>
+    <updated>2025-09-09T13:34:00Z</updated>
+    <link href="https://arxiv.org/abs/2211.08175v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.08175v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The orbit-sum method is an algebraic version of the reflection-principle that was introduced by Bousquet-Mélou and Mishna to solve functional equations that arise in the enumeration of lattice walks with small steps restricted to $\mathbb{N}^2$. It proceeds by computing a set of algebraic substitutions that can be applied to a given functional equation, forming a linear combination of its transformed versions to the end of eliminating some of the unknowns, and eliminating further unknowns by discarding terms with negative powers. The extension of the orbit-sum method to walks with large steps was started by Bostan, Bousquet-Mélou and Melczer. They presented an algorithm that computes the minimal polynomials of the algebraic substitutions. We continue their work by explaining, among other things, how to perform computations in their splitting field on the level of ``formal'' algebraic extensions and how its elements can be interpreted as series. We thereby make use of the primitive element theorem, Gröbner bases and the shape lemma, and the Newton-Puiseux algorithm.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-15T14:35:32Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manfred Buchacher</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.04045v3</id>
+    <title>The FBHHRBNRSSSHK-Algorithm for Multiplication in $\mathbb{Z}_2^{5\times5}$ is still not the end of the story</title>
+    <updated>2022-10-13T15:16:19Z</updated>
+    <link href="https://arxiv.org/abs/2210.04045v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.04045v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In response to a recent Nature article which announced an algorithm for multiplying $5\times5$-matrices over $\mathbb{Z}_2$ with only 96 multiplications, two fewer than the previous record, we present an algorithm that does the job with only 95 multiplications.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-08T15:04:25Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.01787v3</id>
+    <title>How does the Gerrymander Sequence Continue?</title>
+    <updated>2022-11-30T07:23:22Z</updated>
+    <link href="https://arxiv.org/abs/2209.01787v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.01787v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute the next few terms of the OEIS sequence A348456 and provide guessed equations for the generating functions of some sequences in its context.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-05T06:51:33Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Integer Sequences Vol 25 (2022) Article 22.9.7</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <author>
+      <name>George Spahn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.00550v1</id>
+    <title>A Normal Form for Matrix Multiplication Schemes</title>
+    <updated>2022-06-01T15:04:41Z</updated>
+    <link href="https://arxiv.org/abs/2206.00550v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.00550v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Schemes for exact multiplication of small matrices have a large symmetry group. This group defines an equivalence relation on the set of multiplication schemes. There are algorithms to decide whether two schemes are equivalent. However, for a large number of schemes a pairwise equivalence check becomes cumbersome. In this paper we propose an algorithm to compute a normal form of matrix multiplication schemes. This allows us to decide pairwise equivalence of a larger number of schemes efficiently.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-01T15:04:41Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.06030v1</id>
+    <title>Order-Degree-Height Surfaces for Linear Operators</title>
+    <updated>2022-05-12T11:28:07Z</updated>
+    <link href="https://arxiv.org/abs/2205.06030v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.06030v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is known for linear operators with polynomial coefficients annihilating a given D-finite function that there is a trade-off between order and degree. Raising the order may give room for lowering the degree. The relationship between order and degree is typically described by a hyperbola known as the order-degree curve. In this paper, we add the height into the picture, i.e., a measure for the size of the coefficients in the polynomial coefficients. For certain situations, we derive relationships between order, degree, and height that can be viewed as order-degree-height surfaces.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-12T11:28:07Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Hui Huang</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Gargi Mukherjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.07966v2</id>
+    <title>Guessing with Little Data</title>
+    <updated>2022-07-08T12:37:58Z</updated>
+    <link href="https://arxiv.org/abs/2202.07966v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.07966v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reconstructing a hypothetical recurrence equation from the first terms of an infinite sequence is a classical and well-known technique in experimental mathematics. We propose a variation of this technique which can succeed with fewer input terms.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-16T10:20:17Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Proceedings of ISSAC 2022, pp 83--90</arxiv:journal_ref>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Christoph Koutschan</name>
+    </author>
+    <arxiv:doi>10.1145/3476446.3535486</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3476446.3535486" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.06538v2</id>
+    <title>Lazy Hermite Reduction and Creative Telescoping for Algebraic Functions</title>
+    <updated>2021-02-15T06:00:31Z</updated>
+    <link href="https://arxiv.org/abs/2102.06538v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.06538v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bronstein's lazy Hermite reduction is a symbolic integration technique that reduces algebraic functions to integrands with only simple poles without the prior computation of an integral basis. We sharpen the lazy Hermite reduction by combining it with the polynomial reduction to solve the decomposition problem of algebraic functions. The sharpened reduction is then used to design a reduction-based telescoping algorithm for algebraic functions in two variables.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-12T14:04:15Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.00816v3</id>
+    <title>The generating function of Kreweras walks with interacting boundaries is not algebraic</title>
+    <updated>2021-06-22T15:56:04Z</updated>
+    <link href="https://arxiv.org/abs/2012.00816v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.00816v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Beaton, Owczarek and Xu (2019) studied generating functions of Kreweras walks and of reverse Kreweras walks in the quarter plane, with interacting boundaries. They proved that for the reverse Kreweras step set, the generating function is always algebraic, and for the Kreweras step set, the generating function is always D-finite. However, apart from the particular case where the interactions are symmetric in $x$ and~$y$, they left open the question of whether the latter one is algebraic. Using computer algebra tools, we confirm their intuition that the generating function of Kreweras walks is not algebraic, apart from the particular case already identified.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-01T20:31:42Z</published>
+    <arxiv:comment>13 pages, accepted at FPSAC'21;</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alin Bostan</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.13373v1</id>
+    <title>Quadrant Walks Starting Outside the Quadrant</title>
+    <updated>2020-11-26T16:31:27Z</updated>
+    <link href="https://arxiv.org/abs/2011.13373v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.13373v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate a functional equation which resembles the functional equation for the generating function of a lattice walk model for the quarter plane. The interesting feature of this equation is that its orbit sum is zero while its solution is not algebraic. The solution can be interpreted as the generating function of lattice walks in $\mathbb{Z}^2$ starting at $(-1,-1)$ and subject to the restriction that the coordinate axes can be crossed only in one direction. We also consider certain variants of the equation, all of which seem to have transcendental solutions. In one case, the solution is perhaps not even D-finite.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-26T16:31:27Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manfred Buchacher</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Amelie Trotignon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.10205v2</id>
+    <title>Counting Standard Young Tableaux With Restricted Runs</title>
+    <updated>2020-08-08T19:54:44Z</updated>
+    <link href="https://arxiv.org/abs/2006.10205v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.10205v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The number of Young Tableaux whose shape is a k by n rectangle is famously (nk)! 0! ... (k-1)!/((n+k-1)!(n+k-2)!... n!) implying that for each specific k, that sequence satisfies a linear recurrence equation with polynomial coefficients of the first order. But what about counting Young tableaux where certain "run lengths" are forbidden? Then things seem to get much more complicated. We conclude with four conjectures and pledge donations to the OEIS in honor of the first provers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-17T23:55:55Z</published>
+    <arxiv:comment>8 pages. Accompanied by Maple packages and C programs available from https://sites.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/cyt.html This version adds a footnote, and pledges donations to the OEIS in honor of the first provers</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Doron Zeilberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.01623v2</id>
+    <title>Good pivots for small sparse matrices</title>
+    <updated>2020-07-29T11:23:44Z</updated>
+    <link href="https://arxiv.org/abs/2006.01623v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.01623v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For sparse matrices up to size $8 \times 8$, we determine optimal choices for pivot selection in Gaussian elimination. It turns out that they are slightly better than the pivots chosen by a popular pivot selection strategy, so there is some room for improvement. We then create a pivot selection strategy using machine learning and find that it indeed leads to a small improvement compared to the classical strategy.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-02T14:07:56Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Jakob Moosbauer</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-030-60026-6_20</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-030-60026-6_20" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.14238v1</id>
+    <title>Walks with Small Steps in the 4D-Orthant</title>
+    <updated>2020-04-29T14:36:19Z</updated>
+    <link href="https://arxiv.org/abs/2004.14238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.14238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide some first experimental data about generating functions of restricted lattice walks with small steps in NN^4.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-29T14:36:19Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Manfred Buchacher</name>
+    </author>
+    <author>
+      <name>Sophie Hofmanninger</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02783v1</id>
+    <title>Integral P-Recursive Sequences</title>
+    <updated>2020-02-07T13:49:00Z</updated>
+    <link href="https://arxiv.org/abs/2002.02783v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02783v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In an earlier paper, the notion of integrality known from algebraic number fields and fields of algebraic functions has been extended to D-finite functions. The aim of the present paper is to extend the notion to the case of P-recursive sequences. In order to do so, we formulate a general algorithm for finding all integral elements for valued vector spaces and then show that this algorithm includes not only the algebraic and the D-finite cases but also covers the case of P-recursive sequences.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-07T13:49:00Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Shaoshi Chen</name>
+    </author>
+    <author>
+      <name>Lixin Du</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Thibaut Verron</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.01541v2</id>
+    <title>Separating Variables in Bivariate Polynomial Ideals</title>
+    <updated>2020-06-05T14:50:38Z</updated>
+    <link href="https://arxiv.org/abs/2002.01541v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.01541v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an algorithm which for any given ideal $I\subseteq\mathbb{K} [x,y]$ finds all elements of $I$ that have the form $f(x) - g(y)$, i.e., all elements in which no monomial is a multiple of $xy$.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-04T21:18:00Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Manfred Buchacher</name>
+    </author>
+    <author>
+      <name>Manuel Kauers</name>
+    </author>
+    <author>
+      <name>Gleb Pogudin</name>
+    </author>
+  </entry>
+</feed>

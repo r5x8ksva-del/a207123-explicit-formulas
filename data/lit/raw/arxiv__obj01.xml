@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/a15o5dg5n3z9vvppNtZMhn7Np70</id>
+  <title>arXiv Query: search_query=abs:Stirling AND abs:"consecutive patterns"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:46Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:Stirling+AND+abs:%22consecutive+patterns%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.09599v1</id>
+    <title>Decreasing Runs in Quasi-Stirling Permutations of Multisets</title>
+    <updated>2026-08-10T13:37:55Z</updated>
+    <link href="https://arxiv.org/abs/2608.09599v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.09599v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As a natural extension of Stirling permutations, quasi-Stirling permutations are multipermutations $π$ with the property that for any subsequence $π_{j_1}π_{j_2}π_{j_3}π_{j_4}$ satisfying $π_{j_1}=π_{j_3}$ and $π_{j_2}=π_{j_4}$, we have $π_{j_1}=π_{j_2}$. Using a bijective construction, Yan, Yang, Huang and Zhu showed that the joint distribution of ascents, descents and plateaux over quasi-Stirling permutations of a multiset $M=\{1^{k_1},2^{k_2},\ldots,n^{k_n}\}$ coincides with that over the multiset $M'=\{1^{k_1+\cdots+k_n-n+1},2,\ldots,n\}$. In this paper, we prove that the same invariance of distribution holds for decreasing runs, and consequently for all decreasing consecutive patterns. To this end, following the Yan-Yang-Huang-Zhu approach, we construct a multiplicity-redistribution bijection that preserves decreasing runs, thereby reducing the computation of joint distribution of decreasing consecutive patterns over quasi-Stirling permutations from $M$ to $M'$. Together with the classical run theorem, our bijection leads to explicit recurrence relations and generating functions for the distribution functions of these statistics over quasi-Stirling permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-10T13:37:55Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Hanqian Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.12436v2</id>
+    <title>Statistics on clusters and $r$-Stirling permutations</title>
+    <updated>2023-05-18T04:33:44Z</updated>
+    <link href="https://arxiv.org/abs/2209.12436v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.12436v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Goulden$\unicode{x2013}$Jackson cluster method, adapted to permutations by Elizalde and Noy, reduces the problem of counting permutations by occurrences of a prescribed consecutive pattern to that of counting clusters, which are special permutations with a lot of structure. Recently, Zhuang found a generalization of the cluster method which specializes to refinements by additional permutation statistics, namely the inverse descent number $\operatorname{ides}$, the inverse peak number $\operatorname{ipk}$, and the inverse left peak number $\operatorname{ilpk}$. Continuing this line of work, we study the enumeration of $2134\cdots m$-clusters by $\operatorname{ides}$, $\operatorname{ipk}$, and $\operatorname{ilpk}$, which allows us to derive formulas for counting permutations by occurrences of the consecutive pattern $2134\cdots m$ jointly with each of these statistics. Analogous results for the pattern $12\cdots (m-2)m(m-1)$ are obtained via symmetry arguments. Along the way, we discover that $2134\cdots (r+1)$-clusters are equinumerous with $r$-Stirling permutations introduced by Gessel and Stanley, and we establish some joint equidistributions between these two families of permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-26T05:57:53Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergi Elizalde</name>
+    </author>
+    <author>
+      <name>Justin M. Troyka</name>
+    </author>
+    <author>
+      <name>Yan Zhuang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.06154v2</id>
+    <title>Avoiding vincular patterns on alternating words</title>
+    <updated>2016-03-01T01:15:48Z</updated>
+    <link href="https://arxiv.org/abs/1507.06154v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.06154v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A word $w=w_1w_2\cdots w_n$ is alternating if either $w_1&lt;w_2&gt;w_3&lt;w_4&gt;\cdots$ (when the word is up-down) or $w_1&gt;w_2&lt;w_3&gt;w_4&lt;\cdots$ (when the word is down-up). The study of alternating words avoiding classical permutation patterns was initiated by the authors in~\cite{GKZ}, where, in particular, it was shown that 123-avoiding up-down words of even length are counted by the Narayana numbers.
+  However, not much was understood on the structure of 123-avoiding up-down words. In this paper, we fill in this gap by introducing the notion of a cut-pair that allows us to subdivide the set of words in question into equivalence classes. We provide a combinatorial argument to show that the number of equivalence classes is given by the Catalan numbers, which induces an alternative (combinatorial) proof of the corresponding result in~\cite{GKZ}.
+  Further, we extend the enumerative results in~\cite{GKZ} to the case of alternating words avoiding a vincular pattern of length 3. We show that it is sufficient to enumerate up-down words of even length avoiding the consecutive pattern $\underline{132}$ and up-down words of odd length avoiding the consecutive pattern $\underline{312}$ to answer all of our enumerative questions. The former of the two key cases is enumerated by the Stirling numbers of the second kind.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-22T12:29:05Z</published>
+    <arxiv:comment>25 pages; To appear in Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Alice L. L. Gao</name>
+    </author>
+    <author>
+      <name>Sergey Kitaev</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/2f3VdhDEzX4t9A5iyCg9ZkckqQA</id>
+  <title>arXiv Query: search_query=abs:"Cayley permutations" AND abs:pattern&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:00:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Cayley+permutations%22+AND+abs:pattern&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2003.02536v2</id>
+    <title>Sorting Cayley permutations with pattern-avoiding machines</title>
+    <updated>2020-04-21T14:15:52Z</updated>
+    <link href="https://arxiv.org/abs/2003.02536v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.02536v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pattern avoiding machines were recently introduced by Claesson, Ferrari and the current author to gain a better understanding of the classical $2$-stacksort problem. In this paper we generalize these devices by allowing permutations with repeated elements, also known as Cayley permutations. The main result is a description of those patterns such that the corresponding set of sortable permutations is a class. We also show a new involution on the set of Cayley permutations, obtained by regarding a pattern-avoiding stack as an operator. Finally, we analyze two generalizations of pop-stack sorting on Cayley permutations. In both cases we describe sortable permutations in terms of pattern avoidance.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-05T11:31:15Z</published>
+    <arxiv:comment>18 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Giulio Cerbai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.07950v3</id>
+    <title>Transport of patterns by Burge transpose</title>
+    <updated>2022-09-26T07:46:34Z</updated>
+    <link href="https://arxiv.org/abs/2005.07950v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.07950v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We take the first steps in developing a theory of transport of patterns from Fishburn permutations to (modified) ascent sequences. Given a set of pattern avoiding Fishburn permutations, we provide an explicit construction for the basis of the corresponding set of modified ascent sequences. Our approach is in fact more general and can transport patterns between permutations and equivalence classes of so called Cayley permutations. This transport of patterns relies on a simple operation we call the Burge transpose. It operates on certain biwords called Burge words. Moreover, using mesh patterns on Cayley permutations, we present an alternative view of the transport of patterns as a Wilf-equivalence between subsets of Cayley permutations. We also highlight a connection with primitive ascent sequences.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-16T10:58:57Z</published>
+    <arxiv:comment>30 pages, 6 figures. To appear in the European Journal of Combinatorics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Giulio Cerbai</name>
+    </author>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.19583v1</id>
+    <title>Pattern-avoiding Cayley permutations via combinatorial species</title>
+    <updated>2024-07-28T20:49:26Z</updated>
+    <link href="https://arxiv.org/abs/2407.19583v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.19583v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A Cayley permutation is a word of positive integers such that if a letter appears in this word, then all positive integers smaller than that letter also appear. We initiate a systematic study of pattern avoidance on Cayley permutations adopting a combinatorial species approach. Our methods lead to species equations, generating series, and counting formulas for Cayley permutations avoiding any pattern of length at most three. We also introduce the species of primitive structures as a generalization of Cayley permutations with no "flat steps". Finally, we explore various notions of Wilf equivalence arising in this context.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-28T20:49:26Z</published>
+    <arxiv:comment>32 pages, 3 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Anders Claesson</name>
+    </author>
+    <author>
+      <name>Giulio Cerbai</name>
+    </author>
+    <author>
+      <name>Dana C. Ernst</name>
+    </author>
+    <author>
+      <name>Hannah Golab</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.01812v2</id>
+    <title>Catalan and Schröder permutations sortable by two restricted stacks</title>
+    <updated>2020-09-22T13:59:45Z</updated>
+    <link href="https://arxiv.org/abs/2004.01812v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.01812v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pattern avoiding machines were introduced recently by Claesson, Cerbai and Ferrari as a particular case of the two-stacks in series sorting device. They consist of two restricted stacks in series, ruled by a right-greedy procedure and the stacks avoid some specified patterns. Some of the obtained results have been further generalized to Cayley permutations by Cerbai, specialized to particular patterns by Defant and Zheng, or considered in the context of functions over the symmetric group by Berlow. In this work we study pattern avoiding machines where the first stack avoids a pair of patterns of length 3 and investigate those pairs for which sortable permutations are counted by the (binomial transform of the) Catalan numbers and the Schröder numbers.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-03T23:37:19Z</published>
+    <arxiv:comment>This version extends and updates the previous one</arxiv:comment>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>J. -L. Baril</name>
+    </author>
+    <author>
+      <name>G. Cerbai</name>
+    </author>
+    <author>
+      <name>C. Khalil</name>
+    </author>
+    <author>
+      <name>V. Vajnovszki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05171v1</id>
+    <title>Pattern avoidance in revised ascent sequences</title>
+    <updated>2025-05-08T12:18:12Z</updated>
+    <link href="https://arxiv.org/abs/2505.05171v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05171v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by the definition of modified ascent sequences, we introduce a new class of integer sequences called revised ascent sequences. These sequences are defined as Cayley permutations where each entry is a leftmost occurrence if and only if it serves as an ascent bottom. We construct a bijection between ascent sequences and revised ascent sequences by adapting the classic hat map, which transforms ascent sequences into modified ascent sequences. Additionally, we investigate revised ascent sequences that avoid a single pattern, leading to a wealth of enumerative results. Our main techniques include the use of bijections, generating trees, generating functions, and the kernel method.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T12:18:12Z</published>
+    <arxiv:comment>25 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Robin D. P. Zhou</name>
+    </author>
+  </entry>
+</feed>

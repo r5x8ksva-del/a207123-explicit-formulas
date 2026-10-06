@@ -1,0 +1,87 @@
+Proof that for the family A202093-A202099:
+  a(n) = C(alpha+E, E) * C(alpha+O, O) * C(beta+E, E) * C(beta+O, O),
+where:
+  w     = number of columns (w=3 for A202093, w=4 for A202094, ..., w=9 for A202099),
+  E     = ceil(w/2),
+  O     = floor(w/2),
+  alpha = ceil((n+2)/2) = floor((n+3)/2),
+  beta  = floor((n+2)/2).
+
+The array has n+2 rows (rows 0 through n+1) and w columns (columns 0 through w-1),
+with binary entries, avoiding patterns 001 and 011 in every row and every column.
+
+KEY LEMMA: In a binary string s_0, s_1, ..., s_{L-1}, avoiding both 001 and 011 is
+equivalent to: for all i, s_i = 0 implies s_{i+2} = 0.
+
+Proof of lemma: if s_i = 0, then (s_i, s_{i+1}, s_{i+2}) is either (0,0,s_{i+2})
+or (0,1,s_{i+2}). Pattern 001 forbids (0,0,1) and pattern 011 forbids (0,1,1), so
+in both cases s_{i+2} = 1 is forbidden. Conversely, the condition rules out both
+forbidden patterns directly.
+
+Corollary: a binary string of length L avoids 001 and 011 iff its even-indexed
+subsequence s_0, s_2, s_4, ... and its odd-indexed subsequence s_1, s_3, s_5, ...
+are each non-increasing (of the form 1^k 0^*). A non-increasing binary sequence of
+length M is determined by its number of leading 1s, so there are M+1 choices.
+
+STEP 1: Column parameterization.
+Each column c (0 <= c <= w-1) has length n+2 and must avoid 001 and 011. By the
+corollary, column c is uniquely determined by:
+  p_c in {0,...,alpha}:  number of leading 1s in the even-indexed rows of column c,
+  q_c in {0,...,beta}:   number of leading 1s in the odd-indexed rows of column c.
+
+The entry of the array at row i, column c is therefore:
+  r_{i,c} = 1  iff  (i even and i/2 < p_c)  or  (i odd and (i-1)/2 < q_c).
+
+STEP 2: Row constraint in terms of p and q sequences.
+Row i = (r_{i,0}, r_{i,1}, ..., r_{i,w-1}) must also avoid 001 and 011. By the key
+lemma: r_{i,c} = 0 implies r_{i,c+2} = 0 for all valid c.
+
+Case i even: r_{i,c} = [p_c > i/2].
+  The constraint [p_c <= i/2] => [p_{c+2} <= i/2] must hold for all even i >= 0.
+  If p_c < alpha, taking i/2 = p_c gives the binding case p_{c+2} <= p_c;
+  if p_c = alpha, the inequality is automatic since p_{c+2} <= alpha. Thus
+  p_{c+2} <= p_c for all c.
+
+Case i odd: r_{i,c} = [q_c > (i-1)/2].
+  The same argument gives: q_{c+2} <= q_c for all c.
+
+So the row constraints are exactly:
+  p_0 >= p_2 >= p_4 >= ...  (even-indexed columns, length E),  values in {0,...,alpha},
+  p_1 >= p_3 >= p_5 >= ...  (odd-indexed columns,  length O),  values in {0,...,alpha},
+  q_0 >= q_2 >= q_4 >= ...  (even-indexed columns, length E),  values in {0,...,beta},
+  q_1 >= q_3 >= q_5 >= ...  (odd-indexed columns,  length O),  values in {0,...,beta}.
+
+STEP 3: Counting each independent sequence.
+The number of weakly decreasing sequences of length L with values in {0,...,M} equals
+C(L+M, M) (multisets of size L from an (M+1)-element set).
+
+The four sequences are fully independent (they constrain disjoint parameters), giving:
+
+  Sequence                  Length  Range         Count
+  p at even columns         E       {0,...,alpha}  C(E+alpha, E)
+  p at odd  columns         O       {0,...,alpha}  C(O+alpha, O)
+  q at even columns         E       {0,...,beta}   C(E+beta,  E)
+  q at odd  columns         O       {0,...,beta}   C(O+beta,  O)
+
+STEP 4: Final count.
+  a(n) = C(E+alpha, E) * C(O+alpha, O) * C(E+beta, E) * C(O+beta, O).
+
+STEP 5: Explicit formulas per width.
+
+  w=3 (E=2, O=1): a(n) = C(alpha+2,2) * C(alpha+1,1) * C(beta+2,2) * C(beta+1,1)
+  w=4 (E=2, O=2): a(n) = C(alpha+2,2)^2 * C(beta+2,2)^2
+  w=5 (E=3, O=2): a(n) = C(alpha+3,3) * C(alpha+2,2) * C(beta+3,3) * C(beta+2,2)
+  w=6 (E=3, O=3): a(n) = C(alpha+3,3)^2 * C(beta+3,3)^2
+  w=7 (E=4, O=3): a(n) = C(alpha+4,4) * C(alpha+3,3) * C(beta+4,4) * C(beta+3,3)
+  w=8 (E=4, O=4): a(n) = C(alpha+4,4)^2 * C(beta+4,4)^2
+  w=9 (E=5, O=4): a(n) = C(alpha+5,5) * C(alpha+4,4) * C(beta+5,5) * C(beta+4,4)
+
+where alpha = floor((n+3)/2), beta = floor((n+2)/2).
+
+Verified against all available OEIS terms for w = 3, 4, 5, 6, 7, 8, 9.
+
+Note: The even/odd split in n (alpha and beta differ by 1 when n is odd, are equal
+when n is even) explains the (1+x) factors in the g.f. denominators. Since a(n) is
+a period-2 quasipolynomial of degree 2w, its g.f. has
+denominator (1-x)^(2w+1)*(1+x)^(2w-1) after cancellation, matching the displayed
+case w=3 denominator (1-x)^7*(1+x)^5 and the recurrence orders for w=4,...,9.

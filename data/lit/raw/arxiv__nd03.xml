@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/9uYxa/4slpzl2Ug9jnbAUV4yhxg</id>
+  <title>arXiv Query: search_query=abs:triangular AND abs:recurrence AND abs:polynomial&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-06T21:02:13Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:triangular+AND+(abs:recurrence+AND+abs:polynomial)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>49</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0806.3641v1</id>
+    <title>Recurrence Relations for Strongly q-Log-Convex Polynomials</title>
+    <updated>2008-06-23T09:23:35Z</updated>
+    <link href="https://arxiv.org/abs/0806.3641v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0806.3641v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider a class of strongly q-log-convex polynomials based on a triangular recurrence relation with linear coefficients, and we show that the Bell polynomials, the Bessel polynomials, the Ramanujan polynomials and the Dowling polynomials are strongly q-log-convex. We also prove that the Bessel transformation preserves log-convexity.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-06-23T09:23:35Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Can. Math. Bull. 54 (2011) 217-229</arxiv:journal_ref>
+    <author>
+      <name>William Y. C. Chen</name>
+    </author>
+    <author>
+      <name>Larry X. W. Wang</name>
+    </author>
+    <author>
+      <name>Arthur L. B. Yang</name>
+    </author>
+    <arxiv:doi>10.4153/CMB-2011-008-5</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4153/CMB-2011-008-5" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.12035v1</id>
+    <title>On classical orthogonal polynomials and the Cholesky factorization of a class of Hankel matrices</title>
+    <updated>2023-02-23T13:54:51Z</updated>
+    <link href="https://arxiv.org/abs/2302.12035v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.12035v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical moment functionals (Hermite, Laguerre, Jacobi, Bessel) can be characterized as those linear functionals whose moments satisfy a second order linear recurrence relation. In this work, we use this characterization to link the theory of classical orthogonal polynomials and the study of Hankel matrices whose entries satisfy a second order linear recurrence relation. Using the recurrent character of the entries of such Hankel matrices, we give several characterizations of the triangular and diagonal matrices involved in their Cholesky factorization and connect them with a corresponding characterization of classical orthogonal polynomials.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-23T13:54:51Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Misael E. Marriaga</name>
+    </author>
+    <author>
+      <name>Guillermo Vera de Salas</name>
+    </author>
+    <author>
+      <name>Marta Latorre</name>
+    </author>
+    <author>
+      <name>Rubén Muñoz Alcázar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.13165v2</id>
+    <title>Carleman Linearization and Systems of Arbitrary Depth Polynomial Recursions</title>
+    <updated>2021-12-15T12:13:38Z</updated>
+    <link href="https://arxiv.org/abs/2109.13165v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.13165v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>New approach to systems of polynomial recursions is developed based on the Carleman linearization procedure. The article is divided into two main sections: firstly, we focus on the case of uni-variable depth-one polynomial recurrences. Subsequently, the systems of depth-one polynomial recurrence relations are discussed. The corresponding transition matrix is constructed and upper triangularized. Furthermore, the powers of the transition matrix are calculated using the back substitution procedure. The explicit expression for a solution to a broad family of recurrence relations is obtained. We investigate to which recurrences the framework can be applied and construct a sufficient conditions for the method to work. It is shown how introduction of auxiliary variables can be used to reduce arbitrary depth systems to the depth-one system of recurrences dealt with earlier. Finally, the limitations of the method are discussed, outlining possible directions of future research.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-24T11:06:20Z</published>
+    <arxiv:comment>22 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Mikołaj Myszkowski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1209.4591v1</id>
+    <title>Permanents, Determinants, Weighted Isobaric Polynomials and Integer Sequences</title>
+    <updated>2012-09-20T17:44:10Z</updated>
+    <link href="https://arxiv.org/abs/1209.4591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1209.4591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we construct two types of Hessenberg matrices with the properties that every weighted isobaric polynomial (WIP) appears as a determinant of one of them, and as the permanent of the other. Every integer sequence which is linearly recurrent is representable by (an evaluation of) some linearly recurrent sequence of WIPs. WIPs are symmetric polynomials written on the elementary symmetric polynomial basis. Among them are the generalized Fibonacci polynomials and the generalized Lucas polynomials, which already have these sweeping representing properties. Among the integer sequences discussed are the Chebychev polynomials of the 2nd kind, the Stirling numbers of the 1st and 2nd kind, the Catalan numbers, and the triangular numbers, as well as all sequences which are either multiplicative arithmetic functions or additive arithmetic functions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-09-20T17:44:10Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Huilan Li</name>
+    </author>
+    <author>
+      <name>Trueman MacHenry</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.05550v3</id>
+    <title>The Factorial-Basis Method for Finding Definite-Sum Solutions of Linear Recurrences With Polynomial Coefficients</title>
+    <updated>2022-12-15T12:16:06Z</updated>
+    <link href="https://arxiv.org/abs/2202.05550v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.05550v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The problem of finding a nonzero solution of a linear recurrence $Ly = 0$ with polynomial coefficients where $y$ has the form of a definite hypergeometric sum, related to the Inverse Creative Telescoping Problem of [14][Sec. 8], has now been open for three decades. Here we present an algorithm (implemented in a SageMath package) which, given such a recurrence and a quasi-triangular, shift-compatible factorial basis $\mathcal{B} = \langle P_k(n)\rangle_{k=0}^\infty$ of the polynomial space $\mathbb{K}[n]$ over a field $\mathbb{K}$ of characteristic zero, computes a recurrence satisfied by the coefficient sequence $c = \langle c_k\rangle_{k=0}^\infty$ of the solution $y_n = \sum_{k=0}^\infty c_kP_k(n)$ (where, thanks to the quasi-triangularity of $\mathcal{B}$, the sum on the right terminates for each $n \in \mathbb{N}$). More generally, if $\mathcal{B}$ is $m$-sieved for some $m \in \mathbb{N}$, our algorithm computes a system of $m$ recurrences satisfied by the $m$-sections of the coefficient sequence $c$. If an explicit nonzero solution of this system can be found, we obtain an explicit nonzero solution of $Ly = 0$.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-11T11:07:39Z</published>
+    <arxiv:comment>62 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SC"/>
+    <arxiv:journal_ref>Journal of Symbolic Computation 117 (2023) 15-50</arxiv:journal_ref>
+    <author>
+      <name>Antonio Jiménez-Pastor</name>
+    </author>
+    <author>
+      <name>Marko Petkovšek</name>
+    </author>
+    <arxiv:doi>10.1016/j.jsc.2022.11.002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jsc.2022.11.002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.06549v1</id>
+    <title>Almost triangular Markov chains on $\mathbb{N}$</title>
+    <updated>2021-09-14T09:42:55Z</updated>
+    <link href="https://arxiv.org/abs/2109.06549v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.06549v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A transition matrix $[U_{i,j}]_{i,j\geq 0}$ on $\mathbb{N}$ is said to be almost upper triangular if $U_{i,j}\geq 0\Rightarrow j\geq i-1$, so that the increments of the corresponding Markov chains are at least $-1$; a transition matrix $[L_{i,j}]_{i,j\geq 0}$ is said to be almost lower triangular if $L_{i,j}\geq 0\Rightarrow j\leq i+1$, and then, the increments of the corresponding Markov chains are at most $+1$. In the present paper, we characterize the recurrence, positive recurrence and invariant distribution for the class of almost triangular transition matrices. The upper case appears to be the simplest in many ways, with existence and uniqueness of invariant measures, when in the lower case, existence as well as uniqueness are not guaranteed. We present the time-reversal connection between upper and lower almost triangular transition matrices, which provides classes of integrable lower triangular transition matrices. These results encompass the case of birth and death processes (BDP) that are famous Markov chains (or processes) taking their values in $\mathbb{N}$, which are simultaneously almost upper and almost lower triangular, and whose study has been initiated by Karlin &amp; McGregor in the 1950's. They found invariant measures, criteria for recurrence, null recurrence, among others; their approach relies on some profound connections they discovered between the theory of BDP, the spectral properties of their transition matrices, the moment problem, and the theory of orthogonal polynomials. Our approach is mainly combinatorial and uses elementary algebraic methods; it is somehow more direct and does not use the same tools.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-14T09:42:55Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Luis Fredes</name>
+      <arxiv:affiliation>LaBRI</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean-Francois Marckert</name>
+      <arxiv:affiliation>LaBRI</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.06195v2</id>
+    <title>Perfect state transfer in two dimensions and the bivariate dual-Hahn polynomials</title>
+    <updated>2022-04-12T04:04:50Z</updated>
+    <link href="https://arxiv.org/abs/2009.06195v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.06195v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new solvable two-dimensional spin lattice model defined on a regular grid of triangular shape is proposed. The hopping amplitudes between sites are related to recurrence coefficients of certain bivariate dual-Hahn polynomials. For a specific choice of the parameters, perfect state transfer and fractional revival are shown to take place.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-14T04:47:43Z</published>
+    <arxiv:comment>17pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>Prog Theor Exp Phys (2022)</arxiv:journal_ref>
+    <author>
+      <name>Hiroshi Miki</name>
+    </author>
+    <author>
+      <name>Satoshi Tsujimoto</name>
+    </author>
+    <author>
+      <name>Luc Vinet</name>
+    </author>
+    <arxiv:doi>10.1093/ptep/ptac069</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/ptep/ptac069" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.00888v1</id>
+    <title>Springer Numbers and Arnold Families Revisited</title>
+    <updated>2021-11-01T12:26:48Z</updated>
+    <link href="https://arxiv.org/abs/2111.00888v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.00888v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For the calculation of Springer numbers (of root systems) of type $B_n$ and $D_n$, Arnold introduced a signed analogue of alternating permutations, called $β_n$-snakes, and derived recurrence relations for enumerating the $β_n$-snakes starting with $k$. The results are presented in the form of double triangular arrays ($v_{n,k}$) of integers, $1\le |k|\le n$. An Arnold family is a sequence of sets of such objects as $β_n$-snakes that are counted by $(v_{n,k})$. As a refinement of Arnold's result, we give analogous arrays of polynomials, defined by recurrence, for the calculation of the polynomials associated with successive derivatives of $\tan x$ and $\sec x$, established by Hoffman. Moreover, we provide some new Arnold families of combinatorial objects that realize the polynomial arrays, which are signed variants of André permutations and Simsun permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-01T12:26:48Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sen-Peng Eu</name>
+    </author>
+    <author>
+      <name>Tung-Shan Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1307.0300v1</id>
+    <title>A few remarks on Euler and Bernoulli polynomials and their connections with binomial coefficients and modified Pascal matrices</title>
+    <updated>2013-07-01T08:40:12Z</updated>
+    <link href="https://arxiv.org/abs/1307.0300v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1307.0300v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove certain identities involving Euler and Bernoulli polynomials that can be treated as recurrences. We use these and also other known identities to indicate connection of Euler and Bernoulli numbers with entries of inverses of certain lower triangular built of binomial coefficients. Another words we interpret Euler and Bernoulli numbers in terms of modified Pascal matrices.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-07-01T08:40:12Z</published>
+    <arxiv:primary_category term="math.RA"/>
+    <arxiv:journal_ref>Math. Aeterna, 4(1), 2014, 83-88</arxiv:journal_ref>
+    <author>
+      <name>Paweł J. Szabłowski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.14485v3</id>
+    <title>Total positivity from the exponential Riordan arrays</title>
+    <updated>2021-10-10T15:17:31Z</updated>
+    <link href="https://arxiv.org/abs/2006.14485v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.14485v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Log-concavity and almost log-convexity of the cycle index polynomials were proved by Bender and Canfield [J. Combin. Theory Ser. A 74 (1996)]. Schirmacher [J. Combin. Theory Ser. A 85 (1999)] extended them to $q$-log-concavity and almost $q$-log-convexity. Motivated by these, we consider the stronger properties total positivity from the Toeplitz matrix and Hankel matrix.
+  By using exponential Riordan array methods, we give some criteria for total positivity of the triangular matrix of coefficients of the generalized cycle index polynomials, the Toeplitz matrix and Hankel matrix of the polynomial sequence in terms of the exponential formula, the logarithmic formula and the fractional formula, respectively.
+  Finally, we apply our criteria to some triangular arrays satisfying some recurrence relations, including Bessel triangles of two kinds and their generalizations, the Lah triangle and its generalization, the idempotent triangle and some triangles related to binomial coefficients, rook polynomials and Laguerre polynomials. We not only get total positivity of these lower-triangles, and $q$-Stieltjes moment properties and $3$-$q$-log-convexity of their row-generating functions, but also prove that their triangular convolutions preserve Stieltjes moment property. In particular, we solve a conjecture of Sokal on $q$-Stieltjes moment property of rook polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-25T15:30:57Z</published>
+    <arxiv:comment>It will appear in SIAM J. Discrete Math</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.15173v1</id>
+    <title>Calculating a function of a matrix with a real spectrum</title>
+    <updated>2021-05-31T17:32:57Z</updated>
+    <link href="https://arxiv.org/abs/2105.15173v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.15173v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $T$ be a square matrix with a real spectrum, and let $f$ be an analytic function. The problem of the approximate calculation of $f(T)$ is discussed. Applying the Schur triangular decomposition and the reordering, one can assume that $T$ is triangular and its diagonal entries $t_{ii}$ are arranged in increasing order. To avoid calculations using the differences $t_{ii}-t_{jj}$ with close (including equal) $t_{ii}$ and $t_{jj}$, it is proposed to represent $T$ in a block form and calculate the two main block diagonals using interpolating polynomials. The rest of the $f(T)$ entries can be calculated using the Parlett recurrence algorithm. It is also proposed to perform scalar operations (such as the building of interpolating polynomials) with an enlarged number of decimal digits.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-31T17:32:57Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>P. Kubelík</name>
+    </author>
+    <author>
+      <name>V. G. Kurbatov</name>
+    </author>
+    <author>
+      <name>I. V. Kurbatova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.11081v1</id>
+    <title>Lattice paths and branched continued fractions. III. Generalizations of the Laguerre, rook and Lah polynomials</title>
+    <updated>2023-12-18T10:22:35Z</updated>
+    <link href="https://arxiv.org/abs/2312.11081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.11081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a triangular array $\widehat{\sf L}^{(α)}$ of 5-variable homogeneous polynomials that enumerate Laguerre digraphs (digraphs in which each vertex has out-degree 0 or 1 and in-degree 0 or 1) with separate weights for peaks, valleys, double ascents, double descents, and loops. These polynomials generalize the classical Laguerre polynomials as well as the rook and Lah polynomials. We show that this triangular array is totally positive and that the sequence of its row-generating polynomials is Hankel-totally positive, under suitable restrictions on the values given to the indeterminates. This implies, in particular, the coefficientwise Hankel-total positivity of the monic unsigned univariate Laguerre polyomials. Our proof uses the method of production matrices as applied to exponential Riordan arrays. Our main technical lemma concerns the total positivity of a large class of quadridiagonal production matrices; it generalizes the tridiagonal comparison theorem. In some cases these polynomials are given by a branched continued fraction. Our constructions are motivated in part by recurrences for the multiple orthogonal polynomials associated to weights based on modified Bessel functions of the first kind $I_α$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-18T10:22:35Z</published>
+    <arxiv:comment>86 pages, LaTeX2e</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bishal Deb</name>
+    </author>
+    <author>
+      <name>Alexander Dyachenko</name>
+    </author>
+    <author>
+      <name>Mathias Pétréolle</name>
+    </author>
+    <author>
+      <name>Alan D. Sokal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1212.3706v1</id>
+    <title>A Generalization of the Binomial Interpolated Operator and its Action on Linear Recurrent Sequences</title>
+    <updated>2012-12-15T17:43:23Z</updated>
+    <link href="https://arxiv.org/abs/1212.3706v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1212.3706v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study the action of a generalization of the Binomial interpolated operator on the set of linear recurrent sequences. We find how the zeros of characteristic polynomials are changed and we prove that a subset of these operators form a group, with respect to a well-defined composition law. Furthermore, we study a vast class of linear recurrent sequences fixed by these operators and many other interesting properties. Finally, we apply all the results to integer sequences, finding many relations and formulas involving Catalan numbers, Fibonacci numbers, Lucas numbers and triangular numbers.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-12-15T17:43:23Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>J. Integer Sequences 13, Article 10.9.7, 2010</arxiv:journal_ref>
+    <author>
+      <name>Stefano Barbero</name>
+    </author>
+    <author>
+      <name>Umberto Cerruti</name>
+    </author>
+    <author>
+      <name>Nadir Murru</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.12602v1</id>
+    <title>A unified approach to combinatorial triangles: a generalized Eulerian polynomial</title>
+    <updated>2020-07-24T15:57:32Z</updated>
+    <link href="https://arxiv.org/abs/2007.12602v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.12602v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the classical Eulerian number, descent and excedance numbers in the hyperoctahedral groups, an triangular array from staircase tableaux and so on, we study a triangular array $[\mathcal {T}_{n,k}]_{n,k\ge 0}$ satisfying the recurrence relation: \begin{equation*} \mathcal {T}_{n,k}=λ(a_0n+a_1k+a_2)\mathcal {T}_{n-1,k}+(b_0n+b_1k+b_2)\mathcal {T}_{n-1,k-1}+\frac{cd}λ(n-k+1)\mathcal {T}_{n-1,k-2} \end{equation*} with $\mathcal {T}_{0,0}=1$ and $\mathcal {T}_{n,k}=0$ unless $0\le k\le n$. We derive a functional transformation for its row-generating function $\mathcal{T}_n(x)$ from the row-generating function $A_n(x)$ of another array $[A_{n,k}]_{n,k}$ satisfying a two-term recurrence relation. Based on this transformation, we can get properties of $\mathcal {T}_{n,k}$ and $\mathcal{T}_n(x)$ including nonnegativity, log-concavity, real rootedness, explicit formula and so on. Then we extend the famous Frobenius formula, the $γ$ positivity decomposition and the David-Barton formula for the classical Eulerian polynomial to those of a generalized Eulerian polynomial. We also get an identity for the generalized Eulerian polynomial with the general derivative polynomial.
+  Finally, we apply our results to an array from the Lambert function, a triangular array from staircase tableaux and the alternating-runs triangle of type $B$ in a unified approach.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-24T15:57:32Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.18799v1</id>
+    <title>Methods for Collisions in Some Algebraic Hash Functions</title>
+    <updated>2023-05-30T07:22:04Z</updated>
+    <link href="https://arxiv.org/abs/2305.18799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.18799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper focuses on devising methods for producing collisions in algebraic hash functions that may be seen as generalized forms of the well-known Zémor and Tillich-Zémor hash functions. In contrast to some of the previous approaches, we attempt to construct collisions in a structured and deterministic manner by constructing messages with triangular or diagonal hashes messages. Our method thus provides an alternate deterministic approach to the method for finding triangular hashes. We also consider the generalized Tillich-Zémor hash functions over ${\mathbb{F}_p}^k$ for $p\neq 2$, relating the generator matrices to a polynomial recurrence relation, and derive a closed form for any arbitrary power of the generators. We then provide conditions for collisions, and a method to maliciously design the system so as to facilitate easy collisions, in terms of this polynomial recurrence relation. Our general conclusion is that it is very difficult in practice to achieve the theoretical collision conditions efficiently, in both the generalized Zémor and the generalized Tillich-Zémor cases. Therefore, although the techniques are interesting theoretically, in practice the collision-resistance of the generalized Zémor functions is reinforced.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-30T07:22:04Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Simran Tinani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28834v1</id>
+    <title>Riordan array representation of recursive polynomial sequences, orthogonal polynomial sequences, and $d$-orthogonal polynomial sequences</title>
+    <updated>2026-08-28T20:09:05Z</updated>
+    <link href="https://arxiv.org/abs/2608.28834v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28834v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study when a polynomial sequence $\{p_n(x)\}$ satisfying a linear homogeneous recurrence with polynomial coefficients admits an ordinary Riordan array as its coefficient matrix. For second-order recurrences $p_{n+2}(x)=a(x)p_{n+1}(x)+b(x)p_n(x)$, we give a complete characterization. We extend this to a necessary condition and a full factorization criterion for recurrences of arbitrary order $\ell \geq 3$.
+  We then develop a production-matrix framework for arbitrary orthogonal polynomial sequences (OPS), not restricted to the Riordan-array-type case: for any lower-triangular invertible coefficient matrix $A$ of an OPS, the production matrix $P_{A^{-1}}=ASA^{-1}$ is always the tridiagonal Jacobi matrix encoding the three-term recurrence, and the first column of $A^{-1}$ always gives the moment sequence -- even when, as for the Legendre polynomials, the recurrence coefficients are non-constant and no Riordan array representation of the coefficient matrix exists. We illustrate this with Legendre and Chebyshev polynomials as, respectively, non-Riordan-type and Riordan-type examples, and give an explicit closed-form coefficient matrix and its inverse for the generalized Gegenbauer--Humbert OPS. Finally, we extend the framework to $d$-orthogonal polynomial sequences, showing that the coefficient matrix of a $d$-orthogonal sequence is always invertible, that its associated production matrix is $(d+2)$-banded (lower Hessenberg) and encodes the corresponding $(d+2)$-term recurrence, and that the first $d$ columns of the inverse matrix recover the moment sequences of the defining vector functional -- identifying $d$-orthogonality with $(d+1)$-Hessenberg generalized Riordan arrays and extending the classical $d=1$ tridiagonal correspondence.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T20:09:05Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tian-Xiao He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05131v2</id>
+    <title>Real-rootedness and interlacing for parking functions and Chow polynomials</title>
+    <updated>2026-09-23T12:23:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.05131v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05131v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove real-rootedness for the Chow polynomials of the noncrossing partition lattices by transferring tieless parking functions to finite-alphabet Smirnov words and applying an interlacing-preserving transition of M.~Leander. We also derive a triangular recurrence for peaks and ties and identify the peakless-tieless descent polynomial as the Narayana polynomial. For the toric $g$-contributions of Ehrenborg--Hetyei--Readdy, we exhibit a fixed-row common interlacer and establish real-rootedness of all nonnegative row sums. Individual real-rootedness follows in particular; Q.~Xiao also proved it by a different differential recurrence. We also give a second proof of the individual statement, by finite Schur--Szegő convolution, that does not use the common interlacer. These results prove Conjecture~4.2 of Xiao and Conjecture~11.2 of Ehrenborg--Hetyei--Readdy, with consequences for weakly 123-avoiding parking functions. We also prove real-rootedness for the image-size polynomial on all parking functions and for the ascent and descent polynomials of four two-pattern-avoiding classes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T13:31:37Z</published>
+    <arxiv:comment>18 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.13016v1</id>
+    <title>An evaluation algorithm for q-Bézier triangular patches formed by convex combinations</title>
+    <updated>2025-01-22T17:02:43Z</updated>
+    <link href="https://arxiv.org/abs/2501.13016v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.13016v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An extension to triangular domains of the univariate q-Bernstein basis functions is introduced and analyzed. Some recurrence relations and properties such as partition of unity and degree elevation are proved for them. It is also proved that they form a basis for the space of polynomials of total degree less than or equal to n on a triangle. In addition, it is presented a de Casteljau type evaluation algorithm whose steps are all linear convex combinations.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-22T17:02:43Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>J. Comput. Appl. Math. 428 (2023), Paper No. 115184, 11 pp</arxiv:journal_ref>
+    <author>
+      <name>Jorge Delgado</name>
+    </author>
+    <author>
+      <name>Héctor Orera</name>
+    </author>
+    <author>
+      <name>Juan Manuel Peña</name>
+    </author>
+    <arxiv:doi>10.1016/j.cam.2023.115184</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cam.2023.115184" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1706.04247v1</id>
+    <title>Star of David and other patterns in the Hosoya-like polynomials triangles</title>
+    <updated>2017-06-13T20:41:34Z</updated>
+    <link href="https://arxiv.org/abs/1706.04247v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1706.04247v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we first generalize the numerical recurrence relation given by Hosoya to polynomials. Using this generalization we construct a Hosoya-like triangle for polynomials, where its entries are products of generalized Fibonacci polynomials (GFP). Examples of GFP are: Fibonacci polynomials, Chebyshev polynomials, Morgan-Voyce polynomials, Lucas polynomials, Pell polynomials, Fermat polynomials, Jacobsthal polynomials, Vieta polynomials and other familiar sequences of polynomials. For every choice of a GFP we obtain a triangular array of polynomials. In this paper we extend the star of David property, also called the Hoggatt-Hansell identity, to this type of triangles. We also establish the star of David property in the gibonomial triangle. In addition, we study other geometric patterns in these triangles and as a consequence we give geometric interpretations for the Cassini's identity, Catalan's identity, and other identities for Fibonacci polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-06-13T20:41:34Z</published>
+    <arxiv:comment>Eight Figures and 24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Rigoberto Florez</name>
+    </author>
+    <author>
+      <name>Robinson A. Higuita</name>
+    </author>
+    <author>
+      <name>Antara Mukherjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1106.3512v2</id>
+    <title>Dunkl shift operators and Bannai-Ito polynomials</title>
+    <updated>2012-01-09T07:19:56Z</updated>
+    <link href="https://arxiv.org/abs/1106.3512v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1106.3512v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the most general Dunkl shift operator $L$ with the following properties: (i) $L$ is of first order in the shift operator and involves reflections; (ii) $L$ preserves the space of polynomials of a given degree; (iii) $L$ is potentially self-adjoint. We show that under these conditions, the operator $L$ has eigenfunctions which coincide with the Bannai-Ito polynomials. We construct a polynomial basis which is lower-triangular and two-diagonal with respect to the action of the operator $L$. This allows to express the BI polynomials explicitly. We also present an anti-commutator AW(3) algebra corresponding to this operator. From the representations of this algebra, we derive the structure and recurrence relations of the BI polynomials. We introduce new orthogonal polynomials - referred to as the complementary BI polynomials - as an alternative $q \to -1$ limit of the Askey-Wilson polynomials. These complementary BI polynomials lead to a new explicit expression for the BI polynomials in terms of the ordinary Wilson polynomials.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-06-17T15:13:32Z</published>
+    <arxiv:comment>35 pages, to be published in Adv.Math</arxiv:comment>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Satoshi Tsujimoto</name>
+    </author>
+    <author>
+      <name>Luc Vinet</name>
+    </author>
+    <author>
+      <name>Alexei Zhedanov</name>
+    </author>
+  </entry>
+</feed>
