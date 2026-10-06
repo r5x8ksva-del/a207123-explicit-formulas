@@ -2,7 +2,7 @@
 
 **运行方式**：在本文件夹下执行 `py -3.14 verify_all.py`（需要 numpy：rv2 调用的复核脚本没有纯 Python 回退）。它依次运行 `code/checks/check_*.py`，逐条打印 `PASS <id> <描述（含范围）>` 或 `FAIL …`，最后给出总表；任何 FAIL、子模块异常退出或缺少 SUMMARY 行都会使退出码为 1。
 
-**11 个核对模块**（除 check_rv2.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举）
+**12 个核对模块**（除 check_rv2.py、check_rv3.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举；check_rv3.py 运行复核者 r-c4ii、r-c3a、s6-t436、s6-t342 的脚本，同样不导入 core，各脚本按定义自算真值：Num_q 的递推，K、I、𝒮 的定义）
 
 | 模块 | 内容 | 检查数 |
 |---|---|---|
@@ -17,24 +17,26 @@
 | `check_c5b.py` | C-5 OEIS：离线解析 68 个快照，核对家族条目、经验递推、R_k、U_3/U_4 双射、未命中记录 | 33 |
 | `check_rv.py` | 第二轮复核的产物：N 三角对照定义、两个反例的范围（d≤46 全正、47≤d≤57 失效；奇数 d≤67 为正、69≤d≤101 为负）、Num_q 同余与 Laguerre 恒等式、负整数零点严格有限验证（k≤40）、恒等式补 s=0 | 7 |
 | `check_rv2.py` | 复核者 x1 的两个独立脚本（不导入 core）：E 部分在 u=1/2 的统一阻碍（m=2..34）与证书复算；U 两族 \|指数\|≤6000、E 两项 ≤1500 无表示 | 2 |
+| `check_rv3.py` | 报告 ⑥ 原有两处所依赖的复核者脚本（不导入 core）：T4.3(6) 由 (7) 的闭式推出 j≤14、按第二份证明构造到 j≤40 与拟合到 j≤24（真实系数 q≤300）；T3.4(2) K 的闭式与定义（两套实现，7 个与 13 个 x）、端到端 I−𝒮（4 组与 11 组 (x,t)）、推论在 105 个 x 上的扫描 | 6 |
 
-**最终一次运行**（2026-10-05，完整输出 `logs/verify_all_final.log`；这次运行时本机另有一个会话在跑基准测试，耗时约为空闲时的 3 倍（此前保存的全量运行：logs/verify_all_run1.log 232.1 s，logs/audit_a3-requirements_verify_rerun.log 216.4 s），检查结果不受影响）：
+**最终一次运行**（本地 2026-10-07，完整输出 `logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行；2026-10-05 的上一次最终运行（11 个模块、290 条，当时本机另有会话在跑基准测试，用时 630.7 s）另存为 `logs/verify_all_final_2026-10-05.log`）：
 
 ```
 area     pass   fail    rc  summary     secs  status
-c0         13      0     0      yes      6.3  PASS
-c1         45      0     0      yes    174.2  PASS
-c2a        23      0     0      yes     76.2  PASS
-c2b        33      0     0      yes     99.0  PASS
-c3a        34      0     0      yes     35.2  PASS
-c3b        22      0     0      yes     51.2  PASS
-c4         41      0     0      yes     77.0  PASS
-c5a        37      0     0      yes     28.5  PASS
-c5b        33      0     0      yes      6.9  PASS
-rv          7      0     0      yes     53.6  PASS
-rv2         2      0     0      yes     22.6  PASS
+c0         13      0     0      yes      4.1  PASS
+c1         45      0     0      yes     39.5  PASS
+c2a        23      0     0      yes     12.2  PASS
+c2b        33      0     0      yes     32.9  PASS
+c3a        34      0     0      yes     22.4  PASS
+c3b        22      0     0      yes     20.0  PASS
+c4         41      0     0      yes     21.7  PASS
+c5a        37      0     0      yes     14.2  PASS
+c5b        33      0     0      yes      5.2  PASS
+rv          7      0     0      yes     14.7  PASS
+rv2         2      0     0      yes      8.3  PASS
+rv3         6      0     0      yes     78.0  PASS
 ------------------------------------------------------------------------
-TOTAL pass=290 fail=0 modules=11 failed_modules=-  (630.7s)
+TOTAL pass=296 fail=0 modules=12 failed_modules=-  (273.3s)
 OVERALL: PASS
 ```
 
@@ -72,7 +74,7 @@ OVERALL: PASS
 | `Checks.lean` | — | 用 `native_decide` 把定义与数据对照：任务说明第 2 节（k=7、10 两行，R_1..R_10，a_3(1..6)）、(C3) 的 N 三角形 k=7、10 两行（经 `N_inv`、`U_eq_F` 计算）、U_6(3,s) 与 U_7(2,s)（经 `Us_explicit` 计算，对照 Python 按定义暴力枚举的数据）；这是计算核对，依赖编译器，不是证明的一部分 |
 | `run_lean_checks.sh` | — | 按依赖顺序逐个模块 `lake build +A207123.X`（顺序由 `topo_order.py` 给出；任何一步失败就停止），再整体 `lake build` 一次（这时只剩根模块），然后依次运行 `lake env lean Axioms.lean`、`lake env lean Checks.lean`；每一步都经 `lean_one.sh` 串行执行（先拿锁，再等机器上没有其他 lean.exe），输出写入 `logs/lean_build.log` |
 | `run_lean_checks_direct.sh` | — | 同样三步、同样的日志格式，但第 1 步按依赖顺序直接 `lake env lean A207123/X.lean -o … -i …` 从源码编译每个模块，最后编根模块（不经 lake 的构建记录核对：本机内存紧时那一步核对每次要 7–10 分钟）；lakefile 没有额外的编译选项，所以与 lake build 编译的是同一套设置。2026-10-07 的全量构建用的是它 |
-| `lean_one.sh`、`lean_watchdog.ps1`、`mem_status.ps1`、`topo_order.py` | — | 串行锁与内存保护（同一时间只运行一个 Lean 进程；启动前要求系统提交余量与可用内存足够，运行中 Lean 私有内存超过上限或系统提交余量过低就结束进程树，退出码 137）与模块拓扑排序 |
+| `lean_one.sh`、`lean_watchdog.ps1`、`mem_status.ps1`、`topo_order.py` | — | 串行锁与内存保护（同一时间只运行一个 Lean 进程；启动前要求系统提交余量与可用内存足够，运行中 Lean 私有内存超过上限或系统提交余量过低就结束进程树，退出码 137；2026-10-07 起，单次内存查询失败时改用备用数据源，连续 5 秒都读不到才结束，不再把查询失败误当成余量为 0）与模块拓扑排序 |
 
 重跑：在 `lean/` 下运行 `./run_lean_checks.sh`，内存紧时改用 `./run_lean_checks_direct.sh`。本机（16 GB 内存）上单个 Lean 进程峰值超过 7.5 GB，两个同时运行会被系统杀掉，所以不要直接整体 `lake build`（它会并行编译多个模块），也不要同时开两个编译；内存充足的机器可以直接依次运行 `lake build`、`lake env lean Axioms.lean`、`lake env lean Checks.lean`（首次需要下载 Mathlib 缓存，约 5–7 GB；之后 `lake build` 每次要核对全部 Mathlib 构建记录，约 3–6 分钟，单个文件编译约 0.5–1 分钟，冷启动时加载 Mathlib 可能要十几分钟）。输出见 `logs/lean_build.log`。
 
@@ -83,4 +85,4 @@ OVERALL: PASS
 - `code/main_extra/gcd_minimal_order.py`：最小阶逐因子检验（v≤300）。
 - 各方向的探索脚本在 `code/<area>/`，复核者的独立脚本在 `code/review/<reviewer>/`，对应日志在 `logs/`（文件名带 area 或 `review_` 前缀）。
 - 各轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`、`logs/phase4b_recheck_output.json`；第四轮各审计者的独立脚本在 `code/review/final-audit/`，输出为 `logs/final_audit_*.log`；报告各轮修订的补丁脚本在 `code/main_extra/report_patches/`；逐条结论清单 `notes/review/claims_<area>.md`，逐条复核意见 `notes/review/<reviewer>-review.md`。
-- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final.log`（最终，11 个模块）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。
+- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final_2026-10-05.log`（第四轮修订后，11 个模块 290 条）、`logs/verify_all_2026-10-07.log`（修好 c5b 之后，11 个模块 290 条）、`logs/verify_all_final.log`（最终，2026-10-07 加固 ⑥ 之后，12 个模块 296 条）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。

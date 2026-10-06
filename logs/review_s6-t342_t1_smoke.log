@@ -1,0 +1,16 @@
+====================================================================================================
+[13] x = 9/10 = 0.9000   lambda = 100/729 = 0.1371742112   frac(lambda) = 0.1372   ceil = 1
+    closed: Gamma(-lam) = -8.022902097942246679827287E+0   J = 5.188200300942425698812205E-1   ratio K/Gamma(-lam) = 1+lam x^5 J = 1.042024422437633648160379E+0
+            K_closed = -8.36005992488194889988447073571E+0
+            self-checks: Gamma reflection vs recursion rel 0 ; J two scales rel 1.5E-94 ; J quad est 7.7E-95 ; J:levels=5 h=2^-6/levels=5 h=2^-6
+    precision: cancellation ~0 digits -> working 50 (+20 guard); target abs err 1e-47.1
+    series: N = 391 terms (exact phi_n), Cauchy tail bound 1e-49.7, |A| = -8.52608E+0, max|term| = 7.29E+0  (0.0s)
+    integral: B0 = 2.0660477E-1  B5 = 6.8724851E-2  B = 1.6602344E-1 ; quad est |dB| <= 1.18E-70 ; levels=4 h=2^-5  (0.1s)
+    K_def    = -8.36005992488194889988447073571E+0
+    K_closed = -8.36005992488194889988447073571E+0
+    rel |K_def - K_closed|/|K| = 4.67E-55    (error budget of K_def / |K| <= 2.32E-51)
+    diagnostics: Prym half rel dev 1.56E-70 ; x^5 half vs Gamma(1-lam) J rel dev 1.16E-53
+    corollary: 1 < K/Gamma(-lam) = 1.04202442244E+0 < 2-x = 1.1 : True ; sign(K_def) = -, (-1)^ceil(lam) = -1 : True
+PASS x=9/10  rel_dev=4.67E-55  digits_used=70  (0.3s)
+====================================================================================================
+SUMMARY t1: points=1 FAIL=0 worst rel dev=4.67E-55 elapsed 0.3s

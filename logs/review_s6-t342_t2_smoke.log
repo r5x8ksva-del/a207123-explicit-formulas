@@ -1,0 +1,14 @@
+====================================================================================================
+[0] x=9/10 t=-1/2  lambda=0.13717421 (ceil 1)  a=-t/x^3=500/729=0.68587106
+    closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = -2.16216368093922337633665237838E+1
+    |I| ~ 1e-0.1, |C| ~ 1e1.3  ->  working precision 55 (+20)
+    S: exact rational partial sum up to m=179 (Den has 896 digits), rigorous tail <= 1e-53.8 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
+    I (sigma form): 7.84093326057074269641334958545E-1  quad est 7.63E-75  cutoff Sigma=5.25  11 pieces; levels=5  (1.0s)
+    I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 7.84093326057074269641334958545E-1  rel diff vs sigma form 2.19E-59  levels=4 h=2^-5  (0.1s)
+    S          = 2.24057301354493080330078587423E+1
+    I - S      = -2.16216368093922337633665237838E+1
+    closed C   = -2.16216368093922337633665237838E+1
+    |(I-S) - C|/|C| = 2.22E-56 ;  |I-S|/|I| = 2.76E+1 (I and S agree to ~0 digits but are not equal)
+PASS (x,t)=(9/10,-1/2) rel=2.22E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.3s)
+====================================================================================================
+SUMMARY t2: pairs=1 FAIL=0 worst rel dev=2.22E-56 elapsed 1.3s

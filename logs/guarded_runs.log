@@ -1,3 +1,52 @@
 2026-10-06 16:03:24 UTC | py -3.14 -c print('ok') > C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/guard_smoke.out | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
 2026-10-06 16:03:29 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/alloc_test.py > C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/guard_kill.out | exit 137 | 4s | PEAK=318 MINHEAD=15564 MINAVAIL=4673 KILLED=1 REASON=job private 318 MB > cap 300 MB
 2026-10-06 16:07:28 UTC | py -3.14 verify_all.py > logs/verify_all_2026-10-07.log | exit 0 | 222s | PEAK=434 MINHEAD=15006 MINAVAIL=4860 KILLED=0 REASON=
+2026-10-06 18:33:58 UTC | py -3.14 code/review/r-c4ii/r6_structure.py > logs/s6_try_r6.log | exit 0 | 0s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:34:12 UTC | py -3.14 code/review/r-c3a/r2_numeric.py > logs/s6_try_r2.log | exit 0 | 12s | PEAK=23 MINHEAD=15344 MINAVAIL=4832 KILLED=0 REASON=
+2026-10-06 18:35:05 UTC | py -3.14 verify_all.py rv3 > logs/s6_try_rv3.log | exit 0 | 13s | PEAK=39 MINHEAD=15955 MINAVAIL=5041 KILLED=0 REASON=
+2026-10-06 18:35:40 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/red/code/checks/check_rv3.py > logs/s6_red_rv3.log | exit 1 | 13s | PEAK=31 MINHEAD=16003 MINAVAIL=5066 KILLED=0 REASON=
+2026-10-06 18:42:49 UTC | py -3.14 code/review/s6-t436/t1_anchor.py > logs/review_s6-t436_t1_anchor.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:43:05 UTC | py -3.14 code/review/s6-t436/t1_anchor.py > logs/review_s6-t436_t1_anchor.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:43:57 UTC | py -3.14 code/review/s6-t436/t2_lemmas.py > logs/review_s6-t436_t2_lemmas.log | exit 0 | 6s | PEAK=34 MINHEAD=16135 MINAVAIL=4990 KILLED=0 REASON=
+2026-10-06 18:44:57 UTC | py -3.14 code/review/s6-t436/t3_structure.py 16 > logs/review_s6-t436_t3_structure.log | exit 0 | 4s | PEAK=28 MINHEAD=16424 MINAVAIL=5222 KILLED=0 REASON=
+2026-10-06 18:45:54 UTC | py -3.14 code/review/s6-t436/t4_closed_form.py 22 > logs/review_s6-t436_t4_closed_form.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:46:23 UTC | py -3.14 code/review/s6-t436/t4_closed_form.py 30 > logs/review_s6-t436_t4_closed_form.log | exit 0 | 2s | PEAK=23 MINHEAD=16251 MINAVAIL=5134 KILLED=0 REASON=
+2026-10-06 18:47:18 UTC | py -3.14 code/review/s6-t436/t3_structure.py 24 > logs/review_s6-t436_t3_structure.log | exit 0 | 32s | PEAK=30 MINHEAD=16231 MINAVAIL=5243 KILLED=0 REASON=
+2026-10-06 18:51:38 UTC | py -3.14 code/review/s6-t342/t0_selftest.py > logs/review_s6-t342_t0_selftest.log | exit 137 | 400s | PEAK=23 MINHEAD=0 MINAVAIL=0 KILLED=1 REASON=system commit headroom 0 MB < 3000 MB
+2026-10-06 18:54:15 UTC | py -3.14 code/review/s6-t342/t0_selftest.py > logs/review_s6-t342_t0_selftest.log | exit 0 | 102s | PEAK=23 MINHEAD=16705 MINAVAIL=5392 KILLED=0 REASON=
+2026-10-06 18:55:11 UTC | py -3.14 code/review/s6-t436/t5_table6.py > logs/review_s6-t436_t5_table6.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:57:47 UTC | py -3.14 code/review/s6-t342/t0b_prym_high.py > logs/review_s6-t342_t0b_prym_high.log | exit 0 | 106s | PEAK=23 MINHEAD=16676 MINAVAIL=5406 KILLED=0 REASON=
+2026-10-06 18:57:55 UTC | py -3.14 code/review/s6-t436/t6_compare_rc4ii.py > logs/review_s6-t436_t6_compare_rc4ii.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 18:58:20 UTC | py -3.14 code/review/s6-t436/t3_structure.py 24 > logs/review_s6-t436_t3_structure.log | exit 0 | 24s | PEAK=29 MINHEAD=16697 MINAVAIL=5727 KILLED=0 REASON=
+2026-10-06 18:59:10 UTC | py -3.14 code/review/s6-t342/t1_K_def_vs_closed.py 13 > logs/review_s6-t342_t1_smoke.log | exit 0 | 2s | PEAK=24 MINHEAD=16808 MINAVAIL=5818 KILLED=0 REASON=
+2026-10-06 18:59:32 UTC | py -3.14 code/review/s6-t342/t1_K_def_vs_closed.py 1,2,3,4,5,6,7,8,9,10,11,12,13 > logs/review_s6-t342_t1_K_rest.log | exit 0 | 14s | PEAK=24 MINHEAD=16734 MINAVAIL=5737 KILLED=0 REASON=
+2026-10-06 19:01:07 UTC | py -3.14 code/review/s6-t27/t27_selftest.py > logs/review_s6-t27_selftest.log | exit 0 | 2s | PEAK=0 MINHEAD=16668 MINAVAIL=5785 KILLED=0 REASON=
+2026-10-06 19:01:24 UTC | py -3.14 code/review/s6-t342/t1_K_def_vs_closed.py 0 > logs/review_s6-t342_t1_K_x015.log | exit 0 | 50s | PEAK=24 MINHEAD=16675 MINAVAIL=5792 KILLED=0 REASON=
+2026-10-06 19:01:43 UTC | py -3.14 code/review/s6-t342/t2_end_to_end.py 0 > logs/review_s6-t342_t2_smoke.log | exit 0 | 2s | PEAK=24 MINHEAD=16676 MINAVAIL=5825 KILLED=0 REASON=
+2026-10-06 19:02:00 UTC | py -3.14 code/review/s6-t342/t2_end_to_end.py > logs/review_s6-t342_t2_end_to_end.log | exit 0 | 10s | PEAK=24 MINHEAD=16669 MINAVAIL=5777 KILLED=0 REASON=
+2026-10-06 19:02:04 UTC | py -3.14 code/review/s6-t342/t3_corollary.py > logs/review_s6-t342_t3_corollary.log | exit 0 | 3s | PEAK=23 MINHEAD=16720 MINAVAIL=5815 KILLED=0 REASON=
+2026-10-06 19:03:03 UTC | py -3.14 code/review/s6-t436/t1_anchor.py > logs/review_s6-t436_t1_anchor.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 19:03:09 UTC | py -3.14 code/review/s6-t436/t2_lemmas.py > logs/review_s6-t436_t2_lemmas.log | exit 0 | 5s | PEAK=33 MINHEAD=16747 MINAVAIL=5850 KILLED=0 REASON=
+2026-10-06 19:03:34 UTC | py -3.14 code/review/s6-t436/t3_structure.py 24 > logs/review_s6-t436_t3_structure.log | exit 0 | 24s | PEAK=30 MINHEAD=16667 MINAVAIL=5794 KILLED=0 REASON=
+2026-10-06 19:03:37 UTC | py -3.14 code/review/s6-t436/t4_closed_form.py 30 > logs/review_s6-t436_t4_closed_form.log | exit 0 | 2s | PEAK=24 MINHEAD=16743 MINAVAIL=5813 KILLED=0 REASON=
+2026-10-06 19:03:39 UTC | py -3.14 code/review/s6-t436/t5_table6.py > logs/review_s6-t436_t5_table6.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 19:03:43 UTC | py -3.14 code/review/s6-t436/t6_compare_rc4ii.py > logs/review_s6-t436_t6_compare_rc4ii.log | exit 0 | 2s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON=
+2026-10-06 19:04:44 UTC | py -3.14 code/review/s6-t27/t27_good.py > logs/review_s6-t27_good.log | exit 0 | 23s | PEAK=35 MINHEAD=16516 MINAVAIL=5427 KILLED=0 REASON=
+2026-10-06 19:07:07 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 1 | 4s | PEAK=34 MINHEAD=16633 MINAVAIL=5384 KILLED=0 REASON=
+2026-10-06 19:07:57 UTC | py -3.14 code/review/s6-t342/t2_end_to_end.py > logs/review_s6-t342_t2_end_to_end.log | exit 0 | 25s | PEAK=24 MINHEAD=15182 MINAVAIL=4084 KILLED=0 REASON=
+2026-10-06 19:08:18 UTC | py -3.14 verify_all.py rv3 > logs/s6_try_rv3.log | exit 0 | 63s | PEAK=51 MINHEAD=15166 MINAVAIL=4093 KILLED=0 REASON=
+2026-10-06 19:09:07 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/red2/code/checks/check_rv3.py > logs/s6_red2_rv3.log | exit 1 | 32s | PEAK=41 MINHEAD=15762 MINAVAIL=4508 KILLED=0 REASON=
+2026-10-06 19:13:16 UTC | py -3.14 code/review/s6-t342/t0_selftest.py > logs/review_s6-t342_t0_selftest.log | exit 0 | 152s | PEAK=24 MINHEAD=15527 MINAVAIL=4755 KILLED=0 REASON=
+2026-10-06 19:17:44 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 0 | 6s | PEAK=35 MINHEAD=16068 MINAVAIL=4945 KILLED=0 REASON=
+2026-10-06 19:18:27 UTC | py -3.14 code/review/s6-t27/t27_alpha.py > logs/review_s6-t27_alpha.log | exit 0 | 22s | PEAK=30 MINHEAD=16072 MINAVAIL=4901 KILLED=0 REASON=
+2026-10-06 19:21:16 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 0 | 4s | PEAK=36 MINHEAD=16248 MINAVAIL=4972 KILLED=0 REASON=
+2026-10-06 19:23:40 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 0 | 6s | PEAK=42 MINHEAD=16111 MINAVAIL=5186 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:24:48 UTC | py -3.14 -c import time; b=bytearray(600*1024*1024); time.sleep(6) > C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/wd_t4.log | exit 137 | 1s | PEAK=621 MINHEAD=15641 MINAVAIL=4907 KILLED=1 REASON=job private 621 MB > cap 300 MB QFAIL=0
+2026-10-06 19:24:52 UTC | py -3.14 -c import time; time.sleep(3); print('ok') > C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/wd_t5.log | exit 0 | 3s | PEAK=19 MINHEAD=16237 MINAVAIL=5467 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:28:58 UTC | py -3.14 verify_all.py rv3 > logs/s6_try_rv3.log | exit 0 | 65s | PEAK=51 MINHEAD=16152 MINAVAIL=5412 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:30:04 UTC | py -3.14 code/review/s6-t27/t27_selftest.py > logs/review_s6-t27_selftest.log | exit 0 | 2s | PEAK=0 MINHEAD=16075 MINAVAIL=5358 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:30:27 UTC | py -3.14 code/review/s6-t27/t27_good.py > logs/review_s6-t27_good.log | exit 0 | 22s | PEAK=35 MINHEAD=16022 MINAVAIL=5277 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:31:02 UTC | py -3.14 code/review/s6-t27/t27_alpha.py > logs/review_s6-t27_alpha.log | exit 0 | 33s | PEAK=31 MINHEAD=16023 MINAVAIL=5299 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:31:13 UTC | py -3.14 code/review/s6-t27/t27_bad.py > logs/review_s6-t27_bad.log | exit 0 | 10s | PEAK=44 MINHEAD=16112 MINAVAIL=5617 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:31:22 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5abb6088-b31e-4ec0-b4d8-e762df6f1f7a/scratchpad/red3/code/checks/check_rv3.py > logs/s6_red3_rv3.log | exit 1 | 91s | PEAK=44 MINHEAD=16022 MINAVAIL=5282 KILLED=0 REASON= QFAIL=0
+2026-10-06 19:40:27 UTC | py -3.14 verify_all.py > logs/verify_all_final.log | exit 0 | 274s | PEAK=433 MINHEAD=15590 MINAVAIL=5453 KILLED=0 REASON= QFAIL=0

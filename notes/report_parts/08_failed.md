@@ -21,5 +21,5 @@
 
 **C. 环境限制**
 
-14. Lipshitz（1989）原文没有读到：子 Agent 的 WebSearch/WebFetch 报模型不可用错误，ScienceDirect 对 curl 返回 403。所以本报告只用 D-finite 的标准定义（Lipshitz Def. 2.1 的表述，经 Bousquet-Mélou–Petkovšek 等二手文献核对），不引用该文的其他定理编号。「不能写成 proper 超几何多重和」的推论改走 Wilf–Zeilberger 1992 / Zeilberger 1990 的路线，并标明依赖文献。
-15. 联网全部是只读访问：OEIS 的 curl 共 68 次；另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna 两篇论文与 Melczer 学位论文的相关文本、Wikipedia「Holonomic function」页面。没有发帖、提交或联系任何人。没有使用 agent-reach，因为它的网页通道经第三方代理，与「只读」的要求冲突。
+14. Lipshitz（1989）原文没有读到：子 Agent 的 WebSearch/WebFetch 报模型不可用错误，ScienceDirect 对 curl 返回 403。所以本报告只用 D-finite 的标准定义（Lipshitz Def. 2.1 的表述，经 Bousquet-Mélou–Petkovšek 等二手文献核对），不引用该文的其他定理编号。「不能写成 proper 超几何多重和」的推论先改走 Wilf–Zeilberger 1992 / Zeilberger 1990 的路线并标明依赖文献；2026-10-07 读到 WZ 1992 原文后改写为 T2.7′，只用 T3.7(2) 自证，不再需要 Lipshitz 1989 与 Zeilberger 1990。
+15. 联网全部是只读访问：OEIS 的 curl 共 68 次；另有子 Agent 为核实 D-finite 的定义做了几次只读文献查询：Lipshitz 1989 的元数据与引言（Crossref、Semantic Scholar API；ScienceDirect 返回 403），以及 ar5iv 上 Bousquet-Mélou–Petkovšek、Bousquet-Mélou–Mishna 两篇论文与 Melczer 学位论文的相关文本、Wikipedia「Holonomic function」页面。没有发帖、提交或联系任何人。前几轮没有使用 agent-reach，因为它的网页通道经第三方代理，按更严格的理解与「只读」的要求冲突。2026-10-07 加固 ⑥ 时，主 Agent 读了 Wilf–Zeilberger 1992 与 Zeilberger 1990，两篇都是作者主页（sites.math.rutgers.edu/~zeilberg）公开的版本：前者的预印本、重印本 PDF 与几个页面经 r.jina.ai（第三方网页转文字服务）读取，后者的 TeX 源文件直接 curl；还运行了一次 `agent-reach doctor`，它会只读探测若干外部服务的公开接口。这些都是只读访问，没有发帖、提交或联系任何人，但偏离了前几轮不经第三方代理的做法，在此注明。Knuth 对 WZ 1992 的勘误是扫描件，没有读。

@@ -1,0 +1,29 @@
+timing prec=100: exp 0.051 ms, ln 0.083 ms
+timing prec=300: exp 0.787 ms, ln 0.859 ms
+timing prec=600: exp 4.641 ms, ln 6.565 ms
+PASS pi Machin vs AGM (650 digits)  | 2.15E-650
+PASS pi leading digits
+PASS Gamma(n)=(n-1)!, n=1..40  | max rel 0
+PASS Gamma(1/2)^2 = pi  | 3.18E-80
+PASS duplication formula z=7/3  | 4.87E-80
+PASS duplication formula z=100/729  | 2.08E-80
+PASS duplication formula z=6800/27  | 2.61E-78
+PASS duplication formula z=1/1000  | 5.66E-80
+PASS Gamma(-lam) reflection vs recursion, lam=0.137174  | Gamma(-lam)=-8.02290209794225E+0 rel 0
+PASS Gamma(-lam) reflection vs recursion, lam=0.390625  | Gamma(-lam)=-3.75826063271131E+0 rel 0
+PASS Gamma(-lam) reflection vs recursion, lam=2.380952  | Gamma(-lam)=-1.15528154339730E+0 rel 0
+PASS Gamma(-lam) reflection vs recursion, lam=25.925926  | Gamma(-lam)=4.30550585991366E-26 rel 0
+PASS Gamma(-lam) reflection vs recursion, lam=251.851852  | Gamma(-lam)=7.76799430767660E-497 rel 0
+PASS Gamma(-lam) reflection vs recursion, lam=85.303963  | Gamma(-lam)=3.53208457946218E-129 rel 0
+PASS de_exp_quad Gamma(5/2) @100  | rel 7.52E-120 est 0 levels=5 h=2^-6 0.1s
+PASS de_exp_quad Gamma(5/2) @600  | rel 2.26E-619 est 4.00E-619 levels=8 h=2^-9 144.5s
+PASS de_exp_quad pi^2/6 @100  | rel 5.47E-119 levels=5 h=2^-6
+PASS ts_quad pi @100  | rel 9.63E-116 levels=6
+PASS ts_quad_composite e^2-1 @100  | rel 4.70E-120 4 pieces; levels=5
+PASS Prym decomposition lam=0.137174 (prec 60, 53 series terms)  | Gamma(-lam)=-8.02290209794E+0 rel dev 3.15E-71 quad-est 8.42E-70 levels=4 h=2^-5 0.2s
+PASS Prym decomposition lam=85.303963 (prec 188, 119 series terms)  | Gamma(-lam)=3.53208457946E-129 rel dev 1.36E-71 quad-est 1.10E-209 levels=6 h=2^-7 2.2s
+PASS phi_n recurrence == convolution, x=3/20, n<=40
+PASS phi_n recurrence == convolution, x=9/10, n<=40
+PASS phi_n recurrence == convolution, x=11/20, n<=40
+PASS phi_0=1, phi_1=-1-x^5 (x=3/20)
+TOTAL FAIL = 0   elapsed 150.7s

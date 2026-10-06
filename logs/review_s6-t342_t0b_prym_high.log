@@ -1,0 +1,8 @@
+lam = 6800/27 = 251.851851851852 ; Gamma(-lam) ~ 7.767994308E-497 ; cancellation ~ 496 digits ; working digits 556
+series: 281 terms (exact rational), tail < 1e-566 ; value -1.4548980434946089910E-3  (0.0s)
+integral: 1.4548980434946089910E-3  est.err 4.10E-575  levels=8 h=2^-9  (105.6s)
+Prym sum      = 7.767994307676600329015388793597655045090E-497
+Gamma(-lam)   = 7.767994307676600329015388793597655045090E-497  (reflection)
+Gamma(-lam)   = 7.767994307676600329015388793597655045090E-497  (recursion)
+relative deviation = 9.34E-74
+PASS Prym decomposition at lam=6800/27   elapsed 105.7s

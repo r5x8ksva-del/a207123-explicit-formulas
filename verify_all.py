@@ -14,7 +14,7 @@ import time
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CHECKS = os.path.join(ROOT, 'code', 'checks')
-ORDER = ['c0', 'c1', 'c2a', 'c2b', 'c3a', 'c3b', 'c4', 'c5a', 'c5b', 'rv', 'rv2']
+ORDER = ['c0', 'c1', 'c2a', 'c2b', 'c3a', 'c3b', 'c4', 'c5a', 'c5b', 'rv', 'rv2', 'rv3']
 
 
 def main(argv):

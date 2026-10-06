@@ -1,0 +1,3 @@
+FAIL rv3-c4ii-r6 T4.3(6)：由 T4.3(7) 的闭式精确算出 A_j∈Q[u,L]（j<=14），指标界 ι<=⌊j/2⌋+1、三角化得到的 Σπ_{j,i}(q)c(q,i) 在 q<=60 上等于真实系数、两个子断言、与表 6（j<=8）一致；子脚本 5 条 PASS、1 条 FAIL（0.2s，输出 logs/rv3_c4ii_r6.log）
+FAIL rv3-c3a-r2 T3.4(2)：K 的定义与闭式 Γ(−λ)[1+λx⁵J] 在 7 个 x 上一致、1<K/Γ(−λ)<2、端到端 I−𝒮 与闭式一致（decimal 高精度，数值）；子脚本 6 条 PASS、5 条 FAIL（11.1s，输出 logs/rv3_c3a_r2.log）
+SUMMARY rv3 pass=0 fail=2 (11.3s)

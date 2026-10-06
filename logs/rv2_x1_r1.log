@@ -18,5 +18,5 @@ PASS r1.uniform_E_fiber2 for every m=2..34 the fiber u=1/2 obstruction holds: v_
 PASS r1.E_alt_proof K_1: x^n in Q iff n=0 (|n|<=60; in general by |xi_1|!=|xi_2|); K_2: 2+4x^3 = 4-2x not in Q  => fibers 1,2 jointly exclude E single u-sum for every m>=2
 PASS r1.c2b_cert_values independently recomputed norms N(nu_i) (nu_i = -i*theta) equal the c2b certificate table entries for m<=6 (11 entries)
 PASS r1.float_residues floating point (tol 1e-9): at the three complex roots xi_j of b_1, rho_j u'(xi_j) xi_j^{3m+2}/(1+xi_j) == (-1)^m/(m-1)! for m in {1,2,5,9}; |xi_1|=0.68233, |xi_2|=|xi_1|^{-1/2}
-# elapsed 4.6s
+# elapsed 4.2s
 SUMMARY r1 fail=0
