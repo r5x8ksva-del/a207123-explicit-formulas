@@ -21,7 +21,7 @@
 - Lean 4 + Mathlib 形式化：原题归约、引理 1、最小阶、二项式基、显式公式、非 D-finite、左理想刻画等已在第三轮全量构建中验过；第四轮的 15 个模块只单独编译过。
 
 **如何复现**
-- Python 核对：`py -3.14 verify_all.py`（约 4 分钟，需要 numpy），逐条打印 PASS/FAIL；最后一次全量运行 11 个模块、290 PASS、0 FAIL。
+- Python 核对：`py -3.14 verify_all.py`（约 4 分钟，需要 numpy），逐条打印 PASS/FAIL；最后一次全量运行 11 个模块、290 PASS、0 FAIL（本地 2026-10-07，`logs/verify_all_2026-10-07.log`）。想带内存保护运行（本机常有别的任务同时在跑）：`code/main_extra/run_guarded.sh logs/<输出>.log py -3.14 verify_all.py`，实测整棵进程树峰值约 0.4 GB。
 - Lean：工具链 `leanprover/lean4:v4.34.1`，依赖 Mathlib `v4.34.1`（见 `lean/lakefile.toml`、`lean/lake-manifest.json`）。作者在 Windows 上用 `lean/run_lean_checks.sh` 构建，没有在别的环境验证过；单个编译峰值内存 ≥ 8 GB。`lean/.lake/`（Mathlib 依赖与编译产物，约 5–7 GB）不在仓库里，需要自己用 `lake` 获取。
 - `code/review/r-c4i/N_K*.pkl` 是可重新生成的中间文件，不在仓库里，见 `ROADMAP.md` §6。
 
@@ -42,8 +42,9 @@
 | `code/polylib.py` | Fraction 精确多项式与截断幂级数 |
 | `code/checks/check_*.py` | verify_all 调用的 11 个正式核对模块（c0 主 Agent 补充；c1 复核；c2a/c2b 显式公式；c3a/c3b 母函数与 D-finite；c4 近对角线与分子；c5a 渐近与 h_k；c5b OEIS；rv 第二轮复核的产物；rv2 复核者 x1 的两个独立脚本） |
 | `code/<area>/` | 各方向的探索脚本 |
+| `code/family/` | 2026-10-06 补充：OEIS 里列规则同为「竖向禁止 001、011」的 6 张 Hardin 表都满足同一归约（`check_family.py`、OEIS 只读快照与日志，见其中 README）；另外 5 张表的结构没有研究 |
 | `code/review/<reviewer>/` | 第二轮对抗性复核者的独立脚本 |
-| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，其中 `patch_lean4.py` 已写好但还没应用，见「当前状态与待办」） |
+| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，其中 `patch_lean4.py` 已写好但还没应用，见「当前状态与待办」）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；Lean 仍只走 `lean/lean_one.sh`） |
 | `code/step0_baseline.py`、`step1_quickcheck.py` | 开工时的基线核对与主线推导快速核对 |
 | `notes/原始任务说明.md` | 用户给出的任务原文 |
 | `notes/00-主线推导与分工.md` | 主 Agent 开工时的推导草稿与协作规则（其中两处后来被证明有误，见报告 ④） |
@@ -54,7 +55,7 @@
 | `notes/report_parts/` | 报告的分节源文件（`报告.md` 由它们拼接） |
 | `data/oeis/` | OEIS 只读快照（68 次 curl）与 `INDEX.md` 查询记录；许可与署名见 `NOTICE.md`（CC-BY-SA 4.0） |
 | `lean/` | Lean 4 + Mathlib 形式化（从原始定义出发，只依赖三条标准公理）：原题归约与多重链表述（T1.0）、引理 1（T1.1）、gcd(W_m,P_m)=1 与最小递推阶恰为 3m+1（T1.3）、二项式基与 N 的三角递推（T1.4）、按上升数细化的引理 1 与两个显式公式（T2.2、T2.4）、F 不是 D-finite（T3.7(1)，含 D-finite 的定义与引理 D1）与没有 k-only 象限递推（T3.7(2)）、U 与 N 的全部多项式系数象限递推恰为 L1、L_N 生成的左理想（T3.8 的 Rel(U)=O_U·L1、Rel(N)=O_N·L_N，含饱和引理）；第四轮（进行中）又新增 15 个模块（Poly、HNum、DFiniteN、NoKOnlyN、OreDim、Gosper、Growth、SmallK、Parity、NPDE、Coeffs、HGen、NumStruct、NearDiag、HStruct），`lean/A207123/` 下共 26 个文件，其中 25 个登记在 `A207123.lean`；第四轮的模块只做过单独编译，还没有全量构建，HStruct 也还没登记；全量构建用 `./run_lean_checks.sh`（逐个模块串行 `lake build`，再 `lake env lean Axioms.lean`、`lake env lean Checks.lean`，输出写入 `logs/lean_build.log`），单个文件一律用 `./lean_one.sh A207123/X.lean`（带内存闸门与看门狗，一次只跑一个；单个编译峰值 ≥8 GB，本机 16 GB，Lean 编译曾两度耗尽虚拟内存导致重启）；`.lake/` 下是 Mathlib 依赖与编译产物（约 5–7 GB，可整体删除后用 `lake update` 重新获取） |
-| `logs/` | 全部运行日志，包括四轮工作流的原始返回值（`phase1_workflow_output.json`、`phase2_review_output.json`、`phase3_audit_output.json`、`phase4_final_audit_output.json`、`phase4b_recheck_output.json`）与 verify_all 的完整输出（`verify_all_final.log`）；`lean_build.log` 是第三轮的全量构建日志，`lean_mem.log` 记录每次 Lean 编译的峰值内存与退出码（该文件的时间是 UTC，本机是 UTC+8） |
+| `logs/` | 全部运行日志，包括四轮工作流的原始返回值（`phase1_workflow_output.json`、`phase2_review_output.json`、`phase3_audit_output.json`、`phase4_final_audit_output.json`、`phase4b_recheck_output.json`）与 verify_all 的完整输出（`verify_all_final.log` 是 2026-10-05 的那次，报告的核对 id 交叉检查以它为准；`verify_all_2026-10-07.log` 是修好 `c5b.snapshots` 后的最新一次，290 个 PASS 的 id 与前者完全相同）；`guarded_runs.log` 记录经 `run_guarded.sh` 运行的任务（时间为 UTC）；`lean_build.log` 是第三轮的全量构建日志，`lean_mem.log` 记录每次 Lean 编译的峰值内存与退出码（该文件的时间是 UTC，本机是 UTC+8） |
 
 ## 过程概览
 
@@ -71,7 +72,7 @@
 
 ## 当前状态与待办（2026-10-06）
 
-- **研究交付物已完成**：`报告.md` + `verify_all.py`。最后一次全量验证：11 个模块、290 PASS、0 FAIL（日志 `logs/verify_all_final.log` 写于本地 2026-10-05 02:30），此后 Python 侧没有改动。
+- **研究交付物已完成**：`报告.md` + `verify_all.py`。最后一次全量验证：11 个模块、290 PASS、0 FAIL（本地 2026-10-07 00:03–00:07，`logs/verify_all_2026-10-07.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行，峰值 434 MB）。在此之前，2026-10-06 上传 GitHub 时加入的 `data/oeis/NOTICE.md` 让 `c5b.snapshots` 一度 FAIL（这条检查要求该目录只有 68 个快照和 INDEX.md）；已在 `code/checks/check_c5b.py` 里把这份许可说明排除在比对之外，并确认目录里多出别的文件时仍会 FAIL。数学内容没有改动；报告引用的 232 个核对 id 在新日志里全部 PASS。
 - **Lean**：第三轮全量构建（本地 2026-10-05 09:05）扫描了 1131 个声明，只依赖三条标准公理。第四轮的 15 个模块还没有全量构建。2026-10-06 检查 `lean/A207123/` 下 26 个文件：没有 `sorry`、`admit`、`native_decide`、`axiom`；`Axioms.lean` 有 216 条 `#print axioms`（不含 HStruct）。
 - **HStruct.lean**（T5.3）：本地 10-06 00:03 单独编译通过一次，00:09 又被修改，尚未登记进 `A207123.lean` 和 `Axioms.lean`，需先重编。
 - **报告尚未标注第四轮**：`patch_lean4.py` 要求先有含第四轮的全量构建日志；`报告.md` 自本地 10-05 12:36 起没变。

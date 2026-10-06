@@ -287,13 +287,15 @@ def chk_snapshots():
     for p in rows:
         path = os.path.join(OEIS, p[1])
         ok = ok and os.path.exists(path) and os.path.getsize(path) == int(p[3]) > 0
-    files = sorted(fn for fn in os.listdir(OEIS) if fn != 'INDEX.md')
+    # NOTICE.md 是 OEIS 数据的许可与署名说明（2026-10-06 上传 GitHub 时加入），不是快照，不参与比对
+    files = sorted(fn for fn in os.listdir(OEIS) if fn not in ('INDEX.md', 'NOTICE.md'))
     ok = ok and sorted(names) == files
     idx = read('INDEX.md')
     ok = ok and all(('`%s`' % n) in idx and u in idx for n, u in zip(names, urls))
     oeis_only = all(u.startswith('https://oeis.org/') for u in urls)
     return ok and oeis_only, ('%d 个快照、%d 个不同 URL（每个只取一次）、全部 HTTP 200、全部来自 https://oeis.org/、'
-                              '文件大小与日志一致、INDEX.md 逐条列出' % (len(rows), len(set(urls))))
+                              '文件大小与日志一致、INDEX.md 逐条列出；目录里除 INDEX.md 与许可说明 NOTICE.md 外'
+                              '没有别的文件' % (len(rows), len(set(urls))))
 
 
 def chk_offsets():
