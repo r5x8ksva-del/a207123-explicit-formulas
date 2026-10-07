@@ -48,12 +48,13 @@
 \title[Pattern-avoiding binary arrays and a Stirling-type table]{Pattern-avoiding binary arrays and a Stirling-type table:\\ explicit formulas, exact recurrence orders, and non-D-finiteness}
 
 % Sole author, who is both the first and the corresponding author (author's instruction, 7 October 2026).
-% TODO(author): add \email{...} for correspondence. (A colored \todo inside \author may break under amsart's uppercasing.)
+% Correspondence address given by the author on 8 October 2026.
 \author{Yunkun Song}
 \address{College of Arts and Sciences, Boston University, Boston, MA 02215, USA}
+\email{r5x8ksva@bu.edu}
 \thanks{The author is an undergraduate student in the College of Arts and Sciences at Boston University and is the corresponding author.}
 
-\date{Draft of 7 October 2026}
+\date{Draft of 8 October 2026}
 
 \begin{abstract}
 Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123 and its columns A207118--A207122). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$. We study the table $U_k(m)$. For each $m\ge0$, the generating function $\sum_k U_k(m)x^k$ is a rational function $W_m/P_m$ in lowest terms with $P_m=\prod_{i=0}^{m}(1-x-ix^3)$, so the minimal order of a linear recurrence in $k$ is exactly $3m+1$; we also give the first two terms of the asymptotics in $k$. A unique factorization of the sequences into blocks gives a positive double-sum formula in terms of Stirling and $r$-Stirling numbers. In the other direction, for $m\ge1$ no single sum of the form $\sum_s A(s)\binom{k+c-2s}{m+s+d}$ exists, and $U$ is not a finite multisum of a proper hypergeometric term under two boundary conditions stated in the paper. The bivariate generating function is not D-finite; every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence, and we count these recurrences in every box; in particular $U$ is not Stirling-like in the sense of Kauers. Finally, the near-diagonal entries $N(k,k-d)$ of the associated triangle are polynomials of degree $2d$ in $k$ exactly from $k=2d+2$ on. The reduction, the exact recurrence orders, the explicit formula, the non-D-finiteness, the description of all quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
@@ -898,7 +899,7 @@ Several further results of the accompanying report are formalized as well. The c
 
 Not formalized: the block decomposition (Theorem~\ref{thm:blocks}) and the generating function of Theorem~\ref{thm:gfxy} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); the identification of $H(m,s,j)$ with $r$-Stirling numbers in Lemma~\ref{lem:coef} and Proposition~\ref{prop:bijection}; the inequality $|\sigma|^2<\rho_{m-1}^2$ in Theorem~\ref{thm:asym}(1), Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; Corollary~\ref{cor:saturated}; the passage from Kauers' definition to Proposition~\ref{prop:triangle} in Corollary~\ref{cor:stirlinglike}; Theorems~\ref{thm:S}, \ref{thm:Spart} and~\ref{thm:multisum}, and Proposition~\ref{prop:shapes}.
 
-The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. \todo{the author must compare these definitions with the statements in this paper; a checklist is in the notes folder of the repository.}
+The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository.
 
 % =====================================================================
 \section{Open problems}\label{sec:open}
@@ -1045,10 +1046,13 @@ Here \lean{normOp r} is the operator $\sum_{(a,b)}r(a,b)X^aE^{-b}$ with finitely
 % =====================================================================
 \section*{Statement on the use of AI tools}
 \todo{the author must review and adapt this statement to the policy of the target venue.}
-The mathematical exploration, the proofs in this draft, the computer checks and the Lean formalization were produced with substantial assistance from a large language model (Claude, Anthropic) working under the direction of the author. The written proofs were cross-checked by further runs of AI models acting as reviewers, which are not independent of the model that wrote them, and the computational statements by separately written programs, in exact arithmetic except for a minority of checks that use high-precision decimal arithmetic and are labelled as numerical in the accompanying report. The proofs of the results listed in Section~\ref{sec:lean} are machine-checked; the faithfulness of the formal statements to the statements in this paper was checked by AI. The author takes full responsibility for the content.
+The mathematical exploration, the proofs in this draft, the computer checks and the Lean formalization were produced with substantial assistance from a large language model (Claude, Anthropic) working under the direction of the author. The written proofs were cross-checked by further runs of AI models acting as reviewers, which are not independent of the model that wrote them, and the computational statements by separately written programs, in exact arithmetic except for a minority of checks that use high-precision decimal arithmetic and are labelled as numerical in the accompanying report. The proofs of the results listed in Section~\ref{sec:lean} are machine-checked; the faithfulness of the formal statements to the statements in this paper was checked by AI models and by the author (the checklist is in the repository). The author takes full responsibility for the content.
 
 \section*{Data and code}
-The verification scripts (305 automated checks, mostly exact; the high-precision numerical ones are labelled), a script that recomputes every number printed in this paper from the definitions, the Lean development and the notes are available at \todo{repository URL; the repository is currently private}.
+The verification scripts (305 automated checks, mostly exact; the high-precision numerical ones are labelled), a script that recomputes every number printed in this paper from the definitions, the Lean development and the notes are available at
+\begin{center}
+\url{https://github.com/r5x8ksva-del/a207123-explicit-formulas}.
+\end{center}
 
 \begin{thebibliography}{99}
 

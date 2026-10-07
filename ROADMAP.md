@@ -91,7 +91,7 @@
 
 ## 6. 仓库维护
 
-- **许可证**：尚未选定（默认保留所有权利）。公开前需要选择；`data/oeis/` 是 OEIS 条目的快照，适用 CC-BY-SA 4.0（见 `data/oeis/NOTICE.md`）。
+- **许可证**：2026-10-08 选定：代码采用 MIT（根目录 `LICENSE`）；论文、报告与笔记暂时保留所有权利（见 `paper/NOTICE.md` 与 README「许可与数据来源」），等选定投稿期刊后再定；`data/oeis/` 是 OEIS 条目的快照，适用 CC-BY-SA 4.0（见 `data/oeis/NOTICE.md`）。
 - **绝对路径**：`code/main_extra/report_patches/patch_*.py` 等脚本里含本机绝对路径，只作历史记录，不能在别的机器上直接运行；`verify_all.py` 用相对路径。
 - **中间文件**：`code/review/r-c4i/N_K*.pkl` 不入库（Python pickle，且可重新生成）；需要时先运行 `py -3.14 code/review/r-c4i/s1_build_N.py 100`（也可用 150、200）。
 - **可选**：用 GitHub Actions 跑 `verify_all.py`（约 4 分钟，需要 numpy）。Lean 构建需要 elan 与 Mathlib 依赖，单个编译峰值内存 ≥ 8 GB，默认的 runner 可能不够。

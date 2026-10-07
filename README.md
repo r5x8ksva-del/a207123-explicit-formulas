@@ -6,6 +6,7 @@
 > **状态声明（请先读）**
 > - 本仓库的数学内容由 AI（Claude）在人类指导下生成，并经 AI 复核者交叉检查，**没有经过人类专家审稿**。不少定理另有 Lean 4 + Mathlib 机器检查（有的只覆盖一部分，范围见 `猜想总表.md`），但 Lean 只检查证明，不检查「陈述是否忠实于报告」。
 > - **新颖性只核实了一半**（2026-10-07）：开放数据库（arXiv、OpenAlex、Crossref、OEIS 等）已系统检索，没有找到同时处理 U_k(m) 的显式公式、最小阶、非 D-finite、零化理想分类的论文；但 T1.0 归约、固定 k 的递推存在、T3.7/T3.8 的方法都有先例（OEIS 上 Krause 2026-06 的同款引理，Kauers 2007 例 5，Chyzak–Kauers–Salvy 2009 例 3）。Google Scholar 已由你在 10-07 手动查过（清单 A 组全部，没有发现先例，见笔记 §9）；**Web of Science、MathSciNet、zbMATH 还没有查**，清单在 `notes/新颖性核查_手动检索清单.md`，结论在 `notes/新颖性核查_2026-10-07.md`。「没找到」不等于「前人没证」，请勿对外宣称「首次证明」。
+> - 许可：只有代码采用 MIT（`LICENSE`）；论文、报告与笔记保留所有权利，见文末「许可与数据来源」。
 > - 这是进行中的研究仓库，不是定稿：Lean 第四轮已于 2026-10-07 收尾，但没有人类专家审过；报告 ⑥ 列出最不确定的三处（2026-10-07 加固了原来的三处与随后排第 1 的 T2.6(ii)，两次重新排序），见「当前状态与待办」。
 
 ## 这是什么
@@ -145,8 +146,8 @@
     - T2.7′ 已有第二位复核者（s7-t27，2026-10-07，confirmed with minor gaps，适用范围的一句话已改正，见 notes/review/s7-t27-review.md）；仍待人类专家审阅；如果要覆盖支撑伸到 j=0 的 C(2j,j) 一类写法，再核对 s6-t27 提出的 (N2′)；
     - T3.4(4)(5) 请复核者重推误差界与常数项部分的门槛；
     - T4.3(8) 补上 Laguerre 零点定理的标准证明，或给出 Szegő 原书的准确出处。
-  - 按 `notes/Lean定义核对清单.md` 逐项核对承重的 Lean 定义（要人来做）。全部打勾之前，论文里只说「证明已机器检查」，不说「陈述已机器检查」。
-  - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 4 处 `\todo`（文献检索补完：Google Scholar 已查，剩 MathSciNet、zbMATH、WoS；Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址）和 2 处注释里的 TODO（作者署名、引理 1 的出处）。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
+  - ~~按 `notes/Lean定义核对清单.md` 逐项核对承重的 Lean 定义（要人来做）~~：2026-10-08 作者本人告知已核对完 18 项、全部正确，清单已全部记 ✓；论文第 8 节与 AI 声明改为「由 AI 模型与作者核对」。清单之外其余模块的陈述仍只有 AI 核对。
+  - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 2 处 `\todo`（文献检索补完：Google Scholar 已查，剩 MathSciNet、zbMATH、WoS；AI 使用声明按投稿方要求改写）和 1 处注释里的 TODO（引理 1 的出处）；署名、通讯邮箱、仓库地址与 Lean 定义核对已于 2026-10-07、10-08 完成。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
   - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`），同日你手动查完 Google Scholar（§9，没有发现先例）；还要你手动查 zbMATH（免费、无需登录）、Web of Science、MathSciNet（`notes/新颖性核查_手动检索清单.md`，桌面有 PDF 版），并打开 Dougherty-Bliss 2024 博士论文的 PDF 搜本家族编号（RUcore 禁止 AI 抓取，我没取）。
 - **表 B 的新进展（2026-10-07 晚）**：B1（h_k 全实根且根互异）与 B3（单族形状分类，推广到 α,β≥0 的一切形状）已证明，记为 `猜想总表.md` 的 A19、A20；B7 证了一半（f_k(t) 的 Gevrey-1/3 上界与 t∈(0,1) 的同阶下界），B9 证了一部分（h_k 系数恰变号 ⌊k/3⌋ 次）。证明在 `notes/05`–`07`，核对 `py -3.14 code/tableB/run_all.py`（20 条全部 PASS），B1、B3 各有一位对抗性复核者（`notes/review/s8-b1-review.md`、`s8-b3-review.md`）。**还没有并入报告与论文**（报告 T5.3(6)、T2.6(i) 补充、T3.4(5)、④ 与论文的开放问题一节仍写着「猜想」），也没有登记进 verify_all，没有形式化。
 - **表 B 的新进展（2026-10-08）**：B2（两族 u 型和不存在：U 对每个 m≥2、E 对每个 m≥3）与 B7 的后半（t<0 时 F 在 x 方向 3-可和、和为积分 I）已证明，记为 `猜想总表.md` 的 A21、A22；B7 没做的两项（t∈(0,1) 的可和性、t<0 时 Gevrey 阶的下界）分出为新条目 B13，B 表现有 9 项；B11 的计算机辅助证明从 d≤8 扩到 d≤100（部分结果）。证明在 `notes/08`–`10`，核对 `py -3.14 code/tableB/run_all.py`（6 个部分 41 条全部 PASS；`check_b7_borel.py` 是数值佐证），B2、B7 各有一位对抗性复核者（`notes/review/s9-b2-review.md`、`s9-b7-review.md`）。同样**还没有并入报告与论文**（报告 T2.6(iii)、T3.4(5)、④A.4、T4.2(2) 与论文的开放问题一节仍是旧说法），没有登记进 verify_all，没有形式化。
@@ -154,6 +155,8 @@
 
 ## 许可与数据来源
 
-- 许可证尚未选定（默认保留所有权利），公开前需要选择，见 `ROADMAP.md` §6。
+- 代码采用 MIT 许可（根目录 `LICENSE`，2026-10-08 选定）：`code/`、`lean/`、`verify_all.py` 及其他脚本。
+- 论文（`paper/`，另见 `paper/NOTICE.md`）、报告（`报告.md`）、笔记（`notes/`）与其余文字**不在 MIT 许可之内**，暂时保留所有权利，等选定投稿期刊后再定。
+- License (English summary): the code (`code/`, `lean/`, `verify_all.py` and the other scripts) is released under the MIT License (`LICENSE`). The paper in `paper/`, the report and the notes are not covered by it; all rights reserved for now. Data in `data/oeis/` comes from the OEIS under CC BY-SA 4.0; other third-party data keeps its own terms.
 - `data/oeis/` 是 OEIS 条目的只读快照，来源 <https://oeis.org>，适用 CC-BY-SA 4.0，署名与许可见 `data/oeis/NOTICE.md`。
 - 没有向 OEIS 提交、发帖或联系任何人。
