@@ -1,0 +1,51 @@
+sections: ['base', 'c3', 'newton', 'rec', 'rel', 'thm2', 'truth'] K=60 KA=40 KB=20 KAUX=30 KEXT=0
+[truth] N table from U (k,q<=60) in 0.9s
+[truth] brute (k<=9) and basic facts (k<=60) done
+[rec] k=3: n_3 - (1+z) n_2 = [0, 1] (the N(0,0)=1 contribution; Lemma 0 is only claimed for k>=4)
+[rec] T1.4(2) for 3<=k<=60 and Lemma 0 for 4<=k<=60 done
+[base] n_1..n_4: [1] [1, 2] [1, 4, 2] [1, 7, 8, 2]
+[base] done
+[rel] k= 2 alp:ok bet:ok  (+B)  0.0s
+[rel] k= 3 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 4 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 5 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 6 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 7 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 8 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 9 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=10 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=11 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=12 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=13 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=14 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=15 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=16 alp:ok bet:ok del:ok eps:ok  (+B)  0.2s
+[rel] k=17 alp:ok bet:ok del:ok eps:ok  (+B)  0.2s
+[rel] k=18 alp:ok bet:ok del:ok eps:ok  (+B)  0.3s
+[rel] k=19 alp:ok bet:ok del:ok eps:ok  (+B)  0.5s
+[rel] k=20 alp:ok bet:ok del:ok eps:ok  (+B)  0.6s
+[rel] k=21 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=22 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=23 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=24 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=25 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=26 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=27 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=28 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=29 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=30 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=31 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=32 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=33 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=34 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=35 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=36 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=37 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=38 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=39 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=40 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] done in 3.2s
+[thm2] done (k<=60) in 2.9s
+[newton] done (k<=60)
+[c3] done
+TOTAL: 1397 checks passed, 0 failed; 8.1s

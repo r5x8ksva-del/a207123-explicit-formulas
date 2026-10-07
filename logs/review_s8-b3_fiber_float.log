@@ -1,0 +1,45 @@
+  per-degree max errors [res_v, vieta, star, prodw, xzeta]:
+   n= 1  0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00
+   n= 2  3.9e-16  2.2e-16  4.4e-16  3.9e-16  2.0e-16
+   n= 3  1.8e-15  1.6e-16  2.4e-16  2.6e-16  4.0e-16
+   n= 4  1.9e-15  4.4e-16  1.0e-15  3.7e-16  1.3e-15
+   n= 5  1.1e-14  2.9e-15  1.1e-14  2.0e-14  3.1e-15
+   n= 6  5.1e-14  8.9e-15  5.0e-14  3.1e-14  3.7e-14
+   n= 7  2.5e-13  3.2e-14  2.5e-13  2.4e-13  1.0e-13
+   n= 8  2.0e-12  1.0e-13  2.0e-12  5.1e-13  6.7e-13
+   n= 9  1.0e-11  1.0e-12  1.0e-11  7.9e-12  3.0e-12
+   n=10  5.2e-11  5.3e-12  5.2e-11  1.1e-10  9.5e-12
+   n=11  3.0e-10  3.3e-11  3.0e-10  3.2e-10  2.5e-11
+   n=12  2.2e-09  2.2e-10  2.2e-09  3.4e-09  2.1e-10
+   n=13  1.6e-08  9.9e-10  1.6e-08  2.1e-08  7.5e-10
+   n=14  5.3e-08  2.5e-09  5.3e-08  1.1e-08  3.9e-09
+   n=15  2.6e-07  1.5e-08  2.6e-07  2.4e-07  2.0e-08
+   n=16  1.4e-06  9.4e-08  1.4e-06  2.1e-06  1.8e-07
+   n=17  6.2e-06  1.9e-07  6.2e-06  1.2e-06  5.6e-07
+   n=18  3.3e-05  2.0e-06  3.3e-05  7.7e-05  2.1e-06
+   n=19  1.2e-04  2.9e-06  1.2e-04  1.5e-04  6.5e-06
+   n=20  8.9e-04  1.4e-01  8.9e-04  3.5e-01  1.3e-04
+PASS f1-fiber-residual | alpha+beta<=14: 5.28e-08 (<=20: 8.93e-04)
+PASS f1-alpha0-xzeta-equals-roots-of-F | beta<=14: 3.88e-09 (<=20: 1.26e-04)
+PASS f2-vieta | alpha+beta<=14: 2.50e-09
+PASS f3-star | alpha+beta<=14: 5.28e-08
+PASS f3-prod-w^beta | alpha+beta<=14: 2.09e-08 (log|.| rel err and phase)
+PASS f6-no-repeated-fiber-points | alpha+beta<=14: min distance between fiber points = 9.861e-02
+PASS neg-prod-w^beta-with-exponent-shifted-by-1-detected | min rel log err with wrong exponent = 1.03e-03
+PASS f4-only-(1,0),(0,1),(2,1)-fully-integral | alpha+beta<=14: [(0, 1), (1, 0), (2, 1)]; (alpha+beta<=20, low precision: [(0, 1), (1, 0), (2, 1)])
+  shapes (alpha+beta<=20) with >=2 fiber points having w in Z>=1  (alpha,beta,#fiber,#int,w):
+    (2, 1, 3, 3, [1, 1, 1])
+    (4, 2, 6, 3, [1, 1, 1])
+    (6, 3, 9, 3, [1, 1, 1])
+    (8, 4, 12, 3, [1, 1, 1])
+    (10, 5, 15, 3, [1, 1, 1])
+    (12, 6, 18, 3, [1, 1, 1])
+  all other shapes: exactly one such point (xi itself, w=1)
+PASS f5-IV-wzeta-identity | max |w z^3 - xi^2(xi^2+z)^2| = 1.45e-15 (2<=beta<=40)
+PASS f5-IV-product-identity | max rel |(-1)^(b+1) prod w - a^2| = 1.08e-14
+PASS f5-IV-bounds | beta=3: |a(xi)|=0.3497, |a(xi2)|=6.0968, bound=3.8109
+PASS f5-|xi2|^2=1/xi | |xi2|^2=1.465571231876768, 1/xi=1.465571231876768
+PASS f7-II-xi*zeta-not-root | min |b_w(xi zeta)| over 2<=alpha<40, zeta!=1, w<=2000: 0.1261
+PASS f8-III-u=zeta-not-root | min |b_w(eta)| over 2<=beta<15, u(eta)=zeta!=1, w<=2000: 0.2271
+xi = 0.682327803828019, xi2 = (-0.34116390191400964+1.161541399997252j)
+SUMMARY: 0 FAIL []

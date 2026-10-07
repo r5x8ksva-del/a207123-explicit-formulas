@@ -1,0 +1,43 @@
+sections: ['rel'] K=60 KA=40 KB=16 KAUX=30 KEXT=0
+[truth] N table from U (k,q<=60) in 1.1s
+[rel] k= 2 alp:ok bet:ok  (+B)  0.0s
+[rel] k= 3 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 4 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 5 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 6 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 7 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 8 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k= 9 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=10 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=11 alp:ok bet:ok del:ok eps:ok  (+B)  0.0s
+[rel] k=12 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=13 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=14 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=15 alp:ok bet:ok del:ok eps:ok  (+B)  0.1s
+[rel] k=16 alp:ok bet:ok del:ok eps:ok  (+B)  0.2s
+[rel] k=17 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=18 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=19 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=20 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=21 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=22 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=23 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=24 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=25 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=26 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=27 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=28 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=29 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=30 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=31 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=32 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=33 alp:ok bet:ok del:ok eps:ok  0.0s
+[rel] k=34 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=35 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=36 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=37 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=38 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=39 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] k=40 alp:ok bet:ok del:ok eps:ok  0.1s
+[rel] done in 1.6s
+TOTAL: 270 checks passed, 0 failed; 2.7s

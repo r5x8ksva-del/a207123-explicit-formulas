@@ -1,0 +1,3 @@
+ITER=3000 NMAX=10 SEED=7
+random positive pairs: 3000; negative-control pairs: 3000 (A=B=True 595, A=B=False 2405)
+selftest: 0 failures; 105.9s

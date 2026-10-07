@@ -1,0 +1,11 @@
+PASS b1-tri 三角递推的 N(k,q) = 按定义 DFS（k<=9）= U 的 DP 容斥（1<=k<=60）
+PASS b1-rec 引理 0：n_k = (1+z)n_{k-1} + Phi n_{k-3} 对 4<=k<=60 精确成立（k=3 不成立，符合说明）
+PASS b1-ops 引理 5(iv) 与 T n_{k+1} = Phi n_k + z(1+z)n_k + (1+z)T^2 n_{k-2} + z(1+z)T n_{k-2}（3<=k<=40）
+PASS b1-base 基例 alpha_2, beta_2, alpha_3, beta_3, delta_3, epsilon_3 精确成立
+PASS b1-rel 四条关系 alpha_k, beta_k, delta_k, epsilon_k 对 3<=k<=40 精确成立（另 alpha_2, beta_2）
+PASS b1-gcd gcd(n_k, n_{k-1}) = (1+z)^(ceil((k-1)/3)-1)，2<=k<=60（模 2^61-1 证明余部互素）
+PASS b1-roots n_k/(1+z)^(ceil(k/3)-1) 有 floor(2k/3) 个互异实根（1<=k<=60，有理分点精确隔离）
+PASS b1-nu n_k 在 (-inf,-1) 的根数 = floor(k/3) = h_k 系数的符号变化数（1<=k<=60）
+PASS b1-rev 反向检查：去掉 Phi 的 2zn 项后递推在 4<=k<=19 全不成立；beta_k、delta_k 反过来写全部判为不成立（3<=k<=20）；(z+1)(z+4) 对 (z+2)(z+3) 判为不交错，(z+1)(z+3) 对 (z+2)(2z+1) 判为交错
+time 10.4s
+SUMMARY b1 pass=9 fail=0

@@ -1,0 +1,11 @@
+sections: ['base', 'c3', 'newton', 'rec', 'thm2', 'truth'] K=60 KA=40 KB=16 KAUX=30 KEXT=0
+[truth] N table from U (k,q<=60) in 1.1s
+[truth] brute (k<=9) and basic facts (k<=60) done
+[rec] k=3: n_3 - (1+z) n_2 = [0, 1] (the N(0,0)=1 contribution; Lemma 0 is only claimed for k>=4)
+[rec] T1.4(2) for 3<=k<=60 and Lemma 0 for 4<=k<=60 done
+[base] n_1..n_4: [1] [1, 2] [1, 4, 2] [1, 7, 8, 2]
+[base] done
+[thm2] done (k<=60) in 2.0s
+[newton] done (k<=60)
+[c3] done
+TOTAL: 1095 checks passed, 0 failed; 4.2s

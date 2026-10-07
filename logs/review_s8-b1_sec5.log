@@ -1,0 +1,17 @@
+h_3 = [1, 2, -1]  (expect 1+2t-t^2) roots ['-0.4142', '2.4142']
+h_4 = [1, 4, -3]  (expect 1+4t-3t^2) roots ['-0.2153', '1.5486']
+n_3 = [1, 4, 2] roots ['-1.7071', '-0.2929']
+n_4 = [1, 7, 8, 2] = (1+z)* [1, 6, 2] roots ['-2.8229', '-1.0000', '-0.1771']
+k= 3  finite t-roots word: ABAB  + at t=inf A^0 B^0  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 4  finite t-roots word: ABABA  + at t=inf A^0 B^1  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 5  finite t-roots word: BABABA  + at t=inf A^1 B^1  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 6  finite t-roots word: ABABABAB  + at t=inf A^1 B^1  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 7  finite t-roots word: ABABABABA  + at t=inf A^1 B^2  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 8  finite t-roots word: BABABABABA  + at t=inf A^2 B^2  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k= 9  finite t-roots word: ABABABABABAB  + at t=inf A^2 B^2  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k=10  finite t-roots word: ABABABABABABA  + at t=inf A^2 B^3  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k=11  finite t-roots word: BABABABABABABA  + at t=inf A^3 B^3  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k=12  finite t-roots word: ABABABABABABABAB  + at t=inf A^3 B^3  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k=13  finite t-roots word: ABABABABABABABABA  + at t=inf A^3 B^4  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+k=14  finite t-roots word: BABABABABABABABABA  + at t=inf A^4 B^4  -> cyclic-alternating=True ; alpha_k in z=True ; plain t-line interlacing of h_{k-1},h_k: False
+sec5 checks: 0 failures

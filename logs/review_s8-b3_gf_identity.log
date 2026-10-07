@@ -1,0 +1,16 @@
+PASS g1-gf-identity-and-factorization | 400 random cases, k in [min e_s-2, 45]
+PASS g2-removed-terms-give-Laurent-polynomial | support of difference within k<=max(alpha s-c-1)
+   scope (alpha,beta)=(-1,2) m=1: {'NO-cert': 13, 'YES-modp': 39}
+   scope (alpha,beta)=(-1,2) m=2: {'NO-cert': 13, 'YES-modp': 39}
+   scope (alpha,beta)=(-2,3) m=1: {'NO-cert': 21, 'YES-modp': 57}
+   scope (alpha,beta)=(-2,3) m=2: {'NO-cert': 21, 'YES-modp': 57}
+   scope (alpha,beta)=(-1,3) m=1: {'NO-cert': 78}
+   scope (alpha,beta)=(-1,3) m=2: {'NO-cert': 78}
+   scope (alpha,beta)=(-2,4) m=1: {'NO-cert': 104}
+   scope (alpha,beta)=(-2,4) m=2: {'NO-cert': 104}
+   scope (alpha,beta)=(-1,4) m=1: {'NO-cert': 104}
+   scope (alpha,beta)=(-1,4) m=2: {'NO-cert': 104}
+   scope (alpha,beta)=(-3,5) m=1: {'NO-cert': 130}
+   scope (alpha,beta)=(-3,5) m=2: {'NO-cert': 130}
+PASS g3-alpha<0,alpha+beta=1-(-1,2)-solvable | trivial existence also for alpha<0 when alpha+beta=1
+SUMMARY: 0 FAIL []

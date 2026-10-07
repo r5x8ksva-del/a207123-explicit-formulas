@@ -1,0 +1,2 @@
+random positive pairs: 400; negative-control pairs: 400 (A=B=True 125, A=B=False 275)
+selftest: 0 failures; 1.5s

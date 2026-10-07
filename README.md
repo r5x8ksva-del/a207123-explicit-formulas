@@ -45,7 +45,8 @@
 | `code/<area>/` | 各方向的探索脚本 |
 | `code/family/` | 2026-10-06 补充：OEIS 里列规则同为「竖向禁止 001、011」的 6 张 Hardin 表都满足同一归约（`check_family.py`、OEIS 只读快照与日志，见其中 README）；另外 5 张表的结构没有研究 |
 | `code/novelty/` | 2026-10-07 新颖性核查的脚本：`lit_search.py`（55 条查询，经 arXiv / OpenAlex / Crossref / Semantic Scholar / StackExchange 的官方接口，只读）、`cited_by.py`（16 篇种子论文的前向引用）、`check_note_refs.py`（核对笔记里的 arXiv 号、DOI、OEIS 编号都有数据支持，做过反向检查）、`check_note_facts.py`（核对笔记里的数字与 OEIS 关键事实能由仓库数据重新证实，不联网）；`scholar_followup.py`（10-07：对你贴来的 Google Scholar 结果里新出现的几条，用 Crossref / OpenAlex 核对书目与摘要，原始返回在 `data/lit/raw_scholar_followup/`）；用法见 `data/lit/README.md` |
-| `code/review/<reviewer>/` | 第二轮对抗性复核者的独立脚本；`s6-*` 是 2026-10-07 加固报告 ⑥ 的第三轮复核者（s6-t436、s6-t342、s6-t27）；`main-t26ii/` 是主 Agent 重推 T2.6(ii) 时写的独立核对脚本（不导入 core、不复用 x1 的脚本） |
+| `code/tableB/` | 2026-10-07 晚：表 B 新结论的精确核对——`check_b1.py`（10 条：行多项式递推、交错关系 k≤40、公因子与根 k≤60、根的分布、U_k(−j) 的变号次数、反向检查）、`check_b3.py`（5 条：Q(ξ) 中的精确事实、1800 个线性方程组、反向检查）、`check_b7.py`（5 条：递推、显式上下界 k≤300）；入口 `run_all.py`（20 条全部 PASS，峰值约 0.4 GB，约 20 秒，日志 `logs/tableB_*.log`）；`explore/` 是找交错关系时的探索脚本。需要 numpy（只用来找近似根，判定全是精确运算）。暂未登记进 verify_all（那里仍是 13 个模块、305 PASS） |
+| `code/review/<reviewer>/` | 第二轮对抗性复核者的独立脚本；`s6-*` 是 2026-10-07 加固报告 ⑥ 的第三轮复核者（s6-t436、s6-t342、s6-t27）；`main-t26ii/` 是主 Agent 重推 T2.6(ii) 时写的独立核对脚本（不导入 core、不复用 x1 的脚本）；`s8-b1/`、`s8-b3/` 是 2026-10-07 晚表 B 新证明（B1、B3）的复核者脚本 |
 | `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，第四轮的 `patch_lean4.py`、`patch_lean4_fixes3.py` 已于 2026-10-07 应用；同日加固 ⑥ 后的同步补丁是 `patch_six.py`，重推 T2.6(ii) 后的是 `patch_t26ii.py`，加入 T3.9 后的是 `patch_stirlinglike.py`，都已应用）；`check_tex.py`（没有 TeX 编译器时检查 `paper/*.tex` 的环境、括号、$、标签与文献引用，做过反向检查）；`check_paper_numbers.py`（2026-10-07：从 `core.py` 的原始定义重算论文里印出的每一个数，并解析 `paper/main.tex` 里的表格比对，做过反向检查）；`lean_statements.py`（从 Lean 文件里只抽出文档注释、定义与定理陈述，便于人工核对陈述是否忠实于报告）；`md_to_pdf.py`（2026-10-07：把 `notes/` 里的 Markdown 用本机 Edge 无头模式转成 PDF，中文用微软雅黑、链接可点；本机没有给 .md 关联打开程序，给你看的笔记用它转）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；2026-10-07 起内存查询失败时改用备用数据源，连续 5 秒都读不到才结束；Lean 仍只走 `lean/lean_one.sh`） |
 | `code/step0_baseline.py`、`step1_quickcheck.py` | 开工时的基线核对与主线推导快速核对 |
 | `notes/原始任务说明.md` | 用户给出的任务原文 |
@@ -55,11 +56,14 @@
 | `notes/02-主Agent-不确定三处加固.md` | 2026-10-07 加固报告 ⑥ 原来的三处：逐步重推 T4.3(6)、T3.4(2) 的复核证明；把 T2.7 的推论改写为 T2.7′ 并自证 |
 | `notes/03-主Agent-T2.6(ii)重推.md` | 2026-10-07 主 Agent 不看复核者 x1 的式子，从头重推 T2.6(ii)（截断块部分对一切 m≥2 没有 u 型单和）：完整证明、另一条更初等的路线、与 x1 的逐项对照 |
 | `notes/04-主Agent-U不是Stirling-like.md` | 2026-10-07 新增的 T3.9：Rel(U) 的非零元支撑里有二倍面积 ≥3 的三点，所以 U 不是 Kauers 意义下的 Stirling-like；证明、读 Kauers 定义时的注意点、Lean 形式化记录 |
+| `notes/05-主Agent-表B-B1-h_k实根性.md` | 2026-10-07 晚：`猜想总表.md` 表 B 的 B1 的证明——h_k 的根全为实数且两两不同（换到 z=t/(1−t) 看 N 行多项式，四条交错关系在递推 n_k=(1+z)n_{k−1}+Φn_{k−3} 下封闭）；推论：N(k,·) 严格对数凹、单峰，h_k 在 (1,∞) 恰有 ⌊k/3⌋ 个根、系数恰变号 ⌊k/3⌋ 次，「不同取值个数」满足中心极限定理 |
+| `notes/06-主Agent-表B-B3单族形状分类.md` | 2026-10-07 晚：表 B 的 B3 加强为完整分类——单族形状 C(k+c−αs, βs+d) 的表示对每个 m≥1 存在当且仅当 α+β=1（新步骤：纤维上全部点的乘积给出 ξ 的非零次幂为有理数的矛盾） |
+| `notes/07-主Agent-表B-B7-Gevrey上界.md` | 2026-10-07 晚：表 B 的 B7 前半——f_k(t) 在单位圆盘紧子集上一致的 Gevrey-1/3 上界（常数显式）与 t∈(0,1) 的同阶下界；Borel 可和性仍未证 |
 | `notes/Lean定义核对清单.md` | 给人读的一页：几个承重的 Lean 定义（U、原题矩阵、D-finite、k-only 递推、Rel(U)、新加的 det2）原文与数学含义并排，列出要核对的点；Lean 只检查证明，不检查定义是不是想说的意思 |
 | `paper/main.tex` | 英文论文完整初稿（LaTeX，amsart，2026-10-07）：引言与相关工作；归约、引理 1 与 N 三角；最小递推阶与两项渐近；块分解、显式公式与双射；非 D-finite、象限递推的左理想（含维数与饱和性）、不是 Stirling-like；更短公式不存在（单族单和、其他形状、proper 超几何多重和）；近对角线；Lean 表与定义附录；开放问题；AI 使用声明。证明都已写全。用 Tectonic 0.17 编译通过（`paper/main.pdf`），结构检查 `check_tex.py`、数字核对 `check_paper_numbers.py` 都通过；`TODO` 处要你决定或核对 |
 | `notes/交接提示词_Lean形式化续作.md` | 第二轮 Lean 续作的交接提示词（历史文件：其中列的任务都已完成，现状见「当前状态与待办」） |
 | `notes/<area>.md` | 第一轮 8 个方向的完整证明笔记 |
-| `notes/review/` | 第二轮复核：`claims_<area>.md`（第一轮结论清单）与 `<reviewer>-review.md`（逐条 verdict）；第三轮审计的输出在 `logs/phase3_audit_output.json` 与 `logs/audit_*.log`；`s6-*-review.md` 是 2026-10-07 加固 ⑥ 的复核报告（T4.3(6)、T3.4(2) 的独立重推，T2.7′ 的审查） |
+| `notes/review/` | 第二轮复核：`claims_<area>.md`（第一轮结论清单）与 `<reviewer>-review.md`（逐条 verdict）；第三轮审计的输出在 `logs/phase3_audit_output.json` 与 `logs/audit_*.log`；`s6-*-review.md` 是 2026-10-07 加固 ⑥ 的复核报告（T4.3(6)、T3.4(2) 的独立重推，T2.7′ 的审查）；`s8-b1-review.md`、`s8-b3-review.md` 是 2026-10-07 晚表 B 新证明（B1 实根性、B3 形状分类）的对抗性复核（都是 confirmed with minor gaps，缺口都是表述，已改） |
 | `notes/report_parts/` | 报告的分节源文件（`报告.md` 由它们拼接） |
 | `data/oeis/` | OEIS 只读快照（68 次 curl）与 `INDEX.md` 查询记录；许可与署名见 `NOTICE.md`（CC-BY-SA 4.0） |
 | `data/lit/` | 新颖性文献检索的数据（原始返回、合并候选、查询审计、前向引用、精读论文的来源与哈希、2026-10-07 的 OEIS 条目页）；说明见 `data/lit/README.md`。`data/oeis/` 保持 68 个快照不动，因为 `check_c5b.py` 要求如此 |
@@ -141,6 +145,7 @@
   - 按 `notes/Lean定义核对清单.md` 逐项核对承重的 Lean 定义（要人来做）。全部打勾之前，论文里只说「证明已机器检查」，不说「陈述已机器检查」。
   - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 4 处 `\todo`（文献检索补完：Google Scholar 已查，剩 MathSciNet、zbMATH、WoS；Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址）和 2 处注释里的 TODO（作者署名、引理 1 的出处）。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
   - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`），同日你手动查完 Google Scholar（§9，没有发现先例）；还要你手动查 zbMATH（免费、无需登录）、Web of Science、MathSciNet（`notes/新颖性核查_手动检索清单.md`，桌面有 PDF 版），并打开 Dougherty-Bliss 2024 博士论文的 PDF 搜本家族编号（RUcore 禁止 AI 抓取，我没取）。
+- **表 B 的新进展（2026-10-07 晚）**：B1（h_k 全实根且根互异）与 B3（单族形状分类，推广到 α,β≥0 的一切形状）已证明，记为 `猜想总表.md` 的 A19、A20；B7 证了一半（f_k(t) 的 Gevrey-1/3 上界与 t∈(0,1) 的同阶下界），B9 证了一部分（h_k 系数恰变号 ⌊k/3⌋ 次）。证明在 `notes/05`–`07`，核对 `py -3.14 code/tableB/run_all.py`（20 条全部 PASS），B1、B3 各有一位对抗性复核者（`notes/review/s8-b1-review.md`、`s8-b3-review.md`）。**还没有并入报告与论文**（报告 T5.3(6)、T2.6(i) 补充、T3.4(5)、④ 与论文的开放问题一节仍写着「猜想」），也没有登记进 verify_all，没有形式化。
 - 数学上未解的问题与完成度见 `猜想总表.md` 表 B；完整的待办与优先级见 `ROADMAP.md`。
 
 ## 许可与数据来源

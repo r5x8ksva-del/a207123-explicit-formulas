@@ -1,0 +1,22 @@
+PASS x1-no-rational-root | f(1)=1 f(-1)=-3
+PASS x1-disc | disc=-31
+PASS x1-real-root-interval | f(0.68)=-0.005568 f(0.69)=0.018509
+PASS x2-N(xi)=1 | 1
+PASS x2-N(1+xi)=3 | 3
+PASS x2-N(1-xi)=1 | 1
+PASS x2-xi^3=1-xi
+PASS x3-xi^N-irrational | 1<=|N|<=400, rational ones: []
+PASS x4-G_m=W_m/P_m-vs-core | m<=12, k<=70
+PASS x4-b1-divides-P_m | 1<=m<=25
+PASS x4-W_m(xi)=xi+xi^2 | 1<=m<=25
+PASS x5-thmS-residue-closed-form | 1<=m<=15
+PASS x5-thmS-N(theta)=3 | |M|<=30
+PASS x6-a_beta-rational-only-beta1 | beta<=60, rational at [1]
+PASS x6-a_beta^2-not-rational-odd>=3 | odd 3<=beta<=59, bad=[]
+PASS x6-a_beta-identity | a=(1-xi)^b-(-xi)^b = xi^b(xi^2b-(-1)^b), beta<=60
+PASS x7-caseI-exponent-irrational | 767 shapes with alpha,beta>=1, e!=0, alpha+beta<=40
+PASS neg-xi^0-is-rational
+PASS neg-thmS-residue-with-m!-differs
+PASS neg-W_m(xi)!=xi
+PASS neg-b2-does-not-vanish-at-xi
+SUMMARY: 0 FAIL []

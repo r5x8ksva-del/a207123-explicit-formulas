@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""表 B 新结论的一键核对（2026-10-07）：依次运行 check_b1.py、check_b3.py、check_b7.py，汇总 PASS / FAIL。
+
+用法（在任务 C 根目录）：  py -3.14 code/tableB/run_all.py
+带内存保护：  GUARD_CAP_MB=1500 code/main_extra/run_guarded.sh logs/tableB_run_all.log py -3.14 code/tableB/run_all.py
+（实测峰值约 0.4 GB，用时约半分钟。）
+格式与 verify_all.py 相同；暂未登记为 verify_all 的模块，因为报告、README、论文里写的是「13 个模块、305 PASS」，
+这些结论并入报告时再把它复制为 code/checks/check_tb.py。需要 numpy（只用来求近似根，判定全部是精确运算）。
+"""
+import os
+import subprocess
+import sys
+import time
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(HERE))
+PARTS = ['b1', 'b3', 'b7']
+
+
+def main():
+    if not sys.stdout.isatty():
+        sys.stdout.reconfigure(encoding='utf-8')
+    env = dict(os.environ, PYTHONIOENCODING='utf-8', PYTHONUTF8='1')
+    rows, bad, tp, tf = [], [], 0, 0
+    t_all = time.time()
+    for a in PARTS:
+        t0 = time.time()
+        print('=' * 72)
+        print('>>> check_%s.py' % a, flush=True)
+        proc = subprocess.run([sys.executable, os.path.join(HERE, 'check_%s.py' % a)], cwd=ROOT, env=env,
+                              stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        out = proc.stdout.decode('utf-8', errors='replace')
+        print(out.rstrip(), flush=True)
+        n_pass = sum(1 for ln in out.splitlines() if ln.startswith('PASS '))
+        n_fail = sum(1 for ln in out.splitlines() if ln.startswith('FAIL '))
+        has_summary = any(ln.startswith('SUMMARY ') for ln in out.splitlines())
+        ok = proc.returncode == 0 and n_fail == 0 and has_summary and n_pass > 0
+        if not ok:
+            bad.append(a)
+        tp += n_pass
+        tf += n_fail
+        rows.append((a, n_pass, n_fail, proc.returncode, time.time() - t0, ok))
+    print('=' * 72)
+    for a, p, f, rc, dt, ok in rows:
+        print('%-4s pass=%-3d fail=%-3d rc=%d %6.1fs  %s' % (a, p, f, rc, dt, 'PASS' if ok else 'FAIL'))
+    print('TOTAL pass=%d fail=%d parts=%d failed=%s  (%.1fs)' % (tp, tf, len(rows), ','.join(bad) or '-',
+                                                              time.time() - t_all))
+    print('OVERALL:', 'PASS' if not bad else 'FAIL')
+    return 0 if not bad else 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())

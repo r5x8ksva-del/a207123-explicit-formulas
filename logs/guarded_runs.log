@@ -56,3 +56,43 @@
 2026-10-06 21:52:57 UTC | py -3.14 /c/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/7909e566-ae17-455c-a54b-66811b90cf72/scratchpad/rev/check_t26ii_broken.py > logs/main_t26ii_check_reverse.log | exit 1 | 2s | PEAK=22 MINHEAD=15019 MINAVAIL=5305 KILLED=0 REASON= QFAIL=0
 2026-10-06 21:58:56 UTC | py -3.14 verify_all.py > logs/verify_all_final.log | exit 0 | 269s | PEAK=437 MINHEAD=14418 MINAVAIL=5234 KILLED=0 REASON= QFAIL=0
 2026-10-06 22:47:04 UTC | py -3.14 verify_all.py > logs/verify_all_recheck_2026-10-07.log | exit 0 | 297s | PEAK=433 MINHEAD=13475 MINAVAIL=3824 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:25:47 UTC | py -3.14 code/tableB/check_b1.py > logs/tableB_check_b1.log | exit 0 | 6s | PEAK=386 MINHEAD=11296 MINAVAIL=2177 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:27:23 UTC | py -3.14 code/tableB/check_b3.py > logs/tableB_check_b3.log | exit 1 | 2s | PEAK=386 MINHEAD=11045 MINAVAIL=2288 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:28:01 UTC | py -3.14 code/tableB/check_b3.py > logs/tableB_check_b3.log | exit 0 | 5s | PEAK=387 MINHEAD=10953 MINAVAIL=2316 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:29:48 UTC | py -3.14 code/tableB/check_b7.py > logs/tableB_check_b7.log | exit 1 | 7s | PEAK=27 MINHEAD=10713 MINAVAIL=1813 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:30:09 UTC | py -3.14 code/tableB/check_b7.py > logs/tableB_check_b7.log | exit 75 (memory gate) | AVAIL=1422 COMMIT=22393 LIMIT=32429 HEADROOM=10036 TOTAL=16045
+2026-10-07 15:30:56 UTC | py -3.14 code/tableB/check_b7.py > logs/tableB_check_b7.log | exit 0 | 18s | PEAK=29 MINHEAD=9185 MINAVAIL=761 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:33:49 UTC | py -3.14 code/tableB/check_b1.py > logs/tableB_check_b1.log | exit 137 | 2s | PEAK=660 MINHEAD=10426 MINAVAIL=2242 KILLED=1 REASON=job private 660 MB > cap 500 MB QFAIL=0
+2026-10-07 15:34:16 UTC | py -3.14 code/tableB/check_b1.py > logs/tableB_check_b1.log | exit 0 | 12s | PEAK=385 MINHEAD=10352 MINAVAIL=2157 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:34:43 UTC | py -3.14 code/review/s8-b3/s8b3_xi_exact.py > logs/review_s8-b3_xi_exact.log | exit 0 | 3s | PEAK=24 MINHEAD=11593 MINAVAIL=2781 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:35:01 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 17s | PEAK=394 MINHEAD=11310 MINAVAIL=2811 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:36:10 UTC | py -3.14 code/review/s8-b3/s8b3_xi_exact.py > logs/review_s8-b3_xi_exact.log | exit 0 | 2s | PEAK=24 MINHEAD=11795 MINAVAIL=3064 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:36:14 UTC | py -3.14 code/review/s8-b3/s8b3_fiber_float.py > logs/review_s8-b3_fiber_float.log | exit 1 | 3s | PEAK=387 MINHEAD=11369 MINAVAIL=2982 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:36:58 UTC | py -3.14 code/review/s8-b3/s8b3_fiber_float.py > logs/review_s8-b3_fiber_float.log | exit 1 | 2s | PEAK=387 MINHEAD=11301 MINAVAIL=3097 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:37:18 UTC | py -3.14 code/review/s8-b3/s8b3_fiber_float.py > logs/review_s8-b3_fiber_float.log | exit 0 | 2s | PEAK=387 MINHEAD=11260 MINAVAIL=3052 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:38:25 UTC | py -3.14 code/review/s8-b1/s1_selftest.py > logs/review_s8-b1_selftest.log | exit 0 | 2s | PEAK=23 MINHEAD=11759 MINAVAIL=3193 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:39:03 UTC | py -3.14 code/review/s8-b3/_timing_probe.py > logs/review_s8-b3_timing_probe.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:39:49 UTC | py -3.14 code/review/s8-b3/s8b3_linsys.py > logs/review_s8-b3_linsys.log | exit 1 | 19s | PEAK=24 MINHEAD=11679 MINAVAIL=3422 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:39:58 UTC | py -3.14 code/review/s8-b1/s2_main.py truth,rec,base,thm2,newton,c3 K=60 > logs/review_s8-b1_main_basic.log | exit 1 | 5s | PEAK=24 MINHEAD=11655 MINAVAIL=3365 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:40:14 UTC | py -3.14 code/review/s8-b1/s2_main.py truth,rec,base,thm2,newton,c3 K=60 > logs/review_s8-b1_main_basic.log | exit 0 | 6s | PEAK=25 MINHEAD=11539 MINAVAIL=3289 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:40:27 UTC | py -3.14 code/review/s8-b1/s2_main.py rel K=60 KA=40 KB=16 > logs/review_s8-b1_rel40.log | exit 0 | 4s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=2
+2026-10-07 15:40:27 UTC | py -3.14 code/review/s8-b3/s8b3_linsys.py > logs/review_s8-b3_linsys.log | exit 0 | 24s | PEAK=24 MINHEAD=11528 MINAVAIL=3294 KILLED=0 REASON= QFAIL=2
+2026-10-07 15:43:05 UTC | py -3.14 code/review/s8-b3/s8b3_gf_identity.py > logs/review_s8-b3_gf_identity.log | exit 0 | 19s | PEAK=23 MINHEAD=11010 MINAVAIL=2858 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:43:18 UTC | py -3.14 code/review/s8-b1/s2_main.py rel K=60 KA=60 KB=40 > logs/review_s8-b1_rel60_B40.log | exit 0 | 141s | PEAK=30 MINHEAD=11065 MINAVAIL=2828 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:43:31 UTC | py -3.14 code/review/s8-b1/s2_main.py aux K=60 KAUX=59 > logs/review_s8-b1_aux59.log | exit 137 | 2s | PEAK=2122 MINHEAD=10793 MINAVAIL=2888 KILLED=1 REASON=job private 2122 MB > cap 1500 MB QFAIL=0
+2026-10-07 15:43:57 UTC | py -3.14 code/review/s8-b1/d1_aux_debug.py 10 > logs/review_s8-b1_debug_aux10.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:44:20 UTC | py -3.14 code/review/s8-b1/s2_main.py aux K=60 KAUX=10 VERB=1 > logs/review_s8-b1_debug_aux10b.log | exit 0 | 2s | PEAK=23 MINHEAD=10908 MINAVAIL=2669 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:45:32 UTC | py -3.14 code/review/s8-b1/s2_main.py aux K=60 KAUX=59 > logs/review_s8-b1_aux59.log | exit 0 | 59s | PEAK=30 MINHEAD=10931 MINAVAIL=2543 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:47:53 UTC | py -3.14 code/review/s8-b1/s2_main.py hroots K=60 KEXT=120 > logs/review_s8-b1_hroots.log | exit 0 | 129s | PEAK=48 MINHEAD=10452 MINAVAIL=2390 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:49:15 UTC | py -3.14 code/review/s8-b3/s8b3_linsys.py > logs/review_s8-b3_linsys.log | exit 0 | 55s | PEAK=23 MINHEAD=9559 MINAVAIL=1688 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:49:45 UTC | py -3.14 code/review/s8-b3/s8b3_xi_exact.py > logs/review_s8-b3_xi_exact.log | exit 0 | 3s | PEAK=24 MINHEAD=9767 MINAVAIL=2189 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:49:51 UTC | py -3.14 code/review/s8-b3/s8b3_fiber_float.py > logs/review_s8-b3_fiber_float.log | exit 0 | 3s | PEAK=387 MINHEAD=9275 MINAVAIL=2030 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:50:48 UTC | py -3.14 code/review/s8-b3/s8b3_linsys.py > logs/review_s8-b3_linsys.log | exit 0 | 55s | PEAK=24 MINHEAD=8299 MINAVAIL=837 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:51:01 UTC | py -3.14 code/review/s8-b1/s1_selftest.py 3000 10 7 > logs/review_s8-b1_selftest_big.log | exit 0 | 107s | PEAK=24 MINHEAD=8302 MINAVAIL=837 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:51:16 UTC | py -3.14 code/review/s8-b3/s8b3_gf_identity.py > logs/review_s8-b3_gf_identity.log | exit 0 | 26s | PEAK=24 MINHEAD=10766 MINAVAIL=2792 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:55:09 UTC | py -3.14 code/review/s8-b1/s2_main.py rel,thm2 K=60 KA=90 KB=0 KEXT=90 > logs/review_s8-b1_rel_ext90.log | exit 0 | 239s | PEAK=38 MINHEAD=7336 MINAVAIL=346 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:56:05 UTC | py -3.14 code/review/s8-b1/s3_sec5.py > logs/review_s8-b1_sec5.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:59:39 UTC | py -3.14 code/review/s8-b1/s1_selftest.py > logs/review_s8-b1_final_selftest.log | exit 0 | 4s | PEAK=24 MINHEAD=10150 MINAVAIL=2722 KILLED=0 REASON= QFAIL=0
+2026-10-07 15:59:51 UTC | py -3.14 code/review/s8-b1/s2_main.py truth,rec,base,rel,thm2,newton,c3 K=60 KA=40 KB=20 > logs/review_s8-b1_final_basic_rel.log | exit 0 | 10s | PEAK=25 MINHEAD=9931 MINAVAIL=2440 KILLED=0 REASON= QFAIL=0
+2026-10-07 16:02:30 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 17s | PEAK=393 MINHEAD=10095 MINAVAIL=2875 KILLED=0 REASON= QFAIL=0
+2026-10-07 16:05:47 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 24s | PEAK=394 MINHEAD=8996 MINAVAIL=1800 KILLED=0 REASON= QFAIL=0

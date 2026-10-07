@@ -1,0 +1,172 @@
+sections: ['aux'] K=60 KA=40 KB=16 KAUX=10 KEXT=0
+[truth] N table from U (k,q<=60) in 1.0s
+   [aux] k=3 A<<(1+z)A [L4i] deg g=2 deg f=3
+   [aux] k=3 A<<PhiC [delta_k] deg g=2 deg f=2
+   [aux] k=3 (1+z)A<<TA [L5iii] deg g=3 deg f=3
+   [aux] k=3 PhiC<<TA [eps_k] deg g=2 deg f=3
+   [aux] k=3 A<<TB [beta_k] deg g=2 deg f=2
+   [aux] k=3 C<<B [alpha_{k-1}] deg g=0 deg f=1
+   [aux] k=3 B<<TC [beta_{k-1}] deg g=1 deg f=1
+   [aux] k=3 TC<<TB [L5ii] deg g=1 deg f=2
+   [aux] k=3 A+TC<<TB deg g=2 deg f=2
+   [aux] k=3 PhiB<<PhiA [term1] deg g=3 deg f=4
+   [aux] k=3 TB<<zA [L4ii] deg g=2 deg f=3
+   [aux] k=3 PhiB<<z(1+z)A [term2] deg g=3 deg f=4
+   [aux] k=3 TB<<T(TC) [L5ii] deg g=2 deg f=2
+   [aux] k=3 PhiB<<(1+z)T^2C [term3] deg g=3 deg f=3
+   [aux] k=3 TB<<zTC [L4ii] deg g=2 deg f=2
+   [aux] k=3 PhiB<<z(1+z)TC [term4] deg g=3 deg f=3
+   [aux] k=3 alpha_{k+1} deg g=2 deg f=3
+   [aux] k=3 beta_{k+1} deg g=3 deg f=3
+   [aux] k=3 delta_{k+1} deg g=3 deg f=3
+   [aux] k=3 epsilon_{k+1} deg g=3 deg f=4
+[aux] k= 3 20 relations all ok
+   [aux] k=4 A<<(1+z)A [L4i] deg g=3 deg f=4
+   [aux] k=4 A<<PhiC [delta_k] deg g=3 deg f=3
+   [aux] k=4 (1+z)A<<TA [L5iii] deg g=4 deg f=4
+   [aux] k=4 PhiC<<TA [eps_k] deg g=3 deg f=4
+   [aux] k=4 A<<TB [beta_k] deg g=3 deg f=3
+   [aux] k=4 C<<B [alpha_{k-1}] deg g=1 deg f=2
+   [aux] k=4 B<<TC [beta_{k-1}] deg g=2 deg f=2
+   [aux] k=4 TC<<TB [L5ii] deg g=2 deg f=3
+   [aux] k=4 A+TC<<TB deg g=3 deg f=3
+   [aux] k=4 PhiB<<PhiA [term1] deg g=4 deg f=5
+   [aux] k=4 TB<<zA [L4ii] deg g=3 deg f=4
+   [aux] k=4 PhiB<<z(1+z)A [term2] deg g=4 deg f=5
+   [aux] k=4 TB<<T(TC) [L5ii] deg g=3 deg f=3
+   [aux] k=4 PhiB<<(1+z)T^2C [term3] deg g=4 deg f=4
+   [aux] k=4 TB<<zTC [L4ii] deg g=3 deg f=3
+   [aux] k=4 PhiB<<z(1+z)TC [term4] deg g=4 deg f=4
+   [aux] k=4 alpha_{k+1} deg g=3 deg f=4
+   [aux] k=4 beta_{k+1} deg g=4 deg f=4
+   [aux] k=4 delta_{k+1} deg g=4 deg f=4
+   [aux] k=4 epsilon_{k+1} deg g=4 deg f=5
+[aux] k= 4 20 relations all ok
+   [aux] k=5 A<<(1+z)A [L4i] deg g=4 deg f=5
+   [aux] k=5 A<<PhiC [delta_k] deg g=4 deg f=4
+   [aux] k=5 (1+z)A<<TA [L5iii] deg g=5 deg f=5
+   [aux] k=5 PhiC<<TA [eps_k] deg g=4 deg f=5
+   [aux] k=5 A<<TB [beta_k] deg g=4 deg f=4
+   [aux] k=5 C<<B [alpha_{k-1}] deg g=2 deg f=3
+   [aux] k=5 B<<TC [beta_{k-1}] deg g=3 deg f=3
+   [aux] k=5 TC<<TB [L5ii] deg g=3 deg f=4
+   [aux] k=5 A+TC<<TB deg g=4 deg f=4
+   [aux] k=5 PhiB<<PhiA [term1] deg g=5 deg f=6
+   [aux] k=5 TB<<zA [L4ii] deg g=4 deg f=5
+   [aux] k=5 PhiB<<z(1+z)A [term2] deg g=5 deg f=6
+   [aux] k=5 TB<<T(TC) [L5ii] deg g=4 deg f=4
+   [aux] k=5 PhiB<<(1+z)T^2C [term3] deg g=5 deg f=5
+   [aux] k=5 TB<<zTC [L4ii] deg g=4 deg f=4
+   [aux] k=5 PhiB<<z(1+z)TC [term4] deg g=5 deg f=5
+   [aux] k=5 alpha_{k+1} deg g=4 deg f=5
+   [aux] k=5 beta_{k+1} deg g=5 deg f=5
+   [aux] k=5 delta_{k+1} deg g=5 deg f=5
+   [aux] k=5 epsilon_{k+1} deg g=5 deg f=6
+[aux] k= 5 20 relations all ok
+   [aux] k=6 A<<(1+z)A [L4i] deg g=5 deg f=6
+   [aux] k=6 A<<PhiC [delta_k] deg g=5 deg f=5
+   [aux] k=6 (1+z)A<<TA [L5iii] deg g=6 deg f=6
+   [aux] k=6 PhiC<<TA [eps_k] deg g=5 deg f=6
+   [aux] k=6 A<<TB [beta_k] deg g=5 deg f=5
+   [aux] k=6 C<<B [alpha_{k-1}] deg g=3 deg f=4
+   [aux] k=6 B<<TC [beta_{k-1}] deg g=4 deg f=4
+   [aux] k=6 TC<<TB [L5ii] deg g=4 deg f=5
+   [aux] k=6 A+TC<<TB deg g=5 deg f=5
+   [aux] k=6 PhiB<<PhiA [term1] deg g=6 deg f=7
+   [aux] k=6 TB<<zA [L4ii] deg g=5 deg f=6
+   [aux] k=6 PhiB<<z(1+z)A [term2] deg g=6 deg f=7
+   [aux] k=6 TB<<T(TC) [L5ii] deg g=5 deg f=5
+   [aux] k=6 PhiB<<(1+z)T^2C [term3] deg g=6 deg f=6
+   [aux] k=6 TB<<zTC [L4ii] deg g=5 deg f=5
+   [aux] k=6 PhiB<<z(1+z)TC [term4] deg g=6 deg f=6
+   [aux] k=6 alpha_{k+1} deg g=5 deg f=6
+   [aux] k=6 beta_{k+1} deg g=6 deg f=6
+   [aux] k=6 delta_{k+1} deg g=6 deg f=6
+   [aux] k=6 epsilon_{k+1} deg g=6 deg f=7
+[aux] k= 6 20 relations all ok
+   [aux] k=7 A<<(1+z)A [L4i] deg g=6 deg f=7
+   [aux] k=7 A<<PhiC [delta_k] deg g=6 deg f=6
+   [aux] k=7 (1+z)A<<TA [L5iii] deg g=7 deg f=7
+   [aux] k=7 PhiC<<TA [eps_k] deg g=6 deg f=7
+   [aux] k=7 A<<TB [beta_k] deg g=6 deg f=6
+   [aux] k=7 C<<B [alpha_{k-1}] deg g=4 deg f=5
+   [aux] k=7 B<<TC [beta_{k-1}] deg g=5 deg f=5
+   [aux] k=7 TC<<TB [L5ii] deg g=5 deg f=6
+   [aux] k=7 A+TC<<TB deg g=6 deg f=6
+   [aux] k=7 PhiB<<PhiA [term1] deg g=7 deg f=8
+   [aux] k=7 TB<<zA [L4ii] deg g=6 deg f=7
+   [aux] k=7 PhiB<<z(1+z)A [term2] deg g=7 deg f=8
+   [aux] k=7 TB<<T(TC) [L5ii] deg g=6 deg f=6
+   [aux] k=7 PhiB<<(1+z)T^2C [term3] deg g=7 deg f=7
+   [aux] k=7 TB<<zTC [L4ii] deg g=6 deg f=6
+   [aux] k=7 PhiB<<z(1+z)TC [term4] deg g=7 deg f=7
+   [aux] k=7 alpha_{k+1} deg g=6 deg f=7
+   [aux] k=7 beta_{k+1} deg g=7 deg f=7
+   [aux] k=7 delta_{k+1} deg g=7 deg f=7
+   [aux] k=7 epsilon_{k+1} deg g=7 deg f=8
+[aux] k= 7 20 relations all ok
+   [aux] k=8 A<<(1+z)A [L4i] deg g=7 deg f=8
+   [aux] k=8 A<<PhiC [delta_k] deg g=7 deg f=7
+   [aux] k=8 (1+z)A<<TA [L5iii] deg g=8 deg f=8
+   [aux] k=8 PhiC<<TA [eps_k] deg g=7 deg f=8
+   [aux] k=8 A<<TB [beta_k] deg g=7 deg f=7
+   [aux] k=8 C<<B [alpha_{k-1}] deg g=5 deg f=6
+   [aux] k=8 B<<TC [beta_{k-1}] deg g=6 deg f=6
+   [aux] k=8 TC<<TB [L5ii] deg g=6 deg f=7
+   [aux] k=8 A+TC<<TB deg g=7 deg f=7
+   [aux] k=8 PhiB<<PhiA [term1] deg g=8 deg f=9
+   [aux] k=8 TB<<zA [L4ii] deg g=7 deg f=8
+   [aux] k=8 PhiB<<z(1+z)A [term2] deg g=8 deg f=9
+   [aux] k=8 TB<<T(TC) [L5ii] deg g=7 deg f=7
+   [aux] k=8 PhiB<<(1+z)T^2C [term3] deg g=8 deg f=8
+   [aux] k=8 TB<<zTC [L4ii] deg g=7 deg f=7
+   [aux] k=8 PhiB<<z(1+z)TC [term4] deg g=8 deg f=8
+   [aux] k=8 alpha_{k+1} deg g=7 deg f=8
+   [aux] k=8 beta_{k+1} deg g=8 deg f=8
+   [aux] k=8 delta_{k+1} deg g=8 deg f=8
+   [aux] k=8 epsilon_{k+1} deg g=8 deg f=9
+[aux] k= 8 20 relations all ok
+   [aux] k=9 A<<(1+z)A [L4i] deg g=8 deg f=9
+   [aux] k=9 A<<PhiC [delta_k] deg g=8 deg f=8
+   [aux] k=9 (1+z)A<<TA [L5iii] deg g=9 deg f=9
+   [aux] k=9 PhiC<<TA [eps_k] deg g=8 deg f=9
+   [aux] k=9 A<<TB [beta_k] deg g=8 deg f=8
+   [aux] k=9 C<<B [alpha_{k-1}] deg g=6 deg f=7
+   [aux] k=9 B<<TC [beta_{k-1}] deg g=7 deg f=7
+   [aux] k=9 TC<<TB [L5ii] deg g=7 deg f=8
+   [aux] k=9 A+TC<<TB deg g=8 deg f=8
+   [aux] k=9 PhiB<<PhiA [term1] deg g=9 deg f=10
+   [aux] k=9 TB<<zA [L4ii] deg g=8 deg f=9
+   [aux] k=9 PhiB<<z(1+z)A [term2] deg g=9 deg f=10
+   [aux] k=9 TB<<T(TC) [L5ii] deg g=8 deg f=8
+   [aux] k=9 PhiB<<(1+z)T^2C [term3] deg g=9 deg f=9
+   [aux] k=9 TB<<zTC [L4ii] deg g=8 deg f=8
+   [aux] k=9 PhiB<<z(1+z)TC [term4] deg g=9 deg f=9
+   [aux] k=9 alpha_{k+1} deg g=8 deg f=9
+   [aux] k=9 beta_{k+1} deg g=9 deg f=9
+   [aux] k=9 delta_{k+1} deg g=9 deg f=9
+   [aux] k=9 epsilon_{k+1} deg g=9 deg f=10
+[aux] k= 9 20 relations all ok
+   [aux] k=10 A<<(1+z)A [L4i] deg g=9 deg f=10
+   [aux] k=10 A<<PhiC [delta_k] deg g=9 deg f=9
+   [aux] k=10 (1+z)A<<TA [L5iii] deg g=10 deg f=10
+   [aux] k=10 PhiC<<TA [eps_k] deg g=9 deg f=10
+   [aux] k=10 A<<TB [beta_k] deg g=9 deg f=9
+   [aux] k=10 C<<B [alpha_{k-1}] deg g=7 deg f=8
+   [aux] k=10 B<<TC [beta_{k-1}] deg g=8 deg f=8
+   [aux] k=10 TC<<TB [L5ii] deg g=8 deg f=9
+   [aux] k=10 A+TC<<TB deg g=9 deg f=9
+   [aux] k=10 PhiB<<PhiA [term1] deg g=10 deg f=11
+   [aux] k=10 TB<<zA [L4ii] deg g=9 deg f=10
+   [aux] k=10 PhiB<<z(1+z)A [term2] deg g=10 deg f=11
+   [aux] k=10 TB<<T(TC) [L5ii] deg g=9 deg f=9
+   [aux] k=10 PhiB<<(1+z)T^2C [term3] deg g=10 deg f=10
+   [aux] k=10 TB<<zTC [L4ii] deg g=9 deg f=9
+   [aux] k=10 PhiB<<z(1+z)TC [term4] deg g=10 deg f=10
+   [aux] k=10 alpha_{k+1} deg g=9 deg f=10
+   [aux] k=10 beta_{k+1} deg g=10 deg f=10
+   [aux] k=10 delta_{k+1} deg g=10 deg f=10
+   [aux] k=10 epsilon_{k+1} deg g=10 deg f=11
+[aux] k=10 20 relations all ok
+[aux] done in 0.0s
+TOTAL: 184 checks passed, 0 failed; 1.0s

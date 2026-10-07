@@ -1,0 +1,128 @@
+-- A<<(1+z)A deg g 9 deg f 10
+   gcd deg 9 ...
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 1 deg 1
+   Ind -> 1 0.00s mem 0.0 MB
+-- A<<PhiC deg g 9 deg f 9
+   gcd deg 3 [1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- (1+z)A<<TA deg g 10 deg f 10
+   gcd deg 3 [1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- PhiC<<TA deg g 9 deg f 10
+   gcd deg 4 [0, 1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- A<<TB deg g 9 deg f 9
+   gcd deg 2 [1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- C<<B deg g 7 deg f 8
+   gcd deg 2 [1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- B<<TC deg g 8 deg f 8
+   gcd deg 2 [1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- TC<<TB deg g 8 deg f 9
+   gcd deg 3 [0, 1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- A+TC<<TB deg g 9 deg f 9
+   gcd deg 2 [1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- PhiB<<PhiA deg g 10 deg f 11
+   gcd deg 4 [0, 1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- TB<<zA deg g 9 deg f 10
+   gcd deg 3 [0, 1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- PhiB<<z(1+z)A deg g 10 deg f 11
+   gcd deg 4 [0, 1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 7 deg 7
+   Ind -> 7 0.00s mem 0.0 MB
+-- TB<<T(TC) deg g 9 deg f 9
+   gcd deg 3 [0, 1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- PhiB<<(1+z)T^2C deg g 10 deg f 10
+   gcd deg 4 [0, 1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- TB<<zTC deg g 9 deg f 9
+   gcd deg 3 [0, 1, 2, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
+-- PhiB<<z(1+z)TC deg g 10 deg f 10
+   gcd deg 4 [0, 1, 3, 3, 1]
+   is_real_rooted(d)...
+   -> True mem 0.0 MB
+   sqfree f1...
+   -> True
+   sturm f1 -> 6 deg 6
+   Ind -> 6 0.00s mem 0.0 MB
