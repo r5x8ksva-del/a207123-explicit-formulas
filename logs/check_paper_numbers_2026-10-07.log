@@ -1,0 +1,27 @@
+PASS P01 table U_k(m), 0<=k<=8, 0<=m<=5
+PASS P01b multichains = height DP (k<=6, m<=4)
+PASS P02 table N(k,q), 0<=k<=8
+PASS P02b N by inclusion-exclusion = DFS definition (k<=8)
+PASS P03 N(k,k)=2 (k>=2), N(k,k-1)=k^2-k-4 (k>=4), N(3,2)=4
+PASS P04 triangular recurrence for 3<=k<=50, and failure at k=2
+PASS P05 a_k(n) = U_k(ceil(n/2)) U_k(floor(n/2)) by direct count (k<=5, n<=8)
+PASS P06 worked 5x4 example: rules hold, heights (3,1,3,3) and (1,2,2,0) are good
+PASS P07 block example: good, 3 ascents, ends with an ascent
+PASS P08 W_4(1/2) = 645/512
+PASS P09 explicit formula (k<=30, m<=8)
+PASS P09b the two other forms of Remark rem:forms (k<=30, m<=8)
+PASS P10 explicit formula refined by ascents vs DFS (k<=8, m<=3)
+PASS P11 U_k(1) = sum_s C(k+1-2s,s+1) + sum_s C(k-2-2s,s) (k<=50)
+PASS P12 u_k: degree k, lead 2/k! (k>=2), zeros exactly at -1..-floor((k+2)/3) among the first ones (k<=25)
+PASS P13 columns: deg p=2k, deg q=2k-2, reduced denominator (1-x)^(2k+1)(1+x)^(2k-1) (1<=k<=6)
+PASS P14 c_m, rho_m: two-term asymptotics at k=600 (m<=4), c_4=215/2, c_1=(10+15rho+17rho^2)/31  c1=2.2096081317 c2=7.8411192293 c3=28.976857316
+PASS P15 norms Nm(1+xi)=3, Nm(xi)=1, Nm(eta)=1/2, Nm(4-2eta)=68; 0.68<xi<0.69; xi^-3<6
+PASS P16 residue closed forms on the fibres u=1 and u=1/2 (numerical, m<=6)
+PASS P17 p_1, p_2, p_3 (formulas as printed) agree with D(k,d) exactly from k=2d+2, not at 2d+1
+PASS P18 p_d for d<=8: degree 2d, lead 2/(2^d d!), second coefficient, defects at 2d+1 and 2d
+PASS P19 table of exceptional values D(k,d), p_d(k), e_d(k)
+PASS P20 Newton coefficients at 2d+2 are positive integers, last = 2(2d-1)!! (d<=8)
+PASS P21 U_3(m)=A084990(m+1), U_4(m)=A326247(m+2), U_k(1)=A038718(k+2) on the snapshot terms; U_4(m)=C(m+2,2)^2-4C(m+2,4)
+PASS P23 rows n=2..7: minimal orders 10,22,28,49,55,85 (exact BM) = numbers of distinct products of characteristic roots  orders=[10, 22, 28, 49, 55, 85]
+PASS P22 fibre values v(xi): (1,2) gives xi^-3 < 6, (2,3) gives xi^-4  xi^-3=3.147899 xi^-4=4.613470
+26 PASS, 0 FAIL

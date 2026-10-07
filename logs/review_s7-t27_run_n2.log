@@ -1,0 +1,83 @@
+
+(N2) check for E1 C(m,j)C(k,j):
+    R=0: Q_R=[k>=0,m>=0] holds=True
+    R=1: Q_R=[k>=1,m>=1] holds=True; k=0 row fails=True; m=0 col fails=True
+    R=2: Q_R=[k>=2,m>=2] holds=True; k=1 row fails=True; m=1 col fails=True
+    R=3: Q_R=[k>=3,m>=3] holds=True; k=2 row fails=True; m=2 col fails=True
+    R=4: Q_R=[k>=4,m>=4] holds=True; k=3 row fails=True; m=3 col fails=True
+
+(N2) check for E2 C(k+j,2j)C(m,j):
+    R=0: Q_R=[k>=0,m>=0] holds=True
+    R=1: Q_R=[k>=2,m>=1] holds=True; k=1 row fails=True; m=0 col fails=True
+    R=2: Q_R=[k>=4,m>=2] holds=True; k=3 row fails=True; m=1 col fails=True
+    R=3: Q_R=[k>=6,m>=3] holds=True; k=5 row fails=True; m=2 col fails=True
+    R=4: Q_R=[k>=8,m>=4] holds=True; k=7 row fails=True; m=3 col fails=True
+
+(N2) check for E7r C(m,j)C(k,j)/(j+1) reduced:
+    R=0: Q_R=[k>=0,m>=0] holds=True
+    R=1: Q_R=[k>=1,m>=1] holds=True; k=0 row fails=True; m=0 col fails=True
+    R=2: Q_R=[k>=2,m>=2] holds=True; k=1 row fails=True; m=1 col fails=True
+    R=3: Q_R=[k>=3,m>=3] holds=True; k=2 row fails=True; m=2 col fails=True
+    R=4: Q_R=[k>=4,m>=4] holds=True; k=3 row fails=True; m=3 col fails=True
+
+(N2) check for E8 C(2j,j)C(m,j-k):
+    R=0: Q_R=[k>=0,m>=0] holds=True
+    R=1: Q_R=[k>=1,m>=1] holds=True; k=0 row fails=True; m=0 col fails=True
+    R=2: Q_R=[k>=2,m>=2] holds=True; k=1 row fails=True; m=1 col fails=True
+    R=3: Q_R=[k>=3,m>=3] holds=True; k=2 row fails=True; m=2 col fails=True
+    R=4: Q_R=[k>=4,m>=4] holds=True; k=3 row fails=True; m=3 col fails=True
+
+(N2) check for E6 C(k,j1)C(j1,j2)C(m,j2) [r=2]:
+    R=0: Q_R=[k>=0,m>=0] holds=True
+    R=1: Q_R=[k>=1,m>=1] holds=True; k=0 row fails=True; m=0 col fails=True
+    R=2: Q_R=[k>=2,m>=2] holds=True; k=1 row fails=True; m=1 col fails=True
+    R=3: Q_R=[k>=3,m>=3] holds=True; k=2 row fails=True; m=2 col fails=True
+
+(N2) for E3 C(2j,j)C(k,j)C(m,j) [no N2] at R=1, k,m in 3..12: violated=True; e.g. [(3, 3, 0), (3, 4, 0)]
+
+(N2) for E7u C(m,j)C(k,j)*j!/(j+1)! [no N2] at R=1, k,m in 3..12: violated=True; e.g. [(3, 3, 0), (3, 4, 0)]
+
+===== E3 C(2j,j)C(k,j)C(m,j) [no N2] =====
+  (N2) at R=1 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 0) has an ill-defined neighbour
+  (N2) at R=2 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 0) has an ill-defined neighbour
+  Lemma A: window (J,I)=(2,1), deg_k<=1, nullity=1; identity verified
+    a_w(k): (0, 0, 0):[0, 1]; (0, 1, 0):[0, -1]; (1, 0, 0):[1, -2]; (1, 1, 0):[-1, 2]; (1, 1, 1):[2, -4]; (2, 0, 0):[-1, 1]; (2, 1, 0):[1, -1]; (2, 1, 1):[-4, 4]
+  Lemma F at all-window-wd points: 1260 points, identity failures=0, recurrence failures=0, boundary pts=90
+  T~-recurrence on deep 5x5 (k,m>=10) x j: failures=0; windows all-wd=750, trivial=150, mixed(ill-defined & nonzero)=25
+  Lemma S output alpha*=(0,), C={(0, 0): [0, 1], (0, 1): [0, -1], (1, 0): [1, -2], (1, 1): [1, -2], (2, 0): [-1, 1], (2, 1): [-3, 3]}: (C S)(k,m) nonzero at 0/25 deep points
+  time 0.6s
+
+===== E4 C(k,j)C(m,j)*(j-1)!/j! [no N2] =====
+  (N2) at R=1 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 1) has an ill-defined neighbour
+  (N2) at R=2 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 1) has an ill-defined neighbour
+  Lemma A: window (J,I)=(2,1), deg_k<=1, nullity=1; identity verified
+    a_w(k): (0, 0, 0):[0, 1]; (0, 1, 0):[0, -1]; (1, 0, 0):[1, -2]; (1, 1, 0):[-1, 2]; (1, 1, 1):[1, -1]; (2, 0, 0):[-1, 1]; (2, 1, 0):[1, -1]; (2, 1, 1):[-1, 1]
+  Lemma F at all-window-wd points: 1170 points, identity failures=0, recurrence failures=0, boundary pts=90
+  T~-recurrence on deep 5x5 (k,m>=10) x j: failures=25; windows all-wd=725, trivial=175, mixed(ill-defined & nonzero)=25
+    first failures: [((10, 10, 1), '1'), ((10, 11, 1), '1'), ((10, 12, 1), '1')]
+  Lemma S output alpha*=(0,), C={(0, 0): [0, 1], (0, 1): [0, -1], (1, 0): [1, -2], (1, 1): [0, 1], (2, 0): [-1, 1]}: (C S)(k,m) nonzero at 25/25 deep points, e.g. [(10, 10, '1'), (10, 11, '1'), (10, 12, '1')]
+  time 0.5s
+
+===== E7u C(m,j)C(k,j)*j!/(j+1)! [no N2] =====
+  (N2) at R=1 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 0) has an ill-defined neighbour
+  (N2) at R=2 on [k,m in 10..13]: violated=True, e.g. wd&nonzero point (10, 10, 0) has an ill-defined neighbour
+  Lemma A: window (J,I)=(1,1), deg_k<=1, nullity=1; identity verified
+    a_w(k): (0, 0, 0):[-1, -1]; (0, 1, 0):[1, 1]; (1, 0, 0):[0, 1]; (1, 1, 0):[0, -1]; (1, 1, 1):[0, 1]
+  Lemma F at all-window-wd points: 1400 points, identity failures=0, recurrence failures=0, boundary pts=100
+  T~-recurrence on deep 5x5 (k,m>=10) x j: failures=0; windows all-wd=750, trivial=150, mixed(ill-defined & nonzero)=25
+  Lemma S output alpha*=(0,), C={(0, 0): [-1, -1], (0, 1): [1, 1], (1, 0): [0, 1]}: (C S)(k,m) nonzero at 0/25 deep points
+  time 0.4s
+
+===== E8 C(2j,j)C(m,j-k) =====
+  counting: beta=8 gamma=2 degP=0; J0=32 (J0+1>64/2); first I with unknowns>equations: I=463: 7104768 > C(3770,2)=7104565; at I-1: 7074177 vs 7074441
+  Lemma A: window (J,I)=(1,1), deg_k<= 0: system 28 eqs x 8 unknowns, nullity found=2; exact polynomial identity verified; max deg_(m,j) Q_w=5 <= D=10: True
+    a_w(k) (nonzero): (0, 1, 0):[2]; (0, 1, 1):[5]; (1, 0, 0):[-2]; (1, 0, 1):[-5]; (1, 1, 0):[2]; (1, 1, 1):[5]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 5408 points: all-window-wd points=3380, (p,w) identity checks=27040, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=219, T*(p)=0 points=2375, denominator cases (1,2,3)=[86885, 2275, 19000]
+  Lemma S: C_alpha nonzero for alpha in [(0,), (1,)]; minimal: [(0,)]; triangular inversion recovers A_nu: True
+    alpha*=(0,): C_alpha* = {(j,mu): c(k)} = {(0, 1): [7], (1, 0): [-7], (1, 1): [7]}
+    (C_alpha* S)(k,m) on Q'=[k>=2, m>=2] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 4 checks, 0 failures
+  Assembly: R=max(J,I)=1, Q_R corner=(1, 1), Q' corner=(2, 2); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=800, trivial(all T~=0)=200, mixed=0
+    outside Q' (k<2 or m<2, k,m<=8): T~-recurrence failures=18, mixed windows=49
+  time 0.9s

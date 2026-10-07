@@ -19,7 +19,7 @@
 - 不存在「Stirling×二项式」单和；F(x,t) 与 N(x,y) 的母函数都不是 D-finite；全部多项式系数递推恰为引理 1 生成的左理想，由此 U 不是 Kauers 意义下的 Stirling-like；
 - N(k,k−d) 对 k≥2d+2 是 2d 次多项式（门槛精确）；固定 q 的分子有一般公式；
 - Lean 4 + Mathlib 形式化：原题归约、引理 1、最小阶、二项式基、显式公式、非 D-finite、左理想刻画及其维数公式、近对角线、分子结构、h_k 的结构、「不是 Stirling-like」等，共 27 个模块（2026-10-07 全量构建 26 个，同日又加 `NotStirlingLike.lean`），2675 个声明只依赖三条标准公理；各条的覆盖范围见报告标签与 `猜想总表.md`，承重定义的人工核对清单见 `notes/Lean定义核对清单.md`。
-- 英文论文初稿：`paper/main.tex`（2026-10-07 开始，未编译过；文中 TODO 需要你决定或核对）。
+- 英文论文初稿：`paper/main.tex`（LaTeX，2026-10-07 写成完整初稿，用 Tectonic 0.17 编译通过，`paper/main.pdf` 是编译结果；文中 TODO 需要你决定或核对）。
 
 **如何复现**
 - Python 核对：`py -3.14 verify_all.py`（约 4.5 分钟，需要 numpy），逐条打印 PASS/FAIL；最后一次全量运行 13 个模块、305 PASS、0 FAIL（本地 2026-10-07 加入 rv4 之后，`logs/verify_all_final.log`）。想带内存保护运行（本机常有别的任务同时在跑）：`code/main_extra/run_guarded.sh logs/<输出>.log py -3.14 verify_all.py`，实测整棵进程树峰值约 0.4 GB。
@@ -46,7 +46,7 @@
 | `code/family/` | 2026-10-06 补充：OEIS 里列规则同为「竖向禁止 001、011」的 6 张 Hardin 表都满足同一归约（`check_family.py`、OEIS 只读快照与日志，见其中 README）；另外 5 张表的结构没有研究 |
 | `code/novelty/` | 2026-10-07 新颖性核查的脚本：`lit_search.py`（55 条查询，经 arXiv / OpenAlex / Crossref / Semantic Scholar / StackExchange 的官方接口，只读）、`cited_by.py`（16 篇种子论文的前向引用）、`check_note_refs.py`（核对笔记里的 arXiv 号、DOI、OEIS 编号都有数据支持，做过反向检查）、`check_note_facts.py`（核对笔记里的数字与 OEIS 关键事实能由仓库数据重新证实，不联网）；用法见 `data/lit/README.md` |
 | `code/review/<reviewer>/` | 第二轮对抗性复核者的独立脚本；`s6-*` 是 2026-10-07 加固报告 ⑥ 的第三轮复核者（s6-t436、s6-t342、s6-t27）；`main-t26ii/` 是主 Agent 重推 T2.6(ii) 时写的独立核对脚本（不导入 core、不复用 x1 的脚本） |
-| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，第四轮的 `patch_lean4.py`、`patch_lean4_fixes3.py` 已于 2026-10-07 应用；同日加固 ⑥ 后的同步补丁是 `patch_six.py`，重推 T2.6(ii) 后的是 `patch_t26ii.py`，加入 T3.9 后的是 `patch_stirlinglike.py`，都已应用）；`check_tex.py`（没有 TeX 编译器时检查 `paper/*.tex` 的环境、括号、$、标签与文献引用，做过反向检查）；`lean_statements.py`（从 Lean 文件里只抽出文档注释、定义与定理陈述，便于人工核对陈述是否忠实于报告）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；2026-10-07 起内存查询失败时改用备用数据源，连续 5 秒都读不到才结束；Lean 仍只走 `lean/lean_one.sh`） |
+| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，第四轮的 `patch_lean4.py`、`patch_lean4_fixes3.py` 已于 2026-10-07 应用；同日加固 ⑥ 后的同步补丁是 `patch_six.py`，重推 T2.6(ii) 后的是 `patch_t26ii.py`，加入 T3.9 后的是 `patch_stirlinglike.py`，都已应用）；`check_tex.py`（没有 TeX 编译器时检查 `paper/*.tex` 的环境、括号、$、标签与文献引用，做过反向检查）；`check_paper_numbers.py`（2026-10-07：从 `core.py` 的原始定义重算论文里印出的每一个数，并解析 `paper/main.tex` 里的表格比对，做过反向检查）；`lean_statements.py`（从 Lean 文件里只抽出文档注释、定义与定理陈述，便于人工核对陈述是否忠实于报告）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；2026-10-07 起内存查询失败时改用备用数据源，连续 5 秒都读不到才结束；Lean 仍只走 `lean/lean_one.sh`） |
 | `code/step0_baseline.py`、`step1_quickcheck.py` | 开工时的基线核对与主线推导快速核对 |
 | `notes/原始任务说明.md` | 用户给出的任务原文 |
 | `notes/新颖性核查_2026-10-07.md`、`notes/新颖性核查_手动检索清单.md` | 新颖性核查的结论（逐项对照、最近先例、被抢先风险、检索盲区、下一步）与给用户手动在 Google Scholar / WoS / MathSciNet / zbMATH / Scopus 里跑的检索式 |
@@ -56,7 +56,7 @@
 | `notes/03-主Agent-T2.6(ii)重推.md` | 2026-10-07 主 Agent 不看复核者 x1 的式子，从头重推 T2.6(ii)（截断块部分对一切 m≥2 没有 u 型单和）：完整证明、另一条更初等的路线、与 x1 的逐项对照 |
 | `notes/04-主Agent-U不是Stirling-like.md` | 2026-10-07 新增的 T3.9：Rel(U) 的非零元支撑里有二倍面积 ≥3 的三点，所以 U 不是 Kauers 意义下的 Stirling-like；证明、读 Kauers 定义时的注意点、Lean 形式化记录 |
 | `notes/Lean定义核对清单.md` | 给人读的一页：几个承重的 Lean 定义（U、原题矩阵、D-finite、k-only 递推、Rel(U)、新加的 det2）原文与数学含义并排，列出要核对的点；Lean 只检查证明，不检查定义是不是想说的意思 |
-| `paper/main.tex` | 英文论文初稿（2026-10-07 开始）：引言与相关工作、归约与引理 1、最小递推阶、块分解与显式公式、单族单和不存在、非 D-finite 与象限递推的左理想、不是 Stirling-like、近对角线、Lean、开放问题、AI 使用声明；本机没有 TeX，未编译，只做了结构检查（`code/main_extra/check_tex.py`）；`TODO` 处要你决定或核对 |
+| `paper/main.tex` | 英文论文完整初稿（LaTeX，amsart，2026-10-07）：引言与相关工作；归约、引理 1 与 N 三角；最小递推阶与两项渐近；块分解、显式公式与双射；非 D-finite、象限递推的左理想（含维数与饱和性）、不是 Stirling-like；更短公式不存在（单族单和、其他形状、proper 超几何多重和）；近对角线；Lean 表与定义附录；开放问题；AI 使用声明。证明都已写全。用 Tectonic 0.17 编译通过（`paper/main.pdf`），结构检查 `check_tex.py`、数字核对 `check_paper_numbers.py` 都通过；`TODO` 处要你决定或核对 |
 | `notes/交接提示词_Lean形式化续作.md` | 第二轮 Lean 续作的交接提示词（历史文件：其中列的任务都已完成，现状见「当前状态与待办」） |
 | `notes/<area>.md` | 第一轮 8 个方向的完整证明笔记 |
 | `notes/review/` | 第二轮复核：`claims_<area>.md`（第一轮结论清单）与 `<reviewer>-review.md`（逐条 verdict）；第三轮审计的输出在 `logs/phase3_audit_output.json` 与 `logs/audit_*.log`；`s6-*-review.md` 是 2026-10-07 加固 ⑥ 的复核报告（T4.3(6)、T3.4(2) 的独立重推，T2.7′ 的审查） |
@@ -105,6 +105,13 @@
     - 初稿交给一个独立 Agent 对照报告逐条审查，并用自写程序数值抽查。主要定理与报告一致，抽查全部通过。它指出 7 处问题，都在证明、措辞或元信息里，已全部改正：推论 6.5 缺「位移点两两不同」（主 Agent 已先发现，同时改了报告 T3.9 与笔记）；定理 6.1 证明里 G_{−1} 的约定写错；命题 6.4 第二句重复用了 p_i；「未形式化」清单不全；「305 条精确核对」不准（少数是高精度十进制数值）；「内层和」应为「对 j 的和」；「不是 Stirling-like」少了对 Kauers 定义读法的说明。小问题也已处理：H(m,−1,j)=0、摘要补 m≥1、ρ_0=1、全局二项式约定、记号冲突、作者栏、正文去掉中文字符。
 16. 2026-10-07 第二次 arXiv 复查（`notes/新颖性核查_2026-10-07.md` §8）：`code/novelty/arxiv_recheck.py` 用 arXiv 官方 API 跑了 32 条查询（19 条按日期取最新，看被抢先风险；13 条针对 T3.9、T3.8、T2.6、T2.4、T4.1），取回 626 篇，并读了 Fried 三篇证 OEIS 猜想论文的全文。没有发现处理本家族的文章；Hardin 的另一张二进制矩阵表 A250742 已在 2026 年被证明，被抢先风险不变。同时对照 Kauers 2007 §2.2 原文：他要求序列在整个 ℤ² 上被零化，比「在象限上零化」更强，所以 T3.9 的论证适用（补丁 `patch_kauers_reading.py`，论文与笔记同步改了）。记录：export.arxiv.org 的 robots.txt 写的是 `Disallow: /`，与 arXiv API 文档的指引不一致，两次检索都按 API 文档的间隔执行。
 
+17. 2026-10-07（本地约 08:45–10:05）论文写成完整初稿（你的要求：「现在开始写论文初稿」，输出 LaTeX）：
+    - `paper/main.tex` 在早上的骨架上扩成完整初稿（26 页）：梗概证明全部写全；新增两项渐近（定理 3.2）、列的最小阶的完整证明与 OEIS 行列递推（推论 3.4、注记 3.5）、块分解例子、m=1 的显式式、竖线—集合划分双射（命题 4.7）、两种等价公式（注记 4.9）、(1,2)(2,3) 形状（命题 6.3）、T2.7′（§6.2）、Gosper 不可和（命题 6.10）、Newton 系数为正（命题 7.2）、N(k,q) 表与门槛以下例外值表、Lean 定义附录。参考文献的卷号页码用 Crossref 核对补齐。报告里没有的只有推论 5.5（有理系数的零化算子也是 L₁ 的左倍式；左理想 𝒪L₁ 饱和）。
+    - 编译：经你同意装了 Tectonic 0.17.0（官方 GitHub 发布的 Windows 版，SHA-256 与 GitHub 记录一致，装在 `%LOCALAPPDATA%\Programs\tectonic`，没改 PATH）。编译无错误、无溢出、无未定义引用，`paper/main.pdf` 是结果，编译日志 `logs/main_tex_2026-10-07.log`。
+    - 数字核对：新脚本 `code/main_extra/check_paper_numbers.py` 从 `core.py` 的原始定义重算论文里印出的每一个数并解析 .tex 里的表格比对，26 PASS（`logs/check_paper_numbers_2026-10-07.log`）；改坏 5 个数的副本报 5 FAIL（`logs/check_paper_numbers_reverse_2026-10-07.log`）。
+    - T2.7′ 的第二位复核者 s7-t27：confirmed with minor gaps，唯一的问题是适用范围有一句说过了头（反例 C(2j,j)C(m,j−k)），论文、笔记 02、报告已改正（补丁 `patch_t27_second_review.py`，重新拼接后报告引用的 247 个核对 id 全部 PASS）。记录 `notes/review/s7-t27-review.md`，脚本 `code/review/s7-t27/`。
+    - 全文独立审稿（Opus 子 Agent）：没有发现数学错误；指出 Lean 表一处说过头（\|σ\|²<ρ²_{m−1} 没有形式化）、附录首句说过头、推论 5.5 原来的说法夸大（已改写成真正有内容的版本）、若干缺条件与记号冲突，全部已改。记录 `notes/review/paper-draft-review-2026-10-07.md`，脚本 `code/review/paper-draft-2026-10-07/`（在仓库里重跑，日志 `logs/review_paper-draft_*.log`）。
+    - 收尾核对（本地约 10:05–10:15）：重跑 `check_tex.py`、`check_paper_numbers.py`（26 PASS）、Tectonic（编译到临时目录：26 页，日志里 0 个警告，PDF 文字与 `paper/main.pdf` 完全相同）、`assemble_report.py`（247 PASS，`报告.md` 不变）。发现 s7-t27 的 `run_t27.py`、`run_n2.py` 要带例子参数，第一次在仓库重跑时漏了（`run_n2` 的日志是空文件），已带全部参数补跑，命令写进了审稿记录；`s4b.py` 一处输出标注（应为 k≤9、m=4）改正后重跑。
 
 ## 当前状态与待办（2026-10-07）
 
@@ -120,14 +127,14 @@
   - T4.3(6) 与 T3.4(2) 现在各有两份路线不同的证明，计算与数值核对已并入 verify_all（rv3）；
   - T2.7 的推论改写为 T2.7′ 并自证。
   - 随后排第 1 的 T2.6(ii) 也已加固：两份独立推导（x1、主 Agent）加两套独立精确核对（rv2、rv4），见「过程概览」第 14 条。
-  - ⑥ 按现在的证据重排为：T2.7′（新证明，只有一位复核者审查）、T3.4(4)(5) 的分析估计、T4.3(8) 中 b_i 可约的情形（引用未重证的 Laguerre 零点定理）。
+  - ⑥ 按现在的证据重排为：T2.7′（新证明，两位复核者审查，未经人类核对）、T3.4(4)(5) 的分析估计、T4.3(8) 中 b_i 可约的情形（引用未重证的 Laguerre 零点定理）。
 - **待办**：
   - 现在 ⑥ 的三处：
-    - T2.7′ 请第二位复核者审查，如果要覆盖 C(2j,j) 一类因子，再核对 s6-t27 提出的 (N2′)；
+    - T2.7′ 已有第二位复核者（s7-t27，2026-10-07，confirmed with minor gaps，适用范围的一句话已改正，见 notes/review/s7-t27-review.md）；仍待人类专家审阅；如果要覆盖支撑伸到 j=0 的 C(2j,j) 一类写法，再核对 s6-t27 提出的 (N2′)；
     - T3.4(4)(5) 请复核者重推误差界与常数项部分的门槛；
     - T4.3(8) 补上 Laguerre 零点定理的标准证明，或给出 Szegő 原书的准确出处。
   - 按 `notes/Lean定义核对清单.md` 逐项核对承重的 Lean 定义（要人来做）。全部打勾之前，论文里只说「证明已机器检查」，不说「陈述已机器检查」。
-  - 论文初稿 `paper/main.tex`：在 Overleaf 等有 TeX 的地方编译一次；处理文中的 TODO（12 处 `\todo`：文献检索补完、4 条文献的页码或卷号、是否收入 T5.1 的完整渐近、T2.6 的补充形状、T1.9/T5.4 的 OEIS 部分收多少、T2.7′ 要第二位复核者、Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址；另有 2 处写在注释里：作者署名、引理 1 的出处）。OEIS 列与行的经验递推已由 `c5b.emp-col`、`c5b.emp-row` 证明，文中已写明。
+  - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 4 处 `\todo`（文献检索补完、Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址）和 2 处注释里的 TODO（作者署名、引理 1 的出处）。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
   - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`）；Google Scholar、Web of Science、MathSciNet、zbMATH 需要你手动查（`notes/新颖性核查_手动检索清单.md`），最该先查的是 Kauers 2007 与 Chyzak–Kauers–Salvy 2009 的「被引用」。
 - 数学上未解的问题与完成度见 `猜想总表.md` 表 B；完整的待办与优先级见 `ROADMAP.md`。
 

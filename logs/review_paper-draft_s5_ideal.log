@@ -1,0 +1,22 @@
+U, total degree:
+ (A,B,D)= (3, 1, 1) kernel dim mod p: 1 predicted: 1
+ (A,B,D)= (3, 1, 0) kernel dim mod p: 0 predicted: 0
+ (A,B,D)= (2, 3, 3) kernel dim mod p: 0 predicted: 0
+ (A,B,D)= (4, 2, 2) kernel dim mod p: 12 predicted: 12
+ (A,B,D)= (5, 1, 2) kernel dim mod p: 9 predicted: 9
+ (A,B,D)= (4, 3, 1) kernel dim mod p: 6 predicted: 6
+ (A,B,D)= (6, 2, 1) kernel dim mod p: 8 predicted: 8
+ (A,B,D)= (3, 2, 3) kernel dim mod p: 12 predicted: 12
+U, separate degrees:
+ (A,B,Dk,Dm)= (4, 2, 1, 2) kernel dim mod p: 16 predicted: 16
+ (A,B,Dk,Dm)= (3, 1, 0, 1) kernel dim mod p: 1 predicted: 1
+ (A,B,Dk,Dm)= (3, 2, 2, 1) kernel dim mod p: 6 predicted: 6
+ (A,B,Dk,Dm)= (4, 1, 1, 0) kernel dim mod p: 0 predicted: 0
+ (A,B,Dk,Dm)= (5, 2, 0, 2) kernel dim mod p: 12 predicted: 12
+N, total degree:
+ (A,B,D)= (3, 2, 1) kernel dim mod p: 1 predicted: 1
+ (A,B,D)= (4, 2, 2) kernel dim mod p: 6 predicted: 6
+ (A,B,D)= (3, 3, 1) kernel dim mod p: 2 predicted: 2
+ (A,B,D)= (4, 3, 2) kernel dim mod p: 12 predicted: 12
+ (A,B,D)= (3, 1, 2) kernel dim mod p: 0 predicted: 0
+ (A,B,D)= (2, 3, 2) kernel dim mod p: 0 predicted: 0

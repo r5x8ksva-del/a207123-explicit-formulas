@@ -1,0 +1,12 @@
+import re
+s=open(r"C:\Users\Michael Song\Desktop\私人办公\A207123-任务C-显式公式与母函数\paper\main.tex",encoding='utf-8').read()
+labels=re.findall(r'\\label\{([^}]*)\}',s)
+refs=re.findall(r'\\(?:ref|eqref)\{([^}]*)\}',s)
+cites=re.findall(r'\\cite(?:\[[^\]]*\])?\{([^}]*)\}',s)
+bibs=set(re.findall(r'\\bibitem\{([^}]*)\}',s))
+print("dup labels:",[l for l in set(labels) if labels.count(l)>1])
+print("undefined refs:",sorted(set(refs)-set(labels)))
+print("unused labels:",sorted(set(labels)-set(refs)))
+cs=set(c.strip() for x in cites for c in x.split(','))
+print("undefined cites:",cs-bibs," uncited bibitems:",bibs-cs)
+print("todo count:", len(re.findall(r'\\todo\{',s)))

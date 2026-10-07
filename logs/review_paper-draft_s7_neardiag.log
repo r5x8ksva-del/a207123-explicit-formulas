@@ -1,0 +1,24 @@
+band recurrence matches N from U (k<=14): True time 0.1s
+polynomiality check at k=4d+3 failures: []
+last Newton coeff = 2(2d-1)!! failures: []
+e_d(2d+1) formula failures: []  e_d(2d) formula failures: []
+Newton coeffs at 2d+2 all positive, failures: []
+d with p_d(2d+1)<0 (d<=101): [69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101]
+d=2 Newton coefficients: [65, 74, 64, 30, 6]
+p_0(k) * 1 = [Fraction(2, 1)]
+p_1(k) * 1 = [Fraction(1, 1), Fraction(-1, 1), Fraction(-4, 1)]
+p_2(k) * 4 = [Fraction(1, 1), Fraction(-10, 1), Fraction(43, 1), Fraction(-98, 1), Fraction(164, 1)]
+p_3(k) * 24 = [Fraction(1, 1), Fraction(-27, 1), Fraction(331, 1), Fraction(-2225, 1), Fraction(8560, 1), Fraction(-17392, 1), Fraction(11088, 1)]
+leading coeff 2/(2^d d!) and r_d=-(4d^2-3d) for d<=15: True
+  d=0 k=1 D=1 p=2 e=-1
+  d=1 k=2 D=1 p=-2 e=3
+  d=1 k=3 D=4 p=2 e=2
+  d=2 k=3 D=1 p=17 e=-16
+  d=2 k=4 D=7 p=19 e=-12
+  d=2 k=5 D=25 p=31 e=-6
+  d=3 k=4 D=1 p=-114 e=115
+  d=3 k=5 D=12 p=-78 e=90
+  d=3 k=6 D=59 p=-1 e=60
+  d=3 k=7 D=199 p=175 e=24
+d<=60 with a negative coefficient of p_d(2d+1+t): [47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+total time 0.4s

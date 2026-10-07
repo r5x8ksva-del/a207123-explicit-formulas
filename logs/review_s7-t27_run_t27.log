@@ -1,0 +1,101 @@
+
+===== E1 C(m,j)C(k,j) =====
+  counting: beta=6 gamma=2 degP=0; J0=18 (J0+1>36/2); first I with unknowns>equations: I=191: 700416 > C(1184,2)=700336; at I-1: 693139 vs 693253
+  Lemma A: window (J,I)=(1,1), deg_k<= 0: system 21 eqs x 8 unknowns, nullity found=1; exact polynomial identity verified; max deg_(m,j) Q_w=4 <= D=8: True
+    a_w(k) (nonzero): (0, 0, 0):[-1]; (0, 1, 0):[1]; (1, 0, 0):[1]; (1, 1, 0):[-1]; (1, 1, 1):[1]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 3211 points: all-window-wd points=1900, (p,w) identity checks=15200, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=100, T*(p)=0 points=1315, denominator cases (1,2,3)=[40000, 2400, 18400]
+  Lemma S: C_alpha nonzero for alpha in [(0,), (1,)]; minimal: [(0,)]; triangular inversion recovers A_nu: True
+    alpha*=(0,): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-1], (0, 1): [1], (1, 0): [1]}
+    (C_alpha* S)(k,m) on Q'=[k>=2, m>=2] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 4 checks, 0 failures
+  Assembly: R=max(J,I)=1, Q_R corner=(1, 1), Q' corner=(2, 2); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=675, trivial(all T~=0)=0, mixed=0
+    outside Q' (k<2 or m<2, k,m<=8): T~-recurrence failures=2, mixed windows=40
+  time 0.4s
+
+===== E1 C(m,j)C(k,j) [constrained C_0=0 => alpha*!=0] =====
+  counting: beta=6 gamma=2 degP=0; J0=18 (J0+1>36/2); first I with unknowns>equations: I=191: 700416 > C(1184,2)=700336; at I-1: 693139 vs 693253
+  Lemma A: window (J,I)=(1,2), deg_k<= 0: system 87 eqs x 18 unknowns, nullity found=2; exact polynomial identity verified; max deg_(m,j) Q_w=7 <= D=14: True
+    a_w(k) (nonzero): (0, 0, 0):[2]; (0, 0, 1):[-2]; (0, 1, 0):[3]; (0, 1, 1):[-3]; (0, 2, 0):[-5]; (0, 2, 1):[5]; (1, 0, 0):[-2]; (1, 0, 1):[2]; (1, 1, 0):[-3]; (1, 1, 1):[1]; (1, 1, 2):[2]; (1, 2, 0):[5]; (1, 2, 1):[-10]; (1, 2, 2):[5]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 3211 points: all-window-wd points=1710, (p,w) identity checks=30780, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=180, T*(p)=0 points=1065, denominator cases (1,2,3)=[81000, 8910, 33210]
+  Lemma S: C_alpha nonzero for alpha in [(1,), (2,)]; minimal: [(1,)]; triangular inversion recovers A_nu: True
+    alpha*=(1,): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-2], (0, 1): [-3], (0, 2): [5], (1, 0): [2], (1, 1): [5]}
+    (C_alpha* S)(k,m) on Q'=[k>=3, m>=4] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 6 checks, 0 failures
+  Assembly: R=max(J,I)=2, Q_R corner=(2, 2), Q' corner=(3, 4); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=675, trivial(all T~=0)=0, mixed=0
+    outside Q' (k<3 or m<4, k,m<=8): T~-recurrence failures=8, mixed windows=109
+  time 1.0s
+
+===== E2 C(k+j,2j)C(m,j) =====
+  counting: beta=8 gamma=2 degP=0; J0=32 (J0+1>64/2); first I with unknowns>equations: I=463: 7104768 > C(3770,2)=7104565; at I-1: 7074177 vs 7074441
+  Lemma A: window (J,I)=(2,1), deg_k<= 0: system 52 eqs x 12 unknowns, nullity found=1; exact polynomial identity verified; max deg_(m,j) Q_w=6 <= D=12: True
+    a_w(k) (nonzero): (0, 0, 0):[-1]; (0, 1, 0):[1]; (1, 0, 0):[2]; (1, 1, 0):[-2]; (1, 1, 1):[1]; (2, 0, 0):[-1]; (2, 1, 0):[1]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 3211 points: all-window-wd points=1920, (p,w) identity checks=23040, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=100, T*(p)=0 points=1365, denominator cases (1,2,3)=[60512, 4156, 27492]
+  Lemma S: C_alpha nonzero for alpha in [(0,), (1,)]; minimal: [(0,)]; triangular inversion recovers A_nu: True
+    alpha*=(0,): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-1], (0, 1): [1], (1, 0): [2], (1, 1): [-1], (2, 0): [-1], (2, 1): [1]}
+    (C_alpha* S)(k,m) on Q'=[k>=6, m>=3] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 4 checks, 0 failures
+  Assembly: R=max(J,I)=2, Q_R corner=(4, 2), Q' corner=(6, 3); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=625, trivial(all T~=0)=50, mixed=0
+    outside Q' (k<6 or m<3, k,m<=8): T~-recurrence failures=4, mixed windows=80
+  time 0.7s
+
+===== E2 C(k+j,2j)C(m,j) [constrained C_0=0 => alpha*!=0] =====
+  counting: beta=8 gamma=2 degP=0; J0=32 (J0+1>64/2); first I with unknowns>equations: I=463: 7104768 > C(3770,2)=7104565; at I-1: 7074177 vs 7074441
+  Lemma A: window (J,I)=(2,2), deg_k<= 0: system 207 eqs x 27 unknowns, nullity found=2; exact polynomial identity verified; max deg_(m,j) Q_w=10 <= D=20: True
+    a_w(k) (nonzero): (0, 0, 0):[7]; (0, 0, 1):[-7]; (0, 1, 0):[-2]; (0, 1, 1):[2]; (0, 2, 0):[-5]; (0, 2, 1):[5]; (1, 0, 0):[-14]; (1, 0, 1):[14]; (1, 1, 0):[4]; (1, 1, 1):[-11]; (1, 1, 2):[7]; (1, 2, 0):[10]; (1, 2, 1):[-15]; (1, 2, 2):[5]; (2, 0, 0):[7]; (2, 0, 1):[-7]; (2, 1, 0):[-2]; (2, 1, 1):[2]; (2, 2, 0):[-5]; (2, 2, 1):[5]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 3211 points: all-window-wd points=1629, (p,w) identity checks=43983, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=171, T*(p)=0 points=1038, denominator cases (1,2,3)=[116388, 14130, 45414]
+  Lemma S: C_alpha nonzero for alpha in [(1,), (2,)]; minimal: [(1,)]; triangular inversion recovers A_nu: True
+    alpha*=(1,): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-7], (0, 1): [2], (0, 2): [5], (1, 0): [14], (1, 1): [3], (1, 2): [-5], (2, 0): [-7], (2, 1): [2], (2, 2): [5]}
+    (C_alpha* S)(k,m) on Q'=[k>=6, m>=4] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 6 checks, 0 failures
+  Assembly: R=max(J,I)=2, Q_R corner=(4, 2), Q' corner=(6, 4); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=600, trivial(all T~=0)=75, mixed=0
+    outside Q' (k<6 or m<4, k,m<=8): T~-recurrence failures=16, mixed windows=184
+  time 1.5s
+
+===== E5 (k+2j+1)(-1)^k 3^m 2^j C(m,j)C(k,j) =====
+  counting: beta=6 gamma=2 degP=1; J0=18 (J0+1>36/2); first I with unknowns>equations: I=197: 744876 > C(1221,2)=744810; at I-1: 737371 vs 737505
+  Lemma A: window (J,I)=(2,1), deg_k<= 1: system 69 eqs x 24 unknowns, nullity found=1; exact polynomial identity verified; max deg_(m,j) Q_w=6 <= D=11: True
+    a_w(k) (nonzero): (0, 0, 0):[-2, 3]; (0, 1, 0):[6, -9]; (1, 0, 0):[-3, 5]; (1, 1, 0):[9, -15]; (1, 1, 1):[6, 18]; (2, 0, 0):[-2, 2]; (2, 1, 0):[6, -6]; (2, 1, 1):[-12, 12]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 3211 points: all-window-wd points=1710, (p,w) identity checks=20520, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=90, T*(p)=0 points=1155, denominator cases (1,2,3)=[54000, 3780, 24300]
+  Lemma S: C_alpha nonzero for alpha in [(0,), (1,)]; minimal: [(0,)]; triangular inversion recovers A_nu: True
+    alpha*=(0,): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-2, 3], (0, 1): [6, -9], (1, 0): [-3, 5], (1, 1): [15, 3], (2, 0): [-2, 2], (2, 1): [-6, 6]}
+    (C_alpha* S)(k,m) on Q'=[k>=4, m>=3] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 4 checks, 0 failures
+  Assembly: R=max(J,I)=2, Q_R corner=(2, 2), Q' corner=(4, 3); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=675, trivial(all T~=0)=0, mixed=0
+    outside Q' (k<4 or m<3, k,m<=8): T~-recurrence failures=2, mixed windows=76
+  time 0.6s
+
+===== E6 C(k,j1)C(j1,j2)C(m,j2) [r=2] =====
+  counting: beta=8 gamma=2 degP=0; J0=85 (J0+1>512/6); first I with unknowns>equations: I=7892: 42288741382302 > C(63309,3)=42288719075134; at I-1: 42272670160768 vs 42272689489450
+  Lemma A: window (J,I)=(1,1), deg_k<= 0: system 66 eqs x 16 unknowns, nullity found=1; exact polynomial identity verified; max deg_(m,j) Q_w=5 <= D=10: True
+    a_w(k) (nonzero): (0, 0, 0, 0):[-1]; (0, 1, 0, 0):[1]; (1, 0, 0, 0):[1]; (1, 0, 1, 0):[1]; (1, 1, 0, 0):[-1]; (1, 1, 1, 0):[-1]; (1, 1, 1, 1):[1]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 9216 points: all-window-wd points=5184, (p,w) identity checks=82944, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=325, T*(p)=0 points=4380, denominator cases (1,2,3)=[265968, 27216, 121536]
+  Lemma S: C_alpha nonzero for alpha in [(0, 0), (0, 1), (1, 0), (1, 1)]; minimal: [(0, 0)]; triangular inversion recovers A_nu: True
+    alpha*=(0, 0): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-1], (0, 1): [1], (1, 0): [2], (1, 1): [-1]}
+    (C_alpha* S)(k,m) on Q'=[k>=2, m>=2] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 8 checks, 0 failures
+  Assembly: R=max(J,I)=1, Q_R corner=(1, 1), Q' corner=(2, 2); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=5625, trivial(all T~=0)=0, mixed=0
+    outside Q' (k<2 or m<2, k,m<=8): T~-recurrence failures=2, mixed windows=154
+  time 2.8s
+
+===== E6 C(k,j1)C(j1,j2)C(m,j2) [r=2] [constrained C_0=0] =====
+  counting: beta=8 gamma=2 degP=0; J0=85 (J0+1>512/6); first I with unknowns>equations: I=7892: 42288741382302 > C(63309,3)=42288719075134; at I-1: 42272670160768 vs 42272689489450
+  Lemma A: window (J,I)=(1,2), deg_k<= 0: system 408 eqs x 54 unknowns, nullity found=6; exact polynomial identity verified; max deg_(m,j) Q_w=9 <= D=18: True
+    a_w(k) (nonzero): (0, 0, 0, 0):[5]; (0, 0, 0, 1):[-2]; (0, 0, 1, 0):[-2]; (0, 0, 1, 1):[-1]; (0, 1, 0, 0):[7]; (0, 1, 0, 1):[-1]; (0, 1, 1, 0):[-3]; (0, 1, 1, 1):[-3]; (0, 2, 0, 0):[-12]; (0, 2, 0, 1):[3]; (0, 2, 1, 0):[5]; (0, 2, 1, 1):[4]; (1, 0, 0, 0):[-5]; (1, 0, 0, 1):[2]; (1, 0, 1, 0):[-3]; (1, 0, 1, 1):[3]; (1, 0, 2, 0):[2]; (1, 0, 2, 1):[1]; (1, 1, 0, 0):[-7]; (1, 1, 0, 1):[1]; (1, 1, 1, 0):[-4]; (1, 1, 1, 1):[-1]; (1, 1, 1, 2):[2]; (1, 1, 2, 0):[3]; (1, 1, 2, 1):[5]; (1, 1, 2, 2):[1]; (1, 2, 0, 0):[12]; (1, 2, 0, 1):[-3]; (1, 2, 1, 0):[7]; (1, 2, 1, 1):[-19]; (1, 2, 1, 2):[3]; (1, 2, 2, 0):[-5]; (1, 2, 2, 1):[1]; (1, 2, 2, 2):[4]
+    expanded Q_w == product-form Q_w at 30 random points: True
+  Lemma F on 9216 points: all-window-wd points=4320, (p,w) identity checks=233280, identity failures=0, recurrence failures=0, boundary points (T(p)=0, window nonzero)=620, T*(p)=0 points=3190, denominator cases (1,2,3)=[747720, 141660, 277020]
+  Lemma S: C_alpha nonzero for alpha in [(0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]; minimal: [(0, 1), (1, 0)]; triangular inversion recovers A_nu: True
+    alpha*=(0, 1): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-3], (0, 1): [-4], (0, 2): [7], (1, 0): [6], (1, 1): [11], (1, 2): [-7]}
+    (C_alpha* S)(k,m) on Q'=[k>=3, m>=4] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 18 checks, 0 failures
+    alpha*=(1, 0): C_alpha* = {(j,mu): c(k)} = {(0, 0): [-3], (0, 1): [-6], (0, 2): [9], (1, 0): [6], (1, 1): [15], (1, 2): [-9]}
+    (C_alpha* S)(k,m) on Q'=[k>=3, m>=4] (8x8 points): nonzero at 0 points
+    summation-by-parts moment identities: 18 checks, 0 failures
+  Assembly: R=max(J,I)=2, Q_R corner=(2, 2), Q' corner=(3, 4); on 5x5 (k,m) of Q' x j-box: T~-recurrence failures=0; windows all-wd=5625, trivial(all T~=0)=0, mixed=0
+    outside Q' (k<3 or m<4, k,m<=8): T~-recurrence failures=16, mixed windows=590
+  time 10.5s

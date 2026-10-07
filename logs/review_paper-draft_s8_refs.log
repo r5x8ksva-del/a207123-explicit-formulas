@@ -1,0 +1,5 @@
+dup labels: []
+undefined refs: []
+unused labels: ['def:blocks', 'def:good', 'eq:reduction', 'ex:blocks', 'ex:m1', 'ex:matrix', 'sec:intro', 'thmA', 'thmB', 'thmD', 'thmE']
+undefined cites: set()  uncited bibitems: set()
+todo count: 4

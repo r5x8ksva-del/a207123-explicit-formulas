@@ -1,0 +1,20 @@
+G_m = W_m/P_m verified for m<=7, k<=60; deg W=3m, deg P=3m+1
+W_4(1/2) = 645/512
+gcd(W_m,P_m)=1 for m<=12
+rho_1..4: [np.float64(1.4655712318767682), np.float64(1.6956207695598629), np.float64(1.8637065278191893), np.float64(1.9999999999999987)]
+|sigma|^2 = rho(rho-1) < rho_{m-1}^2 ok for m<=10
+propagation rule max rel err: 1.338840143960734e-10
+exponential-polynomial representation ok for m<=5, k<=30, all alpha nonzero
+m 1 c_m expr1 2.209608 expr2 2.209608 alpha 2.209608
+m 2 c_m expr1 7.841119 expr2 7.841119 alpha 7.841119
+m 3 c_m expr1 28.976857 expr2 28.976857 alpha 28.976857
+m 4 c_m expr1 107.500000 expr2 107.500000 alpha 107.500000
+m 5 c_m expr1 397.012371 expr2 397.012371 alpha 397.012371
+m 6 c_m expr1 1456.316829 expr2 1456.316829 alpha 1456.316829
+c_1 closed form: 2.2096081317784813
+c_4 exact: 215/2
+m 1 tau=0.82603 (U - two terms)/tau^k at k=100,150,200: ['-1.92e+11', '-8.18e+23', '-3.08e+36']
+m 2 tau=1.08605 (U - two terms)/tau^k at k=100,150,200: ['-7.82e+06', '-5.6e+16', '-3.55e+26']
+m 3 tau=1.46557 (U - two terms)/tau^k at k=100,150,200: ['10.9', '-602', '-2.4e+08']
+m 4 tau=1.69562 (U - two terms)/tau^k at k=100,150,200: ['93.2', '93.7', '2.84e+03']
+m 5 tau=1.86371 (U - two terms)/tau^k at k=100,150,200: ['607', '607', '603']

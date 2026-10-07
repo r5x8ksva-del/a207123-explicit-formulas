@@ -1,0 +1,10 @@
+Thm S residue formula max rel err (m<=6): 1.4440263208530986e-11
+Nm(xi)= (1.0000000000000013-2.7023182661988356e-18j) Nm(1+xi)= (3.0000000000000027+8.67251949623321e-17j)
+Thm Spart residue formula max rel err (m<=6): 2.3500480412980363e-11
+Nm(eta) for b_2: (0.4999999999999999+1.6209097569676215e-17j)  Nm(4-2eta): (68+1.5626285480153579e-15j)
+W~_2(eta)-1 vs eta^5(4-2eta): 4.577566798522237e-16
+m=1 U^up formula: True
+xi= 0.6823278038280195  b_1(0.68)= 0.005567999999999906  v0=xi^-3= 3.147899035704785
+shape (1, 2) v0=3.14790 #real fibre pts 1 of 3 fibre pts that are roots of b_w (w<=50): [(np.complex128(0.682328+0j), 1)] min|v'|=2.06 min|r|,min|1-r|=0.682,0.318
+shape (2, 3) v0=4.61347 #real fibre pts 1 of 5 fibre pts that are roots of b_w (w<=50): [(np.complex128(0.682328+0j), 1)] min|v'|=4.41 min|r|,min|1-r|=0.682,0.318
+shape (3, 0) v0=0.31767 #real fibre pts 1 of 3 fibre pts that are roots of b_w (w<=50): [(np.complex128(0.682328+0j), 1)] min|v'|=1.4 min|r|,min|1-r|=0.682,0.318

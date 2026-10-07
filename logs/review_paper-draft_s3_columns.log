@@ -1,0 +1,17 @@
+k 1 deg p 2 deg q 0 rep ok True deg numerator 0 (<4k=4) num(1) 1 num(-1) 1
+k 2 deg p 4 deg q 2 rep ok True deg numerator 4 (<4k=8) num(1) 12 num(-1) 4
+k 3 deg p 6 deg q 4 rep ok True deg numerator 8 (<4k=12) num(1) 40 num(-1) 8
+k 4 deg p 8 deg q 6 rep ok True deg numerator 10 (<4k=16) num(1) 140 num(-1) 20
+k 5 deg p 10 deg q 8 rep ok True deg numerator 14 (<4k=20) num(1) 504 num(-1) 56
+k 6 deg p 12 deg q 10 rep ok True deg numerator 18 (<4k=24) num(1) 1848 num(-1) 168
+k 7 deg p 14 deg q 12 rep ok True deg numerator 20 (<4k=28) num(1) 6864 num(-1) 528
+A207118 order 12 char poly == (y-1)^{2k+1}(y+1)^{2k-1}: True
+   b-file agrees with a_k(n) for n<= 210 True
+A207119 order 16 char poly == (y-1)^{2k+1}(y+1)^{2k-1}: True
+   b-file agrees with a_k(n) for n<= 210 True
+A207120 order 20 char poly == (y-1)^{2k+1}(y+1)^{2k-1}: True
+   b-file agrees with a_k(n) for n<= 210 True
+A207121 order 24 char poly == (y-1)^{2k+1}(y+1)^{2k-1}: True
+   b-file agrees with a_k(n) for n<= 210 True
+A207122 order 28 char poly == (y-1)^{2k+1}(y+1)^{2k-1}: True
+   b-file agrees with a_k(n) for n<= 210 True

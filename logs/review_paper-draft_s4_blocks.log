@@ -1,0 +1,13 @@
+Unique factorization (k<=8,m<=3): True
+Example factorization: [('S', 3, None), ('T', 3, 1), ('S', 2, None), ('T', 2, 0), ('S', 1, None), ('E', 1, 0)]
+Thm explicit (first formula) k<=14,m<=7: True
+Thm explicit (ascent refinement) k<=10,m<=4: True
+Lemma coef series identity (m<=4,n<=15): True
+H(m,s,0)=H(m,s,1)=S(m+s,m): True
+r-Stirling identification (m<=4,s<=3): True
+Prop bijection: forward injective, inverse correct, surjective (k<=10,m<=3); tested 14259 True
+Example m=1, U_5(1): 12 2
+F3: True
+F4: True
+1F1 identity at x= 1/3 True
+1F1 identity at x= 2/7 True

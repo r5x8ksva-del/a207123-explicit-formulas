@@ -1,0 +1,5 @@
+NEG1 corrupted coefficient -> polynomial identity holds? False (expect False)
+NEG2 corrupted coefficient -> Lemma F recurrence failures: 189 (expect >0)
+NEG3 anchor d_max+1 (above d_max) -> identity mismatches: 0 (expect 0: any anchor >= d_max is valid)
+NEG3b anchor d_max-1 (below d_max) -> identity mismatches: 506 of 800 (expect >0)
+NEG4 non-minimal alpha=(1,): C_alpha S nonzero at 36/36 points (expect >0)
