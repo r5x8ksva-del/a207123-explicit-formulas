@@ -379,6 +379,25 @@ def run_checks(tex):
     check('P14 c_m, rho_m: two-term asymptotics at k=600 (m<=4), c_4=215/2, c_1=(10+15rho+17rho^2)/31', ok,
           'c1=%s c2=%s c3=%s' % (str(c_const(1))[:12], str(c_const(2))[:12], str(c_const(3))[:12]))
 
+    # --- Remark rem:asym, second paragraph: kappa_m and the relative error of the leading term (numerical observations)
+    kap = {mm: c_const(mm - 1) * rho(mm - 1) ** 3 / c_const(mm) for mm in range(1, 25)}
+    ok = all(kap[mm + 1] > kap[mm] for mm in range(1, 24))
+    for mm, s in {1: '0.453', 4: '1.745', 24: '9.869'}.items():
+        printed = ('\\kappa_{%d}\\approx%s' if mm >= 10 else '\\kappa_%d\\approx%s') % (mm, s)
+        ok &= ('%.3f' % kap[mm]) == s and printed in tex
+    rel = {}
+    for mm in (2, 24):
+        col = core.U_fast_column(mm, 10 * mm)
+        r, c = rho(mm), c_const(mm)
+        for kk in (3 * mm, 10 * mm):
+            rel[(mm, kk)] = Decimal(col[kk]) / (c * r ** kk) - 1
+    ok &= ('%.2f' % rel[(2, 6)]) == '-0.36' and ('%.3f' % rel[(24, 72)]) == '-0.996'
+    ok &= ('%.2f' % rel[(2, 20)]) == '-0.05' and ('%.2f' % rel[(24, 240)]) == '-0.41'
+    ok &= all(s in tex for s in ('$-0.36$', '$-0.996$', '$-0.05$', '$-0.41$', '$1\\le m\\le24$'))
+    check('P24 kappa_m increasing for m<=24; kappa_1, kappa_4, kappa_24 and the relative errors at k=3m, 10m (m=2, 24) as printed', ok,
+          'kappa=%.4f,%.4f,%.4f rel=%.4f,%.4f,%.4f,%.4f' % (kap[1], kap[4], kap[24], rel[(2, 6)], rel[(24, 72)],
+                                                           rel[(2, 20)], rel[(24, 240)]))
+
     # --- norms used in Section 6
     f = lambda X: X ** 3 + X - 1                                 # monic min. poly of xi (root of b_1)
     g = lambda X: X ** 3 + Fraction(1, 2) * X - Fraction(1, 2)   # monic min. poly of eta (root of b_2)

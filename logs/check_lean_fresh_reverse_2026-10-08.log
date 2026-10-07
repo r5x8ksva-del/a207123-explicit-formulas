@@ -1,0 +1,158 @@
+# check_lean_fresh.py 反向测试（2026-10-08 本地）：在 scratchpad 副本里做改动，保留原文件的修改时间（cp -p）
+# r0 原样复制；r1 touch OreRel.lean 与 Checks.lean；r2 把 Basic.olean 的时间改到 2026-10-06 17:50:00 UTC；r3 在公理日志第一行插入 sorryAx
+
+## r0
+PASS A207123                    source 2026-10-06 22:28:34 < olean 2026-10-06 22:29:03; 27 imports older
+PASS A207123.Ascent             source 2026-10-04 23:08:53 < olean 2026-10-06 17:37:16; 1 imports older
+PASS A207123.Basic              source 2026-10-04 22:32:49 < olean 2026-10-06 17:33:57; 0 imports older
+PASS A207123.Binomial           source 2026-10-04 23:17:38 < olean 2026-10-06 17:35:48; 1 imports older
+PASS A207123.Coeffs             source 2026-10-05 04:09:35 < olean 2026-10-06 17:45:30; 2 imports older
+PASS A207123.DFinite            source 2026-10-05 00:12:32 < olean 2026-10-06 17:38:30; 1 imports older
+PASS A207123.DFiniteN           source 2026-10-05 01:59:02 < olean 2026-10-06 17:41:17; 2 imports older
+PASS A207123.Formula            source 2026-10-04 21:59:59 < olean 2026-10-06 17:35:16; 1 imports older
+PASS A207123.Gosper             source 2026-10-05 02:58:55 < olean 2026-10-06 17:42:59; 1 imports older
+PASS A207123.Growth             source 2026-10-05 03:07:15 < olean 2026-10-06 17:43:30; 1 imports older
+PASS A207123.HGen               source 2026-10-05 04:48:35 < olean 2026-10-06 17:45:56; 2 imports older
+PASS A207123.HNum               source 2026-10-05 02:05:17 < olean 2026-10-06 17:40:46; 2 imports older
+PASS A207123.HStruct            source 2026-10-06 16:27:17 < olean 2026-10-06 17:47:34; 2 imports older
+PASS A207123.Multichain         source 2026-10-04 23:17:38 < olean 2026-10-06 17:36:15; 1 imports older
+PASS A207123.NPDE               source 2026-10-05 04:04:30 < olean 2026-10-06 17:45:00; 2 imports older
+PASS A207123.NearDiag           source 2026-10-05 15:56:08 < olean 2026-10-06 17:47:02; 2 imports older
+PASS A207123.NoKOnlyN           source 2026-10-05 01:41:50 < olean 2026-10-06 17:41:47; 1 imports older
+PASS A207123.NonDFinite         source 2026-10-05 03:01:50 < olean 2026-10-06 17:37:52; 1 imports older
+PASS A207123.NotStirlingLike    source 2026-10-06 22:25:14 < olean 2026-10-06 22:25:48; 1 imports older
+PASS A207123.NumStruct          source 2026-10-05 15:52:26 < olean 2026-10-06 17:46:30; 1 imports older
+PASS A207123.OreDim             source 2026-10-05 02:39:42 < olean 2026-10-06 17:42:21; 1 imports older
+PASS A207123.OreRel             source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:03; 1 imports older
+PASS A207123.OreRelN            source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:40; 2 imports older
+PASS A207123.Parity             source 2026-10-05 03:58:57 < olean 2026-10-06 17:44:30; 2 imports older
+PASS A207123.Poly               source 2026-10-05 01:55:01 < olean 2026-10-06 17:40:10; 2 imports older
+PASS A207123.Recurrence         source 2026-10-04 23:01:50 < olean 2026-10-06 17:36:48; 1 imports older
+PASS A207123.Reduction          source 2026-10-04 19:44:27 < olean 2026-10-06 17:34:42; 1 imports older
+PASS A207123.SmallK             source 2026-10-05 14:33:41 < olean 2026-10-06 17:43:59; 3 imports older
+PASS Axioms.lean                last run 2026-10-06 22:29:05..2026-10-06 22:29:27 exit 0; source 2026-10-06 22:28:33, newest olean 2026-10-06 22:29:03
+PASS Checks.lean                last run 2026-10-06 22:33:32..2026-10-06 22:33:52 exit 0; source 2026-10-04 23:19:21, newest olean 2026-10-06 22:29:03
+PASS lean_axioms_2026-10-07.log written 2026-10-06 22:29:27, during or just after that run
+PASS Axioms.lean                256 #print axioms lines, 256 answers, same names in the same order
+PASS                            axioms used beyond propext, Classical.choice, Quot.sound: none
+PASS                            scan of all declarations: 出现过的公理：[Quot.sound, Classical.choice, propext]；依赖其他公理的声明：0 个
+SKIP git: C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\9860939b-673a-4a78-88cf-8cb591ba6591\scratchpad\fresh_rev\r0\lean is not in a git work tree
+sha256 of the sources:
+34 checks: 34 PASS, 0 FAIL
+
+## r1
+PASS A207123                    source 2026-10-06 22:28:34 < olean 2026-10-06 22:29:03; 27 imports older
+PASS A207123.Ascent             source 2026-10-04 23:08:53 < olean 2026-10-06 17:37:16; 1 imports older
+PASS A207123.Basic              source 2026-10-04 22:32:49 < olean 2026-10-06 17:33:57; 0 imports older
+PASS A207123.Binomial           source 2026-10-04 23:17:38 < olean 2026-10-06 17:35:48; 1 imports older
+PASS A207123.Coeffs             source 2026-10-05 04:09:35 < olean 2026-10-06 17:45:30; 2 imports older
+PASS A207123.DFinite            source 2026-10-05 00:12:32 < olean 2026-10-06 17:38:30; 1 imports older
+PASS A207123.DFiniteN           source 2026-10-05 01:59:02 < olean 2026-10-06 17:41:17; 2 imports older
+PASS A207123.Formula            source 2026-10-04 21:59:59 < olean 2026-10-06 17:35:16; 1 imports older
+PASS A207123.Gosper             source 2026-10-05 02:58:55 < olean 2026-10-06 17:42:59; 1 imports older
+PASS A207123.Growth             source 2026-10-05 03:07:15 < olean 2026-10-06 17:43:30; 1 imports older
+PASS A207123.HGen               source 2026-10-05 04:48:35 < olean 2026-10-06 17:45:56; 2 imports older
+PASS A207123.HNum               source 2026-10-05 02:05:17 < olean 2026-10-06 17:40:46; 2 imports older
+PASS A207123.HStruct            source 2026-10-06 16:27:17 < olean 2026-10-06 17:47:34; 2 imports older
+PASS A207123.Multichain         source 2026-10-04 23:17:38 < olean 2026-10-06 17:36:15; 1 imports older
+PASS A207123.NPDE               source 2026-10-05 04:04:30 < olean 2026-10-06 17:45:00; 2 imports older
+PASS A207123.NearDiag           source 2026-10-05 15:56:08 < olean 2026-10-06 17:47:02; 2 imports older
+PASS A207123.NoKOnlyN           source 2026-10-05 01:41:50 < olean 2026-10-06 17:41:47; 1 imports older
+PASS A207123.NonDFinite         source 2026-10-05 03:01:50 < olean 2026-10-06 17:37:52; 1 imports older
+PASS A207123.NotStirlingLike    source 2026-10-06 22:25:14 < olean 2026-10-06 22:25:48; 1 imports older
+PASS A207123.NumStruct          source 2026-10-05 15:52:26 < olean 2026-10-06 17:46:30; 1 imports older
+PASS A207123.OreDim             source 2026-10-05 02:39:42 < olean 2026-10-06 17:42:21; 1 imports older
+FAIL A207123.OreRel             source 2026-10-07 20:12:31 < olean 2026-10-06 17:39:03; 1 imports older
+PASS A207123.OreRelN            source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:40; 2 imports older
+PASS A207123.Parity             source 2026-10-05 03:58:57 < olean 2026-10-06 17:44:30; 2 imports older
+PASS A207123.Poly               source 2026-10-05 01:55:01 < olean 2026-10-06 17:40:10; 2 imports older
+PASS A207123.Recurrence         source 2026-10-04 23:01:50 < olean 2026-10-06 17:36:48; 1 imports older
+PASS A207123.Reduction          source 2026-10-04 19:44:27 < olean 2026-10-06 17:34:42; 1 imports older
+PASS A207123.SmallK             source 2026-10-05 14:33:41 < olean 2026-10-06 17:43:59; 3 imports older
+PASS Axioms.lean                last run 2026-10-06 22:29:05..2026-10-06 22:29:27 exit 0; source 2026-10-06 22:28:33, newest olean 2026-10-06 22:29:03
+FAIL Checks.lean                last run 2026-10-06 22:33:32..2026-10-06 22:33:52 exit 0; source 2026-10-07 20:12:31, newest olean 2026-10-06 22:29:03
+PASS lean_axioms_2026-10-07.log written 2026-10-06 22:29:27, during or just after that run
+PASS Axioms.lean                256 #print axioms lines, 256 answers, same names in the same order
+PASS                            axioms used beyond propext, Classical.choice, Quot.sound: none
+PASS                            scan of all declarations: 出现过的公理：[Quot.sound, Classical.choice, propext]；依赖其他公理的声明：0 个
+SKIP git: C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\9860939b-673a-4a78-88cf-8cb591ba6591\scratchpad\fresh_rev\r1\lean is not in a git work tree
+sha256 of the sources:
+34 checks: 32 PASS, 2 FAIL
+
+## r2
+PASS A207123                    source 2026-10-06 22:28:34 < olean 2026-10-06 22:29:03; 27 imports older
+PASS A207123.Ascent             source 2026-10-04 23:08:53 < olean 2026-10-06 17:37:16; 1 imports older
+PASS A207123.Basic              source 2026-10-04 22:32:49 < olean 2026-10-06 17:50:00; 0 imports older
+FAIL A207123.Binomial           source 2026-10-04 23:17:38 < olean 2026-10-06 17:35:48; 0 imports older  imports not older: A207123.Basic
+PASS A207123.Coeffs             source 2026-10-05 04:09:35 < olean 2026-10-06 17:45:30; 2 imports older
+PASS A207123.DFinite            source 2026-10-05 00:12:32 < olean 2026-10-06 17:38:30; 1 imports older
+PASS A207123.DFiniteN           source 2026-10-05 01:59:02 < olean 2026-10-06 17:41:17; 2 imports older
+FAIL A207123.Formula            source 2026-10-04 21:59:59 < olean 2026-10-06 17:35:16; 0 imports older  imports not older: A207123.Basic
+PASS A207123.Gosper             source 2026-10-05 02:58:55 < olean 2026-10-06 17:42:59; 1 imports older
+PASS A207123.Growth             source 2026-10-05 03:07:15 < olean 2026-10-06 17:43:30; 1 imports older
+PASS A207123.HGen               source 2026-10-05 04:48:35 < olean 2026-10-06 17:45:56; 2 imports older
+PASS A207123.HNum               source 2026-10-05 02:05:17 < olean 2026-10-06 17:40:46; 2 imports older
+PASS A207123.HStruct            source 2026-10-06 16:27:17 < olean 2026-10-06 17:47:34; 2 imports older
+PASS A207123.Multichain         source 2026-10-04 23:17:38 < olean 2026-10-06 17:36:15; 1 imports older
+PASS A207123.NPDE               source 2026-10-05 04:04:30 < olean 2026-10-06 17:45:00; 2 imports older
+PASS A207123.NearDiag           source 2026-10-05 15:56:08 < olean 2026-10-06 17:47:02; 2 imports older
+PASS A207123.NoKOnlyN           source 2026-10-05 01:41:50 < olean 2026-10-06 17:41:47; 1 imports older
+PASS A207123.NonDFinite         source 2026-10-05 03:01:50 < olean 2026-10-06 17:37:52; 1 imports older
+PASS A207123.NotStirlingLike    source 2026-10-06 22:25:14 < olean 2026-10-06 22:25:48; 1 imports older
+PASS A207123.NumStruct          source 2026-10-05 15:52:26 < olean 2026-10-06 17:46:30; 1 imports older
+PASS A207123.OreDim             source 2026-10-05 02:39:42 < olean 2026-10-06 17:42:21; 1 imports older
+PASS A207123.OreRel             source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:03; 1 imports older
+PASS A207123.OreRelN            source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:40; 2 imports older
+PASS A207123.Parity             source 2026-10-05 03:58:57 < olean 2026-10-06 17:44:30; 2 imports older
+PASS A207123.Poly               source 2026-10-05 01:55:01 < olean 2026-10-06 17:40:10; 2 imports older
+FAIL A207123.Recurrence         source 2026-10-04 23:01:50 < olean 2026-10-06 17:36:48; 0 imports older  imports not older: A207123.Basic
+FAIL A207123.Reduction          source 2026-10-04 19:44:27 < olean 2026-10-06 17:34:42; 0 imports older  imports not older: A207123.Basic
+PASS A207123.SmallK             source 2026-10-05 14:33:41 < olean 2026-10-06 17:43:59; 3 imports older
+PASS Axioms.lean                last run 2026-10-06 22:29:05..2026-10-06 22:29:27 exit 0; source 2026-10-06 22:28:33, newest olean 2026-10-06 22:29:03
+PASS Checks.lean                last run 2026-10-06 22:33:32..2026-10-06 22:33:52 exit 0; source 2026-10-04 23:19:21, newest olean 2026-10-06 22:29:03
+PASS lean_axioms_2026-10-07.log written 2026-10-06 22:29:27, during or just after that run
+PASS Axioms.lean                256 #print axioms lines, 256 answers, same names in the same order
+PASS                            axioms used beyond propext, Classical.choice, Quot.sound: none
+PASS                            scan of all declarations: 出现过的公理：[Quot.sound, Classical.choice, propext]；依赖其他公理的声明：0 个
+SKIP git: C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\9860939b-673a-4a78-88cf-8cb591ba6591\scratchpad\fresh_rev\r2\lean is not in a git work tree
+sha256 of the sources:
+34 checks: 30 PASS, 4 FAIL
+
+## r3
+PASS A207123                    source 2026-10-06 22:28:34 < olean 2026-10-06 22:29:03; 27 imports older
+PASS A207123.Ascent             source 2026-10-04 23:08:53 < olean 2026-10-06 17:37:16; 1 imports older
+PASS A207123.Basic              source 2026-10-04 22:32:49 < olean 2026-10-06 17:33:57; 0 imports older
+PASS A207123.Binomial           source 2026-10-04 23:17:38 < olean 2026-10-06 17:35:48; 1 imports older
+PASS A207123.Coeffs             source 2026-10-05 04:09:35 < olean 2026-10-06 17:45:30; 2 imports older
+PASS A207123.DFinite            source 2026-10-05 00:12:32 < olean 2026-10-06 17:38:30; 1 imports older
+PASS A207123.DFiniteN           source 2026-10-05 01:59:02 < olean 2026-10-06 17:41:17; 2 imports older
+PASS A207123.Formula            source 2026-10-04 21:59:59 < olean 2026-10-06 17:35:16; 1 imports older
+PASS A207123.Gosper             source 2026-10-05 02:58:55 < olean 2026-10-06 17:42:59; 1 imports older
+PASS A207123.Growth             source 2026-10-05 03:07:15 < olean 2026-10-06 17:43:30; 1 imports older
+PASS A207123.HGen               source 2026-10-05 04:48:35 < olean 2026-10-06 17:45:56; 2 imports older
+PASS A207123.HNum               source 2026-10-05 02:05:17 < olean 2026-10-06 17:40:46; 2 imports older
+PASS A207123.HStruct            source 2026-10-06 16:27:17 < olean 2026-10-06 17:47:34; 2 imports older
+PASS A207123.Multichain         source 2026-10-04 23:17:38 < olean 2026-10-06 17:36:15; 1 imports older
+PASS A207123.NPDE               source 2026-10-05 04:04:30 < olean 2026-10-06 17:45:00; 2 imports older
+PASS A207123.NearDiag           source 2026-10-05 15:56:08 < olean 2026-10-06 17:47:02; 2 imports older
+PASS A207123.NoKOnlyN           source 2026-10-05 01:41:50 < olean 2026-10-06 17:41:47; 1 imports older
+PASS A207123.NonDFinite         source 2026-10-05 03:01:50 < olean 2026-10-06 17:37:52; 1 imports older
+PASS A207123.NotStirlingLike    source 2026-10-06 22:25:14 < olean 2026-10-06 22:25:48; 1 imports older
+PASS A207123.NumStruct          source 2026-10-05 15:52:26 < olean 2026-10-06 17:46:30; 1 imports older
+PASS A207123.OreDim             source 2026-10-05 02:39:42 < olean 2026-10-06 17:42:21; 1 imports older
+PASS A207123.OreRel             source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:03; 1 imports older
+PASS A207123.OreRelN            source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:40; 2 imports older
+PASS A207123.Parity             source 2026-10-05 03:58:57 < olean 2026-10-06 17:44:30; 2 imports older
+PASS A207123.Poly               source 2026-10-05 01:55:01 < olean 2026-10-06 17:40:10; 2 imports older
+PASS A207123.Recurrence         source 2026-10-04 23:01:50 < olean 2026-10-06 17:36:48; 1 imports older
+PASS A207123.Reduction          source 2026-10-04 19:44:27 < olean 2026-10-06 17:34:42; 1 imports older
+PASS A207123.SmallK             source 2026-10-05 14:33:41 < olean 2026-10-06 17:43:59; 3 imports older
+PASS Axioms.lean                last run 2026-10-06 22:29:05..2026-10-06 22:29:27 exit 0; source 2026-10-06 22:28:33, newest olean 2026-10-06 22:29:03
+PASS Checks.lean                last run 2026-10-06 22:33:32..2026-10-06 22:33:52 exit 0; source 2026-10-04 23:19:21, newest olean 2026-10-06 22:29:03
+PASS lean_axioms_2026-10-07.log written 2026-10-06 22:29:27, during or just after that run
+PASS Axioms.lean                256 #print axioms lines, 256 answers, same names in the same order
+FAIL                            axioms used beyond propext, Classical.choice, Quot.sound: sorryAx
+PASS                            scan of all declarations: 出现过的公理：[Quot.sound, Classical.choice, propext]；依赖其他公理的声明：0 个
+SKIP git: C:\Users\MICHAE~1\AppData\Local\Temp\claude\C--Users-Michael-Song-Desktop-----\9860939b-673a-4a78-88cf-8cb591ba6591\scratchpad\fresh_rev\r3\lean is not in a git work tree
+sha256 of the sources:
+34 checks: 33 PASS, 1 FAIL

@@ -3,7 +3,7 @@
 % Every number printed in this file is recomputed from the definitions by ../code/main_extra/check_paper_numbers.py.
 % Not in the report: Corollary cor:saturated (operators with rational coefficients; the ideal O*L_1 is saturated), added in this draft.
 % Structural check without TeX: ../code/main_extra/check_tex.py. Compiles with Tectonic 0.17 (XeTeX) and is meant to compile with pdflatex.
-% Lines marked TODO need a decision or a check by the human authors before submission.
+% Lines marked TODO need a decision or a check by the author before submission.
 \documentclass[11pt]{amsart}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
@@ -11,6 +11,7 @@
 \usepackage{alltt}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={Yunkun Song},pdftitle={Pattern-avoiding binary arrays and a Stirling-type table: explicit formulas, exact recurrence orders, and non-D-finiteness}}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -46,13 +47,16 @@
 
 \title[Pattern-avoiding binary arrays and a Stirling-type table]{Pattern-avoiding binary arrays and a Stirling-type table:\\ explicit formulas, exact recurrence orders, and non-D-finiteness}
 
-% TODO(authors): names and affiliations. (A colored \todo inside \author may break under amsart's uppercasing.)
-\author{Author names to be added}
+% Sole author, who is both the first and the corresponding author (author's instruction, 7 October 2026).
+% TODO(author): add \email{...} for correspondence. (A colored \todo inside \author may break under amsart's uppercasing.)
+\author{Yunkun Song}
+\address{College of Arts and Sciences, Boston University, Boston, MA 02215, USA}
+\thanks{The author is an undergraduate student in the College of Arts and Sciences at Boston University and is the corresponding author.}
 
 \date{Draft of 7 October 2026}
 
 \begin{abstract}
-Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123 and its columns A207118--A207122). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$. We study the table $U_k(m)$. For each $m\ge0$, the generating function $\sum_k U_k(m)x^k$ is a rational function $W_m/P_m$ in lowest terms with $P_m=\prod_{i=0}^{m}(1-x-ix^3)$, so the minimal order of a linear recurrence in $k$ is exactly $3m+1$; we also give the first two terms of the asymptotics in $k$. A unique factorization of the sequences into blocks gives a positive double-sum formula in terms of Stirling and $r$-Stirling numbers. In the other direction, for $m\ge1$ no single sum of the form $\sum_s A(s)\binom{k+c-2s}{m+s+d}$ exists, and $U$ is not a finite multisum of a proper hypergeometric term satisfying natural boundary conditions. The bivariate generating function is not D-finite; every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence, and we count these recurrences in every box; in particular $U$ is not Stirling-like in the sense of Kauers. Finally, the near-diagonal entries $N(k,k-d)$ of the associated triangle are polynomials of degree $2d$ in $k$ exactly from $k=2d+2$ on. The reduction, the exact recurrence orders, the explicit formula, the non-D-finiteness, the description of all quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
+Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123 and its columns A207118--A207122). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$. We study the table $U_k(m)$. For each $m\ge0$, the generating function $\sum_k U_k(m)x^k$ is a rational function $W_m/P_m$ in lowest terms with $P_m=\prod_{i=0}^{m}(1-x-ix^3)$, so the minimal order of a linear recurrence in $k$ is exactly $3m+1$; we also give the first two terms of the asymptotics in $k$. A unique factorization of the sequences into blocks gives a positive double-sum formula in terms of Stirling and $r$-Stirling numbers. In the other direction, for $m\ge1$ no single sum of the form $\sum_s A(s)\binom{k+c-2s}{m+s+d}$ exists, and $U$ is not a finite multisum of a proper hypergeometric term under two boundary conditions stated in the paper. The bivariate generating function is not D-finite; every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence, and we count these recurrences in every box; in particular $U$ is not Stirling-like in the sense of Kauers. Finally, the near-diagonal entries $N(k,k-d)$ of the associated triangle are polynomials of degree $2d$ in $k$ exactly from $k=2d+2$ on. The reduction, the exact recurrence orders, the explicit formula, the non-D-finiteness, the description of all quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
 \end{abstract}
 
 \subjclass[2020]{05A15; 11B73; 33F10; 68V20}
@@ -123,16 +127,18 @@ With Stirling numbers of the second kind $\stirling{n}{k}$ and $H(m,s,j)=h_s(j,j
 Every term is a nonnegative integer with a combinatorial meaning, and the formula refines according to the number of ascents.
 \end{introthm}
 
-\begin{introthm}[Shorter formulas do not exist; Theorems~\ref{thm:S}, \ref{thm:Spart} and~\ref{thm:multisum}]\label{thmC}\leavevmode
+\begin{introthm}[Obstructions to specific summation formulas; Theorems~\ref{thm:S}, \ref{thm:Spart} and~\ref{thm:multisum}]\label{thmC}\leavevmode
 \begin{enumerate}
 \item Let $m\ge1$. There are no integers $c,d,k_0$ and complex numbers $A(s)$ independent of $k$ such that
 \[
   U_k(m)=\sum_s A(s)\binom{k+c-2s}{m+s+d}\qquad\text{for all }k\ge k_0.
 \]
 The same holds, for every $m\ge2$, for the number of sequences that end with an ascent, and, for every $m\ge1$, for several other binomial shapes (Proposition~\ref{prop:shapes}).
-\item $U_k(m)$ is not a finite multisum $\sum_{\vec j}T(k,m,\vec j)$ of a proper hypergeometric term $T$ that satisfies the natural boundary conditions (N1) and (N2) of Section~\ref{sec:multisum}.
+\item $U_k(m)$ is not a finite multisum $\sum_{\vec j}T(k,m,\vec j)$ of a proper hypergeometric term $T$ that satisfies the boundary conditions (N1) and (N2) of Section~\ref{sec:multisum}.
 \end{enumerate}
 \end{introthm}
+
+Neither part excludes every shorter formula: single sums of other shapes, for instance Newton's forward difference series $\sum_sA(s)\binom{k}{s}$, always exist (Remark~\ref{rem:othershapes}).
 
 \begin{introthm}[Non-D-finiteness and all quadrant recurrences; Theorems~\ref{thm:nonD}, \ref{thm:ideal} and Corollary~\ref{cor:stirlinglike}]\label{thmD}\leavevmode
 \begin{enumerate}
@@ -159,13 +165,13 @@ For every $d\ge0$ there is a polynomial $p_d$ of degree $2d$ with leading coeffi
 \subsection{Related work}
 Lipshitz \cite{Lipshitz} and Stanley \cite{Stanley80} developed the theory of D-finite power series (see Kauers' book \cite{Kauers23} for a modern account); Zeilberger \cite{Zeilberger90} and Wilf--Zeilberger \cite{WZ92} the holonomic approach to special function identities, including the fact that a proper hypergeometric term satisfies a recurrence whose coefficients do not involve the summation variables \cite[Theorem~4.1]{WZ92}, which is the starting point of Section~\ref{sec:multisum}. Kauers \cite{Kauers07} introduced Stirling-like sequences: bivariate sequences whose annihilator is generated by a three-term operator whose two shift vectors form a basis of $\Z^2$. His Example~5 shows that the annihilator of the Stirling numbers of the second kind is exactly the left ideal generated by the triangular recurrence. The argument has two steps: there is no recurrence in one variable only, and every annihilating operator reduces modulo the generator to one in one variable. Our Theorem~\ref{thm:ideal} follows the same outline for the four-term operator $L_1$, which is not of Stirling-like shape (Corollary~\ref{cor:stirlinglike}). We work with polynomial coefficients and annihilation on a quadrant, show that every annihilating operator with rational coefficients is a left multiple of $L_1$ as well (Corollary~\ref{cor:saturated}), and count the recurrences of bounded size. Chyzak, Kauers and Salvy \cite{CKS09} show that the Stirling numbers are not $\partial$-finite; Klazar \cite{Klazar} studies Bell numbers and their relatives from the point of view of algebraic differential equations. The $r$-Stirling numbers are due to Broder \cite{Broder}, and polynomiality of diagonals of Stirling-type triangles goes back to Gessel and Stanley \cite{GesselStanley}.
 
-Kitaev, Mansour and Vella \cite{KMV} studied pattern avoidance in binary matrices for two-dimensional patterns (right-angled patterns with three cells and $2\times2$ patterns); here the forbidden patterns are instead consecutive patterns of length three inside the rows and inside the columns. For arrays avoiding finite sets of horizontal and vertical patterns, linear recurrences in one dimension for a fixed size of the other exist by a transfer-matrix argument; see Theorem~2 of Dougherty-Bliss, Koutschan, Ter-Saakov and Zeilberger \cite{DBKTZ}. Dougherty-Bliss and Kauers \cite{DBK} proved closed forms and D-finiteness results for a different family of Hardin's arrays (king-move arrays), and Dougherty-Bliss and Spahn \cite{DBS} showed by the transfer-matrix method that, for a fixed parameter and a fixed number of columns, the number of these arrays is eventually a polynomial in the number of rows. We are not aware of previous work on the table $U_k(m)$ itself. \todo{Google Scholar was searched on 2026-10-07 (forward citations and keyword searches; see the repository notes); complete the search in MathSciNet, zbMATH and Web of Science before submission.}
+Kitaev, Mansour and Vella \cite{KMV} studied pattern avoidance in binary matrices for two-dimensional patterns (right-angled patterns with three cells and $2\times2$ patterns); here the forbidden patterns are instead consecutive patterns of length three inside the rows and inside the columns. For arrays avoiding finite sets of horizontal and vertical patterns, linear recurrences in one dimension for a fixed size of the other exist by a transfer-matrix argument; see Theorem~2 of Dougherty-Bliss, Koutschan, Ter-Saakov and Zeilberger \cite{DBKTZ}. Dougherty-Bliss and Kauers \cite{DBK} proved closed forms and D-finiteness results for a different family of Hardin's arrays (king-move arrays), and Dougherty-Bliss and Spahn \cite{DBS} showed by the transfer-matrix method that, for a fixed parameter and a fixed number of columns, the number of these arrays is eventually a polynomial in the number of rows. We are not aware of previous work on the table $U_k(m)$ itself. \todo{searched so far (October 2026): arXiv, OpenAlex and Crossref, including the forward citations of 16 seed papers in OpenAlex; the OEIS; and Google Scholar (forward citations and keyword searches); see the repository notes. Complete the search in MathSciNet, zbMATH and Web of Science before submission.}
 
 \subsection{Formal verification}
 The results listed in Section~\ref{sec:lean} are formalized in Lean~4 \cite{Lean4} with Mathlib \cite{Mathlib}, starting from the definitions of $a_k(n)$ and $U_k(m)$. The formal proofs use only the three standard axioms. Lean checks proofs, not the faithfulness of formal statements to the statements in this paper; Appendix~\ref{app:lean} transcribes the definitions that a reader has to compare. Formal verification has precedent in this area: Mahboubi and Sibut-Pinote \cite{MSP21} formalized Ap\'ery's proof of the irrationality of $\zeta(3)$ in Coq, verifying a posteriori the recurrences produced by computer algebra.
 
 \subsection{Organization}
-Section~\ref{sec:prelim} proves the reduction, the basic recurrence and the basic facts about the triangle $N$. Section~\ref{sec:gf} treats the generating functions in $k$, the exact recurrence orders and the asymptotics. Section~\ref{sec:blocks} gives the block decomposition and the explicit formula. Section~\ref{sec:nonD} contains the non-D-finiteness and the description of all quadrant recurrences. Section~\ref{sec:short} proves that the explicit formula cannot be shortened in the two senses of Theorem~\ref{thmC}. Section~\ref{sec:neardiag} treats the near-diagonal. Section~\ref{sec:lean} describes the formalization, and Section~\ref{sec:open} lists open problems.
+Section~\ref{sec:prelim} proves the reduction, the basic recurrence and the basic facts about the triangle $N$. Section~\ref{sec:gf} treats the generating functions in $k$, the exact recurrence orders and the asymptotics. Section~\ref{sec:blocks} gives the block decomposition and the explicit formula. Section~\ref{sec:nonD} contains the non-D-finiteness and the description of all quadrant recurrences. Section~\ref{sec:short} proves the obstructions of Theorem~\ref{thmC}. Section~\ref{sec:neardiag} treats the near-diagonal. Section~\ref{sec:lean} describes the formalization, and Section~\ref{sec:open} lists open problems.
 
 % =====================================================================
 \section{The reduction and the basic recurrence}\label{sec:prelim}
@@ -216,7 +222,7 @@ For $k\ge1$ and $m\ge0$,
 with the conventions $U_0\equiv1$, $U_{-1}\equiv1$, $U_{-2}\equiv0$ and $U_k(-1)=0$ for $k\ge1$.
 \end{lemma}
 
-% TODO(authors): this recurrence was given in the problem statement we started from; decide on attribution.
+% TODO(author): this recurrence was given in the problem statement we started from; decide on attribution.
 \begin{proof}
 Classify $h\in \mathcal H_k(m)$ by the first position $i$ at which the value $m$ occurs.
 If $m$ does not occur, $h\in \mathcal H_k(m-1)$.
@@ -349,7 +355,9 @@ Here $m^{\underline j}=m(m-1)\cdots(m-j+1)$.
 \end{proof}
 
 \begin{remark}\label{rem:asym}
-Consequently $U_k(m)/(c_m\rho_m^k)-1=-\kappa_m\theta_m^k(1+o(1))$ with $\theta_m=\rho_{m-1}/\rho_m$ and $\kappa_m=c_{m-1}\rho_{m-1}^3/c_m>0$. The rate $\theta_m$ cannot be improved, and $1-\theta_m\sim1/(3m)$ as $m\to\infty$ by the mean value theorem, so the leading term dominates only when $k$ is much larger than $3m$. Numerically $\rho_1\approx1.46557$, $c_1\approx2.20961$, $c_2\approx7.84112$ and $c_3\approx28.97686$; in fact $c_1=(10+15\rho_1+17\rho_1^2)/31$. When $\rho_m$ is an integer, that is $m=y^2(y-1)$ ($m=4,18,48,\dots$), the constant $c_m$ is rational; for instance $\rho_4=2$, $c_4=215/2$, and $U_k(4)=\tfrac{215}{2}2^k-c_3\rho_3^{k+3}+O(\rho_2^k)$.
+Consequently $U_k(m)/(c_m\rho_m^k)-1=-\kappa_m\theta_m^k(1+o(1))$ with $\theta_m=\rho_{m-1}/\rho_m$ and $\kappa_m=c_{m-1}\rho_{m-1}^3/c_m>0$, and the rate $\theta_m$ cannot be improved. Numerically $\rho_1\approx1.46557$, $c_1\approx2.20961$, $c_2\approx7.84112$ and $c_3\approx28.97686$; in fact $c_1=(10+15\rho_1+17\rho_1^2)/31$. When $\rho_m$ is an integer, that is $m=y^2(y-1)$ ($m=4,18,48,\dots$), the constant $c_m$ is rational; for instance $\rho_4=2$, $c_4=215/2$, and $U_k(4)=\tfrac{215}{2}2^k-c_3\rho_3^{k+3}+O(\rho_2^k)$.
+
+All of this concerns fixed $m$; Theorem~\ref{thm:asym} gives no error bound that is uniform in $m$. By the mean value theorem $1-\theta_m\sim1/(3m)$ as $m\to\infty$, and in the computed range $1\le m\le24$ the constant $\kappa_m$ increases with $m$ ($\kappa_1\approx0.453$, $\kappa_4\approx1.745$, $\kappa_{24}\approx9.869$). The relative error $U_k(m)/(c_m\rho_m^k)-1$ at $k=3m$ is about $-0.36$ for $m=2$ and $-0.996$ for $m=24$, and at $k=10m$ about $-0.05$ and $-0.41$. So the leading term alone is a good approximation only when $k$ is considerably larger than $3m$; these figures are numerical observations, not a uniform estimate.
 \end{remark}
 
 \begin{corollary}[Columns of the original table]\label{cor:columns}
@@ -474,7 +482,7 @@ Partial fractions over the nodes $0,1,\dots,m$ give a formula with a single divi
 \[
   m!\,U_k(m)=\sum_{i=0}^{m}(-1)^{m-i}\binom{m}{i}\Bigl[\psi_i(k+3m)+\sum_{j=1}^{i}j\,i^{\underline j}\,\psi_i(k+3m-3j-2)\Bigr].
 \]
-If the Stirling-type numbers are expanded, all of these become triple sums. For computing a whole table the recurrence \eqref{eq:rec} is faster by two to three orders of magnitude; for a single value with $k$ much larger than $m$, the last formula, with $\psi_i$ computed by $\psi_i(n)=\psi_i(n-1)+i\,\psi_i(n-3)$, is the fastest.
+If the Stirling-type numbers are expanded, all of these become triple sums. The last formula needs only the sequences $\psi_0,\dots,\psi_m$, which satisfy $\psi_i(0)=1$ and $\psi_i(n)=\psi_i(n-1)+i\,\psi_i(n-3)$ for $n\ge1$.
 \end{remark}
 
 % =====================================================================
@@ -521,7 +529,7 @@ with $f=0$ at negative indices. Let $\cO\subset\operatorname{End}_\C(\mathcal A)
 \[
   \Rel(U)=\{R\in\cO:\ (RU)(k,m)=0\text{ for all }k\ge k_0,\ m\ge m_0,\text{ for some }k_0,m_0\}.
 \]
-Lemma~\ref{lem:rec} says that $L_1=1-E^{-1}-X-mX^3\in\Rel(U)$: indeed $(L_1U)(k,m)=0$ for $k\ge3$, $m\ge1$. A recurrence involving forward shifts becomes one of this form after multiplication by a suitable monomial $X^aE^{-b}$.
+Lemma~\ref{lem:rec} says that $L_1=1-E^{-1}-X-mX^3\in\Rel(U)$: indeed $(L_1U)(k,m)=0$ for $k\ge3$, $m\ge1$. A recurrence involving forward shifts becomes one of this form after left multiplication by a suitable monomial $X^aE^{-b}$, that is, after evaluating it at $(k-a,m-b)$.
 
 \begin{lemma}\label{lem:pure}
 Let $R=\sum_{a=0}^{A}r_a(k,m)X^a$ with $r_a\in\C[k,m]$. If $R\in\Rel(U)$, then $R=0$.
@@ -607,13 +615,13 @@ Suppose $T$ annihilates $U$ on a quadrant, away from the poles of the $c_i$. Cho
 In particular, the results of \cite{Kauers07} on Stirling-like sequences do not apply to $U$ directly.
 
 \begin{remark}
-In \cite[Section~2.2]{Kauers07} sequences are functions on all of $\Z^2$, operators have rational coefficients, and the annihilator of $f$ consists of the operators $Q$ with $Q\cdot f\equiv0$; Kauers extends $\stirling{n}{k}$ and the other classical triangles to $\Z^2$ so that their recurrences hold everywhere. If some extension of $U$ to $\Z^2$ were Stirling-like, its three-term generator would annihilate that extension at all points where its coefficients are defined, and in particular it would annihilate $U$ on a quadrant of $\NN^2$, which Corollary~\ref{cor:stirlinglike} excludes. This passage from \cite[Definition~3]{Kauers07} to Proposition~\ref{prop:triangle} is the only part of this subsection that is not formalized.
+In \cite[Section~2.2]{Kauers07} sequences are functions on all of $\Z^2$, operators have rational coefficients, and the annihilator of $f$ consists of the operators $Q$ with $Q\cdot f\equiv0$; Kauers extends $\stirling{n}{k}$ and the other classical triangles to $\Z^2$ so that their recurrences hold everywhere. If some extension of $U$ to $\Z^2$ were Stirling-like, its three-term generator would annihilate that extension at all points where its coefficients are defined. Write the shifts of the generator in the coordinates $(k,m)$ as $(0,0)$, $(s_1,t_1)$ and $(s_2,t_2)$. On the quadrant $k\ge\max(0,-s_1,-s_2)$, $m\ge\max(0,-t_1,-t_2)$ the generator reads only values at points of $\NN^2$, where the extension agrees with $U$, so it would annihilate $U$ at all points of this quadrant where its coefficients are defined, which Corollary~\ref{cor:stirlinglike} excludes. This passage from \cite[Definition~3]{Kauers07} to Proposition~\ref{prop:triangle} is the only part of this subsection that is not formalized.
 \end{remark}
 
 % =====================================================================
-\section{Shorter formulas do not exist}\label{sec:short}
+\section{Obstructions to specific summation formulas}\label{sec:short}
 
-The first summand of Theorem~\ref{thm:explicit} is a single sum of products of a Stirling number and a binomial coefficient, and the second is a double sum. In this section we show that $U_k(m)$ itself has no single-sum expression of this kind (Section~\ref{sec:single}), and that it is not a multisum of a proper hypergeometric term under natural boundary conditions (Section~\ref{sec:multisum}).
+The first summand of Theorem~\ref{thm:explicit} is a single sum of products of a Stirling number and a binomial coefficient, and the second is a double sum. In this section we show that $U_k(m)$ itself has no single-sum expression of this kind (Section~\ref{sec:single}), and that it is not a multisum of a proper hypergeometric term satisfying the boundary conditions (N1) and (N2) of Section~\ref{sec:multisum}. Both results exclude specific classes of formulas only: single sums of other shapes do exist (Remark~\ref{rem:othershapes}), and whether the double sum of Theorem~\ref{thm:explicit} is shortest in some wider sense is open (Section~\ref{sec:open}).
 
 \subsection{Single-family sums}\label{sec:single}
 
@@ -691,12 +699,12 @@ Let $\xi\in(0,1)$ be the real root of $b_1$ and $v_0=v(\xi)>0$. The derivative $
 (c) Let $(\alpha,\beta)\in\{(1,2),(2,3)\}$. If $b_w(\eta)=0$, then $1-\eta=w\eta^3$, so $v(\eta)=\eta^{\alpha-2\beta}w^{-\beta}$, and $\eta$ lies in the fibre only if $\eta^{\alpha-2\beta}=w^{\beta}v_0>0$. For $(1,2)$ this gives $\eta^3>0$, so $\eta=1-w\eta^3$ is real. For $(2,3)$ it gives $\eta^4>0$, so $\eta\in\{\pm r,\pm ir\}$ with $r>0$; but $b_w(-r)=1+r+wr^3>0$ and $\operatorname{Re}b_w(\pm ir)=1$, so again $\eta$ is real. On the other hand the fibre consists of the roots of $h(x)=x^3-v_0(1-x)^2$, respectively $h(x)=x^5-v_0(1-x)^3$. In the first case $v_0=\xi^3/(1-\xi)^2=\xi^{-3}<6$ because $\xi>0.68$, so $h'(x)=3x^2-2v_0x+2v_0>0$ for all real $x$. In the second case $h'(x)=5x^4+3v_0(1-x)^2>0$ for all real $x$. So $h$ has a single real root, and its other roots are non-real points of the fibre at which $v'\ne0$, a contradiction.
 \end{proof}
 
-\begin{remark}
+\begin{remark}\label{rem:othershapes}
 Shapes with $\alpha+\beta=1$ always work, for instance $U_k(m)=\sum_s\Delta^sU_{\bullet}(m)\big|_{0}\binom{k}{s}$ by Newton's forward difference formula; so a statement of this kind must specify the shape. For the remaining shapes with $\alpha\ge1$, $\alpha+\beta$ odd and $\alpha+\beta\le12$ (other than $(2,1)$, the shape of Theorem~\ref{thm:S}) we only have floating-point evidence, and shapes with $\alpha=0$ and $\beta\ge2$ are not considered here. For every $m\ge2$, two-family sums $G_m=x^{g_1}A_1(u)+x^{g_2}A_2(u)+L(x)$ are excluded by exact computation when $|g_i+3m+3|\le6000$, but not in general (Section~\ref{sec:open}).
 \end{remark}
 
 \subsection{Proper hypergeometric multisums}\label{sec:multisum}
-The Stirling and $r$-Stirling numbers in Theorem~\ref{thm:explicit} are not hypergeometric. We now show that some such atoms are unavoidable: $U$ is not a multisum of a proper hypergeometric term, under natural boundary conditions. Throughout, $\bp=(k,m,\vec j)\in\Z^{2+r}$ with $r\ge0$.
+The Stirling and $r$-Stirling numbers in Theorem~\ref{thm:explicit} are not hypergeometric. We now show that they cannot be replaced by proper hypergeometric terms, at least in multisums that satisfy the boundary conditions (N1) and (N2) below. Throughout, $\bp=(k,m,\vec j)\in\Z^{2+r}$ with $r\ge0$.
 
 \begin{definition}
 Following \cite[(4.1.2)]{WZ92}, a \emph{proper hypergeometric term} is an expression
@@ -758,7 +766,7 @@ By minimality, $C_{\vec\alpha}=0$ for $\vec\alpha<\vec\alpha^*$, and $\sum_{\vec
 Suppose (N1) and (N2) hold on $\cQ$. Take $I$, $J$ and $c_{\bw}$ from Lemma~\ref{lem:WZcount}, let $R=\max(I,J)$, let $\cQ_R=\{k\ge k_R,\ m\ge m_R\}$ be as in (N2), and put $\cQ'=\{k\ge k_R+J,\ m\ge m_R+I\}$. Let $(k,m)\in\cQ'$, $\vec j\in\Z^r$ and $\bp=(k,m,\vec j)$. If $T(\bp-\bw)$ is well defined and nonzero for some $\bw\in\Omega$, then, since $(k-\omega_0,m-\omega_1)\in\cQ_R$, condition (N2) shows that $T$ is well defined at all points $\bp-\bw'$, $\bw'\in\Omega$, which lie within distance $R$ of $\bp-\bw$; so $\sum_{\bw'}c_{\bw'}(k)\tilde T(\bp-\bw')=0$ by Lemma~\ref{lem:WZvalid}. Otherwise all $\tilde T(\bp-\bw)$ vanish. Lemma~\ref{lem:WZsum}, applied to $\cQ$ and $\cQ'$ (note $\cQ_R\subseteq\cQ$), gives a nonzero recurrence with coefficients in $\C[k]$ that holds on $\cQ'$, contradicting Theorem~\ref{thm:nonD}(2).
 \end{proof}
 
-Stirling numbers, $r$-Stirling numbers and the numbers $\psi_i(n)$ of Remark~\ref{rem:forms} are not proper hypergeometric terms (their expansions contain powers whose base is a summation variable), so Theorem~\ref{thm:multisum} does not contradict Theorem~\ref{thm:explicit}; it says that atoms of this kind are needed. At the level of generating functions the obstruction is visible in $m$: since $xW_m=1-P_m-x\sum_{j<m}P_j$, we have $G_m=(1/P_m-1)/x-P_m^{-1}\sum_{j<m}P_j$, and the partial sums are not closed.
+Stirling numbers, $r$-Stirling numbers and the numbers $\psi_i(n)$ of Remark~\ref{rem:forms} are not proper hypergeometric terms (their expansions contain powers whose base is a summation variable), so Theorem~\ref{thm:multisum} does not contradict Theorem~\ref{thm:explicit}. It shows that proper hypergeometric summands do not suffice among multisums satisfying (N1) and (N2); it does not show that every representation of $U$ needs atoms of Stirling type. At the level of generating functions the obstruction is visible in $m$: since $xW_m=1-P_m-x\sum_{j<m}P_j$, we have $G_m=(1/P_m-1)/x-P_m^{-1}\sum_{j<m}P_j$, and the partial sums are not closed.
 
 \begin{proposition}\label{prop:gosper}
 Let $K=\Q(x)$. There are no $C\in K$ and no hypergeometric term $T(m)$ over $K$ (that is, $T(m)\in K\setminus\{0\}$ and $T(m+1)=h(m)T(m)$ for some $h\in K(m)$, for all large $m$) such that $\sum_{j=0}^{m-1}P_j=T(m)+C$ for all large $m$.
@@ -890,7 +898,7 @@ Several further results of the accompanying report are formalized as well. The c
 
 Not formalized: the block decomposition (Theorem~\ref{thm:blocks}) and the generating function of Theorem~\ref{thm:gfxy} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); the identification of $H(m,s,j)$ with $r$-Stirling numbers in Lemma~\ref{lem:coef} and Proposition~\ref{prop:bijection}; the inequality $|\sigma|^2<\rho_{m-1}^2$ in Theorem~\ref{thm:asym}(1), Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; Corollary~\ref{cor:saturated}; the passage from Kauers' definition to Proposition~\ref{prop:triangle} in Corollary~\ref{cor:stirlinglike}; Theorems~\ref{thm:S}, \ref{thm:Spart} and~\ref{thm:multisum}, and Proposition~\ref{prop:shapes}.
 
-The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. \todo{the authors must compare these definitions with the statements in this paper; a checklist is in the notes folder of the repository.}
+The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. \todo{the author must compare these definitions with the statements in this paper; a checklist is in the notes folder of the repository.}
 
 % =====================================================================
 \section{Open problems}\label{sec:open}
@@ -1036,8 +1044,8 @@ Here \lean{normOp r} is the operator $\sum_{(a,b)}r(a,b)X^aE^{-b}$ with finitely
 
 % =====================================================================
 \section*{Statement on the use of AI tools}
-\todo{the authors must review and adapt this statement to the policy of the target venue.}
-The mathematical exploration, the proofs in this draft, the computer checks and the Lean formalization were produced with substantial assistance from a large language model (Claude, Anthropic) working under the direction of the author(s). The written proofs were cross-checked by several independent AI reviewers, and the computational statements by independent programs, in exact arithmetic except for a minority of checks that use high-precision decimal arithmetic and are labelled as numerical in the accompanying report. The proofs of the results listed in Section~\ref{sec:lean} are machine-checked; the faithfulness of the formal statements to the statements in this paper was checked by AI. The author(s) take full responsibility for the content.
+\todo{the author must review and adapt this statement to the policy of the target venue.}
+The mathematical exploration, the proofs in this draft, the computer checks and the Lean formalization were produced with substantial assistance from a large language model (Claude, Anthropic) working under the direction of the author. The written proofs were cross-checked by further runs of AI models acting as reviewers, which are not independent of the model that wrote them, and the computational statements by separately written programs, in exact arithmetic except for a minority of checks that use high-precision decimal arithmetic and are labelled as numerical in the accompanying report. The proofs of the results listed in Section~\ref{sec:lean} are machine-checked; the faithfulness of the formal statements to the statements in this paper was checked by AI. The author takes full responsibility for the content.
 
 \section*{Data and code}
 The verification scripts (305 automated checks, mostly exact; the high-precision numerical ones are labelled), a script that recomputes every number printed in this paper from the definitions, the Lean development and the notes are available at \todo{repository URL; the repository is currently private}.
@@ -1045,67 +1053,67 @@ The verification scripts (305 automated checks, mostly exact; the high-precision
 \begin{thebibliography}{99}
 
 \bibitem{Broder}
-A.~Z. Broder, The $r$-Stirling numbers, \emph{Discrete Math.} \textbf{49} (1984), no.~3, 241--259.
+A.~Z. Broder, The $r$-Stirling numbers, \emph{Discrete Math.} \textbf{49} (1984), no.~3, 241--259, \url{https://doi.org/10.1016/0012-365X(84)90161-4}.
 
 \bibitem{CKS09}
-F.~Chyzak, M.~Kauers, B.~Salvy, A non-holonomic systems approach to special function identities, in: \emph{Proceedings of the 2009 International Symposium on Symbolic and Algebraic Computation (ISSAC 2009)}, ACM, 2009, pp.~111--118; arXiv:0904.2761.
+F.~Chyzak, M.~Kauers, B.~Salvy, A non-holonomic systems approach to special function identities, in: \emph{Proceedings of the 2009 International Symposium on Symbolic and Algebraic Computation (ISSAC 2009)}, ACM, 2009, pp.~111--118, \url{https://doi.org/10.1145/1576702.1576720}; arXiv:0904.2761.
 
 \bibitem{DBK}
-R.~Dougherty-Bliss, M.~Kauers, Hardinian arrays, \emph{Electron. J. Combin.} \textbf{31}(2) (2024), \#P2.9.
+R.~Dougherty-Bliss, M.~Kauers, Hardinian arrays, \emph{Electron. J. Combin.} \textbf{31}(2) (2024), \#P2.9, \url{https://doi.org/10.37236/12358}.
 
 \bibitem{DBKTZ}
-R.~Dougherty-Bliss, C.~Koutschan, N.~Ter-Saakov, D.~Zeilberger, The (symbolic and numeric) computational challenges of counting 0-1 balanced matrices, arXiv:2410.07435.
+R.~Dougherty-Bliss, C.~Koutschan, N.~Ter-Saakov, D.~Zeilberger, The (symbolic and numeric) computational challenges of counting 0-1 balanced matrices, preprint, arXiv:2410.07435v2, 2025.
 
 \bibitem{DBS}
-R.~Dougherty-Bliss, G.~Spahn, Rectangular Hardinian arrays, \emph{ACM Commun. Comput. Algebra} \textbf{58} (2024), no.~3, 81--84.
+R.~Dougherty-Bliss, G.~Spahn, Rectangular Hardinian arrays, \emph{ACM Commun. Comput. Algebra} \textbf{58} (2024), no.~3, 81--84, \url{https://doi.org/10.1145/3717582.3717589}.
 
 \bibitem{GesselStanley}
-I.~Gessel, R.~P. Stanley, Stirling polynomials, \emph{J. Combin. Theory Ser. A} \textbf{24} (1978), 24--33.
+I.~Gessel, R.~P. Stanley, Stirling polynomials, \emph{J. Combin. Theory Ser. A} \textbf{24} (1978), 24--33, \url{https://doi.org/10.1016/0097-3165(78)90042-0}.
 
 \bibitem{Kauers07}
-M.~Kauers, Summation algorithms for Stirling number identities, \emph{J. Symbolic Comput.} \textbf{42} (2007), no.~10, 948--970.
+M.~Kauers, Summation algorithms for Stirling number identities, \emph{J. Symbolic Comput.} \textbf{42} (2007), no.~10, 948--970, \url{https://doi.org/10.1016/j.jsc.2007.08.002}.
 
 \bibitem{Kauers23}
-M.~Kauers, \emph{D-Finite Functions}, Algorithms and Computation in Mathematics, Springer, Cham, 2023.
+M.~Kauers, \emph{D-Finite Functions}, Algorithms and Computation in Mathematics 30, Springer, Cham, 2023, \url{https://doi.org/10.1007/978-3-031-34652-1}.
 
 \bibitem{KMV}
 S.~Kitaev, T.~Mansour, A.~Vella, Pattern avoidance in matrices, \emph{J. Integer Seq.} \textbf{8} (2005), Article 05.2.2.
 
 \bibitem{Klazar}
-M.~Klazar, Bell numbers, their relatives, and algebraic differential equations, \emph{J. Combin. Theory Ser. A} \textbf{102} (2003), 63--87.
+M.~Klazar, Bell numbers, their relatives, and algebraic differential equations, \emph{J. Combin. Theory Ser. A} \textbf{102} (2003), 63--87, \url{https://doi.org/10.1016/S0097-3165(03)00014-1}.
 
 \bibitem{Krause}
-C.~Krause, Proof of formula, attachment to OEIS A202093, June 2026, \url{https://oeis.org/A202093/a202093.txt}.
+C.~Krause, Proof of formula, attachment to OEIS A202093, 26 June 2026, \url{https://oeis.org/A202093/a202093.txt}, accessed 7 October 2026.
 
 \bibitem{Lean4}
-L.~de~Moura, S.~Ullrich, The Lean~4 theorem prover and programming language, in: \emph{Automated Deduction -- CADE 28}, Lecture Notes in Comput. Sci. 12699, Springer, 2021, pp.~625--635.
+L.~de~Moura, S.~Ullrich, The Lean~4 theorem prover and programming language, in: \emph{Automated Deduction -- CADE 28}, Lecture Notes in Comput. Sci. 12699, Springer, 2021, pp.~625--635, \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
 
 \bibitem{Lipshitz}
-L.~Lipshitz, D-finite power series, \emph{J. Algebra} \textbf{122} (1989), 353--373.
+L.~Lipshitz, D-finite power series, \emph{J. Algebra} \textbf{122} (1989), 353--373, \url{https://doi.org/10.1016/0021-8693(89)90222-6}.
 
 \bibitem{MSP21}
-A.~Mahboubi, T.~Sibut-Pinote, A formal proof of the irrationality of $\zeta(3)$, \emph{Log. Methods Comput. Sci.} \textbf{17} (2021), no.~1, Paper No.~16.
+A.~Mahboubi, T.~Sibut-Pinote, A formal proof of the irrationality of $\zeta(3)$, \emph{Log. Methods Comput. Sci.} \textbf{17} (2021), no.~1, Paper No.~16, \url{https://doi.org/10.23638/LMCS-17(1:16)2021}.
 
 \bibitem{Mathlib}
-The mathlib Community, The Lean mathematical library, in: \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, pp.~367--381.
+The mathlib Community, The Lean mathematical library, in: \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, pp.~367--381, \url{https://doi.org/10.1145/3372885.3373824}.
 
 \bibitem{OEIS}
-OEIS Foundation Inc., The On-Line Encyclopedia of Integer Sequences, \url{https://oeis.org}; entries A207118--A207123, A207069, A207070, A207124--A207127, A038718, A084990, A326247.
+OEIS Foundation Inc., The On-Line Encyclopedia of Integer Sequences, \url{https://oeis.org}; entries A207118--A207123, A207069, A207070, A207124--A207127, A038718, A084990, A326247; accessed October 2026.
 
 \bibitem{Stanley80}
-R.~P. Stanley, Differentiably finite power series, \emph{European J. Combin.} \textbf{1} (1980), 175--188.
+R.~P. Stanley, Differentiably finite power series, \emph{European J. Combin.} \textbf{1} (1980), 175--188, \url{https://doi.org/10.1016/S0195-6698(80)80051-5}.
 
 \bibitem{StanleyEC1}
-R.~P. Stanley, \emph{Enumerative Combinatorics, Volume~1}, 2nd ed., Cambridge Studies in Advanced Mathematics 49, Cambridge University Press, 2012.
+R.~P. Stanley, \emph{Enumerative Combinatorics, Volume~1}, 2nd ed., Cambridge Studies in Advanced Mathematics 49, Cambridge University Press, 2012, \url{https://doi.org/10.1017/CBO9781139058520}.
 
 \bibitem{WZ92}
-H.~S. Wilf, D.~Zeilberger, An algorithmic proof theory for hypergeometric (ordinary and ``$q$'') multisum/integral identities, \emph{Invent. Math.} \textbf{108} (1992), 575--633.
+H.~S. Wilf, D.~Zeilberger, An algorithmic proof theory for hypergeometric (ordinary and ``$q$'') multisum/integral identities, \emph{Invent. Math.} \textbf{108} (1992), 575--633, \url{https://doi.org/10.1007/BF02100618}.
 
 \bibitem{Zeilberger90}
-D.~Zeilberger, A holonomic systems approach to special functions identities, \emph{J. Comput. Appl. Math.} \textbf{32} (1990), 321--368.
+D.~Zeilberger, A holonomic systems approach to special functions identities, \emph{J. Comput. Appl. Math.} \textbf{32} (1990), 321--368, \url{https://doi.org/10.1016/0377-0427(90)90042-X}.
 
 \bibitem{Zhang}
-Y.~Zhang, Contraction of Ore ideals with applications, arXiv:1511.07922.
+Y.~Zhang, Contraction of Ore ideals with applications, in: \emph{Proceedings of the 2016 ACM International Symposium on Symbolic and Algebraic Computation (ISSAC 2016)}, ACM, 2016, pp.~413--420, \url{https://doi.org/10.1145/2930889.2930890}; arXiv:1511.07922.
 
 \end{thebibliography}
 

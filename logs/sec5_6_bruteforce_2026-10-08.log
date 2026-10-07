@@ -1,0 +1,12 @@
+U_k(m), 0<=k<=8, 0<=m<=4; N(k,q), 0<=q<=k<=7; both by enumeration
+U rows m=0..4: [[1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 2, 4, 6, 9, 14, 21, 31, 46], [1, 3, 9, 17, 32, 64, 119, 214, 388], [1, 4, 16, 36, 80, 192, 419, 873, 1837], [1, 5, 25, 65, 165, 457, 1136, 2669, 6334]]
+N rows k=0..7: [[1], [0, 1], [0, 1, 2], [0, 1, 4, 2], [0, 1, 7, 8, 2], [0, 1, 12, 25, 16, 2], [0, 1, 19, 59, 65, 26, 2], [0, 1, 29, 124, 199, 139, 38, 2]]
+PASS (L1 U)(k,m) is nonzero exactly at (0,0) (value 1) and (2,m), m>=1 (value m): {(0, 0): 1, (2, 1): 1, (2, 2): 2, (2, 3): 3, (2, 4): 4}
+     (3,1): 6 - 1 - 4 - 1*1 = 0;  (7,2): 214 - 31 - 119 - 2*32 = 0
+PASS with m-1 in place of m, nonzero at all 24 points of 3<=k<=8, 1<=m<=4
+PASS L_N N on 3<=k<=7, 1<=q<=7 with the coefficient at the output point: 0 nonzero values {}
+PASS L_N N on 3<=k<=7, 1<=q<=7 with the coefficient at the input points: 16 nonzero values {(3, 1): 2, (3, 2): 2, (4, 2): 2}
+PASS L_N N on 3<=k<=7, 1<=q<=7 with q in place of q-1: 20 nonzero values {(3, 1): -2, (3, 2): -1, (4, 1): -1}
+PASS support of L1 as (X-degree, E^-1-degree) = [(0, 0), (0, 1), (1, 0), (3, 0)]; det2 of its triangles: {((0, 0), (0, 1), (1, 0)): -1, ((0, 0), (0, 1), (3, 0)): -3, ((0, 0), (1, 0), (3, 0)): 0, ((0, 1), (1, 0), (3, 0)): 2}
+PASS S(n,k) = S(n-1,k-1) + k S(n-1,k): support (0,0),(1,1),(1,0), det2 = -1
+0 FAIL
