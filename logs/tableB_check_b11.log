@@ -1,0 +1,5 @@
+PASS b11-mean p_d 的次首项/首项 = -(4d^2-3d)，1<=d<=100
+PASS b11-hstar 1<=d<=100、d-1<=s<=3d-1：h*(s) 都有负分量（最先出现的负分量：{'h0': 2580, 'h1': 7619, 'other': 1}）；首个反例 None
+PASS b11-rev S(k,k-d) 在平移 s=d+1 处的 h* 非负且就是二阶 Euler 数（d<=25）
+time 146.8s
+SUMMARY b11 pass=3 fail=0

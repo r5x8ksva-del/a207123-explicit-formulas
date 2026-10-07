@@ -1,0 +1,12 @@
+PASS r1-dp 自写 DP 与暴力枚举一致（k<=8, m<=3）
+PASS r1-gf G_m=W_m/P_m 与 E_m=(W_m-1)/P_m 的展开与自写 DP 一致（0<=m<=6, k<=45）
+PASS r1-E1 E_1 = x^2/b_1 = x^{-1}u/(1-u) 与 DP 一致（k<=60）：True；notes/08 §3 的 x^2/(b_0 b_1) 与 DP 不一致，首个差异在 k=3（DP 1，x^2/(b_0b_1) 给 2）
+PASS r1-E2 E(k,2) = sum_s (2^{s+1}-1)C(k-1-2s,s+1) + sum_s 2^{s+1}C(k-2-2s,s) 对 0<=k<=60 精确成立；两族 (c,d)=(-1,-1)、(-2,-2)，g=(-4,-1)，即 notes/08 记号下 (n,b)=(-5,3) 或 (-8,-3)
+PASS r1-Em E_m = sum_j j x^{3j-3m-1}u^{m-j+1}/prod_{v=j}^m(1-vu)（m 族 u 型表示）与 DP 一致（1<=m<=6, k<=45）
+PASS r1-utype sum_k C(k+c-2s,m+s+d)x^k = x^g u^{s+m+d+1}（g=-2(m+d)-c-3）逐项精确成立（2496 组参数，k=-10..60）
+PASS r1-irr i=1 有理根 [] 判别式 -31；i=2 有理根 [] 判别式 -116；i=3 有理根 [] 判别式 -255；对照：b_4(1/2)=0
+PASS r1-WmWt W_m - Wt_i 被 b_i 整除（1<=i<=6, i<=m<=i+10，共 66 例）
+PASS r1-res 引理 5 的留数闭式在 Q[x]/(b_i) 中精确成立（1<=i<=6、i<=m<=i+12，U 与 E，共 156 例）；u'(eta) 两种写法一致
+PASS r1-res-float 数值围道积分（400 点梯形）算出的留数乘 u'(eta) 与闭式一致（72 个根/参数组合，最大相对误差 3.9e-10）
+time 0.7s
+SUMMARY s9-r1 pass=10 fail=0

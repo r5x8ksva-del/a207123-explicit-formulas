@@ -1,0 +1,6 @@
+PASS r4-cross 大整数 y 表示与 Fraction 写法给出相同的 D_i(n,b)（150 组，|n|,|b|<=15）
+PASS r4-L8 引理 8：3960 组随机 (n,b)∈[-300,300]^2 上精确 D mod l = 周期表查值（33 个证书素数，U 与 E）
+PASS r4-L9 引理 9：10700 组 (证书, b'∈{±1,±2,±3,±l}, n∈[-12,12], U/E)，|b|<=25000：D/(b'l) l-整且 ≡ E_l(n) (mod l)；其中 E_l(n)≢0 的 10130 组都有 D≠0 且 v_l(D)=1+v_l(b')；失败 []
+PASS r4-E-fiber1 E 只用纤维 1（T=5040）的 l 进步骤未解决的 n0 = [2515, 5035]
+time 0.7s
+SUMMARY s9-r4 pass=4 fail=0

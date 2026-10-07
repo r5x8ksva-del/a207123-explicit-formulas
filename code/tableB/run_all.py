@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""表 B 新结论的一键核对（2026-10-07）：依次运行 check_b1.py、check_b3.py、check_b7.py，汇总 PASS / FAIL。
+"""表 B 新结论的一键核对（2026-10-07；2026-10-08 加入 b2、b7_borel、b11）：依次运行 check_b1.py、check_b2.py、check_b3.py、check_b7.py、
+check_b7_borel.py（数值佐证）、check_b11.py（d<=100），汇总 PASS / FAIL。
 
 用法（在任务 C 根目录）：  py -3.14 code/tableB/run_all.py
 带内存保护：  GUARD_CAP_MB=1500 code/main_extra/run_guarded.sh logs/tableB_run_all.log py -3.14 code/tableB/run_all.py
-（实测峰值约 0.4 GB，用时约半分钟。）
+（实测峰值约 0.4 GB；2026-10-07 的三个部分约半分钟，2026-10-08 加入的三个部分另需约 3 分钟，主要是 check_b11.py。）
 格式与 verify_all.py 相同；暂未登记为 verify_all 的模块，因为报告、README、论文里写的是「13 个模块、305 PASS」，
 这些结论并入报告时再把它复制为 code/checks/check_tb.py。需要 numpy（只用来求近似根，判定全部是精确运算）。
 """
@@ -14,7 +15,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-PARTS = ['b1', 'b3', 'b7']
+PARTS = ['b1', 'b2', 'b3', 'b7', 'b7_borel', 'b11']
 
 
 def main():

@@ -96,3 +96,44 @@
 2026-10-07 15:59:51 UTC | py -3.14 code/review/s8-b1/s2_main.py truth,rec,base,rel,thm2,newton,c3 K=60 KA=40 KB=20 > logs/review_s8-b1_final_basic_rel.log | exit 0 | 10s | PEAK=25 MINHEAD=9931 MINAVAIL=2440 KILLED=0 REASON= QFAIL=0
 2026-10-07 16:02:30 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 17s | PEAK=393 MINHEAD=10095 MINAVAIL=2875 KILLED=0 REASON= QFAIL=0
 2026-10-07 16:05:47 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 24s | PEAK=394 MINHEAD=8996 MINAVAIL=1800 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:11:52 UTC | py -3.14 code/tableB/check_b2.py > logs/tableB_check_b2.log | exit 1 | 20s | PEAK=389 MINHEAD=6805 MINAVAIL=2115 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:12:34 UTC | py -3.14 code/tableB/check_b2.py > logs/tableB_check_b2.log | exit 0 | 21s | PEAK=388 MINHEAD=6926 MINAVAIL=2357 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:15:35 UTC | py -3.14 code/tableB/check_b7_borel.py > logs/tableB_check_b7_borel.log | exit 1 | 3s | PEAK=390 MINHEAD=7229 MINAVAIL=2413 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:17:17 UTC | py -3.14 code/tableB/check_b7_borel.py > logs/tableB_check_b7_borel.log | exit 1 | 5s | PEAK=390 MINHEAD=7249 MINAVAIL=2599 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:17:48 UTC | py -3.14 code/tableB/check_b7_borel.py > logs/tableB_check_b7_borel.log | exit 0 | 5s | PEAK=389 MINHEAD=7257 MINAVAIL=2592 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:25:36 UTC | py -3.14 code/tableB/check_b11.py 60 > logs/tableB_check_b11.log | exit 0 | 8s | PEAK=27 MINHEAD=7566 MINAVAIL=2811 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:28:33 UTC | py -3.14 code/tableB/check_b11.py 100 > logs/tableB_check_b11.log | exit 0 | 148s | PEAK=40 MINHEAD=7455 MINAVAIL=2767 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:31:56 UTC | py -3.14 code/review/s9-b2/s9_r0_primes.py 300000 > logs/review_s9-b2_r0_primes.log | exit 0 | 5s | PEAK=388 MINHEAD=6924 MINAVAIL=2992 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:33:00 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 154s | PEAK=396 MINHEAD=6980 MINAVAIL=2579 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:34:36 UTC | py -3.14 code/review/s9-b2/s9_r1_gf_res.py > logs/review_s9-b2_r1_gf_res.log | exit 0 | 2s | PEAK=387 MINHEAD=7105 MINAVAIL=2705 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:35:42 UTC | py -3.14 code/review/s9-b2/s9_r2_small.py > logs/review_s9-b2_r2_small.log | exit 0 | 4s | PEAK=418 MINHEAD=7061 MINAVAIL=2876 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:38:58 UTC | py -3.14 code/review/s9-b2/s9_r3_sieve.py 83160 200000 > logs/review_s9-b2_r3_sieve_T83160.log | exit 0 | 7s | PEAK=401 MINHEAD=7054 MINAVAIL=2515 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:40:05 UTC | py -3.14 code/review/s9-b7/s9b7_formal.py > logs/review_s9-b7_formal.log | exit 0 | 2s | PEAK=23 MINHEAD=7591 MINAVAIL=2729 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:41:35 UTC | py -3.14 code/review/s9-b2/s9_r4_lemma89.py > logs/review_s9-b2_r4_lemma89.log | exit 0 | 3s | PEAK=396 MINHEAD=7190 MINAVAIL=2731 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:41:54 UTC | py -3.14 code/review/s9-b7/s9b7_lemma23.py > logs/review_s9-b7_lemma23.log | exit 1 | 41s | PEAK=454 MINHEAD=7190 MINAVAIL=2718 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:42:06 UTC | py -3.14 code/review/s9-b2/s9_r3_sieve.py 55440 200000 all > logs/review_s9-b2_r3_sieve_T55440.log | exit 0 | 5s | PEAK=418 MINHEAD=7622 MINAVAIL=3040 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:43:13 UTC | py -3.14 code/review/s9-b7/s9b7_lemma23.py > logs/review_s9-b7_lemma23.log | exit 0 | 27s | PEAK=434 MINHEAD=7375 MINAVAIL=2738 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:45:22 UTC | py -3.14 code/tableB/check_b2.py > logs/review_s9-b2_check_b2_rerun.log | exit 0 | 20s | PEAK=389 MINHEAD=7043 MINAVAIL=2905 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:46:10 UTC | py -3.14 code/review/s9-b2/s9_r5_E2.py > logs/review_s9-b2_r5_E2.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:47:06 UTC | py -3.14 code/review/s9-b7/s9b7_inverse.py > logs/review_s9-b7_inverse.log | exit 0 | 157s | PEAK=387 MINHEAD=6818 MINAVAIL=2772 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:11 UTC | py -3.14 code/review/s9-b7/s9b7_rays.py > logs/review_s9-b7_rays.log | exit 1 | 4s | PEAK=394 MINHEAD=7708 MINAVAIL=3286 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:35 UTC | py -3.14 code/review/s9-b2/s9_r1_gf_res.py > logs/review_s9-b2_r1_gf_res_final.log | exit 0 | 2s | PEAK=387 MINHEAD=7220 MINAVAIL=2830 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:38 UTC | py -3.14 code/review/s9-b2/s9_r2_small.py > logs/review_s9-b2_r2_small_final.log | exit 0 | 2s | PEAK=420 MINHEAD=7379 MINAVAIL=3006 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:44 UTC | py -3.14 code/review/s9-b2/s9_r3_sieve.py 83160 200000 > logs/review_s9-b2_r3_sieve_T83160_final.log | exit 0 | 5s | PEAK=391 MINHEAD=7429 MINAVAIL=3014 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:52 UTC | py -3.14 code/review/s9-b2/s9_r3_sieve.py 55440 200000 all > logs/review_s9-b2_r3_sieve_T55440_final.log | exit 0 | 7s | PEAK=419 MINHEAD=7508 MINAVAIL=3082 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:55 UTC | py -3.14 code/review/s9-b2/s9_r4_lemma89.py > logs/review_s9-b2_r4_lemma89_final.log | exit 0 | 2s | PEAK=396 MINHEAD=7947 MINAVAIL=3143 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:50:58 UTC | py -3.14 code/review/s9-b2/s9_r5_E2.py > logs/review_s9-b2_r5_E2_final.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:53:41 UTC | py -3.14 code/review/s9-b7/s9b7_rays.py > logs/review_s9-b7_rays.log | exit 0 | 15s | PEAK=394 MINHEAD=7382 MINAVAIL=2955 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:55:05 UTC | py -3.14 code/review/s9-b7/s9b7_gevrey.py > logs/review_s9-b7_gevrey.log | exit 0 | 2s | PEAK=23 MINHEAD=8052 MINAVAIL=2976 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:56:58 UTC | py -3.14 code/review/s9-b7/s9b7_sectors.py > logs/review_s9-b7_sectors.log | exit 0 | 3s | PEAK=0 MINHEAD=7913 MINAVAIL=2919 KILLED=0 REASON= QFAIL=0
+2026-10-07 17:58:08 UTC | py -3.14 code/tableB/check_b2.py > logs/tableB_check_b2.log | exit 0 | 17s | PEAK=389 MINHEAD=7646 MINAVAIL=2860 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:02:37 UTC | py -3.14 code/review/s9-b7/s9b7_inverse.py > logs/review_s9-b7_inverse.log | exit 0 | 187s | PEAK=387 MINHEAD=6904 MINAVAIL=2652 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:07:32 UTC | py -3.14 code/review/s9-b7/s9b7_rays.py > logs/review_s9-b7_rays.log | exit 0 | 12s | PEAK=394 MINHEAD=7153 MINAVAIL=3021 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:08:13 UTC | py -3.14 code/review/s9-b7/s9b7_formal.py > logs/review_s9-b7_formal.log | exit 0 | 2s | PEAK=23 MINHEAD=7457 MINAVAIL=2995 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:08:46 UTC | py -3.14 code/review/s9-b7/s9b7_lemma23.py > logs/review_s9-b7_lemma23.log | exit 0 | 32s | PEAK=443 MINHEAD=7040 MINAVAIL=2914 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:11:32 UTC | py -3.14 code/review/s9-b7/s9b7_inverse.py > logs/review_s9-b7_inverse.log | exit 0 | 165s | PEAK=387 MINHEAD=7008 MINAVAIL=2862 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:11:42 UTC | py -3.14 code/review/s9-b7/s9b7_rays.py > logs/review_s9-b7_rays.log | exit 0 | 9s | PEAK=394 MINHEAD=7023 MINAVAIL=2884 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:11:46 UTC | py -3.14 code/review/s9-b7/s9b7_gevrey.py > logs/review_s9-b7_gevrey.log | exit 0 | 3s | PEAK=23 MINHEAD=7375 MINAVAIL=2895 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:11:47 UTC | py -3.14 code/review/s9-b7/s9b7_sectors.py > logs/review_s9-b7_sectors.log | exit 0 | 0s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:17:58 UTC | py -3.14 code/tableB/check_b7_borel.py > logs/tableB_check_b7_borel.log | exit 0 | 7s | PEAK=390 MINHEAD=7047 MINAVAIL=2960 KILLED=0 REASON= QFAIL=0
+2026-10-07 18:23:29 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 187s | PEAK=396 MINHEAD=7046 MINAVAIL=3024 KILLED=0 REASON= QFAIL=0
