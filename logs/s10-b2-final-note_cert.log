@@ -1,0 +1,36 @@
+   fibre 1  l=3     P=8     {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=11    P=60    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=13    P=168   {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=29    P=840   {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=2521  P=2520  {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=7     P=48    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=17    P=72    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=19    P=18    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=41    P=280   {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=71    P=5040  {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=127   P=126   {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 3  l=13    P=84    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 3  l=71    P=70    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+PASS static facts of the 13 certificate primes (prime, odd, l!|i, exact order P, P|5040, l!|disc)
+PASS U: eta^P == 1 recomputed while tabulating
+   U sieve first-kill counts: [('f1:l=3', 16669800), ('f1:l=11', 7832160), ('f1:l=13', 776952), ('f1:l=29', 87840), ('f1:l=2521', 24656), ('f2:l=7', 4514), ('f2:l=17', 8), ('f2:l=19', 0), ('f2:l=41', 0), ('f2:l=71', 630), ('f2:l=127', 0)]
+PASS U sieve: all 25396560 classes (n0,b0), b0 != 0 mod 5040, excluded | survivors=0 sample=[]
+PASS U sieve: kill counts add up to 25396560 | 25396560
+PASS U: mu mod l from eta^P mod l^2 equals mu from exact eta^P (all certs)
+   U l-adic first-hit counts: [('f1:l=3', 3780), ('f1:l=11', 1176), ('f1:l=13', 72), ('f1:l=29', 6), ('f1:l=2521', 6), ('f2:l=7', 0), ('f2:l=17', 0), ('f2:l=19', 0), ('f2:l=41', 0), ('f2:l=71', 0), ('f2:l=127', 0)]
+PASS U l-adic: every n0 in Z/5040 has a cert with Delta_l(n0) != 0 mod l | []
+PASS U l-adic first-hit counts of fibre 1 = [3780, 1176, 72, 6, 6] (note) | [3780, 1176, 72, 6, 6]
+PASS U l-adic: fibre 1 alone suffices
+PASS E: eta^P == 1 recomputed while tabulating
+   E sieve first-kill counts: [('f1:l=3', 14288400), ('f1:l=11', 9539712), ('f1:l=13', 1288656), ('f1:l=29', 187056), ('f1:l=2521', 67352), ('f2:l=7', 21786), ('f2:l=17', 2620), ('f2:l=19', 0), ('f2:l=41', 310), ('f2:l=71', 662), ('f2:l=127', 0), ('f3:l=13', 6), ('f3:l=71', 0)]
+PASS E sieve: all 25396560 classes (n0,b0), b0 != 0 mod 5040, excluded | survivors=0 sample=[]
+PASS E sieve: kill counts add up to 25396560 | 25396560
+PASS E: mu mod l from eta^P mod l^2 equals mu from exact eta^P (all certs)
+   E l-adic first-hit counts: [('f1:l=3', 3150), ('f1:l=11', 1722), ('f1:l=13', 156), ('f1:l=29', 6), ('f1:l=2521', 4), ('f2:l=7', 1), ('f2:l=17', 1), ('f2:l=19', 0), ('f2:l=41', 0), ('f2:l=71', 0), ('f2:l=127', 0), ('f3:l=13', 0), ('f3:l=71', 0)]
+PASS E l-adic: every n0 in Z/5040 has a cert with Delta_l(n0) != 0 mod l | []
+PASS E l-adic: n0 not covered by fibre 1 = {2515, 5035} (note) | [2515, 5035]
+   E: these are covered by {2515: 'f2:l=7', 5035: 'f2:l=17'}
+   E: n0=2515 covered by ['f2:l=7', 'f2:l=17', 'f2:l=19', 'f2:l=41', 'f2:l=71', 'f2:l=127', 'f3:l=13', 'f3:l=71']
+   E: n0=5035 covered by ['f2:l=17', 'f2:l=19', 'f2:l=41', 'f2:l=71', 'f2:l=127', 'f3:l=13', 'f3:l=71']
+time 14.1s
+SUMMARY s10_note_cert: PASS=14 FAIL=0

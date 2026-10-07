@@ -1,0 +1,5 @@
+PASS 8-prime table, U: sieve survivors = 0 and l-adic coverage complete | survivors=0 uncovered=[]
+PASS 8-prime table, E: sieve survivors = 0 and l-adic coverage complete | survivors=0 uncovered=[]
+PASS R1 survivors are exactly the classes of (0,5), (-5,-5), (-9,-5), (-4,5) | survivors=[(0, 5), (5031, 5035), (5035, 5035), (5036, 5)]
+PASS G_1 = x^-7 u^2/(1-u) - x^-3 u/(1-u) - x^-1 at 20 random rational points
+SUMMARY s10_union8: PASS=4 FAIL=0

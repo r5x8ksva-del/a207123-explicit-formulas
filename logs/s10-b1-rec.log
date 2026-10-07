@@ -1,0 +1,6 @@
+U_dp done 1.0s
+N_brute done 2.0s
+REVERSE Phi(2zn->3zn): Lemma0 fails for 57 of 57 k (expect all)
+REVERSE N(20,10)+1 detected by Lemma0 check: True
+elapsed 2.0s
+TOTAL PASS=211 FAIL=0

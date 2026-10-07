@@ -1,0 +1,15 @@
+h from U done 0.5s
+real-simple up to k=25  0.5s
+real-simple up to k=50  0.7s
+real-simple done k<=60 in 0.5s
+distribution done 1.9s
+n_k facts done 2.3s
+Var X_k samples (k, E, Var, Var/k): ['(10, 5.485, 1.521, 0.1521)', '(20, 10.144, 3.082, 0.1541)', '(40, 19.332, 6.097, 0.1524)', '(60, 28.436, 9.041, 0.1507)']
+B8 side facts done 7.5s
+C3 non-alternating for 34 of 34 values 2<=k<=35
+REVERSE h_k*(1+t^2) judged not real-rooted: 38 of 38
+REVERSE h_k*(1-2t)^2 judged not simple: 38 of 38
+REVERSE N(k,peak)*2 makes h_k non-real-rooted for 34 of 34 k
+REVERSE claim #roots>1 = floor(k/3)+1 rejected for 60 of 60 k
+elapsed 8.9s
+TOTAL PASS=1617 FAIL=0

@@ -403,9 +403,9 @@ def run_checks(tex):
     g = lambda X: X ** 3 + Fraction(1, 2) * X - Fraction(1, 2)   # monic min. poly of eta (root of b_2)
     ok = (-f(Fraction(-1)) == 3) and (-f(Fraction(0)) == 1)
     ok &= (-g(Fraction(0)) == Fraction(1, 2)) and (8 * g(Fraction(2)) == 68)
-    ok &= Fraction(1 - Fraction(68, 100)) - Fraction(68, 100) ** 3 > 0 and 1 - Fraction(69, 100) - Fraction(69, 100) ** 3 < 0
-    ok &= (Fraction(100, 68) ** 3) < 6
-    check('P15 norms Nm(1+xi)=3, Nm(xi)=1, Nm(eta)=1/2, Nm(4-2eta)=68; 0.68<xi<0.69; xi^-3<6', ok)
+    lo, hi = Fraction(68225, 100000), Fraction(68235, 100000)       # b_1 is decreasing on R
+    ok &= (1 - lo - lo ** 3 > 0) and (1 - hi - hi ** 3 < 0) and norm('\\xi\\approx0.6823') in norm(tex)
+    check('P15 norms Nm(1+xi)=3, Nm(xi)=1, Nm(eta)=1/2, Nm(4-2eta)=68; xi = 0.6823 to four places', ok)
 
     # --- residues at the fibres (numerical spot check of the closed forms)
     import cmath
@@ -562,11 +562,396 @@ def run_checks(tex):
     check('P23 rows n=2..7: minimal orders 10,22,28,49,55,85 (exact BM) = numbers of distinct products of characteristic roots', ok,
           'orders=%s' % orders)
 
-    # --- the shapes (alpha,beta) = (1,2), (2,3): fibre polynomials are increasing on the real line
-    xi = [z for z in np.roots([-1, 0, -1, 1]) if abs(z.imag) < 1e-12][0].real
-    v12, v23 = xi ** -3, xi ** -4
-    ok = v12 < 6 and abs(v12 - xi ** 3 / (1 - xi) ** 2) < 1e-12 and abs(v23 - xi ** 5 / (1 - xi) ** 3) < 1e-12
-    check('P22 fibre values v(xi): (1,2) gives xi^-3 < 6, (2,3) gives xi^-4', ok, 'xi^-3=%.6f xi^-4=%.6f' % (v12, v23))
+    # --- Sections sec:single (Theorem thm:shapes), sec:twofam and sec:realroots (added 8 October 2026)
+    run_checks_tableB(tex)
+
+
+# ---------------------------------------------------------------- helpers for the Table B sections
+def p_der(p):
+    return p_trim([i * p[i] for i in range(1, len(p))] or [Fraction(0)])
+
+
+def p_divmod(a, b):
+    a, b = p_trim([Fraction(c) for c in a]), p_trim([Fraction(c) for c in b])
+    q = [Fraction(0)] * max(1, len(a) - len(b) + 1)
+    while p_deg(a) >= p_deg(b) and p_deg(a) >= 0:
+        sh = p_deg(a) - p_deg(b)
+        c = a[-1] / b[-1]
+        q[sh] = c
+        a = p_trim(p_add(a, [Fraction(0)] * sh + [-c * t for t in b]))
+    return p_trim(q), a
+
+
+def p_gcd(a, b):
+    a, b = p_trim(a), p_trim(b)
+    while p_deg(b) >= 0:
+        a, b = b, p_divmod(a, b)[1]
+    return [c / a[-1] for c in a]
+
+
+def sturm_count(p, a=None, b=None):
+    """Number of distinct real zeros of p in (a, b]; a=None means -infinity, b=None means +infinity."""
+    seq = [p_trim(p), p_der(p)]
+    while p_deg(seq[-1]) > 0:
+        r = p_divmod(seq[-2], seq[-1])[1]
+        if p_deg(r) < 0:
+            break
+        seq.append([-c for c in r])
+
+    def sgn_at(x):
+        out = []
+        for s in seq:
+            if x is None or isinstance(x, str):
+                lead = s[-1] * (1 if x == '+' or p_deg(s) % 2 == 0 else -1)
+                v = lead
+            else:
+                v = p_eval(s, x)
+            if v != 0:
+                out.append(v > 0)
+        return sum(1 for i in range(len(out) - 1) if out[i] != out[i + 1])
+    return sgn_at('-' if a is None else a) - sgn_at('+' if b is None else b)
+
+
+def run_checks_tableB(tex):
+    import numpy as np
+    bn = core.binom
+    z1 = [Fraction(1), Fraction(1)]                      # 1 + z
+
+    def nrow(k):
+        return p_trim([Fraction(N(k, q)) for q in range(1, k + 1)])
+
+    def hpoly(k):                                        # from the definition: (1-t)^{k+1} sum_m U_k(m) t^m
+        return p_trim([Fraction(sum((-1) ** (i - j) * bn(k + 1, i - j) * U(k, j) for j in range(0, i + 1)))
+                       for i in range(0, k + 1)])
+
+    def opD(p):
+        return p_add(p_mul(z1, p_der(p)), [2 * c for c in p])
+
+    def opT(p):
+        return p_trim(p_mul([Fraction(0), Fraction(1)], opD(p)))
+
+    def opPsi(p):
+        return p_trim(p_mul(z1, opT(p)))
+
+    def eq(p, q):
+        return p_trim(p_add(p, [-c for c in q])) == [0]
+
+    def num_inside(s):
+        return norm(s) in norm(tex)
+
+    # P25: definitions and examples at the start of Section sec:realroots
+    ok = True
+    for k in range(1, 31):
+        hk, nk = hpoly(k), nrow(k)
+        viaN = [Fraction(0)]
+        for q in range(1, k + 1):
+            term = [Fraction(N(k, q))]
+            term = p_mul(term, [Fraction(0)] * (q - 1) + [Fraction(1)])
+            for _ in range(k - q):
+                term = p_mul(term, [Fraction(1), Fraction(-1)])
+            viaN = p_add(viaN, term)
+        ok &= eq(hk, viaN) and p_deg(nk) == k - 1 and nk[0] == 1 and N(k, 1) == 1
+        # n_k(z) = (1+z)^{k-1} h_k(z/(1+z)), i.e. sum_i h_{k,i} z^i (1+z)^{k-1-i}
+        rhs = [Fraction(0)]
+        for i, c in enumerate(hk):
+            term = p_mul([c], [Fraction(0)] * i + [Fraction(1)])
+            for _ in range(k - 1 - i):
+                term = p_mul(term, z1)
+            rhs = p_add(rhs, term)
+        ok &= eq(nk, rhs)
+    ok &= nrow(2) == [1, 2] and nrow(3) == [1, 4, 2]
+    ok &= hpoly(3) == [1, 2, -1] and hpoly(4) == [1, 4, -3]
+    ok &= eq(nrow(4), p_mul(z1, [1, 6, 2]))
+    # zeros quoted: h_3 = -(t^2-2t-1), h_4 = -(3t^2-4t-1), n_3 = 2z^2+4z+1, the quadratic factor of n_4 is 2z^2+6z+1
+    s2, s7 = math.sqrt(2), math.sqrt(7)
+    ok &= hpoly(3) == [1, 2, -1] and all(abs(1 + 2 * t - t * t) < 1e-12 for t in (1 + s2, 1 - s2))
+    ok &= all(abs(1 + 4 * t - 3 * t * t) < 1e-12 for t in ((2 + s7) / 3, (2 - s7) / 3))
+    ok &= sorted([1 - s2, (2 - s7) / 3, (2 + s7) / 3, 1 + s2]) == [1 - s2, (2 - s7) / 3, (2 + s7) / 3, 1 + s2]
+    n3z, n4z = [-1 - s2 / 2, -1 + s2 / 2], [(-3 - s7) / 2, -1.0, (-3 + s7) / 2]
+    ok &= all(abs(1 + 4 * z + 2 * z * z) < 1e-12 for z in n3z) and all(abs(1 + 6 * z + 2 * z * z) < 1e-12 for z in n4z[::2])
+    ok &= n4z[0] < n3z[0] < n4z[1] < n3z[1] < n4z[2]
+    for s in ('h_3=1+2t-t^2', 'h_4=1+4t-3t^2', 'n_2=1+2z', 'n_3=1+4z+2z^2', 'n_4=(1+z)(1+6z+2z^2)',
+              '1\\pm\\sqrt2', '(2\\pm\\sqrt7)/3', '(-3\\pm\\sqrt7)/2', '-1\\pm\\sqrt2/2'):
+        ok &= num_inside(s)
+    check('P25 Section realroots: h_k via N and n_k via h_k (k<=30), n_2, n_3, n_4, h_3, h_4 and the quoted zeros', ok)
+
+    # P26: the operators, the row recurrence and the base cases of Proposition prop:four
+    ok = eq(opT(nrow(1)), [0, 2]) and eq(opT(nrow(2)), p_mul([0, 2], [2, 3])) and eq(opPsi(nrow(1)), p_mul([0, 2], z1))
+    ok &= eq(opT(nrow(3)), p_mul(p_mul([0, 2], [1, 2]), [3, 2]))
+    ok &= p_eval(nrow(3), Fraction(-1, 2)) == Fraction(-1, 2)
+    ok &= eq(nrow(3), p_add(p_mul(z1, nrow(2)), [0, 1]))
+    ok &= eq(nrow(4), p_mul(z1, p_add(nrow(3), [0, 2])))
+    for k in range(4, 41):
+        ok &= eq(nrow(k), p_add(p_mul(z1, nrow(k - 1)), opPsi(nrow(k - 3))))
+        ok &= eq(nrow(k), p_mul(z1, p_add(nrow(k - 1), opT(nrow(k - 3)))))
+    for p in ([1], [3, 1], [2, 5, 1], [1, 0, 4, 7]):
+        p = [Fraction(c) for c in p]
+        ok &= eq(opT(p_mul(z1, p)), p_mul(z1, p_add(opT(p), p_mul([0, 1], p))))
+    for zz, pol in ((-Fraction(2, 3), opT(nrow(2))), (Fraction(-1), opPsi(nrow(1))), (Fraction(-3, 2), opT(nrow(3))),
+                    (Fraction(-1, 2), opT(nrow(3))), (Fraction(0), opT(nrow(3)))):
+        ok &= p_eval(pol, zz) == 0
+    chain = [-1 - s2 / 2, -1.5, -1.0, -2 / 3, -0.5, -1 + s2 / 2, 0.0]
+    ok &= all(chain[i] < chain[i + 1] for i in range(len(chain) - 1))
+    for s in ('\\mathcal Tn_1=2z', '\\mathcal Tn_2=2z(2+3z)', '\\Psi n_1=2z(1+z)', '\\mathcal Tn_3=2z(2z+1)(2z+3)',
+              'n_3(-1/2)=-1/2', 'n_4=(1+z)(n_3+2z)', 'n_3=(1+z)n_2+z'):
+        ok &= num_inside(s)
+    check('P26 operators T, Psi; row recurrence (4<=k<=40); base polynomials, their zeros and the order of the zeros', ok)
+
+    # P27: Theorem thm:realroots, Corollary cor:logconcave and Remark rem:hk-signs (exact, k<=30 / k<=50)
+    ok = True
+    for k in range(2, 31):
+        nk, hk = nrow(k), hpoly(k)
+        mu = 0
+        rest = nk
+        while p_eval(rest, -1) == 0:
+            rest = p_divmod(rest, z1)[0]
+            mu += 1
+        ok &= mu == -(-k // 3) - 1                                       # ceil(k/3) - 1
+        lam = p_eval(rest, -1)                                           # Lemma lem:minusone: sign of lambda_k
+        ok &= lam != 0 and (lam > 0) == (((k // 3) + (1 if k % 3 == 2 else 0)) % 2 == 0)
+        ok &= p_deg(p_gcd(rest, p_der(rest))) == 0                       # simple zeros apart from -1
+        ok &= sturm_count(rest) == p_deg(rest)                           # all real
+        ok &= p_deg(p_gcd(hk, p_der(hk))) == 0 and sturm_count(hk) == p_deg(hk) == (2 * k) // 3
+        ok &= sturm_count(hk, Fraction(1)) == k // 3 and sturm_count(hk, None, Fraction(0)) == (k + 1) // 3
+        ok &= sturm_count(hk, Fraction(0), Fraction(1)) == 0 and p_eval(hk, 0) == 1
+        signs = [c > 0 for c in hk if c != 0]
+        ok &= sum(1 for i in range(len(signs) - 1) if signs[i] != signs[i + 1]) == k // 3
+        ok &= (hk[-1] > 0) == ((k // 3) % 2 == 0)
+    # base values (a_k, lambda_k) for k <= 3 as printed, and T((1+z)^a m) = z (1+z)^a ((a+2) m + (1+z) m')
+    ok &= [(0, p_eval(nrow(k), -1)) for k in (1, 2, 3)] == [(0, 1), (0, -1), (0, -1)]
+    ok &= norm('$(a_k,\lambda_k)=(0,1),(0,-1),(0,-1)$') in norm(tex)
+    for a in range(0, 4):
+        for m_ in ([1], [2, 1], [1, 3, 1]):
+            m_ = [Fraction(c) for c in m_]
+            pp = m_
+            for _ in range(a):
+                pp = p_mul(pp, z1)
+            rhs = p_mul([0, 1], p_add([(a + 2) * c for c in m_], p_mul(z1, p_der(m_))))
+            for _ in range(a):
+                rhs = p_mul(rhs, z1)
+            ok &= eq(opT(pp), rhs)
+    for k in range(1, 51):
+        row = [N(k, q) for q in range(1, k + 1)]
+        ok &= all(v > 0 for v in row) and all(row[q] ** 2 > row[q - 1] * row[q + 1] for q in range(1, k - 1))
+        tot = sum(row)
+        e1 = Fraction(sum((q + 1) * v for q, v in enumerate(row)), tot)
+        e2 = Fraction(sum((q + 1) ** 2 * v for q, v in enumerate(row)), tot)
+        ok &= e2 - e1 ** 2 >= Fraction(-(-k // 3) - 1, 4)
+    check('P27 n_k: zero -1 of multiplicity ceil(k/3)-1, other zeros real and simple; h_k real-rooted with simple zeros, '
+          'zero counts and sign changes floor(k/3) (k<=30); rows positive, strictly log-concave, Var X_k bound (k<=50)', ok)
+
+    # P28: Theorem thm:shapes - the constructions for alpha+beta=1 and the constants in the proof
+    ok = True
+    for mm in range(1, 5):
+        for k in range(0, 31):
+            newton = sum(sum((-1) ** (s - j) * bn(s, j) * U(j, mm) for j in range(0, s + 1)) * bn(k, s) for s in range(0, k + 1))
+            psums = sum((U(s, mm) - (U(s - 1, mm) if s >= 1 else 0)) * bn(k - s, 0) for s in range(0, k + 1))
+            ok &= newton == U(k, mm) and psums == U(k, mm)
+    lo, hi = Fraction(0), Fraction(1)
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if 1 - mid - mid ** 3 > 0:
+            lo = mid
+        else:
+            hi = mid
+    ok &= 2 * hi ** 3 < Fraction(64, 100)
+    inv3 = 1 / hi ** 3                                                     # xi^-3 > inv3
+    ok &= inv3 * (inv3 - 1) ** 2 > Fraction(38, 10) ** 2                 # (xi^-3/2 (xi^-3 - 1))^2 > 3.8^2
+    import cmath
+    xr = float(hi)
+    xi2 = [z for z in np.roots([-1, 0, -1, 1]) if abs(z.imag) > 1e-9][0]
+    ok &= abs(abs(xi2) ** 2 - 1 / xr) < 1e-12 and abs((1 - xi2) - xi2 ** 3) < 1e-12
+    for beta in (3, 5, 7, 9):
+        zetas = [cmath.exp(2j * math.pi * r / beta) for r in range(beta)]
+        prod_z = 1
+        prod_s = 1
+        for zt in zetas:
+            prod_z *= zt
+            prod_s *= xr ** 2 + zt
+            xz = zt / (xr ** 2 + zt)
+            ok &= abs(xz ** 3 / (1 - xz) - zt ** 3 / (xr ** 2 * (xr ** 2 + zt) ** 2)) < 1e-9
+        ok &= abs(prod_z - 1) < 1e-9 and abs(prod_s - (xr ** (2 * beta) + 1)) < 1e-9
+        chi = lambda X: (1 - X) ** beta + X ** beta
+        ok &= abs(chi(xr) - (xr ** (3 * beta) + xr ** beta)) < 1e-12 and abs(chi(xi2)) > 3.8
+    ok &= 1 / (1 - xr ** 2) > 1
+    for s in ('2\\xi^3<0.64', '>3.8', '\\prod_\\zeta(\\xi^2+\\zeta)=\\xi^{2\\beta}+1'):
+        ok &= num_inside(s)
+    check('P28 shapes with alpha+beta=1 (m<=4, k<=30); 2xi^3<0.64 and xi^-3/2(xi^-3-1)>3.8 (exact); case alpha=0 identities', ok)
+
+    # P29: Section sec:twofam - families, G_0, G^up_1, G^up_2, the certificate table and the counts
+    K = 40
+
+    def ser_inv(a):
+        b = [Fraction(0)] * K
+        b[0] = 1 / a[0]
+        for n in range(1, K):
+            b[n] = -sum(a[i] * b[n - i] for i in range(1, min(n, len(a) - 1) + 1)) / a[0]
+        return b
+
+    def ser_mul(a, b):
+        return [sum(a[i] * b[n - i] for i in range(0, n + 1) if i < len(a) and n - i < len(b)) for n in range(K)]
+
+    def bpoly(v):
+        return [Fraction(1), Fraction(-1), Fraction(0), Fraction(-v)]
+
+    def Pm(mm):
+        P = [Fraction(1)]
+        for v in range(0, mm + 1):
+            P = p_mul(P, bpoly(v))
+        return P
+
+    def Wm(mm):
+        W = [Fraction(1)]
+        for j in range(1, mm + 1):
+            W = p_add(W, [Fraction(0), Fraction(0)] + [j * c for c in Pm(j - 1)])
+        return W
+    ok = True
+    for g in range(-5, 4):
+        for s in range(1, 5):
+            # x^g u^s = x^{g+3s} (1-x)^{-s}
+            lhs = [Fraction(bn(k - g - 2 * s - 1, s - 1)) for k in range(K)]
+            rhs = [Fraction(0)] * K
+            for n in range(K):
+                e = n - (g + 3 * s)
+                rhs[n] = Fraction(bn(e + s - 1, s - 1)) if e >= 0 else Fraction(0)
+            ok &= lhs == rhs
+    one_minus_x = [Fraction(1), Fraction(-1)]
+    ok &= ser_mul([Fraction(0)] * 3 + [Fraction(1)], ser_inv(one_minus_x))[3:] == [Fraction(1)] * (K - 3)
+    up1 = ser_mul(p_add(Wm(1), [-1]) + [Fraction(0)] * K, ser_inv(Pm(1)))
+    # x^{-1} u/(1-u) = x^2/(1-x-x^3)
+    ok &= up1 == ser_mul([0, 0, 1] + [Fraction(0)] * K, ser_inv(bpoly(1)))
+    up2 = ser_mul(p_add(Wm(2), [-1]) + [Fraction(0)] * K, ser_inv(Pm(2)))
+    # x^{-4}u^2/((1-u)(1-2u)) = x^2/((1-x)^2 (1-u)(1-2u)) = x^2/(b_1 b_2);  2x^{-1}u/(1-2u) = 2x^2/b_2
+    alt = p_add(ser_mul([0, 0, 1] + [Fraction(0)] * K, ser_inv(p_mul(bpoly(1), bpoly(2)))),
+                ser_mul([0, 0, 2] + [Fraction(0)] * K, ser_inv(bpoly(2))))
+    ok &= up2 == alt[:K]
+    # enumerate U^up directly for small k as an independent check of G^up_2 (and G^up_1)
+    import itertools
+    for mm, ser in ((1, up1), (2, up2)):
+        for k in range(2, 9):
+            cnt = 0
+            for h in itertools.product(range(mm + 1), repeat=k):
+                if h[-2] < h[-1] and all(core.good(h[j], h[j + 1], h[j + 2]) for j in range(k - 2)):
+                    cnt += 1
+            ok &= cnt == ser[k]
+    # the certificate table as printed
+    rows = table_rows(tex, 'tab:cert')
+    printed = {}
+    if rows:
+        for r in rows:
+            i = int(re.search(r'i=(\d)', r[0]).group(1))
+            printed[i] = [tuple(int(v) for v in pr) for pr in re.findall(r'\((\d+),(\d+)\)', r[1].replace(' ', ''))]
+    expect = {1: [(3, 8), (11, 60), (13, 168), (29, 840), (2521, 2520)],
+              2: [(7, 48), (17, 72), (19, 18), (41, 280), (71, 5040), (127, 126)],
+              3: [(13, 84), (71, 70)]}
+    ok &= printed == expect
+
+    def is_prime(n):
+        return n > 1 and all(n % d for d in range(2, int(n ** 0.5) + 1))
+
+    def mulmod(a, b, i, mod):                       # in Z/mod[x]/(x^3 - (1-x)/i)
+        r = [0] * 5
+        for p_ in range(3):
+            for q_ in range(3):
+                r[p_ + q_] += a[p_] * b[q_]
+        inv_i = pow(i, -1, mod)
+        for d in (4, 3):
+            w = r[d] % mod
+            r[d] = 0
+            r[d - 3] += w * inv_i                   # x^3 = inv_i - inv_i x
+            r[d - 2] -= w * inv_i
+        return [c % mod for c in r[:3]]
+
+    def powmod(e, i, mod):
+        res, base = [1, 0, 0], [0, 1, 0]
+        while e:
+            if e & 1:
+                res = mulmod(res, base, i, mod)
+            base = mulmod(base, base, i, mod)
+            e >>= 1
+        return res
+
+    for i, lst in expect.items():
+        for (l, P) in lst:
+            ok &= is_prime(l) and l % 2 == 1 and i % l != 0 and 5040 % P == 0
+            ok &= powmod(P, i, l) == [1, 0, 0]
+            ok &= all(powmod(P // r, i, l) != [1, 0, 0] for r in (2, 3, 5, 7) if P % r == 0)   # exact order
+    ok &= 5040 == 2 ** 4 * 3 ** 2 * 5 * 7 and 5040 * 5039 == 25396560 and num_inside('25{,}396{,}560')
+
+    def Wt(i):                                       # tilde W_i = 1 + sum_j j i^{(j)} x^{3j+2}
+        W = [0] * (3 * i + 3)
+        W[0] = 1
+        ff = 1
+        for j in range(1, i + 1):
+            ff *= (i - j + 1)
+            W[3 * j + 2] += j * ff
+        return W
+
+    def elem(poly, i, mod):                          # value of a polynomial at eta in Z/mod[eta]
+        res = [0, 0, 0]
+        pw = [1, 0, 0]
+        for c in poly:
+            res = [(res[t] + c * pw[t]) % mod for t in range(3)]
+            pw = mulmod(pw, [0, 1, 0], i, mod)
+        return res
+
+    cache = {}
+
+    def theta_fail(i, l, P, n0, up):
+        if (i, l, up) not in cache:
+            y = powmod(P, i, l * l)
+            W = list(Wt(i))
+            if up:
+                W[0] -= 1
+            cache[(i, l, up)] = (((y[1] // l) % l, (y[2] // l) % l), elem(W, i, l))
+        mu, ew = cache[(i, l, up)]
+        en = powmod(n0 % P, i, l)
+        g = mulmod(ew, en, i, l)
+        return (mu[0] * g[2] - mu[1] * g[1]) % l == 0
+
+    ok &= Wt(1) == [1, 0, 0, 0, 0, 1]
+    fail_U = [n0 for n0 in range(5040) if all(theta_fail(1, l, P, n0, False) for (l, P) in expect[1])]
+    fail_E = [n0 for n0 in range(5040) if all(theta_fail(1, l, P, n0, True) for (l, P) in expect[1])]
+    ok &= fail_U == [] and fail_E == [2515, 5035] and 5035 % 5040 == (-5) % 5040
+    firsts = []
+    for n0 in fail_E:
+        first = next((l for (l, P) in expect[2] if not theta_fail(2, l, P, n0, True)), None)
+        firsts.append(first)
+    ok &= firsts == [7, 17]                                   # 7 resolves n0 = 2515, 17 resolves n0 = 5035
+    hits = {}
+    for n0 in range(5040):
+        first = next((l for (l, P) in expect[1] if not theta_fail(1, l, P, n0, False)), None)
+        hits[first] = hits.get(first, 0) + 1
+    ok &= hits == {3: 3780, 11: 1176, 13: 72, 29: 6, 2521: 6}
+    ok &= num_inside('$3780$, $1176$, $72$, $6$ and $6$') and num_inside('succeed, respectively')
+    for s in ('M=5040=2^4\\cdot3^2\\cdot5\\cdot7', 'n_0\\in\\{2515,5035\\}', 'the primes $7$ and $17$',
+              'G_0=1/(1-x)=x^{-3}u', 'G^{\\uparrow}_1=x^{-1}u/(1-u)', '\\tilde W_1-1=x^5'):
+        ok &= num_inside(s)
+    check('P29 Section twofam: families x^g u^s, G_0, G^up_1, G^up_2; certificate table (primes, exact orders | 5040); '
+          '5040*5039; fibre-1 l-adic first hits 3780/1176/72/6/6 (U); failures exactly at n0 = 2515, 5035 (E), resolved by l = 7, 17', ok,
+          'fail_E=%s firsts=%s hits=%s' % (fail_E, firsts, dict(sorted(hits.items()))))
+
+    # P30: the residue formula eq:resid (numerical spot check, fibres i = 1, 2, 3)
+    ok = True
+
+    def ev(p, zz):
+        s = 0
+        for c in reversed(p):
+            s = s * zz + float(c)
+        return s
+
+    for i in (1, 2, 3):
+        for mm in range(i, i + 4):
+            P_, W_ = Pm(mm), Wm(mm)
+            dP = p_der(P_)
+            for eta in np.roots([-i, 0, -1, 1]):
+                up = eta ** 2 * (3 - 2 * eta) / (1 - eta) ** 2
+                res = ev(W_, eta) / ev(dP, eta)
+                Wte = ev([Fraction(c) for c in Wt(i)], eta)
+                closed = (-1) ** (mm - i + 1) * Wte * eta ** (-3 * mm - 3) / (math.factorial(mm - i) * math.factorial(i) * i * i)
+                ok &= abs(up * res - closed) < 1e-8 * max(1, abs(closed))
+                ok &= abs(ev(W_, eta) - Wte) < 1e-9 * max(1, abs(Wte))
+    check('P30 residue formula eq:resid on the fibres i=1,2,3 (numerical, i<=m<=i+3); W_m(eta) = tilde W_i(eta)', ok)
 
 
 def print_tables():

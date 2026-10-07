@@ -1,0 +1,21 @@
+elapsed 12.7s
+construction g<<f            PASS=1500 FAIL=0
+L1 =>                        PASS=1500 FAIL=0
+L1 <=> on random pair        PASS=1500 FAIL=0
+L3a                          PASS=1500 FAIL=0
+construction f<<g            PASS=1500 FAIL=0
+L3b                          PASS=1500 FAIL=0
+L4i f<<(1+z)f                PASS=1500 FAIL=0
+L4i f'<<f                    PASS=1500 FAIL=0
+L4ii f<<zg                   PASS=1500 FAIL=0
+L4iii g'<<f'                 PASS=1376 FAIL=0
+L5i Tf, Phi f real-rooted    PASS=1500 FAIL=0
+L5ii Tg<<Tf                  PASS=1500 FAIL=0
+L5ii Phi g<<Phi f            PASS=1500 FAIL=0
+L5iii (1+z)f<<Tf             PASS=1500 FAIL=0
+L5iv                         PASS=1500 FAIL=0
+Thm2 caseA sign              PASS=2546 FAIL=0
+Sec4 count                   PASS=35950 FAIL=0
+random pair outcome          (not a check) judged interlacing=446, non-interlacing=1054
+method disagreements: 0
+TOTAL PASS=60872 FAIL=0

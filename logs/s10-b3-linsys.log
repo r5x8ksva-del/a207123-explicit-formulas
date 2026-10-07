@@ -1,0 +1,6 @@
+L1 systems=11844 verdicts={'nosol-modp': 9528, 'nosol-allzero': 1176, 'nosol': 1140}
+PASS L1 every shape with alpha+beta>=2 (40 shapes incl. (2,1)) unsolvable in all 11844 systems
+PASS L2 controls (1,0),(0,1): solvable exactly when predicted (756 systems)
+PASS L3 explicit integer left-kernel certificates verified for 196 sampled systems
+PASS L4 reverse checks: sequences that do have a representation are reported solvable
+SUMMARY linsys: 4 PASS, 0 FAIL  (92.9 s)

@@ -1,0 +1,33 @@
+!! S10B3_CORRUPT=seq: U replaced by U-U^up (reverse check)
+FAIL L1 solvable: shape=(2,1) m=1 c=-3 d=3 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=-3 d=3 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=-1 d=2 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=-1 d=2 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=1 d=1 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=1 d=1 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=3 d=0 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=1 c=3 d=0 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=2 c=0 d=3 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=2 c=0 d=3 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=2 c=2 d=2 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=2 c=2 d=2 k0=7 s0=None
+FAIL L1 solvable: shape=(2,1) m=3 c=3 d=3 k0=0 s0=None
+FAIL L1 solvable: shape=(2,1) m=3 c=3 d=3 k0=7 s0=None
+L1 systems=11844 verdicts={'nosol-modp': 9514, 'nosol-allzero': 1176, 'nosol': 1140, 'sol': 14}
+FAIL L1 every shape with alpha+beta>=2 (40 shapes incl. (2,1)) unsolvable in all 11844 systems
+PASS L2 controls (1,0),(0,1): solvable exactly when predicted (756 systems)
+PASS L3 explicit integer left-kernel certificates verified for 196 sampled systems
+FAIL L4a (2,1) control m=1 k0=0 verdict=nosol-modp
+FAIL L4a U itself solvable m=1 k0=0
+FAIL L4a (2,1) control m=1 k0=7 verdict=nosol-modp
+FAIL L4a U itself solvable m=1 k0=7
+FAIL L4a (2,1) control m=2 k0=0 verdict=nosol-modp
+FAIL L4a U itself solvable m=2 k0=0
+FAIL L4a (2,1) control m=2 k0=7 verdict=nosol-modp
+FAIL L4a U itself solvable m=2 k0=7
+FAIL L4a (2,1) control m=3 k0=0 verdict=nosol-modp
+FAIL L4a U itself solvable m=3 k0=0
+FAIL L4a (2,1) control m=3 k0=7 verdict=nosol-modp
+FAIL L4a U itself solvable m=3 k0=7
+FAIL L4 reverse checks: sequences that do have a representation are reported solvable
+SUMMARY linsys: 2 PASS, 2 FAIL  (94.0 s)

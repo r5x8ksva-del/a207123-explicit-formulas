@@ -1,0 +1,7 @@
+PASS B1 DP=brute (m<=3,k<=8)
+PASS B2 DP=series(W_m/P_m) (m<=5,k<=40)
+PASS B3 GF identity of each term (1068984 coefficient comparisons)
+PASS B4 (0,1) Newton series reproduces U (m<=4,k<=40)
+PASS B5 (1,0) partial sums and d>=1 constructions reproduce U
+PASS B6 U-U^up = sum S(m+s,m) C(k+m-2s,m+s) (m<=4,k<=40)
+SUMMARY basics: 6 PASS, 0 FAIL

@@ -1,0 +1,31 @@
+PASS cross-validation dense vs sparse sieve, T=5040, U with fibres (1,) only: 5152 vs 5152 survivors
+PASS cross-validation dense vs sparse sieve, T=5040, E with fibres (1, 2) only: 6 vs 6 survivors
+   fibre 1  l=53    P=468    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=131   P=130    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=181   P=32760  {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=521   P=520    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=937   P=936    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 1  l=2341  P=585    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=3     P=26     {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=131   P=130    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=937   P=936    {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 2  l=1093  P=1092   {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 3  l=5     P=20     {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': False}
+   fibre 3  l=131   P=65     {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+   fibre 3  l=181   P=32760  {'prime': True, 'odd': True, 'l_not_div_i': True, 'exact_order': True, 'P_div_T': True, 'l_not_div_disc': True}
+PASS static facts of the new certificate (prime, odd, l!|i, exact order, P|32760, not a note-08 prime of that fibre)
+PASS lcm of periods: U = 32760, E = 32760
+PASS sieve U fibres (1, 2): every (n0,b0), b0 != 0 mod 32760, excluded | survivors=0 sample=[] (after dense phase 763848) 49s
+PASS l-adic U fibres (1, 2): mu (mod l^2 route) == mu (exact eta^P route)
+PASS l-adic U fibres (1, 2): every n0 in Z/32760 covered | uncovered=[] first-hits=[(1, 53, 32130), (1, 131, 616), (1, 181, 14), (1, 521, 0), (1, 937, 0), (1, 2341, 0), (2, 3, 0), (2, 131, 0), (2, 937, 0), (2, 1093, 0)]
+PASS sieve E fibres (1, 2, 3): every (n0,b0), b0 != 0 mod 32760, excluded | survivors=0 sample=[] (after dense phase 806472) 43s
+PASS l-adic E fibres (1, 2, 3): mu (mod l^2 route) == mu (exact eta^P route)
+PASS l-adic E fibres (1, 2, 3): every n0 in Z/32760 covered | uncovered=[] first-hits=[(1, 53, 32200), (1, 131, 532), (1, 181, 27), (1, 521, 0), (1, 937, 0), (1, 2341, 0), (2, 3, 1), (2, 131, 0), (2, 937, 0), (2, 1093, 0), (3, 5, 0), (3, 131, 0), (3, 181, 0)]
+PASS sieve U fibres (1, 2) without ((2, 3),): every (n0,b0), b0 != 0 mod 32760, excluded | survivors=0 sample=[] (after dense phase 763848) 39s
+PASS l-adic U fibres (1, 2) without ((2, 3),): mu (mod l^2 route) == mu (exact eta^P route)
+PASS l-adic U fibres (1, 2) without ((2, 3),): every n0 in Z/32760 covered | uncovered=[] first-hits=[(1, 53, 32130), (1, 131, 616), (1, 181, 14), (1, 521, 0), (1, 937, 0), (1, 2341, 0), (2, 131, 0), (2, 937, 0), (2, 1093, 0)]
+PASS sieve E fibres (1, 2, 3) without ((2, 3), (3, 5)): every (n0,b0), b0 != 0 mod 32760, excluded | survivors=0 sample=[] (after dense phase 806472) 42s
+PASS l-adic E fibres (1, 2, 3) without ((2, 3), (3, 5)): mu (mod l^2 route) == mu (exact eta^P route)
+PASS l-adic E fibres (1, 2, 3) without ((2, 3), (3, 5)): every n0 in Z/32760 covered | uncovered=[] first-hits=[(1, 53, 32200), (1, 131, 532), (1, 181, 27), (1, 521, 0), (1, 937, 0), (1, 2341, 0), (2, 131, 1), (2, 937, 0), (2, 1093, 0), (3, 131, 0), (3, 181, 0)]
+time 186s
+SUMMARY s10_indep_cert: PASS=16 FAIL=0

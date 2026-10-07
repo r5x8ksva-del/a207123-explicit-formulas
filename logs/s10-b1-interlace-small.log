@@ -1,0 +1,38 @@
+four relations up to k=10  0.0s
+step relations up to k=10  0.1s
+theorem 2 checks done 0.2s
+REVERSE T n_{k-1} << n_k (wrong side)      cases=10  judged non-interlacing: C=10 R=10
+REVERSE Phi n_{k-2} << n_k (wrong side)    cases=10  judged non-interlacing: C=10 R=10
+REVERSE n_{k-2}*z << n_k                   cases=10  judged non-interlacing: C=10 R=10
+REVERSE n_{k-1}(perturbed) << n_k          cases=10  judged non-interlacing: C=10 R=10
+REVERSE with T replaced by z(1+z)n'+zn: beta/eps fail in 0 of 20 cases
+
+== summary of relations ==
+alpha                        k=2..16  PASS=15 FAIL=0
+beta                         k=2..16  PASS=15 FAIL=0
+delta                        k=3..16  PASS=14 FAIL=0
+eps                          k=3..16  PASS=14 FAIL=0
+s01 A<<(1+z)A                k=3..11  PASS=9 FAIL=0
+s02 A<<PhiC                  k=3..11  PASS=9 FAIL=0
+s03 A<<n_{k+1}               k=3..11  PASS=9 FAIL=0
+s04 (1+z)A<<TA               k=3..11  PASS=9 FAIL=0
+s05 PhiC<<TA                 k=3..11  PASS=9 FAIL=0
+s06 n_{k+1}<<TA              k=3..11  PASS=9 FAIL=0
+s07 A<<TB                    k=3..11  PASS=9 FAIL=0
+s08 C<<B                     k=3..11  PASS=9 FAIL=0
+s09 TC<<TB                   k=3..11  PASS=9 FAIL=0
+s10 A+TC<<TB                 k=3..11  PASS=9 FAIL=0
+s11 n_{k+1}<<PhiB            k=3..11  PASS=9 FAIL=0
+s12 B<<A                     k=3..11  PASS=9 FAIL=0
+s13 PhiB<<PhiA               k=3..11  PASS=9 FAIL=0
+s14 TB<<zA                   k=3..11  PASS=9 FAIL=0
+s15 PhiB<<z(1+z)A            k=3..11  PASS=9 FAIL=0
+s16 B<<TC                    k=3..11  PASS=9 FAIL=0
+s17 TB<<T(TC)                k=3..11  PASS=9 FAIL=0
+s18 PhiB<<(1+z)T^2C          k=3..11  PASS=9 FAIL=0
+s19 TB<<z TC                 k=3..11  PASS=9 FAIL=0
+s20 PhiB<<z(1+z)TC           k=3..11  PASS=9 FAIL=0
+s21 PhiB<<T n_{k+1}          k=3..11  PASS=9 FAIL=0
+s22 L A<<(1+z)A              k=3..11  PASS=9 FAIL=0
+elapsed 0.2s
+TOTAL PASS=371 FAIL=0

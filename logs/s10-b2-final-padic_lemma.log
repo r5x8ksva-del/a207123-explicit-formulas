@@ -1,0 +1,3 @@
+PASS Lemma 9 conclusion: v_l(D_i(n,Pb')) = 1 + v_l(b') and D/(l^{1+v} ) = (b'/l^v) Delta mod l  (1328 random tests; 122 with Delta = 0 mod l only checked for v_l >= v+2) | []
+PASS exact D (Fractions) agrees with D mod l^6 (96 cases, small periods incl. l=3, l=5 | disc(b_3))
+SUMMARY s10_padic_lemma: PASS=2 FAIL=0

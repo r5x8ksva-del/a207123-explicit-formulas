@@ -1,0 +1,16 @@
+PASS 1a DP == brute force (m<=3, k<=7)
+PASS 1b G_m = W_m/P_m and E_m = (W_m-1)/P_m vs DP (m<=6, k<=30)
+PASS 2a x^g = sum_r e_gr(u) x^r at 12 random rational x (g in [-80,60] step 7)
+PASS 2b e_g(1/i) == coordinates of eta^g in K_i (i=1,2,3; g in [-80,60])
+PASS 3  Lemma 5: u'(eta) * Res = c_{i,m} W~_i(eta) eta^{-3m-3} (U and E; 2<=m<=7; i<=min(m,3)), P_m(eta)=0
+PASS 4a P_m = (1-x)^{m+1} prod (1 - v u) at random points (2<=m<=7)
+PASS 4b R0 + R1 eta + R2 eta^2 == u'(eta) Res_eta (residue vector from symbolic coordinates)
+PASS 5  det[e_g1(1/i), e_g2(1/i), R] == (1/i)^g1 c_{i,m} D_i(n,b) (2<=m<=7, |n|,|b|<=24, 79968 cases)
+   U fibre 1: m=[2, 3, 4, 5, 6], |zero set|=28, identical=True
+   U fibre 2: m=[2, 3, 4, 5, 6], |zero set|=4, identical=True
+   U fibre 3: m=[3, 4, 5, 6], |zero set|=0, identical=True
+   E fibre 1: m=[2, 3, 4, 5, 6], |zero set|=117, identical=True
+   E fibre 2: m=[2, 3, 4, 5, 6], |zero set|=15, identical=True
+   E fibre 3: m=[3, 4, 5, 6], |zero set|=2, identical=True
+PASS 6  zero sets of the fibre determinant identical for m=2..6 (|n|,|b|<=24, b!=0)
+SUMMARY s10_fiber_m_indep: PASS=9 FAIL=0

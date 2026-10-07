@@ -1,0 +1,7 @@
+h from U done 45.8s
+real-simple up to k=25  45.8s
+real-simple up to k=50  46.1s
+real-simple up to k=75  49.1s
+real-simple up to k=100  69.4s
+real-simple up to k=125  155.5s
+real-simple up to k=150  461.5s

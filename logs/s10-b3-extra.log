@@ -1,0 +1,6 @@
+PASS X1 (0,1), m=1,c=0,d=3,k0=0: s free -> sol; s>=0 forced -> nosol-modp
+PASS X2 (1,0), m=1,c=0,d=2,k0=0: s0=-2 -> sol; s0=0 -> nosol-modp
+  U^up solvable systems: [(2, 1, 1, -2, 0, 0), (2, 1, 1, -2, 0, 5), (2, 1, 1, 0, -1, 0), (2, 1, 1, 0, -1, 5), (2, 1, 1, 2, -2, 0), (2, 1, 1, 2, -2, 5)]
+PASS X3 U^up: W_m(xi)-1=xi^5 (m<=20); 3300 systems, solvable only for (2,1) at m=1 (incl. c=0,d=-1)
+PASS X4 (-1,2), m=2, c=d=k0=0 truncated system solvable: sol
+SUMMARY extra: 4 PASS, 0 FAIL

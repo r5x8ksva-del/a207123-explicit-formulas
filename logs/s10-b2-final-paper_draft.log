@@ -1,0 +1,4 @@
+PASS (i) with s>=0 the formula equals U_k(1), k<=60
+PASS (i) with all s (paper convention) the formula equals U_k(1)+1 for every k<=60 | differences k=0..5: [1, 1, 1, 1, 1, 1]
+PASS (ii) [x^k] x^g u^s = C(k-g-2s-1, s-1) for s>=1 (g in [-12,7], s<=6, |k|<40)
+SUMMARY s10_paper_draft: PASS=3 FAIL=0

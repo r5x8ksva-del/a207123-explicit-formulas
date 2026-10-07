@@ -137,3 +137,53 @@
 2026-10-07 18:11:47 UTC | py -3.14 code/review/s9-b7/s9b7_sectors.py > logs/review_s9-b7_sectors.log | exit 0 | 0s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
 2026-10-07 18:17:58 UTC | py -3.14 code/tableB/check_b7_borel.py > logs/tableB_check_b7_borel.log | exit 0 | 7s | PEAK=390 MINHEAD=7047 MINAVAIL=2960 KILLED=0 REASON= QFAIL=0
 2026-10-07 18:23:29 UTC | py -3.14 code/tableB/run_all.py > logs/tableB_run_all.log | exit 0 | 187s | PEAK=396 MINHEAD=7046 MINAVAIL=3024 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:13:01 UTC | py -3.14 code/review/s10-b2/s10_fiber_m_indep.py > logs/s10-b2-fiber_m_indep.log | exit 75 (memory gate) | AVAIL=2481 COMMIT=28312 LIMIT=32429 HEADROOM=4117 TOTAL=16045
+2026-10-07 21:15:43 UTC | py -3.14 code/review/s10-b2/s10_fiber_m_indep.py > logs/s10-b2-fiber_m_indep.log | exit 75 (memory gate) | AVAIL=1959 COMMIT=28332 LIMIT=32429 HEADROOM=4097 TOTAL=16045
+2026-10-07 21:16:31 UTC | py -3.14 code/review/s10-b3/s10b3_basics.py > logs/s10-b3-basics.log | exit 75 (memory gate) | AVAIL=2000 COMMIT=28577 LIMIT=32429 HEADROOM=3852 TOTAL=16045
+2026-10-07 21:16:56 UTC | py -3.14 code/review/s10-b2/s10_fiber_m_indep.py > logs/s10-b2-fiber_m_indep.log | exit 0 | 3s | PEAK=26 MINHEAD=5461 MINAVAIL=2267 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:17:09 UTC | py -3.14 code/review/s10-b2/s10_small_window.py > logs/s10-b2-small_window.log | exit 0 | 4s | PEAK=40 MINHEAD=5697 MINAVAIL=2453 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:17:29 UTC | py -3.14 code/review/s10-b2/s10_note_cert.py > logs/s10-b2-note_cert.log | exit 0 | 13s | PEAK=446 MINHEAD=5285 MINAVAIL=2274 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:17:47 UTC | py -3.14 code/review/s10-b2/s10_find_primes.py > logs/s10-b2-find_primes.log | exit 0 | 8s | PEAK=406 MINHEAD=5563 MINAVAIL=2754 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:17:59 UTC | py -3.14 code/review/s10-b3/s10b3_basics.py > logs/s10-b3-basics.log | exit 0 | 2s | PEAK=24 MINHEAD=5866 MINAVAIL=2710 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:18:08 UTC | py -3.14 code/review/s10-b3/s10b3_fiber.py > logs/s10-b3-fiber.log | exit 0 | 2s | PEAK=23 MINHEAD=5887 MINAVAIL=2661 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:18:55 UTC | py -3.14 code/review/s10-b1/s10b1_check_rec.py > logs/s10-b1-rec.log | exit 0 | 3s | PEAK=24 MINHEAD=7980 MINAVAIL=2908 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:19:37 UTC | py -3.14 code/review/s10-b3/s10b3_linsys.py > logs/s10-b3-linsys.log | exit 0 | 75s | PEAK=24 MINHEAD=5824 MINAVAIL=2601 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:20:02 UTC | py -3.14 code/review/s10-b1/s10b1_check_interlace.py 12 16 > logs/s10-b1-interlace-small.log | exit 1 | 2s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:20:18 UTC | py -3.14 code/review/s10-b1/s10b1_check_interlace.py 12 16 > logs/s10-b1-interlace-small.log | exit 0 | 3s | PEAK=0 MINHEAD=6937 MINAVAIL=2498 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:20:56 UTC | py -3.14 code/review/s10-b3/s10b3_extra.py > logs/s10-b3-extra.log | exit 0 | 10s | PEAK=277 MINHEAD=7559 MINAVAIL=2884 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:21:48 UTC | py -3.14 code/review/s10-b3/s10b3_fiber.py > logs/s10-b3-fiber-reverse.log | exit 1 | 5s | PEAK=378 MINHEAD=6370 MINAVAIL=2239 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:22:40 UTC | py -3.14 code/review/s10-b1/s10b1_check_interlace.py 40 80 > logs/s10-b1-interlace.log | exit 0 | 125s | PEAK=39 MINHEAD=5245 MINAVAIL=880 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:23:35 UTC | py -3.14 code/review/s10-b3/s10b3_linsys.py > logs/s10-b3-linsys-reverse.log | exit 1 | 95s | PEAK=23 MINHEAD=6296 MINAVAIL=2330 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:23:38 UTC | py -3.14 code/review/s10-b2/s10_indep_cert.py > logs/s10-b2-indep_cert.log | exit 0 | 236s | PEAK=488 MINHEAD=5244 MINAVAIL=861 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:24:28 UTC | py -3.14 code/review/s10-b2/s10_reverse.py > logs/s10-b2-reverse.log | exit 0 | 10s | PEAK=437 MINHEAD=6674 MINAVAIL=3070 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:24:43 UTC | py -3.14 code/review/s10-b1/s10b1_check_roots.py 60 > logs/s10-b1-roots-60.log | exit 0 | 10s | PEAK=26 MINHEAD=7130 MINAVAIL=3120 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:24:46 UTC | py -3.14 code/review/s10-b2/s10_padic_lemma.py > logs/s10-b2-padic_lemma.log | exit 0 | 2s | PEAK=0 MINHEAD=7191 MINAVAIL=3162 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:28:49 UTC | py -3.14 C:/Users/MICHAE~1/AppData/Local/Temp/claude/C--Users-Michael-Song-Desktop-----/5bc4016d-f66b-4f07-b791-6be99c1a8cd8/scratchpad/consts.py > logs/s10-b3-consts.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:29:07 UTC | py -3.14 code/review/s10-b3/s10b3_consts.py > logs/s10-b3-consts.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:29:30 UTC | py -3.14 code/review/s10-b2/s10_minimal.py > logs/s10-b2-minimal.log | exit 0 | 152s | PEAK=448 MINHEAD=6297 MINAVAIL=2322 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:31:35 UTC | py -3.14 code/review/s10-b2/s10_fiber_m_indep.py > logs/s10-b2-final-fiber_m_indep.log | exit 0 | 5s | PEAK=25 MINHEAD=7384 MINAVAIL=2731 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:31:41 UTC | py -3.14 code/review/s10-b2/s10_small_window.py > logs/s10-b2-final-small_window.log | exit 0 | 4s | PEAK=42 MINHEAD=7652 MINAVAIL=2869 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:31:43 UTC | py -3.14 code/review/s10-b3/s10b3_basics.py > logs/s10-b3-basics.log | exit 0 | 3s | PEAK=24 MINHEAD=7383 MINAVAIL=2742 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:31:49 UTC | py -3.14 code/review/s10-b3/s10b3_fiber.py > logs/s10-b3-fiber.log | exit 0 | 4s | PEAK=383 MINHEAD=6877 MINAVAIL=2597 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:32:00 UTC | py -3.14 code/review/s10-b3/s10b3_extra.py > logs/s10-b3-extra.log | exit 0 | 9s | PEAK=24 MINHEAD=7159 MINAVAIL=2763 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:32:00 UTC | py -3.14 code/review/s10-b2/s10_note_cert.py > logs/s10-b2-final-note_cert.log | exit 0 | 16s | PEAK=446 MINHEAD=6881 MINAVAIL=2594 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:32:03 UTC | py -3.14 code/review/s10-b2/s10_padic_lemma.py > logs/s10-b2-final-padic_lemma.log | exit 0 | 2s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:32:15 UTC | py -3.14 code/review/s10-b2/s10_reverse.py > logs/s10-b2-final-reverse.log | exit 0 | 10s | PEAK=437 MINHEAD=7144 MINAVAIL=2716 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:33:35 UTC | py -3.14 code/review/s10-b3/s10b3_linsys.py > logs/s10-b3-linsys.log | exit 0 | 94s | PEAK=24 MINHEAD=7075 MINAVAIL=2709 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:35:24 UTC | py -3.14 code/review/s10-b2/s10_indep_cert.py > logs/s10-b2-final-indep_cert.log | exit 0 | 187s | PEAK=487 MINHEAD=6962 MINAVAIL=2710 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:36:50 UTC | py -3.14 code/review/s10-b1/s10b1_check_lemmas.py > logs/s10-b1-lemmas.log | exit 0 | 15s | PEAK=36 MINHEAD=6927 MINAVAIL=2728 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:37:33 UTC | py -3.14 code/review/s10-b2/s10_minimal.py > logs/s10-b2-final-minimal.log | exit 0 | 128s | PEAK=446 MINHEAD=6877 MINAVAIL=2713 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:39:03 UTC | py -3.14 code/review/s10-b2/s10_union8.py > logs/s10-b2-final-union8.log | exit 0 | 13s | PEAK=447 MINHEAD=7014 MINAVAIL=2801 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:40:11 UTC | py -3.14 code/review/s10-b1/s10b1_check_roots.py 200 > logs/s10-b1-roots-200.log | exit 1 | 919s | PEAK=726 MINHEAD=4972 MINAVAIL=757 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:41:46 UTC | py -3.14 code/review/s10-b1/s10b1_check_suggest.py > logs/s10-b1-suggest.log | exit 0 | 2s | PEAK=24 MINHEAD=7910 MINAVAIL=3176 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:43:46 UTC | py -3.14 code/review/s10-b2/s10_paper_draft.py > logs/s10-b2-final-paper_draft.log | exit 0 | 1s | PEAK=0 MINHEAD=-1 MINAVAIL=-1 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:45:20 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 1 | 9s | PEAK=391 MINHEAD=7479 MINAVAIL=3132 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:45:40 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 0 | 9s | PEAK=391 MINHEAD=7555 MINAVAIL=3151 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:48:42 UTC | py -3.14 verify_all.py tb > logs/verify_tb_2026-10-08.log | exit 0 | 40s | PEAK=406 MINHEAD=6808 MINAVAIL=2711 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:49:37 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 0 | 10s | PEAK=390 MINHEAD=7346 MINAVAIL=3093 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:50:22 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 0 | 14s | PEAK=391 MINHEAD=5991 MINAVAIL=2239 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:51:35 UTC | py -3.14 code/review/s10-b1/s10b1_check_roots.py 150 > logs/s10-b1-roots-150.log | exit 0 | 551s | PEAK=100 MINHEAD=5355 MINAVAIL=1258 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:54:36 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 0 | 8s | PEAK=390 MINHEAD=7630 MINAVAIL=4417 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:56:23 UTC | py -3.14 code/main_extra/check_appendix_lean.py paper/main.tex > logs/check_appendix_lean_2026-10-08_tableB.log | exit 0 | 2s | PEAK=23 MINHEAD=8085 MINAVAIL=4473 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:56:58 UTC | py -3.14 verify_all.py > logs/verify_all_2026-10-08_tableB.log | exit 0 | 487s | PEAK=431 MINHEAD=5354 MINAVAIL=1256 KILLED=0 REASON= QFAIL=0
+2026-10-07 21:57:57 UTC | py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex > logs/check_paper_numbers_2026-10-08_tableB.log | exit 0 | 6s | PEAK=391 MINHEAD=7852 MINAVAIL=4543 KILLED=0 REASON= QFAIL=0

@@ -1,0 +1,27 @@
+PASS Branden        10.1201/b18255-13  unimodality log concavity real rootedness and beyond | [2015] | vol None | p 461-508
+PASS Broder         10.1016/0012-365X(84)90161-4  the r stirling numbers | [1984] | vol 49 | p 241-259
+PASS CKS09          10.1145/1576702.1576720  a non holonomic systems approach to special function identit | [2009] | vol None | p 111-118
+PASS DBK            10.37236/12358  hardinian arrays | [2024] | vol 31 | p None
+---- DBKTZ          no DOI
+PASS DBS            10.1145/3717582.3717589  rectangular hardinian arrays | [2024, 2025] | vol 58 | p 81-84
+---- Fisk           no DOI
+PASS GesselStanley  10.1016/0097-3165(78)90042-0  stirling polynomials | [1978] | vol 24 | p 24-33
+PASS Harper         10.1214/aoms/1177698956  stirling behavior is asymptotically normal | [1967] | vol 38 | p 410-414
+PASS Kauers07       10.1016/j.jsc.2007.08.002  summation algorithms for stirling number identities | [2007] | vol 42 | p 948-970
+PASS Kauers23       10.1007/978-3-031-34652-1  d finite functions | [2023] | vol None | p None
+---- KMV            no DOI
+PASS Klazar         10.1016/S0097-3165(03)00014-1  bell numbers their relatives and algebraic differential equa | [2003] | vol 102 | p 63-87
+---- Krause         no DOI
+PASS Lean4          10.1007/978-3-030-79876-5_37  the lean 4 theorem prover and programming language | [2021] | vol None | p 625-635
+PASS Lipshitz       10.1016/0021-8693(89)90222-6  d finite power series | [1989] | vol 122 | p 353-373
+PASS MSP21          10.23638/LMCS-17(1:16)2021  a formal proof of the irrationality of 3 | [2021] | vol 17 | p None
+PASS Mathlib        10.1145/3372885.3373824  the lean mathematical library | [2020] | vol None | p 367-381
+---- OEIS           no DOI
+PASS Smart          10.1017/CBO9781107359994  the algorithmic resolution of diophantine equations | [1998, 2013] | vol None | p None
+PASS Stanley80      10.1016/S0195-6698(80)80051-5  differentiably finite power series | [1980] | vol 1 | p 175-188
+PASS Stanley89      10.1111/j.1749-6632.1989.tb16434.x  log concave and unimodal sequences in algebra combinatorics  | [1989, 2006] | vol 576 | p 500-535
+PASS StanleyEC1     10.1017/CBO9781139058520  enumerative combinatorics | [2011, 2012] | vol None | p None
+PASS WZ92           10.1007/BF02100618  an algorithmic proof theory for hypergeometric ordinary and  | [1992] | vol 108 | p 575-633
+PASS Zeilberger90   10.1016/0377-0427(90)90042-X  a holonomic systems approach to special functions identities | [1990] | vol 32 | p 321-368
+PASS Zhang          10.1145/2930889.2930890  contraction of ore ideals with applications | [2016] | vol None | p 413-420
+21 PASS, 0 FAIL

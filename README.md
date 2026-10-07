@@ -19,11 +19,12 @@
 - 关于 k 的最小递推阶对一切 m 恰为 3m+1；增长率与 c_m 的闭式；
 - 不存在「Stirling×二项式」单和；F(x,t) 与 N(x,y) 的母函数都不是 D-finite；全部多项式系数递推恰为引理 1 生成的左理想，由此 U 不是 Kauers 意义下的 Stirling-like；
 - N(k,k−d) 对 k≥2d+2 是 2d 次多项式（门槛精确）；固定 q 的分子有一般公式；
+- （2026-10-08 并入论文，报告尚未更新）h_k 的根全为实数且互异，N 的每一行严格对数凹、单峰，h_k 恰有 ⌊k/3⌋ 个根大于 1；单族二项式形状 C(k+c−αs, βs+d)（α,β≥0）中只有 α+β=1 能表示 U；m≥2 时 U 不是两个 (2,1) 形状单和之和（计算机辅助证明，模 5040 的筛法加 l 进论证）；
 - Lean 4 + Mathlib 形式化：原题归约、引理 1、最小阶、二项式基、显式公式、非 D-finite、左理想刻画及其维数公式、近对角线、分子结构、h_k 的结构、「不是 Stirling-like」等，共 27 个模块（2026-10-07 全量构建 26 个，同日又加 `NotStirlingLike.lean`），2675 个声明只依赖三条标准公理；各条的覆盖范围见报告标签与 `猜想总表.md`，承重定义的人工核对清单见 `notes/Lean定义核对清单.md`。
-- 英文论文初稿：`paper/main.tex`（LaTeX，2026-10-07 写成完整初稿，用 Tectonic 0.17 编译通过，`paper/main.pdf` 是编译结果；文中 TODO 需要你决定或核对）。
+- 英文论文初稿：`paper/main.tex`（LaTeX，2026-10-07 写成完整初稿，用 Tectonic 0.17 编译通过，`paper/main.pdf` 是编译结果；文中 TODO 需要你决定或核对）。 2026-10-08 并入表 B 的 A19–A21（第 8 节、定理 6.3、第 6.2 节），现 35 页。
 
 **如何复现**
-- Python 核对：`py -3.14 verify_all.py`（约 4.5 分钟，需要 numpy），逐条打印 PASS/FAIL；最后一次全量运行 13 个模块、305 PASS、0 FAIL（本地 2026-10-07 加入 rv4 之后，`logs/verify_all_final.log`）。想带内存保护运行（本机常有别的任务同时在跑）：`code/main_extra/run_guarded.sh logs/<输出>.log py -3.14 verify_all.py`，实测整棵进程树峰值约 0.4 GB。
+- Python 核对：`py -3.14 verify_all.py`（约 4.5 分钟，需要 numpy），逐条打印 PASS/FAIL；最后一次全量运行 14 个模块、332 PASS、0 FAIL（本地 2026-10-08 加入表 B 的模块 tb 之后，`logs/verify_all_final.log`，485 s，峰值 431 MB；加入前的最终日志另存为 `logs/verify_all_final_2026-10-07_before_tb.log`）。想带内存保护运行（本机常有别的任务同时在跑）：`code/main_extra/run_guarded.sh logs/<输出>.log py -3.14 verify_all.py`，实测整棵进程树峰值约 0.4 GB。
 - Lean：工具链 `leanprover/lean4:v4.34.1`，依赖 Mathlib `v4.34.1`（见 `lean/lakefile.toml`、`lean/lake-manifest.json`）。作者在 Windows 上用 `lean/run_lean_checks_direct.sh` 构建（逐模块 `lake build` 的版本是 `run_lean_checks.sh`），没有在别的环境验证过；单个编译峰值内存 ≥ 8 GB。`lean/.lake/`（Mathlib 依赖与编译产物，约 5–7 GB）不在仓库里，需要自己用 `lake` 获取。
 - `code/review/r-c4i/N_K*.pkl` 是可重新生成的中间文件，不在仓库里，见 `ROADMAP.md` §6。
 
@@ -128,7 +129,7 @@
 
 ## 当前状态与待办（2026-10-07）
 
-- **研究交付物已完成**：`报告.md` + `verify_all.py`。最后一次全量验证：13 个模块、305 PASS、0 FAIL（本地 2026-10-07 加入 rv4 之后，`logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行，峰值 437 MB，用时 267 s）；报告引用的 247 个核对 id 全部 PASS。同日早些时候修好了 `c5b.snapshots`：2026-10-06 上传 GitHub 时加入的 `data/oeis/NOTICE.md` 让它 FAIL，现在比对时排除这份许可说明，目录里多出别的文件仍会 FAIL。
+- **研究交付物已完成**：`报告.md` + `verify_all.py`。最后一次全量验证：14 个模块、332 PASS、0 FAIL（本地 2026-10-08，加入表 B 的模块 tb 之后，`logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行，峰值 431 MB，用时 485 s；此前 13 个模块、305 PASS）；报告引用的 247 个核对 id 全部 PASS。同日早些时候修好了 `c5b.snapshots`：2026-10-06 上传 GitHub 时加入的 `data/oeis/NOTICE.md` 让它 FAIL，现在比对时排除这份许可说明，目录里多出别的文件仍会 FAIL。
 - **Lean**：2026-10-07 全量构建（`lean/run_lean_checks_direct.sh`，日志 `logs/lean_build.log`）：
   - 26 个模块加根模块全部从源码编译通过，`Checks.lean` 也通过；
   - `Axioms.lean` 的 252 条 `#print axioms` 与对 2649 个声明的全量扫描，都只出现三条标准公理（依赖其他公理的 0 个；`rowRule_iff_allowed` 只用到 propext 与 Quot.sound）；
@@ -150,6 +151,7 @@
   - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 2 处 `\todo`（文献检索补完：Google Scholar 已查，剩 MathSciNet、zbMATH、WoS；AI 使用声明按投稿方要求改写）和 1 处注释里的 TODO（引理 1 的出处）；署名、通讯邮箱、仓库地址与 Lean 定义核对已于 2026-10-07、10-08 完成。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
   - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`），同日你手动查完 Google Scholar（§9，没有发现先例）；还要你手动查 zbMATH（免费、无需登录）、Web of Science、MathSciNet（`notes/新颖性核查_手动检索清单.md`，桌面有 PDF 版），并打开 Dougherty-Bliss 2024 博士论文的 PDF 搜本家族编号（RUcore 禁止 AI 抓取，我没取）。
 - **表 B 的新进展（2026-10-07 晚）**：B1（h_k 全实根且根互异）与 B3（单族形状分类，推广到 α,β≥0 的一切形状）已证明，记为 `猜想总表.md` 的 A19、A20；B7 证了一半（f_k(t) 的 Gevrey-1/3 上界与 t∈(0,1) 的同阶下界），B9 证了一部分（h_k 系数恰变号 ⌊k/3⌋ 次）。证明在 `notes/05`–`07`，核对 `py -3.14 code/tableB/run_all.py`（20 条全部 PASS），B1、B3 各有一位对抗性复核者（`notes/review/s8-b1-review.md`、`s8-b3-review.md`）。**还没有并入报告与论文**（报告 T5.3(6)、T2.6(i) 补充、T3.4(5)、④ 与论文的开放问题一节仍写着「猜想」），也没有登记进 verify_all，没有形式化。
+- **表 B 并入论文（2026-10-08）**：按用户决定，A19（B1）、A20（B3）、A21（B2）写进论文，A22（B7）不进。并入前各找了第二位独立复核者（`notes/review/s10-b1-review.md`、`s10-b3-review.md`、`s10-b2-review.md`，都是 confirmed with minor gaps，意见已改进论文；s10-b2 另用模数 32760 建了一份独立证书）。核对登记进 verify_all：新模块 `code/checks/check_tb.py`（运行 `code/tableB/` 的 b1、b3、b2，27 条）；b7、b7_borel、b11 仍只在 `code/tableB/run_all.py`。`报告.md` 还没有并入这三条。
 - **表 B 的新进展（2026-10-08）**：B2（两族 u 型和不存在：U 对每个 m≥2、E 对每个 m≥3）与 B7 的后半（t<0 时 F 在 x 方向 3-可和、和为积分 I）已证明，记为 `猜想总表.md` 的 A21、A22；B7 没做的两项（t∈(0,1) 的可和性、t<0 时 Gevrey 阶的下界）分出为新条目 B13，B 表现有 9 项；B11 的计算机辅助证明从 d≤8 扩到 d≤100（部分结果）。证明在 `notes/08`–`10`，核对 `py -3.14 code/tableB/run_all.py`（6 个部分 41 条全部 PASS；`check_b7_borel.py` 是数值佐证），B2、B7 各有一位对抗性复核者（`notes/review/s9-b2-review.md`、`s9-b7-review.md`）。同样**还没有并入报告与论文**（报告 T2.6(iii)、T3.4(5)、④A.4、T4.2(2) 与论文的开放问题一节仍是旧说法），没有登记进 verify_all，没有形式化。
 - 数学上未解的问题与完成度见 `猜想总表.md` 表 B；完整的待办与优先级见 `ROADMAP.md`。
 

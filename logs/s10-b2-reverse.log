@@ -1,0 +1,11 @@
+REVERSE-OK   R1 planted solution (0,5) on corrupted fibre 2: sieve leaves survivors | survivors=4, (0,5) kept: True, (-5,-5) kept: True
+REVERSE-OK   R2 planted solution (0,5040): l-adic coverage fails at n0 = 0 | uncovered=[0]
+REVERSE-OK   R3a residue element with eta^{-3m-2} differs from the definition
+REVERSE-OK   R3b residue element with 2*c_{i,m} differs from the definition
+INFO R3c joint system with fibre 2 shifted by one (D_1(n,b)=D_2(n+1,b)=0), |n|,|b|<=30, b!=0: [(-9, -5), (-4, 5)]
+REVERSE-OK   R4a wrong periods P/2 or 2P rejected by the exact-order test
+REVERSE-OK   R4b prime dividing i (l=2, i=2) rejected (i not invertible mod l)
+REVERSE-OK   R5a U with fibre 1 only: sieve leaves survivors | survivors=5152 sample=[(0, 5), (1, 4), (2, 2), (2, 7), (3, 1)]
+REVERSE-OK   R5b E with fibre 1 only: l-adic coverage fails | uncovered=[2515, 5035]
+REVERSE-OK   R6 small window with W~_2 -> 1 + x^5 finds a common zero | [(-9, -5), (-5, -5), (-4, 5), (0, 5)]
+SUMMARY s10_reverse: REVERSE-OK=9 REVERSE-MISS=0
