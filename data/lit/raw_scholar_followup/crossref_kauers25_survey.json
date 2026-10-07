@@ -1,0 +1,989 @@
+{
+ "status": "ok",
+ "message-type": "work-list",
+ "message-version": "1.0.0",
+ "message": {
+  "facets": {},
+  "total-results": 383242,
+  "items": [
+   {
+    "indexed": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       10
+      ]
+     ],
+     "date-time": "2025-11-10T11:44:33Z",
+     "timestamp": 1762775073164,
+     "version": "build-2065373602"
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 98,
+    "publisher": "ACM",
+    "funder": [
+     {
+      "DOI": "10.13039/501100002428",
+      "name": "Austrian Science Fund",
+      "doi-asserted-by": "publisher",
+      "award": [
+       "10.55776/PAT8258123"
+      ],
+      "award-info": [
+       {
+        "award-number": [
+         "10.55776/PAT8258123"
+        ]
+       }
+      ],
+      "id": [
+       {
+        "id": "10.13039/501100002428",
+        "id-type": "DOI",
+        "asserted-by": "publisher"
+       }
+      ]
+     }
+    ],
+    "content-domain": {
+     "domain": [
+      "dl.acm.org"
+     ],
+     "crossmark-restriction": true
+    },
+    "published-print": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       28
+      ]
+     ]
+    },
+    "DOI": "10.1145/3747199.3770904",
+    "type": "proceedings-article",
+    "created": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       10
+      ]
+     ],
+     "date-time": "2025-11-10T10:51:17Z",
+     "timestamp": 1762771877000
+    },
+    "page": "1-7",
+    "update-policy": "https://doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+     "D-Finiteness: A Success Story"
+    ],
+    "prefix": "10.1145",
+    "author": [
+     {
+      "ORCID": "https://orcid.org/0000-0001-8641-6661",
+      "authenticated-orcid": false,
+      "given": "Manuel",
+      "family": "Kauers",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "Institute for Algebra, Johannes Kepler University, Linz, Austria"
+       }
+      ],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "member": "320",
+    "published-online": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       10
+      ]
+     ]
+    },
+    "reference": [
+     {
+      "key": "e_1_3_3_2_2_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sergei A. Abramov. 1999. EG-eliminations. Journal of Difference Equations and Applications 5 (1999) 393–433.",
+      "DOI": "10.1080/10236199908808199"
+     },
+     {
+      "key": "e_1_3_3_2_3_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sergei A. Abramov Moulay A. Barkatou and Mark van Hoeij. 2006. Apparent Singularities of Linear Difference Equations with Polynomial Coefficients. AAECC 17 (2006) 117–133.",
+      "DOI": "10.1007/s00200-005-0193-9"
+     },
+     {
+      "key": "e_1_3_3_2_4_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/309831.309953"
+     },
+     {
+      "key": "e_1_3_3_2_5_2",
+      "volume-title": "Handbook of Mathematical Functions (9th ed.)",
+      "author": "Abramowitz Milton",
+      "year": "1972",
+      "unstructured": "Milton Abramowitz and Irene A. Stegun. 1972. Handbook of Mathematical Functions (9th ed.). Dover Publications, Inc."
+     },
+     {
+      "key": "e_1_3_3_2_6_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Rida Ait El Manssour Anna-Laura Sattelberger and Bertrand Teguia Tabuguia. 2025. D-algebraic functions. J. Symbolic Comput. 128 (2025) 102377.",
+      "DOI": "10.1016/j.jsc.2024.102377"
+     },
+     {
+      "key": "e_1_3_3_2_7_2",
+      "first-page": "11:1–11:13",
+      "volume-title": "Proc. AofA’18",
+      "author": "Banderier Cyril",
+      "year": "2018",
+      "unstructured": "Cyril Banderier, Philippe Marchal, and Michael Wallner. 2018. Periodic Pólya Urns and an Application to Young Tableaux. In Proc. AofA’18. 11:1–11:13."
+     },
+     {
+      "key": "e_1_3_3_2_8_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-15582-6_7"
+     },
+     {
+      "key": "e_1_3_3_2_9_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sven Beuchler Veronika Pillwein and Sabine Zaglmayr. 2012. Sparsity optimized high order finite element functions for \\(H(\\operatorname{div})\\) on simplices. Numer. Math. 122 2 (2012) 197–225.",
+      "DOI": "10.1007/s00211-012-0461-0"
+     },
+     {
+      "key": "e_1_3_3_2_10_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sven Beuchler Veronika Pillwein and Sabine Zaglmayr. 2013. Sparsity optimized high order finite element functions for \\(H(\\operatorname{curl})\\) on tetrahedra. Advances in Applied Mathematics 50 (2013) 749–769.",
+      "DOI": "10.1016/j.aam.2012.11.004"
+     },
+     {
+      "key": "e_1_3_3_2_11_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Frits Beukers. 1985. Some Congruences for the Apéry Numbers. Journal of Number Theory 21 (1985) 141–155.",
+      "DOI": "10.1016/0022-314X(85)90047-2"
+     },
+     {
+      "key": "e_1_3_3_2_12_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1201/9780429274107"
+     },
+     {
+      "key": "e_1_3_3_2_13_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3452143.3465507"
+     },
+     {
+      "key": "e_1_3_3_2_14_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Alin Bostan Salah Boukraa Tony Guttmann Saoud Hassani Iwan Jensen Jean-Marie Maillard and Nadjah Zenine. 2009. High order Fuchsian equations for the square lattice Ising model: \\(\\tilde{\\chi }^{(5)}\\). Journal of Physics A: Mathematical and Theoretical 42 27 (2009) 275209.",
+      "DOI": "10.1088/1751-8113/42/27/275209"
+     },
+     {
+      "key": "e_1_3_3_2_15_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2465506.2465941"
+     },
+     {
+      "key": "e_1_3_3_2_16_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2442829.2442847"
+     },
+     {
+      "key": "e_1_3_3_2_17_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1390768.1390775"
+     },
+     {
+      "key": "e_1_3_3_2_18_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Alin Bostan Frédéric Chyzak Mark van Hoeij Manuel Kauers and Lucien Pech. 2017. Hypergeometric Expressions for Generating Functions of Walks with Small Steps in the Quarter Plane. European Journal of Combinatorics 61 (2017) 242–275.",
+      "DOI": "10.1016/j.ejc.2016.10.010"
+     },
+     {
+      "key": "e_1_3_3_2_19_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Alin Bostan Andrew Elvey Price Anthony John Guttmann and Jean-Marie Maillard. 2020. Stieltjes moment sequences for pattern-avoiding permutations. The Electronic Journal of Combinatorics 27 4 (2020) #P4.20.",
+      "DOI": "10.37236/9402"
+     },
+     {
+      "key": "e_1_3_3_2_20_2",
+      "volume-title": "On deciding transcendence of power series",
+      "author": "Bostan Alin",
+      "year": "2025",
+      "unstructured": "Alin Bostan, Bruno Salvy, and Michael F. Singer. 2025. On deciding transcendence of power series. Technical Report 2504.16697. ArXiv."
+     },
+     {
+      "key": "e_1_3_3_2_21_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Alin Bostan and Sergey Yurkevich. 2022. A hypergeometric proof that Iso is bijective. Proceedings of the AMS 150 5 (2022) 2131–2136.",
+      "DOI": "10.1090/proc/15836"
+     },
+     {
+      "key": "e_1_3_3_2_22_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Delphine Boucher Willi Geiselmann and Felix Ulmer. 2007. Skew-cyclic codes. AAECC 18 (2007) 379–389.",
+      "DOI": "10.1007/s00200-007-0043-z"
+     },
+     {
+      "key": "e_1_3_3_2_23_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-10868-6_3"
+     },
+     {
+      "key": "e_1_3_3_2_24_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Delphine Boucher and Felix Ulmer. 2009. Coding with skew polynomial rings. J. Symbolic Comput. 44 (2009) 1644–1656.",
+      "DOI": "10.1016/j.jsc.2007.11.008"
+     },
+     {
+      "key": "e_1_3_3_2_25_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "S. Boukraa A. J. Guttmann S. Hassani I. Jensen J.-M. Maillard B. Nickel and N. Zenine. 2008. Experimental Mathematics on the magnetig susceptibility of the square lattice Ising model. Journal of Physics A: Mathematical and Theoretical 41 45 (2008) 1–51.",
+      "DOI": "10.1088/1751-8113/41/45/455202"
+     },
+     {
+      "key": "e_1_3_3_2_26_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Salah Boukraa Saoud Hassani and Jean-Marie Maillard. 2012. Holonomic functions of several complex variables and singularities of anisotropic Ising n-fold integrals. Journal of Physics A: Mathematical and Theoretical 45 49 (2012) 494010.",
+      "DOI": "10.1088/1751-8113/45/49/494010"
+     },
+     {
+      "key": "e_1_3_3_2_27_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Mireille Bousquet-Mélou and Marni Mishna. 2010. Walks with small steps in the quarter plane. Contemp. Math. 520 (2010) 1–40.",
+      "DOI": "10.1090/conm/520/10252"
+     },
+     {
+      "key": "e_1_3_3_2_28_2",
+      "volume-title": "A New Primitive for a Diffie-Hellman-like Key Exchange Protocol Based on Multivariate Ore Polynomials",
+      "author": "Burger Reinhold",
+      "year": "2014",
+      "unstructured": "Reinhold Burger and Albert Heinle. 2014. A New Primitive for a Diffie-Hellman-like Key Exchange Protocol Based on Multivariate Ore Polynomials. Technical Report 1407.1270. ArXiv."
+     },
+     {
+      "key": "e_1_3_3_2_29_2",
+      "volume-title": "Creative Telescoping",
+      "author": "Chen Shaoshi",
+      "year": "2025",
+      "unstructured": "Shaoshi Chen, Manuel Kauers, and Christoph Koutschan. 2025. Creative Telescoping. Technical Report 2505.05345. ArXiv."
+     },
+     {
+      "key": "e_1_3_3_2_30_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shaoshi Chen Manuel Kauers and Michael F. Singer. 2016. Desingularization of Ore Operators. J. Symbolic Comput. 74 5/6 (2016) 617–626.",
+      "DOI": "10.1016/j.jsc.2015.11.001"
+     },
+     {
+      "key": "e_1_3_3_2_31_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "William Y.C. Chen Qing-Hu Hou and Doron Zeilberger. 2016. Automated discovery and proof of congruence theorems for partial sums of combinatorial sequences. Journal of Difference Equations and Applications 22 6 (2016) 780–788.",
+      "DOI": "10.1080/10236198.2016.1142541"
+     },
+     {
+      "key": "e_1_3_3_2_32_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Frédéric Chyzak. 2000. An Extension of Zeilberger’s Fast Algorithm to General Holonomic Functions. Discrete Mathematics 217 (2000) 115–134.",
+      "DOI": "10.1016/S0012-365X(99)00259-9"
+     },
+     {
+      "key": "e_1_3_3_2_33_2",
+      "volume-title": "The ABC of Creative Telescoping – Algorithms, Bounds, Complexity",
+      "author": "Chyzak Frédéric",
+      "year": "2014",
+      "unstructured": "Frédéric Chyzak. 2014. The ABC of Creative Telescoping – Algorithms, Bounds, Complexity. University Paris-Sud 11."
+     },
+     {
+      "key": "e_1_3_3_2_34_2",
+      "volume-title": "Differential equations satisfied by generating functions of 5-, 6-, and 7-regular labelled graphs: a reduction-based approach",
+      "author": "Chyzak Frederic",
+      "year": "2024",
+      "unstructured": "Frederic Chyzak and Marni Mishna. 2024. Differential equations satisfied by generating functions of 5-, 6-, and 7-regular labelled graphs: a reduction-based approach. Technical Report 2406.04753. ArXiv."
+     },
+     {
+      "key": "e_1_3_3_2_35_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Frédéric Chyzak and Bruno Salvy. 1998. Non-commutative Elimination in Ore Algebras Proves Multivariate Identities. J. Symbolic Comput. 26 (1998) 187–227.",
+      "DOI": "10.1006/jsco.1998.0207"
+     },
+     {
+      "key": "e_1_3_3_2_36_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/345542.345588"
+     },
+     {
+      "key": "e_1_3_3_2_37_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Robert Dougherty-Bliss and Manuel Kauers. 2024. Hardinian Arrays. The Electronic Journal of Combinatorics 31 2 (2024) 9.",
+      "DOI": "10.37236/12358"
+     },
+     {
+      "key": "e_1_3_3_2_38_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Michael Drmota Manuel Kauers and Lukas Spiegelhofer. 2016. On a Conjecture of Cusick Concerning the Sum of Digits of n and n + t. SIAM Journal on Discrete Mathematics 30 2 (2016) 621–874.",
+      "DOI": "10.1137/15M1041857"
+     },
+     {
+      "key": "e_1_3_3_2_39_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hao Du Christoph Koutschan Thotsaporn Thanatipanonda and Elaine Wong. 2022. Determinants for Tiling Problems Yield to the Holonomic Ansatz. European Journal of Combinatorics 99 (2022) 103437.",
+      "DOI": "10.1016/j.ejc.2021.103437"
+     },
+     {
+      "key": "e_1_3_3_2_40_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/CBO9780511801655"
+     },
+     {
+      "key": "e_1_3_3_2_41_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Stavros Garoufalidis and Christoph Koutschan. 2012. The non-commutative A-polynomial of (− 2 3 n) pretzel knots. Exper. Math. 21 3 (2012) 241–251.",
+      "DOI": "10.1080/10586458.2012.651409"
+     },
+     {
+      "key": "e_1_3_3_2_42_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Stavros Garoufalidis and Christoph Koutschan. 2013. Irreducibility of q-difference operators and the knot 74. Algebraic and Geometric Topology 13 (2013) 3261–3286.",
+      "DOI": "10.2140/agt.2013.13.3261"
+     },
+     {
+      "key": "e_1_3_3_2_43_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Stefan Gerhold Lev Glebsky Carsten Schneider Howard Weiss and Burkhard Zimmermann. 2008. Computing the complexity for Schelling segregation models. Comm. Nonlinear Science and Numerical Simulation 13 (2008) 2236–2245.",
+      "DOI": "10.1016/j.cnsns.2007.04.023"
+     },
+     {
+      "key": "e_1_3_3_2_44_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-7091-1616-6_3"
+     },
+     {
+      "key": "e_1_3_3_2_45_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ira Gessel. 1990. Symmetric Functions and P-Recursiveness. Journal of Combinatorial Theory Series A 53 (1990) 257–285.",
+      "DOI": "10.1016/0097-3165(90)90060-A"
+     },
+     {
+      "key": "e_1_3_3_2_46_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Anthony J. Guttmann and Iwan Jensen. 2023. The gerrymander sequence or A348456. Advances in Applied Mathematics 148 (2023) 102520.",
+      "DOI": "10.1016/j.aam.2023.102520"
+     },
+     {
+      "key": "e_1_3_3_2_47_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Tony Guttmann. 2016. Series extension: predicting approximate series coefficients from a finite number of exact coefficients. Journal of Mathematical Physics A: Mathematical and Theoretical 49 (2016) 415002.",
+      "DOI": "10.1088/1751-8113/49/41/415002"
+     },
+     {
+      "key": "e_1_3_3_2_48_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Waldemar Hebisch and Martin Rubey. 2011. Extended Rate more GFUN. J. Symbolic Comput. 46 8 (2011) 889–903.",
+      "DOI": "10.1016/j.jsc.2011.01.004"
+     },
+     {
+      "key": "e_1_3_3_2_49_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Qing-Hu Hou and Ke Liu. 2021. Congruences and telescopings of P-recursive sequences. Journal of Difference Equations and Applications 27 5 (2021) 686–697.",
+      "DOI": "10.1080/10236198.2021.1934462"
+     },
+     {
+      "key": "e_1_3_3_2_50_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3087604.3087623"
+     },
+     {
+      "key": "e_1_3_3_2_51_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3747199.3747565"
+     },
+     {
+      "key": "e_1_3_3_2_52_2",
+      "volume-title": "Ordinary Differential Equations",
+      "author": "Ince Edward L.",
+      "year": "1926",
+      "unstructured": "Edward L. Ince. 1926. Ordinary Differential Equations. Dover."
+     },
+     {
+      "key": "e_1_3_3_2_53_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3476446.3535505"
+     },
+     {
+      "key": "e_1_3_3_2_54_2",
+      "volume-title": "Guessing Handbook",
+      "author": "Kauers Manuel",
+      "year": "2009",
+      "unstructured": "Manuel Kauers. 2009. Guessing Handbook. Technical Report 09-07. RISC-Linz."
+     },
+     {
+      "key": "e_1_3_3_2_55_2",
+      "volume-title": "A Mathematica Package for Computing Asymptotic Expansions of Solutions of P-Finite Recurrence Equations",
+      "author": "Kauers Manuel",
+      "year": "2011",
+      "unstructured": "Manuel Kauers. 2011. A Mathematica Package for Computing Asymptotic Expansions of Solutions of P-Finite Recurrence Equations. Technical Report 11-04. RISC-Linz."
+     },
+     {
+      "key": "e_1_3_3_2_56_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2608628.2608634"
+     },
+     {
+      "key": "e_1_3_3_2_57_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-031-34652-1"
+     },
+     {
+      "key": "e_1_3_3_2_58_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3476446.3535486"
+     },
+     {
+      "key": "e_1_3_3_2_59_2",
+      "unstructured": "Manuel Kauers and Christoph Koutschan. 2023. Some D-finite and some possibly D-finite sequences in the OEIS. Journal of Integer Sequences 23 4 (2023) 5."
+     },
+     {
+      "key": "e_1_3_3_2_60_2",
+      "unstructured": "Manuel Kauers Christoph Koutschan and George Spahn. 2022. How does the Gerrymander Sequence Continue? Journal of Integer Sequences 25 (2022) 22.9.7."
+     },
+     {
+      "key": "e_1_3_3_2_61_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3747199.3747552"
+     },
+     {
+      "key": "e_1_3_3_2_62_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Manuel Kauers and Doron Zeilberger. 2008. Experiments with a Positivity Preserving Operator. Experimental Mathematics 17 3 (2008) 341–345.",
+      "DOI": "10.1080/10586458.2008.10129037"
+     },
+     {
+      "key": "e_1_3_3_2_63_2",
+      "unstructured": "Christoph Koutschan. 2009. Advanced Applications of the Holonomic Systems Approach. Ph. D. Dissertation. Johannes Kepler University."
+     },
+     {
+      "key": "e_1_3_3_2_64_2",
+      "volume-title": "HolonomicFunctions (User’s Guide)",
+      "author": "Koutschan Christoph",
+      "year": "2010",
+      "unstructured": "Christoph Koutschan. 2010. HolonomicFunctions (User’s Guide). Technical Report 10-01. RISC Report Series, University of Linz, Austria. http://www.risc.uni-linz.ac.at/research/combinat/software/HolonomicFunctions/"
+     },
+     {
+      "key": "e_1_3_3_2_65_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-7091-1616-6_7"
+     },
+     {
+      "key": "e_1_3_3_2_66_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Christoph Koutschan Manuel Kauers and Doron Zeilberger. 2011. Proof of George Andrews’ and David Robbins’ q-TSPP-Conjecture. Proceedings of the National Academy of Sciences 108 6 (2011) 2196–2199.",
+      "DOI": "10.1073/pnas.1019186108"
+     },
+     {
+      "key": "e_1_3_3_2_67_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-79709-8_35"
+     },
+     {
+      "key": "e_1_3_3_2_68_2",
+      "first-page": "242",
+      "volume-title": "International Andrei Ershov Memorical Conference on Perspectives of System Informatics",
+      "author": "Kovács Laura",
+      "year": "2009",
+      "unstructured": "Laura Kovács. 2009. A complete invariant generation approach for P-solvable loops. In International Andrei Ershov Memorical Conference on Perspectives of System Informatics. Springer, 242–256."
+     },
+     {
+      "key": "e_1_3_3_2_69_2",
+      "first-page": "589",
+      "volume-title": "Handbook of Combinatorics",
+      "author": "Krattenthaler Christian",
+      "year": "2015",
+      "unstructured": "Christian Krattenthaler. 2015. Lattice Path Enumeration. In Handbook of Combinatorics, Miklos Bona (Ed.). Taylor & Francis, 589–678."
+     },
+     {
+      "key": "e_1_3_3_2_70_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Leonard Lipshitz. 1988. The Diagonal of a D-Finite Power Series is D-Finite. Journal of Algebra 113 (1988) 373–378.",
+      "DOI": "10.1016/0021-8693(88)90166-4"
+     },
+     {
+      "key": "e_1_3_3_2_71_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Stephen Melczer and Marc Mezzarobba. 2022. Sequence positivity through numeric analytic continuation: uniqueness of the Canham model for biomembranes. Combinatorial Theory 2 2 (2022) #4.",
+      "DOI": "10.5070/C62257847"
+     },
+     {
+      "key": "e_1_3_3_2_72_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Marc Mezzarobba and Bruno Salvy. 2010. Effective Bounds for P-Recursive Sequences. J. Symbolic Comput. 45 10 (2010) 1075–1096.",
+      "DOI": "10.1016/j.jsc.2010.06.024"
+     },
+     {
+      "key": "e_1_3_3_2_73_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hiromasa Nakayama Kenta Nishiyama Masayuki Noro Katsuyoshi Ohara Tomonari Sei Nobuki Takayama and Akimichi Takemura. 2011. Holonomic gradient descent and its application to the Fisher–Bingham integral. Advances in Applied Mathematics 47 (2011) 639–658.",
+      "DOI": "10.1016/j.aam.2011.03.001"
+     },
+     {
+      "key": "e_1_3_3_2_74_2",
+      "volume-title": "Handbook of Enumerative Combinatorics",
+      "author": "Noy Marc",
+      "year": "2015",
+      "unstructured": "Marc Noy. 2015. Graph Enumeration. In Handbook of Enumerative Combinatorics. Taylor and Francis."
+     },
+     {
+      "key": "e_1_3_3_2_75_2",
+      "unstructured": "Veronika Pillwein. 2008. Computer Algebra Tools for Special Functions in High Order Finite Element Methods. Ph. D. Dissertation. Johannes Kepler University."
+     },
+     {
+      "key": "e_1_3_3_2_76_2",
+      "unstructured": "Donald E. Knuth (proposer) and Editors (solver). 2018. Balanced tilince of a rectangle with three rows. Problem 11929. American Math. Monthly 125 (2018) 566–568."
+     },
+     {
+      "key": "e_1_3_3_2_77_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Daniel Robertz. 2015. Recent progress in an algebraic analysis approach to linear systems. Multidimensional Systems and Signal Processing 26 (2015) 349–388.",
+      "DOI": "10.1007/s11045-014-0280-9"
+     },
+     {
+      "key": "e_1_3_3_2_78_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1073884.1073886"
+     },
+     {
+      "key": "e_1_3_3_2_79_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bruno Salvy and Paul Zimmermann. 1994. Gfun: a Maple package for the manipulation of generating and holonomic functions in one variable. ACM Trans. Math. Software 20 2 (1994) 163–177.",
+      "DOI": "10.1145/178365.178368"
+     },
+     {
+      "key": "e_1_3_3_2_80_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Carsten Schneider. 2016. A difference ring theory for symbolic summation. J. Symbolic Comput. 72 1–2 (2016) 82–127.",
+      "DOI": "10.1016/j.jsc.2015.02.002"
+     },
+     {
+      "key": "e_1_3_3_2_81_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-7091-1616-6"
+     },
+     {
+      "key": "e_1_3_3_2_82_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Romain Serra Denis Arzelier Mioara Joldes Jean-Bernard Lasserre Aude Rondepierre and Bruno Salvy. 2016. Fast and Accurate Computation of Orbital Collision Probability for Short-Term Encounters. Journal of Guidance Control and Dynamics 39 5 (2016) 1009–1021.",
+      "DOI": "10.2514/1.G001353"
+     },
+     {
+      "key": "e_1_3_3_2_83_2",
+      "unstructured": "Neil J.A. Sloane. [n. d.]. The On-Line Encyclopedia of Integer Sequences. http://www.oeis.org/."
+     },
+     {
+      "key": "e_1_3_3_2_84_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Richard P. Stanley. 1980. Differentiably Finite Power Series. European Journal of Combinatorics 1 (1980) 175–188.",
+      "DOI": "10.1016/S0195-6698(80)80051-5"
+     },
+     {
+      "key": "e_1_3_3_2_85_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Armin Straub. 2019. Supercongruences for Polynomial Analogs of the Apéry Numbers. Proceedings of the AMS 147 3 (2019) 1023–1036.",
+      "DOI": "10.1090/proc/14301"
+     },
+     {
+      "key": "e_1_3_3_2_86_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Joris van der Hoeven. 1999. Fast evaluation of holonomic functions. Theoretical Computer Science 210 1 (1999) 199–216.",
+      "DOI": "10.1016/S0304-3975(98)00102-9"
+     },
+     {
+      "key": "e_1_3_3_2_87_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Joris van der Hoeven. 2001. Fast Evaluation of Holonomic Functions near and in Singularities. J. Symbolic Comput. 31 6 (2001) 717–743.",
+      "DOI": "10.1006/jsco.2000.0474"
+     },
+     {
+      "key": "e_1_3_3_2_88_2",
+      "volume-title": "Galois Theory of Linear Differential Equations",
+      "author": "Put Marius van der",
+      "year": "2003",
+      "unstructured": "Marius van der Put and Michael Singer. 2003. Galois Theory of Linear Differential Equations. Springer."
+     },
+     {
+      "key": "e_1_3_3_2_89_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Markus Vöge Anthony J. Guttmann and Iwan Jensen. 2002. On the Number of Benzenoid Hydrocarbons. J. Chemical Information and Modelling 42 (2002) 456–466.",
+      "DOI": "10.1021/ci010098g"
+     },
+     {
+      "key": "e_1_3_3_2_90_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jaspar Wiart and Elaine Wong. 2021. Walsh functions scrambled (0 m s)-nets and negative covariance: Applying symbolic computation to quasi-Monte Carlo integration. Mathematics and Computers in Simulation 182 (2021) 277–295.",
+      "DOI": "10.1016/j.matcom.2020.10.026"
+     },
+     {
+      "key": "e_1_3_3_2_91_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jet Wimp and Doron Zeilberger. 1985. Resurrecting the Asymptotics of Linear Recurrences. J. Math. Anal. Appl. 111 (1985) 162–176.",
+      "DOI": "10.1016/0022-247X(85)90209-4"
+     },
+     {
+      "key": "e_1_3_3_2_92_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Thomas Yu and Jingmin Chen. 2022. Uniqueness of Clifford torus with prescribed isoperimetric ratio. Proceedings of the AMS 150 4 (2022) 1749–1765.",
+      "DOI": "10.1090/proc/15750"
+     },
+     {
+      "key": "e_1_3_3_2_93_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sergey Yurkevich. 2022. The art of algorithmic guessing in gfun. Maple Transactions 2 1 (2022).",
+      "DOI": "10.5206/mt.v2i1.14421"
+     },
+     {
+      "key": "e_1_3_3_2_94_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Doron Zeilberger. 1990. A fast Algorithm for Proving Terminating Hypergeometric Identities. Discrete Mathematics 80 (1990) 207–211.",
+      "DOI": "10.1016/0012-365X(90)90120-7"
+     },
+     {
+      "key": "e_1_3_3_2_95_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Doron Zeilberger. 1990. A Holonomic Systems Approach To Special Functions Identities. J. Comput. Appl. Math. 32 (1990) 321–368.",
+      "DOI": "10.1016/0377-0427(90)90042-X"
+     },
+     {
+      "key": "e_1_3_3_2_96_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Doron Zeilberger. 1991. The Method of Creative Telescoping. J. Symbolic Comput. 11 (1991) 195–204.",
+      "DOI": "10.1016/S0747-7171(08)80044-2"
+     },
+     {
+      "key": "e_1_3_3_2_97_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Doron Zeilberger. 2007. The Holonomic Ansatz II: Automatic Discovery(!) and Proof(!!) of Holonomic Determinant Evaluations. Annals Combinat. 11 2 (2007) 241–247.",
+      "DOI": "10.1007/s00026-007-0317-y"
+     },
+     {
+      "key": "e_1_3_3_2_98_2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Doron Zeilberger and Wadim Zudilin. 2021. Automatic discovery of irrationality proofs and irrationality measures. Internat. J. Number Theory 17 3 (2021) 815–825.",
+      "DOI": "10.1142/S1793042120400230"
+     },
+     {
+      "key": "e_1_3_3_2_99_2",
+      "unstructured": "Bruno Zürcher. 1994. Rationale Normalformen von pseudo-linearen Abbildungen. Master’s thesis. ETH Zürich."
+     }
+    ],
+    "event": {
+     "name": "ISSAC '25: International Symposium on Symbolic and Algebraic Computation",
+     "sponsor": [
+      "SIGSAM ACM Special Interest Group on Symbolic and Algebraic Manipulation"
+     ],
+     "location": "Guanajuato Mexico",
+     "acronym": "ISSAC '25"
+    },
+    "container-title": [
+     "Proceedings of the 2025 International Symposium on Symbolic and Algebraic Computation"
+    ],
+    "link": [
+     {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3747199.3770904",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+     }
+    ],
+    "deposited": {
+     "date-parts": [
+      [
+       2025,
+       11,
+       10
+      ]
+     ],
+     "date-time": "2025-11-10T11:40:31Z",
+     "timestamp": 1762774831000
+    },
+    "score": 44.732212,
+    "resource": {
+     "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3747199.3770904"
+     }
+    },
+    "issued": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       28
+      ]
+     ]
+    },
+    "references-count": 98,
+    "alternative-id": [
+     "10.1145/3747199.3770904",
+     "10.1145/3747199"
+    ],
+    "URL": "https://doi.org/10.1145/3747199.3770904",
+    "published": {
+     "date-parts": [
+      [
+       2025,
+       7,
+       28
+      ]
+     ]
+    },
+    "assertion": [
+     {
+      "value": "2025-11-10",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+       "name": "publication_history",
+       "label": "Publication History"
+      }
+     }
+    ]
+   },
+   {
+    "indexed": {
+     "date-parts": [
+      [
+       2024,
+       9,
+       13
+      ]
+     ],
+     "date-time": "2024-09-13T00:23:16Z",
+     "timestamp": 1726186996173
+    },
+    "reference-count": 0,
+    "publisher": "Bloomsbury Publishing (UK)",
+    "content-domain": {
+     "domain": [],
+     "crossmark-restriction": false
+    },
+    "published-print": {
+     "date-parts": [
+      [
+       2008
+      ]
+     ]
+    },
+    "DOI": "10.5040/9781350905894",
+    "type": "other",
+    "created": {
+     "date-parts": [
+      [
+       2023,
+       2,
+       3
+      ]
+     ],
+     "date-time": "2023-02-03T13:33:37Z",
+     "timestamp": 1675431217000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+     "A Celebrated Success Story"
+    ],
+    "prefix": "10.5040",
+    "member": "2984",
+    "container-title": [
+     "A Celebrated Success Story"
+    ],
+    "deposited": {
+     "date-parts": [
+      [
+       2023,
+       5,
+       3
+      ]
+     ],
+     "date-time": "2023-05-03T13:56:46Z",
+     "timestamp": 1683122206000
+    },
+    "score": 23.91956,
+    "resource": {
+     "primary": {
+      "URL": "https://www.bloomsburyvideolibrary.com/video?docid=RFI-Celeb&tocid=RFI-Celeb_6312242064112"
+     }
+    },
+    "issued": {
+     "date-parts": [
+      [
+       2008
+      ]
+     ]
+    },
+    "references-count": 0,
+    "URL": "https://doi.org/10.5040/9781350905894",
+    "published": {
+     "date-parts": [
+      [
+       2008
+      ]
+     ]
+    }
+   },
+   {
+    "indexed": {
+     "date-parts": [
+      [
+       2026,
+       2,
+       28
+      ]
+     ],
+     "date-time": "2026-02-28T01:28:45Z",
+     "timestamp": 1772242125997,
+     "version": "3.50.1"
+    },
+    "reference-count": 0,
+    "publisher": "Princeton University Press",
+    "isbn-type": [
+     {
+      "value": "9780691157825",
+      "type": "print"
+     },
+     {
+      "value": "9781400848874",
+      "type": "electronic"
+     }
+    ],
+    "content-domain": {
+     "domain": [],
+     "crossmark-restriction": false
+    },
+    "published-print": {
+     "date-parts": [
+      [
+       2013,
+       11,
+       24
+      ]
+     ]
+    },
+    "abstract": "<p>This chapter examines how, in seeking to produce new envisagements about Japanese Americans, Japanese American Citizens League (JACL) spoke to mid-twentieth-century liberals' confidence in the ability of educational campaigns and social science to transform existing ideas about race and alter the country's racial order. Constituents of the era's race relations complex identified Nikkei citizenship as an American dilemma to be repaired in order to prove the nation's capacity for righting its wrongs, thereby protecting the United States' global position. The celebration of Japanese Americans as model minorities seemed to vindicate the assimilationist approach to rehabilitating Nikkei citizenship as espoused by JACL and its allies. Yet at the same moment, the emergence of this image undermined the league's dominant position within the Nikkei community.</p>",
+    "DOI": "10.23943/princeton/9780691157825.003.0006",
+    "type": "book-chapter",
+    "created": {
+     "date-parts": [
+      [
+       2017,
+       11,
+       21
+      ]
+     ],
+     "date-time": "2017-11-21T07:50:02Z",
+     "timestamp": 1511250602000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 1,
+    "title": [
+     "Success Story, Japanese American Style"
+    ],
+    "prefix": "10.23943",
+    "author": [
+     {
+      "given": "Ellen D.",
+      "family": "Wu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "role": "author",
+        "vocabulary": "crossref"
+       }
+      ]
+     }
+    ],
+    "member": "10341",
+    "published-online": {
+     "date-parts": [
+      [
+       2017,
+       10,
+       19
+      ]
+     ]
+    },
+    "container-title": [
+     "The Color of Success"
+    ],
+    "original-title": [
+     "Success Story, Japanese American Style"
+    ],
+    "language": "en",
+    "deposited": {
+     "date-parts": [
+      [
+       2022,
+       7,
+       28
+      ]
+     ],
+     "date-time": "2022-07-28T10:34:36Z",
+     "timestamp": 1659004476000
+    },
+    "score": 22.367832,
+    "resource": {
+     "primary": {
+      "URL": "https://academic.oup.com/princeton-scholarship-online/book/14737/chapter/168928957"
+     }
+    },
+    "issued": {
+     "date-parts": [
+      [
+       2013,
+       11,
+       24
+      ]
+     ]
+    },
+    "ISBN": [
+     "9780691157825",
+     "9781400848874"
+    ],
+    "references-count": 0,
+    "URL": "https://doi.org/10.23943/princeton/9780691157825.003.0006",
+    "relation": {
+     "is-identical-to": [
+      {
+       "id-type": "doi",
+       "id": "10.2307/j.ctt5hhphr.11",
+       "asserted-by": "object"
+      }
+     ]
+    },
+    "published": {
+     "date-parts": [
+      [
+       2013,
+       11,
+       24
+      ]
+     ]
+    }
+   }
+  ],
+  "items-per-page": 3,
+  "query": {
+   "start-index": 0,
+   "search-terms": null
+  }
+ }
+}

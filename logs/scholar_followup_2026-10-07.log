@@ -1,0 +1,84 @@
+== crossref_dbs24
+  title : Rectangular Hardinian Arrays
+  author: Robert Dougherty-Bliss, George Spahn
+  where : ACM Communications in Computer Algebra | vol 58 | issue 3 | pages 81-84 | year 2024 | type journal-article
+  doi   : 10.1145/3717582.3717589 | publisher: Association for Computing Machinery (ACM)
+  abstract: <jats:p>             We resolve some open conjectures from the OEIS about Hardinian arrays (see A253217). In particular, we show via the transfer matrix method that             <jats:italic>               H               <jats:sub>r</jats:sub>             </jats:italic>             (             <jats:italic>n, k</jats:italic>             ), the number of             <jats:italic>n × k</jats:italic>             Hardinian arrays with parameter             <jats:italic>r</jats:italic>             is a polynomial in             <jats:italic>n</jats:italic>             of degree             <jats:italic>r</jats:italic>             when             <jats:italic>r</jats:italic>             and    
+  --
+== crossref_kauers23_book
+  title : D-Finite Functions
+  author: Manuel Kauers
+  where : Algorithms and Computation in Mathematics | vol None | issue None | pages None | year 2023 | type book
+  doi   : 10.1007/978-3-031-34652-1 | publisher: Springer Nature Switzerland
+  --
+== crossref_cmst14
+  title : A Computer-Algebra-Based Formal Proof of the Irrationality of ζ(3)
+  author: Frédéric Chyzak, Assia Mahboubi, Thomas Sibut-Pinote, Enrico Tassi
+  where : Lecture Notes in Computer Science Interactive Theorem Proving | vol None | issue None | pages 160-176 | year 2014 | type book-chapter
+  doi   : 10.1007/978-3-319-08970-6_11 | publisher: Springer International Publishing
+  --
+  title : A Formal Proof of the Irrationality of $\zeta(3)$
+  author: Assia Mahboubi, Thomas Sibut-Pinote
+  where : Logical Methods in Computer Science | vol Volume 17, Issue 1 | issue None | pages None | year 2021 | type journal-article
+  doi   : 10.23638/lmcs-17(1:16)2021 | publisher: Centre pour la Communication Scientifique Directe (CCSD)
+  abstract: <jats:p>This paper presents a complete formal verification of a proof that the evaluation of the Riemann zeta function at 3 is irrational, using the Coq proof assistant. This result was first presented by Ap\'ery in 1978, and the proof we have formalized essentially follows the path of his original presentation. The crux of this proof is to establish that some sequences satisfy a common recurrence. We formally prove this result by an a posteriori verification of calculations performed by computer algebra algorithms in a Maple session. The rest of the proof combines arithmetical ingredients and asymptotic analysis, which we conduct by extending the Mathematical Components libraries.</jats:p>
+  --
+  title : Formally Verified Approximations of Definite Integrals
+  author: Assia Mahboubi, Guillaume Melquiond, Thomas Sibut-Pinote
+  where : Lecture Notes in Computer Science Interactive Theorem Proving | vol None | issue None | pages 274-289 | year 2016 | type book-chapter
+  doi   : 10.1007/978-3-319-43144-4_17 | publisher: Springer International Publishing
+  --
+== openalex_kmv05
+  title : Pattern-avoidance in binary fillings of grid shapes
+  author: Alexey Spiridonov
+  where : DSpace@MIT (Massachusetts Institute of Technology) | vol None | issue None | pages None - None | year 2009 | type dissertation
+  doi   : None | id: https://openalex.org/W1594825994
+  abstract: A grid shape is a set of boxes chosen from a square grid; any Young diagram is an example. This paper considers a notion of pattern-avoidance for 0-1 fillings of grid shapes, which generalizes permutation pattern-avoidance. A filling avoids some patterns if none of its sub-shapes equal any of the patterns. We focus on patterns that are pairs of 2 × 2 fillings. For some shapes, fillings that avoid specific 2 × 2 pairs are in bijection with totally nonnegative Grassmann cells, or with acyclic orientations of bipartite graphs. We prove a number of results analogous to Wilf-equivalence for these objects — that is, we show that for certain classes of shapes, some pattern-avoiding fillings are equinumerous with others.
+  --
+  title : Pattern-Avoidance in Binary Fillings of Grid Shapes (short version)
+  author: Alexey Spiridonov
+  where : Discrete Mathematics & Theoretical Computer Science | vol DMTCS Proceedings vol. AJ,... | issue Proceedings | pages None - None | year 2008 | type article
+  doi   : https://doi.org/10.46298/dmtcs.3610 | id: https://openalex.org/W73153675
+  abstract: A $\textit{grid shape}$ is a set of boxes chosen from a square grid; any Young diagram is an example. This paper considers a notion of pattern-avoidance for $0-1$ fillings of grid shapes, which generalizes permutation pattern-avoidance. A filling avoids some patterns if none of its sub-shapes equal any of the patterns. We focus on patterns that are $\textit{pairs}$ of $2 \times 2$ fillings. For some shapes, fillings that avoid specific $2 \times 2$ pairs are in bijection with totally nonnegative Grassmann cells, or with acyclic orientations of bipartite graphs. We prove a number of results analogous to Wilf-equivalence for these objects ―- that is, we show that for certain classes of shapes, some pattern-avoiding fillings are equinumerous with others. Une $\textit{forme de grille}$ est un ensemble de cases choisies dans une grille carrée; un diagramme de Young en est un exemple. Cet arti
+  --
+  title : Enumeration of (0,1) -matrices avoiding some 2×2 matrices
+  author: Hyeong-Kwan Ju, Seunghyun Seo
+  where : Discrete Mathematics | vol 312 | issue 16 | pages 2473 - 2481 | year 2012 | type article
+  doi   : https://doi.org/10.1016/j.disc.2012.04.019 | id: https://openalex.org/W1974553375
+  --
+== openalex_db_thesis
+  title : Algorithm-assisted discovery of an intrinsic order among mathematical constants
+  author: Rotem Elimelech, Ofir David, Carlos De la Cruz Mengual, Rotem Kalisch, Wolfgang Berndt, Michael Shalyt, Mark Silberstein, Yaron Hadad, Ido E. Kaminer
+  where : Proceedings of the National Academy of Sciences | vol 121 | issue 25 | pages e2321440121 - e2321440121 | year 2024 | type article
+  doi   : https://doi.org/10.1073/pnas.2321440121 | id: https://openalex.org/W4399667467
+  abstract: In recent decades, a growing number of discoveries in mathematics have been assisted by computer algorithms, primarily for exploring large parameter spaces. As computers become more powerful, an intriguing possibility arises—the interplay between human intuition and computer algorithms can lead to discoveries of mathematical structures that would otherwise remain elusive. Here, we demonstrate computer-assisted discovery of a previously unknown mathematical structure, the conservative matrix field. In the spirit of the Ramanujan Machine project, we developed a massively parallel computer algorithm that found a large number of formulas, in the form of continued fractions, for numerous mathematical constants. The patterns arising from those formulas enabled the construction of the first conservative matrix fields and revealed their overarching properties. Conservative matrix fields unveil u
+  --
+  title : Detecting and Explaining (In-)equivalence of Context-Free Grammars
+  author: Marko Schmellenkamp, Thomas Zeume, Sven Argo, Sandra Kiefer, Cedric Siems, Fynn Stebel
+  where : Proceedings of the ACM on Programming Languages | vol 9 | issue OOPSLA2 | pages 2954 - 2980 | year 2025 | type article
+  doi   : https://doi.org/10.1145/3763156 | id: https://openalex.org/W4414977275
+  abstract: We propose a scalable framework for deciding, proving, and explaining (in-)equivalence of context-free grammars. We present an implementation of the framework and evaluate it on large data sets collected within educational support systems. Even though the equivalence problem for context-free languages is undecidable in general, the framework is able to handle a large portion of these datasets. It introduces and combines techniques from several areas, such as an abstract grammar transformation language to identify equivalent grammars as well as sufficiently similar inequivalent grammars, theory-based comparison algorithms for a large class of context-free languages, and a graph-theory-inspired grammar canonization that allows to efficiently identify isomorphic grammars.
+  --
+  title : Lots and Lots of Perrin-Type Primality Tests and Their Pseudo-Primes
+  author: Robert Dougherty-Bliss, Doron Zeilberger
+  where : arXiv (Cornell University) | vol None | issue None | pages None - None | year 2023 | type preprint
+  doi   : https://doi.org/10.48550/arxiv.2307.16069 | id: https://openalex.org/W4385473736
+  abstract: We use Experimental Mathematics and Symbolic Computation (with Maple), to search for lots and lots of Perrin- and Lucas- style primality tests, and try to sort the wheat from the chaff. More impressively, we find quite a few such primality tests for which we can explicitly construct infinite families of pseudo-primes, rather, like in the cases of Perrin pseudo-primes and the famous Carmichael primes, only proving the mere existence of infinitely many of them.
+  --
+== crossref_kauers25_survey
+  title : D-Finiteness: A Success Story
+  author: Manuel Kauers
+  where : Proceedings of the 2025 International Symposium on Symbolic and Algebraic Computation | vol None | issue None | pages 1-7 | year 2025 | type proceedings-article
+  doi   : 10.1145/3747199.3770904 | publisher: ACM
+  --
+  title : A Celebrated Success Story
+  author: 
+  where : A Celebrated Success Story | vol None | issue None | pages None | year 2008 | type other
+  doi   : 10.5040/9781350905894 | publisher: Bloomsbury Publishing (UK)
+  --
+  title : Success Story, Japanese American Style
+  author: Ellen D. Wu
+  where : The Color of Success | vol None | issue None | pages None | year 2013 | type book-chapter
+  doi   : 10.23943/princeton/9780691157825.003.0006 | publisher: Princeton University Press
+  abstract: <p>This chapter examines how, in seeking to produce new envisagements about Japanese Americans, Japanese American Citizens League (JACL) spoke to mid-twentieth-century liberals' confidence in the ability of educational campaigns and social science to transform existing ideas about race and alter the country's racial order. Constituents of the era's race relations complex identified Nikkei citizenship as an American dilemma to be repaired in order to prove the nation's capacity for righting its wrongs, thereby protecting the United States' global position. The celebration of Japanese Americans as model minorities seemed to vindicate the assimilationist approach to rehabilitating Nikkei citize
+  --

@@ -13,6 +13,8 @@
 | `read_papers.md` | 精读过的论文：来源、SHA-256、页数、读到什么程度、用到的事实（转述）。PDF 本身不入库 |
 | `formal_lists_check.md` | DeepMind formal-conjectures 与 Epoch LeanOpenProblems 两份公开形式化清单的目录树检查（路径名里有没有本家族的编号），含检查时间与树的 SHA |
 | `oeis/` | OEIS 条目页（`/A…/internal` 的 HTML）与一份证明附件，2026-10-07 取得；与 `data/oeis/` 的 68 个旧快照分开存放（`check_c5b.py` 要求 `data/oeis/` 里只有那 68 个快照） |
+| `manual_scholar_2026-10-07.md` | 用户 10-07 手动跑 Google Scholar（清单 A 组）后贴来的结果，逐字保存；分类见笔记 §9 |
+| `raw_scholar_followup/` | `code/novelty/scholar_followup.py` 对其中新出现几条的 Crossref / OpenAlex 原始返回，另有 JIS 第 8 卷目录页与 Kitaev–Mansour–Vella 2005 的摘要页（用来核对书目） |
 
 ## 数据来源与许可
 
@@ -23,7 +25,7 @@
 
 ## 没覆盖的
 
-Google Scholar、Web of Science、MathSciNet、zbMATH、Scopus、Project Euclid、出版社全文：原因见笔记 §5。Semantic Scholar 只成功 3/55 条查询。arXiv 与 Crossref 只查元数据；OpenAlex 的全文覆盖有限，所以「没找到」的分量比看上去的小。
+Web of Science、MathSciNet、zbMATH、Scopus、Project Euclid、出版社全文：原因见笔记 §5（Google Scholar 由用户 10-07 手动查过，见 `manual_scholar_2026-10-07.md`）。Semantic Scholar 只成功 3/55 条查询。arXiv 与 Crossref 只查元数据；OpenAlex 的全文覆盖有限，所以「没找到」的分量比看上去的小。
 
 ## 重生成
 

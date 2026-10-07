@@ -5,7 +5,7 @@
 
 > **状态声明（请先读）**
 > - 本仓库的数学内容由 AI（Claude）在人类指导下生成，并经 AI 复核者交叉检查，**没有经过人类专家审稿**。不少定理另有 Lean 4 + Mathlib 机器检查（有的只覆盖一部分，范围见 `猜想总表.md`），但 Lean 只检查证明，不检查「陈述是否忠实于报告」。
-> - **新颖性只核实了一半**（2026-10-07）：开放数据库（arXiv、OpenAlex、Crossref、OEIS 等）已系统检索，没有找到同时处理 U_k(m) 的显式公式、最小阶、非 D-finite、零化理想分类的论文；但 T1.0 归约、固定 k 的递推存在、T3.7/T3.8 的方法都有先例（OEIS 上 Krause 2026-06 的同款引理，Kauers 2007 例 5，Chyzak–Kauers–Salvy 2009 例 3）。**Google Scholar、Web of Science、MathSciNet、zbMATH 没有查**，清单在 `notes/新颖性核查_手动检索清单.md`，结论在 `notes/新颖性核查_2026-10-07.md`。「没找到」不等于「前人没证」，请勿对外宣称「首次证明」。
+> - **新颖性只核实了一半**（2026-10-07）：开放数据库（arXiv、OpenAlex、Crossref、OEIS 等）已系统检索，没有找到同时处理 U_k(m) 的显式公式、最小阶、非 D-finite、零化理想分类的论文；但 T1.0 归约、固定 k 的递推存在、T3.7/T3.8 的方法都有先例（OEIS 上 Krause 2026-06 的同款引理，Kauers 2007 例 5，Chyzak–Kauers–Salvy 2009 例 3）。Google Scholar 已由你在 10-07 手动查过（清单 A 组全部，没有发现先例，见笔记 §9）；**Web of Science、MathSciNet、zbMATH 还没有查**，清单在 `notes/新颖性核查_手动检索清单.md`，结论在 `notes/新颖性核查_2026-10-07.md`。「没找到」不等于「前人没证」，请勿对外宣称「首次证明」。
 > - 这是进行中的研究仓库，不是定稿：Lean 第四轮已于 2026-10-07 收尾，但没有人类专家审过；报告 ⑥ 列出最不确定的三处（2026-10-07 加固了原来的三处与随后排第 1 的 T2.6(ii)，两次重新排序），见「当前状态与待办」。
 
 ## 这是什么
@@ -44,9 +44,9 @@
 | `code/checks/check_*.py` | verify_all 调用的 13 个正式核对模块（c0 主 Agent 补充；c1 复核；c2a/c2b 显式公式；c3a/c3b 母函数与 D-finite；c4 近对角线与分子；c5a 渐近与 h_k；c5b OEIS；rv 第二轮复核的产物；rv2 复核者 x1 的两个独立脚本；rv3 报告 ⑥ 原两处所依赖的复核者脚本，来自 r-c4ii、r-c3a、s6-t436、s6-t342，2026-10-07 加入；rv4 主 Agent 独立重推 T2.6(ii) 的精确核对，不导入 core，2026-10-07 加入） |
 | `code/<area>/` | 各方向的探索脚本 |
 | `code/family/` | 2026-10-06 补充：OEIS 里列规则同为「竖向禁止 001、011」的 6 张 Hardin 表都满足同一归约（`check_family.py`、OEIS 只读快照与日志，见其中 README）；另外 5 张表的结构没有研究 |
-| `code/novelty/` | 2026-10-07 新颖性核查的脚本：`lit_search.py`（55 条查询，经 arXiv / OpenAlex / Crossref / Semantic Scholar / StackExchange 的官方接口，只读）、`cited_by.py`（16 篇种子论文的前向引用）、`check_note_refs.py`（核对笔记里的 arXiv 号、DOI、OEIS 编号都有数据支持，做过反向检查）、`check_note_facts.py`（核对笔记里的数字与 OEIS 关键事实能由仓库数据重新证实，不联网）；用法见 `data/lit/README.md` |
+| `code/novelty/` | 2026-10-07 新颖性核查的脚本：`lit_search.py`（55 条查询，经 arXiv / OpenAlex / Crossref / Semantic Scholar / StackExchange 的官方接口，只读）、`cited_by.py`（16 篇种子论文的前向引用）、`check_note_refs.py`（核对笔记里的 arXiv 号、DOI、OEIS 编号都有数据支持，做过反向检查）、`check_note_facts.py`（核对笔记里的数字与 OEIS 关键事实能由仓库数据重新证实，不联网）；`scholar_followup.py`（10-07：对你贴来的 Google Scholar 结果里新出现的几条，用 Crossref / OpenAlex 核对书目与摘要，原始返回在 `data/lit/raw_scholar_followup/`）；用法见 `data/lit/README.md` |
 | `code/review/<reviewer>/` | 第二轮对抗性复核者的独立脚本；`s6-*` 是 2026-10-07 加固报告 ⑥ 的第三轮复核者（s6-t436、s6-t342、s6-t27）；`main-t26ii/` 是主 Agent 重推 T2.6(ii) 时写的独立核对脚本（不导入 core、不复用 x1 的脚本） |
-| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，第四轮的 `patch_lean4.py`、`patch_lean4_fixes3.py` 已于 2026-10-07 应用；同日加固 ⑥ 后的同步补丁是 `patch_six.py`，重推 T2.6(ii) 后的是 `patch_t26ii.py`，加入 T3.9 后的是 `patch_stirlinglike.py`，都已应用）；`check_tex.py`（没有 TeX 编译器时检查 `paper/*.tex` 的环境、括号、$、标签与文献引用，做过反向检查）；`check_paper_numbers.py`（2026-10-07：从 `core.py` 的原始定义重算论文里印出的每一个数，并解析 `paper/main.tex` 里的表格比对，做过反向检查）；`lean_statements.py`（从 Lean 文件里只抽出文档注释、定义与定理陈述，便于人工核对陈述是否忠实于报告）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；2026-10-07 起内存查询失败时改用备用数据源，连续 5 秒都读不到才结束；Lean 仍只走 `lean/lean_one.sh`） |
+| `code/main_extra/` | 主 Agent 的辅助脚本（最小阶逐因子检验、结果汇总）；`assemble_report.py`（拼接报告并交叉检查核对 id）；`report_patches/`（报告补丁脚本，Lean 标签补丁是 `patch_lean*.py`，第四轮的 `patch_lean4.py`、`patch_lean4_fixes3.py` 已于 2026-10-07 应用；同日加固 ⑥ 后的同步补丁是 `patch_six.py`，重推 T2.6(ii) 后的是 `patch_t26ii.py`，加入 T3.9 后的是 `patch_stirlinglike.py`，都已应用）；`check_tex.py`（没有 TeX 编译器时检查 `paper/*.tex` 的环境、括号、$、标签与文献引用，做过反向检查）；`check_paper_numbers.py`（2026-10-07：从 `core.py` 的原始定义重算论文里印出的每一个数，并解析 `paper/main.tex` 里的表格比对，做过反向检查）；`lean_statements.py`（从 Lean 文件里只抽出文档注释、定义与定理陈述，便于人工核对陈述是否忠实于报告）；`md_to_pdf.py`（2026-10-07：把 `notes/` 里的 Markdown 用本机 Edge 无头模式转成 PDF，中文用微软雅黑、链接可点；本机没有给 .md 关联打开程序，给你看的笔记用它转）；`run_guarded.sh` + `proc_watchdog.ps1`（非 Lean 任务的内存保护：机器上有 lean.exe 或内存余量不够就不启动，运行中整棵进程树超限就结束，每次记一行到 `logs/guarded_runs.log`；2026-10-07 起内存查询失败时改用备用数据源，连续 5 秒都读不到才结束；Lean 仍只走 `lean/lean_one.sh`） |
 | `code/step0_baseline.py`、`step1_quickcheck.py` | 开工时的基线核对与主线推导快速核对 |
 | `notes/原始任务说明.md` | 用户给出的任务原文 |
 | `notes/新颖性核查_2026-10-07.md`、`notes/新颖性核查_手动检索清单.md` | 新颖性核查的结论（逐项对照、最近先例、被抢先风险、检索盲区、下一步）与给用户手动在 Google Scholar / WoS / MathSciNet / zbMATH / Scopus 里跑的检索式 |
@@ -113,6 +113,11 @@
     - 全文独立审稿（Opus 子 Agent）：没有发现数学错误；指出 Lean 表一处说过头（\|σ\|²<ρ²_{m−1} 没有形式化）、附录首句说过头、推论 5.5 原来的说法夸大（已改写成真正有内容的版本）、若干缺条件与记号冲突，全部已改。记录 `notes/review/paper-draft-review-2026-10-07.md`，脚本 `code/review/paper-draft-2026-10-07/`（在仓库里重跑，日志 `logs/review_paper-draft_*.log`）。
     - 收尾核对（本地约 10:05–10:15）：重跑 `check_tex.py`、`check_paper_numbers.py`（26 PASS）、Tectonic（编译到临时目录：26 页，日志里 0 个警告，PDF 文字与 `paper/main.pdf` 完全相同）、`assemble_report.py`（247 PASS，`报告.md` 不变）。发现 s7-t27 的 `run_t27.py`、`run_n2.py` 要带例子参数，第一次在仓库重跑时漏了（`run_n2` 的日志是空文件），已带全部参数补跑，命令写进了审稿记录；`s4b.py` 一处输出标注（应为 k≤9、m=4）改正后重跑。
 
+18. 2026-10-07（本地约 12:20–13:00）处理你贴来的 Google Scholar 结果（清单 A 组全部）：
+    - 原样保存在 `data/lit/manual_scholar_2026-10-07.md`；分类与结论写进 `notes/新颖性核查_2026-10-07.md` §9：没有找到处理本家族的文章，也没有找到对非 Stirling-like 递推做零化理想分类的文章，新颖性判断不变（有条件、中等）。新出现的几条用 `code/novelty/scholar_followup.py` 经 Crossref / OpenAlex 核对，Kitaev–Mansour–Vella 2005 在 JIS 官网核对。笔记的两个核对脚本重跑全部通过。
+    - 论文：相关工作补引 Kitaev–Mansour–Vella 2005、Dougherty-Bliss–Spahn 2024、Kauers 2023 的书，Formal verification 补引 Mahboubi–Sibut-Pinote 2021（Coq 形式化 Apéry），文献检索的 `\todo` 改为「Google Scholar 已查，MathSciNet、zbMATH、WoS 待查」。`check_tex.py` 通过（21 条文献全被引用），`check_paper_numbers.py` 26 PASS，Tectonic 编译无警告，仍是 26 页。桌面的 `main.pdf` 正开在 WPS 里被锁，新版另存为桌面的 `main_最新.pdf`。
+    - 本机 `.md` 没有关联打开程序，检索清单用新脚本 `code/main_extra/md_to_pdf.py` 转成 PDF 放在桌面。
+
 ## 当前状态与待办（2026-10-07）
 
 - **研究交付物已完成**：`报告.md` + `verify_all.py`。最后一次全量验证：13 个模块、305 PASS、0 FAIL（本地 2026-10-07 加入 rv4 之后，`logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行，峰值 437 MB，用时 267 s）；报告引用的 247 个核对 id 全部 PASS。同日早些时候修好了 `c5b.snapshots`：2026-10-06 上传 GitHub 时加入的 `data/oeis/NOTICE.md` 让它 FAIL，现在比对时排除这份许可说明，目录里多出别的文件仍会 FAIL。
@@ -134,8 +139,8 @@
     - T3.4(4)(5) 请复核者重推误差界与常数项部分的门槛；
     - T4.3(8) 补上 Laguerre 零点定理的标准证明，或给出 Szegő 原书的准确出处。
   - 按 `notes/Lean定义核对清单.md` 逐项核对承重的 Lean 定义（要人来做）。全部打勾之前，论文里只说「证明已机器检查」，不说「陈述已机器检查」。
-  - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 4 处 `\todo`（文献检索补完、Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址）和 2 处注释里的 TODO（作者署名、引理 1 的出处）。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
-  - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`）；Google Scholar、Web of Science、MathSciNet、zbMATH 需要你手动查（`notes/新颖性核查_手动检索清单.md`），最该先查的是 Kauers 2007 与 Chyzak–Kauers–Salvy 2009 的「被引用」。
+  - 论文初稿 `paper/main.tex`（2026-10-07 已写全并编译）：剩 4 处 `\todo`（文献检索补完：Google Scholar 已查，剩 MathSciNet、zbMATH、WoS；Lean 定义要你核对、AI 使用声明按投稿方要求改写、仓库地址）和 2 处注释里的 TODO（作者署名、引理 1 的出处）。原来要你决定的收录范围，初稿先这样定了，你可以改：T5.1 的两项渐近收为定理 3.2；T2.6 的补充形状只收已证明的（α≥1 且 α+β 为偶数，以及 (3,0)、(1,2)、(2,3)），浮点证据的只在注记里提；OEIS 的列与行递推收为注记 3.5；T2.7′ 连同 (N1)(N2) 写进 §6.2。改完稿子跑 `py -3.14 code/main_extra/check_tex.py paper/main.tex` 与 `py -3.14 code/main_extra/check_paper_numbers.py paper/main.tex`，再用 Tectonic 编译（`%LOCALAPPDATA%\Programs\tectonic\tectonic.exe -X compile paper/main.tex`）。
+  - 人类专家审阅与正式文献核对，见 `ROADMAP.md` §5。2026-10-07 已做开放数据库部分（`notes/新颖性核查_2026-10-07.md`），同日你手动查完 Google Scholar（§9，没有发现先例）；还要你手动查 zbMATH（免费、无需登录）、Web of Science、MathSciNet（`notes/新颖性核查_手动检索清单.md`，桌面有 PDF 版），并打开 Dougherty-Bliss 2024 博士论文的 PDF 搜本家族编号（RUcore 禁止 AI 抓取，我没取）。
 - 数学上未解的问题与完成度见 `猜想总表.md` 表 B；完整的待办与优先级见 `ROADMAP.md`。
 
 ## 许可与数据来源

@@ -1,0 +1,2326 @@
+{
+ "meta": {
+  "count": 22,
+  "db_response_time_ms": 93,
+  "page": 1,
+  "per_page": 3,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works where full text has (Pattern avoidance in matrices Kitaev Mansour Vella)",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "fulltext.search",
+      "value": "Pattern avoidance in matrices Kitaev Mansour Vella",
+      "operator": "has"
+     }
+    ]
+   },
+   "url": "/works?filter=fulltext.search:Pattern avoidance in matrices Kitaev Mansour Vella&per_page=3"
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W1594825994",
+   "doi": null,
+   "title": "Pattern-avoidance in binary fillings of grid shapes",
+   "display_name": "Pattern-avoidance in binary fillings of grid shapes",
+   "relevance_score": 35.43567,
+   "publication_year": 2009,
+   "publication_date": "2009-01-01",
+   "ids": {
+    "openalex": "https://openalex.org/W1594825994",
+    "mag": "1594825994"
+   },
+   "language": "en",
+   "primary_location": {
+    "id": "pmh:oai:dspace.mit.edu:1721.1/50597",
+    "is_oa": true,
+    "landing_page_url": "http://hdl.handle.net/1721.1/50597",
+    "pdf_url": "http://hdl.handle.net/1721.1/50597",
+    "source": {
+     "id": "https://openalex.org/S4306400425",
+     "display_name": "DSpace@MIT (Massachusetts Institute of Technology)",
+     "issn_l": null,
+     "issn": null,
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/I63966007",
+     "host_organization_name": "Massachusetts Institute of Technology",
+     "host_organization_lineage": [
+      "https://openalex.org/I63966007"
+     ],
+     "host_organization_lineage_names": [],
+     "type": "repository"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "Thesis"
+   },
+   "type": "dissertation",
+   "indexed_in": [],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "http://hdl.handle.net/1721.1/50597",
+    "any_repository_has_fulltext": true
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5036081667",
+      "display_name": "Alexey Spiridonov",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Alexey Spiridonov",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 0,
+   "institutions_distinct_count": 0,
+   "corresponding_author_ids": [
+    "https://openalex.org/A5036081667"
+   ],
+   "corresponding_institution_ids": [],
+   "apc_list": null,
+   "apc_paid": null,
+   "fwci": null,
+   "has_fulltext": true,
+   "cited_by_count": 5,
+   "citation_normalized_percentile": null,
+   "cited_by_percentile_year": null,
+   "biblio": {
+    "volume": null,
+    "issue": null,
+    "first_page": null,
+    "last_page": null
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T10948",
+    "display_name": "Advanced Combinatorial Mathematics",
+    "score": 1.0,
+    "subfield": {
+     "id": "https://openalex.org/subfields/2607",
+     "display_name": "Discrete Mathematics and Combinatorics"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/26",
+     "display_name": "Mathematics"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10948",
+     "display_name": "Advanced Combinatorial Mathematics",
+     "score": 1.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2607",
+      "display_name": "Discrete Mathematics and Combinatorics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10374",
+     "display_name": "Advanced Graph Theory Research",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1703",
+      "display_name": "Computational Theory and Mathematics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11428",
+     "display_name": "Advanced Mathematical Identities",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2602",
+      "display_name": "Algebra and Number Theory"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/pattern-avoidance",
+     "display_name": "pattern avoidance",
+     "score": 0.8650000095367432
+    },
+    {
+     "id": "https://openalex.org/keywords/young-diagrams",
+     "display_name": "Young diagrams",
+     "score": 0.9570000171661377
+    },
+    {
+     "id": "https://openalex.org/keywords/permutation-pattern-avoidance",
+     "display_name": "permutation pattern avoidance",
+     "score": 0.6990000009536743
+    },
+    {
+     "id": "https://openalex.org/keywords/acyclic-orientations",
+     "display_name": "acyclic orientations",
+     "score": 0.8379999995231628
+    },
+    {
+     "id": "https://openalex.org/keywords/bipartite-graphs",
+     "display_name": "bipartite graphs",
+     "score": 0.9980000257492065
+    },
+    {
+     "id": "https://openalex.org/keywords/wilf-equivalence",
+     "display_name": "Wilf equivalence",
+     "score": 0.9369999766349792
+    },
+    {
+     "id": "https://openalex.org/keywords/combinatorial-enumeration",
+     "display_name": "combinatorial enumeration",
+     "score": 0.8180000185966492
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C48372109",
+     "wikidata": "https://www.wikidata.org/wiki/Q3913",
+     "display_name": "Binary number",
+     "level": 2,
+     "score": 0.5315152406692505
+    },
+    {
+     "id": "https://openalex.org/C187691185",
+     "wikidata": "https://www.wikidata.org/wiki/Q2020720",
+     "display_name": "Grid",
+     "level": 2,
+     "score": 0.5220922231674194
+    },
+    {
+     "id": "https://openalex.org/C41008148",
+     "wikidata": "https://www.wikidata.org/wiki/Q21198",
+     "display_name": "Computer science",
+     "level": 0,
+     "score": 0.3640395998954773
+    },
+    {
+     "id": "https://openalex.org/C33923547",
+     "wikidata": "https://www.wikidata.org/wiki/Q395",
+     "display_name": "Mathematics",
+     "level": 0,
+     "score": 0.2556261420249939
+    },
+    {
+     "id": "https://openalex.org/C2524010",
+     "wikidata": "https://www.wikidata.org/wiki/Q8087",
+     "display_name": "Geometry",
+     "level": 1,
+     "score": 0.13101613521575928
+    },
+    {
+     "id": "https://openalex.org/C94375191",
+     "wikidata": "https://www.wikidata.org/wiki/Q11205",
+     "display_name": "Arithmetic",
+     "level": 1,
+     "score": 0.11183339357376099
+    }
+   ],
+   "mesh": [],
+   "locations_count": 3,
+   "locations": [
+    {
+     "id": "pmh:oai:dspace.mit.edu:1721.1/50597",
+     "is_oa": true,
+     "landing_page_url": "http://hdl.handle.net/1721.1/50597",
+     "pdf_url": "http://hdl.handle.net/1721.1/50597",
+     "source": {
+      "id": "https://openalex.org/S4306400425",
+      "display_name": "DSpace@MIT (Massachusetts Institute of Technology)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I63966007",
+      "host_organization_name": "Massachusetts Institute of Technology",
+      "host_organization_lineage": [
+       "https://openalex.org/I63966007"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": null,
+     "raw_type": "Thesis"
+    },
+    {
+     "id": "pmh:oai:CiteSeerX.psu:10.1.1.377.4612",
+     "is_oa": false,
+     "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.377.4612",
+     "pdf_url": null,
+     "source": null,
+     "license": null,
+     "license_id": null,
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": "http://www.dmtcs.org/pdfpapers/dmAJ0158.pdf",
+     "raw_type": "text"
+    },
+    {
+     "id": "mag:1594825994",
+     "is_oa": false,
+     "landing_page_url": "http://dspace.mit.edu/handle/1721.1/50597",
+     "pdf_url": null,
+     "source": null,
+     "license": null,
+     "license_id": null,
+     "version": null,
+     "is_accepted": false,
+     "is_published": null,
+     "raw_source_name": null,
+     "raw_type": null
+    }
+   ],
+   "best_oa_location": {
+    "id": "pmh:oai:dspace.mit.edu:1721.1/50597",
+    "is_oa": true,
+    "landing_page_url": "http://hdl.handle.net/1721.1/50597",
+    "pdf_url": "http://hdl.handle.net/1721.1/50597",
+    "source": {
+     "id": "https://openalex.org/S4306400425",
+     "display_name": "DSpace@MIT (Massachusetts Institute of Technology)",
+     "issn_l": null,
+     "issn": null,
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/I63966007",
+     "host_organization_name": "Massachusetts Institute of Technology",
+     "host_organization_lineage": [
+      "https://openalex.org/I63966007"
+     ],
+     "host_organization_lineage_names": [],
+     "type": "repository"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "Thesis"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [],
+   "funders": [],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W1594825994.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W1594825994.grobid-xml"
+   },
+   "referenced_works_count": 2,
+   "referenced_works": [
+    "https://openalex.org/W153830605",
+    "https://openalex.org/W1998552287"
+   ],
+   "related_works": [],
+   "abstract_inverted_index": {
+    "A": [
+     0,
+     36
+    ],
+    "grid": [
+     1,
+     30
+    ],
+    "shape": [
+     2
+    ],
+    "is": [
+     3,
+     16
+    ],
+    "a": [
+     4,
+     10,
+     22,
+     91
+    ],
+    "set": [
+     5
+    ],
+    "of": [
+     6,
+     24,
+     29,
+     43,
+     48,
+     58,
+     86,
+     93,
+     110
+    ],
+    "boxes": [
+     7
+    ],
+    "chosen": [
+     8
+    ],
+    "from": [
+     9
+    ],
+    "square": [
+     11
+    ],
+    "grid;": [
+     12
+    ],
+    "any": [
+     13,
+     47
+    ],
+    "Young": [
+     14
+    ],
+    "diagram": [
+     15
+    ],
+    "an": [
+     17
+    ],
+    "example.": [
+     18
+    ],
+    "This": [
+     19
+    ],
+    "paper": [
+     20
+    ],
+    "considers": [
+     21
+    ],
+    "notion": [
+     23
+    ],
+    "pattern-avoidance": [
+     25
+    ],
+    "for": [
+     26,
+     98,
+     107
+    ],
+    "0-1": [
+     27
+    ],
+    "fillings": [
+     28,
+     66,
+     114
+    ],
+    "shapes,": [
+     31,
+     65,
+     111
+    ],
+    "which": [
+     32
+    ],
+    "generalizes": [
+     33
+    ],
+    "permutation": [
+     34
+    ],
+    "pattern-avoidance.": [
+     35
+    ],
+    "filling": [
+     37
+    ],
+    "avoids": [
+     38
+    ],
+    "some": [
+     39,
+     64,
+     112
+    ],
+    "patterns": [
+     40,
+     54
+    ],
+    "if": [
+     41
+    ],
+    "none": [
+     42
+    ],
+    "its": [
+     44
+    ],
+    "sub-shapes": [
+     45
+    ],
+    "equal": [
+     46
+    ],
+    "the": [
+     49
+    ],
+    "patterns.": [
+     50
+    ],
+    "We": [
+     51,
+     89
+    ],
+    "focus": [
+     52
+    ],
+    "on": [
+     53
+    ],
+    "that": [
+     55,
+     67,
+     102,
+     106
+    ],
+    "are": [
+     56,
+     74,
+     115
+    ],
+    "pairs": [
+     57,
+     73
+    ],
+    "2": [
+     59,
+     61,
+     70,
+     72
+    ],
+    "×": [
+     60,
+     71
+    ],
+    "fillings.": [
+     62
+    ],
+    "For": [
+     63
+    ],
+    "avoid": [
+     68
+    ],
+    "specific": [
+     69
+    ],
+    "in": [
+     75
+    ],
+    "bijection": [
+     76
+    ],
+    "with": [
+     77,
+     83,
+     117
+    ],
+    "totally": [
+     78
+    ],
+    "nonnegative": [
+     79
+    ],
+    "Grassmann": [
+     80
+    ],
+    "cells,": [
+     81
+    ],
+    "or": [
+     82
+    ],
+    "acyclic": [
+     84
+    ],
+    "orientations": [
+     85
+    ],
+    "bipartite": [
+     87
+    ],
+    "graphs.": [
+     88
+    ],
+    "prove": [
+     90
+    ],
+    "number": [
+     92
+    ],
+    "results": [
+     94
+    ],
+    "analogous": [
+     95
+    ],
+    "to": [
+     96
+    ],
+    "Wilf-equivalence": [
+     97
+    ],
+    "these": [
+     99
+    ],
+    "objects": [
+     100
+    ],
+    "—": [
+     101
+    ],
+    "is,": [
+     103
+    ],
+    "we": [
+     104
+    ],
+    "show": [
+     105
+    ],
+    "certain": [
+     108
+    ],
+    "classes": [
+     109
+    ],
+    "pattern-avoiding": [
+     113
+    ],
+    "equinumerous": [
+     116
+    ],
+    "others.": [
+     118
+    ]
+   },
+   "counts_by_year": [
+    {
+     "year": 2021,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2015,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2014,
+     "cited_by_count": 2
+    }
+   ],
+   "updated_date": "2026-09-29T14:09:16.559479",
+   "created_date": "2025-10-10T00:00:00"
+  },
+  {
+   "id": "https://openalex.org/W73153675",
+   "doi": "https://doi.org/10.46298/dmtcs.3610",
+   "title": "Pattern-Avoidance in Binary Fillings of Grid Shapes (short version)",
+   "display_name": "Pattern-Avoidance in Binary Fillings of Grid Shapes (short version)",
+   "relevance_score": 33.93499,
+   "publication_year": 2008,
+   "publication_date": "2008-01-01",
+   "ids": {
+    "openalex": "https://openalex.org/W73153675",
+    "doi": "https://doi.org/10.46298/dmtcs.3610",
+    "mag": "73153675"
+   },
+   "language": "en",
+   "primary_location": {
+    "id": "doi:10.46298/dmtcs.3610",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.46298/dmtcs.3610",
+    "pdf_url": "https://dmtcs.episciences.org/3610/pdf",
+    "source": {
+     "id": "https://openalex.org/S200334879",
+     "display_name": "Discrete Mathematics & Theoretical Computer Science",
+     "issn_l": "1365-8050",
+     "issn": [
+      "1365-8050",
+      "1462-7264"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "doaj",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4328141799",
+     "host_organization_name": "French association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4328141799"
+     ],
+     "host_organization_lineage_names": [
+      "French association"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Discrete Mathematics &amp; Theoretical Computer Science",
+    "raw_type": "journal-article"
+   },
+   "type": "article",
+   "indexed_in": [
+    "crossref",
+    "doaj"
+   ],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "https://dmtcs.episciences.org/3610/pdf",
+    "any_repository_has_fulltext": false
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5036081667",
+      "display_name": "Alexey Spiridonov",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63966007",
+       "display_name": "Massachusetts Institute of Technology",
+       "ror": "https://ror.org/042nb2s44",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Alexey Spiridonov",
+     "raw_affiliation_strings": [
+      "Department of Mathematics [MIT]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Mathematics [MIT]",
+       "institution_ids": [
+        "https://openalex.org/I63966007"
+       ]
+      }
+     ]
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 1,
+   "institutions_distinct_count": 1,
+   "corresponding_author_ids": [
+    "https://openalex.org/A5036081667"
+   ],
+   "corresponding_institution_ids": [
+    "https://openalex.org/I63966007"
+   ],
+   "apc_list": null,
+   "apc_paid": null,
+   "fwci": 0.5855,
+   "has_fulltext": true,
+   "cited_by_count": 2,
+   "citation_normalized_percentile": {
+    "value": 0.6401362,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+   },
+   "cited_by_percentile_year": {
+    "min": 88,
+    "max": 93
+   },
+   "biblio": {
+    "volume": "DMTCS Proceedings vol. AJ,...",
+    "issue": "Proceedings",
+    "first_page": null,
+    "last_page": null
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T10948",
+    "display_name": "Advanced Combinatorial Mathematics",
+    "score": 1.0,
+    "subfield": {
+     "id": "https://openalex.org/subfields/2607",
+     "display_name": "Discrete Mathematics and Combinatorics"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/26",
+     "display_name": "Mathematics"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10948",
+     "display_name": "Advanced Combinatorial Mathematics",
+     "score": 1.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2607",
+      "display_name": "Discrete Mathematics and Combinatorics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10374",
+     "display_name": "Advanced Graph Theory Research",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1703",
+      "display_name": "Computational Theory and Mathematics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11428",
+     "display_name": "Advanced Mathematical Identities",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2602",
+      "display_name": "Algebra and Number Theory"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/pattern-avoidance",
+     "display_name": "pattern avoidance",
+     "score": 0.9139999747276306
+    },
+    {
+     "id": "https://openalex.org/keywords/young-diagrams",
+     "display_name": "Young diagrams",
+     "score": 0.9160000085830688
+    },
+    {
+     "id": "https://openalex.org/keywords/wilf-equivalence",
+     "display_name": "Wilf equivalence",
+     "score": 0.9639999866485596
+    },
+    {
+     "id": "https://openalex.org/keywords/bijections",
+     "display_name": "bijections",
+     "score": 0.7400000095367432
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C24424167",
+     "wikidata": "https://www.wikidata.org/wiki/Q180907",
+     "display_name": "Bijection",
+     "level": 2,
+     "score": 0.8360472917556763
+    },
+    {
+     "id": "https://openalex.org/C33923547",
+     "wikidata": "https://www.wikidata.org/wiki/Q395",
+     "display_name": "Mathematics",
+     "level": 0,
+     "score": 0.8192235827445984
+    },
+    {
+     "id": "https://openalex.org/C114614502",
+     "wikidata": "https://www.wikidata.org/wiki/Q76592",
+     "display_name": "Combinatorics",
+     "level": 1,
+     "score": 0.8118425607681274
+    },
+    {
+     "id": "https://openalex.org/C178650486",
+     "wikidata": "https://www.wikidata.org/wiki/Q1128619",
+     "display_name": "Square tiling",
+     "level": 3,
+     "score": 0.4307571053504944
+    },
+    {
+     "id": "https://openalex.org/C187691185",
+     "wikidata": "https://www.wikidata.org/wiki/Q2020720",
+     "display_name": "Grid",
+     "level": 2,
+     "score": 0.29386892914772034
+    },
+    {
+     "id": "https://openalex.org/C2524010",
+     "wikidata": "https://www.wikidata.org/wiki/Q8087",
+     "display_name": "Geometry",
+     "level": 1,
+     "score": 0.18939658999443054
+    }
+   ],
+   "mesh": [],
+   "locations_count": 3,
+   "locations": [
+    {
+     "id": "doi:10.46298/dmtcs.3610",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.46298/dmtcs.3610",
+     "pdf_url": "https://dmtcs.episciences.org/3610/pdf",
+     "source": {
+      "id": "https://openalex.org/S200334879",
+      "display_name": "Discrete Mathematics & Theoretical Computer Science",
+      "issn_l": "1365-8050",
+      "issn": [
+       "1365-8050",
+       "1462-7264"
+      ],
+      "is_oa": true,
+      "is_in_doaj": true,
+      "is_core": true,
+      "listed_in": [
+       "cwts-core",
+       "doaj",
+       "jufo-1",
+       "norway-1"
+      ],
+      "host_organization": "https://openalex.org/P4328141799",
+      "host_organization_name": "French association",
+      "host_organization_lineage": [
+       "https://openalex.org/P4328141799"
+      ],
+      "host_organization_lineage_names": [
+       "French association"
+      ],
+      "type": "journal"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": "publishedVersion",
+     "is_accepted": true,
+     "is_published": true,
+     "raw_source_name": "Discrete Mathematics &amp; Theoretical Computer Science",
+     "raw_type": "journal-article"
+    },
+    {
+     "id": "pmh:oai:HAL:hal-01185144v1",
+     "is_oa": false,
+     "landing_page_url": "https://inria.hal.science/hal-01185144",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306402512",
+      "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I1294671590",
+      "host_organization_name": "Centre National de la Recherche Scientifique",
+      "host_organization_lineage": [
+       "https://openalex.org/I1294671590"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": "Discrete Mathematics and Theoretical Computer Science, 2008, DMTCS Proceedings, DMTCS Proceedings vol. AJ, 20th Annual International Conference on Formal Power Series and Algebraic Combinatorics (FPSAC 2008), pp.677-690. &#x27E8;10.46298/dmtcs.3610&#x27E9;",
+     "raw_type": "info:eu-repo/semantics/article"
+    },
+    {
+     "id": "pmh:oai:doaj.org/article:18e2503823ab42a1aa99aac7c1f27a8c",
+     "is_oa": false,
+     "landing_page_url": "https://doaj.org/article/18e2503823ab42a1aa99aac7c1f27a8c",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306401280",
+      "display_name": "DOAJ (DOAJ: Directory of Open Access Journals)",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": null,
+      "host_organization_name": null,
+      "host_organization_lineage": [],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": "Discrete Mathematics & Theoretical Computer Science, Vol DMTCS Proceedings vol. AJ,..., Iss Proceedings (2008)",
+     "raw_type": "article"
+    }
+   ],
+   "best_oa_location": {
+    "id": "doi:10.46298/dmtcs.3610",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.46298/dmtcs.3610",
+    "pdf_url": "https://dmtcs.episciences.org/3610/pdf",
+    "source": {
+     "id": "https://openalex.org/S200334879",
+     "display_name": "Discrete Mathematics & Theoretical Computer Science",
+     "issn_l": "1365-8050",
+     "issn": [
+      "1365-8050",
+      "1462-7264"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "doaj",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4328141799",
+     "host_organization_name": "French association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4328141799"
+     ],
+     "host_organization_lineage_names": [
+      "French association"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Discrete Mathematics &amp; Theoretical Computer Science",
+    "raw_type": "journal-article"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [],
+   "funders": [],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W73153675.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W73153675.grobid-xml"
+   },
+   "referenced_works_count": 10,
+   "referenced_works": [
+    "https://openalex.org/W1564317200",
+    "https://openalex.org/W1594825994",
+    "https://openalex.org/W1672638072",
+    "https://openalex.org/W1925759471",
+    "https://openalex.org/W1998552287",
+    "https://openalex.org/W2009098011",
+    "https://openalex.org/W2053338089",
+    "https://openalex.org/W2098042801",
+    "https://openalex.org/W2593396891",
+    "https://openalex.org/W6609939414"
+   ],
+   "related_works": [
+    "https://openalex.org/W4287020903",
+    "https://openalex.org/W2952259524",
+    "https://openalex.org/W2279732055",
+    "https://openalex.org/W4288805235",
+    "https://openalex.org/W2998840281",
+    "https://openalex.org/W2790453006",
+    "https://openalex.org/W2995857455",
+    "https://openalex.org/W4298251680",
+    "https://openalex.org/W1513031742",
+    "https://openalex.org/W2733334860"
+   ],
+   "abstract_inverted_index": {
+    "A": [
+     0,
+     36
+    ],
+    "$\\textit{grid": [
+     1
+    ],
+    "shape}$": [
+     2
+    ],
+    "is": [
+     3,
+     16
+    ],
+    "a": [
+     4,
+     10,
+     22,
+     91
+    ],
+    "set": [
+     5
+    ],
+    "of": [
+     6,
+     24,
+     29,
+     43,
+     48,
+     58,
+     86,
+     93,
+     110
+    ],
+    "boxes": [
+     7
+    ],
+    "chosen": [
+     8
+    ],
+    "from": [
+     9
+    ],
+    "square": [
+     11
+    ],
+    "grid;": [
+     12
+    ],
+    "any": [
+     13,
+     47
+    ],
+    "Young": [
+     14,
+     136
+    ],
+    "diagram": [
+     15
+    ],
+    "an": [
+     17
+    ],
+    "example.": [
+     18
+    ],
+    "This": [
+     19
+    ],
+    "paper": [
+     20
+    ],
+    "considers": [
+     21
+    ],
+    "notion": [
+     23,
+     145,
+     165
+    ],
+    "pattern-avoidance": [
+     25
+    ],
+    "for": [
+     26,
+     98,
+     107
+    ],
+    "$0-1$": [
+     27
+    ],
+    "fillings": [
+     28,
+     66,
+     114
+    ],
+    "grid": [
+     30
+    ],
+    "shapes,": [
+     31,
+     65,
+     111
+    ],
+    "which": [
+     32
+    ],
+    "generalizes": [
+     33
+    ],
+    "permutation": [
+     34
+    ],
+    "pattern-avoidance.": [
+     35
+    ],
+    "filling": [
+     37
+    ],
+    "avoids": [
+     38
+    ],
+    "some": [
+     39,
+     64,
+     112
+    ],
+    "patterns": [
+     40,
+     54
+    ],
+    "if": [
+     41
+    ],
+    "none": [
+     42
+    ],
+    "its": [
+     44
+    ],
+    "sub-shapes": [
+     45
+    ],
+    "equal": [
+     46
+    ],
+    "the": [
+     49
+    ],
+    "patterns.": [
+     50
+    ],
+    "We": [
+     51,
+     89
+    ],
+    "focus": [
+     52
+    ],
+    "on": [
+     53
+    ],
+    "that": [
+     55,
+     67,
+     102,
+     106
+    ],
+    "are": [
+     56,
+     74,
+     115
+    ],
+    "$\\textit{pairs}$": [
+     57
+    ],
+    "$2": [
+     59,
+     70,
+     199,
+     212
+    ],
+    "\\times": [
+     60,
+     71,
+     200,
+     213
+    ],
+    "2$": [
+     61,
+     72,
+     214
+    ],
+    "fillings.": [
+     62
+    ],
+    "For": [
+     63
+    ],
+    "avoid": [
+     68
+    ],
+    "specific": [
+     69
+    ],
+    "pairs": [
+     73
+    ],
+    "in": [
+     75
+    ],
+    "bijection": [
+     76,
+     217
+    ],
+    "with": [
+     77,
+     83,
+     117
+    ],
+    "totally": [
+     78
+    ],
+    "nonnegative": [
+     79
+    ],
+    "Grassmann": [
+     80,
+     222
+    ],
+    "cells,": [
+     81
+    ],
+    "or": [
+     82
+    ],
+    "acyclic": [
+     84
+    ],
+    "orientations": [
+     85,
+     229
+    ],
+    "bipartite": [
+     87
+    ],
+    "graphs.": [
+     88
+    ],
+    "prove": [
+     90
+    ],
+    "number": [
+     92
+    ],
+    "results": [
+     94
+    ],
+    "analogous": [
+     95
+    ],
+    "to": [
+     96
+    ],
+    "Wilf-equivalence": [
+     97
+    ],
+    "these": [
+     99
+    ],
+    "objects": [
+     100
+    ],
+    "―-": [
+     101,
+     246
+    ],
+    "is,": [
+     103
+    ],
+    "we": [
+     104
+    ],
+    "show": [
+     105
+    ],
+    "certain": [
+     108
+    ],
+    "classes": [
+     109,
+     253
+    ],
+    "pattern-avoiding": [
+     113
+    ],
+    "equinumerous": [
+     116
+    ],
+    "others.": [
+     118
+    ],
+    "Une": [
+     119
+    ],
+    "$\\textit{forme": [
+     120
+    ],
+    "de": [
+     121,
+     126,
+     135,
+     146,
+     154,
+     177,
+     195,
+     197,
+     210,
+     221,
+     231,
+     241,
+     254
+    ],
+    "grille}$": [
+     122
+    ],
+    "est": [
+     123,
+     138
+    ],
+    "un": [
+     124,
+     133,
+     139,
+     150,
+     183,
+     259
+    ],
+    "ensemble": [
+     125
+    ],
+    "cases": [
+     127
+    ],
+    "choisies": [
+     128
+    ],
+    "dans": [
+     129
+    ],
+    "une": [
+     130,
+     144
+    ],
+    "grille": [
+     131,
+     155
+    ],
+    "carrée;": [
+     132
+    ],
+    "diagramme": [
+     134
+    ],
+    "en": [
+     137,
+     216,
+     263
+    ],
+    "exemple.": [
+     140
+    ],
+    "Cet": [
+     141
+    ],
+    "article": [
+     142
+    ],
+    "considère": [
+     143
+    ],
+    "motif": [
+     147,
+     260
+    ],
+    "exclu": [
+     148
+    ],
+    "pour": [
+     149,
+     167,
+     243,
+     251
+    ],
+    "remplissage": [
+     151,
+     171
+    ],
+    "d'une": [
+     152
+    ],
+    "forme": [
+     153
+    ],
+    "par": [
+     156
+    ],
+    "des": [
+     157,
+     160,
+     193,
+     256
+    ],
+    "$0$": [
+     158
+    ],
+    "et": [
+     159
+    ],
+    "$1$,": [
+     161
+    ],
+    "qui": [
+     162,
+     191
+    ],
+    "généralise": [
+     163
+    ],
+    "la": [
+     164
+    ],
+    "correspondante": [
+     166
+    ],
+    "les": [
+     168,
+     189,
+     205,
+     219,
+     228
+    ],
+    "permutations.": [
+     169
+    ],
+    "Un": [
+     170
+    ],
+    "évite": [
+     172
+    ],
+    "certains": [
+     173
+    ],
+    "motifs": [
+     174,
+     190
+    ],
+    "si": [
+     175
+    ],
+    "aucune": [
+     176
+    ],
+    "ses": [
+     178
+    ],
+    "sous-formes": [
+     179
+    ],
+    "n'est": [
+     180
+    ],
+    "égale": [
+     181
+    ],
+    "à": [
+     182,
+     239,
+     266
+    ],
+    "motif.": [
+     184
+    ],
+    "Nous": [
+     185,
+     234
+    ],
+    "nous": [
+     186,
+     248
+    ],
+    "concentrons": [
+     187
+    ],
+    "sur": [
+     188
+    ],
+    "sont": [
+     192,
+     215,
+     262
+    ],
+    "$\\textit{paires": [
+     194
+    ],
+    "remplissages}$": [
+     196
+    ],
+    "taille": [
+     198,
+     211
+    ],
+    "2$.": [
+     201
+    ],
+    "Pour": [
+     202
+    ],
+    "certaines": [
+     203,
+     208,
+     252
+    ],
+    "formes,": [
+     204,
+     255
+    ],
+    "remplissages": [
+     206,
+     257
+    ],
+    "évitant": [
+     207,
+     258
+    ],
+    "paires": [
+     209
+    ],
+    "avec": [
+     218,
+     227
+    ],
+    "cellules": [
+     220
+    ],
+    "totalement": [
+     223
+    ],
+    "positives,": [
+     224
+    ],
+    "ou": [
+     225
+    ],
+    "bien": [
+     226
+    ],
+    "acycliques": [
+     230
+    ],
+    "graphes": [
+     232
+    ],
+    "bipartis.": [
+     233
+    ],
+    "démontrons": [
+     235
+    ],
+    "plusieurs": [
+     236
+    ],
+    "résultats": [
+     237
+    ],
+    "analogues": [
+     238
+    ],
+    "l'équivalence": [
+     240
+    ],
+    "Wilf": [
+     242
+    ],
+    "ces": [
+     244
+    ],
+    "objets": [
+     245
+    ],
+    "c'est-à-dire,": [
+     247
+    ],
+    "montrons": [
+     249
+    ],
+    "que,": [
+     250
+    ],
+    "donné": [
+     261
+    ],
+    "nombre": [
+     264
+    ],
+    "égal": [
+     265
+    ],
+    "d'autres": [
+     267
+    ],
+    "remplissages.": [
+     268
+    ]
+   },
+   "counts_by_year": [
+    {
+     "year": 2021,
+     "cited_by_count": 1
+    }
+   ],
+   "updated_date": "2026-09-29T14:09:16.559479",
+   "created_date": "2025-10-10T00:00:00"
+  },
+  {
+   "id": "https://openalex.org/W1974553375",
+   "doi": "https://doi.org/10.1016/j.disc.2012.04.019",
+   "title": "Enumeration of (0,1) -matrices avoiding some 2×2 matrices",
+   "display_name": "Enumeration of (0,1) -matrices avoiding some 2×2 matrices",
+   "relevance_score": 24.849165,
+   "publication_year": 2012,
+   "publication_date": "2012-05-16",
+   "ids": {
+    "openalex": "https://openalex.org/W1974553375",
+    "doi": "https://doi.org/10.1016/j.disc.2012.04.019",
+    "mag": "1974553375"
+   },
+   "language": "lv",
+   "primary_location": {
+    "id": "doi:10.1016/j.disc.2012.04.019",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1016/j.disc.2012.04.019",
+    "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0012365X1200194X/pdf",
+    "source": {
+     "id": "https://openalex.org/S18902827",
+     "display_name": "Discrete Mathematics",
+     "issn_l": "0012-365X",
+     "issn": [
+      "0012-365X",
+      "1872-681X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Discrete Mathematics",
+    "raw_type": "journal-article"
+   },
+   "type": "article",
+   "indexed_in": [
+    "crossref"
+   ],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_url": "https://www.sciencedirect.com/science/article/pii/S0012365X1200194X/pdf",
+    "any_repository_has_fulltext": false
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5039594240",
+      "display_name": "Hyeong-Kwan Ju",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I111277659",
+       "display_name": "Chonnam National University",
+       "ror": "https://ror.org/05kzjxq56",
+       "country_code": "KR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I111277659"
+       ]
+      }
+     ],
+     "countries": [
+      "KR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Hyeong-Kwan Ju",
+     "raw_affiliation_strings": [
+      "Department of Mathematics, Chonnam National University, Kwangju 500-757, South Korea",
+      "Department of Mathematics, Chonnam National University, Kwangju 500-757, South Korea#TAB#"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Mathematics, Chonnam National University, Kwangju 500-757, South Korea",
+       "institution_ids": [
+        "https://openalex.org/I111277659"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Mathematics, Chonnam National University, Kwangju 500-757, South Korea#TAB#",
+       "institution_ids": [
+        "https://openalex.org/I111277659"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5080739125",
+      "display_name": "Seunghyun Seo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I165507594",
+       "display_name": "Kangwon National University",
+       "ror": "https://ror.org/01mh5ph17",
+       "country_code": "KR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I165507594"
+       ]
+      }
+     ],
+     "countries": [
+      "KR"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Seunghyun Seo",
+     "raw_affiliation_strings": [
+      "Department of Mathematics Education, Kangwon National University, Chuncheon 200-701, South Korea",
+      "Department of Mathematics Education, Kangwon National University, Chuncheon 200-701, South Korea#TAB#"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Mathematics Education, Kangwon National University, Chuncheon 200-701, South Korea",
+       "institution_ids": [
+        "https://openalex.org/I165507594"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Mathematics Education, Kangwon National University, Chuncheon 200-701, South Korea#TAB#",
+       "institution_ids": [
+        "https://openalex.org/I165507594"
+       ]
+      }
+     ]
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 1,
+   "institutions_distinct_count": 2,
+   "corresponding_author_ids": [
+    "https://openalex.org/A5080739125"
+   ],
+   "corresponding_institution_ids": [
+    "https://openalex.org/I165507594"
+   ],
+   "apc_list": {
+    "value": 3320,
+    "currency": "USD",
+    "value_usd": 3320
+   },
+   "apc_paid": null,
+   "fwci": 0.9701,
+   "has_fulltext": true,
+   "cited_by_count": 9,
+   "citation_normalized_percentile": {
+    "value": 0.68905643,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+   },
+   "cited_by_percentile_year": {
+    "min": 89,
+    "max": 96
+   },
+   "biblio": {
+    "volume": "312",
+    "issue": "16",
+    "first_page": "2473",
+    "last_page": "2481"
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T10948",
+    "display_name": "Advanced Combinatorial Mathematics",
+    "score": 1.0,
+    "subfield": {
+     "id": "https://openalex.org/subfields/2607",
+     "display_name": "Discrete Mathematics and Combinatorics"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/26",
+     "display_name": "Mathematics"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10948",
+     "display_name": "Advanced Combinatorial Mathematics",
+     "score": 1.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2607",
+      "display_name": "Discrete Mathematics and Combinatorics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10374",
+     "display_name": "Advanced Graph Theory Research",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1703",
+      "display_name": "Computational Theory and Mathematics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11329",
+     "display_name": "Limits and Structures in Graph Theory",
+     "score": 0.0,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2607",
+      "display_name": "Discrete Mathematics and Combinatorics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/binary-matrices",
+     "display_name": "binary matrices",
+     "score": 0.9789999723434448
+    },
+    {
+     "id": "https://openalex.org/keywords/matrix-enumeration",
+     "display_name": "matrix enumeration",
+     "score": 0.6940000057220459
+    },
+    {
+     "id": "https://openalex.org/keywords/forbidden-submatrices",
+     "display_name": "forbidden submatrices",
+     "score": 0.7570000290870667
+    },
+    {
+     "id": "https://openalex.org/keywords/exponential-generating-functions",
+     "display_name": "exponential generating functions",
+     "score": 0.8489999771118164
+    },
+    {
+     "id": "https://openalex.org/keywords/forbidden-configurations",
+     "display_name": "forbidden configurations",
+     "score": 0.5180000066757202
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C156340839",
+     "wikidata": "https://www.wikidata.org/wiki/Q2704791",
+     "display_name": "Enumeration",
+     "level": 2,
+     "score": 0.8011730909347534
+    },
+    {
+     "id": "https://openalex.org/C33923547",
+     "wikidata": "https://www.wikidata.org/wiki/Q395",
+     "display_name": "Mathematics",
+     "level": 0,
+     "score": 0.6569856405258179
+    },
+    {
+     "id": "https://openalex.org/C2781324535",
+     "wikidata": "https://www.wikidata.org/wiki/Q720106",
+     "display_name": "Scroll",
+     "level": 2,
+     "score": 0.5994157791137695
+    },
+    {
+     "id": "https://openalex.org/C151376022",
+     "wikidata": "https://www.wikidata.org/wiki/Q168698",
+     "display_name": "Exponential function",
+     "level": 2,
+     "score": 0.47658178210258484
+    },
+    {
+     "id": "https://openalex.org/C11413529",
+     "wikidata": "https://www.wikidata.org/wiki/Q8366",
+     "display_name": "Algorithm",
+     "level": 1,
+     "score": 0.4464673697948456
+    },
+    {
+     "id": "https://openalex.org/C114614502",
+     "wikidata": "https://www.wikidata.org/wiki/Q76592",
+     "display_name": "Combinatorics",
+     "level": 1,
+     "score": 0.4087180495262146
+    },
+    {
+     "id": "https://openalex.org/C118615104",
+     "wikidata": "https://www.wikidata.org/wiki/Q121416",
+     "display_name": "Discrete mathematics",
+     "level": 1,
+     "score": 0.3790138065814972
+    },
+    {
+     "id": "https://openalex.org/C134306372",
+     "wikidata": "https://www.wikidata.org/wiki/Q7754",
+     "display_name": "Mathematical analysis",
+     "level": 1,
+     "score": 0.09720912575721741
+    },
+    {
+     "id": "https://openalex.org/C27206212",
+     "wikidata": "https://www.wikidata.org/wiki/Q34178",
+     "display_name": "Theology",
+     "level": 1,
+     "score": 0.05323264002799988
+    },
+    {
+     "id": "https://openalex.org/C138885662",
+     "wikidata": "https://www.wikidata.org/wiki/Q5891",
+     "display_name": "Philosophy",
+     "level": 0,
+     "score": 0.0
+    }
+   ],
+   "mesh": [],
+   "locations_count": 1,
+   "locations": [
+    {
+     "id": "doi:10.1016/j.disc.2012.04.019",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.1016/j.disc.2012.04.019",
+     "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0012365X1200194X/pdf",
+     "source": {
+      "id": "https://openalex.org/S18902827",
+      "display_name": "Discrete Mathematics",
+      "issn_l": "0012-365X",
+      "issn": [
+       "0012-365X",
+       "1872-681X"
+      ],
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": true,
+      "listed_in": [
+       "cwts-core",
+       "jufo-1",
+       "norway-1"
+      ],
+      "host_organization": "https://openalex.org/P4310320990",
+      "host_organization_name": "Elsevier BV",
+      "host_organization_lineage": [
+       "https://openalex.org/P4310320990"
+      ],
+      "host_organization_lineage_names": [
+       "Elsevier BV"
+      ],
+      "type": "journal"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "publishedVersion",
+     "is_accepted": true,
+     "is_published": true,
+     "raw_source_name": "Discrete Mathematics",
+     "raw_type": "journal-article"
+    }
+   ],
+   "best_oa_location": {
+    "id": "doi:10.1016/j.disc.2012.04.019",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1016/j.disc.2012.04.019",
+    "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0012365X1200194X/pdf",
+    "source": {
+     "id": "https://openalex.org/S18902827",
+     "display_name": "Discrete Mathematics",
+     "issn_l": "0012-365X",
+     "issn": [
+      "0012-365X",
+      "1872-681X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Discrete Mathematics",
+    "raw_type": "journal-article"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [
+    {
+     "id": "https://openalex.org/G3003613045",
+     "display_name": null,
+     "funder_award_id": "2008-2329",
+     "funder_id": "https://openalex.org/F4320321198",
+     "funder_display_name": "Chonnam National University"
+    },
+    {
+     "id": "https://openalex.org/G8481822273",
+     "display_name": null,
+     "funder_award_id": "2011-0008683",
+     "funder_id": "https://openalex.org/F4320322349",
+     "funder_display_name": "Ministry of Education, Science and Technology"
+    }
+   ],
+   "funders": [
+    {
+     "id": "https://openalex.org/F4320310234",
+     "display_name": "University of Strathclyde",
+     "ror": "https://ror.org/00n3w3b69"
+    },
+    {
+     "id": "https://openalex.org/F4320320671",
+     "display_name": "National Research Foundation",
+     "ror": "https://ror.org/05s0g1g46"
+    },
+    {
+     "id": "https://openalex.org/F4320321198",
+     "display_name": "Chonnam National University",
+     "ror": "https://ror.org/05kzjxq56"
+    },
+    {
+     "id": "https://openalex.org/F4320322120",
+     "display_name": "National Research Foundation of Korea",
+     "ror": "https://ror.org/013aysd81"
+    },
+    {
+     "id": "https://openalex.org/F4320322349",
+     "display_name": "Ministry of Education, Science and Technology",
+     "ror": "https://ror.org/01p262204"
+    }
+   ],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W1974553375.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W1974553375.grobid-xml"
+   },
+   "referenced_works_count": 19,
+   "referenced_works": [
+    "https://openalex.org/W87255518",
+    "https://openalex.org/W186403072",
+    "https://openalex.org/W639947448",
+    "https://openalex.org/W1564317200",
+    "https://openalex.org/W1972781649",
+    "https://openalex.org/W2060352617",
+    "https://openalex.org/W2068728923",
+    "https://openalex.org/W2098042801",
+    "https://openalex.org/W2132672144",
+    "https://openalex.org/W2148726777",
+    "https://openalex.org/W2154919605",
+    "https://openalex.org/W2340541605",
+    "https://openalex.org/W2511434093",
+    "https://openalex.org/W4402632704",
+    "https://openalex.org/W6603528510",
+    "https://openalex.org/W6633741265",
+    "https://openalex.org/W6674697127",
+    "https://openalex.org/W6679766249",
+    "https://openalex.org/W6725822320"
+   ],
+   "related_works": [
+    "https://openalex.org/W108845024",
+    "https://openalex.org/W2130001076",
+    "https://openalex.org/W2078213345",
+    "https://openalex.org/W1979254831",
+    "https://openalex.org/W2389268081",
+    "https://openalex.org/W2022161681",
+    "https://openalex.org/W2131673291",
+    "https://openalex.org/W2085287906",
+    "https://openalex.org/W2090278973",
+    "https://openalex.org/W3195058979"
+   ],
+   "abstract_inverted_index": null,
+   "counts_by_year": [
+    {
+     "year": 2025,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2022,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2020,
+     "cited_by_count": 2
+    },
+    {
+     "year": 2018,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2017,
+     "cited_by_count": 2
+    },
+    {
+     "year": 2015,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2013,
+     "cited_by_count": 1
+    }
+   ],
+   "updated_date": "2026-08-25T07:29:55.448023",
+   "created_date": "2025-10-10T00:00:00"
+  }
+ ],
+ "group_by": []
+}

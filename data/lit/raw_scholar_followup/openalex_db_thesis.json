@@ -1,0 +1,3235 @@
+{
+ "meta": {
+  "count": 5,
+  "db_response_time_ms": 72,
+  "page": 1,
+  "per_page": 3,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works where full text has (Experimental Methods in Number Theory \"and\" Combinatorics Dougherty-Bliss)",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "fulltext.search",
+      "value": "Experimental Methods in Number Theory and Combinatorics Dougherty-Bliss",
+      "operator": "has"
+     }
+    ]
+   },
+   "url": "/works?filter=fulltext.search:Experimental Methods in Number Theory and Combinatorics Dougherty-Bliss&per_page=3"
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W4399667467",
+   "doi": "https://doi.org/10.1073/pnas.2321440121",
+   "title": "Algorithm-assisted discovery of an intrinsic order among mathematical constants",
+   "display_name": "Algorithm-assisted discovery of an intrinsic order among mathematical constants",
+   "relevance_score": 5.318489,
+   "publication_year": 2024,
+   "publication_date": "2024-06-14",
+   "ids": {
+    "openalex": "https://openalex.org/W4399667467",
+    "doi": "https://doi.org/10.1073/pnas.2321440121",
+    "pmid": "https://pubmed.ncbi.nlm.nih.gov/38875143"
+   },
+   "language": "en",
+   "primary_location": {
+    "id": "doi:10.1073/pnas.2321440121",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1073/pnas.2321440121",
+    "pdf_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2321440121",
+    "source": {
+     "id": "https://openalex.org/S125754415",
+     "display_name": "Proceedings of the National Academy of Sciences",
+     "issn_l": "0027-8424",
+     "issn": [
+      "0027-8424",
+      "1091-6490"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "doyens",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-3",
+      "medline",
+      "norway-2"
+     ],
+     "host_organization": "https://openalex.org/P4310320052",
+     "host_organization_name": "National Academy of Sciences",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320052"
+     ],
+     "host_organization_lineage_names": [
+      "National Academy of Sciences"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by-nc-nd",
+    "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Proceedings of the National Academy of Sciences",
+    "raw_type": "journal-article"
+   },
+   "type": "article",
+   "indexed_in": [
+    "arxiv",
+    "crossref",
+    "datacite",
+    "pubmed"
+   ],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2321440121",
+    "any_repository_has_fulltext": true
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5092691898",
+      "display_name": "Rotem Elimelech",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Rotem Elimelech",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5052558205",
+      "display_name": "Ofir David",
+      "orcid": "https://orcid.org/0000-0003-0851-9707",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0851-9707"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ofir David",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5081197294",
+      "display_name": "Carlos De la Cruz Mengual",
+      "orcid": "https://orcid.org/0009-0007-7165-9530",
+      "observed_orcids": [
+       "https://orcid.org/0009-0007-7165-9530"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Carlos De la Cruz Mengual",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0007-7165-9530",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5092691899",
+      "display_name": "Rotem Kalisch",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Rotem Kalisch",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5073437603",
+      "display_name": "Wolfgang Berndt",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wolfgang Berndt",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5092691900",
+      "display_name": "Michael Shalyt",
+      "orcid": "https://orcid.org/0009-0002-8216-4799",
+      "observed_orcids": [
+       "https://orcid.org/0009-0002-8216-4799"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Michael Shalyt",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0002-8216-4799",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5022593894",
+      "display_name": "Mark Silberstein",
+      "orcid": "https://orcid.org/0000-0001-9659-068X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9659-068X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mark Silberstein",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-9659-068X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5090898018",
+      "display_name": "Yaron Hadad",
+      "orcid": "https://orcid.org/0000-0001-8538-8259",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8538-8259"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Yaron Hadad",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-8538-8259",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5013737776",
+      "display_name": "Ido E. Kaminer",
+      "orcid": "https://orcid.org/0000-0003-2691-1892",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2691-1892"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I174306211",
+       "display_name": "Technion – Israel Institute of Technology",
+       "ror": "https://ror.org/03qryx823",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Ido Kaminer",
+     "raw_affiliation_strings": [
+      "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-2691-1892",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Electrical and Computer Engineering, Technion—Israel Institute of Technology, 3200003 Haifa, Israel",
+       "institution_ids": [
+        "https://openalex.org/I174306211"
+       ]
+      }
+     ]
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 1,
+   "institutions_distinct_count": 1,
+   "corresponding_author_ids": [
+    "https://openalex.org/A5013737776"
+   ],
+   "corresponding_institution_ids": [
+    "https://openalex.org/I174306211"
+   ],
+   "apc_list": null,
+   "apc_paid": null,
+   "fwci": 2.6066,
+   "has_fulltext": true,
+   "cited_by_count": 2,
+   "citation_normalized_percentile": {
+    "value": 0.86737443,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+   },
+   "cited_by_percentile_year": {
+    "min": 89,
+    "max": 94
+   },
+   "biblio": {
+    "volume": "121",
+    "issue": "25",
+    "first_page": "e2321440121",
+    "last_page": "e2321440121"
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T11428",
+    "display_name": "Advanced Mathematical Identities",
+    "score": 0.9814000129699707,
+    "subfield": {
+     "id": "https://openalex.org/subfields/2602",
+     "display_name": "Algebra and Number Theory"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/26",
+     "display_name": "Mathematics"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T11428",
+     "display_name": "Advanced Mathematical Identities",
+     "score": 0.9814000129699707,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2602",
+      "display_name": "Algebra and Number Theory"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11166",
+     "display_name": "Analytic Number Theory Research",
+     "score": 0.01600000075995922,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2602",
+      "display_name": "Algebra and Number Theory"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T13806",
+     "display_name": "Mathematical and Computational Methods",
+     "score": 0.0010999999940395355,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2611",
+      "display_name": "Modeling and Simulation"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/mathematical-constants",
+     "display_name": "mathematical constants",
+     "score": 0.8259999752044678
+    },
+    {
+     "id": "https://openalex.org/keywords/computer-assisted-discovery",
+     "display_name": "computer-assisted discovery",
+     "score": 0.8349999785423279
+    },
+    {
+     "id": "https://openalex.org/keywords/continued-fractions",
+     "display_name": "continued fractions",
+     "score": 0.7300000190734863
+    },
+    {
+     "id": "https://openalex.org/keywords/riemann-zeta-function",
+     "display_name": "Riemann zeta function",
+     "score": 0.8539999723434448
+    },
+    {
+     "id": "https://openalex.org/keywords/irrationality-proofs",
+     "display_name": "irrationality proofs",
+     "score": 0.9039999842643738
+    },
+    {
+     "id": "https://openalex.org/keywords/massively-parallel-algorithms",
+     "display_name": "massively parallel algorithms",
+     "score": 0.675000011920929
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C108710211",
+     "wikidata": "https://www.wikidata.org/wiki/Q11538",
+     "display_name": "Mathematical proof",
+     "level": 2,
+     "score": 0.6564044952392578
+    },
+    {
+     "id": "https://openalex.org/C41008148",
+     "wikidata": "https://www.wikidata.org/wiki/Q21198",
+     "display_name": "Computer science",
+     "level": 0,
+     "score": 0.511634886264801
+    },
+    {
+     "id": "https://openalex.org/C66783780",
+     "wikidata": "https://www.wikidata.org/wiki/Q1166625",
+     "display_name": "Mathematical problem",
+     "level": 2,
+     "score": 0.463396817445755
+    },
+    {
+     "id": "https://openalex.org/C106487976",
+     "wikidata": "https://www.wikidata.org/wiki/Q685816",
+     "display_name": "Matrix (chemical analysis)",
+     "level": 2,
+     "score": 0.4435502886772156
+    },
+    {
+     "id": "https://openalex.org/C130327152",
+     "wikidata": "https://www.wikidata.org/wiki/Q748349",
+     "display_name": "Mathematical structure",
+     "level": 2,
+     "score": 0.4384083151817322
+    },
+    {
+     "id": "https://openalex.org/C33923547",
+     "wikidata": "https://www.wikidata.org/wiki/Q395",
+     "display_name": "Mathematics",
+     "level": 0,
+     "score": 0.395644873380661
+    },
+    {
+     "id": "https://openalex.org/C80444323",
+     "wikidata": "https://www.wikidata.org/wiki/Q2878974",
+     "display_name": "Theoretical computer science",
+     "level": 1,
+     "score": 0.337824285030365
+    },
+    {
+     "id": "https://openalex.org/C28826006",
+     "wikidata": "https://www.wikidata.org/wiki/Q33521",
+     "display_name": "Applied mathematics",
+     "level": 1,
+     "score": 0.32297271490097046
+    },
+    {
+     "id": "https://openalex.org/C2777686260",
+     "wikidata": "https://www.wikidata.org/wiki/Q144037",
+     "display_name": "Calculus (dental)",
+     "level": 2,
+     "score": 0.3226945996284485
+    },
+    {
+     "id": "https://openalex.org/C159985019",
+     "wikidata": "https://www.wikidata.org/wiki/Q181790",
+     "display_name": "Composite material",
+     "level": 1,
+     "score": 0.0
+    },
+    {
+     "id": "https://openalex.org/C199343813",
+     "wikidata": "https://www.wikidata.org/wiki/Q12128",
+     "display_name": "Dentistry",
+     "level": 1,
+     "score": 0.0
+    },
+    {
+     "id": "https://openalex.org/C2524010",
+     "wikidata": "https://www.wikidata.org/wiki/Q8087",
+     "display_name": "Geometry",
+     "level": 1,
+     "score": 0.0
+    },
+    {
+     "id": "https://openalex.org/C192562407",
+     "wikidata": "https://www.wikidata.org/wiki/Q228736",
+     "display_name": "Materials science",
+     "level": 0,
+     "score": 0.0
+    },
+    {
+     "id": "https://openalex.org/C145420912",
+     "wikidata": "https://www.wikidata.org/wiki/Q853077",
+     "display_name": "Mathematics education",
+     "level": 1,
+     "score": 0.0
+    },
+    {
+     "id": "https://openalex.org/C71924100",
+     "wikidata": "https://www.wikidata.org/wiki/Q11190",
+     "display_name": "Medicine",
+     "level": 0,
+     "score": 0.0
+    }
+   ],
+   "mesh": [],
+   "locations_count": 5,
+   "locations": [
+    {
+     "id": "doi:10.1073/pnas.2321440121",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.1073/pnas.2321440121",
+     "pdf_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2321440121",
+     "source": {
+      "id": "https://openalex.org/S125754415",
+      "display_name": "Proceedings of the National Academy of Sciences",
+      "issn_l": "0027-8424",
+      "issn": [
+       "0027-8424",
+       "1091-6490"
+      ],
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": true,
+      "listed_in": [
+       "cwts-core",
+       "doyens",
+       "erih-plus",
+       "jufo-3",
+       "ki-jl-3",
+       "medline",
+       "norway-2"
+      ],
+      "host_organization": "https://openalex.org/P4310320052",
+      "host_organization_name": "National Academy of Sciences",
+      "host_organization_lineage": [
+       "https://openalex.org/P4310320052"
+      ],
+      "host_organization_lineage_names": [
+       "National Academy of Sciences"
+      ],
+      "type": "journal"
+     },
+     "license": "cc-by-nc-nd",
+     "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+     "version": "publishedVersion",
+     "is_accepted": true,
+     "is_published": true,
+     "raw_source_name": "Proceedings of the National Academy of Sciences",
+     "raw_type": "journal-article"
+    },
+    {
+     "id": "pmid:38875143",
+     "is_oa": false,
+     "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/38875143",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306525036",
+      "display_name": "PubMed",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": false,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I1299303238",
+      "host_organization_name": "National Institutes of Health",
+      "host_organization_lineage": [
+       "https://openalex.org/I1299303238"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "publishedVersion",
+     "is_accepted": true,
+     "is_published": true,
+     "raw_source_name": "Proceedings of the National Academy of Sciences of the United States of America",
+     "raw_type": "Journal Article"
+    },
+    {
+     "id": "pmh:oai:arXiv.org:2308.11829",
+     "is_oa": true,
+     "landing_page_url": "http://arxiv.org/abs/2308.11829",
+     "pdf_url": "https://arxiv.org/pdf/2308.11829",
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": null,
+     "raw_type": "text"
+    },
+    {
+     "id": "pmh:oai:pubmedcentral.nih.gov:11194572",
+     "is_oa": true,
+     "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11194572",
+     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11194572/pdf/pnas.202321440.pdf",
+     "source": {
+      "id": "https://openalex.org/S2764455111",
+      "display_name": "PubMed Central",
+      "issn_l": null,
+      "issn": null,
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I1299303238",
+      "host_organization_name": "National Institutes of Health",
+      "host_organization_lineage": [
+       "https://openalex.org/I1299303238"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": "cc-by-nc-nd",
+     "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": "Proc Natl Acad Sci U S A",
+     "raw_type": "Text"
+    },
+    {
+     "id": "doi:10.48550/arxiv.2308.11829",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.48550/arxiv.2308.11829",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": null,
+     "is_accepted": false,
+     "is_published": null,
+     "raw_source_name": null,
+     "raw_type": "article-journal"
+    }
+   ],
+   "best_oa_location": {
+    "id": "doi:10.1073/pnas.2321440121",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1073/pnas.2321440121",
+    "pdf_url": "https://www.pnas.org/doi/pdf/10.1073/pnas.2321440121",
+    "source": {
+     "id": "https://openalex.org/S125754415",
+     "display_name": "Proceedings of the National Academy of Sciences",
+     "issn_l": "0027-8424",
+     "issn": [
+      "0027-8424",
+      "1091-6490"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "doyens",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-3",
+      "medline",
+      "norway-2"
+     ],
+     "host_organization": "https://openalex.org/P4310320052",
+     "host_organization_name": "National Academy of Sciences",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320052"
+     ],
+     "host_organization_lineage_names": [
+      "National Academy of Sciences"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by-nc-nd",
+    "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Proceedings of the National Academy of Sciences",
+    "raw_type": "journal-article"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [
+    {
+     "id": "https://openalex.org/G2922992948",
+     "display_name": null,
+     "funder_award_id": "G-22-63346",
+     "funder_id": "https://openalex.org/F4026159580",
+     "funder_display_name": "Schmidt Futures"
+    }
+   ],
+   "funders": [
+    {
+     "id": "https://openalex.org/F4026159580",
+     "display_name": "Schmidt Futures",
+     "ror": null
+    }
+   ],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W4399667467.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W4399667467.grobid-xml"
+   },
+   "referenced_works_count": 38,
+   "referenced_works": [
+    "https://openalex.org/W351274383",
+    "https://openalex.org/W770402708",
+    "https://openalex.org/W1518207054",
+    "https://openalex.org/W1538557949",
+    "https://openalex.org/W1566965859",
+    "https://openalex.org/W1964589161",
+    "https://openalex.org/W1986164806",
+    "https://openalex.org/W2019045525",
+    "https://openalex.org/W2049042340",
+    "https://openalex.org/W2068010002",
+    "https://openalex.org/W2103236565",
+    "https://openalex.org/W2103363198",
+    "https://openalex.org/W2133093325",
+    "https://openalex.org/W2142863519",
+    "https://openalex.org/W2396431292",
+    "https://openalex.org/W2945964015",
+    "https://openalex.org/W2995681788",
+    "https://openalex.org/W3014322349",
+    "https://openalex.org/W3034714558",
+    "https://openalex.org/W3103063815",
+    "https://openalex.org/W3104137792",
+    "https://openalex.org/W3122109845",
+    "https://openalex.org/W3126862140",
+    "https://openalex.org/W3131012422",
+    "https://openalex.org/W3215285253",
+    "https://openalex.org/W4206440114",
+    "https://openalex.org/W4212875219",
+    "https://openalex.org/W4214637200",
+    "https://openalex.org/W4220964415",
+    "https://openalex.org/W4234282059",
+    "https://openalex.org/W4236275575",
+    "https://openalex.org/W4243347036",
+    "https://openalex.org/W4250720901",
+    "https://openalex.org/W4302010773",
+    "https://openalex.org/W4312051963",
+    "https://openalex.org/W4399103923",
+    "https://openalex.org/W6647699349",
+    "https://openalex.org/W7065130576"
+   ],
+   "related_works": [
+    "https://openalex.org/W2211829236",
+    "https://openalex.org/W2752116162",
+    "https://openalex.org/W4388704028",
+    "https://openalex.org/W3033439797",
+    "https://openalex.org/W3042529201",
+    "https://openalex.org/W4312901386",
+    "https://openalex.org/W2390742597",
+    "https://openalex.org/W2393375134",
+    "https://openalex.org/W3089625890",
+    "https://openalex.org/W2589002028"
+   ],
+   "abstract_inverted_index": {
+    "In": [
+     0,
+     65
+    ],
+    "recent": [
+     1
+    ],
+    "decades,": [
+     2
+    ],
+    "a": [
+     3,
+     56,
+     75,
+     82
+    ],
+    "growing": [
+     4
+    ],
+    "number": [
+     5,
+     84
+    ],
+    "of": [
+     6,
+     42,
+     55,
+     68,
+     85,
+     90,
+     106,
+     140,
+     163,
+     178,
+     199,
+     213,
+     216,
+     221,
+     231,
+     247
+    ],
+    "discoveries": [
+     7,
+     41
+    ],
+    "in": [
+     8,
+     87
+    ],
+    "mathematics": [
+     9,
+     189
+    ],
+    "have": [
+     10,
+     156
+    ],
+    "been": [
+     11
+    ],
+    "assisted": [
+     12
+    ],
+    "by": [
+     13,
+     147,
+     211
+    ],
+    "computer": [
+     14,
+     36,
+     78
+    ],
+    "algorithms,": [
+     15
+    ],
+    "primarily": [
+     16
+    ],
+    "for": [
+     17,
+     93,
+     186
+    ],
+    "exploring": [
+     18
+    ],
+    "large": [
+     19,
+     83
+    ],
+    "parameter": [
+     20
+    ],
+    "spaces.": [
+     21
+    ],
+    "As": [
+     22
+    ],
+    "computers": [
+     23,
+     223
+    ],
+    "become": [
+     24
+    ],
+    "more": [
+     25
+    ],
+    "powerful,": [
+     26
+    ],
+    "an": [
+     27
+    ],
+    "intriguing": [
+     28
+    ],
+    "possibility": [
+     29
+    ],
+    "arises—the": [
+     30
+    ],
+    "interplay": [
+     31
+    ],
+    "between": [
+     32,
+     123
+    ],
+    "human": [
+     33
+    ],
+    "intuition": [
+     34
+    ],
+    "and": [
+     35,
+     112,
+     130,
+     134,
+     166,
+     190,
+     240
+    ],
+    "algorithms": [
+     37
+    ],
+    "can": [
+     38
+    ],
+    "lead": [
+     39
+    ],
+    "to": [
+     40,
+     150,
+     206,
+     235
+    ],
+    "mathematical": [
+     43,
+     59,
+     95,
+     125,
+     197
+    ],
+    "structures": [
+     44
+    ],
+    "that": [
+     45,
+     80,
+     153
+    ],
+    "would": [
+     46
+    ],
+    "otherwise": [
+     47
+    ],
+    "remain": [
+     48
+    ],
+    "elusive.": [
+     49
+    ],
+    "Here,": [
+     50
+    ],
+    "we": [
+     51,
+     73,
+     203
+    ],
+    "demonstrate": [
+     52
+    ],
+    "computer-assisted": [
+     53
+    ],
+    "discovery": [
+     54
+    ],
+    "previously": [
+     57
+    ],
+    "unknown": [
+     58
+    ],
+    "structure,": [
+     60
+    ],
+    "the": [
+     61,
+     66,
+     69,
+     88,
+     104,
+     107,
+     135,
+     179,
+     208,
+     214,
+     229
+    ],
+    "conservative": [
+     62,
+     109
+    ],
+    "matrix": [
+     63,
+     110,
+     118,
+     142
+    ],
+    "field.": [
+     64
+    ],
+    "spirit": [
+     67
+    ],
+    "Ramanujan": [
+     70
+    ],
+    "Machine": [
+     71
+    ],
+    "project,": [
+     72
+    ],
+    "developed": [
+     74
+    ],
+    "massively": [
+     76
+    ],
+    "parallel": [
+     77
+    ],
+    "algorithm": [
+     79
+    ],
+    "found": [
+     81
+    ],
+    "formulas,": [
+     86
+    ],
+    "form": [
+     89
+    ],
+    "continued": [
+     91
+    ],
+    "fractions,": [
+     92
+    ],
+    "numerous": [
+     94
+    ],
+    "constants.": [
+     96
+    ],
+    "The": [
+     97,
+     138
+    ],
+    "patterns": [
+     98
+    ],
+    "arising": [
+     99
+    ],
+    "from": [
+     100
+    ],
+    "those": [
+     101
+    ],
+    "formulas": [
+     102,
+     152,
+     165
+    ],
+    "enabled": [
+     103
+    ],
+    "construction": [
+     105
+    ],
+    "first": [
+     108
+    ],
+    "fields": [
+     111,
+     119,
+     143,
+     193,
+     246
+    ],
+    "revealed": [
+     113
+    ],
+    "their": [
+     114,
+     148
+    ],
+    "overarching": [
+     115
+    ],
+    "properties.": [
+     116
+    ],
+    "Conservative": [
+     117
+    ],
+    "unveil": [
+     120
+    ],
+    "unexpected": [
+     121,
+     242
+    ],
+    "relations": [
+     122
+    ],
+    "different": [
+     124
+    ],
+    "constants,": [
+     126
+    ],
+    "such": [
+     127
+    ],
+    "as": [
+     128
+    ],
+    "π": [
+     129
+    ],
+    "ln(2),": [
+     131
+    ],
+    "or": [
+     132
+    ],
+    "e": [
+     133
+    ],
+    "Gompertz": [
+     136
+    ],
+    "constant.": [
+     137
+    ],
+    "importance": [
+     139
+    ],
+    "these": [
+     141,
+     174
+    ],
+    "is": [
+     144
+    ],
+    "further": [
+     145
+    ],
+    "realized": [
+     146
+    ],
+    "ability": [
+     149
+    ],
+    "connect": [
+     151
+    ],
+    "do": [
+     154
+    ],
+    "not": [
+     155
+    ],
+    "any": [
+     157
+    ],
+    "apparent": [
+     158
+    ],
+    "relation,": [
+     159
+    ],
+    "thus": [
+     160
+    ],
+    "unifying": [
+     161
+    ],
+    "hundreds": [
+     162
+    ],
+    "existing": [
+     164
+    ],
+    "generating": [
+     167
+    ],
+    "infinitely": [
+     168
+    ],
+    "many": [
+     169
+    ],
+    "new": [
+     170,
+     196
+    ],
+    "formulas.": [
+     171
+    ],
+    "We": [
+     172
+    ],
+    "exemplify": [
+     173
+    ],
+    "implications": [
+     175
+    ],
+    "on": [
+     176
+    ],
+    "values": [
+     177
+    ],
+    "Riemann": [
+     180
+    ],
+    "zeta": [
+     181
+    ],
+    "function": [
+     182
+    ],
+    "ζ": [
+     183,
+     217
+    ],
+    "(n),": [
+     184
+    ],
+    "studied": [
+     185
+    ],
+    "centuries": [
+     187
+    ],
+    "across": [
+     188,
+     244
+    ],
+    "physics.": [
+     191
+    ],
+    "Matrix": [
+     192
+    ],
+    "also": [
+     194
+    ],
+    "enable": [
+     195
+    ],
+    "proofs": [
+     198
+    ],
+    "irrationality.": [
+     200
+    ],
+    "For": [
+     201
+    ],
+    "example,": [
+     202
+    ],
+    "use": [
+     204
+    ],
+    "them": [
+     205
+    ],
+    "generalize": [
+     207
+    ],
+    "celebrated": [
+     209
+    ],
+    "proof": [
+     210
+    ],
+    "Apéry": [
+     212
+    ],
+    "irrationality": [
+     215
+    ],
+    "(3).": [
+     218
+    ],
+    "Utilizing": [
+     219
+    ],
+    "thousands": [
+     220
+    ],
+    "personal": [
+     222
+    ],
+    "worldwide,": [
+     224
+    ],
+    "our": [
+     225
+    ],
+    "research": [
+     226
+    ],
+    "strategy": [
+     227
+    ],
+    "demonstrates": [
+     228
+    ],
+    "power": [
+     230
+    ],
+    "large-scale": [
+     232
+    ],
+    "computational": [
+     233
+    ],
+    "approaches": [
+     234
+    ],
+    "tackle": [
+     236
+    ],
+    "longstanding": [
+     237
+    ],
+    "open": [
+     238
+    ],
+    "problems": [
+     239
+    ],
+    "discover": [
+     241
+    ],
+    "connections": [
+     243
+    ],
+    "diverse": [
+     245
+    ],
+    "science.": [
+     248
+    ]
+   },
+   "counts_by_year": [
+    {
+     "year": 2025,
+     "cited_by_count": 1
+    },
+    {
+     "year": 2024,
+     "cited_by_count": 1
+    }
+   ],
+   "updated_date": "2026-09-29T14:09:16.559479",
+   "created_date": "2025-10-10T00:00:00"
+  },
+  {
+   "id": "https://openalex.org/W4414977275",
+   "doi": "https://doi.org/10.1145/3763156",
+   "title": "Detecting and Explaining (In-)equivalence of Context-Free Grammars",
+   "display_name": "Detecting and Explaining (In-)equivalence of Context-Free Grammars",
+   "relevance_score": 5.3083553,
+   "publication_year": 2025,
+   "publication_date": "2025-10-09",
+   "ids": {
+    "openalex": "https://openalex.org/W4414977275",
+    "doi": "https://doi.org/10.1145/3763156"
+   },
+   "language": "en",
+   "primary_location": {
+    "id": "doi:10.1145/3763156",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1145/3763156",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3763156",
+    "source": {
+     "id": "https://openalex.org/S4210216081",
+     "display_name": "Proceedings of the ACM on Programming Languages",
+     "issn_l": "2475-1421",
+     "issn": [
+      "2475-1421"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4310319798",
+     "host_organization_name": "Association for Computing Machinery",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319798"
+     ],
+     "host_organization_lineage_names": [
+      "Association for Computing Machinery"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Proceedings of the ACM on Programming Languages",
+    "raw_type": "journal-article"
+   },
+   "type": "article",
+   "indexed_in": [
+    "arxiv",
+    "crossref",
+    "datacite"
+   ],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "diamond",
+    "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3763156",
+    "any_repository_has_fulltext": true
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5086631278",
+      "display_name": "Marko Schmellenkamp",
+      "orcid": "https://orcid.org/0000-0003-3966-6590",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3966-6590"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I904495901",
+       "display_name": "Ruhr University Bochum",
+       "ror": "https://ror.org/04tsk2644",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Marko Schmellenkamp",
+     "raw_affiliation_strings": [
+      "Ruhr University Bochum, Bochum, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-3966-6590",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Ruhr University Bochum, Bochum, Germany",
+       "institution_ids": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5023740993",
+      "display_name": "Thomas Zeume",
+      "orcid": "https://orcid.org/0000-0002-5186-7507",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5186-7507"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I904495901",
+       "display_name": "Ruhr University Bochum",
+       "ror": "https://ror.org/04tsk2644",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Thomas Zeume",
+     "raw_affiliation_strings": [
+      "Ruhr University Bochum, Bochum, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-5186-7507",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Ruhr University Bochum, Bochum, Germany",
+       "institution_ids": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5092451999",
+      "display_name": "Sven Argo",
+      "orcid": "https://orcid.org/0009-0009-5544-6417",
+      "observed_orcids": [
+       "https://orcid.org/0009-0009-5544-6417"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I904495901",
+       "display_name": "Ruhr University Bochum",
+       "ror": "https://ror.org/04tsk2644",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Sven Argo",
+     "raw_affiliation_strings": [
+      "Ruhr University Bochum, Bochum, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0009-5544-6417",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Ruhr University Bochum, Bochum, Germany",
+       "institution_ids": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5068005202",
+      "display_name": "Sandra Kiefer",
+      "orcid": "https://orcid.org/0000-0003-4614-9444",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4614-9444"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I40120149",
+       "display_name": "University of Oxford",
+       "ror": "https://ror.org/052gg0110",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I40120149"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Sandra Kiefer",
+     "raw_affiliation_strings": [
+      "University of Oxford, Oxford, United Kingdom"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-4614-9444",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Oxford, Oxford, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I40120149"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5107328135",
+      "display_name": "Cedric Siems",
+      "orcid": "https://orcid.org/0009-0007-5671-2209",
+      "observed_orcids": [
+       "https://orcid.org/0009-0007-5671-2209"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I904495901",
+       "display_name": "Ruhr University Bochum",
+       "ror": "https://ror.org/04tsk2644",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Cedric Siems",
+     "raw_affiliation_strings": [
+      "Ruhr University Bochum, Bochum, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0007-5671-2209",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Ruhr University Bochum, Bochum, Germany",
+       "institution_ids": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5107604950",
+      "display_name": "Fynn Stebel",
+      "orcid": "https://orcid.org/0009-0009-1352-7892",
+      "observed_orcids": [
+       "https://orcid.org/0009-0009-1352-7892"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I904495901",
+       "display_name": "Ruhr University Bochum",
+       "ror": "https://ror.org/04tsk2644",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Fynn Stebel",
+     "raw_affiliation_strings": [
+      "Ruhr University Bochum, Bochum, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0009-0009-1352-7892",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Ruhr University Bochum, Bochum, Germany",
+       "institution_ids": [
+        "https://openalex.org/I904495901"
+       ]
+      }
+     ]
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 2,
+   "institutions_distinct_count": 2,
+   "corresponding_author_ids": [],
+   "corresponding_institution_ids": [],
+   "apc_list": null,
+   "apc_paid": null,
+   "fwci": 1.0932,
+   "has_fulltext": true,
+   "cited_by_count": 2,
+   "citation_normalized_percentile": {
+    "value": 0.80371241,
+    "is_in_top_1_percent": false,
+    "is_in_top_10_percent": false
+   },
+   "cited_by_percentile_year": {
+    "min": 94,
+    "max": 96
+   },
+   "biblio": {
+    "volume": "9",
+    "issue": "OOPSLA2",
+    "first_page": "2954",
+    "last_page": "2980"
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T11567",
+    "display_name": "semigroups and automata theory",
+    "score": 0.9901999831199646,
+    "subfield": {
+     "id": "https://openalex.org/subfields/1703",
+     "display_name": "Computational Theory and Mathematics"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/17",
+     "display_name": "Computer Science"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T11567",
+     "display_name": "semigroups and automata theory",
+     "score": 0.9901999831199646,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1703",
+      "display_name": "Computational Theory and Mathematics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10126",
+     "display_name": "Logic, programming, and type systems",
+     "score": 0.004699999932199717,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1702",
+      "display_name": "Artificial Intelligence"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10533",
+     "display_name": "Teaching and Learning Programming",
+     "score": 0.0010000000474974513,
+     "subfield": {
+      "id": "https://openalex.org/subfields/1706",
+      "display_name": "Computer Science Applications"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/17",
+      "display_name": "Computer Science"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/context-free-grammars",
+     "display_name": "context-free grammars",
+     "score": 0.9980000257492065
+    },
+    {
+     "id": "https://openalex.org/keywords/decidability",
+     "display_name": "decidability",
+     "score": 0.640999972820282
+    },
+    {
+     "id": "https://openalex.org/keywords/educational-support-systems",
+     "display_name": "educational support systems",
+     "score": 0.7879999876022339
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C41008148",
+     "wikidata": "https://www.wikidata.org/wiki/Q21198",
+     "display_name": "Computer science",
+     "level": 0,
+     "score": 0.7156000137329102
+    },
+    {
+     "id": "https://openalex.org/C192034797",
+     "wikidata": "https://www.wikidata.org/wiki/Q3502995",
+     "display_name": "Undecidable problem",
+     "level": 3,
+     "score": 0.6977999806404114
+    },
+    {
+     "id": "https://openalex.org/C2780069185",
+     "wikidata": "https://www.wikidata.org/wiki/Q7977945",
+     "display_name": "Equivalence (formal languages)",
+     "level": 2,
+     "score": 0.6965000033378601
+    },
+    {
+     "id": "https://openalex.org/C53893814",
+     "wikidata": "https://www.wikidata.org/wiki/Q7378909",
+     "display_name": "Rule-based machine translation",
+     "level": 2,
+     "score": 0.6772000193595886
+    },
+    {
+     "id": "https://openalex.org/C26022165",
+     "wikidata": "https://www.wikidata.org/wiki/Q8091",
+     "display_name": "Grammar",
+     "level": 2,
+     "score": 0.6523000001907349
+    },
+    {
+     "id": "https://openalex.org/C204321447",
+     "wikidata": "https://www.wikidata.org/wiki/Q30642",
+     "display_name": "Natural language processing",
+     "level": 1,
+     "score": 0.5141000151634216
+    },
+    {
+     "id": "https://openalex.org/C2777212361",
+     "wikidata": "https://www.wikidata.org/wiki/Q5127848",
+     "display_name": "Class (philosophy)",
+     "level": 2,
+     "score": 0.4925999939441681
+    },
+    {
+     "id": "https://openalex.org/C154945302",
+     "wikidata": "https://www.wikidata.org/wiki/Q11660",
+     "display_name": "Artificial intelligence",
+     "level": 1,
+     "score": 0.46129998564720154
+    },
+    {
+     "id": "https://openalex.org/C199360897",
+     "wikidata": "https://www.wikidata.org/wiki/Q9143",
+     "display_name": "Programming language",
+     "level": 1,
+     "score": 0.43790000677108765
+    },
+    {
+     "id": "https://openalex.org/C80444323",
+     "wikidata": "https://www.wikidata.org/wiki/Q2878974",
+     "display_name": "Theoretical computer science",
+     "level": 1,
+     "score": 0.37770000100135803
+    },
+    {
+     "id": "https://openalex.org/C134083981",
+     "wikidata": "https://www.wikidata.org/wiki/Q1754022",
+     "display_name": "Tree-adjoining grammar",
+     "level": 4,
+     "score": 0.3702999949455261
+    },
+    {
+     "id": "https://openalex.org/C204241405",
+     "wikidata": "https://www.wikidata.org/wiki/Q461499",
+     "display_name": "Transformation (genetics)",
+     "level": 3,
+     "score": 0.3682999908924103
+    },
+    {
+     "id": "https://openalex.org/C56601403",
+     "wikidata": "https://www.wikidata.org/wiki/Q5593673",
+     "display_name": "Grammar induction",
+     "level": 3,
+     "score": 0.36340001225471497
+    },
+    {
+     "id": "https://openalex.org/C29184939",
+     "wikidata": "https://www.wikidata.org/wiki/Q1134367",
+     "display_name": "Phrase structure grammar",
+     "level": 4,
+     "score": 0.3483000099658966
+    },
+    {
+     "id": "https://openalex.org/C48044578",
+     "wikidata": "https://www.wikidata.org/wiki/Q727490",
+     "display_name": "Scalability",
+     "level": 2,
+     "score": 0.34290000796318054
+    },
+    {
+     "id": "https://openalex.org/C97212296",
+     "wikidata": "https://www.wikidata.org/wiki/Q338047",
+     "display_name": "Context-free grammar",
+     "level": 3,
+     "score": 0.34220001101493835
+    },
+    {
+     "id": "https://openalex.org/C155092808",
+     "wikidata": "https://www.wikidata.org/wiki/Q182557",
+     "display_name": "Computational linguistics",
+     "level": 2,
+     "score": 0.2734000086784363
+    },
+    {
+     "id": "https://openalex.org/C2777044963",
+     "wikidata": "https://www.wikidata.org/wiki/Q5384707",
+     "display_name": "Equivalence class (music)",
+     "level": 2,
+     "score": 0.2623000144958496
+    },
+    {
+     "id": "https://openalex.org/C52370388",
+     "wikidata": "https://www.wikidata.org/wiki/Q752532",
+     "display_name": "Regular language",
+     "level": 3,
+     "score": 0.2574000060558319
+    },
+    {
+     "id": "https://openalex.org/C70846408",
+     "wikidata": "https://www.wikidata.org/wiki/Q220433",
+     "display_name": "Logical equivalence",
+     "level": 3,
+     "score": 0.2506999969482422
+    }
+   ],
+   "mesh": [],
+   "locations_count": 3,
+   "locations": [
+    {
+     "id": "doi:10.1145/3763156",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.1145/3763156",
+     "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3763156",
+     "source": {
+      "id": "https://openalex.org/S4210216081",
+      "display_name": "Proceedings of the ACM on Programming Languages",
+      "issn_l": "2475-1421",
+      "issn": [
+       "2475-1421"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": true,
+      "listed_in": [
+       "cwts-core",
+       "jufo-1",
+       "norway-1"
+      ],
+      "host_organization": "https://openalex.org/P4310319798",
+      "host_organization_name": "Association for Computing Machinery",
+      "host_organization_lineage": [
+       "https://openalex.org/P4310319798"
+      ],
+      "host_organization_lineage_names": [
+       "Association for Computing Machinery"
+      ],
+      "type": "journal"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": "publishedVersion",
+     "is_accepted": true,
+     "is_published": true,
+     "raw_source_name": "Proceedings of the ACM on Programming Languages",
+     "raw_type": "journal-article"
+    },
+    {
+     "id": "pmh:oai:arXiv.org:2407.18220",
+     "is_oa": true,
+     "landing_page_url": "http://arxiv.org/abs/2407.18220",
+     "pdf_url": "https://arxiv.org/pdf/2407.18220",
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": null,
+     "license_id": null,
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": null,
+     "raw_type": "text"
+    },
+    {
+     "id": "doi:10.48550/arxiv.2407.18220",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.48550/arxiv.2407.18220",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": null,
+     "is_accepted": false,
+     "is_published": null,
+     "raw_source_name": null,
+     "raw_type": "Preprint"
+    }
+   ],
+   "best_oa_location": {
+    "id": "doi:10.1145/3763156",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1145/3763156",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3763156",
+    "source": {
+     "id": "https://openalex.org/S4210216081",
+     "display_name": "Proceedings of the ACM on Programming Languages",
+     "issn_l": "2475-1421",
+     "issn": [
+      "2475-1421"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "jufo-1",
+      "norway-1"
+     ],
+     "host_organization": "https://openalex.org/P4310319798",
+     "host_organization_name": "Association for Computing Machinery",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319798"
+     ],
+     "host_organization_lineage_names": [
+      "Association for Computing Machinery"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Proceedings of the ACM on Programming Languages",
+    "raw_type": "journal-article"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [
+    {
+     "id": "https://openalex.org/G8670408253",
+     "display_name": "Formale Grundlagen von Lernsystemen für die Theoretische Informatik",
+     "funder_award_id": "448468041",
+     "funder_id": "https://openalex.org/F4320320879",
+     "funder_display_name": "Deutsche Forschungsgemeinschaft"
+    }
+   ],
+   "funders": [
+    {
+     "id": "https://openalex.org/F4320320879",
+     "display_name": "Deutsche Forschungsgemeinschaft",
+     "ror": "https://ror.org/018mejw64"
+    }
+   ],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W4414977275.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W4414977275.grobid-xml"
+   },
+   "referenced_works_count": 33,
+   "referenced_works": [
+    "https://openalex.org/W93487826",
+    "https://openalex.org/W165726963",
+    "https://openalex.org/W1480909796",
+    "https://openalex.org/W1544416128",
+    "https://openalex.org/W1594847506",
+    "https://openalex.org/W1687588989",
+    "https://openalex.org/W1810306334",
+    "https://openalex.org/W1982206794",
+    "https://openalex.org/W2019784509",
+    "https://openalex.org/W2026825864",
+    "https://openalex.org/W2041681678",
+    "https://openalex.org/W2073495011",
+    "https://openalex.org/W2089107726",
+    "https://openalex.org/W2113673727",
+    "https://openalex.org/W2157148396",
+    "https://openalex.org/W2157390113",
+    "https://openalex.org/W2165081250",
+    "https://openalex.org/W2228938473",
+    "https://openalex.org/W2609547559",
+    "https://openalex.org/W2796918693",
+    "https://openalex.org/W2989776965",
+    "https://openalex.org/W3023360888",
+    "https://openalex.org/W3045347538",
+    "https://openalex.org/W3099546535",
+    "https://openalex.org/W4230722822",
+    "https://openalex.org/W4281750432",
+    "https://openalex.org/W4399164841",
+    "https://openalex.org/W4402619431",
+    "https://openalex.org/W4404910483",
+    "https://openalex.org/W4407681656",
+    "https://openalex.org/W4414977275",
+    "https://openalex.org/W7077146433",
+    "https://openalex.org/W7077149476"
+   ],
+   "related_works": [],
+   "abstract_inverted_index": {
+    "We": [
+     0,
+     14
+    ],
+    "propose": [
+     1
+    ],
+    "a": [
+     2,
+     51,
+     87,
+     94
+    ],
+    "scalable": [
+     3
+    ],
+    "framework": [
+     4,
+     20,
+     46
+    ],
+    "for": [
+     5,
+     38,
+     86
+    ],
+    "deciding,": [
+     6
+    ],
+    "proving,": [
+     7
+    ],
+    "and": [
+     8,
+     21,
+     59,
+     93
+    ],
+    "explaining": [
+     9
+    ],
+    "(in-)equivalence": [
+     10
+    ],
+    "of": [
+     11,
+     18,
+     54,
+     90
+    ],
+    "context-free": [
+     12,
+     39,
+     91
+    ],
+    "grammars.": [
+     13,
+     104
+    ],
+    "present": [
+     15
+    ],
+    "an": [
+     16,
+     67
+    ],
+    "implementation": [
+     17
+    ],
+    "the": [
+     19,
+     35,
+     45
+    ],
+    "evaluate": [
+     22
+    ],
+    "it": [
+     23
+    ],
+    "on": [
+     24
+    ],
+    "large": [
+     25,
+     52,
+     88
+    ],
+    "data": [
+     26
+    ],
+    "sets": [
+     27
+    ],
+    "collected": [
+     28
+    ],
+    "within": [
+     29
+    ],
+    "educational": [
+     30
+    ],
+    "support": [
+     31
+    ],
+    "systems.": [
+     32
+    ],
+    "Even": [
+     33
+    ],
+    "though": [
+     34
+    ],
+    "equivalence": [
+     36
+    ],
+    "problem": [
+     37
+    ],
+    "languages": [
+     40
+    ],
+    "is": [
+     41,
+     47
+    ],
+    "undecidable": [
+     42
+    ],
+    "in": [
+     43
+    ],
+    "general,": [
+     44
+    ],
+    "able": [
+     48
+    ],
+    "to": [
+     49,
+     72,
+     100
+    ],
+    "handle": [
+     50
+    ],
+    "portion": [
+     53
+    ],
+    "these": [
+     55
+    ],
+    "datasets.": [
+     56
+    ],
+    "It": [
+     57
+    ],
+    "introduces": [
+     58
+    ],
+    "combines": [
+     60
+    ],
+    "techniques": [
+     61
+    ],
+    "from": [
+     62
+    ],
+    "several": [
+     63
+    ],
+    "areas,": [
+     64
+    ],
+    "such": [
+     65
+    ],
+    "as": [
+     66,
+     76,
+     78
+    ],
+    "abstract": [
+     68
+    ],
+    "grammar": [
+     69,
+     96
+    ],
+    "transformation": [
+     70
+    ],
+    "language": [
+     71
+    ],
+    "identify": [
+     73,
+     102
+    ],
+    "equivalent": [
+     74
+    ],
+    "grammars": [
+     75
+    ],
+    "well": [
+     77
+    ],
+    "sufficiently": [
+     79
+    ],
+    "similar": [
+     80
+    ],
+    "inequivalent": [
+     81
+    ],
+    "grammars,": [
+     82
+    ],
+    "theory-based": [
+     83
+    ],
+    "comparison": [
+     84
+    ],
+    "algorithms": [
+     85
+    ],
+    "class": [
+     89
+    ],
+    "languages,": [
+     92
+    ],
+    "graph-theory-inspired": [
+     95
+    ],
+    "canonization": [
+     97
+    ],
+    "that": [
+     98
+    ],
+    "allows": [
+     99
+    ],
+    "efficiently": [
+     101
+    ],
+    "isomorphic": [
+     103
+    ]
+   },
+   "counts_by_year": [
+    {
+     "year": 2025,
+     "cited_by_count": 2
+    }
+   ],
+   "updated_date": "2026-09-29T14:09:16.559479",
+   "created_date": "2025-10-10T00:00:00"
+  },
+  {
+   "id": "https://openalex.org/W4385473736",
+   "doi": "https://doi.org/10.48550/arxiv.2307.16069",
+   "title": "Lots and Lots of Perrin-Type Primality Tests and Their Pseudo-Primes",
+   "display_name": "Lots and Lots of Perrin-Type Primality Tests and Their Pseudo-Primes",
+   "relevance_score": 4.804657,
+   "publication_year": 2023,
+   "publication_date": "2023-07-29",
+   "ids": {
+    "openalex": "https://openalex.org/W4385473736",
+    "doi": "https://doi.org/10.48550/arxiv.2307.16069"
+   },
+   "language": "en",
+   "primary_location": {
+    "id": "pmh:oai:arXiv.org:2307.16069",
+    "is_oa": true,
+    "landing_page_url": "http://arxiv.org/abs/2307.16069",
+    "pdf_url": "https://arxiv.org/pdf/2307.16069",
+    "source": {
+     "id": "https://openalex.org/S4306400194",
+     "display_name": "arXiv (Cornell University)",
+     "issn_l": "2331-8422",
+     "issn": [
+      "2331-8422"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/I205783295",
+     "host_organization_name": "Cornell University",
+     "host_organization_lineage": [
+      "https://openalex.org/I205783295"
+     ],
+     "host_organization_lineage_names": [],
+     "type": "repository"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "text"
+   },
+   "type": "preprint",
+   "indexed_in": [
+    "arxiv",
+    "datacite"
+   ],
+   "open_access": {
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_url": "https://arxiv.org/pdf/2307.16069",
+    "any_repository_has_fulltext": true
+   },
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5039748538",
+      "display_name": "Robert Dougherty-Bliss",
+      "orcid": "https://orcid.org/0000-0002-6857-9229",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6857-9229"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Dougherty-Bliss, Robert",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5058881306",
+      "display_name": "Doron Zeilberger",
+      "orcid": "https://orcid.org/0000-0002-7225-8997",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7225-8997"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Zeilberger, Doron",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "institutions": [],
+   "countries_distinct_count": 0,
+   "institutions_distinct_count": 0,
+   "corresponding_author_ids": [],
+   "corresponding_institution_ids": [],
+   "apc_list": null,
+   "apc_paid": null,
+   "fwci": null,
+   "has_fulltext": true,
+   "cited_by_count": 0,
+   "citation_normalized_percentile": null,
+   "cited_by_percentile_year": null,
+   "biblio": {
+    "volume": null,
+    "issue": null,
+    "first_page": null,
+    "last_page": null
+   },
+   "is_retracted": false,
+   "is_paratext": false,
+   "is_xpac": false,
+   "primary_topic": {
+    "id": "https://openalex.org/T11166",
+    "display_name": "Analytic Number Theory Research",
+    "score": 0.8769999742507935,
+    "subfield": {
+     "id": "https://openalex.org/subfields/2602",
+     "display_name": "Algebra and Number Theory"
+    },
+    "field": {
+     "id": "https://openalex.org/fields/26",
+     "display_name": "Mathematics"
+    },
+    "domain": {
+     "id": "https://openalex.org/domains/3",
+     "display_name": "Physical Sciences"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T11166",
+     "display_name": "Analytic Number Theory Research",
+     "score": 0.8769999742507935,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2602",
+      "display_name": "Algebra and Number Theory"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T12516",
+     "display_name": "Advanced Mathematical Theories and Applications",
+     "score": 0.05040000006556511,
+     "subfield": {
+      "id": "https://openalex.org/subfields/3109",
+      "display_name": "Statistical and Nonlinear Physics"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/31",
+      "display_name": "Physics and Astronomy"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    },
+    {
+     "id": "https://openalex.org/T13806",
+     "display_name": "Mathematical and Computational Methods",
+     "score": 0.01080000028014183,
+     "subfield": {
+      "id": "https://openalex.org/subfields/2611",
+      "display_name": "Modeling and Simulation"
+     },
+     "field": {
+      "id": "https://openalex.org/fields/26",
+      "display_name": "Mathematics"
+     },
+     "domain": {
+      "id": "https://openalex.org/domains/3",
+      "display_name": "Physical Sciences"
+     }
+    }
+   ],
+   "keywords": [
+    {
+     "id": "https://openalex.org/keywords/perrin-numbers",
+     "display_name": "Perrin numbers",
+     "score": 0.8009999990463257
+    },
+    {
+     "id": "https://openalex.org/keywords/lucas-sequences",
+     "display_name": "Lucas sequences",
+     "score": 0.8009999990463257
+    },
+    {
+     "id": "https://openalex.org/keywords/primality-testing",
+     "display_name": "primality testing",
+     "score": 0.9929999709129333
+    },
+    {
+     "id": "https://openalex.org/keywords/pseudoprimes",
+     "display_name": "pseudoprimes",
+     "score": 0.8429999947547913
+    },
+    {
+     "id": "https://openalex.org/keywords/carmichael-numbers",
+     "display_name": "Carmichael numbers",
+     "score": 0.8569999933242798
+    },
+    {
+     "id": "https://openalex.org/keywords/experimental-mathematics",
+     "display_name": "experimental mathematics",
+     "score": 0.546999990940094
+    },
+    {
+     "id": "https://openalex.org/keywords/symbolic-computation",
+     "display_name": "symbolic computation",
+     "score": 0.7680000066757202
+    }
+   ],
+   "concepts": [
+    {
+     "id": "https://openalex.org/C191421660",
+     "wikidata": "https://www.wikidata.org/wiki/Q829546",
+     "display_name": "Primality test",
+     "level": 3,
+     "score": 0.9885292053222656
+    },
+    {
+     "id": "https://openalex.org/C33923547",
+     "wikidata": "https://www.wikidata.org/wiki/Q395",
+     "display_name": "Mathematics",
+     "level": 0,
+     "score": 0.6431708335876465
+    },
+    {
+     "id": "https://openalex.org/C94375191",
+     "wikidata": "https://www.wikidata.org/wiki/Q11205",
+     "display_name": "Arithmetic",
+     "level": 1,
+     "score": 0.5158047676086426
+    },
+    {
+     "id": "https://openalex.org/C88548561",
+     "wikidata": "https://www.wikidata.org/wiki/Q347599",
+     "display_name": "sort",
+     "level": 2,
+     "score": 0.490130752325058
+    },
+    {
+     "id": "https://openalex.org/C169654258",
+     "wikidata": "https://www.wikidata.org/wiki/Q12479",
+     "display_name": "Number theory",
+     "level": 2,
+     "score": 0.43638724088668823
+    },
+    {
+     "id": "https://openalex.org/C118615104",
+     "wikidata": "https://www.wikidata.org/wiki/Q121416",
+     "display_name": "Discrete mathematics",
+     "level": 1,
+     "score": 0.4147527813911438
+    },
+    {
+     "id": "https://openalex.org/C184992742",
+     "wikidata": "https://www.wikidata.org/wiki/Q7243229",
+     "display_name": "Prime (order theory)",
+     "level": 2,
+     "score": 0.38807278871536255
+    },
+    {
+     "id": "https://openalex.org/C114614502",
+     "wikidata": "https://www.wikidata.org/wiki/Q76592",
+     "display_name": "Combinatorics",
+     "level": 1,
+     "score": 0.2664329409599304
+    }
+   ],
+   "mesh": [],
+   "locations_count": 2,
+   "locations": [
+    {
+     "id": "pmh:oai:arXiv.org:2307.16069",
+     "is_oa": true,
+     "landing_page_url": "http://arxiv.org/abs/2307.16069",
+     "pdf_url": "https://arxiv.org/pdf/2307.16069",
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": "submittedVersion",
+     "is_accepted": false,
+     "is_published": false,
+     "raw_source_name": null,
+     "raw_type": "text"
+    },
+    {
+     "id": "doi:10.48550/arxiv.2307.16069",
+     "is_oa": true,
+     "landing_page_url": "https://doi.org/10.48550/arxiv.2307.16069",
+     "pdf_url": null,
+     "source": {
+      "id": "https://openalex.org/S4306400194",
+      "display_name": "arXiv (Cornell University)",
+      "issn_l": "2331-8422",
+      "issn": [
+       "2331-8422"
+      ],
+      "is_oa": true,
+      "is_in_doaj": false,
+      "is_core": false,
+      "listed_in": [],
+      "host_organization": "https://openalex.org/I205783295",
+      "host_organization_name": "Cornell University",
+      "host_organization_lineage": [
+       "https://openalex.org/I205783295"
+      ],
+      "host_organization_lineage_names": [],
+      "type": "repository"
+     },
+     "license": "cc-by",
+     "license_id": "https://openalex.org/licenses/cc-by",
+     "version": null,
+     "is_accepted": false,
+     "is_published": null,
+     "raw_source_name": null,
+     "raw_type": "article-journal"
+    }
+   ],
+   "best_oa_location": {
+    "id": "pmh:oai:arXiv.org:2307.16069",
+    "is_oa": true,
+    "landing_page_url": "http://arxiv.org/abs/2307.16069",
+    "pdf_url": "https://arxiv.org/pdf/2307.16069",
+    "source": {
+     "id": "https://openalex.org/S4306400194",
+     "display_name": "arXiv (Cornell University)",
+     "issn_l": "2331-8422",
+     "issn": [
+      "2331-8422"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/I205783295",
+     "host_organization_name": "Cornell University",
+     "host_organization_lineage": [
+      "https://openalex.org/I205783295"
+     ],
+     "host_organization_lineage_names": [],
+     "type": "repository"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "submittedVersion",
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": null,
+    "raw_type": "text"
+   },
+   "sustainable_development_goals": [],
+   "sustainable_development_goals_aurora": [],
+   "study_designs": [],
+   "awards": [],
+   "funders": [],
+   "has_content": {
+    "pdf": true,
+    "grobid_xml": true
+   },
+   "content_urls": {
+    "pdf": "https://content.openalex.org/works/W4385473736.pdf",
+    "grobid_xml": "https://content.openalex.org/works/W4385473736.grobid-xml"
+   },
+   "referenced_works_count": 0,
+   "referenced_works": [],
+   "related_works": [
+    "https://openalex.org/W4300905728",
+    "https://openalex.org/W4385966166",
+    "https://openalex.org/W3105336851",
+    "https://openalex.org/W3150335004",
+    "https://openalex.org/W2091700477",
+    "https://openalex.org/W2008925134",
+    "https://openalex.org/W3185808045",
+    "https://openalex.org/W3207297624",
+    "https://openalex.org/W1488979098",
+    "https://openalex.org/W4241485301"
+   ],
+   "abstract_inverted_index": {
+    "We": [
+     0
+    ],
+    "use": [
+     1
+    ],
+    "Experimental": [
+     2
+    ],
+    "Mathematics": [
+     3
+    ],
+    "and": [
+     4,
+     13,
+     17,
+     22,
+     59
+    ],
+    "Symbolic": [
+     5
+    ],
+    "Computation": [
+     6
+    ],
+    "(with": [
+     7
+    ],
+    "Maple),": [
+     8
+    ],
+    "to": [
+     9,
+     24
+    ],
+    "search": [
+     10
+    ],
+    "for": [
+     11,
+     41
+    ],
+    "lots": [
+     12,
+     14
+    ],
+    "of": [
+     15,
+     49,
+     56,
+     69,
+     72
+    ],
+    "Perrin-": [
+     16
+    ],
+    "Lucas-": [
+     18
+    ],
+    "style": [
+     19
+    ],
+    "primality": [
+     20,
+     39
+    ],
+    "tests,": [
+     21
+    ],
+    "try": [
+     23
+    ],
+    "sort": [
+     25
+    ],
+    "the": [
+     26,
+     29,
+     54,
+     60,
+     66
+    ],
+    "wheat": [
+     27
+    ],
+    "from": [
+     28
+    ],
+    "chaff.": [
+     30
+    ],
+    "More": [
+     31
+    ],
+    "impressively,": [
+     32
+    ],
+    "we": [
+     33,
+     43
+    ],
+    "find": [
+     34
+    ],
+    "quite": [
+     35
+    ],
+    "a": [
+     36
+    ],
+    "few": [
+     37
+    ],
+    "such": [
+     38
+    ],
+    "tests": [
+     40
+    ],
+    "which": [
+     42
+    ],
+    "can": [
+     44
+    ],
+    "explicitly": [
+     45
+    ],
+    "construct": [
+     46
+    ],
+    "infinite": [
+     47
+    ],
+    "families": [
+     48
+    ],
+    "pseudo-primes,": [
+     50
+    ],
+    "rather,": [
+     51
+    ],
+    "like": [
+     52
+    ],
+    "in": [
+     53
+    ],
+    "cases": [
+     55
+    ],
+    "Perrin": [
+     57
+    ],
+    "pseudo-primes": [
+     58
+    ],
+    "famous": [
+     61
+    ],
+    "Carmichael": [
+     62
+    ],
+    "primes,": [
+     63
+    ],
+    "only": [
+     64
+    ],
+    "proving": [
+     65
+    ],
+    "mere": [
+     67
+    ],
+    "existence": [
+     68
+    ],
+    "infinitely": [
+     70
+    ],
+    "many": [
+     71
+    ],
+    "them.": [
+     73
+    ]
+   },
+   "counts_by_year": [],
+   "updated_date": "2026-09-21T07:43:02.447757",
+   "created_date": "2025-10-10T00:00:00"
+  }
+ ],
+ "group_by": []
+}
