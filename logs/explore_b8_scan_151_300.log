@@ -1,0 +1,7 @@
+k=175 s_k=59 J_k=2663852 candidates=191894  (cum 3857367, 40.5s)
+k=200 s_k=67 J_k=3979402 candidates=293256  (cum 9823314, 103.5s)
+k=225 s_k=75 J_k=5669327 candidates=384827  (cum 18242008, 212.5s)
+k=250 s_k=84 J_k=7780502 candidates=537791  (cum 29981137, 406.1s)
+k=275 s_k=92 J_k=10359802 candidates=725805  (cum 45882776, 742.1s)
+k=300 s_k=100 J_k=13454102 candidates=946320  (cum 67095022, 1176.9s)
+counterexamples: []

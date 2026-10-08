@@ -1,0 +1,12 @@
+PASS b8-truth N 表 = DP 容斥（k<=40）True，= DFS（k<=8）True；U_k(-j) 的多项式值 = G_{-j} 递推（k<=60,j<=40）True；U_k(m) = DP（k<=40,m<=10）True；1<=j<=s_k 时 U_k(-j)=0（k<=60）True
+PASS b8-cong 定理 1：U_k(m+p^e) ≡ U_k(m) (mod p)，p^e>k（1<=k<=30，p<=31，e=e_min,e_min+1，|m|<=30）：40260 组，失败 0
+PASS b8-need 对照：p^e<=k 时（2<=k<=40）461 组 (k,p^e) 中有 451 组同余失败；不失败的 10 组恰为 p=2、2^e∈{k-1,k}（N(k,k)、N(k,k-1) 为偶数）True
+PASS b8-one 推论 2：p^e | j、p^e>k 时 U_k(-j) ≡ 1 (mod p)（k<=60，j<=600）：26075 组，失败 0
+PASS b8-bound 定理 3：J_k = max θ_q = k(k^2-k-4)/2-k+2（4<=k<=300）True；j=J_k+1 时 T_q 严格增 True；j=J_k 时 T_k=T_{k-1} True；(-1)^k U_k(-j)>0（k<=40，J_k<j<=J_k+200）True
+PASS b8-small 不用定理 1：1<=k<=60 时一切 s_k<j<=J_k 都有 U_k(-j)!=0（共 1631553 个 j，其中 0 个模两素数为 0 改用精确）
+PASS b8-scan 定理 4：1<=k<=300，s_k<j<=J_k 且 j | lcm(1..k) 的 71660856 个 j 全部 U_k(-j)!=0（模 P1 为 0 的 0 个，改用精确 0 个；零点 无）；求值器在 1<=j<=s_k 处给出 0：True；P1、P2 是素数（774s）
+PASS b8-top 推论 6：j=s_k+1、s_k+2 时 U_k(-j) = c5a 定理 4.3 的顶端闭式且不为零（1<=k<=300，600 个）
+PASS b8-near 观察 5（数据）：u_30 在 m∈(-60.0004,-60.0003) 变号（U_30(-60)=131528853446152312280711），u_10 在 (-9.03,-9.02) 变号，U_10(-9)=-153
+PASS b8-rev 反向检查：N(20,1) 改成 2 后平凡零点检查失败 True；人为零点 U_45(-j)-U_45(-400) 只在 j=400 处为 0 True；eval_mod 在非零点（k=50,100,300）的余数 = 精确值的余数 True；(m+1234)u_39(m) 经扫描函数走到 P2（1 个）与精确分支（1 个），只报出 j=[1234] True
+total 778s
+SUMMARY b8 pass=10 fail=0

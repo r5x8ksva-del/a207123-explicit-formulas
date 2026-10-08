@@ -1,0 +1,9 @@
+PASS t-closed deg G_{-j}=3j-3（j<=80）True；r<=5 的顶端系数 = c5a 定理 4.3 的 Stirling 闭式（3<=j<=80）True
+  j=5000 (1s)
+  j=10000 (2s)
+  j=15000 (4s)
+  j=20000 (8s)
+PASS t-rec 顶端系数递推 a_r(j+1)=j a_r(j)-a_{r-2}(j)+a_{r-3}(j) 与完整 G_{-j} 一致（r<=29，34<=j<=80）
+PASS t-nonzero r<=29、34<=j<=20000 时 a_r(j)=U_{3j-3-r}(-j)!=0（即 j-s_k<=10 的各层，k 到 59997）；零点 无；各 r 的最后一次变号 j：[None, None, None, None, None, None, None, None, 77, None, None, None, None, 232, None, None, 39, None, 762, None, None, 122, None, 2555, 54, None, 393, 36, 8603, 145]；终值符号（r=0..29）：++-++--++-++--+--++-++--+--++-
+total 8s
+SUMMARY s14-b8-r6 pass=3 fail=0

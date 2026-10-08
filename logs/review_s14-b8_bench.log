@@ -1,0 +1,4 @@
+G-run mod 3 primes: 200000 steps 3.13s -> 13.45M steps est 210s
+exact G K=100: 20000 steps 0.47s -> 494702 steps est 12s
+exact DP m=50 K=50: 0.01s
+modP DP m=300 K=300: 0.35s (all m est 35s)

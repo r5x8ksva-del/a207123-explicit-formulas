@@ -1,0 +1,8 @@
+k=0 deg=0 (0.0s)
+k=200 deg=133 (0.0s)
+k=400 deg=266 (0.1s)
+k=600 deg=400 (0.2s)
+k=800 deg=533 (0.4s)
+k=1000 deg=666 (0.7s)
+zero coefficients at k: [] count 0
+k with #sign changes != floor(k/3): []

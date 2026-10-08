@@ -1,0 +1,8 @@
+PASS r1-dp 枚举 = 朴素对 DP（k<=7,m<=4）True；朴素对 DP = 压缩 DP（k<=60,m<=12）True（0.1s）
+PASS r1-thm22 c5a 定理 2.2 精确成立（m<=40，0<=k<=3m+12；按递推阶 3m+1 即对一切 k 成立）（0.1s）
+PASS r1-lem1 引理 1 精确成立（0<=i<=15，0<=k<=70，整数运算）（0.0s）
+PASS r1-lag Lagrange 恒等式 sum σ^n/f'(σ)=[y^2](y^n mod f)（j∈{1,2,4,7,18,30}，n<=60）：最大相对误差 1.8e-58
+PASS r1-lem1num 引理 1 高精度数值（60 位，0<=i<=10，0<=k<=40）：|实部-精确值|/最大项 <= 1.3e-58，|虚部|/最大项 <= 0.0e+00（0.2s）
+PASS r1-lem2b 引理 2(b) 三个等式（1<=j<=60，最大偏差 1.0e-58）True；|γ_j(σ)| 的界成立 True；|σ_j|<ρ_{j-1} True；c_j 三种形式一致且 >0 True；与 c5a §2.4 表一致 True
+total 0.5s
+SUMMARY s14-b9 r1 pass=6 fail=0

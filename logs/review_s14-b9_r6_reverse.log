@@ -1,0 +1,11 @@
+PASS v1 三元组条件改成严格不等号后，朴素 DP 与压缩 DP 不一致：True
+PASS v2 定理 2.2 漏掉 j=0 项后精确核对失败：True
+PASS v3 |σ|^2 写成 ρ(ρ+1) 时与 Newton 求出的根不符：True
+PASS v4 完整的界通过健全性检查 True；漏掉 j=0 项后 FAIL True；漏掉 j=i 的复根对后 FAIL True
+PASS v5 c_i 下界放大 1000 倍：健全性检查 FAIL True；这样「认证」出的 τ_1..τ_8=[2, 7, 11, 14, 8, 15, 22, 28] 与正确值不同 True
+PASS v6 τ_7 改成 49 后与独立算出的 τ_7=50 不符：True
+PASS v7 Δφ_1 中 -7 改成 -6 后恒等式不成立 True；翻转点说成 a<=55 时符号核对失败 True
+PASS v8 次高项闭式改坏后与实际 h_{k,d-1} 不符：True
+PASS v9 命题 4(i) 改成 2^{k-q+1} 后与 h_k(-1) 不符：True
+total 0.3s
+SUMMARY s14-b9 r6 pass=9 fail=0
