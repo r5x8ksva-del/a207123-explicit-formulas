@@ -1,0 +1,7 @@
+PASS NT-mono （数值，60 位 Taylor 延拓）绕 0 不变、绕 1 跳 -nu omega、交换子 -nu(1-e^{2pi i lam})omega：x=0.6: |jump1|=81.58, err 8.0e-60/4.8e-59/8.7e-59; x=0.6 (a,b)=(2,3): err 3.9e-58; x=0.7: |jump1|=42.92, err 5.5e-60/6.9e-59/5.0e-59; x=2: |jump1|=0.9117, err 1.5e-58/6.4e-59/2.6e-58; x=-1.5: |jump1|=2.683, err 7.2e-60/1.2e-58/1.5e-58; x=0.6+0.2i: |jump1|=64.33, err 9.9e-56/2.9e-59/3.2e-55
+PASS NT-qrat lam=1/2（|lam-1/2|=2.0e-60）：|[g0,g1] 的差 + 2 nu omega|/|nu omega| = 1.2e-58，|[g0^2,g1] 的差|/|nu omega| = 3.2e-59
+PASS NT-int x=-1：|交换子|/|nu omega| = 2.7e-59；跳跃 = 15.24377811784143949（预测 2 pi i e^{t0-1}/t0^2 = i*15.24377811784143949）
+PASS NT-ei x=-1 闭式在单位圆外：t=3/2 上路差 1.7e-59、下路差 1.7e-59（对应 log(1-t) 的 -i pi / +i pi；取反则差 1.43），t=-3/2 差 2.5e-59
+PASS NT-rev 反向检查（x=0.6）：朴素常数 2 pi i z x^2 e^z 不符：True；e^{2 pi i lam} 换成 e^{-2 pi i lam} 时交换子不符：True
+time 8.1s
+SUMMARY s11-b6b nu_taylor pass=5 fail=0

@@ -1,0 +1,4 @@
+PASS C1 方程残差（相对）：1F1:5.5e-15, w^{1-b}1F1:1.3e-15, Tricomi U:2.0e-15, 1F1/Gamma(b), b=-2:3.8e-16, Whittaker M:8.0e-15, Whittaker W:2.3e-14
+PASS C2 方程残差（相对）：Gamma(c,w):3.1e-15, gamma(c,w):5.1e-15, Gamma(-2,w):1.5e-14, E_1:6.7e-15, Ei:3.3e-15, J_nu:2.4e-15, Y_nu:7.8e-16, Ai:5.4e-15；Gamma(-2,1.3) 组合式与数值积分之差 1.7e-08
+PASS C3 反向：改错系数后的残差 0.35, 0.98, 0.91（应显著非零）
+SUMMARY s11b6a_cor5_ode pass=3 fail=0

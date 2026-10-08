@@ -1,0 +1,4 @@
+PASS RX-27 x=3/5（lam=50/27≈1.8518518518）：a=1: |差|/|nu omega|=8.976e-01，与公式偏差 1.2e-43；a=13: |差|/|nu omega|=4.612e-01，与公式偏差 2.4e-43；a=27: |差|/|nu omega|=4.404e-43，与公式偏差 1.6e-42
+PASS RX-list check_b6 的测试点：x=3/5: lam=50/27；x=7/10: lam=300/343；x=2: lam=-1/8；x=-3/2: lam=-20/27；x=3/5+i/5: lam=1/4-7/4i
+time 3.8s
+SUMMARY s11-b6b rational_x pass=2 fail=0

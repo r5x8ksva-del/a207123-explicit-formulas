@@ -1,0 +1,10 @@
+PASS P1-closed T1.3(1)：x W_m = 1-P_m-x sum_{j<m}P_j 与 b_m G_m = G_{m-1}+m x^2，Q[x] 中精确，m<=22
+PASS P1-dp G_m=W_m/P_m 的 x 幂级数 = U_fast_table（k<=60, m<=14）
+PASS P1-ident 命题 1：(1/P_m-1)/x + [t^m]zXi = W_m/P_m，乘 x^{3(m-1)}P_m 后 Q[x] 中逐项相等，m<=22
+PASS P1-simple [t^m] z Xi = -sum_{j=1}^m 1/(b_j...b_m)（Q[x] 中精确，m<=22）
+PASS P1-ops (i) L[M]=1；(ii) L[(M-1/(1-t))/x]=gamma+t/(1-t)；(iii) L[Xi]=-x^3t/(1-t)（m<=22，Q(x) 中精确）；1-x-x^3=x^3(lam-1)、n+1-lam=-b_{n+1}/x^3、z/(1-lam)=-1/b_1、z-lam=x^{-2}
+PASS P1-int (M-1/(1-t))/x 与 z Xi 的 t^m 系数都在 Z[[x]]（无负幂、整系数，k<=60, 1<=m<=14），两者之和等于 U_k(m)；附带：z Xi 的系数全非正、(M-1/(1-t))/x 的全非负
+PASS P1-phi1 Phi_1(1-lam,1;2-lam;t,zt) = (1-lam)K：20 组独立的 (lam,z) 有理值、N<=30 精确；Q(x) 中 -(t e^{-zt}/b_1)Phi_1 的 t^m 系数 = [t^m]zXi（m<=22）
+PASS P1-rev 反向检查（m=3,6；每组第 1 项是未改动的对照，应成立）：e_{m-1-j}->e_{m-j}、b_{m-j}->b_{m-j+1}、z->z(1+x)、-1/b_1->-1/b_2 都使恒等式失败：[True, True, True, True, True, True, True, True, True, True]
+time 2.9s
+SUMMARY s11-b6b p1_exact pass=8 fail=0

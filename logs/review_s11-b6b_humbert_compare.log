@@ -1,0 +1,7 @@
+PASS H-untr c3a 推论 4.4 未变换形式的 t^m 系数 = G_m（Q(x) 中精确，m<=16）；M 的系数 = 1/P_m
+PASS H-tr c3a 推论 4.4 变换后形式（e^a 与 Phi_1(-lam,be;1-lam;t,-a) 按定义展开）的 t^m 系数 = G_m（m<=16）
+PASS H-one z Xi = M - Y_1；x^3(Y_2-Y_1) = M - x Y_1 - 1/(1-t)；F = M + (M-1/(1-t))/x - Y_1（m<=16，精确）
+PASS H-L L[Y_1]=1/(1-t)、L[Y_2]=1/(1-t)^2 逐系数成立（m<=16）
+PASS H-rev 反向检查（m=4,7；第 1、4 项是未改动的对照）：交换 Y_1/Y_2 的符号、把 (1-t)^{-2} 换成 (1-t)^{-1} 都失败：[True, True, True, True, True, True, True, True]
+time 0.8s
+SUMMARY s11-b6b humbert_compare pass=5 fail=0

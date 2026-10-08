@@ -1,0 +1,9 @@
+PASS D0 pi 与 50 位常数之差 5.82e-51；|exp(i pi)+1| = 4.59e-60
+PASS D1 x=3/5：绕 0 相对差 6.12e-60；绕 1 跳跃相对误差 1.01e-59（|nu omega| = 8.16e+01）
+PASS D2 x=3/5：交换次序之差 |d|/|nu omega| = 8.98e-01，与预测的相对误差 5.57e-59
+PASS D3 x=3/5：把 nu 乘 (1+1e-40) 后的偏差 1.00e-40（D1 的误差 1.01e-59）
+PASS D1 x=1/sqrt2：绕 0 相对差 1.77e-60；绕 1 跳跃相对误差 7.29e-61（|nu omega| = 4.12e+01）
+PASS D2 x=1/sqrt2：交换次序之差 |d|/|nu omega| = 1.03e+00，与预测的相对误差 1.31e-59
+PASS D1 x=(1+i)/2：绕 0 相对差 2.19e-60；绕 1 跳跃相对误差 1.15e-59（|nu omega| = 2.62e+01）
+PASS D2 x=(1+i)/2：交换次序之差 |d|/|nu omega| = 2.20e-59，与预测的相对误差 5.97e-59
+SUMMARY s11b6a_decimal_chain pass=8 fail=0 time=2.3s

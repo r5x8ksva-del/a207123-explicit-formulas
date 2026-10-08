@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """表 B 新结论的一键核对（2026-10-07；2026-10-08 加入 b2、b7_borel、b11）：依次运行 check_b1.py、check_b2.py、check_b3.py、check_b7.py、
-check_b7_borel.py（数值佐证）、check_b11.py（d<=100），汇总 PASS / FAIL。
+check_b7_borel.py（数值佐证）、check_b11.py（d<=100）、check_b6.py（2026-10-08 加入；b6-mono 等几条是数值佐证），汇总 PASS / FAIL。
 
 用法（在任务 C 根目录）：  py -3.14 code/tableB/run_all.py
 带内存保护：  GUARD_CAP_MB=1500 code/main_extra/run_guarded.sh logs/tableB_run_all.log py -3.14 code/tableB/run_all.py
@@ -15,7 +15,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-PARTS = ['b1', 'b2', 'b3', 'b7', 'b7_borel', 'b11']
+PARTS = ['b1', 'b2', 'b3', 'b7', 'b7_borel', 'b11', 'b6']  # b6：2026-10-08 加入（精确部分 + RK4 数值佐证，约 15 s）
 
 
 def main():

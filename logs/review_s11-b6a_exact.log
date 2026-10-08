@@ -1,0 +1,7 @@
+PASS X1 命题 1 的 [t^m] 恒等式在 x=2..85（84 点 >= 6M-1=83）上精确成立，m<=14，故为 Q(x) 中的恒等式；反向（e 指标加 1）失败：True
+PASS X2 x=-1：闭式的 t^m 系数与 G_m(-1) 逐项相等（m<=60）：True；反向（B 变号 / 换成 (1-t)^{-2}）失败：True
+PASS X3 x=(1+i)/2：lam=-2，z=-2-2i；括号 t^0,t^1 系数为 0：True；闭式与 G_m 逐项相等（m<=40）：True；反向（z->-z）失败：True
+PASS X4 Phi_1 改写对独立的有理 (lam,z) 逐系数成立（N<=25，4 组）：True
+PASS X5 1F1(1;n+1;w) 的初等形式（n<=6）与 z-lam=x^-2 等关系（10 个 x）：True
+PASS X6 L[(M-1/(1-t))/x]=gamma+t/(1-t) 与 L[z Xi]=-t/(1-t)（t^30 以内，5 个 x）：True
+SUMMARY s11b6a_exact pass=6 fail=0 time=0.2s
