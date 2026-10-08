@@ -34,7 +34,7 @@ ALL_OK   time 0.1s
 [OK ] L6 U^aΛ^i 的分解：顶层系数 t·C(t-1,a-1)/(i+1)，精确还原 (a<=12, i<=11)
 [OK ] L7 P_{2m} ≡ Λ^{m+1}/(m+1)! mod W_m (m<=20)
 [OK ] L8 P_{2m+1} ≡ -(m/(m+1)!)Λ^{m+1} + [m>=1]UΛ^m/m! mod W_m (m<=19)
-ALL_OK   time 5.8s
+ALL_OK   time 5.5s
 
 ### t4_closed_form.py 30（退出码 0）
 [OK ] Φ-1 在 Q[y][[z]] 中被 y^2 整除 (到 z^30)

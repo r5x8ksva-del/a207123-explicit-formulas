@@ -10,55 +10,55 @@
     I - S      = -2.16216368093922337633665237838E+1
     closed C   = -2.16216368093922337633665237838E+1
     |(I-S) - C|/|C| = 2.22E-56 ;  |I-S|/|I| = 2.76E+1 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(9/10,-1/2) rel=2.22E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.3s)
+PASS (x,t)=(9/10,-1/2) rel=2.22E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.2s)
 ====================================================================================================
 [1] x=4/5 t=-3/10  lambda=0.39062500 (ceil 1)  a=-t/x^3=75/128=0.58593750
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = -1.16431031980606301058517549781E+1
     |I| ~ 1e0.1, |C| ~ 1e1.1  ->  working precision 55 (+20)
     S: exact rational partial sum up to m=103 (Den has 454 digits), rigorous tail <= 1e-54.1 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 1.13893501235617766777135820187E+0  quad est 1.35E-74  cutoff Sigma=5.50  11 pieces; levels=5  (1.1s)
+    I (sigma form): 1.13893501235617766777135820187E+0  quad est 1.35E-74  cutoff Sigma=5.50  11 pieces; levels=5  (1.0s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 1.13893501235617766777135820187E+0  rel diff vs sigma form 1.33E-65  levels=4 h=2^-5  (0.1s)
     S          = 1.27820382104168077736231131800E+1
     I - S      = -1.16431031980606301058517549781E+1
     closed C   = -1.16431031980606301058517549781E+1
     |(I-S) - C|/|C| = 3.40E-56 ;  |I-S|/|I| = 1.02E+1 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(4/5,-3/10) rel=3.40E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.3s)
+PASS (x,t)=(4/5,-3/10) rel=3.40E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.2s)
 ====================================================================================================
 [2] x=4/5 t=-4/5  lambda=0.39062500 (ceil 1)  a=-t/x^3=25/16=1.56250000
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = -4.53501249367243359844246703523E+1
     |I| ~ 1e-0.2, |C| ~ 1e1.7  ->  working precision 55 (+20)
     S: exact rational partial sum up to m=558 (Den has 2691 digits), rigorous tail <= 1e-53.4 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 6.30297553320562470881552044001E-1  quad est 5.39E-75  cutoff Sigma=4.50  9 pieces; levels=5  (1.3s)
+    I (sigma form): 6.30297553320562470881552044001E-1  quad est 5.39E-75  cutoff Sigma=4.50  9 pieces; levels=5  (1.1s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 6.30297553320562470881552044001E-1  rel diff vs sigma form 1.47E-63  levels=4 h=2^-5  (0.1s)
     S          = 4.59804224900448984553062223963E+1
     I - S      = -4.53501249367243359844246703523E+1
     closed C   = -4.53501249367243359844246703523E+1
     |(I-S) - C|/|C| = 1.03E-56 ;  |I-S|/|I| = 7.20E+1 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(4/5,-4/5) rel=1.03E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.7s)
+PASS (x,t)=(4/5,-4/5) rel=1.03E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.4s)
 ====================================================================================================
 [3] x=7/10 t=-1/2  lambda=0.87463557 (ceil 1)  a=-t/x^3=500/343=1.45772595
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = -1.70256010787476487837822387683E+2
     |I| ~ 1e-0.1, |C| ~ 1e2.2  ->  working precision 55 (+20)
     S: exact rational partial sum up to m=176 (Den has 820 digits), rigorous tail <= 1e-52.8 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 8.89306177644404901665888145935E-1  quad est 1.53E-75  cutoff Sigma=4.50  9 pieces; levels=5  (1.5s)
+    I (sigma form): 8.89306177644404901665888145935E-1  quad est 1.53E-75  cutoff Sigma=4.50  9 pieces; levels=5  (1.3s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 8.89306177644404901665888145935E-1  rel diff vs sigma form 2.10E-60  levels=4 h=2^-5  (0.1s)
     S          = 1.71145316965120892739488275829E+2
     I - S      = -1.70256010787476487837822387683E+2
     closed C   = -1.70256010787476487837822387683E+2
     |(I-S) - C|/|C| = 2.89E-56 ;  |I-S|/|I| = 1.91E+2 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(7/10,-1/2) rel=2.89E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.9s)
+PASS (x,t)=(7/10,-1/2) rel=2.89E-56 sign(I-S)=- (-1)^ceil(lam)=-1  (1.6s)
 ====================================================================================================
 [4] x=3/5 t=-1/4  lambda=1.85185185 (ceil 2)  a=-t/x^3=125/108=1.15740741
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 9.21848411330677607091536184869E+1
     |I| ~ 1e0.1, |C| ~ 1e2.0  ->  working precision 55 (+20)
     S: exact rational partial sum up to m=88 (Den has 311 digits), rigorous tail <= 1e-53.2 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 1.26922275142710135838118854430E+0  quad est 1.47E-75  cutoff Sigma=4.75  10 pieces; levels=5  (1.6s)
+    I (sigma form): 1.26922275142710135838118854430E+0  quad est 1.47E-75  cutoff Sigma=4.75  10 pieces; levels=5  (1.5s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 1.26922275142710135838118854430E+0  rel diff vs sigma form 1.01E-63  levels=4 h=2^-5  (0.1s)
     S          = -9.09156183816406593507724299426E+1
     I - S      = 9.21848411330677607091536184869E+1
     closed C   = 9.21848411330677607091536184869E+1
     |(I-S) - C|/|C| = 3.66E-56 ;  |I-S|/|I| = 7.26E+1 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(3/5,-1/4) rel=3.66E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (2.0s)
+PASS (x,t)=(3/5,-1/4) rel=3.66E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.9s)
 ====================================================================================================
 [5] x=2/5 t=-3/5  lambda=9.37500000 (ceil 10)  a=-t/x^3=75/8=9.37500000
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 1.27413550087011759577332903046E+9
@@ -70,31 +70,31 @@ PASS (x,t)=(3/5,-1/4) rel=3.66E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (2.0s)
     I - S      = 1.27413550087011759577332903046E+9
     closed C   = 1.27413550087011759577332903046E+9
     |(I-S) - C|/|C| = 1.84E-56 ;  |I-S|/|I| = 1.63E+9 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(2/5,-3/5) rel=1.84E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.2s)
+PASS (x,t)=(2/5,-3/5) rel=1.84E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.1s)
 ====================================================================================================
 [6] x=7/20 t=-1/20  lambda=15.16034985 (ceil 16)  a=-t/x^3=400/343=1.16618076
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 3.40400658014616955500777182041E-9
     |I| ~ 1e0.2, |C| ~ 1e-8.5  ->  working precision 64 (+20)
     S: exact rational partial sum up to m=61 (Den has 306 digits), rigorous tail <= 1e-64.7 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 1.41365713094275221664576966730E+0  quad est 4.66E-84  cutoff Sigma=4.50  9 pieces; levels=5  (1.8s)
+    I (sigma form): 1.41365713094275221664576966730E+0  quad est 4.66E-84  cutoff Sigma=4.50  9 pieces; levels=5  (1.6s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 1.41365713094275221664576966730E+0  rel diff vs sigma form 3.31E-70  levels=4 h=2^-5  (0.1s)
     S          = 1.41365712753874563649960011229E+0
     I - S      = 3.40400658014616955500777182041E-9
     closed C   = 3.40400658014616955500777182041E-9
     |(I-S) - C|/|C| = 3.07E-57 ;  |I-S|/|I| = 2.41E-9 (I and S agree to ~9 digits but are not equal)
-PASS (x,t)=(7/20,-1/20) rel=3.07E-57 sign(I-S)=+ (-1)^ceil(lam)=+1  (2.2s)
+PASS (x,t)=(7/20,-1/20) rel=3.07E-57 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.9s)
 ====================================================================================================
 [7] x=21/100 t=-1/10  lambda=85.30396285 (ceil 86)  a=-t/x^3=100000/9261=10.79796998
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 4.02887385175752382186194226274E-34
     |I| ~ 1e0.0, |C| ~ 1e-33.4  ->  working precision 89 (+20)
     S: exact rational partial sum up to m=194 (Den has 1272 digits), rigorous tail <= 1e-102.3 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 1.11814753073520690490635974561E+0  quad est 2.70E-107  cutoff Sigma=2.00  4 pieces; levels=6  (1.6s)
+    I (sigma form): 1.11814753073520690490635974561E+0  quad est 2.70E-107  cutoff Sigma=2.00  4 pieces; levels=6  (1.5s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 1.11814753073520690490635974561E+0  rel diff vs sigma form 7.86E-68  levels=4 h=2^-5  (0.1s)
     S          = 1.11814753073520690490635974561E+0
     I - S      = 4.02887385175752382186194226274E-34
     closed C   = 4.02887385175752382186194226274E-34
     |(I-S) - C|/|C| = 1.36E-69 ;  |I-S|/|I| = 3.60E-34 (I and S agree to ~33 digits but are not equal)
-PASS (x,t)=(21/100,-1/10) rel=1.36E-69 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.9s)
+PASS (x,t)=(21/100,-1/10) rel=1.36E-69 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.8s)
 ====================================================================================================
 [8] x=3/20 t=-1/4  lambda=251.85185185 (ceil 252)  a=-t/x^3=2000/27=74.07407407
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 4.18483457863333342907297442253E+9
@@ -106,7 +106,7 @@ PASS (x,t)=(21/100,-1/10) rel=1.36E-69 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.9s)
     I - S      = 4.18483457863333342907297442253E+9
     closed C   = 4.18483457863333342907297442253E+9
     |(I-S) - C|/|C| = 1.34E-75 ;  |I-S|/|I| = 4.62E+9 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(3/20,-1/4) rel=1.34E-75 sign(I-S)=+ (-1)^ceil(lam)=+1  (0.6s)
+PASS (x,t)=(3/20,-1/4) rel=1.34E-75 sign(I-S)=+ (-1)^ceil(lam)=+1  (0.5s)
 ====================================================================================================
 [9] x=3/5 t=-1/2  lambda=1.85185185 (ceil 2)  a=-t/x^3=125/54=2.31481481
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 1.05871268558425711990576513233E+3
@@ -118,21 +118,21 @@ PASS (x,t)=(3/20,-1/4) rel=1.34E-75 sign(I-S)=+ (-1)^ceil(lam)=+1  (0.6s)
     I - S      = 1.05871268558425711990576513233E+3
     closed C   = 1.05871268558425711990576513233E+3
     |(I-S) - C|/|C| = 2.16E-56 ;  |I-S|/|I| = 1.17E+3 (I and S agree to ~0 digits but are not equal)
-PASS (x,t)=(3/5,-1/2) rel=2.16E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.8s)
+PASS (x,t)=(3/5,-1/2) rel=2.16E-56 sign(I-S)=+ (-1)^ceil(lam)=+1  (1.7s)
 ====================================================================================================
 [10] x=21/100 t=-1/20  lambda=85.30396285 (ceil 86)  a=-t/x^3=50000/9261=5.39898499
     closed form C = x^-3 e^a a^lam Gamma(-lam)[1+lam x^5 J] = 3.81401776553037366558070198002E-62
     |I| ~ 1e0.1, |C| ~ 1e-61.4  ->  working precision 117 (+20)
     S: exact rational partial sum up to m=194 (Den has 1330 digits), rigorous tail <= 1e-161.0 ; first 60 G_m == W_m/P_m and recurrence: True  (0.0s)
-    I (sigma form): 1.18728453248487166424091698920E+0  quad est 2.16E-154  cutoff Sigma=2.75  6 pieces; levels=6  (4.5s)
+    I (sigma form): 1.18728453248487166424091698920E+0  quad est 2.16E-154  cutoff Sigma=2.75  6 pieces; levels=6  (3.9s)
     I (tau form x^-3 e^a a^lam int_a^inf tau^(-lam-1) phi): 1.18728453248487166424091698920E+0  rel diff vs sigma form 8.06E-68  levels=4 h=2^-5  (0.1s)
     S          = 1.18728453248487166424091698920E+0
     I - S      = 3.81401776553037366558070198002E-62
     closed C   = 3.81401776553037366558070198002E-62
     |(I-S) - C|/|C| = 2.37E-75 ;  |I-S|/|I| = 3.21E-62 (I and S agree to ~61 digits but are not equal)
-PASS (x,t)=(21/100,-1/20) rel=2.37E-75 sign(I-S)=+ (-1)^ceil(lam)=+1  (4.9s)
+PASS (x,t)=(21/100,-1/20) rel=2.37E-75 sign(I-S)=+ (-1)^ceil(lam)=+1  (4.1s)
 ====================================================================================================
-SUMMARY t2: pairs=11 FAIL=0 worst rel dev=3.66E-56 elapsed 20.6s
+SUMMARY t2: pairs=11 FAIL=0 worst rel dev=3.66E-56 elapsed 18.4s
 
 ### t3_corollary.py （退出码 0）
 x        lambda         R=K/Gamma(-lam)        2-x        L(x)       U(x)       (2-R)/x    checks
@@ -241,4 +241,4 @@ x        lambda         R=K/Gamma(-lam)        2-x        L(x)       U(x)       
 0.97     0.0328705      1.012252471500473E+0   1.030000   -          -          1.018296   PASS
 0.98     0.0212496      1.008136178538569E+0   1.020000   -          -          1.012106   PASS
 0.99     0.0103061      1.004052213873235E+0   1.010000   -          -          1.006008   PASS
-SUMMARY t3: points=105 FAIL=0 elapsed 3.5s
+SUMMARY t3: points=105 FAIL=0 elapsed 2.8s

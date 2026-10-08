@@ -2,7 +2,7 @@
 
 **运行方式**：在本文件夹下执行 `py -3.14 verify_all.py`（需要 numpy：rv2 调用的复核脚本没有纯 Python 回退）。它依次运行 `code/checks/check_*.py`，逐条打印 `PASS <id> <描述（含范围）>` 或 `FAIL …`，最后给出总表；任何 FAIL、子模块异常退出或缺少 SUMMARY 行都会使退出码为 1。
 
-**13 个核对模块**（除 check_rv2.py、check_rv3.py、check_rv4.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举；check_rv3.py 运行复核者 r-c4ii、r-c3a、s6-t436、s6-t342 的脚本，同样不导入 core，各脚本按定义自算真值：Num_q 的递推，K、I、𝒮 的定义；check_rv4.py 运行主 Agent 重推 T2.6(ii) 时写的独立脚本，不导入 core、不复用 x1 的脚本，以自写的 DP 作真值，其余是 Q[x]/(b_i) 中的精确代数）
+**14 个核对模块**（除 check_rv2.py、check_rv3.py、check_rv4.py、check_tb.py 外，每个都从 `code/core.py` 的原始定义程序取「真值」；check_rv2.py 运行复核者 x1 的两个独立脚本，不导入 core：r1 用自写的三元组 DP 作真值，r2 只做纤维留数条件的精确代数穷举；check_rv3.py 运行复核者 r-c4ii、r-c3a、s6-t436、s6-t342 的脚本，同样不导入 core，各脚本按定义自算真值：Num_q 的递推，K、I、𝒮 的定义；check_rv4.py 运行主 Agent 重推 T2.6(ii) 时写的独立脚本，不导入 core、不复用 x1 的脚本，以自写的 DP 作真值，其余是 Q[x]/(b_i) 中的精确代数；check_tb.py 依次运行 `code/tableB/` 的 13 个核对脚本，各脚本自带对照（多数对照按定义写的 DP 或已证明的递推），其余是精确代数、证书计算与少数标明的数值佐证）
 
 | 模块 | 内容 | 检查数 |
 |---|---|---|
@@ -19,26 +19,28 @@
 | `check_rv2.py` | 复核者 x1 的两个独立脚本（不导入 core）：E 部分在 u=1/2 的统一阻碍（m=2..34）与证书复算；U 两族 \|指数\|≤6000、E 两项 ≤1500 无表示 | 2 |
 | `check_rv3.py` | 报告 ⑥ 原有两处所依赖的复核者脚本（不导入 core）：T4.3(6) 由 (7) 的闭式推出 j≤14、按第二份证明构造到 j≤40 与拟合到 j≤24（真实系数 q≤300）；T3.4(2) K 的闭式与定义（两套实现，7 个与 13 个 x）、端到端 I−𝒮（4 组与 11 组 (x,t)）、推论在 105 个 x 上的扫描 | 6 |
 | `check_rv4.py` | 主 Agent 独立重推 T2.6(ii) 所依赖的计算（不导入 core、不复用 x1 的脚本）：E 部分母函数对照自写 DP（m≤6、k≤30）；b_i 根处的化简与留数闭式在 Q[x]/(b_i) 中精确成立（1≤i≤8、i≤m≤40）；K_2 中的范数与 17-进赋值（\|n\|≤60）；b_1、b_2 不可约、b_4 可约。子脚本的完整输出在 `logs/rv4_main_t26ii.log`；反向检查（把闭式常数改成 2 倍，应报 FAIL）见 `logs/main_t26ii_check_reverse.log` | 9 |
+| `check_tb.py` | 表 B 的后续结论（猜想总表 A19–A30 与 B11 的扩展，2026-10-07 晚至 10-09；见 ② 各条标注「2026-10-0x 补证」处）：依次运行 `code/tableB/check_b1.py`、b3、b2、b7、b7_borel、b11、b6、b4、b5、b5_skel、b8、b9、b13（默认模式；b8 的 k≤300、b9 的 i≤40 用 `--full` 单独运行，日志 `logs/tableB_check_b8_full.log`、`logs/tableB_check_b9_full.log`），原样转印各条 PASS/FAIL；b7_borel 各条与 b6-mono、b9-osc、b13-data 是数值佐证，b3-fiber、b4-fiberD、b4-lemmaP、b5s-fiber1、b6-sharp、b6-qrat、b9-binet、b13-wp、b13-coef、b13-jump、b13-dom、b13-geom 是双精度的数值检查或示意（在 ② 里标了「数值」「佐证」等），其余是精确计算。2026-10-08 只含 b1、b3、b2（27 条），2026-10-09 扩到 13 个部分 | 109 |
 
-**最终一次运行**（本地 2026-10-07，加入 rv4 之后，完整输出 `logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行；同日加入 rv4 之前的一次（12 个模块、296 条）另存为 `logs/verify_all_final_2026-10-07_before_rv4.log`，2026-10-05 的一次（11 个模块、290 条，当时本机另有会话在跑基准测试，用时 630.7 s）另存为 `logs/verify_all_final_2026-10-05.log`）：
+**最终一次运行**（本地 2026-10-09，表 B 并入报告、tb 模块扩到 `code/tableB/` 的 13 个部分之后，完整输出 `logs/verify_all_final.log`，经 `code/main_extra/run_guarded.sh` 带内存保护运行，整棵进程树峰值 432 MB；之前各次的日志见下面「其他重要文件」的最后一条）：
 
 ```
 area     pass   fail    rc  summary     secs  status
-c0         13      0     0      yes      4.0  PASS
-c1         45      0     0      yes     37.8  PASS
-c2a        23      0     0      yes     10.3  PASS
-c2b        33      0     0      yes     33.2  PASS
-c3a        34      0     0      yes     21.8  PASS
-c3b        22      0     0      yes     20.7  PASS
-c4         41      0     0      yes     22.6  PASS
-c5a        37      0     0      yes     14.0  PASS
-c5b        33      0     0      yes      4.6  PASS
-rv          7      0     0      yes     14.7  PASS
-rv2         2      0     0      yes      7.9  PASS
-rv3         6      0     0      yes     74.0  PASS
-rv4         9      0     0      yes      1.4  PASS
+c0         13      0     0      yes      4.7  PASS
+c1         45      0     0      yes     61.9  PASS
+c2a        23      0     0      yes     14.6  PASS
+c2b        33      0     0      yes     42.3  PASS
+c3a        34      0     0      yes     28.1  PASS
+c3b        22      0     0      yes     23.2  PASS
+c4         41      0     0      yes     29.7  PASS
+c5a        37      0     0      yes     18.2  PASS
+c5b        33      0     0      yes      5.6  PASS
+rv          7      0     0      yes     18.8  PASS
+rv2         2      0     0      yes      7.6  PASS
+rv3         6      0     0      yes     92.7  PASS
+rv4         9      0     0      yes      1.2  PASS
+tb        109      0     0      yes    327.0  PASS
 ------------------------------------------------------------------------
-TOTAL pass=305 fail=0 modules=13 failed_modules=-  (267.0s)
+TOTAL pass=414 fail=0 modules=14 failed_modules=-  (675.7s)
 OVERALL: PASS
 ```
 
@@ -88,4 +90,4 @@ OVERALL: PASS
 - `code/main_extra/gcd_minimal_order.py`：最小阶逐因子检验（v≤300）。
 - 各方向的探索脚本在 `code/<area>/`，复核者的独立脚本在 `code/review/<reviewer>/`，对应日志在 `logs/`（文件名带 area 或 `review_` 前缀）。
 - 各轮工作流的原始返回值：`logs/phase1_workflow_output.json`、`logs/phase2_review_output.json`、`logs/phase3_audit_output.json`、`logs/phase4_final_audit_output.json`、`logs/phase4b_recheck_output.json`；第四轮各审计者的独立脚本在 `code/review/final-audit/`，输出为 `logs/final_audit_*.log`；报告各轮修订的补丁脚本在 `code/main_extra/report_patches/`；逐条结论清单 `notes/review/claims_<area>.md`，逐条复核意见 `notes/review/<reviewer>-review.md`。
-- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final_2026-10-05.log`（第四轮修订后，11 个模块 290 条）、`logs/verify_all_2026-10-07.log`（修好 c5b 之后，11 个模块 290 条）、`logs/verify_all_final_2026-10-07_before_rv4.log`（2026-10-07 加固原 ⑥ 三处之后，12 个模块 296 条）、`logs/verify_all_final.log`（最终，2026-10-07 加入 rv4 之后，13 个模块 305 条）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。
+- 全量运行记录：`logs/verify_all_run1.log`（第一轮后，9 个模块 278 条）、`logs/verify_all_final_2026-10-05.log`（第四轮修订后，11 个模块 290 条）、`logs/verify_all_2026-10-07.log`（修好 c5b 之后，11 个模块 290 条）、`logs/verify_all_final_2026-10-07_before_rv4.log`（2026-10-07 加固原 ⑥ 三处之后，12 个模块 296 条）、`logs/verify_all_final_2026-10-07_before_tb.log`（2026-10-07 加入 rv4 之后，13 个模块 305 条）、`logs/verify_all_2026-10-08_tableB.log`（2026-10-08 加入 tb（b1、b3、b2）之后，14 个模块 332 条）、`logs/verify_all_final.log`（最终，2026-10-09 tb 扩到 13 个部分之后，14 个模块 414 条）。报告拼接与核对 id 交叉检查：`code/main_extra/assemble_report.py`。
