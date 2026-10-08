@@ -1,0 +1,9 @@
+PASS v1：替换处 1 个；退出码 1；FAIL 条目 ['b5s-norm', 'b5s-res', 'b5s-subst']；期望至少 ['b5s-norm', 'b5s-res', 'b5s-subst']；SUMMARY b5s pass=6 fail=3
+    FAIL b5s-res 引理 14.4（w=2）：留数级数（按定义在 K_2 中算）与闭式一致，q<=14（E:True, N:False, c:True）
+    FAIL b5s-subst 引理 14.5：代入并乘 1/P 后等于 α(1+η^b V)^(-e) V^(e-f) τ^3 e^(-2τ/(1+τ))(1+τ)^(-4)，8 组 (类型,b,c,d,e,f)，b in {-1,0,1,2}，V^<=12；不符：[('N', 1, 0, 1, -2, 1), ('N', 2, -1, 2, 0, 1)]
+    FAIL b5s-norm N(W~_2-1)=17/8、N(W~_2)=493/128、N(η)=1/2、N(1-η)=1；17、103 为素数；b=1 时 N(α) 的 17-进（N^E）、103-进（N）赋值恒为 1
+PASS v2：替换处 1 个；退出码 1；FAIL 条目 ['b5s-resw']；期望至少 ['b5s-resw']；SUMMARY b5s pass=8 fail=1
+    FAIL b5s-resw 引理 14.4 对纤维 w=1、3（E、N、N^c；q<=12，按定义在 K_w 中算）：{1: True, 3: False}
+PASS v3：替换处 1 个；退出码 1；FAIL 条目 ['b5s-bivar']；期望至少 ['b5s-bivar']；SUMMARY b5s pass=8 fail=1
+    FAIL b5s-bivar §2 的二元母函数恒等式（含低 p 修正，引理 14.2）端到端核对：N^c 的 R 式，只用 q>=1 的行（p<=7）：False；只用 q>=3 的行（低 p'=0,1,2 有修正，p<=9）：False；x 的阶 <=40；去掉修正项时不成立：True
+SUMMARY s13-b5skel-r2 pass

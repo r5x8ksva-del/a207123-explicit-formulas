@@ -1,0 +1,10 @@
+PASS b5s-res 引理 14.4（w=2）：留数级数（由 E_M、G_M、1/P_M 的闭式按留数定义在 K_2 中算）与闭式一致，q<=14（E:True, N:True, c:True）
+PASS b5s-resw 引理 14.4 对纤维 w=1、3（E、N、N^c；q<=12，由闭式按留数定义在 K_w 中算）：{1: True, 3: True}
+PASS b5s-subst 引理 14.5（w=2）：代入并乘 1/P 后等于 α(1+η^b V)^(-e) V^(e-f) τ^3 e^(-2τ/(1+τ))(1+τ)^(-4)，8 组 (类型,b,c,d,e,f)，b in {-1,0,1,2}，V^<=12
+PASS b5s-norm N(W~_2-1)=17/8、N(W~_2)=103/16、N(η)=1/2、N(1-η)=1；17、103 为素数；b=1 时 N(α) 的 17-进（N^E）、103-进（N）赋值恒为 1
+PASS b5s-Nc 对照：N^c 取 R 式参数 (c,d,e,f)=(-1,-1,0,0) 时每个 V 系数都在 Q 中：True；违反 3(d+1)=d-c+f-e 的 21 组参数都不是：True；满足它但 e≠0 的 18 组参数也不是：True；N^E、N 在 3 组参数下都不是：True
+PASS b5s-Rform R 式 N^c(k,q)=sum C(q,p)R(p,s)C(k-2s+p-1,s+q-1) 对 1<=q<=10、0<=k<=30 与按定义的 DP 一致
+PASS b5s-bivar §2 的二元母函数恒等式（含低 p 修正，引理 14.2）端到端核对：N^c 的 R 式，只用 q>=1 的行（p<=7）：True；只用 q>=3 的行（低 p'=0,1,2 有修正，p<=9）：True；x 的阶 <=40；去掉修正项时不成立：True
+PASS b5s-fiber1 数值佐证（证明见 A20）：U=x^r/(1-x) 过 ξ 的纤维中不是任何 b_w（w>=1）之根的点数：r=2:1, r=4:3, r=5:4, r=6:5
+PASS b5s-rev 反向检查：W~_2 的 x^8 系数 4 改成 3 后范数为 493/128（不再是 103/16），b5s-res 的 N 与 b5s-subst 的 N 参数组都不再成立：True；去掉 e^(-2τ/(1+τ)) 后 b5s-subst 不成立：True
+SUMMARY b5s pass=9 fail=0
