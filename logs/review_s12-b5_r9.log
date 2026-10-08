@@ -1,0 +1,5 @@
+PASS r9-N N_q（2<=q<=12）在 g∈[-80,80] 内没有使三根处留数元相同的 g：None
+PASS r9-Nc N^c_q：三值相同的 (q,g) = [(2, -6)]（应只有 (2,-6)）
+PASS r9-NE N^E_q：三值相同的 (q,g) = [(2, -1)]（应只有 (2,-1)）
+time 0.2s
+SUMMARY r9 pass=3 fail=0

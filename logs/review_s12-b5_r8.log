@@ -1,0 +1,6 @@
+PASS r8-needed （信息）1440 组参数中 S_needed(21)>7 的有 750 组；S_needed 的最大值 16
+  K=21 用时 49s
+PASS r8-proper （信息）K=21、S=S_needed（750 组 S_needed>7 的参数）：N^E 相容 0 组，N 相容 0 组，检验失效（满行秩）0 组；例 []
+PASS r8-K27 （信息）K=21 相容的 0 组在 K=27 上仍相容的：[]
+time 49.1s
+SUMMARY r8 pass=3 fail=0

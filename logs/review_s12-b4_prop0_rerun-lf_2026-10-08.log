@@ -1,0 +1,43 @@
+PASS P0a-tri (1,0) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (1,0) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (1,0) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (1,0) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (0,1) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (0,1) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (0,1) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (0,1) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-1,2) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-1,2) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-1,2) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-1,2) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-2,3) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-2,3) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-2,3) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-2,3) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-3,4) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-3,4) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-3,4) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-3,4) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-5,6) U1 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-5,6) U2 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-5,6) U3 c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-tri (-5,6) rand c=d=0,s0=0,k<=30: unit-lower-triangular=True, solvable=True, rank=31
+PASS P0a-literal-counterexample (0,1) c=-1 d=0 k>=0 的方程组 inconsistent-cert（k=0 时一切项 C(-1,s)=0，而 U_0(1)=1）——命题 0(a)「c、d 任取」字面不成立
+PASS P0a-corrected (0,1) c=-1 d=0 k0=2 修正说法：同一 (c,d) 在 k>=k_0 上可解
+PASS P0a-literal-counterexample (1,0) c=0 d=-1 k>=0 的方程组 inconsistent-exact（d<0 时一切项为 0）——命题 0(a)「c、d 任取」字面不成立
+PASS P0a-literal-counterexample (-1,2) c=0 d=2 k>=0 的方程组 inconsistent-cert（k=0 时一切项 C(s,2s+2)=0）——命题 0(a)「c、d 任取」字面不成立
+PASS P0a-corrected (-1,2) c=0 d=2 k0=3 修正说法：同一 (c,d) 在 k>=k_0 上可解
+PASS P0a-literal-counterexample (-2,3) c=0 d=3 k>=0 的方程组 inconsistent-cert（k=0 时一切项 C(2s,3s+3)=0）——命题 0(a)「c、d 任取」字面不成立
+PASS P0a-corrected (-2,3) c=0 d=3 k0=4 修正说法：同一 (c,d) 在 k>=k_0 上可解
+PASS P0a-new-condition 修订版命题 0(a) 的条件：245 组 (形状,c,d)（f=U_k(2)，k>=0）可解 ⇔ β(c-d)+d>=0（β=0 时 d>=0），无一例外
+PASS P0a-new-condition-reverse 把条件改成严格不等号后有 21 组不符（核对确实敏感）
+PASS P0a-nonunique (1,0) c=3 d=0 可解=True，未知数 34，秩 31，核维数 3（A(0..3) 只受其和约束）
+PASS P0b-coef [x^k]x^r u^s = C(k-r-2s-1,s-1)，r=0,1,2，1<=s<=14，k<=45
+PASS P0b-3family U3 三族 u 型和 + 有限修正逐项等于 f(k)，k<=45
+PASS P0b-3family U8 三族 u 型和 + 有限修正逐项等于 f(k)，k<=45
+PASS P0b-3family rand 三族 u 型和 + 有限修正逐项等于 f(k)，k<=45
+PASS P0c-F4 U_k(m)=Σ_i(-1)^{m-i}w_i(k+3m)/(i!(m-i)!)，w_i=[x^n]W̃_i/b_i，m<=8，k<=30（精确）
+PASS P0d-squarefree-coprime gcd(P_m,P_m')=1 且 gcd(W_m,P_m)=1，m<=8（Q 上精确 Euclid）
+PASS P0d-binet U_k(m)=Σ_ρ κ_ρ ρ^k（κ_ρ=-ρW_m(1/ρ)/P_m'(1/ρ)），1<=m<=5，k<=40，最大相对误差 1.07e-09（双精度，数值佐证）
+time 7.9s
+== s12_prop0: PASS 41, FAIL 0

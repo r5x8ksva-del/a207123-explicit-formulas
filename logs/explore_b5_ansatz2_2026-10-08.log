@@ -1,0 +1,2 @@
+sanity N^c (a=-2,b=1,c=-1,d=-1): consistent=True rank=79 unknowns=80 eqs=231
+hits: 0

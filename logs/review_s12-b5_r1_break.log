@@ -1,0 +1,15 @@
+direct_counts(30,10) 0.5s
+PASS r1-truth-dfs 穷举 {0..k-1}^k（k<=7，N 与 N^E）与 core.N_brute（k<=8，N）都与分类 DP 一致
+PASS r1-truth-ie 自写 U-DP = core.U_fast_table（k<=30,m<=9）；容斥得到的 N、N^c、N^E = 值集状态 DP（k<=30,q<=10），即 §0「三者用同一个二项式基」成立
+[--break] 主检验 r1-thm3 故意把 i=1 项变号
+FAIL r1-thm3 定理 3 的 N、N^c、N^E 三式：1<=k<=30 对照分类 DP、31<=k<=60 对照容斥表，1<=q<=10，共 1800 个值，不符 1619
+PASS r1-k0 k=0：定理 3 的 N、N^c 式给出 (-1)^(q+1)（真值 0），N^E 式给出 0：k>=1 的条件对 N、N^c 必要（q<=10）
+PASS r1-lag 注 3.1：sum_{t<=n} C(q,t) y^t/(n-t)! = y^n L_n^{(i+1)}(-1/y)（n=q-1-i；Laguerre 用三项递推；136 组 (q,i)，q<=16）
+PASS r1-alt 注 3.2 的交错式等于 N^c（1<=k<=30，1<=q<=10），不符 0
+PASS r1-w2 N(k,2)=w_1(k+3)-3（1<=k<=60）、U_k(1)=w_1(k+3)-1（0<=k<=60）：q=2 时 N 在 w 原子下也是一层，注 3.2「N 比 U 多一层」不是下界意义的结论
+PASS r1-rev-sign 反向：定理 3 中 i=1 项变号后与真值不符（应不符）
+PASS r1-rev-shift 反向：原子下标多平移 1 后与真值不符（应不符）
+PASS r1-rev-wtop 反向：w_i 去掉 j=i 项后与真值不符（应不符）
+PASS r1-rev-binom 反向：C(q,t) 换成 C(q,t+1) 后与真值不符（应不符）
+time 1.0s
+SUMMARY r1 pass=10 fail=1

@@ -1,0 +1,10 @@
+PASS r2-num P_{q-1}·F 的 3q-1..60 次系数全为 0（N、N^c、N^E，2<=q<=10）；Num_q 次数 3q-2、首项 (q-1)!、最低项 2x^q
+  worst case ('N', 10, 9, (0.4044705542540766+0j))
+PASS r2-contour 围道积分留数 × u'(η) 与引理 4.1 的闭式一致：405 个 (类型,q,w,根)，最大相对误差 4.13e-15
+PASS r2-rev-sign 反向：符号改为 (-1)^(q-w+1) 后最大相对误差 2.00（应很大）
+PASS r2-rev-fact 反向：Λ 中 (M-w)! 改为 (M-w+1)! 后最大相对误差 2.59（应很大）
+PASS r2-exact Q[x]/(b_w) 中 u'·Num/P'_{q-1} = (-1)^(q-w)/(w^2 w!)·W·Λ_{q,w}（126 例，1<=w<=7 含 b_4 可约，w<q<=10）
+PASS r2-uprime u'/b_w' = -1/(w^2 x^3) 在 Q[x]/(b_w) 中成立（1<=w<=12）
+PASS r2-psi ξ≈0.682328：Ψ_q>0 且 u'(ξ)Res_ξ F_q=(-1)^(q-1)ξ(1+ξ)Ψ_q（2<=q<=10，数值）
+time 1.1s
+SUMMARY r2 pass=7 fail=0
