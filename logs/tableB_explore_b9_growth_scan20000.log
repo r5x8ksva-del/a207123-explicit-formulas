@@ -1,0 +1,93 @@
+scan K=20000 I=2400
+  k=500  ell=56  (xi* k = 52.0)  0.2s
+  k=1000  ell=108  (xi* k = 104.1)  0.5s
+  k=1500  ell=161  (xi* k = 156.1)  0.9s
+  k=2000  ell=213  (xi* k = 208.1)  1.7s
+  k=2500  ell=265  (xi* k = 260.2)  2.7s
+  k=3000  ell=317  (xi* k = 312.2)  4.2s
+  k=3500  ell=369  (xi* k = 364.3)  6.3s
+  k=4000  ell=421  (xi* k = 416.3)  9.0s
+  k=4500  ell=473  (xi* k = 468.3)  11.9s
+  k=5000  ell=525  (xi* k = 520.4)  15.1s
+  k=5500  ell=577  (xi* k = 572.4)  18.7s
+  k=6000  ell=630  (xi* k = 624.4)  22.5s
+  k=6500  ell=682  (xi* k = 676.5)  26.6s
+  k=7000  ell=734  (xi* k = 728.5)  32.7s
+  k=7500  ell=786  (xi* k = 780.6)  38.5s
+  k=8000  ell=838  (xi* k = 832.6)  44.2s
+  k=8500  ell=890  (xi* k = 884.6)  50.3s
+  k=9000  ell=942  (xi* k = 936.7)  57.4s
+  k=9500  ell=994  (xi* k = 988.7)  64.1s
+  k=10000  ell=1046  (xi* k = 1040.7)  71.1s
+  k=10500  ell=1098  (xi* k = 1092.8)  78.5s
+  k=11000  ell=1150  (xi* k = 1144.8)  86.1s
+  k=11500  ell=1202  (xi* k = 1196.9)  94.0s
+  k=12000  ell=1254  (xi* k = 1248.9)  102.1s
+  k=12500  ell=1306  (xi* k = 1300.9)  110.6s
+  k=13000  ell=1358  (xi* k = 1353.0)  119.4s
+  k=13500  ell=1410  (xi* k = 1405.0)  129.0s
+  k=14000  ell=1462  (xi* k = 1457.0)  139.0s
+  k=14500  ell=1514  (xi* k = 1509.1)  148.8s
+  k=15000  ell=1566  (xi* k = 1561.1)  158.8s
+  k=15500  ell=1618  (xi* k = 1613.2)  170.0s
+  k=16000  ell=1670  (xi* k = 1665.2)  180.7s
+  k=16500  ell=1722  (xi* k = 1717.2)  192.0s
+  k=17000  ell=1774  (xi* k = 1769.3)  203.4s
+  k=17500  ell=1826  (xi* k = 1821.3)  215.4s
+  k=18000  ell=1878  (xi* k = 1873.3)  227.4s
+  k=18500  ell=1930  (xi* k = 1925.4)  239.8s
+  k=19000  ell=1981  (xi* k = 1977.4)  252.5s
+  k=19500  ell=2033  (xi* k = 2029.5)  265.6s
+  k=20000  ell=2085  (xi* k = 2081.5)  279.2s
+ell_k vs xi* k:
+  k=   100 ell=   13  ell/k=0.13000  ell - xi*k = +2.59
+  k=   300 ell=   35  ell/k=0.11667  ell - xi*k = +3.78
+  k=   600 ell=   66  ell/k=0.11000  ell - xi*k = +3.56
+  k=  1000 ell=  108  ell/k=0.10800  ell - xi*k = +3.93
+  k=  2000 ell=  213  ell/k=0.10650  ell - xi*k = +4.85
+  k=  3000 ell=  317  ell/k=0.10567  ell - xi*k = +4.78
+  k=  5000 ell=  525  ell/k=0.10500  ell - xi*k = +4.63
+  k=  7000 ell=  734  ell/k=0.10486  ell - xi*k = +5.48
+  k= 10000 ell= 1046  ell/k=0.10460  ell - xi*k = +5.25
+  k= 20000 ell= 2085  ell/k=0.10425  ell - xi*k = +3.50
+tau_emp (only k<=K checked; reliable roughly when tau_i << K):
+  i=   10 tau=    77 tau/i=7.7000  tau - alpha* i = -19.1
+  i=   20 tau=   169 tau/i=8.4500  tau - alpha* i = -23.2
+  i=   40 tau=   357 tau/i=8.9250  tau - alpha* i = -27.3
+  i=   60 tau=   546 tau/i=9.1000  tau - alpha* i = -30.5
+  i=   80 tau=   736 tau/i=9.2000  tau - alpha* i = -32.7
+  i=  100 tau=   927 tau/i=9.2700  tau - alpha* i = -33.8
+  i=  150 tau=  1404 tau/i=9.3600  tau - alpha* i = -37.3
+  i=  200 tau=  1883 tau/i=9.4150  tau - alpha* i = -38.7
+  i=  300 tau=  2841 tau/i=9.4700  tau - alpha* i = -41.5
+  i=  400 tau=  3801 tau/i=9.5025  tau - alpha* i = -42.4
+  i=  500 tau=  4761 tau/i=9.5220  tau - alpha* i = -43.2
+  i=  600 tau=  5722 tau/i=9.5367  tau - alpha* i = -43.1
+  i=  800 tau=  7644 tau/i=9.5550  tau - alpha* i = -42.8
+  i= 1000 tau=  9566 tau/i=9.5660  tau - alpha* i = -42.5
+coefficient growth: (1/k)[ln h_{k,i} - (k/3) ln(k/3e)] vs model ln(1-s) - (1/3)ln psi(s) - xi ln s:
+  k=  2500 i=   50 xi=0.020  emp=-0.48561  model=-0.58447  diff=+0.09886
+  k=  2500 i=  100 xi=0.040  emp=-0.25176  model=-0.33351  diff=+0.08175
+  k=  2500 i=  150 xi=0.060  emp=-0.10561  model=-0.17990  diff=+0.07429
+  k=  2500 i=  200 xi=0.080  emp=-0.00039  model=-0.07007  diff=+0.06968
+  k=  2500 i=  225 xi=0.090  emp=0.04112  model=-0.02672  diff=+0.06784
+  k=  2500 i=  250 xi=0.100  emp=0.07557  model=0.00944  diff=+0.06613
+  k=  5000 i=  100 xi=0.020  emp=-0.50637  model=-0.58447  diff=+0.07810
+  k=  5000 i=  200 xi=0.040  emp=-0.26872  model=-0.33351  diff=+0.06479
+  k=  5000 i=  300 xi=0.060  emp=-0.12091  model=-0.17990  diff=+0.05899
+  k=  5000 i=  400 xi=0.080  emp=-0.01466  model=-0.07007  diff=+0.05540
+  k=  5000 i=  450 xi=0.090  emp=0.02725  model=-0.02672  diff=+0.05397
+  k=  5000 i=  500 xi=0.100  emp=0.06206  model=0.00944  diff=+0.05262
+  k= 10000 i=  200 xi=0.020  emp=-0.52274  model=-0.58447  diff=+0.06173
+  k= 10000 i=  400 xi=0.040  emp=-0.28218  model=-0.33351  diff=+0.05134
+  k= 10000 i=  600 xi=0.060  emp=-0.13309  model=-0.17990  diff=+0.04681
+  k= 10000 i=  800 xi=0.080  emp=-0.02606  model=-0.07007  diff=+0.04401
+  k= 10000 i=  900 xi=0.090  emp=0.01617  model=-0.02672  diff=+0.04289
+  k= 10000 i= 1000 xi=0.100  emp=0.05127  model=0.00944  diff=+0.04182
+  k= 20000 i=  400 xi=0.020  emp=-0.53565  model=-0.58447  diff=+0.04882
+  k= 20000 i=  800 xi=0.040  emp=-0.29284  model=-0.33351  diff=+0.04067
+  k= 20000 i= 1200 xi=0.060  emp=-0.14277  model=-0.17990  diff=+0.03712
+  k= 20000 i= 1600 xi=0.080  emp=-0.03514  model=-0.07007  diff=+0.03493
+  k= 20000 i= 1800 xi=0.090  emp=0.00733  model=-0.02672  diff=+0.03405
+  k= 20000 i= 2000 xi=0.100  emp=0.04266  model=0.00944  diff=+0.03322
+elapsed 279.2s

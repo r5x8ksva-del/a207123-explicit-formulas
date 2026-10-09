@@ -1,0 +1,12 @@
+k=600: sign changes in 0<=i<=72 (=0.12k): 2 ; model k*integral = 2.1 ; zero coefficients 0
+k=1200: sign changes in 0<=i<=144 (=0.12k): 5 ; model k*integral = 4.1 ; zero coefficients 0
+k=2400: sign changes in 0<=i<=288 (=0.12k): 9 ; model k*integral = 8.2 ; zero coefficients 0
+k=1000: sign changes in 0<=i<=200 (=0.20k): 42 ; model k*integral = 42.1 ; zero coefficients 0
+k=2000: sign changes in 0<=i<=400 (=0.20k): 85 ; model k*integral = 84.3 ; zero coefficients 0
+k=4000: sign changes in 0<=i<=800 (=0.20k): 169 ; model k*integral = 168.6 ; zero coefficients 0
+k=600: sign changes in 0<=i<=240 (=0.40k): 103 ; model k*integral = 103.7 ; zero coefficients 0
+k=1200: sign changes in 0<=i<=480 (=0.40k): 206 ; model k*integral = 207.5 ; zero coefficients 0
+k=2400: sign changes in 0<=i<=960 (=0.40k): 413 ; model k*integral = 415.0 ; zero coefficients 0
+k=600: sign changes in 0<=i<=360 (=0.60k): 182 ; model k*integral = 183.7 ; zero coefficients 0
+k=1200: sign changes in 0<=i<=720 (=0.60k): 364 ; model k*integral = 367.3 ; zero coefficients 0
+k=2400: sign changes in 0<=i<=1440 (=0.60k): 730 ; model k*integral = 734.6 ; zero coefficients 0

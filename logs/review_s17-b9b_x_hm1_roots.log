@@ -1,0 +1,5 @@
+h_k(-1) sign changes for 3<=k<=1000: 223
+N_k in (-1,0): {3: 1, 4: 1, 5: 1, 100: 22, 200: 44, 500: 111, 1000: 224} ; N_k - k F(1): {3: 0.32, 4: 0.09, 5: -0.13, 100: -0.68, 200: -1.36, 500: -2.41, 1000: -2.82}
+N_1000 - N_3 = 223  (equals the number of sign changes iff N_{k+1}-N_k in {0,1} for all k)
+parity check sign(h_k(-1)) = (-1)^{N_k}: True
+0.8s

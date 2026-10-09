@@ -1,0 +1,44 @@
+k=60 deg=40 (2k/3=40.0)  roots in (1,1e9): 20 (floor(k/3)=20)
+   roots in (1, 1.5): 16  (fraction of positive roots 0.800)
+   roots in (1, 1.2): 15  (fraction of positive roots 0.750)
+   roots in (1, 1.1): 13  (fraction of positive roots 0.650)
+   roots in (1, 1.05): 12  (fraction of positive roots 0.600)
+   roots in (-0.1,0): 7   model k*F = 7.7
+   roots in (-0.5,0): 11   model k*F = 11.6
+   roots in (-1.0,0): 13   model k*F = 13.6
+   roots in (-2.0,0): 15   model k*F = 15.5
+   roots in (-5.0,0): 17   model k*F = 17.5
+   roots in (-10.0,0): 18   model k*F = 18.5
+k=150 deg=100 (2k/3=100.0)  roots in (1,1e9): 50 (floor(k/3)=50)
+   roots in (1, 1.5): 43  (fraction of positive roots 0.860)
+   roots in (1, 1.2): 40  (fraction of positive roots 0.800)
+   roots in (1, 1.1): 38  (fraction of positive roots 0.760)
+   roots in (1, 1.05): 34  (fraction of positive roots 0.680)
+   roots in (-0.1,0): 18   model k*F = 19.2
+   roots in (-0.5,0): 28   model k*F = 29.0
+   roots in (-1.0,0): 33   model k*F = 34.0
+   roots in (-2.0,0): 38   model k*F = 38.8
+   roots in (-5.0,0): 43   model k*F = 43.8
+   roots in (-10.0,0): 46   model k*F = 46.3
+k=300 deg=200 (2k/3=200.0)  roots in (1,1e9): 100 (floor(k/3)=100)
+   roots in (1, 1.5): 89  (fraction of positive roots 0.890)
+   roots in (1, 1.2): 84  (fraction of positive roots 0.840)
+   roots in (1, 1.1): 80  (fraction of positive roots 0.800)
+   roots in (1, 1.05): 75  (fraction of positive roots 0.750)
+   roots in (-0.1,0): 36   model k*F = 38.4
+   roots in (-0.5,0): 56   model k*F = 58.0
+   roots in (-1.0,0): 67   model k*F = 68.0
+   roots in (-2.0,0): 76   model k*F = 77.6
+   roots in (-5.0,0): 86   model k*F = 87.5
+   roots in (-10.0,0): 92   model k*F = 92.6
+k=600 deg=400 (2k/3=400.0)  roots in (1,1e9): 200 (floor(k/3)=200)
+   roots in (1, 1.5): 182  (fraction of positive roots 0.910)
+   roots in (1, 1.2): 175  (fraction of positive roots 0.875)
+   roots in (1, 1.1): 169  (fraction of positive roots 0.845)
+   roots in (1, 1.05): 160  (fraction of positive roots 0.800)
+   roots in (-0.1,0): 74   model k*F = 76.7
+   roots in (-0.5,0): 113   model k*F = 116.0
+   roots in (-1.0,0): 134   model k*F = 136.1
+   roots in (-2.0,0): 153   model k*F = 155.1
+   roots in (-5.0,0): 173   model k*F = 175.1
+   roots in (-10.0,0): 183   model k*F = 185.2

@@ -1,0 +1,11 @@
+xi=0.1096 t_s=0.0686+0.0480i |t|=0.084 arg/pi=0.1943 nearest l=0
+xi=0.1262 t_s=0.0473+0.0995i |t|=0.110 arg/pi=0.3587 nearest l=0
+xi=0.1538 t_s=0.0090+0.1588i |t|=0.159 arg/pi=0.4819 nearest l=0
+xi=0.1925 t_s=-0.0508+0.2328i |t|=0.238 arg/pi=0.5684 nearest l=0
+xi=0.2422 t_s=-0.1404+0.3332i |t|=0.362 arg/pi=0.6269 nearest l=0
+xi=0.3030 t_s=-0.2744+0.4832i |t|=0.556 arg/pi=0.6644 nearest l=0
+xi=0.3748 t_s=-0.4817+0.7363i |t|=0.880 arg/pi=0.6844 nearest l=0
+xi=0.4577 t_s=-0.8234+1.2499i |t|=1.497 arg/pi=0.6854 nearest l=0
+xi=0.5516 t_s=-1.4106+2.7469i |t|=3.088 arg/pi=0.6510 nearest l=0
+xi=0.6566 t_s=24.0188+3.6341i |t|=24.292 arg/pi=0.0478 nearest l=-1
+max |t_s| on path (xi<=0.6566): 24.292; first point where principal is not nearest: (0.5993751159669907, (-1.5792612018623322+5.020510393228993j), -1)
