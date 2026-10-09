@@ -1155,7 +1155,7 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 29 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 30 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
 
 \begin{table}[ht]
 \centering
@@ -1171,6 +1171,7 @@ Corollaries~\ref{cor:diag}, \ref{cor:poly} & \lean{N\_diag}, \lean{N\_subdiag}, 
 Theorem~\ref{thm:gf} & \lean{G\_rec}, \lean{P\_mul\_G}, \lean{isCoprime\_W\_P}, \lean{min\_order}, \lean{order\_lower\_bound}, \lean{squarefree\_Ppoly}, \lean{simple\_root\_Ppoly}\\
 Theorem~\ref{thm:asym}(1) & \lean{existsUnique\_rho}, \lean{one\_lt\_rho}, \lean{rho\_strictMono}, \lean{normSq\_eq\_of\_root}, \lean{rho\_mul\_rho\_sub\_one\_strictMono}, \lean{normSq\_lt\_rho\_pred\_sq}, \lean{norm\_lt\_rho\_of\_root}, \lean{root\_P\_min}\\
 Corollary~\ref{cor:columns} & \lean{T1\_9}, \lean{parity\_min\_order}\\
+Theorem~\ref{thm:gfxy}, Lemma~\ref{lem:coef} & \lean{Gxy\_zero}, \lean{Gxy\_rec}, \lean{Gxy\_prod}, \lean{coef\_formula\_xy}\\
 Theorem~\ref{thm:explicit}, Remark~\ref{rem:forms} & \lean{U\_explicit}, \lean{Us\_explicit}, \lean{U\_F3}, \lean{U\_F4}\\
 Theorem~\ref{thm:nonD} & \lean{not\_isDFinite\_FK}, \lean{no\_x\_ODE\_poly}, \lean{no\_k\_only\_recurrence}; for $N$: \lean{not\_isDFinite\_NKser}, \lean{no\_k\_only\_recurrence\_N}\\
 Theorem~\ref{thm:ideal} & \lean{RelU\_eq}, \lean{RelU\_iff\_mem\_span}, \lean{finrank\_relU\_tot}, \lean{finrank\_relU\_gr}\\
@@ -1187,10 +1188,10 @@ Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_e
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 2728 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 2778 declarations of the development finds no other axiom.
 \end{sloppypar}
 
-Not formalized: the block decomposition (Theorem~\ref{thm:blocks}), the generating function of Theorem~\ref{thm:gfxy} and the bijection of Proposition~\ref{prop:bijection} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the refinement by $y$ of the coefficient formula (the case $y=1$ is formalized) and the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; the passage between Corollaries~\ref{cor:saturated} and~\ref{cor:stirlinglike}, which are stated for operators with rational coefficients, and their formalized versions with denominators cleared; the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
+Not formalized: the block decomposition (Theorem~\ref{thm:blocks}) and the bijection of Proposition~\ref{prop:bijection} (the formal proofs of Theorems~\ref{thm:gfxy} and~\ref{thm:explicit} go through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; the passage between Corollaries~\ref{cor:saturated} and~\ref{cor:stirlinglike}, which are stated for operators with rational coefficients, and their formalized versions with denominators cleared; the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
 
 The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository.
 

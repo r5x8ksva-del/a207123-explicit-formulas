@@ -60,6 +60,11 @@ import A207123
 #print axioms A207123.lemma1_asc_s0
 #print axioms A207123.Us_eq_Fs
 #print axioms A207123.Us_explicit
+-- 论文定理 4.4 与引理 4.5（按 y 细化）：二元母函数 G_m(x,y)（GenFunXY.lean）
+#print axioms A207123.Gxy_zero
+#print axioms A207123.Gxy_rec
+#print axioms A207123.Gxy_prod
+#print axioms A207123.coef_formula_xy
 -- T3.7(1) 的 ODE 部分、T3.7(2)（NonDFinite.lean）
 #print axioms A207123.no_x_ODE
 #print axioms A207123.no_x_ODE_poly
