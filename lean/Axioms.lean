@@ -274,6 +274,7 @@ import A207123
 #print axioms A207123.upoly_three_mul_eval
 #print axioms A207123.upoly_eval_neg_recip
 #print axioms A207123.natDegree_hpoly
+#print axioms A207123.leadingCoeff_hpoly_eq
 #print axioms A207123.leadingCoeff_hpoly_three_mul
 #print axioms A207123.leadingCoeff_hpoly_three_mul_add_one
 #print axioms A207123.leadingCoeff_hpoly_three_mul_add_two
