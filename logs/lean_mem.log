@@ -101,3 +101,7 @@
 2026-10-09 22:24:52 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 29s | PEAK=8068 MINHEAD=4182 KILLED=0 REASON= QFAIL=0
 2026-10-09 22:25:32 | Axioms.lean | exit 0 | 32s | PEAK=8072 MINHEAD=4149 KILLED=0 REASON= QFAIL=0
 2026-10-09 22:26:09 | Checks.lean | exit 0 | 28s | PEAK=8070 MINHEAD=4231 KILLED=0 REASON= QFAIL=0
+2026-10-09 22:47:41 | A207123/ThreeTerm.lean -o .lake/build/lib/lean/A207123/ThreeTerm.olean -i .lake/build/lib/lean/A207123/ThreeTerm.ilean | exit 0 | 30s | PEAK=8092 MINHEAD=4746 KILLED=0 REASON= QFAIL=0
+2026-10-09 22:48:40 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 28s | PEAK=8068 MINHEAD=4721 KILLED=0 REASON= QFAIL=0
+2026-10-09 22:49:37 | Axioms.lean | exit 0 | 26s | PEAK=8075 MINHEAD=4733 KILLED=0 REASON= QFAIL=0
+2026-10-09 22:51:15 | Checks.lean | exit 0 | 27s | PEAK=8071 MINHEAD=4784 KILLED=0 REASON= QFAIL=0

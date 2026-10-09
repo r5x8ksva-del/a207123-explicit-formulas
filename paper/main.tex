@@ -623,7 +623,7 @@ Suppose $T$ annihilates $U$ on a quadrant, away from the poles of the $c_i$. Cho
 In particular, the results of \cite{Kauers07} on Stirling-like sequences do not apply to $U$ directly.
 
 \begin{remark}\label{rem:kauers}
-In \cite[Section~2.2]{Kauers07} sequences are functions on all of $\Z^2$, operators have rational coefficients, and the annihilator of $f$ consists of the operators $Q$ with $Q\cdot f\equiv0$; Kauers extends $\stirling{n}{k}$ and the other classical triangles to $\Z^2$ so that their recurrences hold everywhere. If some extension of $U$ to $\Z^2$ were Stirling-like, its three-term generator would annihilate that extension at all points where its coefficients are defined. Write the shifts of the generator in the coordinates $(k,m)$ as $(0,0)$, $(s_1,t_1)$ and $(s_2,t_2)$. On the quadrant $k\ge\max(0,-s_1,-s_2)$, $m\ge\max(0,-t_1,-t_2)$ the generator reads only values at points of $\NN^2$, where the extension agrees with $U$, so it would annihilate $U$ at all points of this quadrant where its coefficients are defined, which Corollary~\ref{cor:stirlinglike} excludes. In this subsection only Proposition~\ref{prop:triangle} is formalized. The passage from \cite[Definition~3]{Kauers07} to it, that is, the reduction in the proof of Corollary~\ref{cor:stirlinglike} together with the argument above, is not.
+In \cite[Section~2.2]{Kauers07} sequences are functions on all of $\Z^2$, operators have rational coefficients, and the annihilator of $f$ consists of the operators $Q$ with $Q\cdot f\equiv0$; Kauers extends $\stirling{n}{k}$ and the other classical triangles to $\Z^2$ so that their recurrences hold everywhere. If some extension of $U$ to $\Z^2$ were Stirling-like, its three-term generator would annihilate that extension at all points where its coefficients are defined. Write the shifts of the generator in the coordinates $(k,m)$ as $(0,0)$, $(s_1,t_1)$ and $(s_2,t_2)$. On the quadrant $k\ge\max(0,-s_1,-s_2)$, $m\ge\max(0,-t_1,-t_2)$ the generator reads only values at points of $\NN^2$, where the extension agrees with $U$, so it would annihilate $U$ at all points of this quadrant where its coefficients are defined, which Corollary~\ref{cor:stirlinglike} excludes. Proposition~\ref{prop:triangle} and Corollary~\ref{cor:stirlinglike} are formalized. In the formal version of the corollary (Appendix~\ref{app:lean}) the coefficients are written as $n_i/\Delta$ with polynomials $n_i$ and $\Delta\ne0$, the relation is assumed only at the points of a quadrant in $\Z^2$ where $\Delta\ne0$, and $U$ may be replaced by any extension to $\Z^2$; so it also covers the argument above. Not formalized are the choice of a common denominator and the step from \cite[Definition~3]{Kauers07} to the annihilation of an extension by its three-term generator.
 \end{remark}
 
 % =====================================================================
@@ -1155,7 +1155,7 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 28 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 29 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
 
 \begin{table}[ht]
 \centering
@@ -1177,6 +1177,7 @@ Theorem~\ref{thm:ideal} & \lean{RelU\_eq}, \lean{RelU\_iff\_mem\_span}, \lean{fi
 Corollary~\ref{cor:saturated} & \lean{mul\_mem\_ideal\_of\_vanish}, \lean{mem\_ideal\_of\_mul\_mem\_ideal} (with denominators cleared)\\
 Theorem~\ref{thm:relN} & \lean{RelN\_eq}, \lean{RelN\_iff\_mem\_span}, \lean{finrank\_relN\_tot}, \lean{finrank\_relN\_gr}\\
 Proposition~\ref{prop:triangle} & \lean{relU\_support\_det}, \lean{relU\_card\_support}, \lean{not\_mem\_relU\_of\_support\_subset}\\
+Corollary~\ref{cor:stirlinglike} & \lean{not\_annihilate\_three\_terms}, \lean{not\_annihilate\_two\_terms}, \lean{not\_annihilate\_kauers} (with denominators cleared)\\
 Theorem~\ref{thm:neardiag}, Proposition~\ref{prop:newton} & \lean{T4\_1}, \lean{T4\_1\_threshold}, \lean{T4\_2\_3}\\
 Lemma~\ref{lem:minusone}, except the sign of $\lambda_k$ & \lean{rootMultiplicity\_nrowPoly\_ceil}, \lean{natDegree\_hpoly}, \lean{leadingCoeff\_hpoly\_sign}\\
 Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_eval\_neg\_ne\_zero}, \lean{leadingCoeff\_hpoly\_eq}\\
@@ -1186,10 +1187,10 @@ Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_e
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 2682 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 2728 declarations of the development finds no other axiom.
 \end{sloppypar}
 
-Not formalized: the block decomposition (Theorem~\ref{thm:blocks}), the generating function of Theorem~\ref{thm:gfxy} and the bijection of Proposition~\ref{prop:bijection} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the refinement by $y$ of the coefficient formula (the case $y=1$ is formalized) and the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; the passage between Corollary~\ref{cor:saturated}, which is stated for operators with rational coefficients, and the formalized version with denominators cleared; Corollary~\ref{cor:stirlinglike} and Remark~\ref{rem:kauers}, which lead from Kauers' definition to Proposition~\ref{prop:triangle}; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
+Not formalized: the block decomposition (Theorem~\ref{thm:blocks}), the generating function of Theorem~\ref{thm:gfxy} and the bijection of Proposition~\ref{prop:bijection} (the formal proof of Theorem~\ref{thm:explicit} goes through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the refinement by $y$ of the coefficient formula (the case $y=1$ is formalized) and the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; Theorem~\ref{thm:asym}(2)(3) and Remark~\ref{rem:asym}; Remarks~\ref{rem:oeis} and~\ref{rem:1F1}; the passage between Corollaries~\ref{cor:saturated} and~\ref{cor:stirlinglike}, which are stated for operators with rational coefficients, and their formalized versions with denominators cleared; the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
 
 The definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository.
 
@@ -1208,7 +1209,7 @@ The definitions that carry the meaning of the formal statements are transcribed 
 \section{The Lean definitions}\label{app:lean}
 
 \begin{sloppypar}
-The formal development is in the folder \lean{lean/A207123} of the repository given under \emph{Data and code}. We transcribe the definitions that carry the meaning of the main formal statements of Section~\ref{sec:lean}, from the files \lean{Basic.lean}, \lean{Reduction.lean}, \lean{DFinite.lean}, \lean{NonDFinite.lean}, \lean{OreRel.lean} and \lean{NotStirlingLike.lean}. Unicode symbols of the source are typeset as mathematical symbols, and comments and proofs are omitted. Auxiliary definitions used in other statements of Table~\ref{tab:lean} (for instance the Lean versions of $b_i$, $P_m$, $W_m$ and $\rho_m$, and of the spaces in Theorem~\ref{thm:ideal}(2)) are in the same folder; the script \lean{code/main\_extra/lean\_statements.py} lists all definitions and statements.
+The formal development is in the folder \lean{lean/A207123} of the repository given under \emph{Data and code}. We transcribe the definitions that carry the meaning of the main formal statements of Section~\ref{sec:lean}, and some of these statements, from the files \lean{Basic.lean}, \lean{Reduction.lean}, \lean{DFinite.lean}, \lean{NonDFinite.lean}, \lean{OreRel.lean}, \lean{NotStirlingLike.lean} and \lean{ThreeTerm.lean}. Unicode symbols of the source are typeset as mathematical symbols, and comments and proofs are omitted. Auxiliary definitions used in other statements of Table~\ref{tab:lean} (for instance the Lean versions of $b_i$, $P_m$, $W_m$ and $\rho_m$, and of the spaces in Theorem~\ref{thm:ideal}(2)) are in the same folder; the script \lean{code/main\_extra/lean\_statements.py} lists all definitions and statements.
 \end{sloppypar}
 
 \subsection*{Good sequences}
@@ -1334,6 +1335,19 @@ theorem not_mem_relU_of_support_subset \{r : \(\NN\times\NN\) \(\to_0\) Coef\} (
     (hdet : |det2 p0 p1 p2| \(\le\) 2) : normOp r \(\notin\) RelU
 \end{alltt}
 Here \lean{normOp r} is the operator $\sum_{(a,b)}r(a,b)X^aE^{-b}$ with finitely supported coefficients.
+Corollary~\ref{cor:stirlinglike} is formalized in \lean{ThreeTerm.lean} as follows: \lean{f} is an arbitrary extension of $U$ to $\Z^2$, $v_i=(s_i,t_i)$, the coefficients are $n_i/\Delta$, and \lean{p.evalEval x y} is the value at $(x,y)$ of a polynomial \lean{p} in $(k,m)$.
+\begin{alltt}\small
+theorem not_annihilate_three_terms (f : \(\Z\) \(\to\) \(\Z\) \(\to\) \(\C\))
+    (hf : \(\forall\) k m : \(\NN\), f k m = U k m)
+    \{v0 v1 v2 : \(\Z\times\Z\)\} (h01 : v0 \(\ne\) v1) (h02 : v0 \(\ne\) v2) (h12 : v1 \(\ne\) v2)
+    (hdet : |(v1.1 - v0.1) * (v2.2 - v0.2) - (v1.2 - v0.2) * (v2.1 - v0.1)| \(\le\) 2)
+    \{n0 n1 n2 \(\Delta\) : Coef\} (hn : n0 \(\ne\) 0 \(\lor\) n1 \(\ne\) 0 \(\lor\) n2 \(\ne\) 0)
+    (h\(\Delta\) : \(\Delta\) \(\ne\) 0) (k0 m0 : \(\Z\)) :
+    \(\lnot\) \(\forall\) k m : \(\Z\), k0 \(\le\) k \(\to\) m0 \(\le\) m \(\to\) \(\Delta\).evalEval (k : \(\C\)) (m : \(\C\)) \(\ne\) 0 \(\to\)
+      n0.evalEval (k : \(\C\)) (m : \(\C\)) * f (k + v0.1) (m + v0.2)
+        + n1.evalEval (k : \(\C\)) (m : \(\C\)) * f (k + v1.1) (m + v1.2)
+        + n2.evalEval (k : \(\C\)) (m : \(\C\)) * f (k + v2.1) (m + v2.2) = 0
+\end{alltt}
 
 % =====================================================================
 \section{The recurrences of the triangle}\label{app:relN}

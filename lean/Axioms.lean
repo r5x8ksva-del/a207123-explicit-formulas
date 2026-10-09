@@ -158,6 +158,10 @@ import A207123
 #print axioms A207123.relU_support_det
 #print axioms A207123.relU_card_support
 #print axioms A207123.not_mem_relU_of_support_subset
+-- 论文推论 5.7 与注 5.8：三项算子不零化 U 的任何延拓，分母乘掉的形式（ThreeTerm.lean）
+#print axioms A207123.not_annihilate_three_terms
+#print axioms A207123.not_annihilate_two_terms
+#print axioms A207123.not_annihilate_kauers
 -- T2.7 的前半：Σ_{j<m} P_j 不是 Gosper 可和的（Gosper.lean）
 #print axioms A207123.partialSum_P_not_hypergeometric
 #print axioms A207123.no_gosper_solution

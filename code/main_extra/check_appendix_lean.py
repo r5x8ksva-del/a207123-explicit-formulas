@@ -24,11 +24,11 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 
 # TeX in the alltt blocks -> Lean source characters (longer keys first).
 MAP = [
-    (r'\(\NN\times\NN\)', 'ℕ × ℕ'), (r'\(\NN\)', 'ℕ'), (r'\(\C\)', 'ℂ'), (r'\(\Z\)', 'ℤ'),
+    (r'\(\NN\times\NN\)', 'ℕ × ℕ'), (r'\(\Z\times\Z\)', 'ℤ × ℤ'), (r'\(\NN\)', 'ℕ'), (r'\(\C\)', 'ℂ'), (r'\(\Z\)', 'ℤ'),
     (r'\(\to_0\)', '→₀'), (r'\(\to\)', '→'), (r'\(\lor\)', '∨'), (r'\(\land\)', '∧'), (r'\(\lnot\)', '¬'),
     (r'\(\le\)', '≤'), (r'\(\ne\)', '≠'), (r'\(\forall\)', '∀'), (r'\(\exists\)', '∃'), (r'\(\notin\)', '∉'),
     (r'\(\in\)', '∈'), (r'\(\sum\)', '∑'), (r'\(\subseteq\)', '⊆'), (r'\(\langle\)', '⟨'), (r'\(\rangle\)', '⟩'),
-    (r'\(\sigma\)', 'σ'), (r'\{', '{'), (r'\}', '}'),
+    (r'\(\sigma\)', 'σ'), (r'\(\Delta\)', 'Δ'), (r'\{', '{'), (r'\}', '}'),
 ]
 DECL = re.compile(r'^(?:noncomputable\s+)?(def|abbrev|theorem)\s+([A-Za-z0-9_\']+)')
 
