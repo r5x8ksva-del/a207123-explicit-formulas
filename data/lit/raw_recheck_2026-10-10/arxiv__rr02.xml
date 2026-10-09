@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DNADcfRI3K07ShecV/gTIRrGRJc</id>
+  <title>arXiv Query: search_query=abs:"chain polynomials"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:00:53Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22chain+polynomials%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>19</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2205.03796v2</id>
+    <title>Chain enumeration, partition lattices and polynomials with only real roots</title>
+    <updated>2023-01-02T10:30:53Z</updated>
+    <link href="https://arxiv.org/abs/2205.03796v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.03796v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coefficients of the chain polynomial of a finite poset enumerate chains in the poset by their number of elements. The chain polynomials of the partition lattices and their standard type $B$ analogues are shown to have only real roots. The real-rootedness of the chain polynomial is conjectured for all geometric lattices and is shown to be preserved by the pyramid and the prism operations on Cohen--Macaulay posets. As a result, new families of convex polytopes whose face lattices have real-rooted chain polynomials are presented. An application to the face enumeration of the second barycentric subdivision of the boundary complex of the simplex is also included.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-08T06:36:37Z</published>
+    <arxiv:comment>Version to appear in Combinatorial Theory</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Christos A. Athanasiadis</name>
+    </author>
+    <author>
+      <name>Katerina Kalampogia-Evangelinou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.04839v3</id>
+    <title>Two classes of posets with real-rooted chain polynomials</title>
+    <updated>2025-11-30T20:39:07Z</updated>
+    <link href="https://arxiv.org/abs/2307.04839v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.04839v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coefficients of the chain polynomial of a finite poset enumerate chains in the poset by their number of elements. It has been a challenging open problem to determine which posets have real-rooted chain polynomials. Two new classes of posets, namely those of all rank-selected subposets of Cohen-Macaulay simplicial posets and all noncrossing partition lattices associated to finite Coxeter groups, are shown to have this property. The first result generalizes one of Brenti and Welker. As a special case, the descent enumerator of permutations of the set $\{1, 2,\dots,n\}$ which have ascents at specified positions is shown to be real-rooted, hence log-concave and unimodal, and a good estimate for the location of the peak is deduced.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-10T18:16:02Z</published>
+    <arxiv:comment>Some typos in notation have been corrected in the proof of Lemma 5.3</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electron. J. Combin. 31 (2024), Research Paper 4.16, 22pp (electronic)</arxiv:journal_ref>
+    <author>
+      <name>Christos A. Athanasiadis</name>
+    </author>
+    <author>
+      <name>Theo Douvropoulos</name>
+    </author>
+    <author>
+      <name>Katerina Kalampogia-Evangelinou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.04100v1</id>
+    <title>Equivariant Landau--Ginzburg mirror symmetry</title>
+    <updated>2019-06-10T16:21:50Z</updated>
+    <link href="https://arxiv.org/abs/1906.04100v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.04100v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a new proof of the computation of Hodge integrals we have previously obtained for the quantum singularity (FJRW) theory of chain polynomials. It uses the classical localization formula of Atiyah--Bott and we phrase our proof in a general framework that is suitable for future studies of gauged linear sigma models (GLSM). As a by-product, we obtain the first equivariant version of mirror symmetry without concavity, generalizing the work of Chiodo--Iritani--Ruan on the Landau--Ginzburg side.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-10T16:21:50Z</published>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jérémy Guéré</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.03808v2</id>
+    <title>On homological mirror symmetry for chain type polynomials</title>
+    <updated>2023-01-26T15:28:57Z</updated>
+    <link href="https://arxiv.org/abs/2105.03808v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.03808v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider Takahashi's categorical interpretation of the Berglund-Hubsch mirror symmetry conjecture for invertible polynomials in the case of chain polynomials. Our strategy is based on a stronger claim that the relevant categories satisfy a recursion of directed $A_{\infty}$-categories, which may be of independent interest. We give a full proof of this claim on the B-side. On the A-side we give a detailed sketch of an argument, which falls short of a full proof because of certain missing foundational results in Fukaya-Seidel categories, most notably a generation statement.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-09T01:21:11Z</published>
+    <arxiv:comment>few minor changes, to appear in Math. Annalen</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Alexander Polishchuk</name>
+    </author>
+    <author>
+      <name>Umut Varolgunes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.07805v2</id>
+    <title>On Generalized $Q$-systems</title>
+    <updated>2020-03-13T09:36:44Z</updated>
+    <link href="https://arxiv.org/abs/1910.07805v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.07805v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We formulate $Q$-systems for the closed XXZ, open XXX and open quantum-group-invariant XXZ quantum spin chains. Polynomial solutions of these $Q$-systems can be found efficiently, which in turn lead directly to the admissible solutions of the corresponding Bethe ansatz equations.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-17T10:15:12Z</published>
+    <arxiv:comment>27 pages. New version: included code, modified sec 3.2, and a few minor changes</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <arxiv:journal_ref>JHEP, article number 177 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Zoltán Bajnok</name>
+    </author>
+    <author>
+      <name>Etienne Granet</name>
+    </author>
+    <author>
+      <name>Jesper Lykke Jacobsen</name>
+    </author>
+    <author>
+      <name>Rafael I. Nepomechie</name>
+    </author>
+    <arxiv:doi>10.1007/JHEP03(2020)177</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/JHEP03(2020)177" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.07047v1</id>
+    <title>Hodge integrals in FJRW theory</title>
+    <updated>2015-09-23T16:14:16Z</updated>
+    <link href="https://arxiv.org/abs/1509.07047v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.07047v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study higher genus Fan--Jarvis--Ruan--Witten theory of any chain polynomial with any group of symmetries. Precisely, we give an explicit way to compute the cup product of Polishchuk and Vaintrob's virtual class with the top Chern class of the Hodge bundle. Our formula for this product holds in any genus and without any assumption on the semi-simplicity of the underlying cohomological field theory.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-09-23T16:14:16Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jérémy Guéré</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.13819v2</id>
+    <title>Chow polynomials of rank-uniform labeled posets</title>
+    <updated>2025-12-18T21:37:00Z</updated>
+    <link href="https://arxiv.org/abs/2511.13819v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.13819v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce and develop the theory of UMEL-shellable posets. These are posets equipped with an edge-lexicographical labeling satisfying certain uniformity and monotonicity properties. This framework encompasses classical families of combinatorial geometries, including uniform matroids, projective and affine geometries, braid matroids of type A and B, and all Dowling geometries. It also comprises all rank-uniform supersolvable lattices, and therefore also all rank-uniform distributive lattices. Our main result establishes real-rootedness phenomena for the Chow polynomials, the augmented Chow polynomials, and the chain polynomials associated with those posets, thus making simultaneous progress towards conjectures by Ferroni--Schröter, Huh--Stevens, and Athanasiadis--Kalampogia-Evangelinou. In the special case of lattices of flats of matroids, the (augmented) Chow polynomials coincide with the Hilbert--Poincaré series of the Chow ring associated to the smooth and generally noncompact toric varieties of the (augmented) Bergman fan of the matroid, whereas the chain polynomial encodes the Hilbert--Poincaré series of the Stanley--Reisner ring of the Bergman complex of the matroid. Therefore, these real-rootedness results are tightly linked to the study of these algebro-geometric structures in matroid theory.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T19:00:01Z</published>
+    <arxiv:comment>v2: added Theorem 7.4, an expansion of main theorem to include more interlacing relations, and incorporated helpful comments; 44 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Basile Coron</name>
+    </author>
+    <author>
+      <name>Luis Ferroni</name>
+    </author>
+    <author>
+      <name>Shiyue Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1801.09075v1</id>
+    <title>On Yamada polynomial of spatial graphs obtained by edge replacements</title>
+    <updated>2018-01-27T11:50:19Z</updated>
+    <link href="https://arxiv.org/abs/1801.09075v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1801.09075v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present formulae for computing the Yamada polynomial of spatial graphs obtained by replacing edges of plane graphs, such as cycle-graphs, theta-graphs, and bouquet-graphs, by spatial parts. As a corollary, it is shown that zeros of Yamada polynomials of some series of spatial graphs are dense in a certain region in the complex plane, described by a system of inequalities. Also, the relation between Yamada polynomial of graphs and the chain polynomial of edge-labelled graphs is obtained.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-01-27T11:50:19Z</published>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Miaowang Li</name>
+    </author>
+    <author>
+      <name>Fengchun Lei</name>
+    </author>
+    <author>
+      <name>Fengling Li</name>
+    </author>
+    <author>
+      <name>Andrei Vesnin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13810v3</id>
+    <title>On chain polynomials of geometric lattices</title>
+    <updated>2025-12-11T11:45:07Z</updated>
+    <link href="https://arxiv.org/abs/2508.13810v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.13810v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Athanasiadis and Kalampogia-Evangelinou recently conjectured that the chain polynomial of any geometric lattice has only real zeros. We verify this conjecture for families of geometric lattices including perfect matroid designs, Dowling lattices, and for a class of geometric lattices that contains all lattices of flats of paving matroids. We also investigate how the conjecture behaves with respect to certain operations such as direct products, ordinal sums and single-element extensions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-19T13:14:48Z</published>
+    <arxiv:comment>Fixed some typos</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+    <author>
+      <name>Leonardo Saud Maia Leite</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.14646v2</id>
+    <title>Construction of general forms of ordinary generating functions for more families of numbers and multiple variables polynomials</title>
+    <updated>2023-03-23T21:14:46Z</updated>
+    <link href="https://arxiv.org/abs/2302.14646v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.14646v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is to construct general forms of ordinary generating functions for special numbers and polynomials involving Fibonacci type numbers and polynomials, Lucas numbers and polynomials, Chebyshev polynomials, Sextet polynomials, Humbert-type numbers and polynomials, chain and anti-chain polynomials, rank polynomials of the lattices, length of any alphabet of words, partitions, and other graph polynomials. By applying the Euler transform and the Lambert series to these generating functions, many new identities and relations are derived. By using differential equations of these generating functions, some new recurrence relations for these polynomials are found. Moreover, general Binet's type formulas for these polynomials are given. Finally, some new classes of polynomials and their corresponding certain family of special numbers are investigated with the help of these generating functions.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-26T16:05:27Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <arxiv:journal_ref>Revista de la Real Academia de Ciencias Exactas, Físicas y Naturales. Serie A. Matemáticas volume 117, Article number: 130 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Yilmaz Simsek</name>
+    </author>
+    <arxiv:doi>10.1007/s13398-023-01464-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s13398-023-01464-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.06595v3</id>
+    <title>Totally nonnegative matrices, chain enumeration and zeros of polynomials</title>
+    <updated>2025-12-11T10:07:51Z</updated>
+    <link href="https://arxiv.org/abs/2412.06595v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.06595v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that any lower unitriangular and totally nonnegative matrix gives rise to a family of polynomials with only real zeros. This has consequences for problems in several areas of mathematics. We use it to develop a general theory for chain enumeration in posets and zeros of chain polynomials. The results obtained extend and unify results of the first author, Brenti, Welker and Athanasiadis. In the process we define a notion of $h$-vectors for a large class of posets which generalize the notions of $h$-vectors associated to simplicial and cubical complexes. A consequence of our methods is a characterization of the convex hull of all characteristic polynomials of hyperplane arrangements of fixed dimension and over a fixed finite field. This may be seen as a refinement of the Critical Problem of Crapo and Rota.
+  We also use the methods developed to answer an open problem posed by Forgács and Tran on the real-rootedness of polynomials arising from certain bivariate rational functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-09T15:46:56Z</published>
+    <arxiv:comment>A thorough discussion on notions on shellabilty added. The notion of shellability for r-cubical posets is relaxed. Several typos corrected</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Mathematics, Vol. 487, Mar. 2026, P. 110760</arxiv:journal_ref>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+    <author>
+      <name>Leonardo Saud Maia Leite</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2025.110760</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2025.110760" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.04893v4</id>
+    <title>Valuative invariants for large classes of matroids</title>
+    <updated>2024-08-02T12:20:31Z</updated>
+    <link href="https://arxiv.org/abs/2208.04893v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.04893v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study an operation in matroid theory that allows one to transition a given matroid into another with more bases via relaxing a \emph{stressed subset}. This framework provides a new combinatorial characterization of the class of split matroids. Moreover, it permits to describe an explicit matroid subdivision of a hypersimplex, which in turn can be used to write down concrete formulas for the evaluations of any valuative invariant on these matroids. This shows that evaluations on split matroids depend solely on the behavior of the invariant on tractable subclass of Schubert matroids. We address systematically the consequences of our approach for several invariants. They include the volume and Ehrhart polynomial of base polytopes, the Tutte polynomial, Kazhdan--Lusztig polynomials, the Whitney numbers of the first and second kind, spectrum polynomials and a generalization of these by Denham, chain polynomials and Speyer's $g$-polynomials, as well as Chow rings of matroids and their Hilbert--Poincaré series. The flexibility of this setting allows us to give a unified explanation for several recent results regarding the listed invariants; furthermore, we emphasize it as a powerful computational tool to produce explicit data and concrete examples.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-09T16:50:04Z</published>
+    <arxiv:comment>68 pages. To appear in J. Lond. Math. Soc</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of the London Mathematical Society, Vol. 110(3), Sep. 2024, e12984</arxiv:journal_ref>
+    <author>
+      <name>Luis Ferroni</name>
+    </author>
+    <author>
+      <name>Benjamin Schröter</name>
+    </author>
+    <arxiv:doi>10.1112/jlms.12984</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/jlms.12984" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.18695v2</id>
+    <title>Generalized snake posets, order polytopes, and lattice-point enumeration</title>
+    <updated>2026-02-27T02:24:52Z</updated>
+    <link href="https://arxiv.org/abs/2411.18695v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.18695v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building from the work of von Bell et al.~(2022), we study the Ehrhart theory of order polytopes arising from a special class of distributive lattices, known as generalized snake posets. We present arithmetic properties satisfied by the Ehrhart polynomials of order polytopes of generalized snake posets along with a computation of their Gorenstein index. Then we give a combinatorial description of the chain polynomial of generalized snake posets as a direction to obtain the $h^*$-polynomial of their associated order polytopes. Additionally, we present explicit formulae for the $h^*$-polynomial of the order polytopes of the two extremal examples of generalized snake posets, namely the ladder and regular snake poset. We then provide a recursive formula for the $h^*$-polynomial of any generalized snake posets and show that the $h^*$-vectors are entry-wise bounded by the $h^*$-vectors of the two extremal cases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-27T19:04:01Z</published>
+    <arxiv:comment>30 pages, 9 figures, accepted for publication in Discrete Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Eon Lee</name>
+    </author>
+    <author>
+      <name>Andrés R. Vindas-Meléndez</name>
+    </author>
+    <author>
+      <name>Zhi Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.09940v3</id>
+    <title>Derived factorization categories of non-Thom--Sebastiani-type sums of potentials</title>
+    <updated>2022-09-22T10:07:34Z</updated>
+    <link href="https://arxiv.org/abs/1809.09940v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.09940v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We first prove semi-orthogonal decompositions of derived factorization categories arising from sums of potentials of gauged Landau-Ginzburg models, where the sums are not necessarily Thom--Sebastiani type. We then apply the result to the category ${\rm HMF}^{L_f}(f)$ of maximally graded matrix factorizations of an invertible polynomial $f$ of chain type, and explicitly construct a full strong exceptional collection $E_1$,..., $E_μ$ in ${\rm HMF}^{L_f}(f)$ whose length $μ$ is the Milnor number of the Berglund--Hübsch transpose $\widetilde{f}$ of $f$. This proves a conjecture, which postulates that for an invertible polynomial $f$ the category ${\rm HMF}^{L_f}(f)$ admits a tilting object, in the case when $f$ is a chain polynomial. Moreover, by careful analysis of morphisms between the exceptional objects $E_i$, we explicitly determine the quiver with relations $(Q,I)$ which represents the endomorphism ring of the associated tilting object $\oplus_{i=1}^μE_i$ in ${\rm HMF}^{L_f}(f)$, and in particular we obtain an equivalence ${\rm HMF}^{L_f}(f)\cong {\rm D}^{\rm b}({\rm mod}\, kQ/I)$.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-26T12:36:14Z</published>
+    <arxiv:comment>50 pages. To appear in Proceedings of the London Mathematical Society</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Yuki Hirano</name>
+    </author>
+    <author>
+      <name>Genki Ouchi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.01452v1</id>
+    <title>Rapidly mixing loop representation quantum Monte Carlo for Heisenberg models on star-like bipartite graphs</title>
+    <updated>2024-11-03T06:19:42Z</updated>
+    <link href="https://arxiv.org/abs/2411.01452v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.01452v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum Monte Carlo (QMC) methods have proven invaluable in condensed matter physics, particularly for studying ground states and thermal equilibrium properties of quantum Hamiltonians without a sign problem. Over the past decade, significant progress has also been made on their rigorous convergence analysis.
+  Heisenberg antiferromagnets (AFM) with bipartite interaction graphs are a popular target of computational QMC studies due to their physical importance, but despite the apparent empirical efficiency of these simulations it remains an open question whether efficient classical approximation of the ground energy is possible in general. In this work we introduce a ground state variant of the stochastic series expansion QMC method, and for the special class of AFM on interaction graphs with an $O(1)$-bipartite component (star-like), we prove rapid mixing of the associated QMC Markov chain (polynomial time in the number of qubits) by using Jerrum and Sinclair's method of canonical paths. This is the first Markov chain analysis of a practical class of QMC algorithms with the loop representation of Heisenberg models.
+  Our findings contribute to the broader effort to resolve the computational complexity of Heisenberg AFM on general bipartite interaction graphs.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-03T06:19:42Z</published>
+    <arxiv:comment>29 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Jun Takahashi</name>
+    </author>
+    <author>
+      <name>Sam Slezak</name>
+    </author>
+    <author>
+      <name>Elizabeth Crosson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.3112v1</id>
+    <title>A most general edge elimination graph polynomial</title>
+    <updated>2007-12-19T08:04:26Z</updated>
+    <link href="https://arxiv.org/abs/0712.3112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.3112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We look for graph polynomials which satisfy recurrence relations on three kinds of edge elimination: edge deletion, edge contraction and deletion of edges together with their end points. Like in the case of deletion and contraction only (W. Tutte, 1954), it turns out that there is a most general polynomial satisfying such recurrence relations, which we call $ξ(G,x,y,z)$. We show that the new polynomial simultaneously generalizes the Tutte polynomial, the matching polynomial, and the recent generalization of the chromatic polynomial proposed by K.Dohmen, A.Pönitz and P.Tittman (2003), including also the independent set polynomial of I. Gutman and F. Harary, (1983) and the vertex-cover polynomial of F,M. Dong, M.D. Hendy, K.T. Teo and C.H.C. Little (2002). We establish two definitions of the new polynomial: first, the most general confluent recursive definition, and then an explicit one, using a set expansion formula, and prove their identity. We further expand this result to edge-labeled graphs as was done for the Tutte polynomial by T. Zaslavsky (1992) and B. Bollobás and O. Riordan (1999). The edge labeled polynomial $ξ_{lab}(G,x,y,z, \bar{t})$ also generalizes the chain polynomial of R.C. Read and E.G. Whitehead Jr. (1999). Finally, we discuss the complexity of computing $ξ(G,x,y,z)$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-19T08:04:26Z</published>
+    <arxiv:comment>17 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Eur. J. Comb. 31(1): 1-17 (2010)</arxiv:journal_ref>
+    <author>
+      <name>Ilia Averbouch</name>
+    </author>
+    <author>
+      <name>Benny Godlin</name>
+    </author>
+    <author>
+      <name>Johann A. Makowsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.29217v1</id>
+    <title>Certified Seventh-Order Two-Derivative Hermite Deferred Correction via Node-Sweep Co-Design</title>
+    <updated>2026-07-31T09:40:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.29217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.29217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Two-derivative Hermite deferred correction combines high collocation order with sequential single-state solves, but the stopped method depends jointly on the nodes and the correction sweep. We co-design these ingredients for diffusion-dominated semilinear problems. For three subintervals, an H4 predictor, and two corrections, the complete order-seven B-series defect has rank one in the 48-dimensional rooted-tree space: two corrections apply two unary graftings to the one-directional order-five predictor defect. Hence one scalar chain coefficient controls every nonlinear principal-error condition. Rational nodes and an isolated algebraic correction parameter cancel this coefficient; coprimality with the order-eight chain polynomial proves classical order exactly seven. A complementary design, Accuracy-P40, retains generic sixth order but reduces the complete principal-error norm to $9.8\%$ of the LGL--L3 value while satisfying $J_{\mathrm{stiff}}&lt;0.40$. We also distinguish convergence of repeated corrections from absolute stability after a fixed number of sweeps: two corrections have finite negative-real stability intervals, whereas a third correction restores far-stiff output damping for the new designs. High-precision nonlinear order tests verify sixth versus seventh order, and Allen--Cahn and Cahn--Hilliard calculations show that Accuracy-P40 reduces correction and Krylov work.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-31T09:40:47Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Zhixin Huo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.15366v1</id>
+    <title>Immediate Afterglow Physical Characteristics and Broadband Spectra Evidence Synchrotron self-Compton Emission as the Reason for VHE Production in TeV GRB 190114C</title>
+    <updated>2023-10-23T20:59:32Z</updated>
+    <link href="https://arxiv.org/abs/2310.15366v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.15366v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long GRB 190114C, identified on January 14th, 2019, was the first Gamma-ray Burst that substantially violated the defined 10 GeV energy limit of the Synchrotron model, with an observed emission between 0.2 - 1 TeV and a low redshift of z = 0.425. This paper analyzes its immediate afterglow broadband spectrum from 10$^{17}$ to 10$^{26}$ Hz based on observations by the Swift X-ray Telescope (XRT), Fermi Gamma-Ray Burst Monitor (GBM), Swift Burst Alert Telescope (BAT), Fermi Large Area Telescope (LAT), and Major Atmospheric Gamma Imaging Cherenkov Telescope (MAGIC). We first calculate the physical characteristics necessary to understand the conditions in the burst's emitting region, then conduct temporal and spectral analyses by deriving light curves and spectra using a chain polynomial best-fit in the context of the forward shock model in a homogeneous circumburst density. The Spectral Energy Distributions are found to be double-peaked for T$_0$ + 68-180s, and we show the distribution consists of a distinct Synchrotron component followed by an inverse Compton component explained by high-energy electrons up-scattering Synchrotron photons. We find our calculated Bulk Lorentz Factor = 351 sufficiently explains the peak of the inverse Compton component at sub-TeV energy levels in the immediate afterglow, and that the Comptonization of the burst proceeds in the Klein-Nishina regime. We conclude this further evidences Synchrotron self-Compton emission as the mechanism behind the production of Very-High-Energy photons in GRB 190114C.</summary>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-23T20:59:32Z</published>
+    <arxiv:comment>7 pages, 5 figures, Proceedings of the 40th Annual Meeting of the Astronomical Society of India</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.HE"/>
+    <author>
+      <name>Aadi Krishna</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.12586v2</id>
+    <title>Pump-efficient Josephson parametric amplifiers with high saturation power</title>
+    <updated>2025-02-24T22:58:31Z</updated>
+    <link href="https://arxiv.org/abs/2402.12586v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.12586v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Circuit QED based quantum information processing relies on low noise amplification for signal readout. In the realm of microwave superconducting circuits, this amplification is often achieved via Josephson parametric amplifiers (JPA). In the past, these amplifiers exhibited low power added efficiency (PAE), which is roughly the fraction of pump power that is converted to output signal power. This is increasingly relevant because recent attempts to build high saturation power amplifiers achieve this at the cost of very low PAE, which in turn puts a high heat load on the cryostat and limits the number of these devices that a dilution refrigerator can host. Here, we numerically investigate upper bounds on PAE. We focus on a class of parametric amplifiers that consists of a capacitor shunted by a nonlinear inductive block. We first set a benchmark for this class of amplifiers by considering nonlinear blocks described by an arbitrary polynomial current-phase relation. Next, we propose two circuit implementations of the nonlinear block. Finally, we investigate chaining polynomial amplifiers. We find that while amplifiers with higher gain have a lower PAE, regardless of the gain there is considerable room to improve as compared to state of the art devices. For example, for a phase-sensitive amplifier with a power gain of 20 dB, the PAE is ~0.1% for typical JPAs, 5.9% for our simpler circuit JPAs, 34% for our more complex circuit JPAs, 48% for our arbitrary polynomial amplifiers, and at least 95% for our chained amplifiers.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-19T22:39:49Z</published>
+    <arxiv:comment>23 pages, 26 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 111, 022611 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Nicholas M. Hougland</name>
+    </author>
+    <author>
+      <name>Zhuan Li</name>
+    </author>
+    <author>
+      <name>Ryan Kaufman</name>
+    </author>
+    <author>
+      <name>Boris Mesits</name>
+    </author>
+    <author>
+      <name>Roger S. K. Mong</name>
+    </author>
+    <author>
+      <name>Michael Hatridge</name>
+    </author>
+    <author>
+      <name>David Pekker</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.111.022611</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.111.022611" title="doi"/>
+  </entry>
+</feed>

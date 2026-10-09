@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/n7odws1/jncnt4m1Xq1IJ4rD+IE</id>
+  <title>arXiv Query: search_query=abs:"order complex" AND abs:"real-rooted"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:00:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22order+complex%22+AND+abs:%22real-rooted%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/math/9609211v1</id>
+    <title>Combinatorics and topology of stratifications of the space of monic polynomials with real coefficients</title>
+    <updated>1996-09-24T00:00:00Z</updated>
+    <link href="https://arxiv.org/abs/math/9609211v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/9609211v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study the stratification of the space of monic polynomials with real coefficients according to the number and multiplicities of real zeros. In the first part, for each of these strata we provide a purely combinatorial chain complex calculating (co)homology of its one-point compactification and describe the homotopy type by order complexes of a class of posets of compositions. In the second part, we determine the homotopy type of the one-point compactification of the space of monic polynomials of fixed degree which have only real roots (i.e., hyperbolic polynomials) and at least one root is of multiplicity $k$. More generally, we describe the homotopy type of the one-point compactification of strata in the boundary of the set of hyperbolic polynomials, that are defined via certain restrictions on root multiplicities, by order complexes of posets of compositions. In general, the methods are combinatorial and the topological problems are mostly reduced to the study of partially ordered sets.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1996-09-24T00:00:00Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Volkmar Welker</name>
+    </author>
+    <author>
+      <name>Boris Shapiro</name>
+    </author>
+  </entry>
+</feed>

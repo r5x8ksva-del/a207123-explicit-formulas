@@ -1,0 +1,33 @@
+PASS 覆盖.arxiv  成功 50（笔记 50），失败 0（笔记 0）
+PASS 覆盖.openalex  成功 55（笔记 55），失败 0（笔记 0）
+PASS 覆盖.crossref  成功 55（笔记 55），失败 0（笔记 0）
+PASS 覆盖.s2  成功 3（笔记 3），失败 9（笔记 9）
+PASS 覆盖.se  成功 10（笔记 10），失败 0（笔记 0）
+PASS 覆盖.s2 的失败全是 429  ['429']
+PASS 查询总数 55  55
+PASS 原始记录 1711  1711
+PASS 按题名合并 1345  1345
+PASS Niu 2026 年的预印本 7 篇  7
+PASS 前向引用种子 16 个  16
+PASS 前向引用去重 956 篇  956
+PASS A202093 标注 Krause 于 2026-06-26 证明
+PASS A202093 修订行为 #36 Jun 28 2026
+PASS A202100 的整表公式署名 Zhuorui He，2026-06-29
+PASS A202100 修订行为 #18 Jul 06 2026
+PASS Krause 附件含关键引理（s_i=0 ⇒ s_{i+2}=0）
+PASS A228285 评论：第 k 列递推阶 F_{k+2}、k≤11 时最小
+PASS A207118 的修订行与 data/oeis 旧快照相同  新 #8 Feb 20 2018 12:12:16 | 旧 #8 Feb 20 2018 12:12:16
+PASS A207119 的修订行与 data/oeis 旧快照相同  新 #9 Oct 03 2025 13:29:58 | 旧 #9 Oct 03 2025 13:29:58
+PASS A207120 的修订行与 data/oeis 旧快照相同  新 #9 Oct 03 2025 13:30:05 | 旧 #9 Oct 03 2025 13:30:05
+PASS A207121 的修订行与 data/oeis 旧快照相同  新 #9 Oct 03 2025 13:30:13 | 旧 #9 Oct 03 2025 13:30:13
+PASS A207122 的修订行与 data/oeis 旧快照相同  新 #7 Sep 07 2022 16:13:11 | 旧 #7 Sep 07 2022 16:13:11
+PASS A207069 的修订行与 data/oeis 旧快照相同  新 #14 Feb 17 2018 20:29:33 | 旧 #14 Feb 17 2018 20:29:33
+PASS A207070 的修订行与 data/oeis 旧快照相同  新 #9 Oct 03 2025 13:26:15 | 旧 #9 Oct 03 2025 13:26:15
+PASS A326247 的修订行与 data/oeis 旧快照相同  新 #8 Jun 21 2019 22:45:08 | 旧 #8 Jun 21 2019 22:45:08
+PASS A207123 的修订行与 data/oeis 旧快照相同  新 #9 Oct 03 2025 13:30:21 | 旧 #9 Oct 03 2025 13:30:21
+PASS A207123 当前页没有公式行（%F）与「proved」字样
+PASS read_papers.md 记录了 10 个 PDF 的 SHA-256（第一次精读 6 篇 + 10-07 第二次 arXiv 复查全文检索 3 篇 + 10-09 读 Brändén-Saud Maia Leite 1 篇）
+PASS formal_lists_check.md：两个仓库都没有命中本家族
+PASS Mathlib 里 D-finite / holonomic / P-recursive 的出现次数为 0  0
+PASS Mathlib 有单变量的 SkewPolynomial
+结果： 全部通过

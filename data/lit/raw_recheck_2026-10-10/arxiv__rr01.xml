@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KzlOESCF3eMegCRjnicd7DxGVCw</id>
+  <title>arXiv Query: search_query=abs:"chain polynomial" AND abs:real&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:00:50Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22chain+polynomial%22+AND+abs:real&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2205.03796v2</id>
+    <title>Chain enumeration, partition lattices and polynomials with only real roots</title>
+    <updated>2023-01-02T10:30:53Z</updated>
+    <link href="https://arxiv.org/abs/2205.03796v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.03796v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coefficients of the chain polynomial of a finite poset enumerate chains in the poset by their number of elements. The chain polynomials of the partition lattices and their standard type $B$ analogues are shown to have only real roots. The real-rootedness of the chain polynomial is conjectured for all geometric lattices and is shown to be preserved by the pyramid and the prism operations on Cohen--Macaulay posets. As a result, new families of convex polytopes whose face lattices have real-rooted chain polynomials are presented. An application to the face enumeration of the second barycentric subdivision of the boundary complex of the simplex is also included.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-08T06:36:37Z</published>
+    <arxiv:comment>Version to appear in Combinatorial Theory</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Christos A. Athanasiadis</name>
+    </author>
+    <author>
+      <name>Katerina Kalampogia-Evangelinou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.04839v3</id>
+    <title>Two classes of posets with real-rooted chain polynomials</title>
+    <updated>2025-11-30T20:39:07Z</updated>
+    <link href="https://arxiv.org/abs/2307.04839v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.04839v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coefficients of the chain polynomial of a finite poset enumerate chains in the poset by their number of elements. It has been a challenging open problem to determine which posets have real-rooted chain polynomials. Two new classes of posets, namely those of all rank-selected subposets of Cohen-Macaulay simplicial posets and all noncrossing partition lattices associated to finite Coxeter groups, are shown to have this property. The first result generalizes one of Brenti and Welker. As a special case, the descent enumerator of permutations of the set $\{1, 2,\dots,n\}$ which have ascents at specified positions is shown to be real-rooted, hence log-concave and unimodal, and a good estimate for the location of the peak is deduced.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-10T18:16:02Z</published>
+    <arxiv:comment>Some typos in notation have been corrected in the proof of Lemma 5.3</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Electron. J. Combin. 31 (2024), Research Paper 4.16, 22pp (electronic)</arxiv:journal_ref>
+    <author>
+      <name>Christos A. Athanasiadis</name>
+    </author>
+    <author>
+      <name>Theo Douvropoulos</name>
+    </author>
+    <author>
+      <name>Katerina Kalampogia-Evangelinou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.13810v3</id>
+    <title>On chain polynomials of geometric lattices</title>
+    <updated>2025-12-11T11:45:07Z</updated>
+    <link href="https://arxiv.org/abs/2508.13810v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.13810v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Athanasiadis and Kalampogia-Evangelinou recently conjectured that the chain polynomial of any geometric lattice has only real zeros. We verify this conjecture for families of geometric lattices including perfect matroid designs, Dowling lattices, and for a class of geometric lattices that contains all lattices of flats of paving matroids. We also investigate how the conjecture behaves with respect to certain operations such as direct products, ordinal sums and single-element extensions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-19T13:14:48Z</published>
+    <arxiv:comment>Fixed some typos</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+    <author>
+      <name>Leonardo Saud Maia Leite</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.13819v2</id>
+    <title>Chow polynomials of rank-uniform labeled posets</title>
+    <updated>2025-12-18T21:37:00Z</updated>
+    <link href="https://arxiv.org/abs/2511.13819v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.13819v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce and develop the theory of UMEL-shellable posets. These are posets equipped with an edge-lexicographical labeling satisfying certain uniformity and monotonicity properties. This framework encompasses classical families of combinatorial geometries, including uniform matroids, projective and affine geometries, braid matroids of type A and B, and all Dowling geometries. It also comprises all rank-uniform supersolvable lattices, and therefore also all rank-uniform distributive lattices. Our main result establishes real-rootedness phenomena for the Chow polynomials, the augmented Chow polynomials, and the chain polynomials associated with those posets, thus making simultaneous progress towards conjectures by Ferroni--Schröter, Huh--Stevens, and Athanasiadis--Kalampogia-Evangelinou. In the special case of lattices of flats of matroids, the (augmented) Chow polynomials coincide with the Hilbert--Poincaré series of the Chow ring associated to the smooth and generally noncompact toric varieties of the (augmented) Bergman fan of the matroid, whereas the chain polynomial encodes the Hilbert--Poincaré series of the Stanley--Reisner ring of the Bergman complex of the matroid. Therefore, these real-rootedness results are tightly linked to the study of these algebro-geometric structures in matroid theory.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T19:00:01Z</published>
+    <arxiv:comment>v2: added Theorem 7.4, an expansion of main theorem to include more interlacing relations, and incorporated helpful comments; 44 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Basile Coron</name>
+    </author>
+    <author>
+      <name>Luis Ferroni</name>
+    </author>
+    <author>
+      <name>Shiyue Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.06595v3</id>
+    <title>Totally nonnegative matrices, chain enumeration and zeros of polynomials</title>
+    <updated>2025-12-11T10:07:51Z</updated>
+    <link href="https://arxiv.org/abs/2412.06595v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.06595v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that any lower unitriangular and totally nonnegative matrix gives rise to a family of polynomials with only real zeros. This has consequences for problems in several areas of mathematics. We use it to develop a general theory for chain enumeration in posets and zeros of chain polynomials. The results obtained extend and unify results of the first author, Brenti, Welker and Athanasiadis. In the process we define a notion of $h$-vectors for a large class of posets which generalize the notions of $h$-vectors associated to simplicial and cubical complexes. A consequence of our methods is a characterization of the convex hull of all characteristic polynomials of hyperplane arrangements of fixed dimension and over a fixed finite field. This may be seen as a refinement of the Critical Problem of Crapo and Rota.
+  We also use the methods developed to answer an open problem posed by Forgács and Tran on the real-rootedness of polynomials arising from certain bivariate rational functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-09T15:46:56Z</published>
+    <arxiv:comment>A thorough discussion on notions on shellabilty added. The notion of shellability for r-cubical posets is relaxed. Several typos corrected</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Mathematics, Vol. 487, Mar. 2026, P. 110760</arxiv:journal_ref>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+    <author>
+      <name>Leonardo Saud Maia Leite</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2025.110760</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2025.110760" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.29217v1</id>
+    <title>Certified Seventh-Order Two-Derivative Hermite Deferred Correction via Node-Sweep Co-Design</title>
+    <updated>2026-07-31T09:40:47Z</updated>
+    <link href="https://arxiv.org/abs/2607.29217v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.29217v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Two-derivative Hermite deferred correction combines high collocation order with sequential single-state solves, but the stopped method depends jointly on the nodes and the correction sweep. We co-design these ingredients for diffusion-dominated semilinear problems. For three subintervals, an H4 predictor, and two corrections, the complete order-seven B-series defect has rank one in the 48-dimensional rooted-tree space: two corrections apply two unary graftings to the one-directional order-five predictor defect. Hence one scalar chain coefficient controls every nonlinear principal-error condition. Rational nodes and an isolated algebraic correction parameter cancel this coefficient; coprimality with the order-eight chain polynomial proves classical order exactly seven. A complementary design, Accuracy-P40, retains generic sixth order but reduces the complete principal-error norm to $9.8\%$ of the LGL--L3 value while satisfying $J_{\mathrm{stiff}}&lt;0.40$. We also distinguish convergence of repeated corrections from absolute stability after a fixed number of sweeps: two corrections have finite negative-real stability intervals, whereas a third correction restores far-stiff output damping for the new designs. High-precision nonlinear order tests verify sixth versus seventh order, and Allen--Cahn and Cahn--Hilliard calculations show that Accuracy-P40 reduces correction and Krylov work.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-31T09:40:47Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Zhixin Huo</name>
+    </author>
+  </entry>
+</feed>

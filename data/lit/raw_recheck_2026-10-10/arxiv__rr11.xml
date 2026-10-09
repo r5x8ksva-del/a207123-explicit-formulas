@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/2DS1lnb4vbs1qrNfIfyqG0aax/Y</id>
+  <title>arXiv Query: search_query=abs:"zeta polynomial" AND abs:zeros&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22zeta+polynomial%22+AND+abs:zeros&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1606.07427v2</id>
+    <title>Special Values of Motivic $L$-Functions and Zeta-Polynomials for Symmetric Powers of Elliptic Curves</title>
+    <updated>2017-06-01T15:02:14Z</updated>
+    <link href="https://arxiv.org/abs/1606.07427v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.07427v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $\mathcal{M}$ be a pure motive over $\mathbb{Q}$ of odd weight $w\geq 3$, even rank $d\geq 2$, and global conductor $N$ whose $L$-function $L(s,\mathcal{M})$ coincides with the $L$-function of a self-dual algebraic tempered cuspidal symplectic representation of $\mathrm{GL}_{d}(\mathbb{A}_{\mathbb{Q}})$. We show that a certain polynomial which generates special values of $L(s,\mathcal{M})$ (including all of the critical values) has all of its zeros equidistributed on the unit circle, provided that $N$ or $w$ are sufficiently large with respect to $d$. These special values have arithmetic significance in the context of the Bloch-Kato conjecture. We focus on applications to symmetric powers of semistable elliptic curves over $\mathbb{Q}$. Using the Rodriguez-Villegas transform, we use these results to construct large classes of "zeta-polynomials" (in the sense of Manin) arising from symmetric powers of semistable elliptic curves; these polynomials have a functional equation relating $s\mapsto 1-s$, and all of their zeros on the line $\operatorname{Re}(s)=1/2$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-23T19:58:31Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Res. Math. Sci. 4 (2017), Paper No. 26, 16 pp</arxiv:journal_ref>
+    <author>
+      <name>Steffen Löbrich</name>
+    </author>
+    <author>
+      <name>Wenjun Ma</name>
+    </author>
+    <author>
+      <name>Jesse Thorner</name>
+    </author>
+    <arxiv:doi>10.1186/s40687-017-0114-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1186/s40687-017-0114-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.00752v3</id>
+    <title>Zeta-polynomials for modular form periods</title>
+    <updated>2016-10-04T14:06:17Z</updated>
+    <link href="https://arxiv.org/abs/1602.00752v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.00752v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Answering problems of Manin, we use the critical $L$-values of even weight $k\geq 4$ newforms $f\in S_k(Γ_0(N))$ to define zeta-polynomials $Z_f(s)$ which satisfy the functional equation $Z_f(s)=\pm Z_f(1-s)$, and which obey the Riemann Hypothesis: if $Z_f(ρ)=0$, then $\operatorname{Re}(ρ)=1/2$. The zeros of the $Z_f(s)$ on the critical line in $t$-aspect are distributed in a manner which is somewhat analogous to those of classical zeta-functions. These polynomials are assembled using (signed) Stirling numbers and "weighted moments" of critical values $L$-values. In analogy with Ehrhart polynomials which keep track of integer points in polytopes, the $Z_f(s)$ keep track of arithmetic information. Assuming the Bloch--Kato Tamagawa Number Conjecture, they encode the arithmetic of a combinatorial arithmetic-geometric object which we call the "Bloch-Kato complex" for $f$. Loosely speaking, these are graded sums of weighted moments of orders of Šafarevič-Tate groups associated to the Tate twists of the modular motives.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-02T00:13:15Z</published>
+    <arxiv:comment>15 pages, 3 figures. Minor edits in v2, to appear in Advances in Mathematics. arXiv admin note: text overlap with arXiv:1605.05536</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Ken Ono</name>
+    </author>
+    <author>
+      <name>Larry Rolen</name>
+    </author>
+    <author>
+      <name>Florian Sprung</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/utMBLD96GPl5L9iRq9Ghv/uBfpw</id>
+  <title>arXiv Query: search_query=abs:"real-rooted" AND abs:"sign changes"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:09Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22real-rooted%22+AND+abs:%22sign+changes%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2012.04601v3</id>
+    <title>$σ$-Stable Matrices</title>
+    <updated>2020-12-17T18:10:42Z</updated>
+    <link href="https://arxiv.org/abs/2012.04601v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.04601v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>$σ$-Stable matrices are introduced and it is shown that the real roots of the polynomials comprising the coefficients of the characteristic polynomial indicate the coefficient sign changes. A proof of Obrechkoff is then used to show that the largest real root from the coefficients is the point of stability when the maximal eigenvalue of the $σ$-stable matrix is in $\mathbb{R}$. Some implications of the coefficient behaviour for a scaling relation are then discussed.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-30T13:24:36Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Michael Thorne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.14698v1</id>
+    <title>Degree $6$ hyperbolic polynomials and orders of moduli</title>
+    <updated>2023-10-23T08:44:17Z</updated>
+    <link href="https://arxiv.org/abs/2310.14698v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.14698v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider real univariate degree $d$ real-rooted polynomials with non-vanishing coefficients. Descartes' rule of signs implies that such a polynomial has $\tilde{c}$ positive and $\tilde{p}$ negative roots counted with multiplicity, where $\tilde{c}$ and $\tilde{p}$ are the numbers of sign changes and sign preservations in the sequence of its coefficients, $\tilde{c}+\tilde{p}=d$. For $d=6$, we give the exhaustive answer to the question: When the moduli of all $6$ roots are distinct and arranged on the real positive half-axis, in which positions can the moduli of the negative roots be depending on the signs of the coefficients?</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-23T08:44:17Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <arxiv:journal_ref>Math. Commun. 29 (2024), 163-176</arxiv:journal_ref>
+    <author>
+      <name>Yousra Gati</name>
+    </author>
+    <author>
+      <name>Vladimir Petrov Kostov</name>
+    </author>
+    <author>
+      <name>Mohamed Chaouki Tarchi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.07912v1</id>
+    <title>An extension of the Hermite-Biehler theorem with application to polynomials with one positive root</title>
+    <updated>2017-01-27T00:39:53Z</updated>
+    <link href="https://arxiv.org/abs/1701.07912v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.07912v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>If a real polynomial $f(x)=p(x^2)+xq(x^2)$ is Hurwitz stable (every root if $f$ lies in the open left half-plane), then the Hermite-Biehler Theorem says that the polynomials $p(-x^2)$ and $q(-x^2)$ have interlacing real roots. We extend this result to general polynomials by giving a lower bound on the number of real roots of $p(-x^2)$ and $q(-x^2)$ and showing that these real roots interlace. This bound depends on the number of roots of $f$ which lie in the left half plane. Another classical result in the theory of polynomials is Descartes' Rule of Signs, which bounds the number of positive roots of a polynomial in terms of the number of sign changes in its coefficients. We use our extension of the Hermite-Biehler Theorem to give an inverse rule of signs for polynomials with one positive root.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-27T00:39:53Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Richard Ellard</name>
+    </author>
+    <author>
+      <name>Helena Šmigoc</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.09079v2</id>
+    <title>Roots of trigonometric polynomials and the Erdős-Turán theorem</title>
+    <updated>2019-07-14T17:34:00Z</updated>
+    <link href="https://arxiv.org/abs/1903.09079v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.09079v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove, informally put, that it is not a coincidence that $\cos{(n θ)} + 1 \geq 0$ and that the roots of $z^n + 1 =0$ are uniformly distributed in angle -- a version of the statement holds for all trigonometric polynomials with `few' real roots. The Erdős-Turán theorem states that if $p(z) =\sum_{k=0}^{n}{a_k z^k}$ is suitably normalized and not too large for $|z|=1$, then its roots are clustered around $|z| = 1$ and equidistribute in angle at scale $\sim n^{-1/2}$. We establish a connection between the rate of equidistribution of roots in angle and the number of sign changes of the corresponding trigonometric polynomial $q(θ) = \Re \sum_{k=0}^{n}{a_k e^{i k θ}}$. If $q(θ)$ has $\lesssim n^δ$ roots for some $0 &lt; δ&lt; 1/2$, then the roots of $p(z)$ do not frequently cluster in angle at scale $\sim n^{-(1-δ)} \ll n^{-1/2}$.</summary>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-21T16:00:04Z</published>
+    <arxiv:primary_category term="math.CA"/>
+    <author>
+      <name>Stefan Steinerberger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.23467v1</id>
+    <title>On the Limits of Interpretable Machine Learning in Quintic Root Classification</title>
+    <updated>2026-02-26T19:53:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.23467v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.23467v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Can Machine Learning (ML) autonomously recover interpretable mathematical structure from raw numerical data? We aim to answer this question using the classification of real-root configurations of polynomials up to degree five as a structured benchmark. We tested an extensive set of ML models, including decision trees, logistic regression, support vector machines, random forest, gradient boosting, XGBoost, symbolic regression, and neural networks. Neural networks achieved strong in-distribution performance on quintic classification using raw coefficients alone (84.3% + or - 0.9% balanced accuracy), whereas decision trees perform substantially worse (59.9% + or - 0.9\%). However, when provided with an explicit feature capturing sign changes at critical points, decision trees match neural performance (84.2% + or - 1.2%) and yield explicit classification rules. Knowledge distillation reveals that this single invariant accounts for 97.5% of the extracted decision structure. Out-of-distribution, data-efficiency, and noise robustness analyses indicate that neural networks learn continuous, data-dependent geometric approximations of the decision boundary rather than recovering scale-invariant symbolic rules. This distinction between geometric approximation and symbolic invariance explains the gap between predictive performance and interpretability observed across models. Although high predictive accuracy is attainable, we find no evidence that the evaluated ML models autonomously recover discrete, human-interpretable mathematical rules from raw coefficients. These results suggest that, in structured mathematical domains, interpretability may require explicit structural inductive bias rather than purely data-driven approximation.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T19:53:41Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Rohan Thomas</name>
+    </author>
+    <author>
+      <name>Majid Bani-Yaghoub</name>
+    </author>
+  </entry>
+</feed>

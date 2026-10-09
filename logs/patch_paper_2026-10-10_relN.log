@@ -1,0 +1,7 @@
+label thmA -> intro:order (1 refs)
+label thmB -> intro:explicit (1 refs)
+label thmC -> intro:shapes (1 refs)
+label thmD -> intro:ideal (3 refs)
+label thmE -> intro:neardiag (1 refs)
+label thmF -> intro:roots (5 refs)
+paper/main.tex: abstract 1728 chars, intro rebuilt, appendix B added (13601 bytes), 153435 bytes in total

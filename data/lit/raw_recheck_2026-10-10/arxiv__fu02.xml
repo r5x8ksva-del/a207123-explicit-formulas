@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ekTGmjRnFNpzcHHoopL658Iyv/c</id>
+  <title>arXiv Query: search_query=ti:"real-rooted" AND ti:"simplicial complexes"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:03:14Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22real-rooted%22+AND+ti:%22simplicial+complexes%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2503.24076v1</id>
+    <title>On a question about real rooted polynomials and f-polynomials of simplicial complexes</title>
+    <updated>2025-03-31T13:31:37Z</updated>
+    <link href="https://arxiv.org/abs/2503.24076v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.24076v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a polynomial $f(t) = 1+f_0t+\cdots +f_{d-1}t^d$ with positive integer coefficients Bell and Skandera ask if real rootedness of f(t) implies that there is a simplicial complex with f-vector $(1,f_0 \ldots,f_{d-1})$. In this paper we discover properties implied by the real rootedness of f(t) in terms of the binomial representation $f_i = \binom{x_{i+1}}{i+1}, i \geq 0$. We use these to provide a sufficient criterion for a positive answer to the question by Bell and Skandera. We also describe two further approaches to the conjecture and use one to verify that some well studied real rooted classical polynomials are f-polynomials. Finally, we provide a series of results showing that the set of f-vectors of simplicial complexes is closed under constructions also preserving real rootedness of their generating polynomials.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-31T13:31:37Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Lili Mu</name>
+    </author>
+    <author>
+      <name>Volkmar Welker</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,15 @@
+PASS B-a  Delta P Y = Y P
+PASS B-b  P m = m Delta P
+PASS B-c  Delta^n P (1+Y)^n = P (n <= 4)
+PASS B-d  Delta m = (m-1) Delta + 1
+PASS B-e  Delta^c m Delta = ((m-c) Delta + c) Delta^c (c <= 4)
+PASS B-f  m Delta^a P = Delta^a P (m(1+Y) - aY) (a <= 4)
+PASS B-g  Y L1 = L1V Y
+PASS B-h  L1V P = Delta P L_N (transport identity)
+PASS B-i  V = P N = Y U + e0
+PASS B-j  L_N N = 0 for k >= 3, q >= 1
+PASS B-k  L1V V = 0 for k >= 3, m >= 2
+PASS B-l  g = 0 on {k>=k0, q>=n}  =>  Delta^n P g = 0 on {k>=k0, m>=n}
+PASS B-m  coefficients of Q L_N in normal form
+PASS B-n  c Y^d = (1+Y) M_d + (-1)^d tau^{-d}(c)
+14 PASS, 0 FAIL

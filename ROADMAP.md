@@ -60,7 +60,7 @@
 
 `GenFun`（T3.1–T3.3、T3.5(3)）、`Blocks`（T2.1、T2.3、T2.8(2)）、`Asymp`（T1.3(4) 渐近、T5.1）、`NoSingleSum`（T2.6）、`Patterns`（T4.2(1)）都没有开始。它们多是分析类（渐近、Laplace / Mellin、₁F₁）或穷举型结论，在 Mathlib 里成本最高。
 
-## 5. 新颖性与外部评审（开放数据库部分已做，2026-10-07；其余待做）
+## 5. 新颖性与外部评审（开放数据库部分已做，2026-10-07，10-10 补查第 5、6、8 节；其余待做）
 
 **2026-10-07 更新**（详见 `notes/新颖性核查_2026-10-07.md`，数据在 `data/lit/`，手动检索清单在 `notes/新颖性核查_手动检索清单.md`）：
 - 系统检索了 arXiv、OpenAlex、Crossref、StackExchange、OEIS 条目页与 16 篇种子论文的前向引用；Semantic Scholar 仍被限流（55 条里只成功 3 条）。Google Scholar（robots.txt 禁止自动化）、Web of Science、MathSciNet、Scopus（需机构登录）、zbMATH（robots.txt 禁止 Anthropic 的爬虫）**没有查**。
@@ -69,6 +69,8 @@
 - 被抢先的风险：同类 Hardin 表在 2026-06 被公开证明；2026 年另有 AI 证 OEIS 猜想的一批预印本。A207118–A207122 目前仍是 Empirical / Conjectures。T1.9 / A15 最易被抢先。
 - 同日第二次 arXiv 复查（笔记 §8，`code/novelty/arxiv_recheck.py`，32 条查询，626 篇；另读了 Fried 三篇证 OEIS 猜想论文的全文）：仍没有处理本家族的文章，也没有对非 Stirling-like 递推的零化理想分类或同类的单和不存在论证；同类的 Hardin 表（A250742）2026 年已被证明，被抢先风险不变。Kauers 2007 的零化定义已对照原文（见 §2.1）。
 - 待做：手动查 Google Scholar、WoS、MathSciNet、zbMATH（最先查 Kauers 2007 与 CKS 2009 的被引用）；把 Kauers 2007 §3 与 T3.8 逐点对照；找人类专家预审。
+
+**2026-10-10 补查**（笔记 §10，`code/novelty/recheck_2026-10-10.py`，数据 `data/lit/raw_recheck_2026-10-10/`）：针对第 5 节（N 的零化理想，附录 B）、第 6 节（求和形状）与第 8 节（h_k 实根、链多项式；10-07 时还只是猜想 B1）在 OpenAlex、Crossref、arXiv 跑了 20 条查询（742 条记录），并取了 7 篇种子的前向引用（375 篇），没有找到先例。最接近的是链多项式实根性的一般结果（Athanasiadis 等两篇、Brändén–Saud Maia Leite 的 TN 偏序集与几何格），它们的零点都在 [−1,0]，覆盖不了 Λ_k；以及只含上一行的两项三角递推的实根、对数凹方法（Shankar 2026 两篇、Alexandersson 2026 两篇），不覆盖 N 的 k−3 项递推。开放数据库里这几篇的前向引用只有 0–3 条，所以手动清单新增 G 组（第 5、8 节），最优先的是它们在 Google Scholar 或 MathSciNet 的被引用。论文相关工作末尾加了「What is new」一段，区分标准工具与本文特有的步骤。给人类专家的英文审读指南：`paper/reviewer_guide.pdf`。
 
 **2026-10-06 做过的初步检索**：arXiv、Crossref、OEIS 搜索与本仓库里的 OEIS 快照；Semantic Scholar 被限流、zbMATH 接口不可用，也没有全文检索（Google Scholar、MathSciNet 都没查）。
 

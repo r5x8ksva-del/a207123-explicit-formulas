@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/4GxL+6wqKj0Qa+9T5FXoI/hPZAo</id>
+  <title>arXiv Query: search_query=abs:recurrences AND abs:"left ideal"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:recurrences+AND+abs:%22left+ideal%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1511.07922v8</id>
+    <title>Contraction of Ore Ideals with Applications</title>
+    <updated>2016-01-29T03:02:20Z</updated>
+    <link href="https://arxiv.org/abs/1511.07922v8" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.07922v8" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ore operators form a common algebraic abstraction of linear ordinary differential and recurrence equations. Given an Ore operator $L$ with polynomial coefficients in $x$, it generates a left ideal $I$ in the Ore algebra over the field $\mathbf{k}(x)$ of rational functions. We present an algorithm for computing a basis of the contraction ideal of $I$ in the Ore algebra over the ring $R[x]$ of polynomials, where $R$ may be either $\mathbf{k}$ or a domain with $\mathbf{k}$ as its fraction field. This algorithm is based on recent work on desingularization for Ore operators by Chen, Jaroschek, Kauers and Singer. Using a basis of the contraction ideal, we compute a completely desingularized operator for $L$ whose leading coefficient not only has minimal degree in $x$ but also has minimal content. Completely desingularized operators have interesting applications such as certifying integer sequences and checking special cases of a conjecture of Krattenthaler.</summary>
+    <category term="cs.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-25T00:15:50Z</published>
+    <arxiv:primary_category term="cs.SC"/>
+    <author>
+      <name>Yi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.05535v1</id>
+    <title>Recurrence in the dynamical system $(X,\langle T_s\rangle_{s\in S})$ and ideals of $βS$</title>
+    <updated>2016-08-19T08:47:19Z</updated>
+    <link href="https://arxiv.org/abs/1608.05535v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.05535v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A {\it dynamical system\/} is a pair $(X,\langle T_s\rangle_{s\in S})$, where $X$ is a compact Hausdorff space, $S$ is a semigroup, for each $s\in S$, $T_s$ is a continuous function from $X$ to $X$, and for all $s,t\in S$, $T_s\circ T_t=T_{st}$. Given a point $p\inβS$, the Stone-\v Cech compactification of the discrete space $S$, $T_p:X\to X$ is defined by, for $x\in X$, $\displaystyle T_p(x)=p{-}\!\lim_{s\in S}T_s(x)$. We let $βS$ have the operation extending the operation of $S$ such that $βS$ is a right topological semigroup and multiplication on the left by any point of $S$ is continuous. Given $p,q\inβS$, $T_p\circ T_q=T_{pq}$, but $T_p$ is usually not continuous. Given a dynamical system $(X,\langle T_s\rangle_{s\in S})$, and a point $x\in X$, we let $U(x)=\{p\inβS:T_p(x)$ is uniformly recurrent$\}$. We show that each $U(x)$ is a left ideal of $βS$ and for any semigroup we can get a dynamical system with respect to which $K(βS)=\bigcap_{x\in X}U(x)$ and $c\ell K(βS)=\bigcap\{U(x):x\in X$ and $U(x)$ is closed$\}$. And we show that weak cancellation assumptions guarantee that each such $U(x)$ properly contains $K(βS)$ and has $U(x) \setminus c\ell K(βS)\neq \emptyset$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-19T08:47:19Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Neil Hindman</name>
+    </author>
+    <author>
+      <name>Dona Strauss</name>
+    </author>
+    <author>
+      <name>Luca Q. Zamboni</name>
+    </author>
+  </entry>
+</feed>

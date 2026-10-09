@@ -14,6 +14,8 @@
 | `formal_lists_check.md` | DeepMind formal-conjectures 与 Epoch LeanOpenProblems 两份公开形式化清单的目录树检查（路径名里有没有本家族的编号），含检查时间与树的 SHA |
 | `oeis/` | OEIS 条目页（`/A…/internal` 的 HTML）与一份证明附件，2026-10-07 取得；与 `data/oeis/` 的 68 个旧快照分开存放（`check_c5b.py` 要求 `data/oeis/` 里只有那 68 个快照） |
 | `manual_scholar_2026-10-07.md` | 用户 10-07 手动跑 Google Scholar（清单 A 组）后贴来的结果，逐字保存；分类见笔记 §9 |
+| `raw_recheck_2026-10-10/` | `code/novelty/recheck_2026-10-10.py` 的原始返回：第三次补查（论文第 5、6、8 节）20 条查询 × OpenAlex、Crossref、arXiv，以及 7 篇种子的 OpenAlex 前向引用（`cites__<种子>.json`）；`_manifest.jsonl` 记每次请求 |
+| `recheck_2026-10-10.md` | `recheck_2026-10-10.py report` 生成：每条查询每个来源的前 10 名、同时命中 ≥2 条查询的文献、前向引用候选；分类见笔记 §10 |
 | `raw_scholar_followup/` | `code/novelty/scholar_followup.py` 对其中新出现几条的 Crossref / OpenAlex 原始返回，另有 JIS 第 8 卷目录页与 Kitaev–Mansour–Vella 2005 的摘要页（用来核对书目） |
 
 ## 数据来源与许可
@@ -33,6 +35,7 @@ Web of Science、MathSciNet、zbMATH、Scopus、Project Euclid、出版社全文
 py -3.14 code/novelty/lit_search.py report      # 只用本地 raw 重新生成 results.jsonl、candidates.md、query_audit.md
 py -3.14 code/novelty/cited_by.py report        # 只用本地 raw_cites 重新生成 cited_by_candidates.md
 py -3.14 code/novelty/arxiv_recheck.py run      # 2026-10-07 第二次 arXiv 复查：32 条查询，原始返回在 raw_arxiv_recheck/，汇总 arxiv_recheck.md（已有的 raw 跳过）
+py -3.14 code/novelty/recheck_2026-10-10.py report   # 2026-10-10 第三次补查：只用本地 raw_recheck_2026-10-10/ 重新生成 recheck_2026-10-10.md
 py -3.14 code/novelty/check_note_refs.py        # 核对笔记里的 arXiv 号、DOI、OEIS 编号都有数据支持
 py -3.14 code/novelty/check_note_facts.py       # 核对笔记里的数字与 OEIS 关键事实能由本目录数据重新证实（不联网）
 ```

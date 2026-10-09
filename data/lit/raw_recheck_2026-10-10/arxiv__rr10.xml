@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/EV95Ap9TcA6Qz1LNFy4nbFgXO/k</id>
+  <title>arXiv Query: search_query=abs:"real-rootedness" AND abs:recurrence AND abs:interlacing&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22real-rootedness%22+AND+(abs:recurrence+AND+abs:interlacing)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05131v2</id>
+    <title>Real-rootedness and interlacing for parking functions and Chow polynomials</title>
+    <updated>2026-09-23T12:23:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.05131v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05131v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove real-rootedness for the Chow polynomials of the noncrossing partition lattices by transferring tieless parking functions to finite-alphabet Smirnov words and applying an interlacing-preserving transition of M.~Leander. We also derive a triangular recurrence for peaks and ties and identify the peakless-tieless descent polynomial as the Narayana polynomial. For the toric $g$-contributions of Ehrenborg--Hetyei--Readdy, we exhibit a fixed-row common interlacer and establish real-rootedness of all nonnegative row sums. Individual real-rootedness follows in particular; Q.~Xiao also proved it by a different differential recurrence. We also give a second proof of the individual statement, by finite Schur--Szegő convolution, that does not use the common interlacer. These results prove Conjecture~4.2 of Xiao and Conjecture~11.2 of Ehrenborg--Hetyei--Readdy, with consequences for weakly 123-avoiding parking functions. We also prove real-rootedness for the image-size polynomial on all parking functions and for the ascent and descent polynomials of four two-pattern-avoiding classes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T13:31:37Z</published>
+    <arxiv:comment>18 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07325v1</id>
+    <title>Real-rooted Eulerian polynomials from permutations, words, and paths</title>
+    <updated>2026-09-07T10:40:35Z</updated>
+    <link href="https://arxiv.org/abs/2609.07325v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07325v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study six Eulerian-type polynomial families. We prove that the
+  descent polynomials of derangements are real-rooted, settling the
+  derangement part of a conjecture of S.~Fu, Z.~Lin, and J.~Zeng. The proof
+  uses a compatible-pair recursion and finite-symbol stability. We also
+  resolve the real-rootedness conjecture in OEIS
+  \oeis{A335340}, strengthen the known rowwise real-rootedness of an even-top
+  descent family to consecutive strict interlacing, and prove real-rootedness,
+  consecutive interlacing, and real-rooted gamma-polynomials for U.~Shankar's
+  super-Eulerian polynomials. A differential recurrence gives consecutive
+  weak interlacing for ternary words counted by increasing runs.
+  Finally, we prove stability of the peak-value refinement and consecutive
+  interleaving of its positive weighted diagonals, settling a conjecture of
+  P.~Alexandersson and O.~Nabawanda.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T10:40:35Z</published>
+    <arxiv:comment>17 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Per Alexandersson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.04225v2</id>
+    <title>Piecewise interlacing zeros of polynomials</title>
+    <updated>2018-05-07T12:25:59Z</updated>
+    <link href="https://arxiv.org/abs/1712.04225v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.04225v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the concept of piecewise interlacing zeros for studying the relation of root distribution of two polynomials. The concept is pregnant with an idea of confirming the real-rootedness of polynomials in a sequence. Roughly speaking, one constructs a collection of disjoint intervals such that one may show by induction that consecutive polynomials have interlacing zeros over each of the intervals. We confirm the real-rootedness of some polynomials satisfying a recurrence with linear polynomial coefficients. This extends Gross et al.'s work where one of the polynomial coefficients is a constant.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-12T10:56:16Z</published>
+    <arxiv:comment>18 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>David G. L. Wang</name>
+    </author>
+    <author>
+      <name>Jiarui Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1602.00521v2</id>
+    <title>The Real-rootedness of Generalized Narayana Polynomials</title>
+    <updated>2016-02-29T01:49:58Z</updated>
+    <link href="https://arxiv.org/abs/1602.00521v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1602.00521v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we prove the real-rootedness of two classes of generalized Narayana polynomials: one arising as the $h$-polynomials of the generalized associahedron associated to the finite Weyl groups, the other arising in the study of the infinite log-concavity of the Boros-Moll polynomials. For the former, Brändén has already proved that these $h$-polynomials have only real zeros. We establish certain recurrence relations for the two classes of Narayana polynomials, from which we derive the real-rootedness. To prove the real-rootedness, we use a sufficient condition, due to Liu and Wang, to determine whether two polynomials have interlaced zeros. The recurrence relations are verified with the help of the Mathematica package \textit{HolonomicFunctions}.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-02-01T13:44:27Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Herman Z. Q. Chen</name>
+    </author>
+    <author>
+      <name>Arthur L. B. Yang</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.15651v1</id>
+    <title>Multivariate stability of powered triangular recurrences and parametrised Eulerian polynomials</title>
+    <updated>2026-09-14T14:34:13Z</updated>
+    <link href="https://arxiv.org/abs/2609.15651v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.15651v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove multivariate stability for a class of affine triangular recurrences whose two coefficients are raised to an arbitrary positive integer power. The variables keep track of cross-step heights in a weighted lattice-path model. The applications include stability and real rootedness of parametrised Eulerian, Stirling, and Lah families. For the parametrised Eulerian polynomials, we obtain multivariate refinements of known real-rootedness results and prove simplicity and strict interlacing of consecutive rows. A kernel-preserving bijection with increasing binary trees yields a synchronised Foata--Strehl action on pairs and a combinatorial interpretation of their gamma coefficients along with a recurrence. The same bijection identifies refinement posets that admit symmetric Boolean and chain decompositions for parameter one and cover-supported $\mathfrak{sl}_2$ operators prove their PECKness. We extend the stability and strict interlacing results to synchronised Stirling permutations and prove PECKness for ordinary Stirling permutations with a fixed number of plateaux.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-14T14:34:13Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Umesh Shankar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.6273v1</id>
+    <title>Mutual Interlacing and Eulerian-like Polynomials for Weyl Groups</title>
+    <updated>2014-01-24T07:33:10Z</updated>
+    <link href="https://arxiv.org/abs/1401.6273v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.6273v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the method of mutual interlacing to prove two conjectures on the real-rootedness of Eulerian-like polynomials: Brenti's conjecture on $q$-Eulerian polynomials for Weyl groups of type $D$, and Dilks, Petersen, and Stembridge's conjecture on affine Eulerian polynomials for irreducible finite Weyl groups.
+  For the former, we obtain a refinement of Brenti's $q$-Eulerian polynomials of type $D$, and then show that these refined Eulerian polynomials satisfy certain recurrence relation. By using the Routh--Hurwitz theory and the recurrence relation, we prove that these polynomials form a mutually interlacing sequence for any positive $q$, and hence prove Brenti's conjecture. For $q=1$, our result reduces to the real-rootedness of the Eulerian polynomials of type $D$, which were originally conjectured by Brenti and recently proved by Savage and Visontai.
+  For the latter, we introduce a family of polynomials based on Savage and Visontai's refinement of Eulerian polynomials of type $D$. We show that these new polynomials satisfy the same recurrence relation as Savage and Visontai's refined Eulerian polynomials. As a result, we get the real-rootedness of the affine Eulerian polynomials of type $D$. Combining the previous results for other types, we completely prove Dilks, Petersen, and Stembridge's conjecture, which states that, for every irreducible finite Weyl group, the affine descent polynomial has only real zeros.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-24T07:33:10Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Arthur L. B. Yang</name>
+    </author>
+    <author>
+      <name>Philip B. Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29151v2</id>
+    <title>Real-rootedness of the Poincaré polynomials of $\overline{\mathcal M}_{0,n}$: an AI-assisted proof</title>
+    <updated>2026-06-11T14:48:54Z</updated>
+    <link href="https://arxiv.org/abs/2605.29151v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29151v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove real-rootedness for the Poincaré polynomial \[
+  P_n(t)=\sum_{i=0}^{n-3} \dim H^{2i}(\overline{\mathcal M}_{0,n};\mathbb{Q})t^i \] of the Deligne--Mumford moduli space $\overline{\mathcal M}_{0,n}$ of stable $n$-pointed rational curves, proving a conjecture of Aluffi--Chen--Marcolli. The proof starts from the Keel--Manin--Getzler recurrence, but its main new idea is a bivariate deformation $F_m(y,t)$ of the Poincaré polynomial. This deformation reveals a hidden interlacing structure not visible in the one-variable recurrence. For fixed $t&lt;0$, the zero set of $F_m$ in the $y$-direction is controlled by a Sturm--Rolle argument on the interval $0&lt;y&lt;1-t$. The original polynomial is recovered on the slice $y=1$, and the ordered crossings of the moving roots through this slice give both real-rootedness and strict interlacing. Consequently, the Betti numbers of $\overline{\mathcal M}_{0,n}$ form an ultra-log-concave sequence.
+  We further prove real-rootedness and ultra-log-concavity for the Poincaré polynomial of the Fulton--MacPherson space $\mathbb{P}^1[n]$ of $n$ ordered points in degenerations of the complex projective line.
+  The proof for $\overline{\mathcal M}_{0,n}$ was obtained through an iterative AI-assisted workflow with Co-Mathematician, an agentic frontier-model system developed by Google DeepMind. Our role was to formulate the problem, evaluate the proposed proof attempts, identify gaps and request corrections, compare the developing argument with the literature, and refine the presentation of the final proof. Our additional human contribution was to observe that a similar residual deformation strategy applies to the Fulton--MacPherson spaces $\mathbb P^1[n]$, yielding the corresponding real-rootedness theorem.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-27T22:26:05Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Gergely Bérczi</name>
+    </author>
+    <author>
+      <name>Young-Hoon Kiem</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2108.03590v1</id>
+    <title>On the positive zeros of generalized Narayana polynomials related to the Boros-Moll polynomials</title>
+    <updated>2021-08-08T08:37:06Z</updated>
+    <link href="https://arxiv.org/abs/2108.03590v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.03590v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generalized Narayana polynomials $N_{n,m}(x)$ arose from the study of infinite log-concavity of the Boros-Moll polynomials. The real-rootedness of $N_{n,m}(x)$ had been proved by Chen, Yang and Zhang. They also showed that when $n\geq m+2$, each of the generalized Narayana polynomials has one and only one positive zero and $m$ negative zeros, where the negative zeros of $N_{n,m}(x)$ and $N_{n+1,m+1}(x)$ have interlacing relations. In this paper, we study the properties of the positive zeros of $N_{n,m}(x)$ for $n\geq m+2$. We first obtain a new recurrence relation for the generalized Narayana polynomials. Based on this recurrence relation, we prove upper and lower bounds for the positive zeros of $N_{n,m}(x)$. Moreover, the monotonicity of the positive zeros of $N_{n,m}(x)$ are also proved by using the new recurrence relation.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-08T08:37:06Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>James J. Y. Zhao</name>
+    </author>
+  </entry>
+</feed>

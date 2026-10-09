@@ -1,0 +1,62 @@
+[openalex rr01] 90053 字节
+[crossref rr01] 13072 字节
+[arxiv rr01] 11620 字节
+[openalex rr02] 78938 字节
+[crossref rr02] 11342 字节
+[arxiv rr02] 35916 字节
+[openalex rr03] 97025 字节
+[crossref rr03] 24743 字节
+[arxiv rr03] 2510 字节
+[openalex rr04] 19024 字节
+[crossref rr04] 11721 字节
+[arxiv rr04] 750 字节
+[openalex rr05] 86598 字节
+[crossref rr05] 12596 字节
+[arxiv rr05] 3015 字节
+[openalex rr06] 67457 字节
+[crossref rr06] 10150 字节
+[arxiv rr06] 16772 字节
+[openalex rr07] 97900 字节
+[crossref rr07] 13761 字节
+[arxiv rr07] 8916 字节
+[openalex rr08] 84997 字节
+[crossref rr08] 6344 字节
+[arxiv rr08] 7148 字节
+[openalex rr09] 90676 字节
+[crossref rr09] 10258 字节
+[arxiv rr09] 756 字节
+[openalex rr10] 77821 字节
+[crossref rr10] 13625 字节
+[arxiv rr10] 15334 字节
+[openalex rr11] 85317 字节
+[crossref rr11] 40879 字节
+[arxiv rr11] 4766 字节
+[openalex rr12] 95952 字节
+[crossref rr12] 10164 字节
+[arxiv rr12] 776 字节
+[openalex id01] 14290 字节
+[crossref id01] 13186 字节
+[arxiv id01] 2982 字节
+[openalex id02] 82831 字节
+[crossref id02] 14225 字节
+[arxiv id02] 23921 字节
+[openalex id03] 139525 字节
+[crossref id03] 8004 字节
+[arxiv id03] 17021 字节
+[openalex id04] 93721 字节
+[crossref id04] 9328 字节
+[arxiv id04] 4296 字节
+[openalex ob01] 108119 字节
+[crossref ob01] 12165 字节
+[arxiv ob01] 784 字节
+[openalex ob02] 78480 字节
+[crossref ob02] 12675 字节
+[arxiv ob02] 740 字节
+[cites bl26_tn_chain] 种子 = 'Totally nonnegative matrices, chain enumeration and zeros of polynomials' (2026), 记录被引 0, 取回 0 篇
+[cites bl26_tn_chain_arxiv] 种子 = 'Totally nonnegative matrices, chain enumeration and zeros of polynomials' (2026), 记录被引 0, 取回 0 篇
+[cites ak23_chain_partition] 种子 = 'Chain enumeration, partition lattices and polynomials with only real roots' (2023), 记录被引 3, 取回 3 篇
+[cites adk24_two_classes] 种子 = 'Two Classes of Posets with Real-Rooted Chain Polynomials' (2024), 记录被引 3, 取回 3 篇
+[cites zhang2016_contraction] 种子 = 'Contraction of Ore Ideals with Applications' (2016), 记录被引 15, 取回 15 篇
+[cites brenti1989_memoir] 种子 = 'Unimodal, log-concave and Pólya frequency sequences in combinatorics' (1989), 记录被引 253, 取回 253 篇
+[cites stanley1998_graph_colorings] 种子 = 'Graph colorings and related symmetric functions: ideas and applications A description of results, interesting applications, & notable open problems' (1998), 记录被引 101, 取回 101 篇
+exit 0

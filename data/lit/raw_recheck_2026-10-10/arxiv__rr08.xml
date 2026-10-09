@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/5JW9Jq0SdLIsQYb5uGkWXwDrXw4</id>
+  <title>arXiv Query: search_query=abs:"totally nonnegative" AND abs:chain&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22totally+nonnegative%22+AND+abs:chain&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2108.03504v1</id>
+    <title>Counting weighted maximal chains in the circular Bruhat order</title>
+    <updated>2021-08-07T19:18:04Z</updated>
+    <link href="https://arxiv.org/abs/2108.03504v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.03504v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The totally nonnegative Grassmannian $\mathrm{Gr}(k,n)_{\geq0}$ is the subset of the real Grassmannian $\mathrm{Gr}(k,n)$ consisting of points with all nonnegative Plücker coordinates. The circular Bruhat order is a poset isomorphic to the face poset of A. Postnikov's (2005) positroid cell decomposition of $\mathrm{Gr}(k,n)_{\geq0}$. We provide a closed formula for the sum of its weighted chains in the spirit of J. Stembridge (2002).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-07T19:18:04Z</published>
+    <arxiv:comment>8 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Gopal Goel</name>
+    </author>
+    <author>
+      <name>Olivia McGough</name>
+    </author>
+    <author>
+      <name>David Perkinson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.06595v3</id>
+    <title>Totally nonnegative matrices, chain enumeration and zeros of polynomials</title>
+    <updated>2025-12-11T10:07:51Z</updated>
+    <link href="https://arxiv.org/abs/2412.06595v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.06595v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that any lower unitriangular and totally nonnegative matrix gives rise to a family of polynomials with only real zeros. This has consequences for problems in several areas of mathematics. We use it to develop a general theory for chain enumeration in posets and zeros of chain polynomials. The results obtained extend and unify results of the first author, Brenti, Welker and Athanasiadis. In the process we define a notion of $h$-vectors for a large class of posets which generalize the notions of $h$-vectors associated to simplicial and cubical complexes. A consequence of our methods is a characterization of the convex hull of all characteristic polynomials of hyperplane arrangements of fixed dimension and over a fixed finite field. This may be seen as a refinement of the Critical Problem of Crapo and Rota.
+  We also use the methods developed to answer an open problem posed by Forgács and Tran on the real-rootedness of polynomials arising from certain bivariate rational functions.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-09T15:46:56Z</published>
+    <arxiv:comment>A thorough discussion on notions on shellabilty added. The notion of shellability for r-cubical posets is relaxed. Several typos corrected</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Advances in Mathematics, Vol. 487, Mar. 2026, P. 110760</arxiv:journal_ref>
+    <author>
+      <name>Petter Brändén</name>
+    </author>
+    <author>
+      <name>Leonardo Saud Maia Leite</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2025.110760</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2025.110760" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.05806v2</id>
+    <title>On two notions of total positivity for partial flag varieties</title>
+    <updated>2022-10-10T20:26:37Z</updated>
+    <link href="https://arxiv.org/abs/2206.05806v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.05806v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given integers $1 \le k_1 &lt; \cdots &lt; k_l \le n-1$, let $\text{Fl}_{k_1,\dots,k_l;n}$ denote the type $A$ partial flag variety consisting of all chains of subspaces $(V_{k_1}\subset\cdots\subset V_{k_l})$ inside $\mathbb{R}^n$, where each $V_k$ has dimension $k$. Lusztig (1994, 1998) introduced the totally positive part $\text{Fl}_{k_1,\dots,k_l;n}^{&gt;0}$ as the subset of partial flags which can be represented by a totally positive $n\times n$ matrix, and defined the totally nonnegative part $\text{Fl}_{k_1,\dots,k_l;n}^{\ge 0}$ as the closure of $\text{Fl}_{k_1,\dots,k_l;n}^{&gt;0}$. On the other hand, following Postnikov (2007), we define $\text{Fl}_{k_1,\dots,k_l;n}^{Δ&gt;0}$ and $\text{Fl}_{k_1,\dots,k_l;n}^{Δ\ge 0}$ as the subsets of $\text{Fl}_{k_1,\dots,k_l;n}$ where all Plücker coordinates are positive and nonnegative, respectively. It follows from the definitions that Lusztig's total positivity implies Plücker positivity, and it is natural to ask when these two notions of positivity agree. Rietsch (2009) proved that they agree in the case of the Grassmannian $\text{Fl}_{k;n}$, and Chevalier (2011) showed that the two notions are distinct for $\text{Fl}_{1,3;4}$. We show that in general, the two notions agree if and only if $k_1, \dots, k_l$ are consecutive integers. We give an elementary proof of this result (including for the case of Grassmannians) based on classical results in linear algebra and the theory of total positivity. We also show that the cell decomposition of $\text{Fl}_{k_1,\dots,k_l;n}^{\ge 0}$ coincides with its matroid decomposition if and only if $k_1,\dots,k_l$ are consecutive integers, which was previously only known for complete flag varieties, Grassmannians, and $\text{Fl}_{1,3;4}$. Finally, we determine which notions of positivity are compatible with a natural action of the cyclic group of order $n$ that rotates the index set.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-12T17:58:44Z</published>
+    <arxiv:comment>21 pages. v2: Minor changes</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. Math. 414 (2023), Paper No. 108855, 24 pages</arxiv:journal_ref>
+    <author>
+      <name>Anthony M. Bloch</name>
+    </author>
+    <author>
+      <name>Steven N. Karp</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2022.108855</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2022.108855" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api//ZiAiDtfmPDFygZVLbmoa/VO8Sk</id>
+  <title>arXiv Query: search_query=ti:"pattern-avoiding" AND ti:matrices AND ti:symmetry&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:03:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22pattern-avoiding%22+AND+(ti:matrices+AND+ti:symmetry)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2510.26168v2</id>
+    <title>Enumeration of pattern-avoiding $(0,1)$-matrices and their symmetry classes</title>
+    <updated>2026-04-27T03:06:27Z</updated>
+    <link href="https://arxiv.org/abs/2510.26168v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.26168v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Brualdi and Cao studied $I_k$-avoiding $(0,1)$-matrices by decomposing them into zigzag paths and proved that the maximum number of $1$'s in such a matrix is given by an exact formula. We further study the structure of maximal $I_k$-avoiding $(0,1)$-matrices (IAMs) by interpreting them as families of non-intersecting lattice paths on the square lattice. Using this perspective, we establish a bijection showing that IAMs are equinumerous with plane partitions of a certain size. Moreover, we classify all ten symmetry classes of IAMs under the action of the dihedral group of order $8$ and show that the enumeration formulas for these classes are given by simple product formulas. Extending this approach to skew shapes, we derive a conceptual formula for enumerating maximal $I_k$-avoiding $(0,1)$-fillings of skew shapes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-30T06:12:02Z</published>
+    <arxiv:comment>20 pages, 6 figures; typos corrected</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Adv. in Appl. Math. 178 (2026), Paper No. 103101, 25 pp</arxiv:journal_ref>
+    <author>
+      <name>Sen-Peng Eu</name>
+    </author>
+    <author>
+      <name>Yi-Lin Lee</name>
+    </author>
+    <arxiv:doi>10.1016/j.aam.2026.103101</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aam.2026.103101" title="doi"/>
+  </entry>
+</feed>

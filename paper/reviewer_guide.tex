@@ -1,0 +1,58 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlist{nosep,leftmargin=1.4em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\newcommand{\cO}{\mathcal{O}}
+\DeclareMathOperator{\Rel}{Rel}
+\pagestyle{empty}
+
+\begin{document}
+
+{\large\bfseries A guide for checking the paper ``Pattern-avoiding binary arrays and a Stirling-type table''}\par
+\smallskip
+This note accompanies the 37-page version of 10 October 2026. Page numbers refer to that version. The repository is \url{https://github.com/r5x8ksva-del/a207123-explicit-formulas}.
+
+\section*{1. What the paper claims}
+\begin{itemize}
+\item \textbf{Structure for fixed $m$} (Theorems A and B; Theorems 3.1 and 4.6): the minimal order of a linear recurrence in $k$ for $U_k(m)$ is exactly $3m+1$, and $U_k(m)$ has a positive double-sum formula in Stirling and $r$-Stirling numbers.
+\item \textbf{All recurrences} (Theorem C; Theorems 5.1, 5.4, B.1, Proposition 5.6, Corollary 5.7): the generating function is not D-finite; the operators annihilating $U$ on a quadrant form the left ideal $\cO L_1$, and those annihilating the triangle $N$ form $\cO L_N$, with exact dimension counts; $U$ is not Stirling-like in the sense of Kauers.
+\item \textbf{Real roots} (Theorem D; Theorem 8.1, Corollaries 8.2 and 8.13): the polynomials $h_k$ have only real, simple zeros, $\lfloor k/3\rfloor$ of them greater than $1$; equivalently the chain polynomials of the posets $\Lambda_k$ are real-rooted.
+\item \textbf{Further results}: obstructions to specific single-sum formulas (Theorem E, Section 6) and the near-diagonal of the triangle (Theorem F, Section 7).
+\end{itemize}
+The paragraph \emph{What is new} on p.~5 states which tools are standard and which steps are specific to these arrays.
+
+\section*{2. What is machine-checked}
+The results in Table 5 (p.~29) are proved in Lean~4 with Mathlib from the definitions of $a_k(n)$ and $U_k(m)$: the reduction, the basic recurrence, the triangle $N$, the exact orders (Theorem 3.1), Corollary 3.4, the explicit formula (Theorem 4.6, through a refined recurrence), the non-D-finiteness (Theorem 5.1), the descriptions $\Rel(U)=\cO L_1$ and $\Rel(N)=\cO L_N$ with the dimension formulas (Theorems 5.4 and B.1), Proposition 5.6, and the near-diagonal theorem (Theorem 7.1, Proposition 7.2). The axiom check reports only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. Lean checks the proofs, not whether the formal statements say what the paper says: \textbf{Appendix A (pp.~30--32) transcribes the definitions that carry the meaning}, and comparing them with the paper is a short and useful check.
+
+\section*{3. Where a human check is most needed}
+The proofs were written with substantial assistance from an AI model and cross-checked by further AI runs (see the statement at the end of the paper). The parts below are not formalized, so an independent reading by an expert is the main remaining safeguard. In order of priority:
+\begin{enumerate}
+\item \textbf{Section 8, real-rootedness (pp.~24--29).} Lemmas 8.4--8.7 collect standard interlacing facts, and Lemma 8.8 applies them to the operators $\mathcal D$, $\mathcal T$ and $\Psi$ of the recurrence. The core is Lemma 8.9 (the recurrence for the row polynomials), Proposition 8.10 (four interlacing relations propagate along the recurrence), Proposition 8.11 (simplicity of the zeros) and Lemma 8.12 (the order of the zero $-1$ and the sign of the cofactor there; of this lemma only $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ are formalized); Corollaries 8.13--8.15 are consequences. Remark 8.16 explains why the general theorems on chain polynomials do not apply: the zeros are not confined to $[-1,0]$.
+\item \textbf{Section 6, obstructions (pp.~16--22).} Theorems 6.1--6.3 use residues on fibres and norms in number fields. Theorem 6.5 (two single sums) is computer-assisted: a sieve modulo $5040$ and Skolem's $p$-adic method (Propositions 6.8--6.10, Lemma 6.11); the scripts are in the repository.
+\item \textbf{Section 4, block decomposition (pp.~10--12):} Theorems 4.2 and 4.4, the refinement in Lemma 4.5 and the bijection of Proposition 4.7 (the formal proof of Theorem 4.6 avoids them).
+\item \textbf{Section 5:} Corollary 5.5 (rational coefficients), and Corollary 5.7 with Remark 5.8, which lead from Kauers' definition of Stirling-like sequences to the formalized Proposition 5.6.
+\item \textbf{Section 3:} the inequality $|\sigma|^2<\rho_{m-1}^2$ in Theorem 3.2(1), parts (2) and (3) of Theorem 3.2 (asymptotics), and Remark 3.3.
+\end{enumerate}
+Appendix B (pp.~32--36) is formalized, but its written proof is new; comments on its readability are welcome.
+
+\section*{4. Questions on novelty}
+Searches in arXiv, OpenAlex, Crossref and Google Scholar found no previous work on these arrays and no precedent for the two points below; MathSciNet, zbMATH and Web of Science have not been searched yet. An expert's knowledge would help most here: (a) Is real-rootedness known for chain polynomials of a class of posets containing $\Lambda_k$, or for chain polynomials with zeros outside $[-1,0]$? (b) Has the annihilator ideal of a bivariate sequence been determined for a generator that is not of Stirling-like shape, as in Theorems 5.4 and B.1?
+
+\section*{5. Reproducing the computations}
+From the repository root (Python~3; only \texttt{verify\_all.py} needs \texttt{numpy}):
+\begin{itemize}
+\item \texttt{python3 verify\_all.py} --- 414 automated checks of the results and numbers, about 11 minutes;
+\item \texttt{python3 code/main\_extra/check\_paper\_numbers.py paper/main.tex} --- recomputes the numbers printed in the paper (32 checks);
+\item \texttt{python3 code/main\_extra/check\_appendix\_lean.py paper/main.tex} --- compares Appendix A with the Lean sources (34 declarations);
+\item \texttt{python3 code/main\_extra/check\_appendix\_relN.py} --- exact checks of the operator identities of Lemma B.2 (14 checks);
+\item \texttt{python3 code/main\_extra/check\_chains\_negzeros.py} --- Corollary 8.15 and Remark 8.16 (6 checks).
+\end{itemize}
+\begin{sloppypar}
+Lean: toolchain \texttt{leanprover/lean4:v4.34.1} with Mathlib \texttt{v4.34.1} (see \texttt{lean/lean-toolchain} and \texttt{lean/lake-manifest.json}). The usual Mathlib workflow in \texttt{lean/} (\texttt{lake exe cache get}, then \texttt{lake build}) should apply, but the author has built the development only on Windows, with \texttt{lean/run\_lean\_checks\_direct.sh}; a single module needs up to about 8\,GB of memory. \texttt{lake env lean Axioms.lean} prints the axioms used.
+\end{sloppypar}
+
+\end{document}

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1EHp3nwQJ2AVoqw5s4YqGTOtjPM</id>
+  <title>arXiv Query: search_query=abs:interlacing AND abs:Stirling AND abs:zeros&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:interlacing+AND+(abs:Stirling+AND+abs:zeros)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2406.04211v2</id>
+    <title>Stirling permutation codes. II</title>
+    <updated>2024-06-08T10:28:48Z</updated>
+    <link href="https://arxiv.org/abs/2406.04211v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.04211v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the context of Stirling polynomials, Gessel and Stanley introduced the definition of Stirling permutation, which has attracted extensive attention over the past decades. Recently, we introduced Stirling permutation code and provided numerous equidistribution results as applications. The purpose of the present work is to further analyse Stirling permutation code. First, we derive an expansion formula expressing the joint distribution of the types $A$ and $B$ descent statistics over the hyperoctahedral group, and we also find an interlacing property involving the zeros of its coefficient polynomials. Next, we prove a strong connection between signed permutations in the hyperoctahedral group and Stirling permutations. Furthermore, we investigate unified generalizations of the trivariate second-order Eulerian polynomials and ascent-plateau polynomials. Using Stirling permutation codes, we provide expansion formulas for eight-variable and seventeen-variable polynomials, which imply several $e$-positive expansions and clarify the connections among several statistics. Our results generalize the results of Bóna, Chen-Fu, Dumont, Janson, Haglund-Visontai and Petersen.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-06T16:10:08Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shi-Mei Ma</name>
+    </author>
+    <author>
+      <name>Hao Qi</name>
+    </author>
+    <author>
+      <name>Jean Yeh</name>
+    </author>
+    <author>
+      <name>Yeong-Nan Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.12176v2</id>
+    <title>Stability of combinatorial polynomials and its applications</title>
+    <updated>2021-06-24T11:11:42Z</updated>
+    <link href="https://arxiv.org/abs/2106.12176v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.12176v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The aim of this paper is to make a systematical study on the stability of polynomials in combinatorics.
+  Applying the characterizations of Borcea and Brändén concerning linear operators preserving stability, we present criteria for real stability and Hurwitz stability. We also give a criterion for Hurwitz stability of the Turán expressions. As applications, we derive some stability results occurred in the literature in a unified manner. In addition, we obtain the Hurwitz stability of Turán expressions for alternating runs polynomials of types $A$ and $B$ and solve a conjecture concerning Hurwitz stability of alternating runs polynomials defined on a dual set of Stirling permutations.
+  Furthermore, we prove that the Hurwitz stability of any symmetric polynomial implies its semi-$γ$-positivity. We study a class of symmetric polynomials and derive many nice properties including Hurwitz stability, semi-$γ$-positivity, non $γ$-positivity, unimodality, strong $q$-log-convexity, the Jacobi continued fraction expansion and the relation with derivative polynomials. In particular, these properties of the alternating descents polynomials of types $A$ and $B$ can be obtained in a unified approach.
+  Finally, we use real stability to prove a criterion for zeros interlacing between a polynomial and its reciprocal polynomial, which implies the alternatingly increasing property. This criterion extends a result of Brändén and Solus and unifies such properties for many combinatorial polynomials, including ascent polynomials for $k$-ary words, descent polynomials on signed Stirling permutations and $q$-analog of descent polynomials on colored permutations, and so on. We prove the alternatingly increasing property and zeros interlacing for two kinds of peak polynomials on the dual set of Stirling permutations.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-23T05:52:11Z</published>
+    <arxiv:comment>We delete original Proposition 4.16 and adjust the order of some References. We also correct some typos</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ming-Jian Ding</name>
+    </author>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1206.3591v1</id>
+    <title>Stirling numbers of forests and cycles</title>
+    <updated>2012-06-15T20:39:05Z</updated>
+    <link href="https://arxiv.org/abs/1206.3591v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1206.3591v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a graph $G$ and a positive integer $k$, the {\em graphical Stirling number} $S(G,k)$ is the number of partitions of the vertex set of $G$ into $k$ non-empty independent sets. Equivalently it is the number of proper colorings of $G$ that use exactly $k$ colors, with two colorings identified if they differ only on the names of the colors. If $G$ is the empty graph on $n$ vertices then $S(G,k)$ reduces to $S(n,k)$, the familiar Stirling number of the second kind.
+  In this note we first consider Stirling numbers of forests. We show that if $(F^{c(n)}_n)_{n\geq 0}$ is any sequence of forests with $F^{c(n)}_n$ having $n$ vertices and $c(n)=o(\sqrt{n/\log n})$ components, and if $X^{c(n)}_n$ is a random variable that takes value $k$ with probability proportional to $S(F^{c(n)}_n,k)$ (that is, $X^{c(n)}_n$ is the number of classes in a uniformly chosen partition of $F^{c(n)}_n$ into non-empty independent sets), then $X^{c(n)}_n$ is asymptotically normal, meaning that suitably normalized it tends in distribution to the standard normal. This generalizes a seminal result of Harper on the ordinary Stirling numbers. Along the way we give recurrences for calculating the generating functions of the sequences $(S(F^c_n,k))_{k \geq 0}$, show that these functions have all real zeroes, and exhibit three different interlacing patterns between the zeroes of pairs of consecutive generating functions.
+  We next consider Stirling numbers of cycles. We establish asymptotic normality for the number of classes in a uniformly chosen partition of $C_n$ (the cycle on $n$ vertices) into non-empty independent sets. We give a recurrence for calculating the generating function of the sequence $(S(C_n,k))_{k \geq 0}$, and use this to give a direct proof of a log-concavity result that had previously only been arrived at in a very indirect way.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-06-15T20:39:05Z</published>
+    <arxiv:comment>17 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Do Trong Thanh</name>
+    </author>
+    <author>
+      <name>David Galvin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.01544v2</id>
+    <title>$q$-log-convexity from linear transformations and polynomials with only real zeros</title>
+    <updated>2018-07-23T19:54:35Z</updated>
+    <link href="https://arxiv.org/abs/1609.01544v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.01544v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we mainly study the stability of iterated polynomials and linear transformations preserving the strong $q$-log-convexity of polynomials
+  Let $[T_{n,k}]_{n,k\geq0}$ be an array of nonnegative numbers. We give some criteria for the linear transformation $$y_n(q)=\sum_{k=0}^nT_{n,k}x_k(q)$$ preserving the strong $q$-log-convexity (resp. log-convexity). As applications, we derive that some linear transformations (for instance, the Stirling transformations of two kinds, the Jacobi-Stirling transformations of two kinds, the Legendre-Stirling transformations of two kinds, the central factorial transformations, and so on) preserve the strong $q$-log-convexity (resp. log-convexity) in a unified manner. In particular, we confirm a conjecture of Lin and Zeng, and extend some results of Chen {\it et al.}, and Zhu for strong $q$-log-convexity of polynomials, and some results of Liu and Wang for transformations preserving the log-convexity.
+  The stability property of iterated polynomials implies the $q$-log-convexity. By applying the method of interlacing of zeros, we also present two criteria for the stability of the iterated Sturm sequences and $q$-log-convexity of polynomials. As consequences, we get the stabilities of iterated Eulerian polynomials of type $A$ and $B$, and their $q$-analogs. In addition, we also prove that the generating functions of alternating runs of type $A$ and $B$, the longest alternating subsequence and up-down runs of permutations form a $q$-log-convex sequence, respectively.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-06T13:24:58Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>European Journal of Combinatorics, Volume 73, October 2018, Pages 231-246</arxiv:journal_ref>
+    <author>
+      <name>Bao-Xuan Zhu</name>
+    </author>
+    <arxiv:doi>10.1016/j.euromechflu.2017.09.013</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.euromechflu.2017.09.013" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.00479v4</id>
+    <title>Set partitions, tableaux, and subspace profiles under regular diagonal matrices</title>
+    <updated>2024-09-16T05:22:28Z</updated>
+    <link href="https://arxiv.org/abs/2112.00479v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.00479v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a family of univariate polynomials indexed by integer partitions. At prime powers, they count the number of subspaces in a finite vector space that transform under a regular diagonal matrix in a specified manner. This enumeration formula is a combinatorial solution to a problem introduced by Bender, Coley, Robbins and Rumsey. At $1$, they count set partitions with specified block sizes. At $0$, they count standard tableaux of specified shape. At $-1$, they count standard shifted tableaux of a specified shape. These polynomials are generated by a new statistic on set partitions (called the interlacing number) as well as a polynomial statistic on standard tableaux. They allow us to express $q$-Stirling numbers of the second kind as sums over standard tableaux and as sums over set partitions.
+  For partitions whose parts are at most two, these polynomials are the non-zero entries of the Catalan triangle associated to the $q$-Hermite orthogonal polynomial sequence. In particular, when all parts are equal to two, they coincide with the polynomials defined by Touchard that enumerate chord diagrams by the number of crossings.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-01T13:14:07Z</published>
+    <arxiv:comment>30 pages; accepted version, to appear in European Journal of Combinatorics, vol. 124, February 2025. 104060</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Amritanshu Prasad</name>
+    </author>
+    <author>
+      <name>Samrith Ram</name>
+    </author>
+    <arxiv:doi>10.1016/j.ejc.2024.104060</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ejc.2024.104060" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0611825v1</id>
+    <title>Polynomials with real zeros and Polya frequency sequences</title>
+    <updated>2006-11-27T14:53:07Z</updated>
+    <link href="https://arxiv.org/abs/math/0611825v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0611825v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $f(x)$ and $g(x)$ be two real polynomials whose leading coefficients have the same sign. Suppose that $f(x)$ and $g(x)$ have only real zeros and that $g$ interlaces $f$ or $g$ alternates left of $f$. We show that if $ad\ge bc$ then the polynomial $$(bx+a)f(x)+(dx+c)g(x)$$ has only real zeros. Applications are related to certain results of F.Brenti (Mem. Amer. Math. Soc. 413 (1989)) and transformations of Pólya frequency sequences. More specifically, suppose that $A(n,k)$ are nonnegative numbers which satisfy the recurrence $$A(n,k)=(rn+sk+t)A(n-1,k-1)+(an+bk+c)A(n-1,k)$$ for $n\ge 1$ and $0\le k\le n$, where $A(n,k)=0$ unless $0\le k\le n$. We show that if $rb\ge as$ and $(r+s+t)b\ge (a+c)s$, then for each $n\ge 0$, $A(n,0),A(n,1),...,A(n,n)$ is a Pólya frequency sequence. This gives a unified proof of the PF property of many well-known sequences including the binomial coefficients, the Stirling numbers of two kinds and the Eulerian numbers.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-11-27T14:53:07Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>J. Combin. Theory Ser. A 109 (2005) 63--74</arxiv:journal_ref>
+    <author>
+      <name>Yi Wang</name>
+    </author>
+    <author>
+      <name>Y. -N. Yeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03327v1</id>
+    <title>Taylor Positivity of Ehrhart Polynomials</title>
+    <updated>2026-09-03T03:25:19Z</updated>
+    <link href="https://arxiv.org/abs/2609.03327v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03327v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $P$ be a $d$-dimensional lattice polytope with Ehrhart polynomial $L_P(t)$. Motivated by the study of Ehrhart positivity and magic positivity, we investigate the Taylor coefficients $\mathsf{A}_j(P;k)$ in the shifted expansion $L_P(t)=\sum_{j=0}^{d}\mathsf{A}_j(P;k)(t-k)^j$ about a real center $k$. In this paper, we obtain the following four main results.
+  (i) We give exact formulas for these coefficients in terms of the ordinary Ehrhart coefficients, the $h^*$-vector, elementary symmetric functions, and Stirling numbers.
+  (ii) We denote by $τ(P)$ and $τ^+(P)$ the smallest nonnegative integral centers at which all Taylor coefficients are nonnegative and positive, respectively. If $s$ is the degree of the $h^*$-polynomial, then $0\leqτ(P)\leqτ^+(P)\leq\min\{\max\{0,s-1\},\lfloor\frac{d-1}{2}\rfloor\}$. As an application, we slightly improve an upper bound due to Beck, De Loera, Develin, Pfeifle, and Stanley. That is, every real root of $L_P(t)$ lies in $[-d,\lfloor\frac{d-1}{2}\rfloor)$.
+  (iii) Let $ρ(P)$ be the smallest nonnegative real center such that the Taylor coefficients are nonnegative. If $λ_{\mathbb{R}}(f)$ denotes the largest real zero of $f(t)$, with value $-\infty$ when no such zero exists, then $ρ(P)=\max\{0,\max_{0\leq j&lt;d}λ_{\mathbb{R}}\!(L_P^{(j)})\}$.
+  (iv) We establish structural properties of the Taylor coefficients $\mathsf{A}_j(P;k)$, including derivative interlacing, palindromic reflection symmetries, and Laguerre and Newton inequalities.
+  As a final note, these results provide a systematic partial answer to an open problem listed on the website of the American Institute of Mathematics.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T03:25:19Z</published>
+    <arxiv:comment>42 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Feihu Liu</name>
+    </author>
+    <author>
+      <name>Zihao Zhang</name>
+    </author>
+  </entry>
+</feed>

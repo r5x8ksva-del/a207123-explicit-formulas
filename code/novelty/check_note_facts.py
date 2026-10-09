@@ -90,7 +90,7 @@ def main():
 
     # E. 读过的论文记录
     rp = open(p("data", "lit", "read_papers.md"), encoding="utf-8").read()
-    check("read_papers.md 记录了 9 个 PDF 的 SHA-256（第一次精读 6 篇 + 10-07 第二次 arXiv 复查全文检索 3 篇）", len(re.findall(r"\| [0-9a-f]{64} \|", rp)) == 9)
+    check("read_papers.md 记录了 10 个 PDF 的 SHA-256（第一次精读 6 篇 + 10-07 第二次 arXiv 复查全文检索 3 篇 + 10-09 读 Brändén-Saud Maia Leite 1 篇）", len(re.findall(r"\| [0-9a-f]{64} \|", rp)) == 10)
 
     # F. 两份公开形式化清单（笔记 §4、§2 Lean 行）
     fl = open(p("data", "lit", "formal_lists_check.md"), encoding="utf-8").read()

@@ -1,5 +1,5 @@
 # 核对新颖性笔记里出现的每个 arXiv 号、DOI、OEIS 编号，都能在本仓库的检索数据里找到（防止凭印象写出不存在的文献）。
-# 证据来源：data/lit/results.jsonl、raw/、raw_cites/、raw_arxiv_recheck/（10-07 第二次 arXiv 复查）、read_papers.md、oeis/，以及 data/oeis/ 的旧快照。
+# 证据来源：data/lit/results.jsonl、raw/、raw_cites/、raw_arxiv_recheck/（10-07 第二次 arXiv 复查）、raw_recheck_2026-10-10/ 与由它生成的 recheck_2026-10-10.md（10-10 第三次补查；Crossref 的 JSON 把 DOI 里的 / 转义成 \/，要靠汇总表才能按原样匹配）、read_papers.md、oeis/，以及 data/oeis/ 的旧快照。
 # 找不到的编号打印 FAIL，退出码为 1。只读，不联网。
 # 用法：py -3.14 code/novelty/check_note_refs.py [笔记路径 ...]   （默认检查 notes/ 下两份新颖性笔记）
 import glob, os, re, sys
@@ -11,7 +11,8 @@ DEFAULT_NOTES = ["notes/新颖性核查_2026-10-07.md", "notes/新颖性核查_�
 
 def corpus():
     parts = []
-    for pat in ["data/lit/results.jsonl", "data/lit/read_papers.md", "data/lit/raw/*", "data/lit/raw_cites/*.json", "data/lit/raw_arxiv_recheck/*.xml", "data/lit/oeis/*", "data/oeis/*"]:
+    for pat in ["data/lit/results.jsonl", "data/lit/read_papers.md", "data/lit/raw/*", "data/lit/raw_cites/*.json", "data/lit/raw_arxiv_recheck/*.xml",
+                "data/lit/raw_recheck_2026-10-10/*", "data/lit/recheck_2026-10-10.md", "data/lit/oeis/*", "data/oeis/*"]:
         for p in glob.glob(os.path.join(ROOT, pat)):
             if os.path.isfile(p):
                 parts.append(open(p, encoding="utf-8", errors="ignore").read())

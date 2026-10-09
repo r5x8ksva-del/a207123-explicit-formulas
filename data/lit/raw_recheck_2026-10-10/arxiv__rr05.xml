@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/jJA9bIPweu7jgyzOPviw6fTYohE</id>
+  <title>arXiv Query: search_query=abs:"Boolean lattice" AND abs:words AND abs:avoiding&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-10-09T17:01:02Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Boolean+lattice%22+AND+(abs:words+AND+abs:avoiding)&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/quant-ph/0611227v1</id>
+    <title>Physical propositions and quantum languages</title>
+    <updated>2006-11-22T11:58:43Z</updated>
+    <link href="https://arxiv.org/abs/quant-ph/0611227v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/quant-ph/0611227v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The word \textit{proposition} is used in physics with different meanings, which must be distinguished to avoid interpretational problems. We construct two languages $\mathcal{L}^{\ast}(x)$ and $\mathcal{L}(x)$ with classical set-theoretical semantics which allow us to illustrate those meanings and to show that the non-Boolean lattice of propositions of quantum logic (QL) can be obtained by selecting a subset of \textit{p-testable} propositions within the Boolean lattice of all propositions associated with sentences of $\mathcal{L}(x)$. Yet, the aforesaid semantics is incompatible with the standard interpretation of quantum mechanics (QM) because of known no-go theorems. But if one accepts our criticism of these theorems and the ensuing SR (semantic realism) interpretation of QM, the incompatibility disappears, and the classical and quantum notions of truth can coexist, since they refer to different metalinguistic concepts (\textit{truth} and \textit{verifiability according to QM}, respectively). Moreover one can construct a quantum language $\mathcal{L}_{TQ}(x)$ whose Lindenbaum-Tarski algebra is isomorphic to QL, the sentences of which state (testable) properties of individual samples of physical systems, while standard QL does not bear this interpretation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-11-22T11:58:43Z</published>
+    <arxiv:comment>15 pages, no figure, standard LateX</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>International Journal of Theoretical Physics (2008), 47: 90-103</arxiv:journal_ref>
+    <author>
+      <name>Claudio Garola</name>
+    </author>
+    <arxiv:doi>10.1007/s10773-007-9372-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10773-007-9372-8" title="doi"/>
+  </entry>
+</feed>
