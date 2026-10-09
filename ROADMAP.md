@@ -36,7 +36,7 @@
 - **T3.9「U 不是 Kauers 意义下的 Stirling-like」已证明并形式化**（`notes/04-主Agent-U不是Stirling-like.md`，`lean/A207123/NotStirlingLike.lean`）。这回答了新颖性核查里最直接的质疑：T3.8 不是 Kauers 2007 例 5 的特例。从 Kauers 的定义到 Lean 定理的一步是书面论证，只有主 Agent 推导。主 Agent 已对照 Kauers 2007 §2.2 原文：Kauers 要求序列在整个 ℤ² 上被零化（Q·f≡0），比「在象限上零化」更强，所以论证适用（笔记 §3）；投稿前仍请人确认一次。
 - **承重定义的人工核对**：`notes/Lean定义核对清单.md`，18 项，要人来勾。
 - **2026-10-08 并入表 B 的三条新结果**：A19（h_k 实根，论文第 8 节）、A20（单族形状分类，定理 6.3）、A21（两族和不存在，第 6.2 节）。并入前各找了第二位独立复核者（s10-b1、s10-b3、s10-b2，结论都是 confirmed with minor gaps，意见已改进论文）；核对登记进 verify_all（新模块 tb，27 条）；`check_paper_numbers.py` 增加 P25–P30（新章节里印出的数）。A22（B7 的 t<0 可和性）按用户决定不进论文。论文现 35 页。报告 `报告.md` 还没有并入这三条。
-- **英文初稿** `paper/main.tex`：2026-10-07 写成完整初稿（证明都已写全，26 页），Tectonic 编译通过，数字由 `code/main_extra/check_paper_numbers.py` 对照原始定义核对；剩下的 `TODO` 列在 README「当前状态与待办」。下一步按价值排序：你本人通读第 2–7 节的证明 → 处理 TODO → 请一位人类专家看第 5、6 节（零化理想与 Stirling-like、更短公式不存在）→ 手动补完 Scholar / WoS / MathSciNet / zbMATH 检索（§5）后定稿相关工作。
+- **英文初稿** `paper/main.tex`：2026-10-07 写成完整初稿（证明都已写全，26 页），Tectonic 编译通过，数字由 `code/main_extra/check_paper_numbers.py` 对照原始定义核对；2026-10-09 晚按审读意见修订后（36 页）源文件里已没有 `TODO`，还要做的事列在 README「当前状态与待办」。下一步按价值排序：你本人通读第 2–7 节的证明 → 处理审读意见里余下的几项（见 README）→ 请一位人类专家看第 5、6 节（零化理想与 Stirling-like、更短公式不存在）→ 手动补完 Scholar / WoS / MathSciNet / zbMATH 检索（§5）后定稿相关工作。
 
 ## 3. 开放问题（完整清单见 `猜想总表.md` 表 B）
 

@@ -1,0 +1,7 @@
+PASS C0 N from the U table agrees with the DFS definition (1<=k<=8)
+PASS C1 N(k,q) = #(q-1)-chains in the proper part of Lambda_k, no chains longer than k-1 (1<=k<=12)  []
+PASS C2 deg h_k = floor(2k/3), u_k(-j)=0 for j<=ceil(k/3), u_k(-ceil(k/3)-1) = (-1)^k lc(h_k) != 0 (1<=k<=30)  []
+PASS C3 h_k has a negative coefficient (3<=k<=30)
+PASS C4 Boolean lattice: chains = q! S(k,q); h-numerator = descent polynomial = numerator of sum (m+1)^k t^m (1<=k<=7)
+PASS C5 bad triples are exactly the consecutive patterns 112,121,123,132,213,231  ['112', '121', '123', '132', '213', '231']
+6 PASS, 0 FAIL

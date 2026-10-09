@@ -1,16 +1,8 @@
-% First full English draft (7 October 2026), expanded from the skeleton of the same morning.
-% Source of truth for statements, proofs and checks: the report in the parent folder, ../notes/, ../code/checks/, ../lean/.
-% Every number printed in this file is recomputed from the definitions by ../code/main_extra/check_paper_numbers.py.
-% Not in the report: Corollary cor:saturated (operators with rational coefficients; the ideal O*L_1 is saturated), added in this draft.
-% Also not in the report (added 8 October 2026 from the Table B notes): Section sec:realroots (../notes/05, A19), Theorem thm:shapes (../notes/06, A20), Section sec:twofam (../notes/08, A21).
-% Structural check without TeX: ../code/main_extra/check_tex.py. Compiles with Tectonic 0.17 (XeTeX) and is meant to compile with pdflatex.
-% Lines marked TODO need a decision or a check by the author before submission.
 \documentclass[11pt]{amsart}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs,array}
 \usepackage{alltt}
-\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{pdfauthor={Yunkun Song},pdftitle={Pattern-avoiding binary arrays and a Stirling-type table: explicit formulas, exact recurrence orders, and non-D-finiteness}}
 
@@ -26,7 +18,6 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{example}[theorem]{Example}
 
-\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 \newcommand{\stirling}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
 \newcommand{\rstirling}[3]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}_{#3}}
 \newcommand{\lean}[1]{\texttt{#1}}
@@ -48,21 +39,17 @@
 
 \title[Pattern-avoiding binary arrays and a Stirling-type table]{Pattern-avoiding binary arrays and a Stirling-type table:\\ explicit formulas, exact recurrence orders, and non-D-finiteness}
 
-% Sole author, who is both the first and the corresponding author (author's instruction, 7 October 2026).
-% Correspondence address given by the author on 8 October 2026.
 \author{Yunkun Song}
 \address{College of Arts and Sciences, Boston University, Boston, MA 02215, USA}
 \email{r5x8ksva@bu.edu}
-\thanks{The author is an undergraduate student in the College of Arts and Sciences at Boston University and is the corresponding author.}
-
-\date{Draft of 8 October 2026}
+\thanks{The author is an undergraduate student in the College of Arts and Sciences at Boston University.}
 
 \begin{abstract}
-Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123 and its columns A207118--A207122). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$. We study the table $U_k(m)$. For each $m\ge0$, the generating function $\sum_k U_k(m)x^k$ is a rational function $W_m/P_m$ in lowest terms with $P_m=\prod_{i=0}^{m}(1-x-ix^3)$, so the minimal order of a linear recurrence in $k$ is exactly $3m+1$; we also give the first two terms of the asymptotics in $k$. A unique factorization of the sequences into blocks gives a positive double-sum formula in terms of Stirling and $r$-Stirling numbers. In the other direction, for every $m\ge1$ we determine the binomial shapes in which $U_k(m)$ is a single sum $\sum_sA(s)\binom{k+c-\alpha s}{\beta s+d}$ with $\alpha,\beta\ge0$: exactly those with $\alpha+\beta=1$. In particular no single sum of the shape $\binom{k+c-2s}{m+s+d}$ of the explicit formula exists, and for $m\ge2$ no sum of two such single sums exists either; $U$ is also not a finite multisum of a proper hypergeometric term under two boundary conditions stated in the paper. The bivariate generating function is not D-finite; every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence, and we count these recurrences in every box; in particular $U$ is not Stirling-like in the sense of Kauers. Finally, the near-diagonal entries $N(k,k-d)$ of the associated triangle are polynomials of degree $2d$ in $k$ exactly from $k=2d+2$ on, and the numerators $h_k(t)$ of $\sum_mU_k(m)t^m=h_k(t)/(1-t)^{k+1}$ have only real and simple zeros, so that the rows of the triangle are log-concave. The reduction, the exact recurrence orders, the explicit formula, the non-D-finiteness, the description of all quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
+Let $a_k(n)$ be the number of $n\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123). Splitting the rows by parity gives $a_k(n)=U_k(\lceil n/2\rceil)\,U_k(\lfloor n/2\rfloor)$, where $U_k(m)$ counts the sequences in $\{0,\dots,m\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\ge\max(b,c)$; equivalently, $U_k(m)$ counts the multichains of length $m$ in a subposet $\Lambda_k$ of the Boolean lattice. A unique factorization into blocks gives a positive double-sum formula for $U_k(m)$ in terms of Stirling and $r$-Stirling numbers, and for each $m$ the minimal order of a linear recurrence in $k$ is exactly $3m+1$. The bivariate generating function is not D-finite, and every polynomial-coefficient recurrence that holds on a quadrant is a left multiple of the defining four-term recurrence; in particular $U$ is not Stirling-like in the sense of Kauers. We also determine all binomial shapes with nonnegative parameters in which $U_k(m)$ is a single sum; the shape of the explicit formula is not among them. The numerators $h_k(t)$ of $\sum_mU_k(m)t^m=h_k(t)/(1-t)^{k+1}$, analogues of the Eulerian polynomials, have only real and simple zeros; equivalently, the chain polynomials of the posets $\Lambda_k$ are real-rooted, and the rows of the associated Stirling-type triangle are log-concave. The near-diagonal entries $N(k,k-d)$ of this triangle are polynomials in $k$ exactly from $k=2d+2$ on. The reduction, the exact orders, the explicit formula, the non-D-finiteness, the description of the quadrant recurrences and the near-diagonal theorem are formalized in Lean~4 with Mathlib.
 \end{abstract}
 
-\subjclass[2020]{05A15; 05A20; 11B73; 11D61; 26C10; 33F10; 68V20}
-\keywords{pattern-avoiding arrays, Stirling numbers, $r$-Stirling numbers, D-finite power series, Ore algebras, real-rooted polynomials, interlacing, formal verification}
+\subjclass[2020]{Primary 05A15; Secondary 05A20, 06A07, 11B73, 26C10, 33F10, 68V20}
+\keywords{pattern-avoiding arrays, Stirling numbers, $r$-Stirling numbers, D-finite power series, Ore algebras, real-rooted polynomials, chain polynomials, interlacing, formal verification}
 
 \maketitle
 
@@ -80,7 +67,7 @@ where $U_k(m)$ is the number of sequences $(h_1,\dots,h_k)\in\{0,\dots,m\}^k$ su
 \[
   b=c\quad\text{or}\quad a\ge\max(b,c).
 \]
-The column half of this argument is the same elementary observation that C.~Krause used in June 2026 to prove formulas for the related arrays A202093--A202099, whose rows and columns both avoid $001$ and $011$ \cite{Krause}; there the row condition also decouples and the count is a product of binomial coefficients. For our row condition it does not, and the whole difficulty is in the table $U_k(m)$.
+Equivalently, $U_k(m)$ counts the words of length $k$ over the ordered alphabet $\{0,\dots,m\}$ that avoid the six consecutive patterns $112$, $121$, $123$, $132$, $213$ and $231$ (for patterns in words see \cite{Kitaev}). The column half of this argument is the same elementary observation that C.~Krause used in June 2026 to prove formulas for the related arrays A202093--A202099, whose rows and columns both avoid $001$ and $011$ \cite{Krause}; there the row condition also decouples and the count is a product of binomial coefficients. For our row condition it does not, and the whole difficulty is in the table $U_k(m)$.
 
 Table~\ref{tab:U} shows a few values. The numbers $U_k(1)$ count the binary words of length $k$ that avoid $001$ and $010$. In OEIS terms, $U_k(1)=\text{A038718}(k+2)$, $U_3(m)=\text{A084990}(m+1)$ and $U_4(m)=\text{A326247}(m+2)$. The last identity holds because $U_4(m)=\binom{m+2}{2}^2-4\binom{m+2}{4}$, the number of ordered pairs of $2$-element subsets of an $(m+2)$-element set that neither cross nor nest, which is the quantity counted by A326247; we know no structural reason for this coincidence.
 
@@ -157,7 +144,7 @@ with polynomial coefficients depending only on $k$ that holds on a quadrant $k\g
 \end{enumerate}
 \end{introthm}
 
-The triangle $N(k,q)$, the number of good words of length $k$ that use exactly the letters $1,\dots,q$, plays for $U$ the role that the numbers $q!\stirling{k}{q}$ of surjections play for powers:
+The triangle $N(k,q)$, the number of good words of length $k$ that use exactly the letters $1,\dots,q$, plays for $U$ the role that the numbers $q!\stirling{k}{q}$ of surjections play for powers (Remark~\ref{rem:chains} makes this precise):
 \[
   U_k(m)=\sum_q N(k,q)\binom{m+1}{q},\qquad\text{just as}\qquad m^k=\sum_q q!\stirling{k}{q}\binom{m}{q}.
 \]
@@ -170,12 +157,14 @@ For every $d\ge0$ there is a polynomial $p_d$ of degree $2d$ with leading coeffi
 For $k\ge0$ define the polynomial $h_k$ by $\sum_{m\ge0}U_k(m)t^m=h_k(t)/(1-t)^{k+1}$. All zeros of $h_k$ are real and simple; exactly $\lfloor k/3\rfloor$ of them exceed $1$, and the others are negative. Consequently $N(k,q)>0$ for $1\le q\le k$, and every row $N(k,1),\dots,N(k,k)$ of the triangle is strictly log-concave, hence unimodal.
 \end{introthm}
 
+Let $\Lambda_k\subseteq\{0,1\}^k$ be the set of binary words of length $k$ that avoid $001$ and $010$, ordered componentwise. Then $U_k(m)$ is the number of multichains of length $m$ in $\Lambda_k$ (Proposition~\ref{prop:multichain}), $N(k,q)$ is the number of chains with $q-1$ elements in $\Lambda_k$ without its least and greatest element, and $h_k$ is the $h$-polynomial of the corresponding order complex; for the Boolean lattice $\{0,1\}^k$ the same constructions give $(m+1)^k$, the numbers $q!\stirling{k}{q}$ and the Eulerian polynomials (Remark~\ref{rem:chains}). Theorem~\ref{thmF} is thus a real-rootedness result for chain polynomials, a subject studied for several classes of posets in \cite{AK23,ADK24,BL26}.
+
 Consecutive polynomials $h_k$ do not have interlacing zeros, so the usual inductive argument does not apply to them directly. We work instead with the row polynomials $\sum_qN(k,q)z^{q-1}$, which are related to $h_k$ by the substitution $t=z/(1+z)$, and show that four interlacing relations among them propagate along the recurrence of $N$.
 
 \subsection{Related work}
 Lipshitz \cite{Lipshitz} and Stanley \cite{Stanley80} developed the theory of D-finite power series (see Kauers' book \cite{Kauers23} for a modern account); Zeilberger \cite{Zeilberger90} and Wilf--Zeilberger \cite{WZ92} the holonomic approach to special function identities, including the fact that a proper hypergeometric term satisfies a recurrence whose coefficients do not involve the summation variables \cite[Theorem~4.1]{WZ92}, which is the starting point of Section~\ref{sec:multisum}. Kauers \cite{Kauers07} introduced Stirling-like sequences: bivariate sequences whose annihilator is generated by a three-term operator whose two shift vectors form a basis of $\Z^2$. His Example~5 shows that the annihilator of the Stirling numbers of the second kind is exactly the left ideal generated by the triangular recurrence. The argument has two steps: there is no recurrence in one variable only, and every annihilating operator reduces modulo the generator to one in one variable. Our Theorem~\ref{thm:ideal} follows the same outline for the four-term operator $L_1$, which is not of Stirling-like shape (Corollary~\ref{cor:stirlinglike}). We work with polynomial coefficients and annihilation on a quadrant, show that every annihilating operator with rational coefficients is a left multiple of $L_1$ as well (Corollary~\ref{cor:saturated}), and count the recurrences of bounded size. Chyzak, Kauers and Salvy \cite{CKS09} show that the Stirling numbers are not $\partial$-finite; Klazar \cite{Klazar} studies Bell numbers and their relatives from the point of view of algebraic differential equations. The $r$-Stirling numbers are due to Broder \cite{Broder}, and polynomiality of diagonals of Stirling-type triangles goes back to Gessel and Stanley \cite{GesselStanley}. Real-rootedness and interlacing are standard tools for proving log-concavity \cite{Stanley89,Branden,Fisk}; Harper \cite{Harper} used the real-rootedness of the row polynomials of the Stirling numbers to prove their asymptotic normality. The finite computation in Section~\ref{sec:twofam} combines a sieve modulo primes with Skolem's $p$-adic method for exponential Diophantine equations (see \cite{Smart}).
 
-Kitaev, Mansour and Vella \cite{KMV} studied pattern avoidance in binary matrices for two-dimensional patterns (right-angled patterns with three cells and $2\times2$ patterns); here the forbidden patterns are instead consecutive patterns of length three inside the rows and inside the columns. For arrays avoiding finite sets of horizontal and vertical patterns, linear recurrences in one dimension for a fixed size of the other exist by a transfer-matrix argument; see Theorem~2 of Dougherty-Bliss, Koutschan, Ter-Saakov and Zeilberger \cite{DBKTZ}. Dougherty-Bliss and Kauers \cite{DBK} proved closed forms and D-finiteness results for a different family of Hardin's arrays (king-move arrays), and Dougherty-Bliss and Spahn \cite{DBS} showed by the transfer-matrix method that, for a fixed parameter and a fixed number of columns, the number of these arrays is eventually a polynomial in the number of rows. We are not aware of previous work on the table $U_k(m)$ itself.
+Kitaev, Mansour and Vella \cite{KMV} studied pattern avoidance in binary matrices for two-dimensional patterns (right-angled patterns with three cells and $2\times2$ patterns); here the forbidden patterns are instead consecutive patterns of length three inside the rows and inside the columns. For arrays avoiding finite sets of horizontal and vertical patterns, linear recurrences in one dimension for a fixed size of the other exist by the transfer-matrix method \cite[Section~4.7]{StanleyEC1}; see also Theorem~2 of Dougherty-Bliss, Koutschan, Ter-Saakov and Zeilberger \cite{DBKTZ}. Dougherty-Bliss and Kauers \cite{DBK} proved closed forms and D-finiteness results for a different family of Hardin's arrays (king-move arrays), and Dougherty-Bliss and Spahn \cite{DBS} showed by the transfer-matrix method that, for a fixed parameter and a fixed number of columns, the number of these arrays is eventually a polynomial in the number of rows. We are not aware of previous work on the table $U_k(m)$ itself.
 
 \subsection{Formal verification}
 The results listed in Section~\ref{sec:lean} are formalized in Lean~4 \cite{Lean4} with Mathlib \cite{Mathlib}, starting from the definitions of $a_k(n)$ and $U_k(m)$. The formal proofs use only the three standard axioms. Lean checks proofs, not the faithfulness of formal statements to the statements in this paper; Appendix~\ref{app:lean} transcribes the definitions that a reader has to compare. The Lean development and all verification scripts are in the public repository given under \emph{Data and code} at the end of the paper. Formal verification has precedent in this area: Mahboubi and Sibut-Pinote \cite{MSP21} formalized Ap\'ery's proof of the irrationality of $\zeta(3)$ in Coq, verifying a posteriori the recurrences produced by computer algebra.
@@ -232,7 +221,6 @@ For $k\ge1$ and $m\ge0$,
 with the conventions $U_0\equiv1$, $U_{-1}\equiv1$, $U_{-2}\equiv0$ and $U_k(-1)=0$ for $k\ge1$.
 \end{lemma}
 
-% TODO(author): this recurrence was given in the problem statement we started from; decide on attribution.
 \begin{proof}
 Classify $h\in \mathcal H_k(m)$ by the first position $i$ at which the value $m$ occurs.
 If $m$ does not occur, $h\in \mathcal H_k(m-1)$.
@@ -243,7 +231,7 @@ The four cases are disjoint and exhaustive.
 \end{proof}
 
 \subsection{The triangle \texorpdfstring{$N(k,q)$}{N(k,q)}}
-Goodness is defined using only $=$ and $\ge$, so it is preserved by strictly increasing maps of the alphabet. Hence the number of good words of length $k$ whose set of values is a given $q$-element set of integers depends only on $k$ and $q$. We denote it by $N(k,q)$ and use the alphabet $\{1,\dots,q\}$. Thus $N(0,0)=1$, $N(k,0)=0$ for $k\ge1$, and $N(k,q)=0$ unless $0\le q\le k$. Table~\ref{tab:N} shows the first rows.
+Goodness is defined using only $=$ and $\ge$, so it is preserved by strictly increasing maps of the alphabet. Hence the number of good words of length $k$ whose set of values is a given $q$-element set of integers depends only on $k$ and $q$. We denote it by $N(k,q)$ and use the alphabet $\{1,\dots,q\}$. Thus $N(0,0)=1$, $N(k,0)=0$ for $k\ge1$, and $N(k,q)=0$ unless $0\le q\le k$. Table~\ref{tab:N} shows the first rows. Remark~\ref{rem:chains} interprets $N(k,q)$ as a number of chains in $\Lambda_k$.
 
 \begin{proposition}\label{prop:Nbasis}
 For $k,m\ge0$,
@@ -1215,6 +1203,18 @@ Let $X_k$ be the number of distinct values of a word chosen uniformly at random 
 The probability generating function $z\,n_k(z)/n_k(1)$ of $X_k$ has only real zeros, all of them $\le0$, so $X_k-1$ is a sum of $k-1$ independent Bernoulli variables, one for each zero $-r$ of $n_k$, with success probability $1/(1+r)$. The $a_k=\lceil k/3\rceil-1$ variables that belong to the zero $-1$ have variance $1/4$ each, so $\operatorname{Var}X_k\ge(\lceil k/3\rceil-1)/4\to\infty$. Since the summands are bounded, the Lindeberg--Feller theorem gives the claim, as in Harper's argument \cite{Harper}.
 \end{proof}
 
+\begin{corollary}\label{cor:negzeros}
+Let $k\ge1$ and let $u_k$ be the polynomial of Corollary~\ref{cor:poly}. Then $u_k(-j)=0$ for $1\le j\le\lceil k/3\rceil$, and $u_k(-\lceil k/3\rceil-1)=(-1)^k\lc(h_k)\ne0$.
+\end{corollary}
+
+\begin{proof}
+Let $s=\deg h_k=\lfloor2k/3\rfloor$ (Lemma~\ref{lem:minusone}), so that $k-s=\lceil k/3\rceil$, and write $h_k(t)=\sum_{i=0}^{s}c_it^i$. For $m\ge0$ we have $[t^m]\,t^i(1-t)^{-k-1}=\binom{m-i+k}{k}$, where for $0\le m<i$ both sides vanish because $i\le k$. Hence $u_k(m)=\sum_{i=0}^{s}c_i\binom{m-i+k}{k}$ as polynomials in $m$, with polynomial binomial coefficients. For an integer $j\ge1$, $\binom{k-i-j}{k}$ is the product of the $k$ consecutive integers $1-i-j,\dots,k-i-j$ divided by $k!$; it vanishes if $i+j\le k$ and equals $(-1)^k$ if $i+j=k+1$. For $j\le k-s$ all terms vanish, and for $j=k-s+1$ only the term with $i=s$ remains, which is $(-1)^kc_s$.
+\end{proof}
+
+\begin{remark}[Chains and Eulerian polynomials]\label{rem:chains}
+Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the least and the greatest element of $\Lambda_k$, and put $\bar\Lambda_k=\Lambda_k\setminus\{\mathbf 0,\mathbf 1\}$. For $w\in\{1,\dots,q\}^k$ and $1\le r<q$ let $y_r=([w_1>r],\dots,[w_k>r])$. By the proof of Proposition~\ref{prop:reduction}, applied to the heights $w_j-1$, the word $w$ is good if and only if $y_1,\dots,y_{q-1}\in\Lambda_k$; moreover, $w$ uses every letter $1,\dots,q$ if and only if $\mathbf 1>y_1>\dots>y_{q-1}>\mathbf 0$, and $w$ is recovered from the $y_r$ as $w_j=1+|\{r:(y_r)_j=1\}|$. Hence $N(k,q)$ is the number of chains with $q-1$ elements in $\bar\Lambda_k$, so $n_k$ is the chain polynomial of $\bar\Lambda_k$, and by~\eqref{eq:hN} the polynomial $h_k(t)=(1-t)^{k-1}n_k\bigl(t/(1-t)\bigr)$ is the $h$-polynomial of the order complex of $\bar\Lambda_k$, a simplicial complex of dimension $k-2$. For the Boolean lattice $\{0,1\}^k$ in place of $\Lambda_k$ the same constructions give $(m+1)^k$, the numbers $q!\stirling{k}{q}$ of ordered set partitions, and the Eulerian polynomials $A_k(t)$, which satisfy $\sum_{m\ge0}(m+1)^kt^m=A_k(t)/(1-t)^{k+1}$ \cite[Section~1.4]{StanleyEC1}. This is the precise form of the analogy stated in the introduction. In this language, Theorem~\ref{thm:realroots} says that the chain polynomial of $\bar\Lambda_k$ is real-rooted, as the Eulerian polynomials are \cite{Branden}; real-rootedness of chain polynomials has been studied for several other classes of posets \cite{AK23,ADK24,BL26}. By Corollary~\ref{cor:hk-signs}, $h_k$ has a negative coefficient for $k\ge3$, so the order complex of $\bar\Lambda_k$ is not Cohen--Macaulay for $k\ge3$ \cite[Chapter~II]{StanleyCCA}.
+\end{remark}
+
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
@@ -1257,7 +1257,7 @@ The definitions that carry the meaning of the formal statements are transcribed 
 \begin{enumerate}
 \item \emph{Shorter formulas.} Find a meaningful class of formulas in which the double sum of Theorem~\ref{thm:explicit} is provably shortest. The accompanying report rules out several further classes.
 \item \emph{The triangle.} Find a single or short double sum for $N(k,q)$. The accompanying report rules out several natural single sums and one family of double sums.
-\item \emph{Other zeros.} Show that $U_k$ has no negative integer zeros other than $-1,\dots,-\lfloor(k+2)/3\rfloor$. The accompanying report proves this for $k\le300$ with computer assistance; for each $k$ it reduces the question to the finitely many $j$ that divide $\operatorname{lcm}(1,\dots,k)$ and lie below an explicit bound of order $k^3$.
+\item \emph{Other zeros.} By Corollary~\ref{cor:negzeros}, $u_k$ vanishes at $-1,\dots,-\lceil k/3\rceil$; show that it has no other negative integer zeros. The accompanying report proves this for $k\le300$ with computer assistance; for each $k$ it reduces the question to the finitely many $j$ that divide $\operatorname{lcm}(1,\dots,k)$ and lie below an explicit bound of order $k^3$.
 \item \emph{Signs of $h_k$.} The coefficient sequence of $h_k$ changes sign exactly $\lfloor k/3\rfloor$ times (Corollary~\ref{cor:hk-signs}). Describe where the sign changes occur. For fixed $i$ the coefficient of $t^i$ in $h_k$ is positive for all large $k$; the notes in the repository determine the least threshold $\tau_i$ from which on it stays positive for $i\le579$ (with computer assistance), prove $\tau_i=O(i\log i)$, and give heuristic and numerical evidence that $\tau_i/i$ converges to an explicit constant $\alpha^*\approx9.6085$.
 \end{enumerate}
 
@@ -1405,8 +1405,17 @@ The verification scripts (414 automated checks, mostly exact; the high-precision
 
 \begin{thebibliography}{99}
 
+\bibitem{ADK24}
+C.~A. Athanasiadis, T.~Douvropoulos, K.~Kalampogia-Evangelinou, Two classes of posets with real-rooted chain polynomials, \emph{Electron. J. Combin.} \textbf{31}(4) (2024), \#P4.16, \url{https://doi.org/10.37236/12218}.
+
+\bibitem{AK23}
+C.~A. Athanasiadis, K.~Kalampogia-Evangelinou, Chain enumeration, partition lattices and polynomials with only real roots, \emph{Combin. Theory} \textbf{3}(1) (2023), \url{https://doi.org/10.5070/C63160425}.
+
 \bibitem{Branden}
 P.~Br\"and\'en, Unimodality, log-concavity, real-rootedness and beyond, in: \emph{Handbook of Enumerative Combinatorics} (M.~B\'ona, ed.), Chapman and Hall/CRC, Boca Raton, FL, 2015, pp.~461--508, \url{https://doi.org/10.1201/b18255-13}; arXiv:1410.6601.
+
+\bibitem{BL26}
+P.~Br\"and\'en, L.~Saud Maia Leite, Totally nonnegative matrices, chain enumeration and zeros of polynomials, \emph{Adv. Math.} \textbf{487} (2026), Paper No.~110760, \url{https://doi.org/10.1016/j.aim.2025.110760}.
 
 \bibitem{Broder}
 A.~Z. Broder, The $r$-Stirling numbers, \emph{Discrete Math.} \textbf{49} (1984), no.~3, 241--259, \url{https://doi.org/10.1016/0012-365X(84)90161-4}.
@@ -1437,6 +1446,9 @@ M.~Kauers, Summation algorithms for Stirling number identities, \emph{J. Symboli
 
 \bibitem{Kauers23}
 M.~Kauers, \emph{D-Finite Functions}, Algorithms and Computation in Mathematics 30, Springer, Cham, 2023, \url{https://doi.org/10.1007/978-3-031-34652-1}.
+
+\bibitem{Kitaev}
+S.~Kitaev, \emph{Patterns in Permutations and Words}, Monographs in Theoretical Computer Science, Springer, Heidelberg, 2011, \url{https://doi.org/10.1007/978-3-642-17333-2}.
 
 \bibitem{KMV}
 S.~Kitaev, T.~Mansour, A.~Vella, Pattern avoidance in matrices, \emph{J. Integer Seq.} \textbf{8} (2005), Article 05.2.2.
@@ -1470,6 +1482,9 @@ R.~P. Stanley, Differentiably finite power series, \emph{European J. Combin.} \t
 
 \bibitem{Stanley89}
 R.~P. Stanley, Log-concave and unimodal sequences in algebra, combinatorics, and geometry, \emph{Ann. New York Acad. Sci.} \textbf{576} (1989), 500--535, \url{https://doi.org/10.1111/j.1749-6632.1989.tb16434.x}.
+
+\bibitem{StanleyCCA}
+R.~P. Stanley, \emph{Combinatorics and Commutative Algebra}, 2nd ed., Progress in Mathematics 41, Birkh\"auser, Boston, MA, 1996, \url{https://doi.org/10.1007/b139094}.
 
 \bibitem{StanleyEC1}
 R.~P. Stanley, \emph{Enumerative Combinatorics, Volume~1}, 2nd ed., Cambridge Studies in Advanced Mathematics 49, Cambridge University Press, 2012, \url{https://doi.org/10.1017/CBO9781139058520}.
