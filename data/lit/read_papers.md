@@ -12,6 +12,7 @@
 | oeisopen.pdf | https://arxiv.org/pdf/2608.11941 | Adamczewski, OEIS Open (arXiv:2608.11941) | 关键词检索与附录条目 | 27 | 1245628 | 5d6ac6ae7c91ad7a93fdf7052e36fb382bb1059e3fd74087eae61008c022333e |
 | fried_2410.07237.pdf | https://arxiv.org/pdf/2410.07237 | Fried, Proofs of some Conjectures from the OEIS (arXiv:2410.07237) | 全文抽取 A 号与关键词（2026-10-07 第二次 arXiv 复查） | 17 | 165950 | 5e8505f399d4e86667fb10041c12c5263dcc59f9dab4d93addb13855d262df05 |
 | fried_2606.09913.pdf | https://arxiv.org/pdf/2606.09913 | Fried, Proofs of several OEIS conjectures on determinants and permanents (arXiv:2606.09913) | 同上 | 34 | 396640 | b96b1a65800eac002b228b297552d62219d448bcb0668f42a91f3a492b920ff6 |
+| bl26_2412.06595.pdf | https://arxiv.org/pdf/2412.06595 | Brändén-Saud Maia Leite, Totally nonnegative matrices, chain enumeration and zeros of polynomials (arXiv:2412.06595v3; Adv. Math. 487 (2026) 110760, doi:10.1016/j.aim.2025.110760) | 摘要、引言、第 5 节（TN-偏序集与定理 5.5）、第 6 节（定义 6.1、定理 6.4-6.6）（2026-10-09 论文审读） | 33 | 670803 | bbcb98aac54a164f420059ed9601d1397670a792dd98f883dbd673b567fa2c43 |
 | fried_2607.24832.pdf | https://arxiv.org/pdf/2607.24832 | Fried, Further proofs of conjectures from the OEIS (arXiv:2607.24832) | 同上 | 57 | 434520 | 9011a6cf3438a970ae6146d408beda510bfa9f2635143176d03014d59531e197 |
 
 另有 OEIS 附件 `data/lit/oeis/A202093_proof_a202093.txt`（来源 https://oeis.org/A202093/a202093.txt，Christian Krause，2026-06-26，全文已读）。OEIS 内容适用 CC-BY-SA 4.0，见 `data/oeis/NOTICE.md`。
@@ -28,3 +29,4 @@
 - OEIS Open：基于 492 个由 Tsoukalas 等在 Lean 中形式化的 OEIS 开放猜想；语言模型在 50 美元预算下解出 147 个；公开仓库 github.com/epoch-research/LeanOpenProblems（本家族不在其目录树里）。
 - Fried 的三篇（2026-10-07 第二次 arXiv 复查时下载，用 PyMuPDF 抽全文后检索）：全文出现的 OEIS 编号分别为 18、13、41 个，都不含 A207118–A207127、A207069、A207070、A326247，也没有出现 0..1 arrays、binary arrays 等字样；arXiv:2606.09913 提到 Hardin 一次，指的是 A250742（Hardin 的另一张二进制矩阵表，与本家族无关）。
 - Kauers 2007（上表第一行的 RISC 公开版，10-07 第二次复查时重读 §2.2–§3）：序列取为 f: Z²→C，算子 Σ p_{ij}(n,k)N^iK^j 的系数 p_{ij}∈C(n,k)，零化子是 Q·f≡0 的算子全体（左理想）；定义 3 的 Stirling-like 即「零化子由 s_iN_i−t_i 与一条 u+vN_1^{v_1}N_2^{v_2}−wN_1^{w_1}N_2^{w_2}（u,v,w 非零多项式，(v_1,v_2)、(w_1,w_2) 生成 Z²）生成」。Kauers 把 S₂ 等延拓到整个 Z²，使递推处处成立。
+- Brändén-Saud Maia Leite（arXiv:2412.06595v3，2026-10-09 读）：下三角、对角线为 1 的全非负矩阵给出实根多项式族；拟秩一致且矩阵 R(P) 全非负的「TN-偏序集」的链多项式实根，零点在 [−1,0]（定理 5.5）；对 TN-偏序集 P，P-positive 偏序集（相对 P 的 h-向量非负）的链多项式零点在 [−1,0]（定理 6.6，推广 Brenti-Welker）。本项目的 n_k 在 k≥3 时有 ⌊k/3⌋ 个零点小于 −1，所以 Λ_k 不在这些定理的范围内（论文注记 8.16）。
