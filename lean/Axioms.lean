@@ -77,6 +77,9 @@ import A207123
 -- T3.8 中 U 的部分：Rel(U) = O_U·L1，O_U 的正规形（OreRel.lean）
 #print axioms A207123.RelU_eq
 #print axioms A207123.RelU_iff_mem_span
+-- 论文推论 5.5：有理系数的零化算子，分母乘掉的形式（Saturated.lean）
+#print axioms A207123.mul_mem_ideal_of_vanish
+#print axioms A207123.mem_ideal_of_mul_mem_ideal
 #print axioms A207123.pure_ann_zero
 #print axioms A207123.col_zero
 #print axioms A207123.red_of_mem

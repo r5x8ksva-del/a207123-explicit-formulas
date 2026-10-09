@@ -1,0 +1,69 @@
+PASS A207123                    source 2026-10-09 21:39:28 < olean 2026-10-09 22:24:49; 28 imports older
+PASS A207123.Ascent             source 2026-10-04 23:08:53 < olean 2026-10-06 17:37:16; 1 imports older
+PASS A207123.Basic              source 2026-10-04 22:32:49 < olean 2026-10-06 17:33:57; 0 imports older
+PASS A207123.Binomial           source 2026-10-04 23:17:38 < olean 2026-10-06 17:35:48; 1 imports older
+PASS A207123.Coeffs             source 2026-10-05 04:09:35 < olean 2026-10-06 17:45:30; 2 imports older
+PASS A207123.DFinite            source 2026-10-05 00:12:32 < olean 2026-10-06 17:38:30; 1 imports older
+PASS A207123.DFiniteN           source 2026-10-05 01:59:02 < olean 2026-10-06 17:41:17; 2 imports older
+PASS A207123.Formula            source 2026-10-04 21:59:59 < olean 2026-10-06 17:35:16; 1 imports older
+PASS A207123.Gosper             source 2026-10-05 02:58:55 < olean 2026-10-06 17:42:59; 1 imports older
+PASS A207123.Growth             source 2026-10-09 21:20:46 < olean 2026-10-09 21:21:27; 1 imports older
+PASS A207123.HGen               source 2026-10-05 04:48:35 < olean 2026-10-06 17:45:56; 2 imports older
+PASS A207123.HNum               source 2026-10-05 02:05:17 < olean 2026-10-06 17:40:46; 2 imports older
+PASS A207123.HStruct            source 2026-10-06 16:27:17 < olean 2026-10-06 17:47:34; 2 imports older
+PASS A207123.Multichain         source 2026-10-04 23:17:38 < olean 2026-10-06 17:36:15; 1 imports older
+PASS A207123.NPDE               source 2026-10-05 04:04:30 < olean 2026-10-06 17:45:00; 2 imports older
+PASS A207123.NearDiag           source 2026-10-05 15:56:08 < olean 2026-10-06 17:47:02; 2 imports older
+PASS A207123.NoKOnlyN           source 2026-10-05 01:41:50 < olean 2026-10-06 17:41:47; 1 imports older
+PASS A207123.NonDFinite         source 2026-10-05 03:01:50 < olean 2026-10-06 17:37:52; 1 imports older
+PASS A207123.NotStirlingLike    source 2026-10-06 22:25:14 < olean 2026-10-06 22:25:48; 1 imports older
+PASS A207123.NumStruct          source 2026-10-05 15:52:26 < olean 2026-10-06 17:46:30; 1 imports older
+PASS A207123.OreDim             source 2026-10-05 02:39:42 < olean 2026-10-06 17:42:21; 1 imports older
+PASS A207123.OreRel             source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:03; 1 imports older
+PASS A207123.OreRelN            source 2026-10-05 03:01:50 < olean 2026-10-06 17:39:40; 2 imports older
+PASS A207123.Parity             source 2026-10-05 03:58:57 < olean 2026-10-06 17:44:30; 2 imports older
+PASS A207123.Poly               source 2026-10-05 01:55:01 < olean 2026-10-06 17:40:10; 2 imports older
+PASS A207123.Recurrence         source 2026-10-04 23:01:50 < olean 2026-10-06 17:36:48; 1 imports older
+PASS A207123.Reduction          source 2026-10-04 19:44:27 < olean 2026-10-06 17:34:42; 1 imports older
+PASS A207123.Saturated          source 2026-10-09 22:18:49 < olean 2026-10-09 22:24:14; 1 imports older
+PASS A207123.SmallK             source 2026-10-05 14:33:41 < olean 2026-10-06 17:43:59; 3 imports older
+PASS Axioms.lean                last run 2026-10-09 22:24:59..2026-10-09 22:25:32 exit 0; source 2026-10-09 21:39:30, newest olean 2026-10-09 22:24:49
+PASS Checks.lean                last run 2026-10-09 22:25:40..2026-10-09 22:26:09 exit 0; source 2026-10-04 23:19:21, newest olean 2026-10-09 22:24:49
+PASS lean_axioms_2026-10-10_sat.log written 2026-10-09 22:25:32, during or just after that run
+PASS Axioms.lean                261 #print axioms lines, 261 answers, same names in the same order
+PASS                            axioms used beyond propext, Classical.choice, Quot.sound: none
+PASS                            scan of all declarations: 出现过的公理：[Quot.sound, Classical.choice, propext]；依赖其他公理的声明：0 个
+PASS git status of lean/: clean
+sha256 of the sources:
+  3931418fed15892e07cb0691c7319322930438a12379eb14a69227e8bd3e8967  A207123.lean
+  11b297d082a858e0ab867433e86c2ba1ea9e90525dc149b8c593d393dc89a437  A207123\Ascent.lean
+  643b8f794bd84a46040f82764b95c596358d13e6a45cbff0255a140657f9f7b3  A207123\Basic.lean
+  2591760870c214bfee9c7cf38486a8c8f75986ed7c892e549ff7a08eba98c88b  A207123\Binomial.lean
+  c8a78f612fd7797f790a9cf8f07d7b5bf7f33cde989aa7e11ac0a3594b0ffa6f  A207123\Coeffs.lean
+  24c33d2ebb054600b43bbd405c9632398a9d38cac9ad5826c53b47fc13885fbc  A207123\DFinite.lean
+  baf5745eecdbd8ab0824000ec69417284b92102ee05956dee46ec2eea5ba1b42  A207123\DFiniteN.lean
+  35f061553307f94476bab7fbf056b7df412571c2afd3e197bc0d5dbb43618d64  A207123\Formula.lean
+  1a08a7821c87cf60101b8dbd5d78339a547053f0c457f5044636da5e22022fe7  A207123\Gosper.lean
+  9e8d7e327e1dfdc2d091290612354ddc20920ae8dde94e473241d07bf1abdd75  A207123\Growth.lean
+  a7044892147b95e3c95bee0261e78de3ce31bf431a8a283914113eb1be55d25a  A207123\HGen.lean
+  e97127625f37d33c84480240351bf9d100b64108c97928db416b134d91e5f066  A207123\HNum.lean
+  7aa76bf42017f8fbebb7d9329a6361a8e51d79e87a8ab57119abe2445515ac71  A207123\HStruct.lean
+  295aa394b32e4bd46d2c634cad29f4d49be9deada03b8037bf773e5b56b3bc62  A207123\Multichain.lean
+  92292a1b296bbad3e6575b02e08c07801566d68efeda473ce1af0afd07d14016  A207123\NPDE.lean
+  052cff0ea1ae065b8998bc519525f3444080eac309f6777b03fc16a3499896f8  A207123\NearDiag.lean
+  441cd672a86fbaefa68b5b59a0aff7f901c7f58cd6c2e9e24598fc3c19d9cba4  A207123\NoKOnlyN.lean
+  090ab732531b3d5b37bc3f9c00c345dc8d94f19148ad159acb91c1ffc79f923c  A207123\NonDFinite.lean
+  1705490b42db2719d204274bc980b3de3e432ef947744a543f6e1d05e7015369  A207123\NotStirlingLike.lean
+  f5392a74a540b0df8337d6106291237329f6e98da5eda83e2d23befd3af988d8  A207123\NumStruct.lean
+  7a6ca15cad012272fdaa05747c4bd1ac44296fb483f3e44cd7837695e41d466c  A207123\OreDim.lean
+  e41e81bcda969278585980eb4cf7e74640cc9c3878f0d4f1b7d52017926cf163  A207123\OreRel.lean
+  a7a2af597de5237adaed9faa415eccf7f3db01a438d69016fb205e3537926ab2  A207123\OreRelN.lean
+  40e31edb07468b08bfce9d9d2ed30be81dab816bd4128039071febd14f11192a  A207123\Parity.lean
+  6271f135c9d0e9e641348590800d15542a3de6b757c335c70885ad1908b50f90  A207123\Poly.lean
+  1b4bc56721597772184d862ff92a7f73030455cdec9f99b68a3ef27aa5be3d34  A207123\Recurrence.lean
+  230083fd54fb2f6485d24e2740f2f899fc85bbe20a4f594178d91d13c9c5a1d4  A207123\Reduction.lean
+  b76b7a0934d1890b473d9e2c4e1958561e5f07ce04a2d03320bbdf450a216b42  A207123\Saturated.lean
+  68ce6047f4a0ee9aa41216a88f187ec556872d8a2277bf3b7b6341ef8b5e789f  A207123\SmallK.lean
+  faf41d60aa3fd3b4dcdd29ff7800ff73fa924102809f82dfc5c8c8d99ff12626  Axioms.lean
+  de96c457a4573d6dbff48cfd3c7c66b4ac3607e30822a1d65c86e17d9fca48b6  Checks.lean
+36 checks: 36 PASS, 0 FAIL
