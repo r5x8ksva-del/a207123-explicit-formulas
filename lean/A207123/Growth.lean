@@ -10,6 +10,8 @@ import Mathlib.Topology.Order.IntermediateValue
   （`y³ = y²` 的最大实根），见 `rho`、`rho_spec`、`one_lt_rho`。
 * `rho_strictMono`：`ρ_m` 关于 `m` 严格增。
 * `normSq_eq_of_root`、`norm_lt_rho_of_root`：其余（非实）根 `w` 满足 `|w|² = m/ρ_m = ρ_m(ρ_m − 1) < ρ_m²`。
+* `rho_mul_rho_sub_one_strictMono`、`normSq_lt_rho_pred_sq`：`|w|² = ρ_m(ρ_m − 1)` 关于 `m` 严格增，且
+  `|w|² < ρ_{m−1}²`（论文定理 3.2(1) 的最后两句；2026-10-10 补）。
 * `root_P_min`：于是 `x_m = 1/ρ_m` 是 `P_m = ∏_{i≤m} b_i` 唯一的模最小根（其余根的模都严格大于 `x_m`）。
 
 T1.3(4) 的渐近部分（`U_k(m) = c_m ρ_m^k + O(r^k)`、`c_m > 0`）不在本文件。
@@ -167,6 +169,38 @@ theorem norm_lt_rho_of_root {m : ℕ} (hm : 1 ≤ m) {w : ℂ} (hw : w ^ 3 - w ^
   have h1 : ‖w‖ ^ 2 < rho m ^ 2 := by
     rw [← Complex.normSq_eq_norm_sq, hns]; nlinarith
   exact lt_of_pow_lt_pow_left₀ 2 (by linarith) h1
+
+/-- **定理 3.2(1)**（论文）：非实根的模平方 `|w|² = ρ_m(ρ_m − 1)` 关于 `m` 严格增（`ρ_0 = 1` 时值为 0）。 -/
+theorem rho_mul_rho_sub_one_strictMono : StrictMono (fun m : ℕ => rho m * (rho m - 1)) := by
+  intro a b hab
+  have h1 : rho a < rho b := rho_strictMono hab
+  have h2 : 1 ≤ rho a := one_le_rho a
+  show rho a * (rho a - 1) < rho b * (rho b - 1)
+  nlinarith [mul_pos (sub_pos.mpr h1) (show (0 : ℝ) < rho b + rho a - 1 by linarith)]
+
+/-- **定理 3.2(1)**（论文）：`m ≥ 1` 时，`y³ − y² − m` 的不等于 `ρ_m` 的复根 `w` 满足 `|w|² < ρ_{m−1}²`。
+证明同论文：`ρ_{m−1}² ρ_m > ρ_{m−1}³ = ρ_{m−1}² + (m − 1) ≥ m = ρ_m · ρ_m(ρ_m − 1)`。 -/
+theorem normSq_lt_rho_pred_sq {m : ℕ} (hm : 1 ≤ m) {w : ℂ} (hw : w ^ 3 - w ^ 2 - m = 0)
+    (hne : w ≠ rho m) : Complex.normSq w < rho (m - 1) ^ 2 := by
+  rw [(normSq_eq_of_root hm hw hne).1]
+  have hρ : 1 < rho m := one_lt_rho hm
+  have hlt : rho (m - 1) < rho m := rho_strictMono (by omega)
+  have hge : 1 ≤ rho (m - 1) := one_le_rho (m - 1)
+  have hspec : rho (m - 1) ^ 3 - rho (m - 1) ^ 2 = (m : ℝ) - 1 := by
+    have h := rho_spec (m - 1)
+    rw [Nat.cast_sub hm, Nat.cast_one] at h
+    exact h
+  -- `ρ_{m−1}² ρ_m > ρ_{m−1}³ = ρ_{m−1}² + (m − 1) ≥ m`
+  have hkey : (m : ℝ) < rho (m - 1) ^ 2 * rho m := by
+    have h1 : 0 < rho (m - 1) ^ 2 * (rho m - rho (m - 1)) :=
+      mul_pos (pow_pos (by linarith) 2) (sub_pos.mpr hlt)
+    have h2 : 1 ≤ rho (m - 1) ^ 2 := by nlinarith
+    nlinarith
+  -- `ρ_m(ρ_m − 1) · ρ_m = ρ_m³ − ρ_m² = m`
+  have hm' : rho m * (rho m - 1) * rho m = m := by linear_combination rho_spec m
+  by_contra hcon
+  have h3 := mul_le_mul_of_nonneg_right (not_lt.mp hcon) (le_of_lt (show (0 : ℝ) < rho m by linarith))
+  linarith
 
 /-- 辅助引理（T1.3(4)）：`b_i` 的复根 `z` 不为 0，且 `1/z` 是 `y³ − y² − i` 的根。 -/
 theorem inv_root_of_bpoly_root {i : ℕ} {z : ℂ} (hz : (bpoly ℂ i).IsRoot z) :

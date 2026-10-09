@@ -16,7 +16,7 @@ root, Axioms and Checks), so instead of recompiling we check what the last build
 lean_mem.log records the end of each run in UTC (the Bash clock) and its duration in whole seconds.
 
 Usage:  py -3.14 code/main_extra/check_lean_fresh.py [lean_dir [lean_mem.log [axioms.log]]]
-(exit code 1 on any FAIL)
+(exit code 1 on any FAIL; without axioms.log the newest logs/lean_axioms_<date>.log is used, the names sort by date)
 """
 import datetime as dt
 import glob
@@ -148,5 +148,5 @@ if __name__ == '__main__':
     a = sys.argv[1:]
     lean_dir = a[0] if len(a) > 0 else os.path.join(ROOT, 'lean')
     memlog = a[1] if len(a) > 1 else os.path.join(ROOT, 'logs', 'lean_mem.log')
-    axioms = a[2] if len(a) > 2 else os.path.join(ROOT, 'logs', 'lean_axioms_2026-10-07.log')
+    axioms = a[2] if len(a) > 2 else sorted(glob.glob(os.path.join(ROOT, 'logs', 'lean_axioms_*.log')))[-1]
     sys.exit(main(lean_dir, memlog, axioms))

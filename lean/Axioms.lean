@@ -165,6 +165,8 @@ import A207123
 #print axioms A207123.rho_strictMono
 #print axioms A207123.normSq_eq_of_root
 #print axioms A207123.norm_lt_rho_of_root
+#print axioms A207123.rho_mul_rho_sub_one_strictMono
+#print axioms A207123.normSq_lt_rho_pred_sq
 #print axioms A207123.root_P_min
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
