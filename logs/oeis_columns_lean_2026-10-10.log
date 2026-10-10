@@ -1,0 +1,6 @@
+A207118  k=3  order 12  terms 11  1 - sum c_i x^i == (1-x)^7 (1+x)^5: PASS
+A207119  k=4  order 16  terms 15  1 - sum c_i x^i == (1-x)^9 (1+x)^7: PASS
+A207120  k=5  order 20  terms 19  1 - sum c_i x^i == (1-x)^11 (1+x)^9: PASS
+A207121  k=6  order 24  terms 23  1 - sum c_i x^i == (1-x)^13 (1+x)^11: PASS
+A207122  k=7  order 28  terms 27  1 - sum c_i x^i == (1-x)^15 (1+x)^13: PASS
+ALL PASS

@@ -243,6 +243,21 @@ import A207123
 #print axioms A207123.parDen_dvd_of_mul_aSer
 #print axioms A207123.parity_min_order
 #print axioms A207123.parity_min_order_zero
+-- 论文注记 3.5：A207118–A207122 的经验递推、行递推的阶与核对判据、A207069/A207070 标题的列规则（OeisRemark.lean）
+#print axioms A207123.parDen_three
+#print axioms A207123.parDen_four
+#print axioms A207123.parDen_five
+#print axioms A207123.parDen_six
+#print axioms A207123.parDen_seven
+#print axioms A207123.oeis_A207118
+#print axioms A207123.oeis_A207119
+#print axioms A207123.oeis_A207120
+#print axioms A207123.oeis_A207121
+#print axioms A207123.oeis_A207122
+#print axioms A207123.row_rec
+#print axioms A207123.row_rec_of_consecutive
+#print axioms A207123.aAlt_two
+#print axioms A207123.aAlt_three
 -- T3.5(2)（NPDE.lean）
 #print axioms A207123.NK_pde
 -- T3.6（HGen.lean）
