@@ -59,3 +59,4 @@ import A207123.ShapeRemarks
 import A207123.MCoeff
 import A207123.Mobius
 import A207123.Barker
+import A207123.A326247

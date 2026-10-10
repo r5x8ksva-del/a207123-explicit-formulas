@@ -1,0 +1,9 @@
+[lean_one 启动前：AVAIL=6010 COMMIT=17477 LIMIT=33453 HEADROOM=15976 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/A326247.lean:167:44: warning: Variable name `h1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+[lean_one 内存：PEAK=8116 MINHEAD=6877 KILLED=0 REASON= QFAIL=0；用时 26s]
+[lean_one exit code 0]

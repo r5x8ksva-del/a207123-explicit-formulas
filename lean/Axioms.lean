@@ -544,6 +544,19 @@ import A207123
 #print axioms A207123.a_three_eq
 #print axioms A207123.barker_A207118_gf
 #print axioms A207123.barker_A207069_gf
+-- T5.4(2)(4)：OEIS A326247（按条目定义）、U_4(m) = A326247(m+2) 与 Barker 的三条猜想（A326247.lean）
+#print axioms A207123.A326247_small
+#print axioms A207123.sum_range_choose_eq
+#print axioms A207123.inc2_eq
+#print axioms A207123.inc3_eq
+#print axioms A207123.inc4_eq
+#print axioms A207123.card_edgePairs
+#print axioms A207123.edge_split
+#print axioms A207123.A326247_add
+#print axioms A207123.A326247_eq_U_four
+#print axioms A207123.barker_A326247_formula
+#print axioms A207123.barker_A326247_rec
+#print axioms A207123.barker_A326247_gf
 -- T3.5(2)（NPDE.lean）
 #print axioms A207123.NK_pde
 -- T3.6（HGen.lean）
