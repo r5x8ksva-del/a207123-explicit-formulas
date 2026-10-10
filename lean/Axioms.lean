@@ -86,6 +86,17 @@ import A207123
 #print axioms A207123.P_mul_NAser
 #print axioms A207123.sum_inv_P_eq_hyp1F1
 #print axioms A207123.remark_1F1
+-- T3.1 的 Kummer 形式与下不完全 Gamma 形式、T3.3(1) 的整表 ₁F₁ 和式（Kummer.lean）
+#print axioms A207123.sum_choose_div_sub
+#print axioms A207123.kummer_1F1
+#print axioms A207123.remark_kummer
+#print axioms A207123.sum_inv_P_eq_lowerGamma
+#print axioms A207123.remark_lowerGamma
+#print axioms A207123.W_div_P_eq_sum
+#print axioms A207123.coeff_hyp1F1_shift
+#print axioms A207123.T3_3_one_coeff
+#print axioms A207123.T3_3_one
+#print axioms A207123.remark_T3_3_one
 -- T3.8 中 U 的部分：Rel(U) = O_U·L1，O_U 的正规形（OreRel.lean）
 #print axioms A207123.RelU_eq
 #print axioms A207123.RelU_iff_mem_span
