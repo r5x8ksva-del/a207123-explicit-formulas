@@ -780,6 +780,23 @@ import A207123
 #print axioms A207123.isHam_rowPath
 #print axioms A207123.rowPath_surj
 #print axioms A207123.rowPath_bijOn
+-- 猜想总表 A25 (b)（notes/12 定理 2(b)）：每个 i 三个相邻原子 c_i(k+3m+σ−r) 的单和存在且唯一，系数与 m 无关（ThreeAtoms.lean）
+#print axioms A207123.ci_add_three
+#print axioms A207123.phi_eq_of_dvd
+#print axioms A207123.phi_X_pow_mul
+#print axioms A207123.phi_of_natDegree_le_two
+#print axioms A207123.U_F4_phi
+#print axioms A207123.bpoly_dvd_inv_shift
+#print axioms A207123.atomRep_natDegree_le
+#print axioms A207123.atomCoeff_normalized
+#print axioms A207123.phi_Wtil_atoms
+#print axioms A207123.three_atoms_exists
+#print axioms A207123.evZero_of_coprime
+#print axioms A207123.evZero_qpoly
+#print axioms A207123.atomComb_evZero_imp
+#print axioms A207123.atoms_lin_indep
+#print axioms A207123.three_atoms_unique
+#print axioms A207123.three_atoms
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
