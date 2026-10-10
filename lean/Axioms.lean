@@ -828,6 +828,15 @@ import A207123
 #print axioms A207123.N_two_two_atoms
 #print axioms A207123.N_three_two_atoms
 #print axioms A207123.N_three_two_atoms_zero
+-- notes/12 定理 2(a)（猜想总表 A25 (a) 的 U 部分）：每个 i 一个原子的单和不存在（OneAtom.lean）
+#print axioms A207123.phi_atoms
+#print axioms A207123.ciZ_eq_atoms
+#print axioms A207123.aeval_M1_bpoly
+#print axioms A207123.det_aeval_M1_xpowRep
+#print axioms A207123.det_aeval_M1_atomRep
+#print axioms A207123.rat_cube_ne_three
+#print axioms A207123.U_no_one_atom_rat
+#print axioms A207123.U_no_one_atom
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
