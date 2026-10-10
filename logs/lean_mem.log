@@ -438,3 +438,10 @@
 2026-10-10 18:05:54 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 31s | PEAK=8163 MINHEAD=4614 KILLED=0 REASON= QFAIL=0
 2026-10-10 18:06:28 | Axioms.lean | exit 0 | 33s | PEAK=8184 MINHEAD=4599 KILLED=0 REASON= QFAIL=0
 2026-10-10 18:07:02 | Checks.lean | exit 0 | 33s | PEAK=8178 MINHEAD=4607 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:12:56 | A207123/ValueSetBij.lean | exit 1 | 23s | PEAK=8112 MINHEAD=4596 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:14:52 | ScratchTest.lean | exit 0 | 19s | PEAK=8034 MINHEAD=4717 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:16:01 | A207123/ValueSetBij.lean | exit 0 | 28s | PEAK=8200 MINHEAD=4575 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:16:52 | A207123/ValueSetBij.lean -o .lake/build/lib/lean/A207123/ValueSetBij.olean -i .lake/build/lib/lean/A207123/ValueSetBij.ilean | exit 0 | 32s | PEAK=8199 MINHEAD=4579 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:17:16 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 23s | PEAK=8154 MINHEAD=4631 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:17:41 | Axioms.lean | exit 0 | 24s | PEAK=8190 MINHEAD=4621 KILLED=0 REASON= QFAIL=0
+2026-10-10 18:18:05 | Checks.lean | exit 0 | 23s | PEAK=8182 MINHEAD=4602 KILLED=0 REASON= QFAIL=0

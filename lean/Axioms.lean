@@ -856,6 +856,13 @@ import A207123
 #print axioms A207123.nOneCoeff_mul
 #print axioms A207123.N_no_one_atom_rat
 #print axioms A207123.N_no_one_atom
+-- 报告 T5.4(4)(5)（猜想总表 A16）：U_3、U_4 的显式保值集双射（ValueSetBij.lean）
+#print axioms A207123.mem_monoSet
+#print axioms A207123.U_three_bijOn
+#print axioms A207123.bij3_values
+#print axioms A207123.card_goodPairs
+#print axioms A207123.U_four_bijOn
+#print axioms A207123.bij4_values
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
