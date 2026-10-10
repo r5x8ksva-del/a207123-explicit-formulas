@@ -849,6 +849,13 @@ import A207123
 #print axioms A207123.EA_no_one_atom_rat
 #print axioms A207123.one_atom_rat_of_complex
 #print axioms A207123.EA_no_one_atom
+-- notes/13 定理 5(a)（猜想总表 A26 (ii) 的一部分）：N(k,q) 没有每个 i 一个原子的单和（NOneAtom.lean）
+#print axioms A207123.three_dvd_nCoefZ
+#print axioms A207123.det_TZ_zmod_ne_zero
+#print axioms A207123.cube_ne_three_mul_int
+#print axioms A207123.nOneCoeff_mul
+#print axioms A207123.N_no_one_atom_rat
+#print axioms A207123.N_no_one_atom
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
