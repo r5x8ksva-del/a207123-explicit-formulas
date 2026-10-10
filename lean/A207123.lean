@@ -34,3 +34,4 @@ import A207123.RootExpansion
 import A207123.RootAsymp
 import A207123.AsympRemark
 import A207123.OeisRemark
+import A207123.ThreeTermRat

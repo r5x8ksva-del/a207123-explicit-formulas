@@ -174,6 +174,11 @@ import A207123
 #print axioms A207123.not_annihilate_three_terms
 #print axioms A207123.not_annihilate_two_terms
 #print axioms A207123.not_annihilate_kauers
+-- 论文推论 5.7：有理函数系数的原样陈述，取公分母化到上面三条（ThreeTermRat.lean）
+#print axioms A207123.HasValueAt.unique
+#print axioms A207123.not_annihilate_three_terms_rat
+#print axioms A207123.not_annihilate_two_terms_rat
+#print axioms A207123.not_annihilate_kauers_rat
 -- T2.7 的前半：Σ_{j<m} P_j 不是 Gosper 可和的（Gosper.lean）
 #print axioms A207123.partialSum_P_not_hypergeometric
 #print axioms A207123.no_gosper_solution
