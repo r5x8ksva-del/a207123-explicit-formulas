@@ -404,3 +404,8 @@
 2026-10-10 16:51:44 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 31s | PEAK=8159 MINHEAD=4718 KILLED=0 REASON= QFAIL=0
 2026-10-10 16:52:18 | Axioms.lean | exit 0 | 33s | PEAK=8174 MINHEAD=4735 KILLED=0 REASON= QFAIL=0
 2026-10-10 16:52:57 | Checks.lean | exit 0 | 32s | PEAK=8171 MINHEAD=4740 KILLED=0 REASON= QFAIL=0
+2026-10-10 17:01:03 | A207123/HNegOneProd.lean | exit 0 | 33s | PEAK=8041 MINHEAD=4685 KILLED=0 REASON= QFAIL=0
+2026-10-10 17:01:51 | A207123/HNegOneProd.lean -o .lake/build/lib/lean/A207123/HNegOneProd.olean -i .lake/build/lib/lean/A207123/HNegOneProd.ilean | exit 0 | 34s | PEAK=8046 MINHEAD=4680 KILLED=0 REASON= QFAIL=0
+2026-10-10 17:02:30 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 31s | PEAK=8157 MINHEAD=4525 KILLED=0 REASON= QFAIL=0
+2026-10-10 17:03:04 | Axioms.lean | exit 0 | 32s | PEAK=8177 MINHEAD=4511 KILLED=0 REASON= QFAIL=0
+2026-10-10 17:03:38 | Checks.lean | exit 0 | 33s | PEAK=8171 MINHEAD=4541 KILLED=0 REASON= QFAIL=0

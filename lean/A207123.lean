@@ -72,3 +72,4 @@ import A207123.A038718
 import A207123.ThreeAtoms
 import A207123.NumHigh
 import A207123.NThreeAtoms
+import A207123.HNegOneProd

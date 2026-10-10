@@ -812,6 +812,10 @@ import A207123
 #print axioms A207123.NatomConst_eq
 #print axioms A207123.NatomConst_two
 #print axioms A207123.NatomConst_three
+-- notes/16 命题 4(i) 的乘积式 h_k(−1) = 2(−1)^r∏(1+2z_l)（k ≥ 2），猜想总表 A29 (iii) 的一部分（HNegOneProd.lean）
+#print axioms A207123.prod_roots_nR_one_add_two
+#print axioms A207123.hpoly_eval_neg_one_prod
+#print axioms A207123.hpoly_one_eval_neg_one
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
