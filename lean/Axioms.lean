@@ -721,6 +721,19 @@ import A207123
 #print axioms A207123.uInt_neg_modEq_one_two
 #print axioms A207123.upoly_eval_neg_ne_zero_of_two_pow
 #print axioms A207123.two_pow_factorization_lt_of_upoly_eval_neg_eq_zero
+-- T5.3(7)（A29 (ii)）：h_k 次高项的闭式与它和首项的符号关系（HSecond.lean）
+#print axioms A207123.upoly_eval_neg_second
+#print axioms A207123.hpoly_coeff_second
+#print axioms A207123.hpoly_second_three_mul
+#print axioms A207123.hpoly_second_three_mul_add_one
+#print axioms A207123.hpoly_second_three_mul_add_two
+#print axioms A207123.hB2_pos
+#print axioms A207123.hB1_table
+#print axioms A207123.hB1_fiftyfive
+#print axioms A207123.hE_pos
+#print axioms A207123.hB1_neg
+#print axioms A207123.hB1_pos
+#print axioms A207123.hpoly_second_sign
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
