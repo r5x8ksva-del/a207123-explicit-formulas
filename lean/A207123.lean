@@ -47,3 +47,4 @@ import A207123.SimpleRoots
 import A207123.LogConcave
 import A207123.RootLocation
 import A207123.InterlaceDeriv
+import A207123.Pick

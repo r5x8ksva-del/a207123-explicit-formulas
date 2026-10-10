@@ -351,6 +351,20 @@ import A207123
 #print axioms A207123.inCone_derivative_of_eq_mul
 #print axioms A207123.interlaces_derivative_of_interlaces_pos
 #print axioms A207123.interlaces_derivative_of_interlaces
+-- 论文引理 8.5：交错关系与上半平面上虚部的符号（Pick 判据）（Pick.lean）
+#print axioms A207123.aeval_ne_zero_of_im_pos
+#print axioms A207123.im_div_coneSum_nonpos
+#print axioms A207123.im_div_uconeSum_nonneg
+#print axioms A207123.exists_im_pos_of_local
+#print axioms A207123.exists_omega_of_two_le
+#print axioms A207123.isRoot_of_im_nonpos
+#print axioms A207123.weight_nonneg_of_im_nonpos
+#print axioms A207123.cone_of_im_nonpos
+#print axioms A207123.ucone_of_im_nonneg
+#print axioms A207123.lemma_il_pick_one
+#print axioms A207123.lemma_il_pick_two
+#print axioms A207123.realRooted_of_im_nonpos
+#print axioms A207123.realRooted_of_im_nonneg
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
