@@ -177,3 +177,8 @@
 2026-10-10 04:17:08 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8102 MINHEAD=7358 KILLED=0 REASON= QFAIL=0
 2026-10-10 04:17:36 | Axioms.lean | exit 0 | 22s | PEAK=8116 MINHEAD=7379 KILLED=0 REASON= QFAIL=0
 2026-10-10 04:18:04 | Checks.lean | exit 0 | 22s | PEAK=8123 MINHEAD=7400 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:37:25 | A207123/RStirling.lean -o .lake/build/lib/lean/A207123/RStirling.olean -i .lake/build/lib/lean/A207123/RStirling.ilean | exit 1 | 21s | PEAK=8047 MINHEAD=7253 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:38:11 | A207123/RStirling.lean -o .lake/build/lib/lean/A207123/RStirling.olean -i .lake/build/lib/lean/A207123/RStirling.ilean | exit 0 | 23s | PEAK=8049 MINHEAD=7244 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:38:58 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8109 MINHEAD=7187 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:39:21 | Axioms.lean | exit 0 | 22s | PEAK=8109 MINHEAD=7207 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:39:45 | Checks.lean | exit 0 | 23s | PEAK=8124 MINHEAD=7225 KILLED=0 REASON= QFAIL=0

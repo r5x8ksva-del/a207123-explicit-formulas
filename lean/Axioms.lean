@@ -258,6 +258,15 @@ import A207123
 #print axioms A207123.card_row_products_five
 #print axioms A207123.card_row_products_six
 #print axioms A207123.card_row_products_seven
+-- 论文引理 4.5 最后一句：H(m,s,j) 是集合划分个数（r-Stirling 数；RStirling.lean）
+#print axioms A207123.card_setParts_single
+#print axioms A207123.card_setParts_join
+#print axioms A207123.partCount_succ_succ
+#print axioms A207123.partCount_succ_succ_of_le
+#print axioms A207123.hc_vars_eq_partCount
+#print axioms A207123.stirlingSecond_eq_partCount
+#print axioms A207123.partCount_one
+#print axioms A207123.lemma_coef_partitions
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
