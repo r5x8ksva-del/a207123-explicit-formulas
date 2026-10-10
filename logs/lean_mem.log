@@ -398,3 +398,9 @@
 2026-10-10 16:36:11 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8142 MINHEAD=5520 KILLED=0 REASON= QFAIL=0
 2026-10-10 16:36:35 | Axioms.lean | exit 0 | 23s | PEAK=8174 MINHEAD=5519 KILLED=0 REASON= QFAIL=0
 2026-10-10 16:36:59 | Checks.lean | exit 0 | 23s | PEAK=8171 MINHEAD=5507 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:49:23 | A207123/NThreeAtoms.lean | exit 1 | 34s | PEAK=8039 MINHEAD=4819 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:50:06 | A207123/NThreeAtoms.lean | exit 0 | 34s | PEAK=8045 MINHEAD=4861 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:50:49 | A207123/NThreeAtoms.lean -o .lake/build/lib/lean/A207123/NThreeAtoms.olean -i .lake/build/lib/lean/A207123/NThreeAtoms.ilean | exit 0 | 35s | PEAK=8040 MINHEAD=4850 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:51:44 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 31s | PEAK=8159 MINHEAD=4718 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:52:18 | Axioms.lean | exit 0 | 33s | PEAK=8174 MINHEAD=4735 KILLED=0 REASON= QFAIL=0
+2026-10-10 16:52:57 | Checks.lean | exit 0 | 32s | PEAK=8171 MINHEAD=4740 KILLED=0 REASON= QFAIL=0

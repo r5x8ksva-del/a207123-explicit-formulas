@@ -71,3 +71,4 @@ import A207123.NumGcd
 import A207123.A038718
 import A207123.ThreeAtoms
 import A207123.NumHigh
+import A207123.NThreeAtoms

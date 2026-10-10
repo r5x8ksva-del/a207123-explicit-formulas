@@ -803,6 +803,15 @@ import A207123
 #print axioms A207123.Numq_coeff_top
 #print axioms A207123.Numq_top_two
 #print axioms A207123.Numq_top_three
+-- notes/13 定理 5(b)：N(k,q) 的三原子单和存在且唯一、最高一项与常数项，猜想总表 A26 (ii) 的一部分（NThreeAtoms.lean）
+#print axioms A207123.N_eq_sum_U
+#print axioms A207123.N_three_atoms_exists
+#print axioms A207123.N_three_atoms_unique
+#print axioms A207123.N_three_atoms
+#print axioms A207123.NatomCoeff_top
+#print axioms A207123.NatomConst_eq
+#print axioms A207123.NatomConst_two
+#print axioms A207123.NatomConst_three
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
