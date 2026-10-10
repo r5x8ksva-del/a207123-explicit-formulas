@@ -734,6 +734,12 @@ import A207123
 #print axioms A207123.hB1_neg
 #print axioms A207123.hB1_pos
 #print axioms A207123.hpoly_second_sign
+-- T5.3(7)（A29 (iii) 的前两句）：h_k(−1) 的公式与符号（HNegOne.lean）
+#print axioms A207123.hpoly_eval_neg_one
+#print axioms A207123.hpoly_eval_neg_one_nrow
+#print axioms A207123.hpoly_two_eval_neg_one
+#print axioms A207123.prod_mul_add_one_sign
+#print axioms A207123.hpoly_eval_neg_one_sign
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
