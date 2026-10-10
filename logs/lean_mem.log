@@ -264,3 +264,9 @@
 2026-10-10 09:36:48 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8108 MINHEAD=7272 KILLED=0 REASON= QFAIL=0
 2026-10-10 09:37:19 | Axioms.lean | exit 0 | 24s | PEAK=8128 MINHEAD=7266 KILLED=0 REASON= QFAIL=0
 2026-10-10 09:37:46 | Checks.lean | exit 0 | 26s | PEAK=8129 MINHEAD=7256 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:02:06 | A207123/ShapeFibre.lean | exit 1 | 26s | PEAK=8097 MINHEAD=7239 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:03:20 | A207123/ShapeFibre.lean | exit 0 | 26s | PEAK=8090 MINHEAD=7207 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:04:08 | A207123/ShapeFibre.lean -o .lake/build/lib/lean/A207123/ShapeFibre.olean -i .lake/build/lib/lean/A207123/ShapeFibre.ilean | exit 0 | 27s | PEAK=8090 MINHEAD=7206 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:04:38 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8127 MINHEAD=7140 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:05:02 | Axioms.lean | exit 0 | 22s | PEAK=8137 MINHEAD=7165 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:05:26 | Checks.lean | exit 0 | 23s | PEAK=8143 MINHEAD=7210 KILLED=0 REASON= QFAIL=0

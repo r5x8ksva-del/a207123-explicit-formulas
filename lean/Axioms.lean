@@ -423,6 +423,23 @@ import A207123
 #print axioms A207123.not_rat_cube_17
 #print axioms A207123.no_common_value_b2
 #print axioms A207123.thm_Spart
+-- 论文定理 6.3 的第 1–3 步：一般形状的母函数、坐标与纤维（ShapeFibre.lean）
+#print axioms A207123.vanish_substV
+#print axioms A207123.vanish_mul_Xw_pow
+#print axioms A207123.subst_coords_unique_gen
+#print axioms A207123.qV_monic
+#print axioms A207123.aeval_eq_coordsV
+#print axioms A207123.eval_eq_coordsV
+#print axioms A207123.cross_of_eq
+#print axioms A207123.coeff_mk_one_pow_mul_substV
+#print axioms A207123.binomZ_shape
+#print axioms A207123.shape_gf
+#print axioms A207123.U_pos
+#print axioms A207123.shape_main_identity
+#print axioms A207123.shape_fibre_x
+#print axioms A207123.aeval_homogY
+#print axioms A207123.eval_homogY
+#print axioms A207123.shape_fibre_y
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
