@@ -346,6 +346,11 @@ import A207123
 #print axioms A207123.signVariations_hR
 #print axioms A207123.signVariations_hpoly
 #print axioms A207123.cor_hk_signs
+-- 论文引理 8.7(3)：g ≪ f、deg g ≥ 1 推出 g′ ≪ f′（InterlaceDeriv.lean）
+#print axioms A207123.Interlaces.of_C_mul
+#print axioms A207123.inCone_derivative_of_eq_mul
+#print axioms A207123.interlaces_derivative_of_interlaces_pos
+#print axioms A207123.interlaces_derivative_of_interlaces
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

@@ -1155,7 +1155,7 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 48 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Tables~\ref{tab:lean} and~\ref{tab:lean8}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 49 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Tables~\ref{tab:lean} and~\ref{tab:lean8}.
 
 \begin{table}[t]
 \centering
@@ -1200,7 +1200,7 @@ Theorem~\ref{thm:neardiag}, Proposition~\ref{prop:newton} & \lean{T4\_1}, \lean{
 \toprule
 Result & Lean names\\
 \midrule
-Lemmas~\ref{lem:il-factor}, \ref{lem:il-sum}, \ref{lem:il-ops}(1)(2) & \lean{interlaces\_mul\_iff}, \lean{Interlaces.add\_left}, \lean{Interlaces.add\_right}, \lean{interlaces\_X\_sub\_C\_mul}, \lean{interlaces\_derivative}, \lean{Interlaces.X\_mul}\\
+Lemmas~\ref{lem:il-factor}, \ref{lem:il-sum}, \ref{lem:il-ops} & \lean{interlaces\_mul\_iff}, \lean{Interlaces.add\_left}, \lean{Interlaces.add\_right}, \lean{interlaces\_X\_sub\_C\_mul}, \lean{interlaces\_derivative}, \lean{Interlaces.X\_mul}, \lean{interlaces\_derivative\_of\_interlaces}\\
 Lemmas~\ref{lem:il-T}, \ref{lem:rowrec} & \lean{lemma\_il\_T\_one}, \lean{Interlaces.opTz}, \lean{Interlaces.opPsiz}, \lean{interlaces\_one\_add\_X\_mul\_opTz}, \lean{opTz\_one\_add\_X\_mul}, \lean{nR\_rec}\\
 Propositions~\ref{prop:four}, \ref{prop:simple}, Theorem~\ref{thm:realroots} & \lean{prop\_four\_relations}, \lean{alpha\_two}, \lean{beta\_two}, \lean{nR\_no\_common\_root}, \lean{count\_roots\_nR\_le\_one}, \lean{realRooted\_nR}, \lean{separable\_hpoly}, \lean{thm\_realroots}\\
 Corollary~\ref{cor:logconcave} & \lean{cor\_logconcave}, \lean{prod\_X\_add\_C\_coeff\_props}, \lean{unimodal\_of\_pos\_logconcave}\\
@@ -1213,10 +1213,10 @@ Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_e
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 4291 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 4296 declarations of the development finds no other axiom.
 \end{sloppypar}
 
-Not formalized: the explicit form of the bijection of Proposition~\ref{prop:bijection} (the formal version compares the two cardinalities); the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and in Section~\ref{sec:realroots} Lemmas~\ref{lem:il-pick} and~\ref{lem:il-ops}(3) (the formal proof of Lemma~\ref{lem:il-T}(2) writes $g\ll f$ as $g=cf+\sum_aw_a\,f/(z-a)$ with $c,w_a\ge0$ instead), Corollary~\ref{cor:clt}, and Remark~\ref{rem:chains}.
+Not formalized: the explicit form of the bijection of Proposition~\ref{prop:bijection} (the formal version compares the two cardinalities); the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and in Section~\ref{sec:realroots} Lemma~\ref{lem:il-pick} (where it is used, the formal proofs write $g\ll f$ as $g=cf+\sum_aw_a\,f/(z-a)$ with $c,w_a\ge0$ instead), Corollary~\ref{cor:clt}, and Remark~\ref{rem:chains}.
 
 The basic definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository. Further definitions used by some entries of Tables~\ref{tab:lean} and~\ref{tab:lean8}, for instance those of the blocks, of $c_m$ and $\tau_m$, of the value of a rational function at a point and of $g\ll f$ (by the characterization after its definition), are documented in the Lean files and have so far been compared with the paper only by AI.
 
