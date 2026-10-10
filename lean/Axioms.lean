@@ -267,6 +267,13 @@ import A207123
 #print axioms A207123.stirlingSecond_eq_partCount
 #print axioms A207123.partCount_one
 #print axioms A207123.lemma_coef_partitions
+-- 论文命题 4.7：双射的存在（两边计数相等；Bijection.lean）
+#print axioms A207123.NAs_split
+#print axioms A207123.NAs_rec
+#print axioms A207123.NAs_two
+#print axioms A207123.NAs_eq_g
+#print axioms A207123.NAs_explicit
+#print axioms A207123.prop_bijection
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

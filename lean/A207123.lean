@@ -40,3 +40,4 @@ import A207123.OeisRows
 import A207123.AsympNumerics
 import A207123.OeisRowOrders
 import A207123.RStirling
+import A207123.Bijection
