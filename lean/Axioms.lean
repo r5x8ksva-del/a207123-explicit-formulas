@@ -714,6 +714,13 @@ import A207123
 #print axioms A207123.coeff_gnegPoly_top_five
 #print axioms A207123.factorial_lt_stirlingFirst_two
 #print axioms A207123.upoly_eval_neg_ne_zero_two
+-- T5.3(2)(a) 中 p = 2 的放宽：2^e ≥ k − 1（k ≥ 4）即可（NegZerosTwo.lean）
+#print axioms A207123.N_even_top
+#print axioms A207123.uInt_add_two_pow
+#print axioms A207123.uInt_add_mul_two_pow
+#print axioms A207123.uInt_neg_modEq_one_two
+#print axioms A207123.upoly_eval_neg_ne_zero_of_two_pow
+#print axioms A207123.two_pow_factorization_lt_of_upoly_eval_neg_eq_zero
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
