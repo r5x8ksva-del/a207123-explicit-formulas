@@ -397,6 +397,20 @@ import A207123
 #print axioms A207123.eval_pos_of_coeff_nonneg
 #print axioms A207123.no_root_lt_neg_one
 #print axioms A207123.hpoly_exists_coeff_neg
+-- 论文定理 6.1：U_k(m) 没有 (2,1) 形状的单族和（SingleSum.lean）
+#print axioms A207123.substU_coords_unique
+#print axioms A207123.coe_eq_coords
+#print axioms A207123.eval_eq_coords
+#print axioms A207123.coe_Ppoly_uS
+#print axioms A207123.eval_Wpoly_root
+#print axioms A207123.cubic_roots
+#print axioms A207123.powsum_rat
+#print axioms A207123.not_rat_cube_81
+#print axioms A207123.no_common_value
+#print axioms A207123.binomZ_sub_two_mul
+#print axioms A207123.coeff_uS_pow_mul_mk_one
+#print axioms A207123.coeff_substU_mk_mul_mk_one
+#print axioms A207123.thm_S
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

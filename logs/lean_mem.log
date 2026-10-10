@@ -248,3 +248,13 @@
 2026-10-10 08:35:57 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8043 MINHEAD=7462 KILLED=0 REASON= QFAIL=0
 2026-10-10 08:36:19 | Axioms.lean | exit 0 | 21s | PEAK=8133 MINHEAD=7460 KILLED=0 REASON= QFAIL=0
 2026-10-10 08:36:43 | Checks.lean | exit 0 | 22s | PEAK=8136 MINHEAD=7490 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:01:12 | A207123/SingleSum.lean | exit 1 | 23s | PEAK=8070 MINHEAD=7424 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:12:19 | A207123/SingleSum.lean | exit 1 | 25s | PEAK=8104 MINHEAD=7358 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:13:37 | A207123/SingleSum.lean | exit 0 | 25s | PEAK=8106 MINHEAD=7394 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:14:14 | A207123/SingleSum.lean -o .lake/build/lib/lean/A207123/SingleSum.olean -i .lake/build/lib/lean/A207123/SingleSum.ilean | exit 0 | 26s | PEAK=8110 MINHEAD=7419 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:14:58 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 1 | 10s | PEAK=7769 MINHEAD=7656 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:15:21 | Axioms.lean | exit 1 | 22s | PEAK=8124 MINHEAD=7362 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:16:26 | A207123/SingleSum.lean -o .lake/build/lib/lean/A207123/SingleSum.olean -i .lake/build/lib/lean/A207123/SingleSum.ilean | exit 0 | 29s | PEAK=8105 MINHEAD=7354 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:16:48 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8126 MINHEAD=7399 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:17:18 | Axioms.lean | exit 0 | 23s | PEAK=8126 MINHEAD=7377 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:17:41 | Checks.lean | exit 0 | 22s | PEAK=8138 MINHEAD=7402 KILLED=0 REASON= QFAIL=0
