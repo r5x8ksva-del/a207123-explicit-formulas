@@ -215,6 +215,24 @@ import A207123
 #print axioms A207123.cm_four
 #print axioms A207123.U_four_asymp
 #print axioms A207123.tendsto_one_sub_theta
+-- 论文注记 3.3 的数值：区间算术，ρ_m、c_m、κ_m 的有理区间与 U 的精确值（AsympNumerics.lean）
+#print axioms A207123.lt_rho_of_cubic
+#print axioms A207123.rho_lt_of_cubic
+#print axioms A207123.cm_eq_frac
+#print axioms A207123.cm_bounds
+#print axioms A207123.cmNQ_cast
+#print axioms A207123.rho_one_approx
+#print axioms A207123.cm_one_approx
+#print axioms A207123.cm_two_approx
+#print axioms A207123.cm_three_approx
+#print axioms A207123.kappa_one_approx
+#print axioms A207123.kappa_four_approx
+#print axioms A207123.kappa_twentyfour_approx
+#print axioms A207123.kappa_increasing
+#print axioms A207123.relerr_two_six
+#print axioms A207123.relerr_two_twenty
+#print axioms A207123.relerr_twentyfour_seventytwo
+#print axioms A207123.relerr_twentyfour_twoforty
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

@@ -1,0 +1,15 @@
+[lean_one 启动前：AVAIL=6300 COMMIT=16860 LIMIT=33453 HEADROOM=16593 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/AsympNumerics.lean:83:13: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A207123/AsympNumerics.lean:83:13: warning: Unused tactic linter: `exact hx` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A207123/AsympNumerics.lean:88:13: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A207123/AsympNumerics.lean:88:13: warning: Unused tactic linter: `exact hx` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+[lean_one 内存：PEAK=8153 MINHEAD=7261 KILLED=0 REASON= QFAIL=0；用时 391s]
+[lean_one exit code 0]
