@@ -411,6 +411,18 @@ import A207123
 #print axioms A207123.coeff_uS_pow_mul_mk_one
 #print axioms A207123.coeff_substU_mk_mul_mk_one
 #print axioms A207123.thm_S
+-- 论文定理 6.2：以上升结尾的部分也没有 (2,1) 形状的单族和（SingleSumAsc.lean）
+#print axioms A207123.eval_eq_coords_at
+#print axioms A207123.single_sum_cross
+#print axioms A207123.NUp_add_NA
+#print axioms A207123.P_mul_GUp
+#print axioms A207123.Dpoly_eval_half
+#print axioms A207123.eval_Wpoly_sub_one_root
+#print axioms A207123.cubic_roots_half
+#print axioms A207123.powsum_rat_half
+#print axioms A207123.not_rat_cube_17
+#print axioms A207123.no_common_value_b2
+#print axioms A207123.thm_Spart
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

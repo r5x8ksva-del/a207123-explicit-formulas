@@ -258,3 +258,9 @@
 2026-10-10 09:16:48 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8126 MINHEAD=7399 KILLED=0 REASON= QFAIL=0
 2026-10-10 09:17:18 | Axioms.lean | exit 0 | 23s | PEAK=8126 MINHEAD=7377 KILLED=0 REASON= QFAIL=0
 2026-10-10 09:17:41 | Checks.lean | exit 0 | 22s | PEAK=8138 MINHEAD=7402 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:34:46 | A207123/SingleSumAsc.lean | exit 1 | 24s | PEAK=8087 MINHEAD=7253 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:35:44 | A207123/SingleSumAsc.lean | exit 0 | 24s | PEAK=8097 MINHEAD=7307 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:36:14 | A207123/SingleSumAsc.lean -o .lake/build/lib/lean/A207123/SingleSumAsc.olean -i .lake/build/lib/lean/A207123/SingleSumAsc.ilean | exit 0 | 24s | PEAK=8102 MINHEAD=7308 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:36:48 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8108 MINHEAD=7272 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:37:19 | Axioms.lean | exit 0 | 24s | PEAK=8128 MINHEAD=7266 KILLED=0 REASON= QFAIL=0
+2026-10-10 09:37:46 | Checks.lean | exit 0 | 26s | PEAK=8129 MINHEAD=7256 KILLED=0 REASON= QFAIL=0

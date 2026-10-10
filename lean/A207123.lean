@@ -51,3 +51,4 @@ import A207123.Pick
 import A207123.CLT
 import A207123.Chains
 import A207123.SingleSum
+import A207123.SingleSumAsc
