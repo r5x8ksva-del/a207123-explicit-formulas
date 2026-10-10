@@ -311,3 +311,13 @@
 2026-10-10 12:13:12 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8141 MINHEAD=6937 KILLED=0 REASON= QFAIL=0
 2026-10-10 12:13:40 | Axioms.lean | exit 0 | 21s | PEAK=8153 MINHEAD=6923 KILLED=0 REASON= QFAIL=0
 2026-10-10 12:14:09 | Checks.lean | exit 0 | 22s | PEAK=8153 MINHEAD=6967 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:28:30 | A207123/Barker.lean | exit 1 | 25s | PEAK=8086 MINHEAD=6896 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:29:21 | A207123/Barker.lean | exit 0 | 24s | PEAK=8086 MINHEAD=6987 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:29:57 | A207123/Barker.lean -o .lake/build/lib/lean/A207123/Barker.olean -i .lake/build/lib/lean/A207123/Barker.ilean | exit 0 | 24s | PEAK=8095 MINHEAD=6982 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:30:31 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8143 MINHEAD=6923 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:31:01 | Axioms.lean | exit 0 | 22s | PEAK=8151 MINHEAD=6911 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:31:25 | Checks.lean | exit 0 | 22s | PEAK=8155 MINHEAD=6896 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:33:48 | A207123/Barker.lean -o .lake/build/lib/lean/A207123/Barker.olean -i .lake/build/lib/lean/A207123/Barker.ilean | exit 0 | 26s | PEAK=8087 MINHEAD=6846 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:34:20 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8143 MINHEAD=6805 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:34:44 | Axioms.lean | exit 0 | 23s | PEAK=8152 MINHEAD=6828 KILLED=0 REASON= QFAIL=0
+2026-10-10 12:35:09 | Checks.lean | exit 0 | 23s | PEAK=8153 MINHEAD=6846 KILLED=0 REASON= QFAIL=0

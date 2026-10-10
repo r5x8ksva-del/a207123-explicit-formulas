@@ -534,6 +534,16 @@ import A207123
 #print axioms A207123.oeis_A207125
 #print axioms A207123.oeis_A207126
 #print axioms A207123.oeis_A207127
+-- T5.4(2)：Barker 在 A207118、A207069 的 g.f. 与闭式猜想（Barker.lean）
+#print axioms A207123.coeff_ofList_of_le
+#print axioms A207123.coeff_ofList_getD
+#print axioms A207123.gf_of_rec
+#print axioms A207123.U_three_rat
+#print axioms A207123.barker_A207118_even
+#print axioms A207123.barker_A207118_odd
+#print axioms A207123.a_three_eq
+#print axioms A207123.barker_A207118_gf
+#print axioms A207123.barker_A207069_gf
 -- T3.5(2)（NPDE.lean）
 #print axioms A207123.NK_pde
 -- T3.6（HGen.lean）
