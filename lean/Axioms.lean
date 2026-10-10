@@ -677,6 +677,20 @@ import A207123
 #print axioms A207123.mobius_lam_eq_upoly
 #print axioms A207123.mobius_lam_eq_zero
 #print axioms A207123.mobius_lam_small
+-- T5.3(2)(a)(b)(c)：负整数零点的同余、显式根界与顶端两层（NegZeros.lean）
+#print axioms A207123.upoly_eval_int
+#print axioms A207123.uInt_add_prime_pow
+#print axioms A207123.uInt_neg_modEq_one
+#print axioms A207123.upoly_eval_neg_ne_zero_of_prime_pow
+#print axioms A207123.dvd_lcm_of_upoly_eval_neg_eq_zero
+#print axioms A207123.N_ratio_ge
+#print axioms A207123.alt_sum_pos
+#print axioms A207123.upoly_eval_neg_sign
+#print axioms A207123.coeff_gnegPoly_top_three
+#print axioms A207123.coeff_gnegPoly_top_four
+#print axioms A207123.coeff_gnegPoly_top_five
+#print axioms A207123.factorial_lt_stirlingFirst_two
+#print axioms A207123.upoly_eval_neg_ne_zero_two
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
