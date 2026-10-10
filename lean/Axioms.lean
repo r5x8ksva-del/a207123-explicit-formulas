@@ -577,6 +577,34 @@ import A207123
 #print axioms A207123.T5_2_top
 #print axioms A207123.T5_2_sub
 #print axioms A207123.T5_2_sub_three
+-- T5.2 的其余部分：B_d(k) 的多项式性与门槛、[m^{k−2}]、[m^{k−3}]、m → ∞ 的形状（MCoeff.lean）
+#print axioms A207123.exists_poly_of_fwdDiff_iter
+#print axioms A207123.fwdDiff_iter_poly_eq_zero
+#print axioms A207123.ndEsym_poly
+#print axioms A207123.descPochhammer_dvd_of_eval
+#print axioms A207123.esQ_eval
+#print axioms A207123.esQ_natDegree_le
+#print axioms A207123.B_eq_bPoly
+#print axioms A207123.bPoly_natDegree
+#print axioms A207123.B_threshold
+#print axioms A207123.B_threshold_exact
+#print axioms A207123.ndEsym_one
+#print axioms A207123.ndEsym_two
+#print axioms A207123.ndEsym_three
+#print axioms A207123.N_eight_five
+#print axioms A207123.N_sub_three
+#print axioms A207123.N_table
+#print axioms A207123.N_ten_six_twelve_seven
+#print axioms A207123.N_sub_four
+#print axioms A207123.N_sub_five
+#print axioms A207123.ndPoly_two
+#print axioms A207123.ndPoly_three
+#print axioms A207123.table_exc
+#print axioms A207123.T5_2_coeff_two
+#print axioms A207123.T5_2_coeff_three
+#print axioms A207123.upoly_sub_shape_natDegree
+#print axioms A207123.T5_2_asymp
+#print axioms A207123.upoly_top_three
 -- T5.3(1)–(5)（HStruct.lean）
 #print axioms A207123.hpoly_eval_zero_eq_one
 #print axioms A207123.hpoly_eval_one_two
