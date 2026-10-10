@@ -837,6 +837,18 @@ import A207123
 #print axioms A207123.rat_cube_ne_three
 #print axioms A207123.U_no_one_atom_rat
 #print axioms A207123.U_no_one_atom
+-- notes/12 定理 2(a)（猜想总表 A25 (a) 的 E 部分）：以上升结尾的序列数，每个 i 一个原子的单和也不存在（OneAtomE.lean）
+#print axioms A207123.EA_add_NA
+#print axioms A207123.NA_F4
+#print axioms A207123.EA_F4_phi
+#print axioms A207123.EA_atoms_exists
+#print axioms A207123.aeval_M2_bpoly
+#print axioms A207123.det_aeval_M2_A
+#print axioms A207123.det_aeval_M2_xpowRep
+#print axioms A207123.cube_mul_ne_seventeen_mul_cube
+#print axioms A207123.EA_no_one_atom_rat
+#print axioms A207123.one_atom_rat_of_complex
+#print axioms A207123.EA_no_one_atom
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
