@@ -318,6 +318,14 @@ import A207123
 #print axioms A207123.hpoly_root_im_eq_zero
 #print axioms A207123.separable_hpoly
 #print axioms A207123.thm_realroots
+-- 论文推论 8.2：N 的每一行为正、严格对数凹、单峰（LogConcave.lean）
+#print axioms A207123.prod_X_add_C_coeff_props
+#print axioms A207123.root_neg_nR
+#print axioms A207123.nR_eq_prod
+#print axioms A207123.coeff_nR_eq_rowProd
+#print axioms A207123.rowProd_props
+#print axioms A207123.unimodal_of_pos_logconcave
+#print axioms A207123.cor_logconcave
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
