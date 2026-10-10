@@ -384,6 +384,19 @@ import A207123
 #print axioms A207123.charFun_cltLaw_bound
 #print axioms A207123.tendsto_charFun_cltLaw
 #print axioms A207123.cor_clt
+-- 论文注记 8.16：链多项式与序复形（Chains.lean）
+#print axioms A207123.surjective_iff_colMat
+#print axioms A207123.numChainsBar_eq_card_heights
+#print axioms A207123.card_legalF_surjective
+#print axioms A207123.numChainsBar_eq_N
+#print axioms A207123.N_eq_numChainsBar
+#print axioms A207123.numChainsBar_eq_zero
+#print axioms A207123.numChainsBar_pos
+#print axioms A207123.nR_eq_chainPoly
+#print axioms A207123.hpoly_eq_hPoly_orderComplex
+#print axioms A207123.eval_pos_of_coeff_nonneg
+#print axioms A207123.no_root_lt_neg_one
+#print axioms A207123.hpoly_exists_coeff_neg
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
