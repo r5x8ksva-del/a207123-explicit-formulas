@@ -20,8 +20,8 @@ import A207123.OeisRemark
   `search_ref_A207123_p2.txt`）的 `%F … Empirical` 一行逐字生成，脚本同时在 Python 里核对。A207069、A207070 的标题
   用列规则 001/101，陈述用 `aAlt`，再由 `aAlt_two`、`aAlt_three` 换成 `a`。
 
-没有形式化的：Berlekamp–Massey 给出的阶 10、22、28、49、55、85 是最小的，以及它们等于两个因子的特征根之积中不同值
-的个数（注记 3.5 的后半句）。
+本文件没有形式化的：Berlekamp–Massey 给出的阶 10、22、28、49、55、85 是最小的，以及它们等于两个因子的特征根之积中
+不同值的个数（注记 3.5 的后半句；后来在 `OeisRowOrders.lean` 形式化）。
 -/
 
 namespace A207123

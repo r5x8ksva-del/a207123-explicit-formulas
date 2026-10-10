@@ -1,0 +1,111 @@
+[lean_one 启动前：AVAIL=7011 COMMIT=17048 LIMIT=33453 HEADROOM=16405 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/OeisRowOrders.lean:70:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A207123/OeisRowOrders.lean:74:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+A207123/OeisRowOrders.lean:121:34: error: unsolved goals
+n e : ℕ
+γ : List ℤ
+htop : γ.getD e 0 = 1
+hrec : ∀ (k : ℕ), ∑ i ∈ range (e + 1), ↑(γ.getD i 0) * ↑(a (k + i) n) = 0
+hH : (Matrix.of fun i j => ↑(a (↑i + ↑j) n)).det ≠ 0
+⊢ ¬γ[e]?.getD 0 = 0
+A207123/OeisRowOrders.lean:121:43: warning: This simp argument is unused:
+  htop
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:162:37: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [listPoly]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:187:37: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [digs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:241:27: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:249:46: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.replicate_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:260:29: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A207123/OeisRowOrders.lean:263:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+A207123/OeisRowOrders.lean:257:39: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hkUnit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:272:36: warning: This simp argument is unused:
+  List.getD_cons_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [seg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:297:2: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+A207123/OeisRowOrders.lean:360:25: error(lean.unknownIdentifier): Unknown identifier `sig_level`
+A207123/OeisRowOrders.lean:360:9: error: Tactic `rcases` failed: `x✝ : ?m.9` is not an inductive datatype
+A207123/OeisRowOrders.lean:420:60: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A207123/OeisRowOrders.lean:420:60: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A207123/OeisRowOrders.lean:465:14: warning: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+A207123/OeisRowOrders.lean:464:33: error: unsolved goals
+γ : List ℤ
+a b e : ℕ
+hlen : γ.length = e + 1
+htop : γ.getD e 0 = 1
+hc : lvCheck γ a b = true
+P : ℂ[X] := ∑ l ∈ range (e + 1), C ↑(γ.getD l 0) * X ^ l
+hP : P = ∑ l ∈ range (e + 1), C ↑(γ.getD l 0) * X ^ l
+⊢ γ[e]?.getD 0 = 1
+A207123/OeisRowOrders.lean:478:37: warning: `Polynomial.eval_finset_sum` has been deprecated: Use `Polynomial.eval_finsetSum` instead
+A207123/OeisRowOrders.lean:465:14: warning: This simp argument is unused:
+  finset_sum_coeff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hP, coeff_C_mul_X_pow, htop]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:465:32: warning: This simp argument is unused:
+  coeff_C_mul_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hP, finset_sum_coeff, htop]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRowOrders.lean:465:51: warning: This simp argument is unused:
+  htop
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hP, finset_sum_coeff, coeff_C_mul_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+[lean_one 内存：PEAK=8907 MINHEAD=6601 KILLED=0 REASON= QFAIL=0；用时 50s]
+[lean_one exit code 1]

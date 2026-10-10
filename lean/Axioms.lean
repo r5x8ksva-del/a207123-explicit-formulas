@@ -233,6 +233,31 @@ import A207123
 #print axioms A207123.relerr_two_twenty
 #print axioms A207123.relerr_twentyfour_seventytwo
 #print axioms A207123.relerr_twentyfour_twoforty
+-- 论文注记 3.5 后半句：行递推阶的最小性（Hankel 行列式模 97 的证书）与不同乘积的个数（OeisRowOrders.lean）
+#print axioms A207123.eq_zero_of_rec_of_eventually
+#print axioms A207123.hankel_det_eq_zero
+#print axioms A207123.order_ge_of_hankel
+#print axioms A207123.hankel_det_ne_zero_of_kron
+#print axioms A207123.card_products_le
+#print axioms A207123.card_products_ge
+#print axioms A207123.hankel_row_two
+#print axioms A207123.hankel_row_three
+#print axioms A207123.hankel_row_four
+#print axioms A207123.hankel_row_five
+#print axioms A207123.hankel_row_six
+#print axioms A207123.hankel_row_seven
+#print axioms A207123.row_min_order_two
+#print axioms A207123.row_min_order_three
+#print axioms A207123.row_min_order_four
+#print axioms A207123.row_min_order_five
+#print axioms A207123.row_min_order_six
+#print axioms A207123.row_min_order_seven
+#print axioms A207123.card_row_products_two
+#print axioms A207123.card_row_products_three
+#print axioms A207123.card_row_products_four
+#print axioms A207123.card_row_products_five
+#print axioms A207123.card_row_products_six
+#print axioms A207123.card_row_products_seven
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

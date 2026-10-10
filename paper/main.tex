@@ -1155,7 +1155,7 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 40 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 41 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
 
 \begin{table}[ht]
 \centering
@@ -1173,7 +1173,7 @@ Theorem~\ref{thm:asym}(1) & \lean{existsUnique\_rho}, \lean{one\_lt\_rho}, \lean
 Theorem~\ref{thm:asym}(2) & \lean{thm\_asym\_two}, \lean{alpha\_unique}, \lean{alpha\_eq}\\
 Theorem~\ref{thm:asym}(3) & \lean{thm\_asym\_three}, \lean{cm\_zero}, \lean{U\_asymp\_bound}\\
 Remark~\ref{rem:asym} & \lean{tendsto\_ratio}, \lean{rate\_not\_improvable}, \lean{cm\_one}, \lean{rho\_int\_iff}, \lean{cm\_four}, \lean{U\_four\_asymp}, \lean{tendsto\_one\_sub\_theta}; numerical values: \lean{rho\_one\_approx}, \lean{cm\_one\_approx}, \lean{cm\_two\_approx}, \lean{cm\_three\_approx}, \lean{kappa\_one\_approx}, \lean{kappa\_four\_approx}, \lean{kappa\_twentyfour\_approx}, \lean{kappa\_increasing}, \lean{relerr\_two\_six}, \lean{relerr\_two\_twenty}, \lean{relerr\_twentyfour\_seventytwo}, \lean{relerr\_twentyfour\_twoforty}\\
-Corollary~\ref{cor:columns}, Remark~\ref{rem:oeis} in part & \lean{T1\_9}, \lean{parity\_min\_order}, \lean{oeis\_A207118}--\lean{oeis\_A207122}, \lean{row\_rec}, \lean{row\_rec\_of\_consecutive}, \lean{aAlt\_two}, \lean{aAlt\_three}, \lean{oeis\_A207069}, \lean{oeis\_A207070}, \lean{oeis\_A207124}--\lean{oeis\_A207127}\\
+Corollary~\ref{cor:columns}, Remark~\ref{rem:oeis} & \lean{T1\_9}, \lean{parity\_min\_order}, \lean{oeis\_A207118}--\lean{oeis\_A207122}, \lean{row\_rec}, \lean{row\_rec\_of\_consecutive}, \lean{aAlt\_two}, \lean{aAlt\_three}, \lean{oeis\_A207069}, \lean{oeis\_A207070}, \lean{oeis\_A207124}--\lean{oeis\_A207127}, \lean{row\_min\_order\_two}--\lean{row\_min\_order\_seven}, \lean{card\_row\_products\_two}--\lean{card\_row\_products\_seven}\\
 Theorem~\ref{thm:blocks} & \lean{blocks\_bijOn}, \lean{asc\_concatBlk}\\
 Theorem~\ref{thm:gfxy}, Lemma~\ref{lem:coef} & \lean{Gxy\_zero}, \lean{Gxy\_rec}, \lean{Gxy\_prod}, \lean{coef\_formula\_xy}\\
 Theorem~\ref{thm:explicit}, Remark~\ref{rem:forms} & \lean{U\_explicit}, \lean{Us\_explicit}, \lean{U\_F3}, \lean{U\_F4}\\
@@ -1193,10 +1193,10 @@ Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_e
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 3454 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 3683 declarations of the development finds no other axiom.
 \end{sloppypar}
 
-Not formalized: the bijection of Proposition~\ref{prop:bijection} (the formal proofs of Theorems~\ref{thm:gfxy} and~\ref{thm:explicit} go through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; the minimality of the orders of the row recurrences in Remark~\ref{rem:oeis}; the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
+Not formalized: the bijection of Proposition~\ref{prop:bijection} (the formal proofs of Theorems~\ref{thm:gfxy} and~\ref{thm:explicit} go through the recurrence instead, refined by ascents); in Lemma~\ref{lem:coef}, the identification of $H(m,s,j)$ with $r$-Stirling numbers for $j\ge1$; the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
 
 The basic definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository. Further definitions used by some entries of Table~\ref{tab:lean}, for instance those of the blocks, of $c_m$ and $\tau_m$ and of the value of a rational function at a point, are documented in the Lean files and have so far been compared with the paper only by AI.
 

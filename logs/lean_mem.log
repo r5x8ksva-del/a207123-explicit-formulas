@@ -164,3 +164,16 @@
 2026-10-10 03:30:03 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8088 MINHEAD=7419 KILLED=0 REASON= QFAIL=0
 2026-10-10 03:30:31 | Axioms.lean | exit 0 | 22s | PEAK=8086 MINHEAD=7442 KILLED=0 REASON= QFAIL=0
 2026-10-10 03:31:01 | Checks.lean | exit 0 | 23s | PEAK=8089 MINHEAD=7494 KILLED=0 REASON= QFAIL=0
+2026-10-10 03:51:26 | RowSpeedTest.lean | exit 137 | 36s | PEAK=11231 MINHEAD=4130 KILLED=1 REASON=lean private 11231 MB > cap 11000 MB QFAIL=0
+2026-10-10 03:56:45 | RowSpeedTest.lean | exit 1 | 24s | PEAK=8504 MINHEAD=7071 KILLED=0 REASON= QFAIL=0
+2026-10-10 03:57:49 | RowSpeedTest.lean | exit 137 | 35s | PEAK=11128 MINHEAD=4201 KILLED=1 REASON=lean private 11128 MB > cap 11000 MB QFAIL=0
+2026-10-10 04:01:40 | RowSpeedTest.lean | exit 0 | 24s | PEAK=8577 MINHEAD=6684 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:10:16 | A207123/OeisRowOrders.lean -o .lake/build/lib/lean/A207123/OeisRowOrders.olean -i .lake/build/lib/lean/A207123/OeisRowOrders.ilean | exit 1 | 50s | PEAK=8907 MINHEAD=6601 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:13:00 | A207123/OeisRowOrders.lean -o .lake/build/lib/lean/A207123/OeisRowOrders.olean -i .lake/build/lib/lean/A207123/OeisRowOrders.ilean | exit 0 | 57s | PEAK=8908 MINHEAD=6710 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:14:25 | A207123/OeisRemark.lean -o .lake/build/lib/lean/A207123/OeisRemark.olean -i .lake/build/lib/lean/A207123/OeisRemark.ilean | exit 0 | 37s | PEAK=8104 MINHEAD=7419 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:15:08 | A207123/OeisRows.lean -o .lake/build/lib/lean/A207123/OeisRows.olean -i .lake/build/lib/lean/A207123/OeisRows.ilean | exit 0 | 42s | PEAK=8513 MINHEAD=7092 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:15:39 | A207123/AsympNumerics.lean -o .lake/build/lib/lean/A207123/AsympNumerics.olean -i .lake/build/lib/lean/A207123/AsympNumerics.ilean | exit 0 | 30s | PEAK=8157 MINHEAD=7299 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:16:38 | A207123/OeisRowOrders.lean -o .lake/build/lib/lean/A207123/OeisRowOrders.olean -i .lake/build/lib/lean/A207123/OeisRowOrders.ilean | exit 0 | 57s | PEAK=8887 MINHEAD=6564 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:17:08 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8102 MINHEAD=7358 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:17:36 | Axioms.lean | exit 0 | 22s | PEAK=8116 MINHEAD=7379 KILLED=0 REASON= QFAIL=0
+2026-10-10 04:18:04 | Checks.lean | exit 0 | 22s | PEAK=8123 MINHEAD=7400 KILLED=0 REASON= QFAIL=0

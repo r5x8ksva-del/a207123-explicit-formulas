@@ -1,0 +1,13 @@
+A207069 row n=2 e=10  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=52800) PASS  lvCheck(levels <=1,<=1) PASS  BM(mod 1000003)=10  gamma_0=1  PASS
+A207070 row n=3 e=22  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=132576) PASS  lvCheck(levels <=2,<=1) PASS  BM(mod 1000003)=22  gamma_0=16  PASS
+A207124 row n=4 e=28  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=158592) PASS  lvCheck(levels <=2,<=2) PASS  BM(mod 1000003)=28  gamma_0=256  PASS
+A207125 row n=5 e=49  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=277728) PASS  lvCheck(levels <=3,<=2) PASS  BM(mod 1000003)=49  gamma_0=-4478976  PASS
+A207126 row n=6 e=55  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=302688) PASS  lvCheck(levels <=3,<=3) PASS  BM(mod 1000003)=55  gamma_0=-362797056  PASS
+A207127 row n=7 e=85  Hankel inverse mod 97 (kronCheck, B=2^20, max (p-1)*sum=464064) PASS  lvCheck(levels <=4,<=3) PASS  BM(mod 1000003)=85  gamma_0=-82170781731127296  PASS
+row n=2 numeric distinct products 10 of 16  PASS
+row n=3 numeric distinct products 22 of 28  PASS
+row n=4 numeric distinct products 28 of 49  PASS
+row n=5 numeric distinct products 49 of 70  PASS
+row n=6 numeric distinct products 55 of 100  PASS
+row n=7 numeric distinct products 85 of 130  PASS
+ALL PASS
