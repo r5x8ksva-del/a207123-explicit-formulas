@@ -760,6 +760,26 @@ import A207123
 #print axioms A207123.numS_aeval_ne_zero
 #print axioms A207123.Numq_isCoprime_Ppoly
 #print axioms A207123.Nser_denom_dvd
+-- T5.4(3)：R_k = A038718(k+2)（A038718 按 OEIS 条目的置换定义）与允许行到 Hamilton 路的显式双射（A038718.lean）
+#print axioms A207123.IsHam.mem
+#print axioms A207123.mem_hamSet
+#print axioms A207123.isHam_hamA
+#print axioms A207123.isHam_hamB
+#print axioms A207123.isHam_zz
+#print axioms A207123.ham_end_one
+#print axioms A207123.ham_cases
+#print axioms A207123.card_hamSet_add_four
+#print axioms A207123.A038718_eq_card_hamSet
+#print axioms A207123.A038718_add_four
+#print axioms A207123.A038718_rec
+#print axioms A207123.A038718_one
+#print axioms A207123.A038718_two
+#print axioms A207123.A038718_three
+#print axioms A207123.A038718_four
+#print axioms A207123.U_one_eq_A038718
+#print axioms A207123.isHam_rowPath
+#print axioms A207123.rowPath_surj
+#print axioms A207123.rowPath_bijOn
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/

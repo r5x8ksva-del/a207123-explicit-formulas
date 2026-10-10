@@ -1,0 +1,8 @@
+# py -3.14 code/main_extra/try_layout.py <variants.json> <scratch>（2026-10-10，Lean 续作第四十五项）
+# v0 = 补丁第一次写入的短句；v1 = 写出三条等式（采用）；v2 = 「Of the OEIS identities ... are all formalized」；
+# v3 = 短句加「(A038718 by its permutations)」。
+v0 exit 0 pages 39 {'8. Real roots': [24], '9. Formal verification': [29], 'Table 5.': [30], '10. Open problems': [30], 'Table 6.': [31], 'A. The Lean definitions': [32], 'B. The recurrences': [34], 'References': [38]} warnings: 1
+    warning: main.tex:1232: Underfull \vbox (badness 1688) has occurred while \output is active
+v1 exit 0 pages 39 {'8. Real roots': [24], '9. Formal verification': [29], 'Table 5.': [30], '10. Open problems': [30], 'Table 6.': [31], 'A. The Lean definitions': [32], 'B. The recurrences': [34], 'References': [38]} warnings: 0
+v2 exit 0 pages 39 {'8. Real roots': [24], '9. Formal verification': [29], 'Table 5.': [30], '10. Open problems': [30], 'Table 6.': [31], 'A. The Lean definitions': [32], 'B. The recurrences': [34], 'References': [38]} warnings: 0
+v3 exit 0 pages 39 {'8. Real roots': [24], '9. Formal verification': [29], 'Table 5.': [30], '10. Open problems': [30], 'Table 6.': [31], 'A. The Lean definitions': [32], 'B. The recurrences': [34], 'References': [38]} warnings: 0

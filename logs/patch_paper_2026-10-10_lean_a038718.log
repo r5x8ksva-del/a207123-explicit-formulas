@@ -1,0 +1,10 @@
+declarations: 5714  Axioms lines: 709
+paper\main.tex: 3 edits
+paper\reviewer_guide.tex: 2 edits
+README.md: 6 edits
+notes\Lean定义核对清单.md: 1 edits
+猜想总表.md: 2 edits
+# 补注（同日，补丁运行之后）：第一次写入的短句「The OEIS identities in Section~\ref{sec:intro} are formalized, ...」
+# 让论文第 29 页少一行，Tectonic 报 main.tex:1232 Underfull \vbox (badness 1688)。用 code/main_extra/try_layout.py
+# 试了四种写法（结果见 logs/try_layout_2026-10-10_a038718.log），改用把三条等式写出来的那一句（39 页、无警告），
+# 补丁脚本里的新句子与说明已同步改成这一句。
