@@ -82,6 +82,10 @@ import A207123
 #print axioms A207123.isFractionRing_ratFn
 #print axioms A207123.dXK_dTK_comm
 #print axioms A207123.isDFinite_one
+-- 论文注记 5.2：不以上升结尾的序列与 ₁F₁（EndAscent.lean）
+#print axioms A207123.P_mul_NAser
+#print axioms A207123.sum_inv_P_eq_hyp1F1
+#print axioms A207123.remark_1F1
 -- T3.8 中 U 的部分：Rel(U) = O_U·L1，O_U 的正规形（OreRel.lean）
 #print axioms A207123.RelU_eq
 #print axioms A207123.RelU_iff_mem_span

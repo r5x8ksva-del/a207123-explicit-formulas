@@ -1,0 +1,63 @@
+[lean_one 启动前：AVAIL=5988 COMMIT=16401 LIMIT=33453 HEADROOM=17052 TOTAL=16045；看门狗上限 CAP=10000MB，MINHEAD=3000MB]
+A207123/EndAscent.lean:99:45: error: unsolved goals
+m : ℕ
+⊢ #({l ∈ {[]} | endsAsc l = false}) = 1
+A207123/EndAscent.lean:100:25: warning: This simp argument is unused:
+  endsAsc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [NA, L_zero_left]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/EndAscent.lean:103:46: error: unsolved goals
+k : ℕ
+⊢ #({l ∈ {List.replicate k 0} | endsAsc l = false}) = 1
+A207123/EndAscent.lean:104:26: warning: This simp argument is unused:
+  endsAsc_replicate_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [NA, L_zero_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+A207123/EndAscent.lean:208:14: error: unsolved goals
+case succ
+K : Type u_1
+inst✝ : Field K
+x : K
+hx : x ≠ 0
+n : ℕ
+ih :
+  Polynomial.eval (1 - (1 - x) / x ^ 3) (ascPochhammer K n) =
+    (-1) ^ n * (x ^ 3)⁻¹ ^ n * ∏ i ∈ range n, Polynomial.eval x (bpoly K (i + 1))
+⊢ (x * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n +
+          (x ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * ↑n * (-1) ^ n +
+        (x ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n -
+      (x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n =
+    -((x ^ 3 * x⁻¹ ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n) +
+          (x ^ 4 * x⁻¹ ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n +
+        (x ^ 6 * x⁻¹ ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * ↑n * (-1) ^ n +
+      (x ^ 6 * x⁻¹ ^ 3 * x⁻¹ ^ (n * 3) * ∏ x_1 ∈ range n, (1 - x - x ^ 3 - x ^ 3 * ↑x_1)) * (-1) ^ n
+A207123/EndAscent.lean:238:37: warning: This simp argument is unused:
+  RatFunc.algebraMap_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bpoly, RatFunc.algebraMap_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/EndAscent.lean:248:37: error: Application type mismatch: The argument
+  Eq.trans h (Eq.symm (map_zero ?m.132))
+has type
+  (algebraMap (Polynomial ℚ) (RatFunc ℚ)) (bpoly ℚ i) = ?m.132 0
+of sort `Prop` but is expected to have type
+  Type ?u.71
+of sort `Type (?u.71 + 1)` in the application
+  @RatFunc.algebraMap_injective (Eq.trans h (Eq.symm (map_zero ?m.132)))
+[lean_one 内存：PEAK=8037 MINHEAD=8090 KILLED=0 REASON= QFAIL=0；用时 27s]
+[lean_one exit code 1]
+exit=1
