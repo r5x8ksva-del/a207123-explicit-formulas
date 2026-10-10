@@ -601,6 +601,18 @@ import A207123
 #print axioms A207123.Numq_coeff_exception_two
 #print axioms A207123.N_six_four
 #print axioms A207123.N_sub_two
+-- T4.3(5) 一般 j 的低次系数：2j 次多项式、首项与门槛（NumLow.lean）
+#print axioms A207123.piSeq_succ
+#print axioms A207123.piSeq_poly
+#print axioms A207123.piPoly_eval
+#print axioms A207123.piPoly_zero
+#print axioms A207123.numLowPoly_spec
+#print axioms A207123.numLowPoly_natDegree
+#print axioms A207123.numLowPoly_threshold
+#print axioms A207123.T4_3_five
+#print axioms A207123.T4_3_five_threshold
+#print axioms A207123.numLowPoly_one
+#print axioms A207123.numLowPoly_two
 -- T4.1、T4.2(3)、T5.2（NearDiag.lean）
 #print axioms A207123.T4_1_a
 #print axioms A207123.T4_1
