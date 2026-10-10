@@ -8,8 +8,8 @@ import A207123.SingleSum
 `U_k(m) = Σ_{s≥s₀} A(s)·C(k+c−αs, βs+d)` 对所有 `k ≥ k₀` 成立，当且仅当 `α + β = 1`（主定理 `thm_shapes`；表示的
 定义 `ShapeRep` 在 `ShapeFibre.lean`）。
 
-* `α + β = 1`：`(0,1)` 是 Newton 前向差分公式（Mathlib 的 `shift_eq_sum_fwdDiff_iter`，`shape_01`），`(1,0)` 是
-  `U_k = Σ_{s≤k}(U_s − U_{s−1})`（`shape_10`）。
+* `α + β = 1`：对任何数列 `f` 都有表示。`(0,1)` 是 Newton 前向差分公式（Mathlib 的 `shift_eq_sum_fwdDiff_iter`，
+  `shape_01`），`(1,0)` 是 `f(k) = Σ_{s≤k}(f(s) − f(s−1))`（`shape_10`）。
 * `(2,1)` 是定理 6.1（`not_shape_21`，由 `thm_S`）。其余 `α + β ≥ 2` 的形状用 `ShapeFibre.lean` 的纤维引理：`b_1` 的
   根 `ξ` 所在的纤维上每个点都是某个 `b_w` 的根（`exists_b_root_of_Ppoly`），再分情形：
   - `α, β ≥ 1`、`α ≠ 2β`（`not_shape_a`）：纤维多项式 `ψ = X^{α+β} − v₀(1−X)^β` 的根 `η_i` 满足 `w_iη_i³ = 1 − η_i`，
@@ -483,17 +483,17 @@ theorem not_shape_21 {m : ℕ} (hm : 1 ≤ m) : ¬ ShapeRep (fun k => (U k m : �
   · rw [e1, e2]
   · rw [zero_mul]
 
-/-- `(1,0)`：`U_k = Σ_{0≤s≤k} (U_s − U_{s−1})·C(k−s, 0)`。 -/
-theorem shape_10 (m : ℕ) : ShapeRep (fun k => (U k m : ℂ)) 1 0 := by
-  refine ⟨0, 0, 0, 0, fun s => (U s.toNat m : ℂ) - if 1 ≤ s then (U (s - 1).toNat m : ℂ) else 0,
+/-- `(1,0)`：每个数列都有 `f(k) = Σ_{0≤s≤k} (f(s) − f(s−1))·C(k−s, 0)`（`f(−1) = 0`）。 -/
+theorem shape_10 (f : ℕ → ℂ) : ShapeRep f 1 0 := by
+  refine ⟨0, 0, 0, 0, fun s => f s.toNat - if 1 ≤ s then f (s - 1).toNat else 0,
     fun k hk => ?_⟩
   rw [finsum_eq_sum_of_support_subset _ (s := (Finset.range (k + 1)).map Nat.castEmbedding) ?_]
   · rw [Finset.sum_map]
     have hterm : ∀ t ∈ Finset.range (k + 1),
-        (if (0 : ℤ) ≤ (Nat.castEmbedding t : ℤ) then ((U (Nat.castEmbedding t : ℤ).toNat m : ℂ) -
-          if 1 ≤ (Nat.castEmbedding t : ℤ) then (U ((Nat.castEmbedding t : ℤ) - 1).toNat m : ℂ) else 0) *
+        (if (0 : ℤ) ≤ (Nat.castEmbedding t : ℤ) then (f (Nat.castEmbedding t : ℤ).toNat -
+          if 1 ≤ (Nat.castEmbedding t : ℤ) then f ((Nat.castEmbedding t : ℤ) - 1).toNat else 0) *
           (binomZ (k + 0 - ((1 : ℕ) : ℤ) * (Nat.castEmbedding t : ℤ)) (((0 : ℕ) : ℤ) * (Nat.castEmbedding t : ℤ) + 0) : ℂ)
-          else 0) = (U t m : ℂ) - if 1 ≤ t then (U (t - 1) m : ℂ) else 0 := by
+          else 0) = f t - if 1 ≤ t then f (t - 1) else 0 := by
       intro t ht
       have htk : t ≤ k := Nat.lt_succ_iff.1 (Finset.mem_range.1 ht)
       simp only [Nat.castEmbedding_apply, Int.toNat_natCast]
@@ -508,7 +508,6 @@ theorem shape_10 (m : ℕ) : ShapeRep (fun k => (U k m : ℂ)) 1 0 := by
       · rw [ite_eq_right (by exact_mod_cast h1), ite_eq_right h1]
     rw [Finset.sum_congr rfl hterm]
     clear hterm hk
-    show (U k m : ℂ) = _
     induction k with
     | zero => simp
     | succ k ih =>
@@ -532,12 +531,11 @@ theorem shape_10 (m : ℕ) : ShapeRep (fun k => (U k m : ℂ)) 1 0 := by
     rw [Finset.mem_coe, Finset.mem_map]
     exact ⟨s.toNat, Finset.mem_range.2 (by omega), by simp; omega⟩
 
-/-- `(0,1)`：Newton 前向差分公式 `U_k = Σ_{s≤k} C(k, s)·Δ^s U(0)`。 -/
-theorem shape_01 (m : ℕ) : ShapeRep (fun k => (U k m : ℂ)) 0 1 := by
-  refine ⟨0, 0, 0, 0, fun s => (fwdDiff 1)^[s.toNat] (fun k => (U k m : ℂ)) 0, fun k _ => ?_⟩
-  have hN := shift_eq_sum_fwdDiff_iter 1 (fun k => (U k m : ℂ)) k 0
+/-- `(0,1)`：Newton 前向差分公式，每个数列都有 `f(k) = Σ_{s≤k} C(k, s)·Δ^s f(0)`。 -/
+theorem shape_01 (f : ℕ → ℂ) : ShapeRep f 0 1 := by
+  refine ⟨0, 0, 0, 0, fun s => (fwdDiff 1)^[s.toNat] f 0, fun k _ => ?_⟩
+  have hN := shift_eq_sum_fwdDiff_iter 1 f k 0
   simp only [smul_eq_mul, mul_one, zero_add, nsmul_eq_mul] at hN
-  show (U k m : ℂ) = _
   rw [hN]
   rw [finsum_eq_sum_of_support_subset _ (s := (Finset.range (k + 1)).map Nat.castEmbedding) ?_]
   · rw [Finset.sum_map]
@@ -594,8 +592,8 @@ theorem thm_shapes {m α β : ℕ} (hm : 1 ≤ m) (hαβ : α + β ≠ 0) :
     · exact not_shape_a hm hα hβ he hrep
   · intro h
     rcases (by omega : (α = 1 ∧ β = 0) ∨ (α = 0 ∧ β = 1)) with ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩
-    · exact shape_10 m
-    · exact shape_01 m
+    · exact shape_10 _
+    · exact shape_01 _
 
 end
 

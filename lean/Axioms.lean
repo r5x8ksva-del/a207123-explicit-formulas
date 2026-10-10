@@ -458,6 +458,19 @@ import A207123
 #print axioms A207123.shape_10
 #print axioms A207123.shape_01
 #print axioms A207123.thm_shapes
+-- 论文第 6.1 节其余的断言：m = 0、不以上升结尾的部分、m = 1 的 U^↑、注记 6.4 的第一句（ShapeRemarks.lean）
+#print axioms A207123.binomZ_natCast
+#print axioms A207123.NA_eq_sum
+#print axioms A207123.NA_single_sum
+#print axioms A207123.NA_excluded_form
+#print axioms A207123.U_zero_single_sum
+#print axioms A207123.NUp_explicit
+#print axioms A207123.NUp_one_single_sum
+#print axioms A207123.NUp_one_excluded_form
+#print axioms A207123.shapeRepZ_natCast
+#print axioms A207123.sum_triA
+#print axioms A207123.shape_neg
+#print axioms A207123.shape_sum_one
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
