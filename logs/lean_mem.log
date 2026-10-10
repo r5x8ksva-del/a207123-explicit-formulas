@@ -235,3 +235,11 @@
 2026-10-10 07:58:54 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8074 MINHEAD=7574 KILLED=0 REASON= QFAIL=0
 2026-10-10 07:59:14 | Axioms.lean | exit 0 | 19s | PEAK=8128 MINHEAD=7582 KILLED=0 REASON= QFAIL=0
 2026-10-10 07:59:38 | Checks.lean | exit 0 | 22s | PEAK=8131 MINHEAD=7568 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:19:25 | A207123/CLT.lean -o .lake/build/lib/lean/A207123/CLT.olean -i .lake/build/lib/lean/A207123/CLT.ilean | exit 1 | 25s | PEAK=8086 MINHEAD=7489 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:21:54 | A207123/CLT.lean -o .lake/build/lib/lean/A207123/CLT.olean -i .lake/build/lib/lean/A207123/CLT.ilean | exit 1 | 26s | PEAK=8092 MINHEAD=7561 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:23:25 | A207123/CLT.lean -o .lake/build/lib/lean/A207123/CLT.olean -i .lake/build/lib/lean/A207123/CLT.ilean | exit 1 | 27s | PEAK=8099 MINHEAD=7518 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:24:08 | A207123/CLT.lean -o .lake/build/lib/lean/A207123/CLT.olean -i .lake/build/lib/lean/A207123/CLT.ilean | exit 1 | 26s | PEAK=8094 MINHEAD=7561 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:24:52 | A207123/CLT.lean -o .lake/build/lib/lean/A207123/CLT.olean -i .lake/build/lib/lean/A207123/CLT.ilean | exit 0 | 35s | PEAK=8116 MINHEAD=7534 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:25:54 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8088 MINHEAD=7501 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:26:17 | Axioms.lean | exit 0 | 22s | PEAK=8123 MINHEAD=7530 KILLED=0 REASON= QFAIL=0
+2026-10-10 08:26:40 | Checks.lean | exit 0 | 22s | PEAK=8136 MINHEAD=7522 KILLED=0 REASON= QFAIL=0

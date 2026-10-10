@@ -365,6 +365,25 @@ import A207123
 #print axioms A207123.lemma_il_pick_two
 #print axioms A207123.realRooted_of_im_nonpos
 #print axioms A207123.realRooted_of_im_nonneg
+-- 论文推论 8.14：不同取值个数的中心极限定理（CLT.lean）
+#print axioms A207123.sum_cltWords
+#print axioms A207123.isProbabilityMeasure_cltLaw
+#print axioms A207123.card_cltWords_eq
+#print axioms A207123.linProd_moments
+#print axioms A207123.cltMean_eq
+#print axioms A207123.cltVar_eq
+#print axioms A207123.cltVar_eq_sum
+#print axioms A207123.cltVar_ge
+#print axioms A207123.tendsto_cltVar
+#print axioms A207123.charFun_cltLaw
+#print axioms A207123.charFun_cltLaw_eq_prod
+#print axioms A207123.norm_multiset_prod_sub_prod_le
+#print axioms A207123.exp_I_taylor_bound
+#print axioms A207123.bernoulli_factor_bound
+#print axioms A207123.factor_eq
+#print axioms A207123.charFun_cltLaw_bound
+#print axioms A207123.tendsto_charFun_cltLaw
+#print axioms A207123.cor_clt
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
