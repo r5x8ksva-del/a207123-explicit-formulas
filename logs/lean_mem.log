@@ -126,3 +126,8 @@
 2026-10-10 01:13:22 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8020 MINHEAD=7910 KILLED=0 REASON= QFAIL=0
 2026-10-10 01:13:45 | Axioms.lean | exit 0 | 22s | PEAK=8078 MINHEAD=8013 KILLED=0 REASON= QFAIL=0
 2026-10-10 01:14:11 | Checks.lean | exit 0 | 25s | PEAK=8084 MINHEAD=8011 KILLED=0 REASON= QFAIL=0
+2026-10-10 01:33:50 | A207123/RootAsymp.lean -o .lake/build/lib/lean/A207123/RootAsymp.olean -i .lake/build/lib/lean/A207123/RootAsymp.ilean | exit 1 | 23s | PEAK=8058 MINHEAD=7757 KILLED=0 REASON= QFAIL=0
+2026-10-10 01:34:36 | A207123/RootAsymp.lean -o .lake/build/lib/lean/A207123/RootAsymp.olean -i .lake/build/lib/lean/A207123/RootAsymp.ilean | exit 0 | 25s | PEAK=8065 MINHEAD=7708 KILLED=0 REASON= QFAIL=0
+2026-10-10 01:35:36 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 23s | PEAK=8057 MINHEAD=7352 KILLED=0 REASON= QFAIL=0
+2026-10-10 01:36:00 | Axioms.lean | exit 0 | 23s | PEAK=8080 MINHEAD=7434 KILLED=0 REASON= QFAIL=0
+2026-10-10 01:36:25 | Checks.lean | exit 0 | 24s | PEAK=8077 MINHEAD=7444 KILLED=0 REASON= QFAIL=0

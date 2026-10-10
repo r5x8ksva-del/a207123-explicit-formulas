@@ -191,6 +191,10 @@ import A207123
 #print axioms A207123.thm_asym_two
 #print axioms A207123.alpha_unique
 #print axioms A207123.alpha_eq
+-- 论文定理 3.2(3)：c_m = α_m(ρ_m) 的两个表达式、c_m > 0、τ_m < ρ_{m−1} 与 U_k(m) 的渐近式（RootAsymp.lean）
+#print axioms A207123.thm_asym_three
+#print axioms A207123.cm_zero
+#print axioms A207123.U_asymp_bound
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
