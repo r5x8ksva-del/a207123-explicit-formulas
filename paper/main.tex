@@ -1155,12 +1155,12 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 43 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 45 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Table~\ref{tab:lean}.
 
 \begin{table}[ht]
 \centering
 \footnotesize
-\renewcommand{\arraystretch}{0.96}
+\renewcommand{\arraystretch}{0.90}
 \begin{tabular}{l>{\raggedright\arraybackslash}p{0.62\textwidth}}
 \toprule
 Result & Lean names\\
@@ -1187,6 +1187,9 @@ Theorem~\ref{thm:relN} & \lean{RelN\_eq}, \lean{RelN\_iff\_mem\_span}, \lean{fin
 Proposition~\ref{prop:triangle} & \lean{relU\_support\_det}, \lean{relU\_card\_support}, \lean{not\_mem\_relU\_of\_support\_subset}\\
 Corollary~\ref{cor:stirlinglike} & \lean{not\_annihilate\_three\_terms\_rat}, \lean{not\_annihilate\_two\_terms\_rat}, \lean{not\_annihilate\_kauers\_rat}; with denominators cleared: \lean{not\_annihilate\_three\_terms}, \lean{not\_annihilate\_two\_terms}, \lean{not\_annihilate\_kauers}\\
 Theorem~\ref{thm:neardiag}, Proposition~\ref{prop:newton} & \lean{T4\_1}, \lean{T4\_1\_threshold}, \lean{T4\_2\_3}\\
+Lemmas~\ref{lem:il-factor}, \ref{lem:il-sum}, \ref{lem:il-ops}(1)(2) & \lean{interlaces\_mul\_iff}, \lean{Interlaces.add\_left}, \lean{Interlaces.add\_right}, \lean{interlaces\_X\_sub\_C\_mul}, \lean{interlaces\_derivative}, \lean{Interlaces.X\_mul}\\
+Lemmas~\ref{lem:il-T}, \ref{lem:rowrec} & \lean{lemma\_il\_T\_one}, \lean{Interlaces.opTz}, \lean{Interlaces.opPsiz}, \lean{interlaces\_one\_add\_X\_mul\_opTz}, \lean{opTz\_one\_add\_X\_mul}, \lean{nR\_rec}\\
+Proposition~\ref{prop:four}, Theorem~\ref{thm:realroots} & \lean{prop\_four\_relations}, \lean{alpha\_two}, \lean{beta\_two}; zeros of $n_k$ real: \lean{realRooted\_nR}, \lean{nrowPoly\_root\_im\_eq\_zero}\\
 Lemma~\ref{lem:minusone}, except the sign of $\lambda_k$ & \lean{rootMultiplicity\_nrowPoly\_ceil}, \lean{natDegree\_hpoly}, \lean{leadingCoeff\_hpoly\_sign}\\
 Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_eval\_neg\_ne\_zero}, \lean{leadingCoeff\_hpoly\_eq}\\
 \bottomrule
@@ -1195,12 +1198,12 @@ Corollary~\ref{cor:negzeros} & \lean{upoly\_eval\_neg\_eq\_zero}, \lean{upoly\_e
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 3790 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 4092 declarations of the development finds no other axiom.
 \end{sloppypar}
 
-Not formalized: the explicit form of the bijection of Proposition~\ref{prop:bijection} (the formal version compares the two cardinalities); the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and Section~\ref{sec:realroots}, apart from Corollary~\ref{cor:negzeros} and the statements about $a_k$, $\deg h_k$ and the sign of the leading coefficient of $h_k$ in Lemma~\ref{lem:minusone}.
+Not formalized: the explicit form of the bijection of Proposition~\ref{prop:bijection} (the formal version compares the two cardinalities); the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:short}; and in Section~\ref{sec:realroots} Lemmas~\ref{lem:il-pick} and~\ref{lem:il-ops}(3) (the formal proof of Lemma~\ref{lem:il-T}(2) writes $g\ll f$ as $g=cf+\sum_aw_a\,f/(z-a)$ with $c,w_a\ge0$ instead), Proposition~\ref{prop:simple}, hence the simplicity of the zeros and the statement about $h_k$ in Theorem~\ref{thm:realroots}, Corollary~\ref{cor:logconcave}, the sign of $\lambda_k$ in Lemma~\ref{lem:minusone}, Corollaries~\ref{cor:hk-signs} and~\ref{cor:clt}, and Remark~\ref{rem:chains}.
 
-The basic definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository. Further definitions used by some entries of Table~\ref{tab:lean}, for instance those of the blocks, of $c_m$ and $\tau_m$ and of the value of a rational function at a point, are documented in the Lean files and have so far been compared with the paper only by AI.
+The basic definitions that carry the meaning of the formal statements are transcribed in Appendix~\ref{app:lean}: good triples and $U$ (lists of length $k$ with entries at most $m$); the row and column rules for matrices; D-finiteness (following Lipshitz, with the field $K(x,t)$ realized inside the fraction field of $K[[x]][[t]]$); the operators $X$, $E^{-1}$ with the convention that negative indices give $0$; and $\Rel(U)$ as annihilation on some quadrant. The author has compared these definitions with the statements in this paper; the checklist used for the comparison is in the notes folder of the repository. Further definitions used by some entries of Table~\ref{tab:lean}, for instance those of the blocks, of $c_m$ and $\tau_m$, of the value of a rational function at a point and of $g\ll f$ (by the characterization after its definition), are documented in the Lean files and have so far been compared with the paper only by AI.
 
 % =====================================================================
 \section{Open problems}\label{sec:open}
@@ -1213,7 +1216,6 @@ The basic definitions that carry the meaning of the formal statements are transc
 \end{enumerate}
 
 % =====================================================================
-\clearpage
 \appendix
 \section{The Lean definitions}\label{app:lean}
 

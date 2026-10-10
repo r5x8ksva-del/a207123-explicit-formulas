@@ -274,6 +274,33 @@ import A207123
 #print axioms A207123.NAs_eq_g
 #print axioms A207123.NAs_explicit
 #print axioms A207123.prop_bijection
+-- 论文 §8.1 交错的工具（Interlace.lean）
+#print axioms A207123.interlaces_mul_iff
+#print axioms A207123.sign_eval
+#print axioms A207123.alt_points
+#print axioms A207123.interlaces_coneSum
+#print axioms A207123.interlaces_uconeSum
+#print axioms A207123.cone_of_interlaces
+#print axioms A207123.ucone_of_interlaces
+#print axioms A207123.Interlaces.add_left
+#print axioms A207123.Interlaces.add_right
+#print axioms A207123.interlaces_derivative
+#print axioms A207123.interlaces_X_sub_C_mul
+#print axioms A207123.Interlaces.X_mul
+-- 论文引理 8.8、8.9 与命题 8.10：行多项式只有实根（RealRoots.lean）
+#print axioms A207123.opDz_interlaces
+#print axioms A207123.lemma_il_T_one
+#print axioms A207123.Interlaces.opDz
+#print axioms A207123.Interlaces.opTz
+#print axioms A207123.Interlaces.opPsiz
+#print axioms A207123.interlaces_one_add_X_mul_opTz
+#print axioms A207123.opTz_one_add_X_mul
+#print axioms A207123.nR_rec
+#print axioms A207123.alpha_two
+#print axioms A207123.beta_two
+#print axioms A207123.prop_four_relations
+#print axioms A207123.realRooted_nR
+#print axioms A207123.nrowPoly_root_im_eq_zero
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
