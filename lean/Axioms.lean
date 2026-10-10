@@ -797,6 +797,12 @@ import A207123
 #print axioms A207123.atoms_lin_indep
 #print axioms A207123.three_atoms_unique
 #print axioms A207123.three_atoms
+-- T4.3(6) 的 j = 2、3：Num_q 次高两项系数的闭式（调和数），猜想总表 A5 (6) 的一部分（NumHigh.lean）
+#print axioms A207123.Numq_coeff_step
+#print axioms A207123.Numq_three_eq
+#print axioms A207123.Numq_coeff_top
+#print axioms A207123.Numq_top_two
+#print axioms A207123.Numq_top_three
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
