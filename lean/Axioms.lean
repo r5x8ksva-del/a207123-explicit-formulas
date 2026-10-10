@@ -740,6 +740,17 @@ import A207123
 #print axioms A207123.hpoly_two_eval_neg_one
 #print axioms A207123.prod_mul_add_one_sign
 #print axioms A207123.hpoly_eval_neg_one_sign
+-- T4.3(8) 证明中引用的 Laguerre 零点定理（α 为自然数）：首一 Laguerre 多项式只有实根（Laguerre.lean）
+#print axioms A207123.lagM_monic_natDegree
+#print axioms A207123.lagM_interlaces
+#print axioms A207123.realRooted_lagM
+#print axioms A207123.lagM_aeval_ne_zero
+#print axioms A207123.coeff_lagS
+#print axioms A207123.lagS_key
+#print axioms A207123.lagS_rec
+#print axioms A207123.lagS_aeval
+#print axioms A207123.lagS_aeval_ne_zero
+#print axioms A207123.lagS_aeval_ofReal_ne_zero
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/

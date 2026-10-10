@@ -365,3 +365,10 @@
 2026-10-10 14:20:47 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8152 MINHEAD=5982 KILLED=0 REASON= QFAIL=0
 2026-10-10 14:21:12 | Axioms.lean | exit 0 | 24s | PEAK=8164 MINHEAD=5919 KILLED=0 REASON= QFAIL=0
 2026-10-10 14:21:48 | Checks.lean | exit 0 | 35s | PEAK=8163 MINHEAD=5851 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:37:04 | A207123/Laguerre.lean | exit 1 | 24s | PEAK=8041 MINHEAD=5705 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:38:19 | A207123/Laguerre.lean | exit 0 | 23s | PEAK=8050 MINHEAD=5792 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:38:49 | A207123/Laguerre.lean | exit 0 | 22s | PEAK=8052 MINHEAD=5779 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:39:33 | A207123/Laguerre.lean -o .lake/build/lib/lean/A207123/Laguerre.olean -i .lake/build/lib/lean/A207123/Laguerre.ilean | exit 0 | 24s | PEAK=8052 MINHEAD=5778 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:39:57 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 23s | PEAK=8136 MINHEAD=5708 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:40:20 | Axioms.lean | exit 0 | 22s | PEAK=8166 MINHEAD=5739 KILLED=0 REASON= QFAIL=0
+2026-10-10 14:40:46 | Checks.lean | exit 0 | 24s | PEAK=8163 MINHEAD=5741 KILLED=0 REASON= QFAIL=0
