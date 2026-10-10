@@ -30,3 +30,4 @@ import A207123.ThreeTerm
 import A207123.GenFunXY
 import A207123.Blocks
 import A207123.EndAscent
+import A207123.RootExpansion

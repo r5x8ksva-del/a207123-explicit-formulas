@@ -187,6 +187,10 @@ import A207123
 #print axioms A207123.rho_mul_rho_sub_one_strictMono
 #print axioms A207123.normSq_lt_rho_pred_sq
 #print axioms A207123.root_P_min
+-- 论文定理 3.2(2)：U_k(m) 按 (y − 1)∏(y³ − y² − i) 的根展开，系数非零、唯一，α_m 与 α_j 的关系（RootExpansion.lean）
+#print axioms A207123.thm_asym_two
+#print axioms A207123.alpha_unique
+#print axioms A207123.alpha_eq
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
