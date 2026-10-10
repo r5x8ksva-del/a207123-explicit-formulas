@@ -45,3 +45,4 @@ import A207123.Interlace
 import A207123.RealRoots
 import A207123.SimpleRoots
 import A207123.LogConcave
+import A207123.RootLocation

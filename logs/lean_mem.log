@@ -215,3 +215,14 @@
 2026-10-10 07:03:49 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8118 MINHEAD=7668 KILLED=0 REASON= QFAIL=0
 2026-10-10 07:04:12 | Axioms.lean | exit 0 | 22s | PEAK=8123 MINHEAD=7697 KILLED=0 REASON= QFAIL=0
 2026-10-10 07:04:36 | Checks.lean | exit 0 | 23s | PEAK=8130 MINHEAD=7709 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:21:07 | A207123/RootLocation.lean | exit 1 | 24s | PEAK=8093 MINHEAD=7607 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:21:47 | A207123/RootLocation.lean | exit 1 | 22s | PEAK=8081 MINHEAD=7648 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:26:06 | A207123/RootLocation.lean | exit 0 | 23s | PEAK=8090 MINHEAD=7675 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:26:44 | A207123/RootLocation.lean -o .lake/build/lib/lean/A207123/RootLocation.olean -i .lake/build/lib/lean/A207123/RootLocation.ilean | exit 0 | 24s | PEAK=8088 MINHEAD=7707 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:27:05 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 20s | PEAK=8079 MINHEAD=7690 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:27:30 | Axioms.lean | exit 0 | 24s | PEAK=8121 MINHEAD=7649 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:27:53 | Checks.lean | exit 0 | 22s | PEAK=8132 MINHEAD=7635 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:32:23 | A207123/RootLocation.lean -o .lake/build/lib/lean/A207123/RootLocation.olean -i .lake/build/lib/lean/A207123/RootLocation.ilean | exit 0 | 25s | PEAK=8088 MINHEAD=7584 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:32:45 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 21s | PEAK=8119 MINHEAD=7557 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:33:08 | Axioms.lean | exit 0 | 22s | PEAK=8126 MINHEAD=7553 KILLED=0 REASON= QFAIL=0
+2026-10-10 07:33:32 | Checks.lean | exit 0 | 23s | PEAK=8132 MINHEAD=7545 KILLED=0 REASON= QFAIL=0

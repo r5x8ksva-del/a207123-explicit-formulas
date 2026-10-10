@@ -326,6 +326,26 @@ import A207123
 #print axioms A207123.rowProd_props
 #print axioms A207123.unimodal_of_pos_logconcave
 #print axioms A207123.cor_logconcave
+-- 论文引理 8.12 中 λ_k 的符号与推论 8.13：h_k 的根的位置与系数的变号次数（RootLocation.lean）
+#print axioms A207123.nrowPoly_eq_mul_mPoly
+#print axioms A207123.mPoly_eval_neg_one
+#print axioms A207123.div_three_identities
+#print axioms A207123.lemma_minusone_sign_alt
+#print axioms A207123.lemma_minusone_sign
+#print axioms A207123.lemma_minusone
+#print axioms A207123.nAbove_nR_parity
+#print axioms A207123.nBelow_add_count_add_nAbove
+#print axioms A207123.Interlaces.nBelow_le
+#print axioms A207123.nBelow_nR_parity
+#print axioms A207123.nBelow_nR
+#print axioms A207123.hR_roots_toFinset
+#print axioms A207123.card_roots_hR_gt_one
+#print axioms A207123.card_roots_hR_neg
+#print axioms A207123.signVariations_add_comp_neg_X_le
+#print axioms A207123.signVariations_map_rat
+#print axioms A207123.signVariations_hR
+#print axioms A207123.signVariations_hpoly
+#print axioms A207123.cor_hk_signs
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
