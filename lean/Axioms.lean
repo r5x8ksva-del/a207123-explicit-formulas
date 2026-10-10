@@ -751,6 +751,15 @@ import A207123
 #print axioms A207123.lagS_aeval
 #print axioms A207123.lagS_aeval_ne_zero
 #print axioms A207123.lagS_aeval_ofReal_ne_zero
+-- T4.3(8)：对一切 q，gcd(Num_q, P_{q−1}) = 1，最简分母恰为 P_{q−1}（NumGcd.lean）
+#print axioms A207123.numS_eq_comp
+#print axioms A207123.bpoly_eq_add
+#print axioms A207123.prod_Ico_sub_eq
+#print axioms A207123.term_modEq
+#print axioms A207123.Numq_modEq
+#print axioms A207123.numS_aeval_ne_zero
+#print axioms A207123.Numq_isCoprime_Ppoly
+#print axioms A207123.Nser_denom_dvd
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
