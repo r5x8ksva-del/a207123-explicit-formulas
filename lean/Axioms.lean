@@ -816,6 +816,18 @@ import A207123
 #print axioms A207123.prod_roots_nR_one_add_two
 #print axioms A207123.hpoly_eval_neg_one_prod
 #print axioms A207123.hpoly_one_eval_neg_one
+-- 「每个 i 两个原子」的存在例子：猜想总表 A25 (d) 的 m ≤ 2、A26 (iii) 的 q ≤ 3（TwoAtoms.lean）
+#print axioms A207123.ci_one_id_C1
+#print axioms A207123.ci_two_id_C2
+#print axioms A207123.ci_one_id_C3
+#print axioms A207123.U_one_atoms
+#print axioms A207123.U_one_two_atoms
+#print axioms A207123.U_two_atoms_F4
+#print axioms A207123.U_two_two_atoms
+#print axioms A207123.U_two_two_atoms_one
+#print axioms A207123.N_two_two_atoms
+#print axioms A207123.N_three_two_atoms
+#print axioms A207123.N_three_two_atoms_zero
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
