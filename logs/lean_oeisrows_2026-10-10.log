@@ -1,0 +1,122 @@
+[lean_one 启动前：AVAIL=6015 COMMIT=16813 LIMIT=33453 HEADROOM=16640 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/OeisRows.lean:53:4: error: `A207123.Uext` has already been declared
+A207123/OeisRows.lean:61:12: error: unsolved goals
+m : ℕ
+x✝ : 1 ≤ 1
+⊢ U 1 m + U 0 (m + 1) =
+    (U 1 m +
+        match ↑m + 1, 2 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0) +
+      (m + 1) *
+        match ↑m + 1, 0 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0
+A207123/OeisRows.lean:62:12: error: unsolved goals
+m : ℕ
+x✝ : 1 ≤ 2
+⊢ U 2 m + U 1 (m + 1) + (m + 1) =
+    (U 2 m +
+        match ↑m + 1, 3 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0) +
+      (m + 1) *
+        match ↑m + 1, 1 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0
+A207123/OeisRows.lean:63:16: error: unsolved goals
+m j : ℕ
+x✝ : 1 ≤ j + 3
+⊢ U (j + 3) m + U (j + 2) (m + 1) + (m + 1) * U j (m + 1) =
+    (U (j + 3) m +
+        match ↑m + 1, j + 3 + 1 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0) +
+      (m + 1) *
+        match ↑m + 1, j + 2 with
+        | Int.ofNat k, m => U k m
+        | Int.negSucc 0, x => 1
+        | Int.negSucc n.succ, x => 0
+A207123/OeisRows.lean:72:6: error: No goals to be solved
+A207123/OeisRows.lean:75:104: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.156 = ?m.156
+but is expected to have type
+  U k (m + 1) = Uext (↑m + 1) (k + 1 + 1)
+in the application
+  colStep_eq m n (k + 1) y z (U k (m + 1)) (Decidable.byContradiction fun a => colStep_eq._proof_1_9 m k x y z hk a)
+    (Eq.mpr (id (congrArg (fun _a => y = Uext (↑m + 1) _a) (Nat.add_sub_cancel k 1))) hy) hz rfl
+A207123/OeisRows.lean:87:45: error: unsolved goals
+K m : ℕ
+⊢ 1 =
+    match ↑m + 1, 2 with
+    | Int.ofNat k, m => U k m
+    | Int.negSucc 0, x => 1
+    | Int.negSucc n.succ, x => 0
+A207123/OeisRows.lean:87:40: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.68 = ?m.68
+but is expected to have type
+  1 = Uext (↑m + 1) 1
+in the application
+  colStep_eq m K 1 0 1 1 le_rfl ?m.66 rfl
+A207123/OeisRows.lean:87:60: warning: This simp argument is unused:
+  U_zero_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Uext]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRows.lean:136:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (List.zipWith (fun g v => g * v) γ do
+      let a ← seg f (k + 1) n
+      pure ↑a).sum
+in the target expression
+  (List.zipWith (fun g v => g * v) (g :: γ) do
+        let a ← f k :: seg f (k + 1) n
+        pure ↑a).sum =
+    ∑ j ∈ range (g :: γ).length, (g :: γ).getD j 0 * ↑(f (k + j))
+
+f : ℕ → ℕ
+g : ℤ
+γ : List ℤ
+k n : ℕ
+h : (g :: γ).length ≤ n + 1
+ih :
+  (List.zipWith (fun g v => g * v) γ do
+        let a ← seg f (k + 1) n
+        pure ↑a).sum =
+    ∑ j ∈ range γ.length, γ.getD j 0 * ↑(f (k + 1 + j))
+⊢ (List.zipWith (fun g v => g * v) (g :: γ) do
+        let a ← f k :: seg f (k + 1) n
+        pure ↑a).sum =
+    ∑ j ∈ range (g :: γ).length, (g :: γ).getD j 0 * ↑(f (k + j))
+A207123/OeisRows.lean:135:27: warning: This simp argument is unused:
+  List.zipWith_cons_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [resid, seg, List.sum_cons] at ih ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRows.lean:135:51: warning: This simp argument is unused:
+  List.sum_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [resid, seg, List.zipWith_cons_cons] at ih ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/OeisRows.lean:379:2: error: Tactic `simp` failed with a nested error:
+(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+[lean_one 内存：PEAK=8526 MINHEAD=7302 KILLED=0 REASON= QFAIL=0；用时 65s]
+[lean_one exit code 1]

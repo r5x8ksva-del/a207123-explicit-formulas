@@ -1,0 +1,7 @@
+A207069  row n=2  order 10 (paper 10)  Delta_n=16  k0=0 (holds at k=0: True)  K=26  window PASS  up to k=74 PASS  max|c|=1 digits
+A207070  row n=3  order 22 (paper 22)  Delta_n=28  k0=0 (holds at k=0: True)  K=50  window PASS  up to k=134 PASS  max|c|=3 digits
+A207124  row n=4  order 28 (paper 28)  Delta_n=49  k0=0 (holds at k=0: True)  K=77  window PASS  up to k=209 PASS  max|c|=4 digits
+A207125  row n=5  order 49 (paper 49)  Delta_n=70  k0=0 (holds at k=0: True)  K=119  window PASS  up to k=314 PASS  max|c|=9 digits
+A207126  row n=6  order 55 (paper 55)  Delta_n=100  k0=0 (holds at k=0: True)  K=155  window PASS  up to k=416 PASS  max|c|=11 digits
+A207127  row n=7  order 85 (paper 85)  Delta_n=130  k0=0 (holds at k=0: True)  K=215  window PASS  up to k=566 PASS  max|c|=20 digits
+ALL PASS

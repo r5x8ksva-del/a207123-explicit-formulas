@@ -268,6 +268,16 @@ import A207123
 #print axioms A207123.row_rec_of_consecutive
 #print axioms A207123.aAlt_two
 #print axioms A207123.aAlt_three
+-- 论文注记 3.5：行 n = 2,…,7 的经验递推对一切 k 成立（经证明的 U 求值器 + decide +kernel 核对；OeisRows.lean）
+#print axioms A207123.Ucol_eq
+#print axioms A207123.rowList_eq
+#print axioms A207123.row_rec_of_check
+#print axioms A207123.oeis_A207069
+#print axioms A207123.oeis_A207070
+#print axioms A207123.oeis_A207124
+#print axioms A207123.oeis_A207125
+#print axioms A207123.oeis_A207126
+#print axioms A207123.oeis_A207127
 -- T3.5(2)（NPDE.lean）
 #print axioms A207123.NK_pde
 -- T3.6（HGen.lean）
