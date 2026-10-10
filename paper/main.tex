@@ -1155,7 +1155,7 @@ Let $k\ge1$, let $\mathbf 0=(0,\dots,0)$ and $\mathbf 1=(1,\dots,1)$ be the leas
 % =====================================================================
 \section{Formal verification}\label{sec:lean}
 
-The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 59 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Tables~\ref{tab:lean} and~\ref{tab:lean8}.
+The Lean~4 development (Lean v4.34.1, Mathlib for the same version) consists of 60 files that start from the definitions of $a_k(n)$ (as a number of matrices) and of $U_k(m)$ (as a number of lists). The main formal statements are listed in Tables~\ref{tab:lean} and~\ref{tab:lean8}.
 
 \begin{table}[t]
 \centering
@@ -1217,7 +1217,7 @@ Remark~\ref{rem:chains}, except citations & \lean{N\_eq\_numChainsBar}, \lean{nR
 \end{table}
 
 \begin{sloppypar}
-The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 5006 declarations of the development finds no other axiom.
+The development also formalizes several auxiliary results that are not stated in this paper. The command \lean{\#print axioms} reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}, and an exhaustive scan of all 5033 declarations of the development finds no other axiom.
 \end{sloppypar}
 
 Not formalized: the explicit form of the bijection of Proposition~\ref{prop:bijection} (the formal version compares the two cardinalities); the construction of $\cO(k,m)$ itself (the formal version of Corollary~\ref{cor:saturated} describes $\cO(k,m)L_1$ by normal forms and \eqref{eq:rightmult}); the step in Remark~\ref{rem:kauers} from Kauers' definition to the annihilation of an extension of $U$ by a three-term operator; Section~\ref{sec:twofam}; and the last two sentences of Remark~\ref{rem:othershapes}. Lemma~\ref{lem:il-pick} is formalized, but the other formal proofs in Section~\ref{sec:realroots} write $g\ll f$ as $g=cf+\sum_aw_a\,f/(z-a)$ with $c,w_a\ge0$ instead of using it, and the formal proof of Corollary~\ref{cor:clt} estimates the characteristic functions directly instead of citing the Lindeberg--Feller theorem.

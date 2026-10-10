@@ -643,6 +643,17 @@ import A207123
 #print axioms A207123.hpoly_aeval_eq_tsum
 #print axioms A207123.hpoly_pos_of_mem_Icc
 #print axioms A207123.hpoly_ne_zero_of_mem_Icc
+-- T5.3(4) 的 Möbius 解释：Philip Hall 定理与 Λ_k 的 Möbius 函数（Mobius.lean）
+#print axioms A207123.chainsIn_zero
+#print axioms A207123.chainsIn_eq_zero
+#print axioms A207123.chainsIn_succ
+#print axioms A207123.mu_eq_sum_chains
+#print axioms A207123.chainsIn_lam
+#print axioms A207123.lamBot_lt_lamTop
+#print axioms A207123.mobius_lam
+#print axioms A207123.mobius_lam_eq_upoly
+#print axioms A207123.mobius_lam_eq_zero
+#print axioms A207123.mobius_lam_small
 
 /-! 全量扫描：`A207123` 各模块中的每一个声明（含辅助引理与编译器自动生成的声明）所依赖的公理，
 只应是 `propext`、`Classical.choice`、`Quot.sound`。 -/
