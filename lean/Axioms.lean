@@ -92,6 +92,11 @@ import A207123
 -- 论文推论 5.5：有理系数的零化算子，分母乘掉的形式（Saturated.lean）
 #print axioms A207123.mul_mem_ideal_of_vanish
 #print axioms A207123.mem_ideal_of_mul_mem_ideal
+-- 论文推论 5.5：有理函数系数的原样陈述，𝒪(k,m)·L1 用正规形与式 (4)描述，取公分母化到上面两条（SaturatedRat.lean）
+#print axioms A207123.TUrat_algebraMap
+#print axioms A207123.exists_common_den
+#print axioms A207123.saturated_one_rat
+#print axioms A207123.saturated_two_rat
 #print axioms A207123.pure_ann_zero
 #print axioms A207123.col_zero
 #print axioms A207123.red_of_mem

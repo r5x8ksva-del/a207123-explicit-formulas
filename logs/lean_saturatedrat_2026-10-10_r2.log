@@ -1,0 +1,9 @@
+[lean_one 启动前：AVAIL=6042 COMMIT=16776 LIMIT=33453 HEADROOM=16677 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/SaturatedRat.lean:78:12: error: typeclass instance problem is stuck
+  Algebra ?m.164 ?m.165
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, second, third, and fourth type arguments to `Algebra` are metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+[lean_one 内存：PEAK=8045 MINHEAD=7645 KILLED=0 REASON= QFAIL=0；用时 22s]
+[lean_one exit code 1]

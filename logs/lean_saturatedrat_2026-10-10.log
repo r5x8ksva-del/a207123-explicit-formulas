@@ -1,0 +1,34 @@
+[lean_one 启动前：AVAIL=6023 COMMIT=16812 LIMIT=33453 HEADROOM=16641 TOTAL=16045；看门狗上限 CAP=11000MB，MINHEAD=3000MB]
+A207123/SaturatedRat.lean:77:35: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?r • ?x
+in the target expression
+  ↑b • t x = (algebraMap Coef RatCoef) ↑b * t x
+
+case pos
+t : ℕ × ℕ →₀ RatCoef
+b : ↥(nonZeroDivisors Coef)
+hb : ∀ i ∈ t.support, IsLocalization.IsInteger Coef (↑b • t i)
+g : ℕ × ℕ → Coef
+hg : ∀ x ∈ t.support, (algebraMap Coef RatCoef) (g x) = ↑b • t x
+x : ℕ × ℕ
+hx : x ∈ t.support
+⊢ ↑b • t x = (algebraMap Coef RatCoef) ↑b * t x
+A207123/SaturatedRat.lean:145:4: error: Tactic `apply` failed: could not unify the conclusion of `IsFractionRing.injective Coef RatCoef`
+  ?a₁ = ?a₂
+with the goal
+  ((coeff ((Finsupp.mapRange (fun c => D * c) ⋯ r) (a, b))) n✝¹).coeff n✝ = ((coeff ((TU q1) (a, b))) n✝¹).coeff n✝
+
+Note: The full type of `IsFractionRing.injective Coef RatCoef` is
+  Function.Injective ⇑(algebraMap Coef RatCoef)
+
+r : ℕ × ℕ →₀ Coef
+q : ℕ × ℕ →₀ RatCoef
+h : ∀ (a b : ℕ), (algebraMap Coef RatCoef) (r (a, b)) = TUrat (⇑q) a b
+D : Coef
+hD : D ≠ 0
+q1 : ℕ × ℕ →₀ Coef
+hq1 : ∀ (x : ℕ × ℕ), (algebraMap Coef RatCoef) (q1 x) = (algebraMap Coef RatCoef) D * q x
+a b n✝¹ n✝ : ℕ
+⊢ ((coeff ((Finsupp.mapRange (fun c => D * c) ⋯ r) (a, b))) n✝¹).coeff n✝ = ((coeff ((TU q1) (a, b))) n✝¹).coeff n✝
+[lean_one 内存：PEAK=8042 MINHEAD=7655 KILLED=0 REASON= QFAIL=0；用时 22s]
+[lean_one exit code 1]
