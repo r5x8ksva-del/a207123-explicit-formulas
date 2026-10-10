@@ -270,3 +270,11 @@
 2026-10-10 10:04:38 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8127 MINHEAD=7140 KILLED=0 REASON= QFAIL=0
 2026-10-10 10:05:02 | Axioms.lean | exit 0 | 22s | PEAK=8137 MINHEAD=7165 KILLED=0 REASON= QFAIL=0
 2026-10-10 10:05:26 | Checks.lean | exit 0 | 23s | PEAK=8143 MINHEAD=7210 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:12:02 | A207123/ShapeNT.lean | exit 0 | 22s | PEAK=8034 MINHEAD=7298 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:31:08 | A207123/ShapeNT.lean -o .lake/build/lib/lean/A207123/ShapeNT.olean -i .lake/build/lib/lean/A207123/ShapeNT.ilean | exit 0 | 22s | PEAK=8043 MINHEAD=7355 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:32:07 | A207123/ShapeCases.lean | exit 1 | 29s | PEAK=8139 MINHEAD=7145 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:35:57 | A207123/ShapeCases.lean | exit 0 | 29s | PEAK=8138 MINHEAD=7204 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:36:39 | A207123/ShapeCases.lean -o .lake/build/lib/lean/A207123/ShapeCases.olean -i .lake/build/lib/lean/A207123/ShapeCases.ilean | exit 0 | 31s | PEAK=8138 MINHEAD=7221 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:37:38 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8134 MINHEAD=7211 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:38:02 | Axioms.lean | exit 0 | 22s | PEAK=8142 MINHEAD=7250 KILLED=0 REASON= QFAIL=0
+2026-10-10 10:38:35 | Checks.lean | exit 0 | 22s | PEAK=8133 MINHEAD=7231 KILLED=0 REASON= QFAIL=0

@@ -53,3 +53,5 @@ import A207123.Chains
 import A207123.SingleSum
 import A207123.SingleSumAsc
 import A207123.ShapeFibre
+import A207123.ShapeNT
+import A207123.ShapeCases

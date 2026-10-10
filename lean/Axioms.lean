@@ -440,6 +440,24 @@ import A207123
 #print axioms A207123.aeval_homogY
 #print axioms A207123.eval_homogY
 #print axioms A207123.shape_fibre_y
+-- 论文定理 6.3：单族二项式形状的分类（ShapeNT.lean、ShapeCases.lean）
+#print axioms A207123.irreducible_fQ
+#print axioms A207123.minpoly_root_b1
+#print axioms A207123.eq_zero_of_aeval_root_b1
+#print axioms A207123.quad_rel_root_b1
+#print axioms A207123.aeval_root_b1_eq_zero
+#print axioms A207123.exists_real_root_b1
+#print axioms A207123.complex_root_b1
+#print axioms A207123.real_root_pow_not_rat
+#print axioms A207123.exists_b_root_of_Ppoly
+#print axioms A207123.not_shape_a
+#print axioms A207123.not_shape_b
+#print axioms A207123.not_shape_c
+#print axioms A207123.not_shape_d
+#print axioms A207123.not_shape_21
+#print axioms A207123.shape_10
+#print axioms A207123.shape_01
+#print axioms A207123.thm_shapes
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
