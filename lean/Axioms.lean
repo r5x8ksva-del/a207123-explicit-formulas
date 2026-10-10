@@ -301,6 +301,23 @@ import A207123
 #print axioms A207123.prop_four_relations
 #print axioms A207123.realRooted_nR
 #print axioms A207123.nrowPoly_root_im_eq_zero
+-- 论文命题 8.11 与定理 8.1：n_k 除 −1 外只有单根；h_k 的根都是实数且互不相同（SimpleRoots.lean）
+#print axioms A207123.N_one_right
+#print axioms A207123.nR_eval_zero
+#print axioms A207123.Interlaces.eval_mul_derivative_nonneg
+#print axioms A207123.count_roots_of_derivative
+#print axioms A207123.alpha_rel
+#print axioms A207123.beta_rel
+#print axioms A207123.nR_no_common_root
+#print axioms A207123.count_roots_nR_le_one
+#print axioms A207123.rootMultiplicity_nrowPoly_le_one
+#print axioms A207123.nR_eval_hR
+#print axioms A207123.count_neg_one_nR
+#print axioms A207123.card_roots_nR_ne
+#print axioms A207123.hR_realRooted_nodup
+#print axioms A207123.hpoly_root_im_eq_zero
+#print axioms A207123.separable_hpoly
+#print axioms A207123.thm_realroots
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift

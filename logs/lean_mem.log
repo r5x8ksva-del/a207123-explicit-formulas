@@ -204,3 +204,9 @@
 2026-10-10 05:56:48 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 19s | PEAK=8115 MINHEAD=6611 KILLED=0 REASON= QFAIL=0
 2026-10-10 05:57:12 | Axioms.lean | exit 0 | 23s | PEAK=8114 MINHEAD=6618 KILLED=0 REASON= QFAIL=0
 2026-10-10 05:57:35 | Checks.lean | exit 0 | 22s | PEAK=8128 MINHEAD=6602 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:46:35 | A207123/SimpleRoots.lean | exit 1 | 166s | PEAK=8074 MINHEAD=7863 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:47:34 | A207123/SimpleRoots.lean | exit 0 | 22s | PEAK=8071 MINHEAD=7807 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:48:41 | A207123/SimpleRoots.lean -o .lake/build/lib/lean/A207123/SimpleRoots.olean -i .lake/build/lib/lean/A207123/SimpleRoots.ilean | exit 0 | 26s | PEAK=8075 MINHEAD=7806 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:49:12 | A207123.lean -o .lake/build/lib/lean/A207123.olean -i .lake/build/lib/lean/A207123.ilean | exit 0 | 22s | PEAK=8099 MINHEAD=7766 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:49:40 | Axioms.lean | exit 0 | 23s | PEAK=8123 MINHEAD=7752 KILLED=0 REASON= QFAIL=0
+2026-10-10 06:50:07 | Checks.lean | exit 0 | 22s | PEAK=8129 MINHEAD=7758 KILLED=0 REASON= QFAIL=0
