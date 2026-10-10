@@ -1,0 +1,33 @@
+[lean_one 启动前：AVAIL=5976 COMMIT=16840 LIMIT=33453 HEADROOM=16613 TOTAL=16045；看门狗上限 CAP=10000MB，MINHEAD=3000MB]
+A207123/AsympRemark.lean:60:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A207123/AsympRemark.lean:60:8: warning: Unused tactic linter: `field_simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A207123/AsympRemark.lean:75:23: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A207123/AsympRemark.lean:190:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A207123/AsympRemark.lean:190:6: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A207123/AsympRemark.lean:196:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+A207123/AsympRemark.lean:224:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+[lean_one 内存：PEAK=8065 MINHEAD=7701 KILLED=0 REASON= QFAIL=0；用时 23s]
+[lean_one exit code 0]
+exit=0

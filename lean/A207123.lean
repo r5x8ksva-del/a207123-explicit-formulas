@@ -32,3 +32,4 @@ import A207123.Blocks
 import A207123.EndAscent
 import A207123.RootExpansion
 import A207123.RootAsymp
+import A207123.AsympRemark

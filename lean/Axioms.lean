@@ -195,6 +195,16 @@ import A207123
 #print axioms A207123.thm_asym_three
 #print axioms A207123.cm_zero
 #print axioms A207123.U_asymp_bound
+-- 论文注记 3.3 的精确部分：比值渐近与速率不能改进、c_1 闭式、ρ_m 为整数的情形、c_4、U_k(4)、1 − θ_m ~ 1/(3m)（AsympRemark.lean）
+#print axioms A207123.tendsto_ratio
+#print axioms A207123.kappaConst_pos
+#print axioms A207123.rate_not_improvable
+#print axioms A207123.cm_one
+#print axioms A207123.rho_int_iff
+#print axioms A207123.cm_rat_of_rho_int
+#print axioms A207123.cm_four
+#print axioms A207123.U_four_asymp
+#print axioms A207123.tendsto_one_sub_theta
 -- T5.4(3)(4)(5) 的代数部分与 T2.8(1) 的三层和（SmallK.lean）
 #print axioms A207123.gf_R
 #print axioms A207123.gf_R_shift
