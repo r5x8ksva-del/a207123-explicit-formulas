@@ -65,6 +65,9 @@ import A207123
 #print axioms A207123.Gxy_rec
 #print axioms A207123.Gxy_prod
 #print axioms A207123.coef_formula_xy
+-- 论文定理 4.2（唯一分解）与例 4.3 之后一段的上升数（Blocks.lean）
+#print axioms A207123.blocks_bijOn
+#print axioms A207123.asc_concatBlk
 -- T3.7(1) 的 ODE 部分、T3.7(2)（NonDFinite.lean）
 #print axioms A207123.no_x_ODE
 #print axioms A207123.no_x_ODE_poly

@@ -1,0 +1,10 @@
+[lean_one 启动前：AVAIL=6049 COMMIT=16340 LIMIT=33453 HEADROOM=17113 TOTAL=16045；看门狗上限 CAP=10000MB，MINHEAD=3000MB]
+A207123/Blocks.lean:215:92: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+A207123/Blocks.lean:229:92: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+[lean_one 内存：PEAK=8043 MINHEAD=8132 KILLED=0 REASON= QFAIL=0；用时 23s]
+[lean_one exit code 0]
+exit=0

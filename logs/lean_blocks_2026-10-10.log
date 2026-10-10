@@ -1,0 +1,90 @@
+[lean_one 等待内存：AVAIL=3940 COMMIT=21961 LIMIT=33453 HEADROOM=11492 TOTAL=16045；需要 HEADROOM≥13000 且 AVAIL≥3000]
+[lean_one 启动前：AVAIL=5233 COMMIT=17922 LIMIT=33453 HEADROOM=15531 TOTAL=16045；看门狗上限 CAP=10000MB，MINHEAD=3000MB]
+A207123/Blocks.lean:85:42: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.mem_cons, List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:90:42: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.mem_cons, List.not_mem_nil, or_false] at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:210:14: error: Tactic `subst` failed: 'a' occurs at
+  a
+
+case T.T
+R R' : List ℕ
+v a : ℕ
+hb : a < v
+hR : ∀ x ∈ R, x ≤ (Blk.T v a).level
+hE : (Blk.T v a).IsE → R = []
+v' : ℕ
+h✝ : v :: v :: R = v' :: v' :: R'
+hb' : (Blk.T v' a).Valid
+hR' : ∀ x ∈ R', x ≤ (Blk.T v' a).level
+hE' : (Blk.T v' a).IsE → R' = []
+h : a :: v :: v :: R = a :: v' :: v' :: R'
+left✝ : a = a
+right✝ : v :: v :: R = v' :: v' :: R'
+⊢ Blk.T v a = Blk.T v' a
+A207123/Blocks.lean:234:14: error: Tactic `subst` failed: 'a' occurs at
+  a
+
+case E.E
+R R' : List ℕ
+v a : ℕ
+hb : a < v
+hR : ∀ x ∈ R, x ≤ (Blk.E v a).level
+hE : (Blk.E v a).IsE → R = []
+v' : ℕ
+h✝ : [v] = [v']
+hb' : (Blk.E v' a).Valid
+hR' : ∀ x ∈ R', x ≤ (Blk.E v' a).level
+hE' : (Blk.E v' a).IsE → R' = []
+h : [a, v] = [a, v']
+left✝ : a = a
+right✝ : [v] = [v']
+⊢ Blk.E v a = Blk.E v' a
+A207123/Blocks.lean:182:29: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.cons_append, List.nil_append, List.cons.injEq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:191:29: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.cons_append, List.nil_append, List.append_nil, List.cons.injEq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:201:29: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.cons_append, List.nil_append, List.cons.injEq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:221:29: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Blk.toList, List.cons_append, List.nil_append, List.append_nil, List.cons.injEq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+A207123/Blocks.lean:354:45: warning: This simp argument is unused:
+  List.countP_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [concatBlk, Blk.toList, Blk.isTE, asc_cons_of_le hR, ih']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+[lean_one 内存：PEAK=8042 MINHEAD=8113 KILLED=0 REASON= QFAIL=0；用时 333s]
+[lean_one exit code 1]
+exit=1
